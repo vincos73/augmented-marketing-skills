@@ -1,4 +1,0 @@
-interface:
-  display_name: "Content Director"
-  short_description: "Valuta un input e prepara un brief editoriale"
-  default_prompt: "Usa $content-director per valutare questa fonte e proporre il brief editoriale."

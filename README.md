@@ -4,25 +4,15 @@ Repository privato delle sorgenti per una famiglia di skill che aiuta manager e 
 
 ## Stato attuale
 
-Le skill sorgente attualmente presenti sono:
+L'unica skill sorgente attualmente approvata è [`setup-business-context`](skills/setup-business-context/SKILL.md): costruisce una carta d'identità verificabile di un'azienda o di un brand prima che un agente svolga attività che la riguardano. Non definisce strategie, non crea campagne e non configura strumenti.
 
-- [`setup-business-context`](skills/setup-business-context/SKILL.md): costruisce una carta d'identità verificabile di un'azienda o di un brand prima che un agente svolga attività che la riguardano;
-- [`content-profile-builder`](skills/content-profile-builder/SKILL.md): conserva profili editoriali e visivi riutilizzabili;
-- [`build-evidence-pack`](skills/build-evidence-pack/SKILL.md): separa prove, inferenze, assunzioni e verifiche aperte;
-- [`content-director`](skills/content-director/SKILL.md): valuta il materiale e prepara un brief prima della produzione.
-
-`setup-business-context` non definisce strategie, non crea campagne e non configura strumenti.
-
-Le skill successive sono una roadmap documentata in [`FRAMEWORK.md`](FRAMEWORK.md). Non vanno considerate funzionalità già disponibili.
+Le skill successive sono ipotesi di roadmap documentate in [`FRAMEWORK.md`](FRAMEWORK.md), non moduli inclusi o disponibili nel repository.
 
 ## Struttura
 
 ```text
 skills/                     sorgenti delle skill
   setup-business-context/   identità aziendale o brand
-  content-profile-builder/  profili editoriali e visivi
-  build-evidence-pack/      prove e incertezze
-  content-director/         giudizio editoriale e brief
 FRAMEWORK.md                principi, confini e roadmap
 ```
 

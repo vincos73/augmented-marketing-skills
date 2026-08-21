@@ -132,14 +132,11 @@ La promessa concreta può essere:
 
 ### Primo incremento e roadmap
 
-Al momento il repository contiene quattro skill sorgente:
+Al momento il repository contiene una sola skill sorgente approvata:
 
-- `setup-business-context`: identità aziendale o di brand persistente e verificabile;
-- `content-profile-builder`: profili editoriali e visivi riutilizzabili e versionati;
-- `build-evidence-pack`: fonti, inferenze, assunzioni e verifiche aperte;
-- `content-director`: giudizio editoriale e brief verso i builder.
+- `setup-business-context`: identità aziendale o di brand persistente e verificabile.
 
-Le altre competenze mostrate nell'architettura — `challenge-brief`, `choose-marketing-bet`, `to-campaign-spec`, `campaign-review` e `learn-from-results` — sono roadmap, non contenuti già inclusi nel repository. Questa distinzione evita di promettere funzionalità non ancora disponibili.
+Le altre competenze mostrate nell'architettura — `content-profile-builder`, `build-evidence-pack`, `content-director`, `challenge-brief`, `choose-marketing-bet`, `to-campaign-spec`, `campaign-review` e `learn-from-results` — restano roadmap o ipotesi da validare, non contenuti già inclusi nel repository. Questa distinzione evita di promettere funzionalità non ancora disponibili.
 
 Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione. I moduli successivi saranno aggiunti dopo un primo uso reale e una revisione del nucleo iniziale.
 
