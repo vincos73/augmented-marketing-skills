@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Profile Builder"
+  short_description: "Crea e aggiorna profili editoriali riusabili"
+  default_prompt: "Usa $content-profile-builder per creare o aggiornare un profilo editoriale."

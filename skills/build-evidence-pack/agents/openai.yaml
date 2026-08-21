@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Evidence Pack"
+  short_description: "Organizza prove, inferenze e verifiche necessarie"
+  default_prompt: "Usa $build-evidence-pack per costruire un evidence pack da queste fonti."
