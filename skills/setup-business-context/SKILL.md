@@ -1,5 +1,6 @@
 ---
 name: setup-business-context
+version: 0.4.0
 description: "Build, update, and install a source-aware identity context for a company or brand. Use when managers want AI agents to understand a business before company-related work, when onboarding a new company or brand workspace, or when existing business context is missing or stale. Do not use to create strategy, campaigns, brand identity, or tool configuration."
 ---
 
