@@ -147,4 +147,5 @@ Before presenting the identity for approval, verify that:
 - differentiation is not a generic adjective detached from alternatives and proof;
 - unsupported claims and inferred customer motives remain visible;
 - non-blocking gaps, including an undocumented mission, do not prevent completion;
+- concrete review triggers are recorded when the supplied material establishes them;
 - no question crossed into strategy creation.

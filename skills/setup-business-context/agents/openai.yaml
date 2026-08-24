@@ -1,5 +1,5 @@
 interface:
   display_name: "Setup Business Context"
-  short_description: "Crea il DNA di azienda o brand per gli agenti"
+  short_description: "Documenta azienda o brand per gli agenti"
   brand_color: "#072743"
-  default_prompt: "Usa $setup-business-context per creare o aggiornare la carta d'identità di questa azienda o brand per gli agenti, partendo dalle fonti che ti fornisco."
+  default_prompt: "Usa $setup-business-context per documentare o aggiornare la carta d'identità di questa azienda o brand per gli agenti, partendo dalle fonti che ti fornisco."

@@ -1,12 +1,12 @@
 # Business Identity: [Entity name]
 
 **Entity type:** company / standalone brand / brand within a company<br>
-**Parent context:** [path or not applicable]<br>
+**Parent context:** [path and version, or not applicable]<br>
 **Version:** v1<br>
 **Status:** draft / approved<br>
 **Last reviewed:** YYYY-MM-DD<br>
 **Context owner:** [role or name, only if supplied]<br>
-**Coverage:** [markets, geographies, offers, or brands covered, when material]
+**Coverage:** [markets, geographies, offers, or brands covered, when material]<br>
 
 ## Basis markers
 
@@ -116,8 +116,10 @@ Remove this section when it is genuinely not applicable.
 
 - Read this identity before work about this entity.
 - Do not fill known gaps with plausible inventions.
-- Use the relevant child-brand context when a task concerns that brand.
+- For a child brand, read the parent company identity first and the relevant child context second; apply the child only within its explicit scope.
+- Do not use file order to resolve a material contradiction between parent and child; surface it.
 - Surface material conflicts with new task information and ask whether the identity should be updated.
+- In downstream artifacts, reference this identity by path, version, and last review date instead of duplicating it.
 
 ## Conflicts and resolutions
 
@@ -138,6 +140,14 @@ Use one of these states when relevant: `not established from supplied sources`, 
 | ID | Source | Date accessed or supplied | What it supports | Notes |
 |---|---|---|---|---|
 | S1 | | | | |
+
+## Review triggers and freshness risks
+
+List only concrete conditions that should prompt a targeted review, such as a changed offer, market scope, company/brand relationship, claim, approval route, or regulated constraint. Do not impose a generic expiration interval.
+
+| Trigger or risk | Sections affected | Current status or owner |
+|---|---|---|
+| | | |
 
 ## Changelog
 

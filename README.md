@@ -4,9 +4,9 @@ Repository privato delle sorgenti per una famiglia di skill che aiuta manager e 
 
 ## Stato attuale
 
-L'unica skill sorgente attualmente approvata è [`setup-business-context`](skills/setup-business-context/SKILL.md): costruisce una carta d'identità verificabile di un'azienda o di un brand prima che un agente svolga attività che la riguardano. Non definisce strategie, non crea campagne e non configura strumenti.
+L'unica skill sorgente attualmente approvata è [`setup-business-context`](skills/setup-business-context/SKILL.md): costruisce una carta d'identità verificabile e versionata di un'azienda o di un brand prima che un agente svolga attività che la riguardano. Gestisce anche gerarchie azienda/brand, provenienza, conflitti e trigger di revisione. Non definisce strategie, non crea campagne e non configura strumenti.
 
-Le skill successive sono ipotesi di roadmap documentate in [`FRAMEWORK.md`](FRAMEWORK.md), non moduli inclusi o disponibili nel repository.
+Il prossimo incremento previsto è `setup-marketing-system`, punto d'ingresso per configurare il lavoro di marketing con gli agenti sopra questa fondazione. Strategy Core, Campaign Core e Content Core sono ipotesi di roadmap documentate in [`FRAMEWORK.md`](FRAMEWORK.md), non moduli inclusi o disponibili nel repository.
 
 ## Struttura
 

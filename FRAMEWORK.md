@@ -32,30 +32,35 @@ Nome di lavoro: **Marketing Decision Skills**. Alternativa editoriale: **Marketi
 ## Architettura proposta
 
 ```text
-setup-business-context
-        ↓
-Content Profile Builder ───────────────┐
-        ↓                              │
-challenge-brief → evidence-pack       │
-        ↓                              │
-choose-marketing-bet                  │
-        ↓                              │
-to-campaign-spec                      │
-        ↓                              │
-Carousel Builder / Quote Card Builder / altri builder
-        ↓
-campaign-review → learn-from-results → playbook aggiornato
+setup-business-context  (fondazione autonoma: fatti durevoli su azienda e brand)
+        ↓ riferimento, non duplicazione
+setup-marketing-system  (punto d'ingresso e profilo operativo)
+        ├── Strategy Core  → challenge-brief → build-evidence-pack → choose-marketing-bet
+        ├── Campaign Core  → to-campaign-spec → campaign-review → learn-from-results
+        └── Content Core   → Content Director → builder specializzati
 ```
 
-Un modulo opzionale di ascolto può alimentare il sistema prima del setup o in modo continuativo:
+I tre core non sono cartelle decorative e non devono diventare tre agenti generalisti. Sono famiglie di decisioni con artefatti e confini diversi:
+
+- **Strategy Core:** decide quale problema, pubblico, comportamento o opportunità meritano una scommessa e quale assunzione testare;
+- **Campaign Core:** traduce una scommessa approvata in un sistema coordinato di messaggi, canali, asset, responsabilità, misure e apprendimento;
+- **Content Core:** valuta e produce singoli contenuti o famiglie di contenuti, mantenendo il giudizio specifico nei builder.
+
+`setup-marketing-system` è l'onboarding del framework, non un quarto core. Deve partire dal lavoro reale dell'organizzazione, verificare se esiste un business context utilizzabile e costruire un profilo operativo riusabile dai tre core. Per aziende multi-brand può mantenere un livello aziendale e overlay di brand, sempre referenziando le identità canoniche create da `setup-business-context` invece di copiarle.
+
+Il **profilo editoriale e visivo** resta un artefatto utile, ma per il primo sistema non richiede una skill autonoma `content-profile-builder`: può essere una sezione o un overlay gestito da `setup-marketing-system`. Una skill separata sarà giustificata solo se l'uso reale dimostrerà che importazione, portabilità o manutenzione del profilo costituiscono un lavoro autonomo.
+
+Un modulo opzionale di ascolto può alimentare il sistema prima di una decisione o in modo continuativo:
 
 ```text
-monitoring-setup / web-radar-setup
+monitoring-setup  (autonomo e opzionale)
         ↓
 fonti, query, segnali e digest
         ↓
-evidence-pack → Content Director → builder
+build-evidence-pack → Strategy Core / Campaign Core / Content Director
 ```
+
+`monitoring-setup` deve conservare valore anche fuori dal framework, per esempio per un giornalista o un ricercatore che desidera monitorare un tema senza usare gli altri moduli.
 
 Il percorso non è sempre lineare:
 
@@ -130,27 +135,25 @@ La promessa concreta può essere:
 
 ## Nucleo iniziale delle skill
 
-### Primo incremento e roadmap
+### Fondazione consolidata e roadmap
 
 Al momento il repository contiene una sola skill sorgente approvata:
 
-- `setup-business-context`: identità aziendale o di brand persistente e verificabile.
+- `setup-business-context`: identità aziendale o di brand persistente, verificabile e riusabile.
 
-Le altre competenze mostrate nell'architettura — `content-profile-builder`, `build-evidence-pack`, `content-director`, `challenge-brief`, `choose-marketing-bet`, `to-campaign-spec`, `campaign-review` e `learn-from-results` — restano roadmap o ipotesi da validare, non contenuti già inclusi nel repository. Questa distinzione evita di promettere funzionalità non ancora disponibili.
-
-Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione. I moduli successivi saranno aggiunti dopo un primo uso reale e una revisione del nucleo iniziale.
+`setup-marketing-system`, i tre core e le relative competenze restano roadmap o ipotesi da validare, non contenuti già inclusi nel repository. Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione.
 
 Le cartelle sotto `skills/` sono sorgenti di authoring, non prova di installazione attiva. Per la scoperta locale in un repository Codex, una skill approvata dovrà essere collocata in `.agents/skills/`; per distribuirla in ChatGPT sul web, desktop e mobile dovrà essere confezionata come plugin. Authoring, installazione locale e distribuzione restano tre gate distinti.
 
-### 1. `setup-business-context`
+### 1. Fondazione — `setup-business-context`
 
 Costruisce e installa la carta d'identità persistente che gli agenti devono conoscere prima di lavorare per o su un'azienda o un brand. Parte soltanto dalle fonti fornite, allegate o citate dall'utente; prepara prima una bozza e pone poche domande sui vuoti realmente decisivi.
 
 La skill distingue le informazioni confermate dal responsabile, documentate da una fonte, inferite dall'agente o ancora ignote. Mantiene visibili le contraddizioni e non trasforma un'inferenza in un fatto attraverso la riscrittura.
 
-L'onboarding conserva quattro macro-fasi — entità e fonti, revisione della bozza, risoluzione dei vuoti decisivi, approvazioni — ma il numero di domande varia in base ai materiali. Una card interattiva può ridurre l'attrito quando l'ambiente la supporta; resta un miglioramento progressivo. Il flusso completo deve funzionare anche in chat testuale, con le stesse scelte, regole e approvazioni, senza perdere informazioni o ricominciare.
+L'onboarding conserva quattro macro-fasi — entità e fonti, revisione della bozza, risoluzione dei vuoti decisivi, approvazioni — ma il numero di domande varia in base ai materiali. Nel primo ciclo la chat testuale è l'interfaccia primaria: dopo l'invio delle fonti, il turno successivo deve produrre direttamente una comprensione provvisoria utile o un blocker concreto, senza renderizzazioni o trasferimenti di stato intermedi.
 
-Quando la card può essere stilizzata direttamente, usa una firma cromatica Vincos leggera: tipografia nativa dell'ambiente, navy `#072743` per azioni e avanzamento, panna `#FEFDFB` come base chiara, grigio `#323232` per il testo e azzurro `#E3F4FF` soltanto come superficie di selezione accompagnata da testo o contorno navy. Non aggiunge logo, Barlow o motivi decorativi e non trasferisce questa veste nei file identità, che restano neutrali rispetto all'azienda o al brand descritto.
+La card interattiva resta un esperimento fuori dal pacchetto attivo. Non viene invocata automaticamente e potrà rientrare nel prodotto solo quando un componente persistente saprà mantenere lo stato senza essere ricostruito a ogni fase. Un'eventuale visualizzazione richiesta esplicitamente serve come vista singola di revisione; input essenziali e approvazioni restano in chat.
 
 Un elemento non trovato nelle fonti non viene dichiarato inesistente. La skill distingue tra informazione disponibile, esistente ma non disponibile, non definita dall'organizzazione, ignota all'utente e non applicabile. I vuoti essenziali richiedono uno stato esplicito; quelli importanti ma non bloccanti, come una missione non documentata, restano visibili nell'identità senza essere inventati.
 
@@ -162,64 +165,50 @@ L'output canonico è separato dalla skill:
 - `.agents/brand-identity.md` per un brand autonomo;
 - `.agents/brands/<brand>.md` per un brand appartenente a un'azienda.
 
+Un contesto di brand figlio viene usato insieme all'identità dell'azienda, non al suo posto. I workflow a valle referenziano entità, percorso, versione e data di revisione invece di duplicare i fatti in nuovi profili. La freschezza viene verificata attraverso cambiamenti concreti — offerte, perimetro, relazioni di brand, prove o vincoli — non con una scadenza generica.
+
 Il flusso ha due approvazioni distinte: la prima autorizza il salvataggio dell'identità; la seconda autorizza l'eventuale modifica spiegata e circoscritta di `AGENTS.md`, `CLAUDE.md` o di entrambi. La skill documenta l'identità esistente: non definisce la strategia, non produce campagne, non configura strumenti e non inventa un posizionamento o una brand identity mancanti.
 
-### 2. Roadmap — `content-profile-builder`
+### 2. Punto d'ingresso — `setup-marketing-system`
 
-Costruisce, aggiorna, seleziona, importa ed esporta profili editoriali e visivi riutilizzabili.
+Aiuta un'organizzazione a predisporre il proprio modo di lavorare con gli agenti. Parte dai lavori di marketing reali, non da una scelta fra nomi interni di skill. Verifica il business context, individua le decisioni ricorrenti e crea un profilo operativo riusabile dai tre core.
 
-Il profilo è un documento separato dalla skill: la skill è il metodo, il profilo è il contesto dell’utente. Non va incorporato stabilmente nel codice della skill.
+Il profilo può includere scelte approvate su priorità, pubblici, messaggi, prove, canali, capacità, misurazione, ruoli, approvazioni e convenzioni editoriali o visive. Se esistono più brand, mantiene una base aziendale e overlay espliciti; non fonde automaticamente contesti diversi.
 
-Un profilo può contenere:
+Questa skill orchestra il setup, ma non deve simulare di aver completato una strategia o una campagna. Il suo schema, i percorsi canonici e le approvazioni saranno definiti nel secondo incremento.
 
-- pubblico e obiettivi;
-- posizionamento e temi principali;
-- voce, tono e formule da evitare;
-- criteri editoriali e regole sulle fonti;
-- palette, font, logo e indicazioni visive;
-- CTA, vincoli e requisiti di accessibilità.
+### 3. Strategy Core
 
-Ogni modifica sostanziale crea una versione. Un asset può registrare nome, versione e digest del profilo usato.
+- `challenge-brief`: chiarisce obiettivo, pubblico, comportamento atteso, vincoli, prove, rischi e decisore senza produrre una campagna;
+- `build-evidence-pack`: separa dati, testimonianze, inferenze e assunzioni, rendendo visibili contraddizioni e lacune;
+- `choose-marketing-bet`: confronta alternative, esplicita l'assunzione più fragile e propone il test meno costoso; l'utente approva e registra la scelta.
 
-I profili possono essere locali al progetto o portatili (`content-profile.md`, JSON o ZIP con asset). Non devono mai essere fusi automaticamente tra loro. Quando sono disponibili più profili, il sistema chiede quale applicare.
+### 4. Campaign Core
 
-Regola progettuale:
+- `to-campaign-spec`: traduce una scommessa approvata in messaggi, ruolo dei canali, asset, dipendenze, responsabilità, approvazioni e piano di misurazione;
+- `campaign-review`: verifica separatamente coerenza strategica, solidità delle affermazioni e qualità degli asset;
+- `learn-from-results`: confronta previsioni e risultati, separa segnale e rumore e aggiorna il playbook.
 
-> Il profilo viene incorporato nel flusso delle skill, non nel codice delle skill.
+### 5. Content Core
 
-### 3. Roadmap — `challenge-brief`
+- `content-director`: valuta se il materiale merita un contenuto, quale obiettivo può servire e quale formato lo valorizza;
+- builder specializzati: producono l'asset e mantengono selezione, fedeltà, struttura, resa e QA specifici;
+- `editorial-review`, eventualmente futura: serve per contenuti creati altrove o audit multi-asset, non come passaggio obbligatorio dopo ogni builder.
 
-Interroga obiettivo, pubblico, comportamento atteso, budget, prove, rischi e decisore. Non produce ancora la campagna.
+### Ordine di costruzione
 
-### 4. Roadmap — `build-evidence-pack`
-
-Distingue dati, testimonianze, inferenze e assunzioni; segnala contraddizioni e informazioni mancanti.
-
-### 5. Roadmap — `choose-marketing-bet`
-
-Confronta le alternative, esplicita l’assunzione più fragile e propone il test meno costoso. La scelta finale viene approvata e registrata dall’utente.
-
-### 6. Roadmap — `to-campaign-spec`
-
-Traduce la decisione in messaggi, ruolo dei canali, asset, dipendenze, responsabilità, approvazioni e piano di misurazione.
-
-### 7. Roadmap — `campaign-review`
-
-Esegue revisioni separate su:
-
-- coerenza con la decisione;
-- solidità delle affermazioni;
-- qualità e correttezza degli asset.
-
-### 8. Roadmap — `learn-from-results`
-
-Confronta previsioni e risultati, separa segnale e rumore e aggiorna il playbook. È la componente che trasforma una raccolta di skill in un sistema che apprende.
+1. `setup-business-context` — fondazione riusabile consolidata;
+2. progettare e testare `setup-marketing-system` come punto d'ingresso;
+3. validare lo Strategy Core iniziando dal percorso minimo `challenge-brief` + `choose-marketing-bet`;
+4. collegare il primo percorso Content ai builder già esistenti;
+5. introdurre il Campaign Core quando esistono decisioni strategiche reali da tradurre;
+6. aggiungere apprendimento continuo e monitoring solo nei processi che mostrano un uso ripetuto.
 
 ## Content Director: responsabilità e confini
 
 **Content Director** è il nome preferibile rispetto a Content Router: comunica giudizio editoriale, non semplice instradamento tecnico.
 
-Riceve URL, articolo, documento, appunti, trascrizione, ricerca o idea incompleta. Legge il profilo disponibile e valuta:
+Riceve URL, articolo, documento, appunti, trascrizione, ricerca o idea incompleta. Legge il business context e il profilo operativo o overlay di brand pertinente, quando disponibili, e valuta:
 
 1. valore editoriale;
 2. struttura dell’idea;
@@ -251,7 +240,7 @@ Il giudizio editoriale specifico non va spostato in una terza review obbligatori
 | Componente | Responsabilità |
 |---|---|
 | Setup Business Context | Identità generale e verificabile dell'azienda o del brand, fonti, limiti e contesto persistente |
-| Content Profile Builder | Regole editoriali e visive riutilizzabili per la produzione di contenuti |
+| Setup Marketing System | Profilo operativo aziendale e overlay di brand riusabili da strategia, campagne e contenuti |
 | Content Director | Se l’idea merita un contenuto e quale formato la valorizza |
 | Carousel Builder | Selezione, fedeltà, struttura, slide, grafica, leggibilità e QA del carosello |
 | Quote Card Builder | Selezione della frase, attribuzione, adattamento, gerarchia e QA della card |
@@ -261,7 +250,7 @@ Una skill Editorial Review autonoma, se introdotta, dovrebbe servire soprattutto
 
 I criteri comuni — fedeltà alle fonti, distinzione tra citazione e parafrasi, forza delle affermazioni, coerenza con pubblico e obiettivo, attribuzioni e CTA — possono vivere in un documento o modulo condiviso (`editorial-standards.md`). Ogni builder aggiunge poi i propri controlli.
 
-Per aumentare l’indipendenza del controllo, il builder può eseguire internamente un revisore isolato che riceve fonte, profilo, testi approvati e output, e restituisce solo i problemi. Per l’utente resta un unico flusso.
+Per aumentare l’indipendenza del controllo, il builder può eseguire internamente un revisore isolato che riceve fonte, contesto applicabile, testi approvati e output, e restituisce solo i problemi. Per l’utente resta un unico flusso.
 
 ## Posizionamento e differenziazione
 
@@ -278,21 +267,22 @@ Le skill già esistenti diventano moduli esecutivi del framework, non vengono so
 
 ## Primo test consigliato
 
-Prima di costruire il repository completo, eseguire un pilota italiano con 8–10 ex corsisti su attività reali, usando:
+Prima di costruire il repository completo, eseguire un pilota italiano su attività reali con una piccola coorte di ex corsisti, clienti o manager. Il primo percorso da osservare è:
 
 - `setup-business-context`;
+- `setup-marketing-system`;
 - `challenge-brief`;
-- `choose-marketing-bet`;
-- `campaign-review`.
+- `choose-marketing-bet`.
 
-Segnali di validazione:
+I segnali utili non sono il numero di output prodotti, ma comportamenti osservabili:
 
-- almeno 6 partecipanti completano il setup;
-- almeno 4 riutilizzano spontaneamente una skill su un secondo lavoro;
-- almeno 3 dichiarano che il processo ha modificato una decisione concreta;
-- emergono errori o assunzioni che l’uso abituale di ChatGPT non aveva rilevato.
+- il setup viene completato senza che un facilitatore debba spiegare l'architettura interna;
+- il contesto viene riusato correttamente in un secondo lavoro;
+- il processo cambia, restringe o interrompe almeno una decisione reale;
+- emergono assunzioni, conflitti o prove mancanti che l'uso abituale del chatbot non aveva reso visibili;
+- l'utente distingue chiaramente fatti aziendali, scelte di marketing e decisioni di campagna.
 
-Solo dopo il pilota valutare versione inglese, distribuzione pubblica e cataloghi esterni.
+Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, definire criteri quantitativi in base agli abbandoni, ai riusi e agli errori realmente osservati; solo allora valutare versione inglese, distribuzione pubblica e cataloghi esterni.
 
 ## Decisioni da non perdere
 
@@ -301,8 +291,9 @@ Solo dopo il pilota valutare versione inglese, distribuzione pubblica e catalogh
 - Un dato assente dalle fonti non è automaticamente inesistente; i vuoti vengono classificati e quelli non bloccanti restano espliciti nell'identità.
 - Le domande non formano un questionario fisso: un router seleziona fino a tre lacune ad alto impatto, usando lenti da marketer e business strategist ma senza creare nuove scelte strategiche.
 - L'installazione negli instruction file degli agenti è separata dall'approvazione del contenuto e richiede un consenso esplicito dopo la spiegazione della modifica.
-- Il nome funzionale della skill di profilo è **Content Profile Builder**.
-- Il profilo resta separato e versionato; non viene scritto dentro la skill.
+- **Setup Marketing System** è il punto d'ingresso del framework e parte dal lavoro reale dell'organizzazione, non dalla scelta di una skill interna.
+- Il profilo editoriale e visivo resta separato e versionato, ma nel primo sistema è un artefatto o overlay gestito dal setup, non una skill core autonoma.
+- Strategy, Campaign e Content sono tre core distinti per decisione e artefatto, non tre agenti generalisti che duplicano il lavoro.
 - **Content Director** è opzionale quando il formato è già deciso.
 - Carousel Builder e Quote Card Builder mantengono il giudizio editoriale e il QA specifici del proprio output.
 - Editorial Review non è un passaggio obbligatorio del sistema iniziale.
