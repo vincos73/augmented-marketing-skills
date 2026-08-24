@@ -21,9 +21,9 @@
 
 ### Passed
 
-- Marea is treated as a standalone brand.
+- Marea è trattata come `brand autonomo`.
 - Source markers `[S1]`–`[S4]` remain visible.
-- Current, legacy, and planned offers are separated correctly.
+- Le offerte `corrente`, `storico` e `pianificato` sono separate correttamente.
 - The numerical conflict is preserved instead of averaged away.
 - Users, economic decision-makers, and a possible IT blocker remain distinct.
 - Real alternatives are retained.
@@ -36,7 +36,7 @@
 ### Soft issues
 
 1. **The first review is still too long.** At 597 words and thirteen fact bullets, it is substantially faster than the former rendered wizard but still dense for a manager. A future eval should cap the first review by information groups, not by an arbitrary word count alone.
-2. **Mission status is slightly imprecise.** “Non esiste una missione ufficiale documentata” is safer than inventing one, but the skill's taxonomy would be clearer as `not defined` or `not established from supplied sources`, depending on the authorized status.
+2. **Mission status is slightly imprecise.** “Non esiste una missione ufficiale documentata” is safer than inventing one, but the skill's taxonomy would be clearer as `non definito` or `non stabilito dalle fonti fornite`, depending on the authorized status.
 
 ### Not exercised in this run
 

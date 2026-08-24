@@ -11,7 +11,7 @@ Before asking anything, map each consequential identity area to one state:
 - inferred and awaiting confirmation;
 - conflicting across sources;
 - absent or ambiguous;
-- explicitly not defined, unknown, unavailable, or not applicable.
+- esplicitamente `non definito`, `sconosciuto all'utente`, `esiste ma non è disponibile` oppure `non applicabile`.
 
 Do not ask for information already supported unless confirmation would resolve a material ambiguity. Do not expose this ledger as a long diagnostic report; use it to select the next questions.
 
@@ -25,7 +25,7 @@ Select at most three questions per batch. Rank candidate questions in this order
 4. distinguish the entity from real alternatives and connect distinctive capabilities to customer value and proof;
 5. preserve recognizable language, correct common misconceptions, and classify non-blocking identity gaps.
 
-An explicit `unknown`, `not defined`, `exists but unavailable`, or `not applicable` can satisfy the need to classify an essential gap. It does not make the underlying information known.
+An explicit `sconosciuto all'utente`, `non definito`, `esiste ma non è disponibile` or `non applicabile` can satisfy the need to classify an essential gap. It does not make the underlying information known.
 
 ## Use expert lenses without importing a strategy workshop
 
@@ -35,7 +35,7 @@ The prompts below are a question bank, not a mandatory sequence. Lead with the p
 
 Ask when the legal entity, operating identity, hierarchy, geography, or current portfolio is ambiguous.
 
-- What exactly are we describing: the company, a standalone brand, or a brand within a company?
+- What exactly are we describing: the company (`azienda`), a standalone brand (`brand autonomo`), or a brand within a company (`brand all'interno di un'azienda`)?
 - Which offers, markets, geographies, or related brands are covered by this identity?
 - What is outside the scope or no longer current?
 
@@ -45,7 +45,7 @@ Ask for current facts, not future choices.
 
 - What do you sell today, and what concrete change does it produce for the customer?
 - Who pays, what do they pay for, and how is the value delivered?
-- Which offers are current, legacy, experimental, or planned and therefore must not be presented as generally available?
+- Which offers are current (`corrente`), legacy (`storico`), experimental (`sperimentale`), or planned (`pianificato`) and therefore must not be presented as generally available?
 
 Record only the minimum business-model information an agent needs. Do not seek margins, cost structure, confidential revenue, pricing strategy, or trade secrets by default.
 
@@ -103,14 +103,14 @@ Ask about the type of statement and its approval route, not merely one universal
 - Which topics, markets, customer groups, legal entities, or regulated areas need special handling?
 - Who owns each relevant approval route?
 
-If no route exists, record `not defined`; do not silently assign one.
+If no route exists, record `non definito`; do not silently assign one.
 
 ### Mission, purpose, and history
 
 Treat these as material but normally non-blocking unless the entity's work makes them operationally necessary.
 
 - Is there an official mission or purpose in an approved source?
-- If not found, does it exist but remain unavailable, has it not been defined, is it unknown to the user, or is it not applicable?
+- If not found, is it `esiste ma non è disponibile`, `non definito`, `sconosciuto all'utente`, or `non applicabile`?
 - Which historical facts materially change how the entity should be understood today?
 
 Never rewrite an inferred purpose as the official mission. Distinguish current identity, approved aspiration, and historical language.

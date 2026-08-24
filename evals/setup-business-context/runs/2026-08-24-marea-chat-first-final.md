@@ -39,12 +39,12 @@ Gli utenti quotidiani sono soprattutto responsabili operativi, governanti e manu
 Marea rende visibili i problemi operativi e facilita il coordinamento rispetto a WhatsApp, fogli di calcolo, telefonate, strumenti generici per attività o al solo PMS. `[S1; S2]` Non è sostenuto affermare che elimini i ritardi, garantisca puntualità o sia conforme a norme specifiche. `[S2; S4]`
 
 **Prove e limiti**
-Al 30 giugno 2026 risultano 24 gruppi e 96 strutture paganti, oltre a due pilot non paganti. `[S3]` I numeri 40/180 del vecchio deck mescolano clienti, pilot e pipeline; il 92% non è validato per uso pubblico. `[S2; S3]` La missione ufficiale è `not established from supplied sources`: “rendere il lavoro alberghiero più umano” non va presentata come tale. `[S3]` Il linguaggio deve essere concreto, senza “AI”, “control tower”, promesse assolute o dati personali. `[S1; S3; S4]`
+Al 30 giugno 2026 risultano 24 gruppi e 96 strutture paganti, oltre a due pilot non paganti. `[S3]` I numeri 40/180 del vecchio deck mescolano clienti, pilot e pipeline; il 92% non è validato per uso pubblico. `[S2; S3]` Per la missione lo stato è `non stabilito dalle fonti fornite`: “rendere il lavoro alberghiero più umano” non va presentata come tale. `[S3]` Il linguaggio deve essere concreto, senza “AI”, “control tower”, promesse assolute o dati personali. `[S1; S3; S4]`
 
 Per chiudere le sole ambiguità che cambiano descrizione o limiti:
 
-1. Confermi il perimetro “gruppi indipendenti con più strutture”, lasciando hotel singoli e grandi catene come `not established from supplied sources`?
+1. Confermi il perimetro “gruppi indipendenti con più strutture”, lasciando hotel singoli e grandi catene come `non stabilito dalle fonti fornite`?
 2. Qual è oggi la regola corretta per Marea Setup: incluso nell’avvio e acquistabile per nuove strutture, oppure sempre incluso senza acquisto separato?
-3. Per usare pubblicamente numeri e risultati serve Customer Success oppure Finance e Customer Success insieme? Per la privacy confermi invece lo stato `not defined`?
+3. Per usare pubblicamente numeri e risultati serve Customer Success oppure Finance e Customer Success insieme? Per la privacy confermi invece lo stato `non definito`?
 
 Fonti: `[S1]` pagina web sintetica; `[S2]` scheda commerciale sintetica; `[S3]` note sintetiche di stakeholder; `[S4]` FAQ del supporto.

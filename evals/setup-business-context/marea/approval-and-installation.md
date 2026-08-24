@@ -2,7 +2,7 @@
 
 ## Approvazione gate 1
 
-Approvo il contenuto dell'identità Marea come `v1`, con stato `approved`, data di revisione 2026-08-24. Mantieni nel documento i conflitti risolti e i known unknowns indicati sopra. Salva l'identità nel percorso canonico di un brand standalone.
+Approvo il contenuto dell'identità Marea come `v1`, con stato `approvato`, data di revisione 2026-08-24. Mantieni nel documento i conflitti risolti e le incognite note indicate sopra. Salva l'identità nel percorso canonico di un brand autonomo.
 
 ## Installazione gate 2
 

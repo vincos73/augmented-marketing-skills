@@ -1,6 +1,6 @@
 ---
 name: setup-business-context
-version: 0.4.0
+version: 0.4.1
 description: "Build, update, and install a source-aware identity context for a company or brand. Use when managers want AI agents to understand a business before company-related work, when onboarding a new company or brand workspace, or when existing business context is missing or stale. Do not use to create strategy, campaigns, brand identity, or tool configuration."
 ---
 
@@ -19,6 +19,8 @@ Establish which entity the context describes:
 - **brand within a company** — a child context that adds brand-specific information without duplicating or overriding its parent silently.
 
 If the distinction is unclear, ask one plain-language question. Do not expose file architecture as an upfront choice.
+
+In manager-facing output, use the Italian entity labels `azienda`, `brand autonomo`, and `brand all'interno di un'azienda`.
 
 Use these canonical paths when writable:
 
@@ -78,21 +80,21 @@ The complete workflow must remain usable in plain chat while preserving the same
 Absence from the supplied sources does not prove that an identity element is absent from the organization. For each consequential gap, distinguish among:
 
 - supplied or confirmed;
-- not established from the supplied sources and not yet classified by the user;
-- exists, but is not currently available;
-- has not been defined by the organization;
-- unknown to the user;
-- not applicable.
+- `non stabilito dalle fonti fornite` — not established from the supplied sources and not yet classified by the user;
+- `esiste ma non è disponibile` — exists, but is not currently available;
+- `non definito` — has not been defined by the organization;
+- `sconosciuto all'utente` — unknown to the user;
+- `non applicabile` — not applicable.
 
 Use three levels of gaps:
 
 - **essential for a usable context** — require an explicit answer or status before approval; examples include the official entity, core offers, primary audience, company/brand relationship, and critical constraints;
-- **material but non-blocking** — allow approval while recording the state under Known unknowns; an established mission, history, approved positioning, proof, voice, or differentiators often belong here;
+- **material but non-blocking** — allow approval while recording the state under incognite note; an established mission, history, approved positioning, proof, voice, or differentiators often belong here;
 - **enrichment or task-specific** — defer until a later task needs it.
 
 Never turn a plausible purpose into an official mission. If no mission is documented, record the precise state and instruct later agents not to present an inferred purpose as the organization's mission.
 
-Name the exact missing-information state whenever a gap appears in a review or draft, and show the canonical state verbatim in backticks rather than only paraphrasing it. Default to `not established from supplied sources` unless a supplied source or the user explicitly supports `exists but unavailable`, `not defined`, `unknown to user`, or `not applicable`. A missing approved document does not by itself prove that the underlying element does not exist or has not been defined; do not summarize that situation as “does not exist.”
+Name the exact missing-information state whenever a gap appears in a review or draft, and show the Italian canonical state verbatim in backticks rather than only paraphrasing it. Default to `non stabilito dalle fonti fornite` unless a supplied source or the user explicitly supports `esiste ma non è disponibile`, `non definito`, `sconosciuto all'utente`, or `non applicabile`. A missing approved document does not by itself prove that the underlying element does not exist or has not been defined; do not summarize that situation as “does not exist.”
 
 ## Keep provenance visible
 
@@ -146,8 +148,8 @@ Present the complete draft for review and request explicit approval. Until appro
 
 After approval:
 
-- set the artifact status to `approved` and save a new artifact as `v1` with the current date;
-- for a substantive update, increment the integer version, update `Last reviewed`, and prepend a concise changelog entry explaining what changed and why;
+- set the artifact status to `approvato` and save a new artifact as `v1` with the current date;
+- for a substantive update, increment the integer version, update `Ultima revisione`, and prepend a concise changelog entry explaining what changed and why;
 - for a typo-only correction, preserve the version and changelog;
 - preserve prior changelog entries and unresolved items.
 

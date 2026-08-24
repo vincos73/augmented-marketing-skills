@@ -8,7 +8,7 @@ Confermo come dato corrente solo 24 gruppi paganti e 96 strutture paganti, alla 
 
 ## Domanda 2 — perimetro attuale
 
-Confermo Marea Console e Marea Setup come offerte correnti. Marea Insights è legacy e Marea Copilot è pianificato, non disponibile. Non voglio ancora classificare singoli hotel o catene grandi come fit o non-fit: lascia questa informazione non stabilita.
+Confermo Marea Console e Marea Setup come offerte correnti. Marea Insights è storico e Marea Copilot è pianificato, non disponibile. Non voglio ancora classificare singoli hotel o catene grandi come fit o non-fit: lascia questa informazione non stabilita.
 
 ## Domanda 3 — missione e approvazioni
 

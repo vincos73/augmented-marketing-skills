@@ -1,118 +1,118 @@
-# Business Identity: [Entity name]
+# Identità aziendale: [Nome entità]
 
-**Entity type:** company / standalone brand / brand within a company<br>
-**Parent context:** [path and version, or not applicable]<br>
-**Version:** v1<br>
-**Status:** draft / approved<br>
-**Last reviewed:** YYYY-MM-DD<br>
-**Context owner:** [role or name, only if supplied]<br>
-**Coverage:** [markets, geographies, offers, or brands covered, when material]<br>
+**Tipo di entità:** azienda / brand autonomo / brand all'interno di un'azienda<br>
+**Contesto genitore:** [percorso e versione, oppure non applicabile]<br>
+**Versione:** v1<br>
+**Stato:** bozza / approvato<br>
+**Ultima revisione:** YYYY-MM-DD<br>
+**Referente del contesto:** [ruolo o nome, solo se fornito]<br>
+**Perimetro:** [mercati, geografie, offerte o brand coperti, quando rilevante]<br>
 
-## Basis markers
+## Marcatori di provenienza
 
 - `[C]` confirmed by an authorized user
 - `[S1]` documented in a source listed below
 - `[I]` inferred and awaiting confirmation
 - `[?]` unknown or unresolved
 
-Markers can be combined, for example `[C; S2]`.
+I marcatori possono essere combinati, per esempio `[C; S2]`.
 
-## Agent quick brief
+## Sintesi per gli agenti
 
-- **In one sentence:**
-- **What this entity sells or delivers today:**
-- **Who uses, pays, or decides:**
-- **Customer outcome:**
-- **Main alternative or status quo:**
-- **What makes it recognizably itself:**
-- **Common misconception:**
-- **Do not assume:**
+- **In una frase:**
+- **Cosa vende o offre oggi questa entità:**
+- **Chi usa, paga o decide:**
+- **Risultato per il cliente:**
+- **Alternativa principale o status quo:**
+- **Cosa la rende riconoscibile:**
+- **Fraintendimento comune:**
+- **Non presumere:**
 
-## Identity
+## Identità
 
-- **Official name:**
-- **Entity type and company/brand relationship:**
-- **Current scope and explicit exclusions:**
-- **Purpose or established mission:** [If absent, record `[?]` plus its precise state; do not infer an official mission]
-- **High-level business model:** [Who pays, what they pay for, and how value is delivered; omit sensitive economics by default]
-- **History or origin that materially affects the identity:**
+- **Nome ufficiale:**
+- **Tipo di entità e relazione azienda/brand:**
+- **Perimetro corrente ed esclusioni esplicite:**
+- **Scopo o missione stabilita:** [Se assente, registra `[?]` insieme al suo stato preciso; non dedurre una missione ufficiale]
+- **Modello di business di alto livello:** [Chi paga, per cosa paga e come viene fornito il valore; ometti per impostazione predefinita gli aspetti economici sensibili]
+- **Storia o origine che influisce materialmente sull'identità:**
 
-## Products and services
+## Prodotti e servizi
 
-| Offer | Current status | What it is | Relevant audience | Established value | Basis |
+| Offerta | Stato corrente | Che cos'è | Pubblico rilevante | Valore stabilito | Base |
 |---|---|---|---|---|---|
-| | current / legacy / experimental / planned | | | | |
+| | corrente / storico / sperimentale / pianificato | | | | |
 
-Do not present a legacy, experimental, or planned offer as generally available.
+Non presentare un'offerta storica, sperimentale o pianificata come generalmente disponibile.
 
-## Customers and buying system
+## Clienti e sistema d'acquisto
 
-- **Primary customers:**
-- **Users:**
-- **Payers or economic buyers:**
-- **Decision-makers and approvers:**
-- **Blockers or other influential roles:**
-- **Best-fit characteristics:**
-- **Not a fit or deliberately not served:**
-- **Other relevant audiences:**
-- **Demand triggers or situations documented in the supplied material:**
-- **Customer job or desired outcome:**
-- **Customer language worth preserving:**
+- **Clienti principali:**
+- **Utenti:**
+- **Pagatori o compratori economici:**
+- **Decisori e approvatori:**
+- **Blocchi o altri ruoli influenti:**
+- **Caratteristiche del fit migliore:**
+- **Non adatto o deliberatamente non servito:**
+- **Altri pubblici rilevanti:**
+- **Trigger della domanda o situazioni documentate nel materiale fornito:**
+- **Esigenza del cliente o risultato desiderato:**
+- **Linguaggio del cliente da preservare:**
 
-## Market and positioning
+## Mercato e posizionamento
 
-- **Category or market:**
-- **Alternatives customers may consider, including the status quo:**
-- **Approved positioning:**
-- **Points of view already endorsed by the entity:**
+- **Categoria o mercato:**
+- **Alternative che i clienti possono considerare, incluso lo status quo:**
+- **Posizionamento approvato:**
+- **Punti di vista già approvati dall'entità:**
 
-Do not use this section to create a new positioning strategy. Record missing decisions under Known unknowns.
+Non usare questa sezione per creare una nuova strategia di posizionamento. Registra le decisioni mancanti sotto Incognite note.
 
-### Differentiated value chain
+### Catena del valore differenziante
 
-| Alternative or status quo | Distinctive capability | Customer value | Proof | Usage restriction | Basis |
+| Alternativa o status quo | Capacità distintiva | Valore per il cliente | Prova | Restrizione d'uso | Base |
 |---|---|---|---|---|---|
 | | | | | | |
 
-## Proof and credibility
+## Prove e credibilità
 
-| Claim or credential | Supporting proof | Basis | Usage restriction or approval needed |
+| Affermazione o credenziale | Prova di supporto | Base | Restrizione d'uso o approvazione necessaria |
 |---|---|---|---|
 | | | | |
 
-## Voice and terminology
+## Voce e terminologia
 
-- **Languages:**
-- **Voice characteristics supported by examples or guidance:**
-- **Official names, capitalization, and spelling:**
-- **Terms to use:**
-- **Terms to avoid:**
-- **Relevant examples or source pointers:**
+- **Lingue:**
+- **Caratteristiche della voce supportate da esempi o indicazioni:**
+- **Nomi ufficiali, maiuscole e ortografia:**
+- **Termini da usare:**
+- **Termini da evitare:**
+- **Esempi rilevanti o riferimenti alle fonti:**
 
-## Misconceptions and non-assumptions
+## Fraintendimenti e non-assunzioni
 
-- **Common misconceptions:**
-- **What agents must not imply or promise:**
-- **Current facts that could be confused with plans or aspirations:**
-- **Material exclusions or non-goals already established:**
+- **Fraintendimenti comuni:**
+- **Cosa gli agenti non devono implicare o promettere:**
+- **Fatti correnti che potrebbero essere confusi con piani o aspirazioni:**
+- **Esclusioni materiali o non-obiettivi già stabiliti:**
 
-## Guardrails and approvals
+## Vincoli e approvazioni
 
-- **Claims that must not be made:**
-- **Claims requiring evidence or human approval:**
-- **Regulated or sensitive topics:**
-- **Legal, privacy, accessibility, or brand constraints:**
-- **Decision owner or approval route:**
+- **Affermazioni da non fare:**
+- **Affermazioni che richiedono prove o approvazione umana:**
+- **Temi regolamentati o sensibili:**
+- **Vincoli legali, di privacy, accessibilità o brand:**
+- **Responsabile della decisione o percorso di approvazione:**
 
-## Brand relationships
+## Relazioni tra brand
 
-| Related company or brand | Relationship | Shared identity | Brand-specific context |
+| Azienda o brand collegato | Relazione | Identità condivisa | Contesto specifico del brand |
 |---|---|---|---|
 | | | | |
 
-Remove this section when it is genuinely not applicable.
+Rimuovi questa sezione quando è realmente non applicabile.
 
-## Agent operating notes
+## Note operative per gli agenti
 
 - Read this identity before work about this entity.
 - Do not fill known gaps with plausible inventions.
@@ -121,34 +121,34 @@ Remove this section when it is genuinely not applicable.
 - Surface material conflicts with new task information and ask whether the identity should be updated.
 - In downstream artifacts, reference this identity by path, version, and last review date instead of duplicating it.
 
-## Conflicts and resolutions
+## Conflitti e risoluzioni
 
-| Topic | Conflicting accounts | Resolution by authorized user | Status |
+| Tema | Resoconti in conflitto | Risoluzione dell'utente autorizzato | Stato |
 |---|---|---|---|
-| | | | open / resolved |
+| | | | aperto / risolto |
 
-## Known unknowns
+## Incognite note
 
-Use one of these states when relevant: `not established from supplied sources`, `exists but unavailable`, `not defined`, `unknown to user`, or `not applicable`. The first state is provisional; do not use it as evidence that something does not exist.
+Usa uno di questi stati quando pertinente: `non stabilito dalle fonti fornite`, `esiste ma non è disponibile`, `non definito`, `sconosciuto all'utente` oppure `non applicabile`. Il primo stato è provvisorio: non usarlo come prova che qualcosa non esista.
 
-| Unknown | State | Why it may matter | Who can resolve it |
+| Incognita | Stato | Perché può essere rilevante | Chi può risolverla |
 |---|---|---|---|
 | | | | |
 
-## Sources
+## Fonti
 
-| ID | Source | Date accessed or supplied | What it supports | Notes |
+| ID | Fonte | Data di accesso o fornitura | Cosa sostiene | Note |
 |---|---|---|---|---|
 | S1 | | | | |
 
-## Review triggers and freshness risks
+## Trigger di revisione e rischi di aggiornamento
 
-List only concrete conditions that should prompt a targeted review, such as a changed offer, market scope, company/brand relationship, claim, approval route, or regulated constraint. Do not impose a generic expiration interval.
+Elenca solo condizioni concrete che devono attivare una revisione mirata, come un cambiamento dell'offerta, del perimetro di mercato, della relazione azienda/brand, di una prova, del percorso di approvazione o di un vincolo regolamentato. Non imporre un intervallo generico di scadenza.
 
-| Trigger or risk | Sections affected | Current status or owner |
+| Trigger o rischio | Sezioni interessate | Stato corrente o referente |
 |---|---|---|
 | | | |
 
-## Changelog
+## Registro modifiche
 
-- v1 (YYYY-MM-DD) — Initial approved identity.
+- v1 (YYYY-MM-DD) — Identità iniziale approvata.
