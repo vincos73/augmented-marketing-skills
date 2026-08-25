@@ -14,6 +14,8 @@ La risposta deve:
 6. mostrare i marker di provenienza sulle affermazioni rilevanti;
 7. conservare ogni confine rilevante su privacy, diritto, sicurezza, autorizzazioni e uso pubblico delle prove;
 8. rinviare il dettaglio completo al gate 1 invece di trasformare la prima revisione in un inventario.
+9. usare etichette naturali per il manager, senza calchi del modello dati o campi del template esposti meccanicamente;
+10. non mostrare entità HTML, serializzazioni o caratteri codificati come `&#x20;`.
 
 Il tetto di 450 parole è un limite operativo, non un obiettivo da raggiungere. Una risposta più breve è preferibile se conserva comprensione, provenienza e guardrail.
 

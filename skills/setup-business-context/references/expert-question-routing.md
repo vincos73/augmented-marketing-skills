@@ -54,8 +54,8 @@ Record only the minimum business-model information an agent needs. Do not seek m
 Replace a vague request for "the target" with concrete roles and boundaries.
 
 - Who uses the offer, who pays, who decides, and who can block or approve the purchase?
-- Which customer characteristics indicate a strong fit?
-- Who is not a fit or is deliberately not served?
+- Which established customer characteristics make the offer particularly useful?
+- Are there situations or customers for whom the offer may not be appropriate?
 
 Do not force a single priority audience when the entity has multiple established offers or buying systems. Preserve the mapping between each offer and its relevant roles.
 
@@ -118,6 +118,8 @@ Never rewrite an inferred purpose as the official mission. Distinguish current i
 ## Phrase questions for managers
 
 - Use plain language. Avoid unexplained terms such as `ICP`, `USP`, `JTBD`, `positioning statement`, or `value proposition`.
+- Do not translate internal schema labels literally. In Italian, prefer questions such as `Per quali clienti il servizio funziona particolarmente bene?` and `Ci sono situazioni in cui preferisci non proporlo?`.
+- Do not expose raw HTML entities, serialized values, or internal field names in visible questions. Normalize encoded characters before presenting them.
 - Ask one primary question per card. Group fields only when they form one natural system, such as user, payer, decision-maker, and blocker.
 - Derive suggested choices from supplied sources; do not lead the user with generic answers invented by the agent.
 - Always allow correction, a free-form answer, and the applicable missing-information states.
@@ -147,5 +149,6 @@ Before presenting the identity for approval, verify that:
 - differentiation is not a generic adjective detached from alternatives and proof;
 - unsupported claims and inferred customer motives remain visible;
 - non-blocking gaps, including an undocumented mission, do not prevent completion;
+- when material non-blocking gaps remain, the manager is offered both approval with those points left open and the option to explore selected points first;
 - concrete review triggers are recorded when the supplied material establishes them;
 - no question crossed into strategy creation.

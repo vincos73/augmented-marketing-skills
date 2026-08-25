@@ -1,7 +1,8 @@
 ---
 name: setup-business-context
-version: 0.5.0
 description: "Build, update, and install a source-aware identity context for a company or brand. Use when managers want AI agents to understand a business before company-related work, when onboarding a new company or brand workspace, or when existing business context is missing or stale. Do not use to create strategy, campaigns, brand identity, or tool configuration."
+metadata:
+  version: "0.6.0"
 ---
 
 # Setup Business Context
@@ -75,6 +76,8 @@ Keep the transitions compact:
 - present provisional understanding, corrections, the complete draft, and both approval gates directly in chat;
 - echo captured answers briefly and never ask the manager to repeat information already supplied.
 
+Write every manager-facing passage as natural conversation, not as a projection of the artifact schema. Translate internal concepts into familiar language: for example, use `per chi l'offerta è particolarmente adatta` instead of `caratteristiche dell'adeguatezza migliore`, and `per chi potrebbe non essere adatta` instead of `non adatto o deliberatamente non servito`. Avoid abstract labels and phrases built around `adeguatezza`, `non adeguatezza`, or `idoneità`; describe the concrete customer or situation instead. Do not expose raw HTML entities such as `&#x20;`, serialized values, field names, or transport encoding. If source text contains encoded characters, normalize them for display without changing the underlying meaning.
+
 If the user explicitly asks for a visual, it may be offered only as a one-shot review after the source analysis is ready. Do not use it to collect required input, transport state, capture approval, or create a continuous multi-turn wizard. Continue all consequential choices and approvals in chat.
 
 The complete workflow must remain usable in plain chat while preserving the same provenance markers, gap rules, artifact paths, and approval boundaries.
@@ -93,12 +96,12 @@ Absence from the supplied sources does not prove that an identity element is abs
 Use three levels of gaps:
 
 - **essential for a usable context** — require an explicit answer or status before approval; examples include the official entity, core offers, primary audience, company/brand relationship, and critical constraints;
-- **material but non-blocking** — allow approval while recording the state under incognite note; an established mission, history, approved positioning, proof, voice, or differentiators often belong here;
+- **material but non-blocking** — allow approval while recording the state under aspetti ancora aperti; an established mission, history, approved positioning, proof, voice, or differentiators often belong here;
 - **enrichment or task-specific** — defer until a later task needs it.
 
 Never turn a plausible purpose into an official mission. If no mission is documented, record the precise state and instruct later agents not to present an inferred purpose as the organization's mission.
 
-Name the exact missing-information state whenever a gap appears in a review or draft, and show the Italian canonical state verbatim in backticks rather than only paraphrasing it. Default to `non stabilito dalle fonti fornite` unless a supplied source or the user explicitly supports `esiste ma non è disponibile`, `non definito`, `sconosciuto all'utente`, or `non applicabile`. A missing approved document does not by itself prove that the underlying element does not exist or has not been defined; do not summarize that situation as “does not exist.”
+Name the exact missing-information state whenever a consequential gap appears. In the canonical artifact, preserve the Italian state verbatim in backticks. In manager-facing chat, first explain it naturally, for example `non è emersa una missione ufficiale dalle fonti`; add the canonical state only when it helps review or provenance. Never use a state label as a substitute for an understandable explanation. Default to `non stabilito dalle fonti fornite` unless a supplied source or the user explicitly supports `esiste ma non è disponibile`, `non definito`, `sconosciuto all'utente`, or `non applicabile`. A missing approved document does not by itself prove that the underlying element does not exist or has not been defined; do not summarize that situation as “does not exist.”
 
 ## Keep provenance visible
 
@@ -129,7 +132,7 @@ Capture only durable information that can improve future work:
 
 Do not store credentials, personal data, confidential financial information, or trade secrets by default. If supplied material contains them, omit them from the identity and tell the user. Include sensitive business information only when it is necessary, the user explicitly wants it persisted, and the destination is appropriate.
 
-Use [the business identity template](references/business-identity-template.md) when creating a new artifact or restructuring an incomplete one. Adapt non-applicable sections instead of forcing empty ceremony.
+Use [the business identity template](references/business-identity-template.md) when creating a new artifact or restructuring an incomplete one. Treat it as a modular menu, not a form to complete mechanically: omit sections and rows that add no durable value, and do not surface enrichment-only gaps merely to show that a field exists. Preserve essential unknowns, material open points, conflicts, provenance, and guardrails.
 
 ## Make the identity reusable downstream
 
@@ -141,6 +144,8 @@ For a child brand, the reusable context is the pair `parent company identity + c
 
 ## Gate 1: approvazione dell'identità
 
+Before presenting this gate, read and follow [the manager-facing gate 1 contract](references/gate1-review-contract.md).
+
 Before saving a new canonical identity or materially updating an existing one, show the manager:
 
 - **Cosa sapranno gli agenti** — una breve sintesi esecutiva;
@@ -149,6 +154,13 @@ Before saving a new canonical identity or materially updating an existing one, s
 - **Artefatto proposto** — tipo di entità, percorso, versione e riferimento al genitore quando applicabile.
 
 Present the complete draft for review and request explicit approval. Until approval, call it a draft and do not overwrite the canonical identity.
+
+If material but non-blocking gaps remain, do not end with approval as the only apparent action. Name at most three of the most useful open points in plain language and offer two explicit paths:
+
+1. approve the identity now while preserving those points as open;
+2. explore one or more of them before approval.
+
+If the manager chooses to explore, ask no more than three plain-language questions in the next batch, update the draft, and return to gate 1. Exploring a missing mission, position, promise, or differentiator means documenting an existing decision or classifying its status; it does not authorize creating a new one. If no material non-blocking gap remains, request approval directly.
 
 After approval:
 
