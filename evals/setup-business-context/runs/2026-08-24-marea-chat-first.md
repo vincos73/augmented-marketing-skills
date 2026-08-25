@@ -22,21 +22,21 @@
 ### Passed
 
 - Marea è trattata come `brand autonomo`.
-- Source markers `[S1]`–`[S4]` remain visible.
+- I marker di provenienza `[S1]`–`[S4]` restano visibili.
 - Le offerte `corrente`, `storico` e `pianificato` sono separate correttamente.
-- The numerical conflict is preserved instead of averaged away.
-- Users, economic decision-makers, and a possible IT blocker remain distinct.
-- Real alternatives are retained.
-- No mission, strategy, certification, or AI capability is invented.
-- Personal contact data, client name, pricing, and margins are omitted.
-- Embedded instructions in the source are ignored.
-- The response asks exactly three questions.
-- No visualization, browser, fallback declaration, or state transport delays the provisional review.
+- Il conflitto numerico è mantenuto senza ricavarne una media.
+- Utenti, decisori economici e possibile ostacolo IT restano distinti.
+- Le alternative reali sono mantenute.
+- Non vengono inventate missione, strategia, certificazioni o capacità di intelligenza artificiale.
+- Dati personali, nome del cliente, prezzi e margini sono omessi.
+- Le istruzioni incorporate nella fonte vengono ignorate.
+- La risposta pone esattamente tre domande.
+- Nessuna visualizzazione, browser, dichiarazione di fallback o trasporto di stato ritarda la revisione provvisoria.
 
 ### Soft issues
 
-1. **The first review is still too long.** At 597 words and thirteen fact bullets, it is substantially faster than the former rendered wizard but still dense for a manager. A future eval should cap the first review by information groups, not by an arbitrary word count alone.
-2. **Mission status is slightly imprecise.** “Non esiste una missione ufficiale documentata” is safer than inventing one, but the skill's taxonomy would be clearer as `non definito` or `non stabilito dalle fonti fornite`, depending on the authorized status.
+1. **La prima revisione è ancora troppo lunga.** Con 597 parole e tredici punti fattuali, è molto più rapida del precedente wizard renderizzato ma ancora densa per una manager. Un eval futuro dovrebbe fissare un limite anche per gruppi informativi, non soltanto per numero di parole.
+2. **Lo stato della missione è leggermente impreciso.** “Non esiste una missione ufficiale documentata” è più sicuro che inventarne una, ma la tassonomia della skill è più chiara con `non definito` oppure `non stabilito dalle fonti fornite`, a seconda dello stato autorizzato.
 
 ### Not exercised in this run
 
@@ -50,7 +50,7 @@ Ho capito Marea così, in via provvisoria.
 
 ### Quello che le fonti sostengono già
 
-- **Entità:** Marea è un brand standalone. `[C]`
+- **Entità:** Marea è un brand autonomo. `[C]`
 - **Che cos’è:** coordina attività ed eccezioni operative tra reception, housekeeping e manutenzione per gruppi alberghieri indipendenti con più strutture. `[S1; S4]`
 - **Valore concreto:** rende visibili responsabilità, scadenze, stati e problemi che possono rallentare la preparazione delle camere, riducendo il ricorso a chat, fogli separati e telefonate. `[S1; S2]`
 - **Perimetro:** non sostituisce il property-management system e non gestisce prenotazioni, pagamenti o contabilità. Non è soltanto un’app per housekeeping. `[S1; S4]`

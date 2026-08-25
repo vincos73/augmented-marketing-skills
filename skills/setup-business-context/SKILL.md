@@ -1,6 +1,6 @@
 ---
 name: setup-business-context
-version: 0.4.1
+version: 0.4.2
 description: "Build, update, and install a source-aware identity context for a company or brand. Use when managers want AI agents to understand a business before company-related work, when onboarding a new company or brand workspace, or when existing business context is missing or stale. Do not use to create strategy, campaigns, brand identity, or tool configuration."
 ---
 
@@ -21,6 +21,8 @@ Establish which entity the context describes:
 If the distinction is unclear, ask one plain-language question. Do not expose file architecture as an upfront choice.
 
 In manager-facing output, use the Italian entity labels `azienda`, `brand autonomo`, and `brand all'interno di un'azienda`.
+
+Unless the user asks for another language, write manager-facing responses and the canonical identity artifact in Italian. Keep technical file names, source markers, product names, and legal names unchanged.
 
 Use these canonical paths when writable:
 
@@ -135,14 +137,14 @@ When another workflow uses the identity, have it reference the entity, canonical
 
 For a child brand, the reusable context is the pair `parent company identity + child brand identity`, with both paths and versions recorded. Do not load unrelated brand contexts by default.
 
-## Approval gate 1: approve the identity
+## Gate 1: approvazione dell'identità
 
 Before saving a new canonical identity or materially updating an existing one, show the manager:
 
-- **What agents will know** — a short executive preview;
-- **What remains unknown** — only gaps that could matter later;
-- **Conflicts or risks** — including unsupported claims;
-- **Proposed artifact** — entity type, path, version, and parent reference when applicable.
+- **Cosa sapranno gli agenti** — una breve sintesi esecutiva;
+- **Cosa resta da chiarire** — solo le lacune che potrebbero contare in seguito;
+- **Conflitti o rischi** — incluse le affermazioni non supportate;
+- **Artefatto proposto** — tipo di entità, percorso, versione e riferimento al genitore quando applicabile.
 
 Present the complete draft for review and request explicit approval. Until approval, call it a draft and do not overwrite the canonical identity.
 
@@ -155,7 +157,7 @@ After approval:
 
 If the workspace is not writable, return the complete approved artifact and state the intended path without claiming it was installed.
 
-## Approval gate 2: install for agents
+## Gate 2: installazione per gli agenti
 
 Content approval does not authorize changes to agent instruction files.
 
@@ -173,7 +175,7 @@ If the user declines installation, keep the approved identity and explain that a
 
 Distinguish configuration from runtime loading. A host may discover instruction files only when a new task or session starts, and an import may require a separate host confirmation. Report each observed state accurately instead of promising that the current conversation has reloaded the identity.
 
-## Finish clearly
+## Concludere con chiarezza
 
 Report:
 

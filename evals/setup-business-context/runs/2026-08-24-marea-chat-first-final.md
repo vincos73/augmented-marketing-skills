@@ -27,7 +27,7 @@
 Ho ricostruito un primo contesto provvisorio di Marea senza introdurre missione, strategia o posizionamento nuovi.
 
 **Entità e perimetro**
-Marea è un brand standalone che coordina le attività operative di gruppi alberghieri indipendenti tra reception, housekeeping e manutenzione. `[C; S1; S4]` Non sostituisce il property-management system e non gestisce prenotazioni, pagamenti o contabilità. `[S1; S4]`
+Marea è un brand autonomo che coordina le attività operative di gruppi alberghieri indipendenti tra reception, housekeeping e manutenzione. `[C; S1; S4]` Non sostituisce il property-management system e non gestisce prenotazioni, pagamenti o contabilità. `[S1; S4]`
 
 **Offerta attuale**
 Marea Console gestisce attività, eccezioni, responsabilità, scadenze e stati da browser o telefono. `[S1]` Marea Setup accompagna configurazione iniziale e formazione; Insights è storico e Copilot è soltanto un’idea futura, non disponibile e senza data confermata. `[S1; S2; S3; S4]`

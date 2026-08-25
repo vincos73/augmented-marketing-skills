@@ -10,10 +10,10 @@
 
 ## Marcatori di provenienza
 
-- `[C]` confirmed by an authorized user
-- `[S1]` documented in a source listed below
-- `[I]` inferred and awaiting confirmation
-- `[?]` unknown or unresolved
+- `[C]` confermato da un utente autorizzato
+- `[S1]` documentato in una fonte elencata sotto
+- `[I]` inferito e in attesa di conferma
+- `[?]` sconosciuto o non risolto
 
 I marcatori possono essere combinati, per esempio `[C; S2]`.
 
@@ -52,7 +52,7 @@ Non presentare un'offerta storica, sperimentale o pianificata come generalmente 
 - **Pagatori o compratori economici:**
 - **Decisori e approvatori:**
 - **Blocchi o altri ruoli influenti:**
-- **Caratteristiche del fit migliore:**
+- **Caratteristiche dell'adeguatezza migliore:**
 - **Non adatto o deliberatamente non servito:**
 - **Altri pubblici rilevanti:**
 - **Trigger della domanda o situazioni documentate nel materiale fornito:**
@@ -114,12 +114,12 @@ Rimuovi questa sezione quando è realmente non applicabile.
 
 ## Note operative per gli agenti
 
-- Read this identity before work about this entity.
-- Do not fill known gaps with plausible inventions.
-- For a child brand, read the parent company identity first and the relevant child context second; apply the child only within its explicit scope.
-- Do not use file order to resolve a material contradiction between parent and child; surface it.
-- Surface material conflicts with new task information and ask whether the identity should be updated.
-- In downstream artifacts, reference this identity by path, version, and last review date instead of duplicating it.
+- Leggi questa identità prima di lavorare su questa entità o per suo conto.
+- Non colmare le lacune note con invenzioni plausibili.
+- Per un brand figlio, leggi prima l'identità dell'azienda genitore e poi il contesto del brand; applica il secondo solo entro il suo perimetro esplicito.
+- Non usare l'ordine dei file per risolvere una contraddizione materiale tra genitore e figlio; rendila visibile.
+- Rendi visibili i conflitti materiali con le informazioni di un nuovo incarico e chiedi se l'identità debba essere aggiornata.
+- Negli artefatti a valle, cita questa identità tramite percorso, versione e data dell'ultima revisione invece di duplicarla.
 
 ## Conflitti e risoluzioni
 
