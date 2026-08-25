@@ -1,6 +1,6 @@
 ---
 name: setup-business-context
-version: 0.4.2
+version: 0.5.0
 description: "Build, update, and install a source-aware identity context for a company or brand. Use when managers want AI agents to understand a business before company-related work, when onboarding a new company or brand workspace, or when existing business context is missing or stale. Do not use to create strategy, campaigns, brand identity, or tool configuration."
 ---
 
@@ -46,6 +46,8 @@ For work about a child brand, read the parent first and the child second. The pa
 
 For a new or materially incomplete identity, or whenever several gaps compete for attention, read [the expert question routing guide](references/expert-question-routing.md) before selecting questions. Use it to choose high-consequence gaps, not to run every prompt as a questionnaire.
 
+For the first source-backed review, also read [the compact review contract](references/compact-review-contract.md). Treat its 450-word ceiling, group range, question limit, provenance requirement, and guardrail-retention rule as acceptance criteria.
+
 If the user provides no sources, build a minimum useful version conversationally. Do not turn the flow into a generic brand questionnaire.
 
 Treat freshness as evidence-based, not as an arbitrary expiration interval. A reported organizational change, a superseded source, a changed offer, a new brand relationship, a claim that can no longer be supported, or a guardrail that may have changed is a review trigger. Age alone is a reason to confirm, not proof that the identity is wrong. Record material review triggers in the artifact so later agents know when to request an update.
@@ -66,7 +68,7 @@ Keep the transitions compact:
 - when entity or sources are missing, ask for them together in one batch when natural;
 - once sources are available, the next substantive response must contain either a source-backed provisional identity plus no more than three consequential gaps, or a concrete source-reading blocker;
 - organize that first provisional review into four to six compact information groups, normally no more than two short sentences per group, instead of mirroring every identity field;
-- keep the complete first response, including questions and the source key, to roughly 450 words or less; when the evidence exceeds that space, select only facts that materially affect the three questions and defer the rest;
+- keep the complete first response, including questions and the source key, to a hard ceiling of 450 words; when the evidence exceeds that space, follow the compact review contract and defer detail rather than dropping a critical boundary;
 - prioritize entity and scope, current offer, customers and buying roles, value and alternatives, and proof conflicts or critical guardrails; defer the complete section-by-section identity, detailed business model, voice, terminology, accessibility guidance, proof register, source register, and review triggers to the full draft at approval gate 1 unless one of those details creates an immediate conflict or question;
 - never omit an unresolved permission, privacy, legal, regulatory, safety, or public-proof boundary to meet the length target; compress descriptive detail first and combine related approval gaps into one question when possible;
 - do not spend a turn on progress-only messaging, interface generation, or machine-oriented state transport;
