@@ -1,18 +1,18 @@
-# Install the approved business identity
+# Configurare l'identità aziendale approvata
 
-Read this reference only after the identity has passed approval gate 1 and the user has chosen an agent host.
+Leggi questa reference soltanto dopo che l'identità ha superato il gate 1 di approvazione e l'utente ha scelto l'host dell'agente.
 
-## Shared safeguards
+## Salvaguardie comuni
 
-Before proposing a change:
+Prima di proporre una modifica:
 
-1. Inspect existing root-level `AGENTS.md`, `AGENTS.override.md`, `CLAUDE.md`, `.claude/CLAUDE.md`, and `CLAUDE.local.md` files that are relevant to the selected host.
-2. Identify any existing business-context instruction or import. Update it instead of adding a duplicate.
-3. Preserve all unrelated content. Never replace an entire instruction file to install this context.
-4. Show the exact proposed addition or diff and explain that instruction files guide agent behavior; they do not grant new permissions or authorize external actions.
-5. Apply only the host changes the user explicitly approved.
+1. Controlla i file esistenti alla radice `AGENTS.md`, `AGENTS.override.md`, `CLAUDE.md`, `.claude/CLAUDE.md` e `CLAUDE.local.md` pertinenti all'host scelto.
+2. Individua eventuali istruzioni o import già presenti per il contesto aziendale. Aggiornali invece di aggiungere un duplicato.
+3. Conserva ogni contenuto non pertinente. Non sostituire mai un intero file di istruzioni per installare questo contesto.
+4. Mostra l'aggiunta o il diff esatto e spiega che i file di istruzioni guidano il comportamento dell'agente, ma non concedono nuovi permessi né autorizzano azioni esterne.
+5. Applica soltanto le modifiche all'host approvate esplicitamente dall'utente.
 
-Use stable comments around an inserted block so later updates can target it safely:
+Usa commenti stabili intorno al blocco inserito, così gli aggiornamenti successivi potranno individuarlo in sicurezza:
 
 ```markdown
 <!-- setup-business-context:start -->
@@ -20,33 +20,33 @@ Use stable comments around an inserted block so later updates can target it safe
 <!-- setup-business-context:end -->
 ```
 
-If an existing block with these markers is present, replace only its contents. If semantically equivalent instructions exist without markers, adapt them carefully rather than creating competing rules.
+Se esiste già un blocco con questi marcatori, sostituisci soltanto il suo contenuto. Se esistono istruzioni semanticamente equivalenti senza marcatori, adattale con attenzione invece di creare regole concorrenti.
 
-## Codex adapter
+## Adattatore Codex
 
-Codex reads project `AGENTS.md` guidance before working. Prefer the root `AGENTS.md` that applies to the workspace. If an `AGENTS.override.md` is active at that level, explain the precedence issue and do not edit the inactive file as if installation succeeded.
+Codex legge le istruzioni del progetto in `AGENTS.md` prima di lavorare. Preferisci il file `AGENTS.md` alla radice che si applica al workspace. Se a quel livello è attivo un `AGENTS.override.md`, spiega il problema di precedenza e non modificare il file inattivo come se l'installazione fosse riuscita.
 
-Use a concise block such as:
+Usa un blocco conciso come questo:
 
 ```markdown
 <!-- setup-business-context:start -->
-## Business identity
+## Identità aziendale
 
-Before doing work for or about [Entity], read `[identity-path]` and apply its approved facts, terminology, and guardrails. Do not treat its known unknowns as facts. For work about a child brand, also read the matching file under `.agents/brands/`.
+Prima di lavorare per o su [Entity], leggi `[identity-path]` e applica i suoi fatti approvati, la terminologia e i vincoli. Non trattare le incognite note come fatti. Per il lavoro su un brand figlio, leggi anche il file corrispondente sotto `.agents/brands/`.
 <!-- setup-business-context:end -->
 ```
 
-Keep the canonical identity in its own file. Do not duplicate the full document inside `AGENTS.md`.
+Conserva l'identità canonica nel suo file. Non duplicare l'intero documento dentro `AGENTS.md`.
 
-After editing, read the saved block back from disk. Report that the instruction was configured on disk, not that the current session loaded it or that every future model response is guaranteed to comply.
+Dopo la modifica, rileggi dal disco il blocco salvato. Riporta che l'istruzione è stata configurata sul disco, non che la sessione corrente l'abbia caricata o che ogni risposta futura del modello sia garantita.
 
-Codex discovers project instructions once per run. Explain that the new block is configured on disk for subsequent runs and that the user should start a new Codex task or session before testing it. If the host can report its loaded instruction sources, use that read-only check; otherwise do not claim that the current session reloaded the change.
+Codex rileva le istruzioni del progetto una volta per esecuzione. Spiega che il nuovo blocco è configurato sul disco per le esecuzioni successive e che l'utente deve iniziare un nuovo task o una nuova sessione Codex prima di provarlo. Se l'host può riportare le fonti di istruzioni caricate, usa quel controllo in sola lettura; altrimenti non dichiarare che la sessione corrente abbia ricaricato la modifica.
 
-## Claude Code adapter
+## Adattatore Claude Code
 
-Claude Code reads project `CLAUDE.md` files, not `AGENTS.md` directly. Prefer an existing root `CLAUDE.md`; if none exists, propose creating one. Preserve `.claude/CLAUDE.md` or `CLAUDE.local.md` choices already made by the project instead of silently moving them.
+Claude Code legge i file di progetto `CLAUDE.md`, non `AGENTS.md` direttamente. Preferisci un `CLAUDE.md` esistente alla radice; se non esiste, proponi di crearne uno. Conserva le scelte già fatte dal progetto tra `.claude/CLAUDE.md` e `CLAUDE.local.md` invece di spostarle in silenzio.
 
-Claude Code supports file imports with `@path`. For a single company or standalone brand, use a direct import so the approved identity is loaded with project instructions:
+Claude Code supporta gli import di file con `@percorso`. Per una singola azienda o un brand autonomo, usa un import diretto così l'identità approvata viene caricata insieme alle istruzioni del progetto:
 
 ```markdown
 <!-- setup-business-context:start -->
@@ -54,22 +54,22 @@ Claude Code supports file imports with `@path`. For a single company or standalo
 <!-- setup-business-context:end -->
 ```
 
-Replace `[identity-path]` with the real relative path, for example `@.agents/company-identity.md`; do not leave brackets in the installed line.
+Sostituisci `[identity-path]` con il percorso relativo reale, per esempio `@.agents/company-identity.md`; non lasciare le parentesi nella riga installata.
 
-When the workspace also uses Codex, Claude's file may import the shared agent instructions as well:
+Quando il workspace usa anche Codex, il file di Claude può importare anche le istruzioni condivise dell'agente:
 
 ```markdown
 @AGENTS.md
 ```
 
-Do not add this line twice. A symlink is not necessary.
+Non aggiungere due volte questa riga. Un link simbolico non è necessario.
 
-For a multi-brand company, import the company identity as the always-loaded parent. Add a concise instruction to read the relevant `.agents/brands/<brand-slug>.md` file when a task concerns a child brand; do not import every brand by default.
+Per un'azienda con più brand, importa l'identità aziendale come genitore sempre caricato. Aggiungi un'istruzione concisa per leggere il file pertinente `.agents/brands/<brand-slug>.md` quando un'attività riguarda un brand figlio; non importare ogni brand per impostazione predefinita.
 
-After editing, read the saved import and referenced identity path back from disk. Explain that Claude treats these files as persistent project context, not as enforced security controls.
+Dopo la modifica, rileggi dal disco l'import salvato e il percorso dell'identità referenziato. Spiega che Claude tratta questi file come contesto persistente del progetto, non come controlli di sicurezza vincolanti.
 
-Claude Code may show a first-use approval dialog for file imports. Tell the user to review and accept the exact identity path before relying on the import. When available, verify the loaded files with Claude's `/memory` view in a fresh session; an import observed on disk is configured, but it is not proof that the running session loaded or approved it.
+Claude Code può mostrare una finestra di approvazione al primo uso degli import di file. Di' all'utente di controllare e accettare il percorso esatto dell'identità prima di affidarsi all'import. Quando disponibile, verifica i file caricati con la vista `/memory` di Claude in una nuova sessione; un import osservato sul disco è configurato, ma non dimostra che la sessione in esecuzione lo abbia caricato o approvato.
 
-## Other agent hosts
+## Altri host di agenti
 
-Do not guess proprietary instruction filenames or claim compatibility. Keep the approved identity portable and tell the user what needs verification for their host: the project instruction file, its load scope, and whether it can reference or import the identity artifact.
+Non indovinare nomi proprietari dei file di istruzioni e non dichiarare compatibilità non verificata. Mantieni portabile l'identità approvata e indica all'utente che cosa deve verificare per il proprio host: il file di istruzioni del progetto, il suo ambito di caricamento e la possibilità di referenziare o importare l'artefatto dell'identità.

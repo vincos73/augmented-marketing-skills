@@ -28,7 +28,7 @@ Il percorso non è obbligatoriamente lineare. Se obiettivo e formato sono già c
 
 | Esigenza dell'utente | Skill che la risolve | Output della skill | Stato |
 | --- | --- | --- | --- |
-| Fare in modo che l'agente conosca l'azienda o il brand prima di lavorarci | [`setup-business-context`](skills/setup-business-context/SKILL.md) | **Business Identity** verificabile e versionata: identità aziendale, identità di un brand autonomo oppure identità di un brand collegata all'azienda | **Approvata**, v0.6.0 |
+| Fare in modo che l'agente conosca l'azienda o il brand prima di lavorarci | [`setup-business-context`](skills/setup-business-context/SKILL.md) | **Business Identity** verificabile e versionata: identità aziendale, identità di un brand autonomo oppure identità di un brand collegata all'azienda | **Approvata**, v0.6.2 |
 | Definire le regole di marketing stabili che l'agente deve applicare in ogni attività aziendale | [`setup-marketing-system`](skills/setup-marketing-system/SKILL.md) | **Fondamenti di marketing** aziendali ed eventuali integrazioni di brand: regole su offerte e pubblici, messaggi e prove, ruolo dei canali, qualità e approvazioni | **Approvata**, v0.2.0 |
 | Chiarire il problema da affrontare e scegliere quale opportunità o ipotesi testare | Strategy Core: `challenge-brief`, `build-evidence-pack`, `choose-marketing-bet` | Brief del problema, evidenze distinte dalle assunzioni e decisione di marketing approvata con il relativo test | **Roadmap** |
 | Trasformare una decisione approvata in una campagna coordinata | Campaign Core: `to-campaign-spec`, `campaign-review`, `learn-from-results` | Campaign Spec con messaggi, canali, asset, responsabilità, approvazioni e misure; review e apprendimento finale | **Roadmap** |
@@ -40,7 +40,7 @@ I nomi delle skill in roadmap descrivono il lavoro ancora da progettare. Non ind
 
 ## Che cosa esiste oggi
 
-### `setup-business-context` v0.6.0
+### `setup-business-context` v0.6.2
 
 È l'unica skill sorgente approvata. Costruisce una carta d'identità persistente partendo dalle fonti fornite dall'utente. Mantiene visibili provenienza, conflitti e aspetti ancora aperti; il template è modulare e al gate 1 permette di approvare lasciando aperti i punti non bloccanti oppure di approfondirli prima. Non inventa un posizionamento e non definisce la strategia.
 
@@ -50,7 +50,7 @@ Gli output canonici previsti sono:
 - `.agents/brand-identity.md` per un brand autonomo;
 - `.agents/brands/<brand>.md` per un brand appartenente a un'azienda.
 
-La [release stabile v0.6.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/v0.6.0) contiene lo ZIP della sola skill e il relativo checksum. Le istruzioni per l'installazione manuale sono in [`skills/setup-business-context/INSTALL.md`](skills/setup-business-context/INSTALL.md).
+La sorgente e la copia locale attualmente installata sono alla versione v0.6.2. La [release pubblica stabile v0.6.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/v0.6.0) contiene lo ZIP della precedente versione pubblicata e il relativo checksum. Le istruzioni per l'installazione manuale sono in [`skills/setup-business-context/INSTALL.md`](skills/setup-business-context/INSTALL.md).
 
 ### `setup-marketing-system` v0.2.0
 
@@ -79,7 +79,7 @@ La [release stabile v0.2.0](https://github.com/vincos73/augmented-marketing-skil
 
 | Componente | Stato attuale |
 | --- | --- |
-| `setup-business-context` | approvata e disponibile come release stabile v0.6.0 |
+| `setup-business-context` | approvata; sorgente e installazione locale v0.6.2; release pubblica stabile v0.6.0 |
 | `setup-marketing-system` | approvata e disponibile come release stabile v0.2.0 |
 | Strategy Core | architettura e confini definiti; skill non ancora progettate o approvate |
 | Campaign Core | roadmap; nessuna skill inclusa |

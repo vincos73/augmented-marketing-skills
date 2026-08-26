@@ -1,154 +1,154 @@
-# Expert Question Routing
+# Routing esperto delle domande
 
-Use this guide when a new identity is materially incomplete, the sources conflict, or the agent must choose which gaps deserve the manager's attention. The goal is not to run a fixed questionnaire. It is to ask the smallest set of questions that makes the identity safer and more useful.
+Usa questa guida quando una nuova identità è materialmente incompleta, le fonti sono in conflitto o l'agente deve scegliere quali lacune meritano l'attenzione del responsabile. L'obiettivo non è eseguire un questionario fisso, ma porre il minor numero di domande che renda l'identità più sicura e utile.
 
-## Build a gap ledger first
+## Costruire prima un registro delle lacune
 
-Before asking anything, map each consequential identity area to one state:
+Prima di chiedere qualsiasi cosa, associa ogni area rilevante dell'identità a uno stato:
 
-- supported by a supplied source;
-- confirmed by the user;
-- inferred and awaiting confirmation;
-- conflicting across sources;
-- absent or ambiguous;
+- sostenuto da una fonte fornita;
+- confermato dall'utente;
+- inferito e in attesa di conferma;
+- in conflitto tra fonti;
+- assente o ambiguo;
 - esplicitamente `non definito`, `sconosciuto all'utente`, `esiste ma non è disponibile` oppure `non applicabile`.
 
-Do not ask for information already supported unless confirmation would resolve a material ambiguity. Do not expose this ledger as a long diagnostic report; use it to select the next questions.
+Non chiedere informazioni già sostenute dalle fonti, salvo che una conferma risolva un'ambiguità materiale. Non mostrare questo registro come un lungo report diagnostico: usalo per selezionare le domande successive.
 
-## Rank questions by consequence
+## Ordinare le domande in base alle conseguenze
 
-Select at most three questions per batch. Rank candidate questions in this order:
+Seleziona al massimo tre domande per gruppo. Ordina le domande candidate in questo modo:
 
-1. prevent an agent from making a false, unsafe, sensitive, or unauthorized statement;
-2. establish the entity, its current scope, its offers, and its company/brand relationships;
-3. clarify who receives value, who pays or decides, and what situation creates demand;
-4. distinguish the entity from real alternatives and connect distinctive capabilities to customer value and proof;
-5. preserve recognizable language, correct common misconceptions, and classify non-blocking identity gaps.
+1. impedire all'agente di fare affermazioni false, rischiose, sensibili o non autorizzate;
+2. stabilire entità, perimetro corrente, offerte e relazioni tra azienda e brand;
+3. chiarire chi riceve valore, chi paga o decide e quale situazione genera la domanda;
+4. distinguere l'entità dalle alternative reali e collegare capacità distintive, valore per il cliente e prove;
+5. conservare il linguaggio riconoscibile, correggere i fraintendimenti comuni e classificare le lacune non bloccanti dell'identità.
 
-An explicit `sconosciuto all'utente`, `non definito`, `esiste ma non è disponibile` or `non applicabile` can satisfy the need to classify an essential gap. It does not make the underlying information known.
+Uno stato esplicito come `sconosciuto all'utente`, `non definito`, `esiste ma non è disponibile` o `non applicabile` può soddisfare la necessità di classificare una lacuna essenziale. Non rende però nota l'informazione sottostante.
 
-## Use expert lenses without importing a strategy workshop
+## Usare lenti esperte senza trasformare il percorso in un workshop strategico
 
-The prompts below are a question bank, not a mandatory sequence. Lead with the provisional answer extracted from sources whenever possible.
+Le domande seguenti sono una banca di prompt, non una sequenza obbligatoria. Quando possibile, parti dalla risposta provvisoria estratta dalle fonti.
 
-### Entity and current scope
+### Entità e perimetro corrente
 
-Ask when the legal entity, operating identity, hierarchy, geography, or current portfolio is ambiguous.
+Chiedi quando sono ambigui entità legale, identità operativa, gerarchia, geografia o portafoglio corrente.
 
-- What exactly are we describing: the company (`azienda`), a standalone brand (`brand autonomo`), or a brand within a company (`brand all'interno di un'azienda`)?
-- Which offers, markets, geographies, or related brands are covered by this identity?
-- What is outside the scope or no longer current?
+- Che cosa stiamo descrivendo esattamente: l'azienda (`azienda`), un brand autonomo (`brand autonomo`) o un brand all'interno di un'azienda (`brand all'interno di un'azienda`)?
+- Quali offerte, mercati, aree geografiche o brand collegati rientrano in questa identità?
+- Che cosa è fuori perimetro o non è più attuale?
 
-### Offer, value, and high-level business model
+### Offerta, valore e modello di business di alto livello
 
-Ask for current facts, not future choices.
+Chiedi fatti correnti, non scelte future.
 
-- What do you sell today, and what concrete change does it produce for the customer?
-- Who pays, what do they pay for, and how is the value delivered?
-- Which offers are current (`corrente`), legacy (`storico`), experimental (`sperimentale`), or planned (`pianificato`) and therefore must not be presented as generally available?
+- Che cosa vendi oggi e quale cambiamento concreto produce per il cliente?
+- Chi paga, per che cosa paga e come viene fornito il valore?
+- Quali offerte sono correnti (`corrente`), storiche (`storico`), sperimentali (`sperimentale`) o pianificate (`pianificato`) e quindi non devono essere presentate come generalmente disponibili?
 
-Record only the minimum business-model information an agent needs. Do not seek margins, cost structure, confidential revenue, pricing strategy, or trade secrets by default.
+Registra soltanto le informazioni minime del modello di business di cui l'agente ha bisogno. Non cercare per impostazione predefinita margini, struttura dei costi, ricavi riservati, strategia di prezzo o segreti commerciali.
 
-### Customer and buying system
+### Cliente e sistema d'acquisto
 
-Replace a vague request for "the target" with concrete roles and boundaries.
+Sostituisci la richiesta vaga del “target” con ruoli e confini concreti.
 
-- Who uses the offer, who pays, who decides, and who can block or approve the purchase?
-- Which established customer characteristics make the offer particularly useful?
-- Are there situations or customers for whom the offer may not be appropriate?
+- Chi usa l'offerta, chi paga, chi decide e chi può bloccare o approvare l'acquisto?
+- Quali caratteristiche già stabilite del cliente rendono l'offerta particolarmente utile?
+- Ci sono situazioni o clienti per cui l'offerta potrebbe non essere adatta?
 
-Do not force a single priority audience when the entity has multiple established offers or buying systems. Preserve the mapping between each offer and its relevant roles.
+Non imporre un unico pubblico prioritario quando l'entità ha più offerte o sistemi d'acquisto già stabiliti. Conserva la relazione tra ogni offerta e i ruoli pertinenti.
 
-### Trigger, job, and desired outcome
+### Trigger, bisogno e risultato desiderato
 
-Ask when the sources name audiences but do not explain why they seek the offer.
+Chiedi quando le fonti indicano i pubblici ma non spiegano perché cercano l'offerta.
 
-- What situation makes a customer start looking for this kind of solution?
-- What progress or outcome are they trying to achieve?
-- How do they recognize that the result is good enough?
+- Quale situazione spinge un cliente a cercare questo tipo di soluzione?
+- Quale progresso o risultato sta cercando di ottenere?
+- Come riconosce che il risultato è sufficiente?
 
-Treat documented customer language as evidence. Treat an internal hypothesis about customer motivation as an inference until confirmed.
+Tratta il linguaggio documentato dei clienti come un'evidenza. Considera un'ipotesi interna sulla motivazione del cliente un'inferenza finché non viene confermata.
 
-### Alternatives, differentiation, and proof
+### Alternative, differenziazione e prove
 
-Do not ask only "Who are your competitors?" or "What is your USP?" Use the customer's actual choice set.
+Non chiedere soltanto “Chi sono i tuoi concorrenti?” o “Qual è la tua USP?”. Usa l'insieme reale delle opzioni tra cui il cliente può scegliere.
 
-- If this offer did not exist, what would the customer probably do instead?
-- Which capability is materially different from those alternatives?
-- What customer value follows from that capability?
-- What evidence supports the capability, value, or claim, and may that evidence be used publicly?
+- Se questa offerta non esistesse, che cosa farebbe probabilmente il cliente?
+- Quale capacità è materialmente diversa rispetto a quelle alternative?
+- Quale valore per il cliente deriva da quella capacità?
+- Quale prova sostiene la capacità, il valore o l'affermazione e può essere usata pubblicamente?
 
-Keep the chain explicit:
+Mantieni esplicita la catena:
 
-> alternative or status quo → distinctive capability → customer value → proof → usage restriction
+> alternativa o status quo → capacità distintiva → valore per il cliente → prova → restrizione d'uso
 
-Do not invent a differentiated position when the organization has not approved one. Record the components that are established and leave the unresolved decision visible.
+Non inventare un posizionamento differenziante quando l'organizzazione non ne ha approvato uno. Registra le componenti stabilite e lascia visibile la decisione irrisolta.
 
-### Misconceptions, language, and recognizability
+### Fraintendimenti, linguaggio e riconoscibilità
 
-Ask when future agents could easily produce generic or misleading descriptions.
+Chiedi quando gli agenti successivi potrebbero produrre facilmente descrizioni generiche o fuorvianti.
 
-- What do customers, partners, or new colleagues most often misunderstand about the entity?
-- What must an agent never assume, imply, or promise?
-- Which official names, terms, spellings, or customer expressions must be preserved?
-- Which real examples best represent the established voice?
+- Che cosa fraintendono più spesso clienti, partner o nuovi colleghi dell'entità?
+- Che cosa non deve mai presumere, implicare o promettere un agente?
+- Quali nomi ufficiali, termini, grafie o espressioni dei clienti devono essere preservati?
+- Quali esempi reali rappresentano meglio la voce già stabilita?
 
-Prefer examples over adjective lists. Detailed editorial and visual production rules belong in the applicable content profile, not in this general identity.
+Preferisci gli esempi agli elenchi di aggettivi. Le regole dettagliate di produzione editoriale e visuale appartengono al profilo di contenuto applicabile, non a questa identità generale.
 
-### Boundaries and approvals
+### Confini e approvazioni
 
-Ask about the type of statement and its approval route, not merely one universal approver.
+Chiedi il tipo di affermazione e il relativo percorso di approvazione, non soltanto il nome di un unico approvatore universale.
 
-- Which claims can be used as documented, which require fresh evidence, and which require human approval?
-- Which topics, markets, customer groups, legal entities, or regulated areas need special handling?
-- Who owns each relevant approval route?
+- Quali affermazioni possono essere usate come documentate, quali richiedono evidenze aggiornate e quali richiedono un'approvazione umana?
+- Quali temi, mercati, gruppi di clienti, entità legali o aree regolamentate richiedono una gestione speciale?
+- Chi è responsabile di ciascun percorso di approvazione rilevante?
 
-If no route exists, record `non definito`; do not silently assign one.
+Se non esiste un percorso, registra `non definito`; non assegnarne uno in silenzio.
 
-### Mission, purpose, and history
+### Missione, scopo e storia
 
-Treat these as material but normally non-blocking unless the entity's work makes them operationally necessary.
+Tratta questi elementi come materiali ma normalmente non bloccanti, salvo che il lavoro dell'entità li renda necessari sul piano operativo.
 
-- Is there an official mission or purpose in an approved source?
-- If not found, is it `esiste ma non è disponibile`, `non definito`, `sconosciuto all'utente`, or `non applicabile`?
-- Which historical facts materially change how the entity should be understood today?
+- Esiste una missione o uno scopo ufficiale in una fonte approvata?
+- Se non è stato trovato, è `esiste ma non è disponibile`, `non definito`, `sconosciuto all'utente` o `non applicabile`?
+- Quali fatti storici cambiano materialmente il modo in cui l'entità deve essere compresa oggi?
 
-Never rewrite an inferred purpose as the official mission. Distinguish current identity, approved aspiration, and historical language.
+Non riscrivere mai uno scopo inferito come missione ufficiale. Distingui identità corrente, aspirazione approvata e linguaggio storico.
 
-## Phrase questions for managers
+## Formulare le domande per i responsabili
 
-- Use plain language. Avoid unexplained terms such as `ICP`, `USP`, `JTBD`, `positioning statement`, or `value proposition`.
-- Do not translate internal schema labels literally. In Italian, prefer questions such as `Per quali clienti il servizio funziona particolarmente bene?` and `Ci sono situazioni in cui preferisci non proporlo?`.
-- Do not expose raw HTML entities, serialized values, or internal field names in visible questions. Normalize encoded characters before presenting them.
-- Ask one primary question per card. Group fields only when they form one natural system, such as user, payer, decision-maker, and blocker.
-- Derive suggested choices from supplied sources; do not lead the user with generic answers invented by the agent.
-- Always allow correction, a free-form answer, and the applicable missing-information states.
-- When presenting a source-backed provisional answer, offer `confirm`, `correct`, and `unknown` rather than asking the user to restate it.
-- Echo the captured answer before advancing, especially when the interface is unavailable or the answer changes a prior claim.
+- Usa un linguaggio comune. Evita termini non spiegati come `ICP`, `USP`, `JTBD`, `positioning statement` o `value proposition`.
+- Non tradurre alla lettera le etichette dello schema interno. In italiano, preferisci domande come `Per quali clienti il servizio funziona particolarmente bene?` e `Ci sono situazioni in cui preferisci non proporlo?`.
+- Non mostrare nelle domande visibili entità HTML, valori serializzati o nomi di campi interni. Normalizza i caratteri codificati prima di presentarli.
+- Poni una domanda principale per ogni scheda. Raggruppa i campi soltanto quando formano un sistema naturale, come utente, pagatore, decisore e ostacolo.
+- Ricava le scelte suggerite dalle fonti fornite; non guidare l'utente verso risposte generiche inventate dall'agente.
+- Consenti sempre una correzione, una risposta libera e gli stati applicabili delle informazioni mancanti.
+- Quando presenti una risposta provvisoria sostenuta dalle fonti, proponi `Conferma`, `Correggi` e `Non lo so` invece di chiedere all'utente di ripeterla.
+- Ripeti brevemente la risposta acquisita prima di avanzare, soprattutto quando l'interfaccia non è disponibile o la risposta modifica un'affermazione precedente.
 
-## Respect the strategy boundary
+## Rispettare il confine con la strategia
 
-Do not use this setup to decide:
+Non usare questa configurazione per decidere:
 
-- growth objectives or strategic priorities;
-- a new target segment or market to enter;
-- a new position, mission, promise, or differentiator;
-- pricing strategy, investment, budget, or resource allocation;
-- campaign goals, channels, content plans, KPIs, or tests;
-- product roadmap or organizational redesign.
+- obiettivi di crescita o priorità strategiche;
+- un nuovo segmento target o un mercato in cui entrare;
+- un nuovo posizionamento, una missione, una promessa o un differenziatore;
+- strategia di prezzo, investimenti, budget o allocazione delle risorse;
+- obiettivi di campagna, canali, piani di contenuto, KPI o test;
+- roadmap del prodotto o ridisegno organizzativo.
 
-If one of these is missing, record it only when its absence affects the identity, then route the later decision to the appropriate strategy or execution workflow. An approved current decision supplied by the user may be recorded as context; the setup must not create it.
+Se manca uno di questi elementi, registralo soltanto quando la sua assenza influenza l'identità e indirizza la decisione successiva al workflow strategico o operativo appropriato. Una decisione corrente già approvata e fornita dall'utente può essere registrata come contesto; la configurazione non deve crearla.
 
-## Check before approval
+## Verificare prima dell'approvazione
 
-Before presenting the identity for approval, verify that:
+Prima di presentare l'identità per l'approvazione, verifica che:
 
-- every essential area has content or an explicit missing-information state;
-- current facts are separated from plans and aspirations;
-- audiences are not collapsed when offers or buying roles differ;
-- differentiation is not a generic adjective detached from alternatives and proof;
-- unsupported claims and inferred customer motives remain visible;
-- non-blocking gaps, including an undocumented mission, do not prevent completion;
-- when material non-blocking gaps remain, the manager is offered both approval with those points left open and the option to explore selected points first;
-- concrete review triggers are recorded when the supplied material establishes them;
-- no question crossed into strategy creation.
+- ogni area essenziale contiene informazioni o uno stato esplicito dell'informazione mancante;
+- i fatti correnti sono separati da piani e aspirazioni;
+- i pubblici non vengono accorpati quando offerte o ruoli d'acquisto differiscono;
+- la differenziazione non è un aggettivo generico scollegato da alternative e prove;
+- le affermazioni non sostenute e le motivazioni inferite dei clienti restano visibili;
+- le lacune non bloccanti, inclusa una missione non documentata, non impediscono il completamento;
+- quando restano lacune materiali non bloccanti, al responsabile vengono offerte sia l'approvazione con quei punti aperti sia la possibilità di approfondirne alcuni prima;
+- i trigger concreti di revisione sono registrati quando il materiale fornito li stabilisce;
+- nessuna domanda è sconfinata nella creazione di una strategia.
