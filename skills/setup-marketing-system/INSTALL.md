@@ -2,11 +2,11 @@
 
 Questo pacchetto contiene solo la skill installabile. Non contiene Business Identity, Fondamenti di marketing o file `AGENTS.md`/`CLAUDE.md` dell'organizzazione.
 
-La versione di questa sorgente è `0.2.0`. Una modifica della sorgente non implica che esistano già un tag o una release pubblica con la stessa versione.
+La versione di questa sorgente è `0.2.1`. Una modifica della sorgente non implica che esistano già un tag o una release pubblica con la stessa versione.
 
 ## Installazione da ZIP
 
-1. Scarica uno ZIP ufficiale della versione che vuoi installare; per questa release deve dichiarare `0.2.0` in `SKILL.md`.
+1. Scarica uno ZIP ufficiale della versione che vuoi installare; per questa release deve dichiarare `0.2.1` in `SKILL.md`.
 2. Verifica lo ZIP con il file `SHA256SUMS` della stessa release quando la verifica dell'integrità è richiesta.
 3. Estrai lo ZIP. Deve contenere una sola cartella radice: `setup-marketing-system/`.
 4. Copia quella cartella in `~/.codex/skills/`.
@@ -26,7 +26,7 @@ Apri le prime righe di `SKILL.md` e verifica che riportino:
 ```yaml
 name: setup-marketing-system
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ```
 
 Per verificare la parità del pacchetto puoi confrontare il checksum dello ZIP con il file `SHA256SUMS` della release.
@@ -37,4 +37,4 @@ La skill sarà disponibile per le attività successive. Avvia una nuova attivit�
 
 ## Installazione dalla sorgente GitHub
 
-Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/setup-marketing-system`, fissando un commit o il tag `setup-marketing-system-v0.2.0` che contenga davvero la versione `0.2.0`. Questo metodo non sostituisce la verifica della versione e della destinazione locale.
+Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/setup-marketing-system`, fissando un commit o il tag `setup-marketing-system-v0.2.1` che contenga davvero la versione `0.2.1`. Questo metodo non sostituisce la verifica della versione e della destinazione locale.

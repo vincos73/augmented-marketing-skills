@@ -455,13 +455,13 @@ Durante gli eval non si scrive nei percorsi canonici e non si modificano instruc
 
 ##### Stato dell'authoring locale — 2026-08-25
 
-Il blueprint è stato tradotto nella skill approvata `v0.2.0` sotto `skills/setup-marketing-system/`, con `SKILL.md`, metadati UI, tre reference e istruzioni di installazione. Non sono stati aggiunti script o asset: non esiste ancora una trasformazione deterministica ripetuta che ne giustifichi l'uso.
+Il blueprint è stato tradotto nella skill approvata `v0.2.1` sotto `skills/setup-marketing-system/`, con `SKILL.md`, metadati UI, tre reference e istruzioni di installazione. Non sono stati aggiunti script o asset: non esiste ancora una trasformazione deterministica ripetuta che ne giustifichi l'uso.
 
 Gli eval locali includono un catalogo comportamentale, una fixture standalone sintetica, una fixture multi-brand sintetica e tre run indipendenti in sola lettura: dry onboarding Relaybird, forward test Relaybird e forward test Fieldnote/Copperline. Nei run osservati non sono emersi hard fail: il processo ha limitato i claim non supportati, escluso regole temporanee, mantenuto separata l'autorizzazione alla pubblicazione, composto correttamente parent e overlay e mostrato il FYI.
 
 Il validatore strutturale di `skill-creator` ha dato esito positivo tramite un adattatore YAML temporaneo isolato, necessario perché i runtime Python disponibili non includono PyYAML. Anche `agents/openai.yaml`, i frontmatter delle fixture e `git diff --check` risultano validi. Nessun percorso canonico `.agents/`, instruction file, installazione, commit o pubblicazione è stato creato o modificato.
 
-Le fixture sintetiche, i tre eval indipendenti registrati e i controlli di release rendono `setup-marketing-system` una skill approvata. La release v0.2.0 non amplia i suoi confini: non definisce strategie temporanee, non esegue campagne e non autorizza azioni esterne.
+Le fixture sintetiche, i tre eval indipendenti registrati e i controlli di release rendono `setup-marketing-system` una skill approvata. La release v0.2.1 non amplia i suoi confini: non definisce strategie temporanee, non esegue campagne e non autorizza azioni esterne.
 
 ### 3. Strategy Core
 
