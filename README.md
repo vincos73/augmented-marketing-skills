@@ -29,7 +29,7 @@ Il percorso non è obbligatoriamente lineare. Se obiettivo e formato sono già c
 | Esigenza dell'utente | Skill che la risolve | Output della skill | Stato |
 | --- | --- | --- | --- |
 | Fare in modo che l'agente conosca l'azienda o il brand prima di lavorarci | [`setup-business-context`](skills/setup-business-context/SKILL.md) | **Business Identity** verificabile e versionata: identità aziendale, identità di un brand autonomo oppure identità di un brand collegata all'azienda | **Approvata**, v0.5.0 |
-| Definire le regole di marketing stabili che l'agente deve applicare in ogni attività aziendale | [`setup-marketing-system`](skills/setup-marketing-system/SKILL.md) | **Marketing Foundations** aziendali ed eventuali overlay di brand: regole su offerte e pubblici, messaggi e prove, ruolo dei canali, qualità e approvazioni | **Candidata**, v0.1.0 |
+| Definire le regole di marketing stabili che l'agente deve applicare in ogni attività aziendale | [`setup-marketing-system`](skills/setup-marketing-system/SKILL.md) | **Marketing Foundations** aziendali ed eventuali overlay di brand: regole su offerte e pubblici, messaggi e prove, ruolo dei canali, qualità e approvazioni | **Candidata**, v0.1.1 |
 | Chiarire il problema da affrontare e scegliere quale opportunità o ipotesi testare | Strategy Core: `challenge-brief`, `build-evidence-pack`, `choose-marketing-bet` | Brief del problema, evidenze distinte dalle assunzioni e decisione di marketing approvata con il relativo test | **Roadmap** |
 | Trasformare una decisione approvata in una campagna coordinata | Campaign Core: `to-campaign-spec`, `campaign-review`, `learn-from-results` | Campaign Spec con messaggi, canali, asset, responsabilità, approvazioni e misure; review e apprendimento finale | **Roadmap** |
 | Capire se un materiale merita di diventare un contenuto e quale formato usare | Content Core: `content-director` | Content Brief con obiettivo, pubblico, idea centrale, fonti, punti da verificare, formato e sequenza consigliata | **Roadmap** |
@@ -52,18 +52,18 @@ Gli output canonici previsti sono:
 
 La [release stabile v0.5.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/v0.5.0) contiene lo ZIP della sola skill e il relativo checksum. Le istruzioni per l'installazione manuale sono in [`skills/setup-business-context/INSTALL.md`](skills/setup-business-context/INSTALL.md).
 
-### `setup-marketing-system` v0.1.0
+### `setup-marketing-system` v0.1.1
 
 È il prossimo incremento del framework ed è ancora una candidata in valutazione. Aiuta un responsabile marketing a ricostruire dai materiali reali le regole stabili che un agente deve seguire. Presenta presto una prima proposta utile e chiede soltanto le decisioni mancanti che hanno un impatto reale.
 
-Produce un unico artefatto in inglese chiamato **Marketing Foundations**:
+Produce un unico artefatto in italiano chiamato **Marketing Foundations**. Il nome canonico resta in inglese, mentre contenuto, spiegazioni e stati sono in italiano:
 
 - `.agents/marketing/foundations.md` per la base aziendale o per un brand autonomo;
 - `.agents/marketing/brands/<brand-slug>.md` per le sole differenze di un brand appartenente all'azienda.
 
 La skill verifica prima che esista una Business Identity utilizzabile e la referenzia senza copiarla. Non definisce obiettivi trimestrali, budget, campagne o piani di canale temporanei. Non configura strumenti, non pubblica e non produce asset.
 
-La [pre-release v0.1.0-rc.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-marketing-system-v0.1.0-rc.1) serve per revisione ed eval. Non equivale all'approvazione della skill e non la installa automaticamente.
+La [pre-release precedente v0.1.0-rc.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-marketing-system-v0.1.0-rc.1) serve per revisione ed eval; la correzione linguistica corrente è nella sorgente candidata v0.1.1. La pre-release non equivale all'approvazione della skill e non la installa automaticamente.
 
 ## Regole comuni alle skill di setup
 
@@ -80,7 +80,7 @@ La [pre-release v0.1.0-rc.1](https://github.com/vincos73/augmented-marketing-ski
 | Componente | Stato attuale |
 | --- | --- |
 | `setup-business-context` | approvata e disponibile come release stabile v0.5.0 |
-| `setup-marketing-system` | sorgente candidata v0.1.0, con fixture sintetiche, eval e pre-release rc.1 |
+| `setup-marketing-system` | sorgente candidata v0.1.1, con fixture sintetiche, eval e pre-release rc.1 |
 | Strategy Core | architettura e confini definiti; skill non ancora progettate o approvate |
 | Campaign Core | roadmap; nessuna skill inclusa |
 | Content Core | roadmap; collegamento con builder esterni ancora da validare |

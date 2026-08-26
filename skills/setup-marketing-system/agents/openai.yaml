@@ -1,5 +1,5 @@
 interface:
   display_name: "Setup Marketing System"
-  short_description: "Define stable marketing rules for agents"
+  short_description: "Definisce le regole di marketing stabili per gli agenti"
   brand_color: "#072743"
-  default_prompt: "Use $setup-marketing-system to create or update this organization's Marketing Foundations from its existing business context and marketing materials."
+  default_prompt: "Usa $setup-marketing-system per creare o aggiornare le Marketing Foundations di questa organizzazione a partire dal business context e dai materiali di marketing esistenti."

@@ -2,144 +2,144 @@
 
 Read this reference when creating a new artifact, restructuring an incomplete artifact, building a child-brand overlay, or checking whether a draft can pass approval gate 1.
 
-Use English in the canonical artifact. Adapt tables and headings when natural, but preserve the frontmatter fields, five rule areas, governance, and composition rules.
+Use Italian throughout the human-readable canonical artifact, including headings, table labels, rules, explanations, sources, conflicts, review triggers, changelog entries, and status values. Keep the canonical name **Marketing Foundations**, the frontmatter keys, technical identifiers, file paths, official names, and source quotations unchanged when needed for schema stability or fidelity. The `status` value in frontmatter is also Italian: use `bozza` before approval and `approvato` after approval. Adapt tables and headings when natural, but preserve the frontmatter fields, five rule areas, governance, and composition rules.
 
 ```markdown
 ---
 artifact: marketing-foundations
 version: 1
-status: draft
-entity: "[Canonical entity name]"
+status: bozza
+entity: "[Nome canonico dell'entità]"
 entity_type: company | standalone-brand | child-brand
-scope: "[Stable scope covered]"
-owner: "[Authorized role or owner]"
+scope: "[Ambito stabile coperto]"
+owner: "[Ruolo o responsabile autorizzato]"
 last_reviewed: YYYY-MM-DD
-business_context_path: "[Canonical identity path]"
+business_context_path: "[Percorso dell'identità canonica]"
 business_context_version: 1
 parent_foundations_path: null
 parent_foundations_version: null
 ---
 
-# Marketing Foundations — [Entity]
+# Marketing Foundations — [Entità]
 
-## How agents apply this profile
+## Come gli agenti applicano questo profilo
 
-- Read the referenced business identity before this profile.
-- Apply only approved rules within the stated scope.
-- Do not turn unresolved decisions into rules.
-- For a child brand, read the parent identity, child identity, parent foundations, then this overlay.
-- Surface material conflicts instead of resolving them by file order.
+- Leggere l'identità aziendale referenziata prima di questo profilo.
+- Applicare soltanto le regole approvate nello scope indicato.
+- Non trasformare le decisioni irrisolte in regole.
+- Per un brand figlio, leggere l'identità dell'azienda, l'identità del brand, le foundations aziendali e infine questo overlay.
+- Rendere visibili i conflitti materiali invece di risolverli in base all'ordine dei file.
 
-## Basis markers
+## Marcatori di base
 
-- `[C]` confirmed by an authorized stakeholder
-- `[S1]`, `[S2]`, ... supported by a source listed below
-- `[I]` inferred and awaiting confirmation
-- `[?]` unknown or unresolved
+- `[C]` confermato da un responsabile autorizzato
+- `[S1]`, `[S2]`, ... sostenuto da una fonte elencata sotto
+- `[I]` inferito e in attesa di conferma
+- `[?]` sconosciuto o irrisolto
 
-## Context references
+## Riferimenti al contesto
 
-| Artifact or authority | Path or reference | Version/date | Scope | Notes |
+| Artefatto o autorità | Percorso o riferimento | Versione/data | Ambito | Note |
 |---|---|---|---|---|
-| Business identity | | | | |
+| Identità aziendale | | | | |
 
-## 1. Offer–Audience–Situation Fit
+## 1. Corrispondenza tra offerta, pubblico e situazione
 
-| Offer reference | Audience reference | Situation or desired outcome | Applicable rule | Poor fit, exclusion, or cautious fallback | Basis |
+| Riferimento all'offerta | Riferimento al pubblico | Situazione o risultato desiderato | Regola applicabile | Scarso fit, esclusione o fallback prudente | Base |
 |---|---|---|---|---|---|
 | | | | | | |
 
-## 2. Messaging, Claims & Evidence Rules
+## 2. Regole per messaggi, claim e prove
 
-| Message or claim | Scope | Status | Evidence reference | Qualification, approval, or fallback | Basis |
+| Messaggio o claim | Ambito | Stato | Riferimento alla prova | Qualificazione, approvazione o fallback | Base |
 |---|---|---|---|---|---|
-| | | approved / conditional / prohibited | | | |
+| | | approvato / condizionale / vietato | | | |
 
-Evidence means an existing verifiable basis such as a specification, policy, dataset, study, certification, approved case study, authorized testimonial, or approved company page. Do not invent evidence or require a new evidence pack merely to complete setup.
+Per prova si intende una base verificabile già esistente, come una specifica, una policy, un dataset, uno studio, una certificazione, un case study approvato, una testimonianza autorizzata o una pagina aziendale approvata. Non inventare prove e non richiedere un nuovo evidence pack soltanto per completare il setup.
 
-## 3. Channel & Format Roles
+## 3. Ruoli di canali e formati
 
-| Channel or format | Stable role | Suitable scope | Limits or misuse | Undefined-state fallback | Basis |
-|---|---|---|---|---|---|
-| | | | | | |
-
-## 4. Editorial, Visual & Quality Standards
-
-| Standard | Applies to | Authoritative reference | Required check or prohibited practice | Fallback | Basis |
+| Canale o formato | Ruolo stabile | Ambito adatto | Limiti o uso improprio | Fallback per stato non definito | Base |
 |---|---|---|---|---|---|
 | | | | | | |
 
-## 5. Controls, Authority & Approvals
+## 4. Standard editoriali, visivi e qualitativi
 
-| Activity or output | Authority level | Required checks | Authorized approver | Execution boundary or fallback | Basis |
+| Standard | Si applica a | Riferimento autorevole | Controllo richiesto o pratica vietata | Fallback | Base |
 |---|---|---|---|---|---|
-| | autonomous / propose-only / prohibited | | | | |
+| | | | | | |
 
-Content approval never implies authorization to publish, send, configure, purchase, or spend.
+## 5. Controlli, autorità e approvazioni
 
-## Conflicts and resolutions
-
-| Topic | Conflicting accounts or rules | Impact | Resolution | Status | Basis |
+| Attività o output | Livello di autorità | Controlli richiesti | Responsabile autorizzato | Confine di esecuzione o fallback | Base |
 |---|---|---|---|---|---|
-| | | blocking / non-blocking | | open / resolved | |
+| | autonoma / solo proposta / vietata | | | | |
 
-## Unresolved decisions
+L'approvazione del contenuto non autorizza mai a pubblicare, inviare, configurare, acquistare o spendere.
 
-Use only: `not established from supplied sources`, `exists but unavailable`, `not defined`, `unknown to user`, or `not applicable`.
+## Conflitti e risoluzioni
 
-| Decision or gap | State | Impact | Cautious agent behavior | Owner or review trigger | Basis |
+| Tema | Resoconti o regole in conflitto | Impatto | Risoluzione | Stato | Base |
 |---|---|---|---|---|---|
-| | | blocking / non-blocking | | | |
+| | | bloccante / non bloccante | | aperto / risolto | |
 
-## Sources
+## Decisioni irrisolte
 
-| ID | Source | Date accessed or supplied | What it supports | Usage or sensitivity notes |
+Usare soltanto: `non stabilito dalle fonti fornite`, `esiste ma non è disponibile`, `non definito`, `sconosciuto all'utente` o `non applicabile`.
+
+| Decisione o vuoto | Stato | Impatto | Comportamento prudente dell'agente | Responsabile o trigger di revisione | Base |
+|---|---|---|---|---|---|
+| | | bloccante / non bloccante | | | |
+
+## Fonti
+
+| ID | Fonte | Data di accesso o consegna | Che cosa sostiene | Note d'uso o sensibilità |
 |---|---|---|---|---|
 | S1 | | | | |
 
-## Review triggers
+## Trigger di revisione
 
-| Concrete change | Rules affected | Owner or next check |
+| Cambiamento concreto | Regole interessate | Responsabile o prossimo controllo |
 |---|---|---|
 | | | |
 
-## Changelog
+## Registro delle modifiche
 
-- v1 (YYYY-MM-DD) — Initial approved Marketing Foundations.
+- v1 (YYYY-MM-DD) — Prime Marketing Foundations approvate.
 ```
 
-## Rule-writing pattern
+## Modello di scrittura delle regole
 
 Prefer an instruction that can change behavior:
 
-> For renewal-focused email to existing customers, use documented adoption outcomes and do not imply guaranteed savings. If the cited result is older than the current offer version, request evidence review before using a number. `[C; S3]`
+> Per le email rivolte al rinnovo di clienti esistenti, usare risultati documentati sull'adozione e non suggerire risparmi garantiti. Se il risultato citato è precedente alla versione attuale dell'offerta, richiedere una revisione delle prove prima di usare un numero. `[C; S3]`
 
 Avoid a descriptive note that leaves the decision implicit:
 
-> Customers care about savings and email is important.
+> I clienti sono interessati ai risparmi e l'email è importante.
 
 Not every rule needs a table row or every possible field. The test is whether another agent can identify the behavior, scope, basis, and relevant fallback without inventing a decision.
 
-## Child-brand overlay
+## Overlay di brand figlio
 
-For `entity_type: child-brand`:
+Per `entity_type: child-brand`:
 
-- set `business_context_path` to the child identity and record the parent identity under Context references;
-- set `parent_foundations_path` and `parent_foundations_version` to the company base;
-- include only sections and rows that add, narrow, or explicitly specialize the parent;
-- do not copy unchanged company rules;
-- keep a material conflict open until an authorized owner resolves it.
+- impostare `business_context_path` sull'identità del brand figlio e registrare l'identità dell'azienda nei Riferimenti al contesto;
+- impostare `parent_foundations_path` e `parent_foundations_version` sulla base aziendale;
+- includere soltanto sezioni e righe che aggiungono, restringono o specializzano esplicitamente il profilo del genitore;
+- non copiare le regole aziendali invariate;
+- mantenere aperto un conflitto materiale finché non viene risolto da un responsabile autorizzato.
 
-## Approval readiness
+## Prontezza per l'approvazione
 
-A draft can be approved only when:
+Una bozza può essere approvata soltanto quando:
 
-- the referenced identity is approved, readable, and scope-compatible;
-- all five areas have a rule or a precisely classified gap;
-- no blocking conflict remains open;
-- essential authority and approvals are defined;
-- every non-blocking gap has a cautious agent behavior;
-- no `[I]` item operates as a rule;
-- sources and concrete review triggers are recorded.
+- l'identità referenziata è approvata, leggibile e compatibile con lo scope;
+- tutte e cinque le aree hanno una regola o un vuoto classificato con precisione;
+- non restano conflitti bloccanti aperti;
+- autorità e approvazioni essenziali sono definite;
+- ogni vuoto non bloccante ha un comportamento prudente dell'agente;
+- nessun elemento `[I]` opera come regola;
+- fonti e trigger concreti di revisione sono registrati.
 
-At approval, change `status` to `approved`. Start at version `1`; increment the integer for substantive updates and preserve it for typo-only corrections.
+Al momento dell'approvazione, impostare `status` su `approvato`. Prima dell'approvazione usare `status: bozza`. Iniziare dalla versione `1`, incrementare il numero intero per gli aggiornamenti sostanziali e mantenerlo per le sole correzioni tipografiche.

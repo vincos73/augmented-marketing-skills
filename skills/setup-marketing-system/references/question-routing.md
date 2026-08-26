@@ -11,9 +11,9 @@ For each of the five areas, classify consequential items as:
 - inferred and awaiting confirmation;
 - conflicting across sources or with the business identity;
 - missing and not yet classified;
-- explicitly unavailable, not defined, unknown, or not applicable.
+- esplicitamente non disponibile, non definito, sconosciuto o non applicabile.
 
-Also classify whether the gap is blocking, material but non-blocking, or enrichment/task-specific. Do not expose a long ledger; use it to draft the first useful proposal and select questions.
+Also classify whether the gap is `bloccante`, `non bloccante ma materiale`, or `di arricchimento o specifico del task`. Do not expose a long ledger; use it to draft the first useful proposal and select questions.
 
 ## Keep the conversation oriented
 
@@ -21,12 +21,12 @@ The manager should always understand where the work stands and what will happen 
 
 Useful patterns:
 
-- **Opening:** “Thanks — I have enough to start. I’ll first map the stable rules already supported by your materials, then I’ll bring back only the decisions that could change the draft.”
-- **After reading:** “Here’s where we are: the sources support these rules, while this point is still ambiguous. Next I’ll turn that into a compact proposal and focus on the one choice that affects approval.”
-- **Before a question:** “This matters because the answer changes how the agent should handle [situation]. Which of these reflects your standing practice?”
-- **After an answer:** “That settles the main ambiguity. I’ll incorporate it, check the remaining areas for conflicts, and then show you the version ready for approval.”
-- **At approval:** “The draft is ready to approve. You are approving the content at this path and version; installation in the agent’s instructions remains a separate choice.”
-- **At a blocker:** “I can’t responsibly turn this into an approved rule yet because [specific reason]. We can leave it unresolved with a cautious fallback, or you can confirm the missing decision.”
+- **Apertura:** “Bene, ho abbastanza per iniziare. Prima mapperò le regole stabili già sostenute dai tuoi materiali, poi ti sottoporrò soltanto le decisioni che potrebbero cambiare la bozza.”
+- **Dopo la lettura:** “Ecco dove siamo: le fonti sostengono queste regole, mentre questo punto resta ambiguo. Ora lo trasformerò in una proposta compatta e mi concentrerò sulla scelta che incide sull'approvazione.”
+- **Prima di una domanda:** “Questo è importante perché la risposta cambia il modo in cui l'agente dovrebbe gestire [situazione]. Quale di queste opzioni riflette la vostra prassi stabile?”
+- **Dopo una risposta:** “Abbiamo risolto l'ambiguità principale. La integrerò, controllerò le aree restanti per individuare eventuali conflitti e poi ti mostrerò la versione pronta per l'approvazione.”
+- **All'approvazione:** “La bozza è pronta per l'approvazione. Stai approvando il contenuto in questo percorso e a questa versione; l'installazione nelle istruzioni dell'agente resta una scelta separata.”
+- **In caso di blocco:** “Non posso trasformare responsabilmente questo punto in una regola approvata perché [motivo specifico]. Possiamo lasciarlo irrisolto con un fallback prudente, oppure puoi confermare la decisione mancante.”
 
 These bridges are part of the user experience, not progress reports. Do not expose internal ledgers, core names, schemas, or raw state while orienting the manager.
 
@@ -36,9 +36,9 @@ Ask at most three questions per batch. Prefer questions that:
 
 1. prevent an unauthorized action, unsafe claim, privacy/compliance issue, or material identity conflict;
 2. clarify a high-use offer–audience–situation rule;
-3. determine whether an important claim is approved, supportable, conditional, or prohibited;
+3. determinare se un claim importante è approvato, sostenibile, condizionale o vietato;
 4. establish a default channel role or quality rule that would change frequent work;
-5. classify a non-blocking gap so the profile can be approved honestly.
+5. classificare una lacuna non bloccante, così il profilo può essere approvato correttamente.
 
 Do not ask for a detail that is already supported unless confirmation resolves a real ambiguity. An explicit missing-information state is a valid answer; it does not make the underlying rule known.
 
@@ -68,39 +68,39 @@ Do not ask the manager to choose a new growth market or campaign segment.
 
 ### Messaging, Claims & Evidence
 
-- Which of these source-backed messages are approved for routine use, and which need review?
-- What existing source supports this numerical or comparative claim, and where may it be used?
-- If evidence is insufficient, should agents use a weaker qualitative formulation or avoid the claim?
+- Quali di questi messaggi sostenuti dalle fonti sono approvati per l'uso ordinario e quali richiedono una revisione?
+- Quale fonte esistente sostiene questo claim numerico o comparativo e dove può essere utilizzato?
+- Se le prove non sono sufficienti, l'agente dovrebbe usare una formulazione qualitativa più prudente o evitare il claim?
 
 Do not request a new study or evidence pack merely to finish onboarding.
 
 ### Channel & Format Roles
 
-- What stable job does this channel perform, if any, across marketing work?
-- Which audience, situation, or format is it generally suited or unsuited for?
-- Is the documented cadence a durable rule or only a current operating plan?
+- Quale ruolo stabile svolge questo canale, se ne svolge uno, nelle attività di marketing?
+- Per quale pubblico, situazione o formato è generalmente adatto o non adatto?
+- La frequenza documentata è una regola durevole o soltanto un piano operativo attuale?
 
 Do not build a media plan, content calendar, or account configuration.
 
 ### Editorial, Visual & Quality Standards
 
-- Which existing guideline, template, or representative output is authoritative?
-- Which minimum check must every output pass before it is ready for review?
-- Which common error or off-brand practice must agents avoid?
+- Quale linea guida, template o output rappresentativo esistente è autorevole?
+- Quale controllo minimo deve superare ogni output prima di essere pronto per la revisione?
+- Quale errore ricorrente o pratica fuori brand devono evitare gli agenti?
 
 Do not create a new identity or detailed style system under the guise of setup.
 
 ### Controls, Authority & Approvals
 
-- Which work may an agent complete autonomously, and which must remain a proposal?
-- Who may approve this kind of claim or output, and is that approval content-only or also execution authority?
-- Which legal, privacy, compliance, or brand review is triggered by this topic or action?
+- Quale lavoro può completare autonomamente un agente e quale deve restare una proposta?
+- Chi può approvare questo tipo di claim o output, e l'approvazione riguarda solo il contenuto oppure anche l'autorizzazione all'esecuzione?
+- Quale revisione legale, privacy, di conformità o di brand viene attivata da questo tema o azione?
 
-If the route is absent, record `not defined`; do not appoint an owner.
+If the route is absent, record `non definito`; do not appoint an owner.
 
 ## Proposing a missing stable rule
 
-When a necessary rule is genuinely `not defined`, the skill may offer a concise recommendation or two meaningful alternatives. Label the basis as `[I]`, explain the consequence, and ask the authorized leader to approve, correct, or leave it unresolved. Never smuggle the recommendation into the approved profile as an existing practice.
+When a necessary rule is genuinely `non definito`, the skill may offer a concise recommendation or two meaningful alternatives. Label the basis as `[I]`, explain the consequence, and ask the authorized leader to approve, correct, or leave it unresolved. Never smuggle the recommendation into the approved profile as an existing practice.
 
 ## Update mode
 
@@ -115,6 +115,6 @@ Verify that:
 - evidence usage is narrower than or equal to what the sources support;
 - content approval is not confused with execution authority;
 - no inferred rule is active;
-- no blocking conflict remains;
-- every non-blocking gap has a cautious fallback;
+- nessun conflitto bloccante resta aperto;
+- ogni lacuna non bloccante ha un fallback prudente;
 - the complete draft references rather than duplicates business identity and external guidelines.

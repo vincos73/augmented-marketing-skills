@@ -6,7 +6,7 @@ Read this reference only after approval gate 1 has produced a canonical Marketin
 
 Make the handoff feel like a practical next step, not a technical escalation. First acknowledge that the foundations are approved, then explain what installation will change and what it will not change:
 
-> Your Marketing Foundations are approved and ready to reuse. The next step is optional: I can add a small managed block to the project instructions so future marketing tasks read the approved identity and foundations automatically. This will guide the agent’s context; it will not grant permission to publish, spend, or change external systems. I’ll show you the exact change before saving it.
+> Le tue Marketing Foundations sono approvate e pronte per essere riutilizzate. Il prossimo passaggio è facoltativo: posso aggiungere alle istruzioni del progetto un piccolo blocco gestito, così le attività di marketing future leggeranno automaticamente l'identità e le foundations approvate. Questo guiderà il contesto dell'agente; non gli darà il permesso di pubblicare, spendere o modificare sistemi esterni. Ti mostrerò la modifica esatta prima di salvarla.
 
 After the user approves, explain what was saved and what remains unverified. If runtime loading cannot be observed, say so plainly and give the user the smallest next step, such as starting a fresh task. Do not describe a configured file as proof that the current conversation has already loaded it.
 
@@ -41,9 +41,9 @@ Use a concise block adapted to the real entity and paths:
 <!-- setup-marketing-system:start -->
 ## Marketing context
 
-Before company-specific marketing work for [Entity], read `[identity-path]` and `[foundations-path]` and apply their approved facts, rules, unknowns, and approval boundaries. For work about a child brand, also read its matching identity and marketing overlay; do not load unrelated brands.
+Prima di svolgere attività di marketing specifiche per [Entità], leggi `[identity-path]` e `[foundations-path]` e applica i fatti, le regole, gli aspetti ancora aperti e i confini di approvazione approvati. Per il lavoro su un brand figlio, leggi anche la relativa identità e l'overlay marketing; non caricare brand non pertinenti.
 
-At the start of every substantive response that performs or advances company-specific marketing work, add one compact FYI naming the entity and versions actually read. If a required artifact is unavailable, unapproved, conflicting, or materially stale, show an actionable warning instead of claiming it was applied.
+All'inizio di ogni risposta sostanziale che svolge o fa avanzare un'attività di marketing specifica per l'azienda, aggiungi un FYI compatto con l'entità e le versioni effettivamente lette. Se un artefatto necessario non è disponibile, non è approvato, è in conflitto o è materialmente obsoleto, mostra un avviso operativo invece di dichiarare che è stato applicato.
 <!-- setup-marketing-system:end -->
 ```
 
@@ -62,7 +62,7 @@ For a company or standalone brand, propose direct imports when compatible:
 @[identity-path]
 @[foundations-path]
 
-For every substantive company-specific marketing response, state in one compact FYI which entity and artifact versions were actually applied. Do not treat these imports as execution permission.
+Per ogni risposta sostanziale di marketing specifica per l'azienda, indica in un FYI compatto quali entità e versioni degli artefatti sono state effettivamente applicate. Non considerare questi import come un'autorizzazione all'esecuzione.
 <!-- setup-marketing-system:end -->
 ```
 

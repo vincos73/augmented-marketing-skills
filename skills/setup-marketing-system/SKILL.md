@@ -2,7 +2,7 @@
 name: setup-marketing-system
 description: "Build, update, and install source-aware Marketing Foundations: the stable marketing rules AI agents should apply before company-specific marketing work. Use when a marketing leader wants to define or maintain durable rules for offer-audience fit, messaging and evidence, channel roles, quality standards, and approvals. Do not use to answer generic marketing questions, define time-bound strategy, complete campaigns, configure tools, or produce assets."
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Setup Marketing System
@@ -11,20 +11,26 @@ Create the durable marketing rules an agent must know before doing marketing for
 
 This skill is the framework entry point, not a strategy, campaign, or content core. It may help an authorized marketing leader formulate a missing stable rule, but a proposal is not an organizational rule until explicitly approved.
 
+## Version and language
+
+This skill is version `0.1.1`. Keep this version explicit when describing the skill or reporting what was used; do not imply that a local installation or a draft Marketing Foundations artifact is an approved release.
+
+Use Italian for every user-facing part of the setup: openings, explanations, questions, transitions, previews, approval requests, warnings, FYI messages, and the final **Marketing Foundations** artifact. Keep the canonical name **Marketing Foundations**, product names, official names, source quotations, file paths, frontmatter keys, and other technical identifiers unchanged when needed for fidelity or schema stability. Translate status values and missing-information states into Italian, including `bozza`, `approvato`, `condizionale`, `vietato`, `aperto`, `risolto`, `bloccante`, `non bloccante`, `non stabilito dalle fonti fornite`, `esiste ma non è disponibile`, `non definito`, `sconosciuto all'utente`, and `non applicabile`. A source may require English or another language for downstream marketing outputs; that is a rule recorded in the profile, not a reason to change the language of this conversation or artifact. Use another language only when the user explicitly requests it.
+
 ## Guide the manager through the work
 
 Use a calm, conversational consultant voice. The manager should feel accompanied by someone who has understood the work, not routed through a system.
 
 Open by acknowledging the goal and making the first move clear. When materials are available, prefer an opening such as:
 
-> Thanks — I can help turn the marketing rules your organization already uses into a compact set of foundations an agent can apply consistently. I’ll start with the material you’ve shared, then I’ll bring back what is clear, what needs attention, and only the decisions that could change the result.
+> Bene, posso aiutarti a trasformare le regole di marketing che la tua organizzazione già usa in un insieme compatto di foundations che l'agente possa applicare con coerenza. Partirò dai materiali che hai condiviso, poi ti mostrerò che cosa è chiaro, che cosa richiede attenzione e soltanto le decisioni che potrebbero cambiare il risultato.
 
 At every substantive transition, orient the manager in one or two natural sentences:
 
 - where we are: what has been established, what remains uncertain, and why it matters;
 - what happens next: what you will review, propose, or ask the manager to decide.
 
-Use the transition to connect the work, not to narrate internal processing. For example: “The sources give us a reliable rule for approved claims, but channel roles are still mixed between stable practice and campaign planning. Next I’ll separate those two before asking you to resolve the one ambiguity that affects approval.”
+Use the transition to connect the work, not to narrate internal processing. For example: “Le fonti ci danno una regola affidabile per i claim approvati, ma i ruoli dei canali mescolano ancora pratiche stabili e pianificazione di campagna. Ora separerò questi due piani, poi ti chiederò di risolvere l'unica ambiguità che incide sull'approvazione.”
 
 Explain the reason behind a question before asking it. Prefer “This matters because…” or “The choice changes how the agent should handle…” to a bare request for information. When a decision is ready for approval, say what has been completed, what the approval authorizes, and what remains separate. When a blocker remains, explain what cannot responsibly be concluded and offer the smallest useful next step.
 
@@ -63,7 +69,7 @@ When creating a new artifact, restructuring an incomplete one, or checking appro
 4. Reuse identity facts by reference. Extract only stable marketing decisions that should apply across activities and time.
 5. If an approved profile exists, summarize its entity, version, concrete freshness risks, and affected rules; update only what materially changed instead of repeating onboarding.
 
-Do not turn absence from supplied sources into “does not exist.” Classify consequential gaps as `not established from supplied sources`, `exists but unavailable`, `not defined`, `unknown to user`, or `not applicable`.
+Do not turn absence from supplied sources into “does not exist.” Classify consequential gaps as `non stabilito dalle fonti fornite`, `esiste ma non è disponibile`, `non definito`, `sconosciuto all'utente`, or `non applicabile`.
 
 ## Deliver value before interviewing
 
@@ -83,7 +89,7 @@ Cover these five areas:
 2. **Messaging, Claims & Evidence Rules** — approved, conditional, or prohibited messages and claims; the existing evidence needed to support them; qualifications and fallback. Do not require the user to produce new studies or evidence packs during onboarding.
 3. **Channel & Format Roles** — stable purpose, fit, limits, and misuse of channels and formats. Exclude calendars, temporary cadence, campaign mix, budgets, media plans, and account configuration.
 4. **Editorial, Visual & Quality Standards** — minimum agent-applicable standards and references to authoritative guidelines, templates, or assets. Do not create or duplicate brand identity or detailed manuals.
-5. **Controls, Authority & Approvals** — autonomous, propose-only, and prohibited work; required reviews and authorized roles; the boundary between content approval and execution authorization.
+5. **Controls, Authority & Approvals** — lavoro autonomo, solo in proposta o vietato; revisioni richieste e ruoli autorizzati; il confine tra approvazione del contenuto e autorizzazione all'esecuzione.
 
 Do not use this setup to choose objectives, new priority segments, positioning, budgets, campaign channels, KPIs, content plans, tool configuration, or assets for a specific initiative.
 
@@ -96,7 +102,7 @@ Use the same compact basis markers as the business context:
 - `[I]` — inferred and awaiting confirmation;
 - `[?]` — unknown or unresolved.
 
-Mark consequential rules, not every administrative line. An `[I]` item cannot operate as a rule in an approved profile. Confirm it, move it to unresolved decisions with a cautious fallback, or remove it. Keep conflicts visible and classify them as blocking or non-blocking.
+Mark consequential rules, not every administrative line. An `[I]` item cannot operate as a rule in an approved profile. Confirm it, move it to unresolved decisions with a cautious fallback, or remove it. Keep conflicts visible and classify them as `bloccante` or `non bloccante`.
 
 Marketing Foundations are usable when the linked business context is usable, all five areas have been assessed, every residual gap is precisely classified, no blocking conflict remains, and essential controls and approvals are defined. A non-blocking gap must state how agents should behave until it is resolved.
 
@@ -112,7 +118,7 @@ Before creating or materially updating a canonical artifact, show the manager:
 
 Request explicit approval from an authorized owner. Until then, call the result a draft and do not write the canonical path.
 
-After approval, save `v1` with status `approved` and the current review date. Increment the integer version for a substantive change, preserve it for a typo-only correction, and prepend a concise changelog entry. If the workspace is not writable, return the approved artifact and intended path without claiming it was saved.
+After approval, save `v1` with status `approvato` and the current review date. Increment the integer version for a substantive change, preserve it for a typo-only correction, and prepend a concise changelog entry. If the workspace is not writable, return the approved artifact and intended path without claiming it was saved.
 
 ## Approval gate 2: install for agents
 
@@ -124,7 +130,7 @@ If installation is declined, keep the approved artifact and explain that it must
 
 Every substantive response that performs or advances company-specific marketing work must include one compact FYI naming the entity and versions actually read, for example:
 
-> FYI — Applied context: Acme Company Identity v2 + Marketing Foundations v1 + Brand X overlay v1.
+> FYI — Contesto applicato: Identità aziendale Acme v2 + Marketing Foundations v1 + overlay marketing Brand X v1.
 
 Do not list paths or source details unless useful or requested. If any required artifact is missing, unreadable, unapproved, incoherent, or materially stale, replace the FYI with an actionable warning and do not pretend the profile was applied.
 
