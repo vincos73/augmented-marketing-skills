@@ -1,0 +1,5 @@
+interface:
+  display_name: "Metti a fuoco la sfida di marketing"
+  short_description: "Definisci la sfida prima di scegliere la direzione"
+  brand_color: "#072743"
+  default_prompt: "Usa $define-marketing-challenge per trasformare questo obiettivo, problema, opportunità o idea tattica in una sfida di marketing chiara e confermabile, senza scegliere ancora la direzione."

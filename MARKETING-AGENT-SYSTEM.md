@@ -35,15 +35,15 @@ Nome di lavoro: **Marketing Decision Skills**. Alternativa editoriale: **Marketi
 setup-business-context  (fondazione autonoma: fatti durevoli su azienda e brand)
         ↓ riferimento, non duplicazione
 setup-marketing-system  (punto d'ingresso e profilo operativo)
-        ├── Strategy Core  → challenge-brief → build-evidence-pack → choose-marketing-bet
+        ├── Strategy Core  → define-marketing-challenge → choose-marketing-direction
         ├── Campaign Core  → to-campaign-spec → campaign-review → learn-from-results
         └── Content Core   → Content Director → builder specializzati
 ```
 
 I tre core non sono cartelle decorative e non devono diventare tre agenti generalisti. Sono famiglie di decisioni con artefatti e confini diversi:
 
-- **Strategy Core:** decide quale problema, pubblico, comportamento o opportunità meritano una scommessa e quale assunzione testare;
-- **Campaign Core:** traduce una scommessa approvata in un sistema coordinato di messaggi, canali, asset, responsabilità, misure e apprendimento;
+- **Strategy Core:** definisce quale problema, pubblico, comportamento o opportunità richiedono una decisione e sceglie la direzione da seguire rendendone visibili le assunzioni;
+- **Campaign Core:** traduce una direzione approvata in un sistema coordinato di messaggi, canali, asset, responsabilità, misure e apprendimento;
 - **Content Core:** valuta e produce singoli contenuti o famiglie di contenuti, mantenendo il giudizio specifico nei builder.
 
 `setup-marketing-system` è l'onboarding del framework, non un quarto core. Aiuta l'organizzazione a definire e approvare le regole di marketing stabili che un agente deve conoscere prima di qualsiasi attività di marketing. Parte dal business context canonico e dalle regole, decisioni, materiali e pratiche reali già disponibili; quando una regola operativa essenziale manca, può guidarne la formulazione invece di limitarsi a registrare il vuoto. Costruisce un profilo operativo riusabile dai tre core. Per aziende multi-brand può mantenere un livello aziendale e overlay di brand, sempre referenziando le identità canoniche create da `setup-business-context` invece di copiarle.
@@ -59,7 +59,7 @@ monitoring-setup  (autonomo e opzionale)
         ↓
 fonti, query, segnali e digest
         ↓
-build-evidence-pack → Strategy Core / Campaign Core / Content Director
+raccolta di evidenze opzionale → Strategy Core / Campaign Core / Content Director
 ```
 
 `monitoring-setup` deve conservare valore anche fuori dal framework, per esempio per un giornalista o un ricercatore che desidera monitorare un tema senza usare gli altri moduli.
@@ -119,7 +119,7 @@ Il mercato offre già motori potenti; il vuoto interessante è la metodologia di
 
 ### Relazione con il framework
 
-`monitoring-setup` non decide ancora quale contenuto produrre. Fornisce segnali e materiali a `build-evidence-pack`, a `Content Director` o direttamente a un sistema di briefing. Il Content Director continua a valutare rilevanza, solidità, obiettivo e formato; i builder producono l’asset.
+`monitoring-setup` non decide ancora quale contenuto produrre. Fornisce segnali e materiali ai workflow Strategy, a `Content Director` o direttamente a un sistema di briefing. Un eventuale `build-evidence-pack` resta una capacità opzionale futura per i casi in cui fonti numerose, conflittuali o riusate da più workflow giustifichino un artefatto autonomo; non è un passaggio obbligatorio dello Strategy Core. Il Content Director continua a valutare rilevanza, solidità, obiettivo e formato; i builder producono l’asset.
 
 Per questo è una skill **abilitante e opzionale**, non un passaggio obbligatorio di ogni campagna.
 
@@ -139,11 +139,12 @@ La promessa concreta può essere:
 
 ### Fondazione consolidata e roadmap
 
-Al momento il repository contiene una sola skill sorgente approvata:
+Al momento il repository contiene due skill sorgente approvate:
 
 - `setup-business-context`: identità aziendale o di brand persistente, verificabile e riusabile.
+- `setup-marketing-system`: regole di marketing stabili, verificabili e riusabili dai workflow a valle.
 
-`setup-marketing-system`, i tre core e le relative competenze restano roadmap o ipotesi da validare, non contenuti già inclusi nel repository. Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione.
+`define-marketing-challenge` è approvata come release stabile `v0.1.1`. `choose-marketing-direction`, gli altri core e le relative competenze restano roadmap o ipotesi da validare. Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione.
 
 Le cartelle sotto `skills/` sono sorgenti di authoring, non prova di installazione attiva. Per la scoperta locale in un repository Codex, una skill approvata dovrà essere collocata in `.agents/skills/`; per distribuirla in ChatGPT sul web, desktop e mobile dovrà essere confezionata come plugin. Authoring, installazione locale e distribuzione restano tre gate distinti.
 
@@ -465,13 +466,75 @@ Le fixture sintetiche, i tre eval indipendenti registrati e i controlli di relea
 
 ### 3. Strategy Core
 
-- `challenge-brief`: chiarisce obiettivo, pubblico, comportamento atteso, vincoli, prove, rischi e decisore senza produrre una campagna;
-- `build-evidence-pack`: separa dati, testimonianze, inferenze e assunzioni, rendendo visibili contraddizioni e lacune;
-- `choose-marketing-bet`: confronta alternative, esplicita l'assunzione più fragile e propone il test meno costoso; l'utente approva e registra la scelta.
+- `define-marketing-challenge`: trasforma un obiettivo, problema, opportunità, segnale o proposta tattica in una sfida di marketing confermata, distinguendo fatti, segnali, inferenze e assunzioni senza scegliere una soluzione;
+- `choose-marketing-direction`: confronta direzioni plausibili rispetto a una sfida confermata, rende visibile l'assunzione più fragile e il primo test utile; il responsabile approva e registra la scelta;
+- `build-evidence-pack`, eventualmente futuro: prepara un dossier autonomo soltanto quando quantità, conflitti o riuso delle fonti lo rendono utile. Non appartiene al percorso essenziale e non blocca le due skill iniziali.
+
+#### `define-marketing-challenge`: user story e perimetro
+
+> Come marketing manager o decisore aziendale, quando devo affrontare un obiettivo, un problema, un'opportunità o una proposta tattica che potrebbe richiedere il marketing, uso `define-marketing-challenge` per capire quale cambiamento bisogna realmente ottenere, per chi e entro quali confini. Ottengo un **Brief della sfida di marketing** confermato, che distingue fatti e assunzioni ed è pronto per valutare possibili direzioni senza anticipare la campagna.
+
+La skill serve al proprietario della decisione: un responsabile aziendale, un professionista che lavora sul proprio marketing oppure un consulente o un'agenzia che facilita il lavoro insieme a un referente del cliente autorizzato a confermare la sfida. Non serve invece a interpretare unilateralmente il brief ricevuto da un cliente. Quel lavoro richiede un workflow separato, provvisoriamente chiamato `review-client-marketing-brief`, che mantenga distinti mandato del cliente, interpretazioni dell'agenzia, perimetro contrattuale e domande da sottoporre al cliente.
+
+La skill interviene soltanto quando esiste un'ambiguità strategica reale. Non è un passaggio obbligatorio se obiettivo, pubblico, cambiamento cercato e direzione sono già sufficientemente chiari. Può concludere che serve prima una decisione aziendale, che il problema non è principalmente di marketing oppure che non ci sono elementi sufficienti per confermare il brief.
+
+#### Esperienza conversazionale
+
+La chat è l'interfaccia autorevole. Il workflow segue cinque momenti, non cinque schermate o domande fisse:
+
+1. **Attivazione selettiva.** Identifica l'entità, legge Business Identity e Marketing Foundations pertinenti, verifica eventuali brief esistenti e mostra il FYI con i contesti e le versioni realmente applicati. Se il contesto manca o presenta un conflitto materiale, sostituisce il FYI con un avviso concreto e mantiene il risultato come bozza prudente.
+2. **Prima formulazione utile.** Il primo turno sostanziale presenta che cosa sembra essere in gioco, una sfida provvisoria, ciò che è supportato e ciò che è ancora assunto, più non oltre tre domande capaci di cambiare il brief. Non apre con un questionario, una spiegazione dell'architettura o un messaggio di solo avanzamento.
+3. **Chiarimento mirato.** Mantiene privatamente un registro delle lacune e chiede soltanto ciò che serve a capire se il problema è di marketing, quale risultato e cambiamento sono cercati, quale pubblico è coinvolto o ancora da scegliere, quali vincoli sono reali e chi può confermare il brief. Uno stato esplicito di non conoscenza è una risposta valida.
+4. **Revisione e conferma.** Mostra la formulazione completa, base conoscitiva, assunzioni, conflitti, aspetti aperti, decisione preparata e artefatto proposto. Se restano punti non bloccanti, permette sia di confermare mantenendoli aperti sia di approfondirli. Scrive soltanto dopo una conferma esplicita che comprenda l'autorizzazione al salvataggio.
+5. **Chiusura e handoff.** Riporta cosa è stato confermato e salvato, chiarisce che nessuna direzione è stata ancora scelta e può proporre `choose-marketing-direction` senza avviarla automaticamente.
+
+La prima risposta utile usa normalmente quattro gruppi manageriali compatti: cosa sembra essere in gioco, sfida provvisoria, cosa sappiamo e cosa stiamo supponendo, cosa serve per confermarla. Il limite iniziale da validare negli eval è 450 parole, comprese domande e chiave delle fonti. Il limite è un tetto, non un obiettivo, e non giustifica l'eliminazione di vincoli critici.
+
+#### Brief della sfida di marketing
+
+Il brief è pronto quando un secondo agente può confrontare direzioni plausibili senza reinterpretare il problema, inventare pubblico, risultato o vincoli, trattare una tattica proposta come decisione oppure confondere fatti e assunzioni. Contiene soltanto ciò che serve per preparare la scelta:
+
+1. sintesi della sfida, rilevanza attuale, decisione da preparare e responsabile;
+2. situazione di partenza, risultato aziendale interessato, segnali ed eventuale tattica già proposta;
+3. pubblico coinvolto o scelta di pubblico ancora aperta, situazione, comportamento o condizione attuale e cambiamento cercato;
+4. perimetro, esclusioni, risorse, vincoli e limiti di autorità;
+5. fatti, segnali, inferenze e assunzioni con base e conseguenza;
+6. conflitti e aspetti aperti che possono cambiare formulazione, alternative, autorità o fattibilità;
+7. stato di preparazione e decisione da passare a `choose-marketing-direction`.
+
+Il budget entra soltanto come vincolo o questione aperta capace di cambiare il perimetro o la fattibilità: limite già approvato, ordine di grandezza, assenza di nuova spesa, autorità necessaria, tempo del team o altre capacità disponibili. La skill non crea un budget, non alloca risorse tra canali e non chiede dettagli finanziari sensibili non necessari. L'assenza di una cifra non blocca il brief se le direzioni possono comunque essere confrontate; diventa bloccante solo quando senza almeno un limite o un ordine di grandezza il confronto sarebbe puramente teorico o non autorizzato.
+
+Il brief non contiene direzione scelta, piano di test, messaggi, canali, asset, media plan o piano di misurazione. Un target numerico è conservato solo quando esiste una base o una decisione autorizzata; non viene inventato per simulare precisione.
+
+#### Artefatto e stato
+
+Ogni decisione usa un fascicolo dedicato:
+
+```text
+.agents/marketing/decisions/<decision-slug>/
+├── challenge.md
+└── direction.md        # creato successivamente
+```
+
+`challenge.md` referenzia percorso e versione di Business Identity, Marketing Foundations ed eventuale contesto del brand senza duplicarli. Usa i marcatori `[C]`, `[S#]`, `[I]` e `[?]`; il tipo dell'elemento resta distinto dalla sua provenienza, quindi un'assunzione può essere confermata come assunzione senza diventare un fatto.
+
+Gli stati dell'artefatto sono `bozza`, `confermato` e `superato`. Una modifica sostanziale della stessa sfida incrementa la versione intera; una sfida diversa crea un nuovo fascicolo; una formulazione sostituita indica il riferimento successivo. La creazione di `direction.md` non rende superato il brief che la sostiene.
+
+Il Brief della sfida può essere confermato quando i contesti richiesti sono utilizzabili, risultato e cambiamento cercato sono comprensibili, il pubblico è identificato o la sua scelta è dichiaratamente parte della decisione, tattiche e vincoli sono classificati correttamente, fatti e assunzioni restano distinguibili, il responsabile è noto, non esistono conflitti bloccanti ed è chiaro quale scelta dovrà affrontare il workflow successivo.
+
+Il fascicolo non viene installato in `AGENTS.md`, `CLAUDE.md` o istruzioni equivalenti: è un artefatto riferito a una decisione, da caricare quando si lavora su quella decisione, non un contesto globale da applicare a ogni attività.
+
+##### Stato della release: 2026-08-26
+
+Il blueprint è stato pubblicato come release stabile `v0.1.1` sotto `skills/define-marketing-challenge/`, con `SKILL.md`, metadati UI, template del Brief della sfida, routing delle domande e istruzioni di installazione. Non sono stati aggiunti script o asset perché la prima versione non richiede trasformazioni deterministiche né una superficie visuale. Il primo forward test indipendente non ha rilevato hard fail; la patch chiarisce provenienza, dati aggregati, fallback per brief cliente e conferma senza salvataggio.
+
+Il catalogo iniziale comprende 18 eval comportamentali, una fixture Relaybird a due turni, un forward test nuovo e una regressione per i brief cliente ricevuti dalle agenzie. Il self-check locale dell'autore ha prodotto una prima risposta di 322 parole, quattro gruppi e tre domande, superando il controllo meccanico di compattezza senza scritture canoniche. Questo controllo non è indipendente perché l'autore conosceva le aspettative della fixture.
+
+La validazione strutturale di `skill-creator`, `git diff --check` e il retest indipendente della `v0.1.1` hanno esito positivo. La release contiene lo ZIP della sola skill e il relativo checksum SHA-256.
 
 ### 4. Campaign Core
 
-- `to-campaign-spec`: traduce una scommessa approvata in messaggi, ruolo dei canali, asset, dipendenze, responsabilità, approvazioni e piano di misurazione;
+- `to-campaign-spec`: traduce una direzione approvata in messaggi, ruolo dei canali, asset, dipendenze, responsabilità, approvazioni e piano di misurazione;
 - `campaign-review`: verifica separatamente coerenza strategica, solidità delle affermazioni e qualità degli asset;
 - `learn-from-results`: confronta previsioni e risultati, separa segnale e rumore e aggiorna il playbook.
 
@@ -485,7 +548,7 @@ Le fixture sintetiche, i tre eval indipendenti registrati e i controlli di relea
 
 1. `setup-business-context` — fondazione riusabile consolidata;
 2. progettare e testare `setup-marketing-system` come punto d'ingresso;
-3. validare lo Strategy Core iniziando dal percorso minimo `challenge-brief` + `choose-marketing-bet`;
+3. validare lo Strategy Core iniziando dal percorso minimo `define-marketing-challenge` + `choose-marketing-direction`;
 4. collegare il primo percorso Content ai builder già esistenti;
 5. introdurre il Campaign Core quando esistono decisioni strategiche reali da tradurre;
 6. aggiungere apprendimento continuo e monitoring solo nei processi che mostrano un uso ripetuto.
@@ -557,8 +620,8 @@ Prima di costruire il repository completo, eseguire un pilota italiano su attivi
 
 - `setup-business-context`;
 - `setup-marketing-system`;
-- `challenge-brief`;
-- `choose-marketing-bet`.
+- `define-marketing-challenge`;
+- `choose-marketing-direction`.
 
 I segnali utili non sono il numero di output prodotti, ma comportamenti osservabili:
 
@@ -616,6 +679,11 @@ Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, defini
 - L'onboarding non chiede all'utente di scegliere quale file creare: parte dal bisogno e propone l'artefatto pertinente. Un secondo file è giustificato solo da proprietari, frequenze di aggiornamento, permessi o utilizzatori differenti.
 - Gli standard editoriali e visivi minimi vivono nelle Marketing Foundations; manuali, template e asset dettagliati restano riferimenti esterni. Non viene reintrodotto `content-profile-builder` come skill approvata.
 - Strategy, Campaign e Content sono tre core distinti per decisione e artefatto, non tre agenti generalisti che duplicano il lavoro.
+- `define-marketing-challenge` serve al proprietario della decisione e produce un Brief della sfida confermato prima di qualsiasi scelta di direzione. Un'agenzia che interpreta unilateralmente un brief ricevuto richiede un workflow separato.
+- La prima risposta di `define-marketing-challenge` formula già una sfida provvisoria, distingue supporto e assunzioni e pone non più di tre domande ad alta conseguenza; non apre un workshop o un questionario generico.
+- Budget, tempo e capacità entrano nel Brief della sfida solo come vincoli o questioni aperte necessari a rendere realistico il confronto. Allocazione e piano di spesa restano a valle.
+- `challenge.md` e il futuro `direction.md` vivono nello stesso fascicolo decisionale sotto `.agents/marketing/decisions/<decision-slug>/`; non vengono installati nelle istruzioni globali dell'agente.
+- `build-evidence-pack` è una capacità opzionale futura, non un passaggio del percorso essenziale `define-marketing-challenge` + `choose-marketing-direction`.
 - **Content Director** è opzionale quando il formato è già deciso.
 - Carousel Builder e Quote Card Builder mantengono il giudizio editoriale e il QA specifici del proprio output.
 - Editorial Review non è un passaggio obbligatorio del sistema iniziale.

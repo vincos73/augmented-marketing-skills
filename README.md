@@ -30,7 +30,7 @@ Il percorso non è obbligatoriamente lineare. Se obiettivo e formato sono già c
 | --- | --- | --- | --- |
 | Fare in modo che l'agente conosca l'azienda o il brand prima di lavorarci | [`setup-business-context`](skills/setup-business-context/SKILL.md) | **Business Identity** verificabile e versionata: identità aziendale, identità di un brand autonomo oppure identità di un brand collegata all'azienda | **Approvata**, v0.6.2 |
 | Definire le regole di marketing stabili che l'agente deve applicare in ogni attività aziendale | [`setup-marketing-system`](skills/setup-marketing-system/SKILL.md) | **Fondamenti di marketing** aziendali ed eventuali integrazioni di brand: regole su offerte e pubblici, messaggi e prove, ruolo dei canali, qualità e approvazioni | **Approvata**, v0.2.1 |
-| Chiarire il problema da affrontare e scegliere quale opportunità o ipotesi testare | Strategy Core: `challenge-brief`, `build-evidence-pack`, `choose-marketing-bet` | Brief del problema, evidenze distinte dalle assunzioni e decisione di marketing approvata con il relativo test | **Roadmap** |
+| Mettere a fuoco una sfida di marketing e scegliere come affrontarla | Strategy Core: `define-marketing-challenge`, `choose-marketing-direction` | Brief della sfida confermato e decisione di marketing approvata con assunzioni e primo test utile | **Roadmap** |
 | Trasformare una decisione approvata in una campagna coordinata | Campaign Core: `to-campaign-spec`, `campaign-review`, `learn-from-results` | Campaign Spec con messaggi, canali, asset, responsabilità, approvazioni e misure; review e apprendimento finale | **Roadmap** |
 | Capire se un materiale merita di diventare un contenuto e quale formato usare | Content Core: `content-director` | Content Brief con obiettivo, pubblico, idea centrale, fonti, punti da verificare, formato e sequenza consigliata | **Roadmap** |
 | Produrre il contenuto nel formato scelto | Builder specializzati, per esempio Carousel Builder e Quote Card Builder | Asset finale con i controlli editoriali, strutturali, visivi e tecnici specifici del formato | **Moduli esterni già esistenti**, non inclusi in questo repository |
@@ -42,7 +42,7 @@ I nomi delle skill in roadmap descrivono il lavoro ancora da progettare. Non ind
 
 ### `setup-business-context` v0.6.2
 
-È l'unica skill sorgente approvata. Costruisce una carta d'identità persistente partendo dalle fonti fornite dall'utente. Mantiene visibili provenienza, conflitti e aspetti ancora aperti; il template è modulare e al gate 1 permette di approvare lasciando aperti i punti non bloccanti oppure di approfondirli prima. Non inventa un posizionamento e non definisce la strategia.
+È una skill sorgente approvata. Costruisce una carta d'identità persistente partendo dalle fonti fornite dall'utente. Mantiene visibili provenienza, conflitti e aspetti ancora aperti; il template è modulare e al gate 1 permette di approvare lasciando aperti i punti non bloccanti oppure di approfondirli prima. Non inventa un posizionamento e non definisce la strategia.
 
 Gli output canonici previsti sono:
 
@@ -65,6 +65,14 @@ La skill verifica prima che esista una Business Identity utilizzabile e la refer
 
 La [release stabile v0.2.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-marketing-system-v0.2.1) contiene lo ZIP della sola skill e il relativo checksum. Le istruzioni per l'installazione manuale sono in [`skills/setup-marketing-system/INSTALL.md`](skills/setup-marketing-system/INSTALL.md).
 
+### `define-marketing-challenge` v0.1.1
+
+È una skill approvata dello Strategy Core. Aiuta il proprietario di una decisione a trasformare un obiettivo, problema, opportunità, segnale o proposta tattica in un **Brief della sfida di marketing** confermabile, senza scegliere ancora la direzione.
+
+La skill legge Business Identity e Marketing Foundations pertinenti, produce una prima formulazione utile prima delle domande e mantiene distinti sintomo, causa presunta, tattica, vincolo e sfida. Budget, tempo e capacità entrano solo come limiti necessari a rendere realistico il confronto successivo; la skill non crea campagne, piani di spesa o asset.
+
+La [release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.1) contiene lo ZIP della sola skill e il relativo checksum. Il [catalogo degli eval](evals/define-marketing-challenge/eval-catalog.md) include una fixture sintetica a due turni, un forward test e una regressione per i brief cliente ricevuti dalle agenzie. Il primo forward test indipendente su `v0.1.0` non ha rilevato hard fail e ha prodotto due correzioni compatibili confluite in `v0.1.1`; il [retest indipendente](evals/define-marketing-challenge/runs/2026-08-26-independent-retest-v0.1.1.md) della versione corretta è passato senza errori sostanziali.
+
 ## Regole comuni alle skill di setup
 
 - Le fonti e la provenienza restano visibili.
@@ -81,7 +89,7 @@ La [release stabile v0.2.1](https://github.com/vincos73/augmented-marketing-skil
 | --- | --- |
 | `setup-business-context` | approvata; sorgente e installazione locale v0.6.2; release pubblica stabile v0.6.0 |
 | `setup-marketing-system` | approvata e disponibile come release stabile v0.2.1 |
-| Strategy Core | architettura e confini definiti; skill non ancora progettate o approvate |
+| Strategy Core | `define-marketing-challenge` v0.1.1 approvata e disponibile come release stabile; `choose-marketing-direction` definita nel perimetro ma non ancora progettata; evidence pack autonomo opzionale e rinviato |
 | Campaign Core | roadmap; nessuna skill inclusa |
 | Content Core | roadmap; collegamento con builder esterni ancora da validare |
 | `monitoring-setup` | ipotesi opzionale; non inclusa |
@@ -96,6 +104,7 @@ Il documento autorevole con architettura, decisioni, confini ed eval è [`MARKET
 skills/                         sorgenti delle skill
   setup-business-context/       skill approvata
   setup-marketing-system/       skill approvata
+  define-marketing-challenge/   skill approvata
 evals/                          cataloghi, fixture sintetiche e risultati osservati
 experiments/                    prove non incluse nelle skill attive
 MARKETING-AGENT-SYSTEM.md       framework e decisioni autorevoli
