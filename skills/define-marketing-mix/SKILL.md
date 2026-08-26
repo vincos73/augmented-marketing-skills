@@ -2,7 +2,7 @@
 name: define-marketing-mix
 description: "Traduce una direzione di marketing approvata in scelte coerenti su Product, Price, Place e Promotion, distinguendo vincoli, decisioni, ipotesi e autorità. Usala prima della progettazione di campagne o altre attivazioni quando il marketing mix deve essere definito o revisionato. Non usarla per prendere decisioni tecniche di prodotto, fissare unilateralmente prezzi, progettare il piano di campagna o produrre asset."
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Definire il marketing mix
@@ -45,6 +45,8 @@ Per ogni P assegna uno stato operativo:
 - **ipotesi da verificare**: plausibile ma non ancora sostenuta;
 - **decisione esterna**: richiede un'altra funzione o autorità;
 - **non applicabile**: esclusa con una ragione concreta.
+
+Usa esattamente uno di questi sei stati nella mappa. Eventuali condizioni, dipendenze o motivi di cautela vanno nella colonna della scelta o nelle sezioni dedicate, non in uno stato ibrido come `proposta condizionata` o `decisione da confermare`.
 
 Non interpretare silenziosamente un vuoto come libertà di decisione. Non compilare quattro sezioni simmetriche quando una P non cambia la strategia; rendi comunque visibile il suo stato e le dipendenze.
 

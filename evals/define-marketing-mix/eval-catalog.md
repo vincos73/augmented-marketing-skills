@@ -2,6 +2,8 @@
 
 Questi eval verificano che il marketing mix traduca una direzione approvata in scelte coerenti sulle quattro P senza appropriarsi di decisioni tecniche, finanziarie o operative. Le fixture devono essere sintetiche e pubblicabili e non possono produrre scritture canoniche.
 
+La fixture iniziale è in [`fixtures/synthetic-standalone/`](fixtures/synthetic-standalone/). Usa contesti Brightpath interamente sintetici, una sfida confermata v1 e una direzione approvata v1. `expected-run.md` contiene i criteri dell'autore e non va consegnato al valutatore indipendente.
+
 ## Eval prioritari
 
 | ID | Prova | Evidenza attesa | Hard fail |
@@ -10,7 +12,7 @@ Questi eval verificano che il marketing mix traduca una direzione approvata in s
 | DMM02 | Readiness della direzione | Richiede una direzione approvata o un equivalente per un mix canonico; con una bozza resta in esplorazione | Approva o salva il mix partendo da una direzione non approvata o incompatibile |
 | DMM03 | Attivazione selettiva | Non forza il workflow se il mix è già approvato o la richiesta è soltanto esecutiva | Ricostruisce tutto il mix senza necessità o blocca una campagna già sufficientemente specificata |
 | DMM04 | Prima risposta utile | Presenta una mappa iniziale delle quattro P, tensioni e al massimo tre domande, oppure un blocker | Avvia una lezione, un questionario fisso o una matrice vuota |
-| DMM05 | Stato di ogni P | Classifica ciascuna P come vincolo, scelta, proposta, ipotesi, decisione esterna o non applicabile | Interpreta un vuoto come libertà o inventa una scelta per completare la tabella |
+| DMM05 | Stato di ogni P | Classifica ciascuna P con esattamente uno degli stati canonici: vincolo approvato, scelta da definire, proposta, ipotesi da verificare, decisione esterna o non applicabile; registra le condizioni separatamente | Interpreta un vuoto come libertà, usa stati ibridi o inventa una scelta per completare la tabella |
 | DMM06 | Confine Product | Limita Product a configurazione dell'offerta, packaging, esperienza e implicazioni marketing; indirizza roadmap e fattibilità | Definisce unilateralmente caratteristiche tecniche, sviluppo o requisiti regolamentati |
 | DMM07 | Autorità Price | Collega prezzo e condizioni a valore, economics, evidenze e proprietario | Fissa prezzo o sconto senza base e autorità oppure inventa margini ed elasticità |
 | DMM08 | Significato di Place | Tratta Place come accesso, distribuzione, vendita ed erogazione | Riduce Place ai social, media o canali di comunicazione |
@@ -43,3 +45,7 @@ Nel primo ciclo non usare un punteggio globale. I gate di autorità, approvazion
 3. Regressione in cui social ed email vengono erroneamente proposti come Place.
 4. Regressione con richiesta del marketing manager di fissare un prezzo privo di economics e autorità.
 5. Regressione con Promotion pronta ma disponibilità o distribuzione bloccanti.
+
+## Registrazione dei run
+
+Ogni forward test registra data, versione della skill, materiali letti, richiesta usata, risposta prodotta, hard fail osservati, correzioni applicate e stato della validazione. I run sono evidenze di authoring e non equivalgono a una prova con marketer reali.

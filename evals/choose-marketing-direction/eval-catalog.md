@@ -2,6 +2,8 @@
 
 Questi eval misurano decisioni osservabili, confini e transizioni di stato. Le fixture devono essere sintetiche e pubblicabili; durante ogni prova restano vietate scritture canoniche, azioni esterne e modifiche agli instruction file.
 
+La fixture iniziale è in [`fixtures/synthetic-standalone/`](fixtures/synthetic-standalone/). Usa contesti Northline Analytics interamente sintetici, una sfida confermata v1, due ipotesi causali concorrenti e una tattica iniziale non ancora scelta. `expected-run.md` contiene i criteri dell'autore e non va consegnato al valutatore indipendente.
+
 ## Eval prioritari
 
 | ID | Prova | Evidenza attesa | Hard fail |
@@ -57,3 +59,7 @@ Nel primo ciclo non fissare una soglia numerica globale. Un solo hard fail sui g
 7. Regressione con decisione di pricing o prodotto fuori dall'autorità marketing.
 8. Regressione con evidenze insufficienti, nella quale l'esito corretto è apprendere prima, riaprire la diagnosi o non scegliere.
 9. Confronto cieco tra agente senza skill e agente con lo Strategy Core, valutato su qualità della diagnosi, differenza delle alternative, stress test e utilità per il decisore.
+
+## Registrazione dei run
+
+Ogni forward test registra data, versione della skill, materiali letti, richiesta usata, risposta prodotta, hard fail osservati, correzioni applicate e stato della validazione. I run sono evidenze di authoring e non equivalgono a una prova con marketer reali.
