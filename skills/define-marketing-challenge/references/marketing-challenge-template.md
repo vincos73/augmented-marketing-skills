@@ -144,7 +144,7 @@ Usa:
 .agents/marketing/decisions/<decision-slug>/challenge.md
 ```
 
-Il futuro `direction.md` vive nello stesso fascicolo e referenzia questo brief. Non aggiungere il fascicolo alle istruzioni globali dell'agente.
+I successivi `direction.md` e `marketing-mix.md` vivono nello stesso fascicolo. `direction.md` referenzia questo brief; `marketing-mix.md` referenzia sia il brief sia la direzione approvata. Non aggiungere il fascicolo alle istruzioni globali dell'agente.
 
 Per un'azienda o un brand autonomo, `business_context_path` e `marketing_foundations_path` indicano i due contesti canonici pertinenti; i campi `brand_*` restano `null`. Per un brand all'interno di un'azienda, i due campi principali indicano identità e Foundations aziendali, mentre `brand_context_path` e `brand_foundations_path` indicano identità e integrazione del brand. Registra le versioni effettivamente lette e non caricare integrazioni di brand non pertinenti.
 
@@ -153,6 +153,6 @@ Per un'azienda o un brand autonomo, `business_context_path` e `marketing_foundat
 - Correzione di solo refuso: conserva versione e registro.
 - Sfida materialmente diversa: crea un nuovo fascicolo.
 - Formulazione sostituita: imposta `status: superato` e indica `superseded_by`.
-- La creazione di `direction.md` non rende superato il brief.
+- La creazione di `direction.md` o `marketing-mix.md` non rende superato il brief.
 
 Se il workspace non è scrivibile o il responsabile non autorizza il salvataggio, restituisci la bozza completa e il percorso previsto senza dichiarare che il file esista. Se il contenuto viene confermato ma il salvataggio resta negato, riporta `contenuto confermato in chat; artefatto non creato`: `bozza`, `confermato` e `superato` restano stati dell'artefatto canonico, non sostituti dell'autorizzazione alla scrittura.

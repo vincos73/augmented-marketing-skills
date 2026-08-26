@@ -1,0 +1,4 @@
+interface:
+  display_name: "Definisci il marketing mix"
+  short_description: "Traduci la direzione nelle quattro P"
+  default_prompt: "Usa $define-marketing-mix per tradurre questa direzione approvata in scelte coerenti su Product, Price, Place e Promotion."

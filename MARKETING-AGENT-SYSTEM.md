@@ -35,15 +35,15 @@ Nome di lavoro: **Marketing Decision Skills**. Alternativa editoriale: **Marketi
 setup-business-context  (fondazione autonoma: fatti durevoli su azienda e brand)
         ↓ riferimento, non duplicazione
 setup-marketing-system  (punto d'ingresso e profilo operativo)
-        ├── Strategy Core  → define-marketing-challenge → choose-marketing-direction
+        ├── Strategy Core  → define-marketing-challenge → choose-marketing-direction → define-marketing-mix
         ├── Campaign Core  → to-campaign-spec → campaign-review → learn-from-results
         └── Content Core   → Content Director → builder specializzati
 ```
 
 I tre core non sono cartelle decorative e non devono diventare tre agenti generalisti. Sono famiglie di decisioni con artefatti e confini diversi:
 
-- **Strategy Core:** definisce quale problema, pubblico, comportamento o opportunità richiedono una decisione e sceglie la direzione da seguire rendendone visibili le assunzioni;
-- **Campaign Core:** traduce una direzione approvata in un sistema coordinato di messaggi, canali, asset, responsabilità, misure e apprendimento;
+- **Strategy Core:** definisce quale problema, pubblico, comportamento o opportunità richiedono una decisione, sceglie la direzione e la traduce in un marketing mix coerente su Product, Price, Place e Promotion;
+- **Campaign Core:** traduce la componente Promotion e le attivazioni pertinenti di un marketing mix approvato in un sistema coordinato di messaggi, canali, asset, responsabilità, misure e apprendimento;
 - **Content Core:** valuta e produce singoli contenuti o famiglie di contenuti, mantenendo il giudizio specifico nei builder.
 
 `setup-marketing-system` è l'onboarding del framework, non un quarto core. Aiuta l'organizzazione a definire e approvare le regole di marketing stabili che un agente deve conoscere prima di qualsiasi attività di marketing. Parte dal business context canonico e dalle regole, decisioni, materiali e pratiche reali già disponibili; quando una regola operativa essenziale manca, può guidarne la formulazione invece di limitarsi a registrare il vuoto. Costruisce un profilo operativo riusabile dai tre core. Per aziende multi-brand può mantenere un livello aziendale e overlay di brand, sempre referenziando le identità canoniche create da `setup-business-context` invece di copiarle.
@@ -139,12 +139,13 @@ La promessa concreta può essere:
 
 ### Fondazione consolidata e roadmap
 
-Al momento il repository contiene due skill sorgente approvate:
+Al momento il repository contiene tre skill sorgente approvate:
 
 - `setup-business-context`: identità aziendale o di brand persistente, verificabile e riusabile.
 - `setup-marketing-system`: regole di marketing stabili, verificabili e riusabili dai workflow a valle.
+- `define-marketing-challenge`: Brief della sfida confermato e pronto al confronto strategico, disponibile come release stabile `v0.1.1`.
 
-`define-marketing-challenge` è approvata come release stabile `v0.1.1`. `choose-marketing-direction`, gli altri core e le relative competenze restano roadmap o ipotesi da validare. Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione.
+`choose-marketing-direction` esiste come candidata sorgente `v0.2.0` e `define-marketing-mix` come candidata sorgente `v0.1.0`, entrambe con template e cataloghi di eval, ma non sono ancora approvate, installate o pubblicate. Gli altri core e le relative competenze restano roadmap o ipotesi da validare. Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione.
 
 Le cartelle sotto `skills/` sono sorgenti di authoring, non prova di installazione attiva. Per la scoperta locale in un repository Codex, una skill approvata dovrà essere collocata in `.agents/skills/`; per distribuirla in ChatGPT sul web, desktop e mobile dovrà essere confezionata come plugin. Authoring, installazione locale e distribuzione restano tre gate distinti.
 
@@ -468,7 +469,8 @@ Le fixture sintetiche, i tre eval indipendenti registrati e i controlli di relea
 
 - `define-marketing-challenge`: trasforma un obiettivo, problema, opportunità, segnale o proposta tattica in una sfida di marketing confermata, distinguendo fatti, segnali, inferenze e assunzioni senza scegliere una soluzione;
 - `choose-marketing-direction`: confronta direzioni plausibili rispetto a una sfida confermata, rende visibile l'assunzione più fragile e il primo test utile; il responsabile approva e registra la scelta;
-- `build-evidence-pack`, eventualmente futuro: prepara un dossier autonomo soltanto quando quantità, conflitti o riuso delle fonti lo rendono utile. Non appartiene al percorso essenziale e non blocca le due skill iniziali.
+- `define-marketing-mix`: traduce la direzione approvata in scelte coerenti su Product, Price, Place e Promotion, distinguendo vincoli, proposte, ipotesi, decisioni esterne e autorità prima dell'attivazione;
+- `build-evidence-pack`, eventualmente futuro: prepara un dossier autonomo soltanto quando quantità, conflitti o riuso delle fonti lo rendono utile. Non appartiene al percorso essenziale e non blocca le tre skill dello Strategy Core.
 
 #### `define-marketing-challenge`: user story e perimetro
 
@@ -513,12 +515,13 @@ Ogni decisione usa un fascicolo dedicato:
 ```text
 .agents/marketing/decisions/<decision-slug>/
 ├── challenge.md
-└── direction.md        # creato successivamente
+├── direction.md        # creato successivamente
+└── marketing-mix.md    # creato dopo l'approvazione della direzione
 ```
 
 `challenge.md` referenzia percorso e versione di Business Identity, Marketing Foundations ed eventuale contesto del brand senza duplicarli. Usa i marcatori `[C]`, `[S#]`, `[I]` e `[?]`; il tipo dell'elemento resta distinto dalla sua provenienza, quindi un'assunzione può essere confermata come assunzione senza diventare un fatto.
 
-Gli stati dell'artefatto sono `bozza`, `confermato` e `superato`. Una modifica sostanziale della stessa sfida incrementa la versione intera; una sfida diversa crea un nuovo fascicolo; una formulazione sostituita indica il riferimento successivo. La creazione di `direction.md` non rende superato il brief che la sostiene.
+Gli stati del Brief della sfida sono `bozza`, `confermato` e `superato`. Una modifica sostanziale della stessa sfida incrementa la versione intera; una sfida diversa crea un nuovo fascicolo; una formulazione sostituita indica il riferimento successivo. La creazione di `direction.md` o `marketing-mix.md` non rende superati gli artefatti a monte che li sostengono.
 
 Il Brief della sfida può essere confermato quando i contesti richiesti sono utilizzabili, risultato e cambiamento cercato sono comprensibili, il pubblico è identificato o la sua scelta è dichiaratamente parte della decisione, tattiche e vincoli sono classificati correttamente, fatti e assunzioni restano distinguibili, il responsabile è noto, non esistono conflitti bloccanti ed è chiaro quale scelta dovrà affrontare il workflow successivo.
 
@@ -532,9 +535,52 @@ Il catalogo iniziale comprende 18 eval comportamentali, una fixture Relaybird a 
 
 La validazione strutturale di `skill-creator`, `git diff --check` e il retest indipendente della `v0.1.1` hanno esito positivo. La release contiene lo ZIP della sola skill e il relativo checksum SHA-256.
 
+#### `choose-marketing-direction`: candidata v0.2.0
+
+> Come proprietario di una decisione marketing, parto da una sfida confermata, formulo una diagnosi provvisoria e confronto alternative realmente strategiche per scegliere come produrre il cambiamento cercato. Ottengo una direzione approvabile sottoposta a stress test, con trade-off, non-scelte, assunzione più fragile e primo test utile, senza trasformarla prematuramente in marketing mix o campagna.
+
+La skill ricostruisce prima una diagnosi strategica proporzionata: tensione centrale, ipotesi causale, evidenze e incognite sui pubblici, alternative o sostituti, capacità dell'organizzazione e incertezza decisiva. La diagnosi resta provvisoria, può mantenere aperte letture concorrenti e può concludere che il problema non sia principalmente di marketing. La skill non avvia automaticamente ricerca di mercato o competitive intelligence.
+
+Deriva quindi i criteri dal brief e presenta presto da due a quattro alternative reali, o un numero inferiore quando non esistono altre strade responsabili. Una direzione deve differire per pubblico o situazione, ostacolo, leva, meccanismo, posizione oppure sequenza di apprendimento. Webinar, newsletter, advertising, eventi e formati non diventano automaticamente direzioni diverse.
+
+Il confronto resta qualitativo e motivato. La skill agisce anche come challenger: seleziona il miglior argomento contrario, verifica condizioni necessarie, capacità, risposte plausibili degli attori e conseguenze indesiderate, e rende esplicito che cosa la scelta implica non fare. Punteggi, pesi, ROI e stime entrano soltanto quando esiste un modello autorizzato e una base adeguata. L'esito può essere una raccomandazione, una raccomandazione condizionata, una richiesta di apprendere prima oppure la conclusione che nessuna opzione sia pronta.
+
+La direzione rende visibili conseguenze e dipendenze su Product, Price, Place e Promotion, ma non definisce il mix. Non fissa roadmap, caratteristiche tecniche, prezzi, distribuzione, media mix, messaggi, asset o budget. Il primo test riduce l'incertezza strategica più importante e include una regola per confermare, correggere, fermare oppure riaprire la diagnosi; la skill non lo esegue né modifica automaticamente gli artefatti approvati.
+
+L'artefatto proposto è:
+
+```text
+.agents/marketing/decisions/<decision-slug>/direction.md
+```
+
+Usa gli stati `bozza`, `approvata` e `superata`, referenzia la versione esatta di `challenge.md` e richiede sia approvazione della scelta sia autorizzazione al salvataggio. Il passaggio successivo normale è `define-marketing-mix`.
+
+#### `define-marketing-mix`: candidata v0.1.0
+
+> Come responsabile marketing, traduco una direzione approvata in decisioni coerenti su Product, Price, Place e Promotion, rendendo visibili vincoli, ipotesi, dipendenze e proprietari prima di progettare la campagna o altre attivazioni.
+
+La skill impedisce che il percorso salti dalla strategia direttamente alla Promotion. Per ogni P usa uno stato operativo: `vincolo approvato`, `scelta da definire`, `proposta`, `ipotesi da verificare`, `decisione esterna` oppure `non applicabile`. Tutte le P devono avere uno stato, ma non devono ricevere lo stesso livello di dettaglio né cambiare in ogni decisione.
+
+- **Product** riguarda configurazione dell'offerta, packaging, esperienza e servizio pertinenti al marketing; roadmap tecnica, sviluppo, fattibilità e requisiti regolamentati restano delle funzioni competenti.
+- **Price** riguarda logica di valore, architettura e condizioni; nessun prezzo viene fissato senza economics, evidenze e autorità adeguate.
+- **Place** riguarda accesso, vendita, distribuzione ed erogazione; non coincide con i canali di comunicazione.
+- **Promotion** riguarda ruolo strategico della comunicazione, territorio di valore e sequenza generale; messaggi, calendario, media plan e asset restano nel Campaign Core.
+
+Il mix controlla la coerenza tra le P e registra come decisioni esterne le dipendenze che superano l'autorità marketing. Non modifica prodotto, listini, accordi, account o campagne.
+
+L'artefatto proposto è:
+
+```text
+.agents/marketing/decisions/<decision-slug>/marketing-mix.md
+```
+
+Usa gli stati `bozza`, `approvato` e `superato`, referenzia versioni esatte di sfida e direzione e richiede approvazione del contenuto più autorizzazione al salvataggio. La componente Promotion può essere passata a `to-campaign-spec` soltanto quando dipendenze e autorità non rendono l'attivazione prematura.
+
+Le due candidate includono `SKILL.md`, metadati UI, due reference ciascuna e cataloghi comportamentali. Non includono script, asset, istruzioni di installazione, fixture o run indipendenti. La validazione strutturale non equivale ad approvazione: servono almeno fixture realistiche, forward test indipendenti e correzione degli hard fail osservati prima di qualsiasi release.
+
 ### 4. Campaign Core
 
-- `to-campaign-spec`: traduce una direzione approvata in messaggi, ruolo dei canali, asset, dipendenze, responsabilità, approvazioni e piano di misurazione;
+- `to-campaign-spec`: traduce la componente Promotion e le attivazioni pertinenti di un marketing mix approvato in messaggi, ruolo dei canali, asset, dipendenze, responsabilità, approvazioni e piano di misurazione;
 - `campaign-review`: verifica separatamente coerenza strategica, solidità delle affermazioni e qualità degli asset;
 - `learn-from-results`: confronta previsioni e risultati, separa segnale e rumore e aggiorna il playbook.
 
@@ -548,9 +594,9 @@ La validazione strutturale di `skill-creator`, `git diff --check` e il retest in
 
 1. `setup-business-context` — fondazione riusabile consolidata;
 2. progettare e testare `setup-marketing-system` come punto d'ingresso;
-3. validare lo Strategy Core iniziando dal percorso minimo `define-marketing-challenge` + `choose-marketing-direction`;
+3. validare lo Strategy Core con `define-marketing-challenge` + `choose-marketing-direction` + `define-marketing-mix`;
 4. collegare il primo percorso Content ai builder già esistenti;
-5. introdurre il Campaign Core quando esistono decisioni strategiche reali da tradurre;
+5. introdurre il Campaign Core quando esistono marketing mix approvati da tradurre in attivazioni;
 6. aggiungere apprendimento continuo e monitoring solo nei processi che mostrano un uso ripetuto.
 
 ## Content Director: responsabilità e confini
@@ -621,7 +667,8 @@ Prima di costruire il repository completo, eseguire un pilota italiano su attivi
 - `setup-business-context`;
 - `setup-marketing-system`;
 - `define-marketing-challenge`;
-- `choose-marketing-direction`.
+- `choose-marketing-direction`;
+- `define-marketing-mix`.
 
 I segnali utili non sono il numero di output prodotti, ma comportamenti osservabili:
 
@@ -629,7 +676,7 @@ I segnali utili non sono il numero di output prodotti, ma comportamenti osservab
 - il contesto viene riusato correttamente in un secondo lavoro;
 - il processo cambia, restringe o interrompe almeno una decisione reale;
 - emergono assunzioni, conflitti o prove mancanti che l'uso abituale del chatbot non aveva reso visibili;
-- l'utente distingue chiaramente fatti aziendali, scelte di marketing e decisioni di campagna.
+- l'utente distingue chiaramente fatti aziendali, direzione strategica, marketing mix e decisioni di campagna.
 
 Per `setup-marketing-system`, il criterio di successo combina eval realistici e un forward test indipendente:
 
@@ -682,8 +729,10 @@ Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, defini
 - `define-marketing-challenge` serve al proprietario della decisione e produce un Brief della sfida confermato prima di qualsiasi scelta di direzione. Un'agenzia che interpreta unilateralmente un brief ricevuto richiede un workflow separato.
 - La prima risposta di `define-marketing-challenge` formula già una sfida provvisoria, distingue supporto e assunzioni e pone non più di tre domande ad alta conseguenza; non apre un workshop o un questionario generico.
 - Budget, tempo e capacità entrano nel Brief della sfida solo come vincoli o questioni aperte necessari a rendere realistico il confronto. Allocazione e piano di spesa restano a valle.
-- `challenge.md` e il futuro `direction.md` vivono nello stesso fascicolo decisionale sotto `.agents/marketing/decisions/<decision-slug>/`; non vengono installati nelle istruzioni globali dell'agente.
-- `build-evidence-pack` è una capacità opzionale futura, non un passaggio del percorso essenziale `define-marketing-challenge` + `choose-marketing-direction`.
+- `challenge.md`, `direction.md` e `marketing-mix.md` vivono nello stesso fascicolo decisionale sotto `.agents/marketing/decisions/<decision-slug>/`; non vengono installati nelle istruzioni globali dell'agente.
+- `choose-marketing-direction` distingue alternative strategiche da tattiche, rende falsificabile la raccomandazione e passa le implicazioni sulle quattro P senza definirle.
+- `define-marketing-mix` impedisce che il sistema riduca il marketing alla Promotion: classifica e collega Product, Price, Place e Promotion rispettando autorità e dipendenze cross-funzionali.
+- `build-evidence-pack` è una capacità opzionale futura, non un passaggio del percorso essenziale `define-marketing-challenge` + `choose-marketing-direction` + `define-marketing-mix`.
 - **Content Director** è opzionale quando il formato è già deciso.
 - Carousel Builder e Quote Card Builder mantengono il giudizio editoriale e il QA specifici del proprio output.
 - Editorial Review non è un passaggio obbligatorio del sistema iniziale.

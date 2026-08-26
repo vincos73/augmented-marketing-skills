@@ -15,6 +15,8 @@ Marketing Foundations
         ↓
 Decisione strategica
         ↓
+Marketing Mix: Product · Price · Place · Promotion
+        ↓
 Campaign Spec oppure Content Brief
         ↓
 Asset prodotti dai builder specializzati
@@ -30,8 +32,9 @@ Il percorso non è obbligatoriamente lineare. Se obiettivo e formato sono già c
 | --- | --- | --- | --- |
 | Fare in modo che l'agente conosca l'azienda o il brand prima di lavorarci | [`setup-business-context`](skills/setup-business-context/SKILL.md) | **Business Identity** verificabile e versionata: identità aziendale, identità di un brand autonomo oppure identità di un brand collegata all'azienda | **Approvata**, v0.6.2 |
 | Definire le regole di marketing stabili che l'agente deve applicare in ogni attività aziendale | [`setup-marketing-system`](skills/setup-marketing-system/SKILL.md) | **Fondamenti di marketing** aziendali ed eventuali integrazioni di brand: regole su offerte e pubblici, messaggi e prove, ruolo dei canali, qualità e approvazioni | **Approvata**, v0.2.1 |
-| Mettere a fuoco una sfida di marketing e scegliere come affrontarla | Strategy Core: `define-marketing-challenge`, `choose-marketing-direction` | Brief della sfida confermato e decisione di marketing approvata con assunzioni e primo test utile | **Roadmap** |
-| Trasformare una decisione approvata in una campagna coordinata | Campaign Core: `to-campaign-spec`, `campaign-review`, `learn-from-results` | Campaign Spec con messaggi, canali, asset, responsabilità, approvazioni e misure; review e apprendimento finale | **Roadmap** |
+| Mettere a fuoco una sfida di marketing e scegliere come affrontarla | Strategy Core: `define-marketing-challenge`, `choose-marketing-direction` | Brief della sfida confermato e direzione approvata con diagnosi, stress test, trade-off, assunzione fragile e primo test utile | `define-marketing-challenge` approvata; `choose-marketing-direction` candidata v0.2.0 |
+| Tradurre la direzione in scelte coerenti sulle quattro P | Strategy Core: `define-marketing-mix` | Marketing Mix approvato con Product, Price, Place e Promotion, dipendenze e autorità | **Candidata**, v0.1.0 |
+| Trasformare la componente Promotion e le altre attivazioni pertinenti in una campagna coordinata | Campaign Core: `to-campaign-spec`, `campaign-review`, `learn-from-results` | Campaign Spec con messaggi, canali, asset, responsabilità, approvazioni e misure; review e apprendimento finale | **Roadmap** |
 | Capire se un materiale merita di diventare un contenuto e quale formato usare | Content Core: `content-director` | Content Brief con obiettivo, pubblico, idea centrale, fonti, punti da verificare, formato e sequenza consigliata | **Roadmap** |
 | Produrre il contenuto nel formato scelto | Builder specializzati, per esempio Carousel Builder e Quote Card Builder | Asset finale con i controlli editoriali, strutturali, visivi e tecnici specifici del formato | **Moduli esterni già esistenti**, non inclusi in questo repository |
 | Costruire un sistema di ascolto su competitor, reputazione, normative o altri temi | `monitoring-setup` | Mappa delle fonti, query, frequenze, alert, configurazione, digest e runbook di manutenzione | **Ipotesi opzionale di roadmap** |
@@ -73,6 +76,14 @@ La skill legge Business Identity e Marketing Foundations pertinenti, produce una
 
 La [release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.1) contiene lo ZIP della sola skill e il relativo checksum. Il [catalogo degli eval](evals/define-marketing-challenge/eval-catalog.md) include una fixture sintetica a due turni, un forward test e una regressione per i brief cliente ricevuti dalle agenzie. Il primo forward test indipendente su `v0.1.0` non ha rilevato hard fail e ha prodotto due correzioni compatibili confluite in `v0.1.1`; il [retest indipendente](evals/define-marketing-challenge/runs/2026-08-26-independent-retest-v0.1.1.md) della versione corretta è passato senza errori sostanziali.
 
+### Candidate dello Strategy Core
+
+`choose-marketing-direction` v0.2.0 formula una diagnosi strategica provvisoria e confronta alternative realmente strategiche rispetto a una sfida confermata. Distingue osservazioni, interpretazioni e ipotesi causali; stressa condizioni, capacità, reazioni e conseguenze; raccomanda anche in forma condizionata o può concludere che nessuna opzione sia pronta. Produce la bozza di `direction.md`, con non-scelte, assunzione più fragile, primo test utile e condizioni di riapertura, ma non definisce ancora le quattro P e non autorizza l'esecuzione.
+
+`define-marketing-mix` v0.1.0 traduce una direzione approvata in Product, Price, Place e Promotion. Ogni P viene classificata come vincolo, scelta, proposta, ipotesi, decisione esterna o non applicabile. La skill controlla la coerenza del sistema senza trasformare Product in roadmap tecnica, Price in una decisione finanziaria unilaterale, Place in un elenco di media o Promotion in un campaign plan.
+
+Le due sorgenti, i template e i cataloghi di eval sono presenti per l'authoring, ma non sono ancora approvati, installati né pubblicati. Prima di una release richiedono fixture realistiche e forward test indipendenti.
+
 ## Regole comuni alle skill di setup
 
 - Le fonti e la provenienza restano visibili.
@@ -89,8 +100,8 @@ La [release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skil
 | --- | --- |
 | `setup-business-context` | approvata; sorgente e installazione locale v0.6.2; release pubblica stabile v0.6.0 |
 | `setup-marketing-system` | approvata e disponibile come release stabile v0.2.1 |
-| Strategy Core | `define-marketing-challenge` v0.1.1 approvata e disponibile come release stabile; `choose-marketing-direction` definita nel perimetro ma non ancora progettata; evidence pack autonomo opzionale e rinviato |
-| Campaign Core | roadmap; nessuna skill inclusa |
+| Strategy Core | `define-marketing-challenge` v0.1.1 approvata e disponibile come release stabile; `choose-marketing-direction` candidata v0.2.0 e `define-marketing-mix` candidata v0.1.0 con sorgenti ed eval catalog; evidence pack autonomo opzionale e rinviato |
+| Campaign Core | roadmap; riceverà il marketing mix approvato e nessuna skill è ancora inclusa |
 | Content Core | roadmap; collegamento con builder esterni ancora da validare |
 | `monitoring-setup` | ipotesi opzionale; non inclusa |
 
@@ -105,6 +116,8 @@ skills/                         sorgenti delle skill
   setup-business-context/       skill approvata
   setup-marketing-system/       skill approvata
   define-marketing-challenge/   skill approvata
+  choose-marketing-direction/   candidata Strategy Core
+  define-marketing-mix/         candidata Strategy Core
 evals/                          cataloghi, fixture sintetiche e risultati osservati
 experiments/                    prove non incluse nelle skill attive
 MARKETING-AGENT-SYSTEM.md       framework e decisioni autorevoli
