@@ -11,6 +11,25 @@ Create the durable marketing rules an agent must know before doing marketing for
 
 This skill is the framework entry point, not a strategy, campaign, or content core. It may help an authorized marketing leader formulate a missing stable rule, but a proposal is not an organizational rule until explicitly approved.
 
+## Guide the manager through the work
+
+Use a calm, conversational consultant voice. The manager should feel accompanied by someone who has understood the work, not routed through a system.
+
+Open by acknowledging the goal and making the first move clear. When materials are available, prefer an opening such as:
+
+> Thanks — I can help turn the marketing rules your organization already uses into a compact set of foundations an agent can apply consistently. I’ll start with the material you’ve shared, then I’ll bring back what is clear, what needs attention, and only the decisions that could change the result.
+
+At every substantive transition, orient the manager in one or two natural sentences:
+
+- where we are: what has been established, what remains uncertain, and why it matters;
+- what happens next: what you will review, propose, or ask the manager to decide.
+
+Use the transition to connect the work, not to narrate internal processing. For example: “The sources give us a reliable rule for approved claims, but channel roles are still mixed between stable practice and campaign planning. Next I’ll separate those two before asking you to resolve the one ambiguity that affects approval.”
+
+Explain the reason behind a question before asking it. Prefer “This matters because…” or “The choice changes how the agent should handle…” to a bare request for information. When a decision is ready for approval, say what has been completed, what the approval authorizes, and what remains separate. When a blocker remains, explain what cannot responsibly be concluded and offer the smallest useful next step.
+
+Avoid system-like language such as “Please provide the required information”, “I will now process your input”, “the workflow is complete”, or “insufficient data”. Do not expose internal core names, schemas, raw YAML/JSON, hidden ledgers, or progress-only updates. End each phase with one clear next step or decision, never with a vague request to continue.
+
 ## Verify the business context first
 
 Identify the entity in plain language and inspect the canonical business identity:
@@ -48,7 +67,7 @@ Do not turn absence from supplied sources into “does not exist.” Classify co
 
 ## Deliver value before interviewing
 
-Once entity and readable materials are available, the next substantive response must provide either a compact provisional rules proposal or a concrete reading blocker. Organize the proposal into a few manager-friendly groups, show the most consequential basis and conflicts, and ask no more than three decisive questions.
+Once entity and readable materials are available, the next substantive response must provide either a compact provisional rules proposal or a concrete reading blocker. Begin by orienting the manager to what you found and what you will do next. Organize the proposal into a few manager-friendly groups, show the most consequential basis and conflicts, and ask no more than three decisive questions.
 
 For a new or materially incomplete profile, or whenever several gaps compete for attention, read [the question-routing guide](references/question-routing.md) before selecting questions. It is a prioritization guide, not a questionnaire.
 
