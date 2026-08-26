@@ -15,6 +15,21 @@ For each of the five areas, classify consequential items as:
 
 Also classify whether the gap is blocking, material but non-blocking, or enrichment/task-specific. Do not expose a long ledger; use it to draft the first useful proposal and select questions.
 
+## Keep the conversation oriented
+
+The manager should always understand where the work stands and what will happen next. Add a short bridge whenever the conversation moves from reading to synthesis, from synthesis to questions, or from questions to approval. Adapt the wording to the evidence; do not repeat a fixed script.
+
+Useful patterns:
+
+- **Opening:** “Thanks — I have enough to start. I’ll first map the stable rules already supported by your materials, then I’ll bring back only the decisions that could change the draft.”
+- **After reading:** “Here’s where we are: the sources support these rules, while this point is still ambiguous. Next I’ll turn that into a compact proposal and focus on the one choice that affects approval.”
+- **Before a question:** “This matters because the answer changes how the agent should handle [situation]. Which of these reflects your standing practice?”
+- **After an answer:** “That settles the main ambiguity. I’ll incorporate it, check the remaining areas for conflicts, and then show you the version ready for approval.”
+- **At approval:** “The draft is ready to approve. You are approving the content at this path and version; installation in the agent’s instructions remains a separate choice.”
+- **At a blocker:** “I can’t responsibly turn this into an approved rule yet because [specific reason]. We can leave it unresolved with a cautious fallback, or you can confirm the missing decision.”
+
+These bridges are part of the user experience, not progress reports. Do not expose internal ledgers, core names, schemas, or raw state while orienting the manager.
+
 ## Rank by consequence
 
 Ask at most three questions per batch. Prefer questions that:

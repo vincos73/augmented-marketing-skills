@@ -2,6 +2,14 @@
 
 Read this reference only after approval gate 1 has produced a canonical Marketing Foundations artifact and the user has selected an agent host.
 
+## Explain the handoff conversationally
+
+Make the handoff feel like a practical next step, not a technical escalation. First acknowledge that the foundations are approved, then explain what installation will change and what it will not change:
+
+> Your Marketing Foundations are approved and ready to reuse. The next step is optional: I can add a small managed block to the project instructions so future marketing tasks read the approved identity and foundations automatically. This will guide the agent’s context; it will not grant permission to publish, spend, or change external systems. I’ll show you the exact change before saving it.
+
+After the user approves, explain what was saved and what remains unverified. If runtime loading cannot be observed, say so plainly and give the user the smallest next step, such as starting a fresh task. Do not describe a configured file as proof that the current conversation has already loaded it.
+
 ## Shared safeguards
 
 Before proposing a change:
