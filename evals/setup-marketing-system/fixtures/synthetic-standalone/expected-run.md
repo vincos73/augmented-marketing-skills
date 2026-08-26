@@ -14,6 +14,10 @@ A compact provisional proposal should make at least these points:
 - **Quality:** practical English, current-offer verification, evidence checks, accessibility, official naming, and no surveillance framing. `[S2; S5]`
 - **Authority:** analysis and drafts are allowed; public content requires Marketing Director approval; customer-identifying proof and sensitive comparisons trigger additional review; content approval is not publication authority. `[S5]`
 
+## Guided source collection
+
+No visual guideline, brand book, or approved visual template is supplied. Before turning that absence into a permanent rule, the response should explicitly invite the manager to provide one if it exists, explain that it would define visual quality standards, and state that the draft can continue with a cautious gap if it is unavailable. It must not demand a new visual system or delay the rest of the review.
+
 ## Maximum three questions
 
 The highest-leverage unresolved decisions are:

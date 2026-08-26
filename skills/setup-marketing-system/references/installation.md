@@ -31,11 +31,11 @@ Use a concise block adapted to the real entity and paths:
 
 ```markdown
 <!-- setup-marketing-system:start -->
-## Marketing context
+## Contesto di marketing
 
-Before company-specific marketing work for [Entity], read `[identity-path]` and `[foundations-path]` and apply their approved facts, rules, unknowns, and approval boundaries. For work about a child brand, also read its matching identity and marketing overlay; do not load unrelated brands.
+Prima di svolgere attività di marketing per [Entità], leggi `[identity-path]` e `[foundations-path]` e applicane fatti approvati, regole, aspetti aperti e limiti di approvazione. Per un brand figlio, leggi anche l'identità e l'integrazione di marketing corrispondenti; non caricare brand non pertinenti.
 
-At the start of every substantive response that performs or advances company-specific marketing work, add one compact FYI naming the entity and versions actually read. If a required artifact is unavailable, unapproved, conflicting, or materially stale, show an actionable warning instead of claiming it was applied.
+All'inizio di ogni risposta sostanziale che svolge o fa avanzare attività di marketing per l'entità, aggiungi una breve nota operativa con entità e versioni effettivamente lette. Se un artefatto necessario non è disponibile, approvato, coerente o aggiornato, mostra un avviso operativo invece di dichiarare di averlo applicato.
 <!-- setup-marketing-system:end -->
 ```
 
@@ -54,7 +54,7 @@ For a company or standalone brand, propose direct imports when compatible:
 @[identity-path]
 @[foundations-path]
 
-For every substantive company-specific marketing response, state in one compact FYI which entity and artifact versions were actually applied. Do not treat these imports as execution permission.
+Per ogni risposta sostanziale di marketing relativa all'entità, indica in una breve nota operativa quali entità e versioni degli artefatti sono state effettivamente applicate. Non trattare questi import come autorizzazione all'esecuzione.
 <!-- setup-marketing-system:end -->
 ```
 

@@ -229,7 +229,7 @@ Il profilo è un prerequisito per il lavoro di marketing aziendale, non per doma
 
 Ogni risposta che svolge o fa avanzare in modo sostanziale un'attività di marketing specifica dell'organizzazione deve mostrare un FYI breve con il contesto effettivamente applicato. La formula resta informativa e non interrompe il lavoro, per esempio:
 
-> FYI — Applied context: Acme Company Identity v2 + Marketing Foundations v1 + Brand X overlay v1.
+> Nota operativa: contesto applicato, Identità Acme v2 + Fondamenti di marketing v1 + integrazione Brand X v1.
 
 Il FYI indica almeno entità e versioni della business identity, delle Marketing Foundations e dell'eventuale overlay pertinente. Non elenca normalmente percorsi, fonti o dettagli tecnici, che restano disponibili su richiesta. Deve riflettere soltanto file realmente letti e verificati nella sessione: la configurazione di un instruction file non basta per dichiarare che il contesto sia stato applicato.
 
@@ -253,21 +253,21 @@ La distribuzione preferita include o dichiara `setup-business-context` come dipe
 
 #### Artefatto canonico — decisione approvata
 
-Il nome dell'artefatto sarà in inglese. L'etichetta italiana “profilo marketing operativo” non è adottata: rischia di far pensare che le fondazioni strategiche stabili siano escluse e che serva automaticamente un secondo profilo strategico.
+L'identificatore tecnico dell'artefatto resta `marketing-foundations`, ma il titolo, le etichette e gli stati sono espressi nella lingua di lavoro del responsabile. In italiano l'artefatto è presentato come “Fondamenti di marketing”; l'etichetta “profilo marketing operativo” non è adottata perché rischia di far pensare che le fondazioni strategiche stabili siano escluse e che serva automaticamente un secondo profilo strategico.
 
 La prima versione produce un unico artefatto canonico chiamato **Marketing Foundations**, che riunisce le regole stabili necessarie agli agenti: relazione tra offerte e pubblici, messaggi e prove, ruolo generale dei canali, standard di qualità e approvazioni. Le strategie riferite a obiettivi, priorità, mercati, budget o periodi specifici restano invece artefatti distinti dei workflow Strategy e Campaign, perché cambiano con una frequenza e per una ragione diverse.
 
-La struttura approvata di **Marketing Foundations** ha tre livelli:
+La struttura approvata dei **Fondamenti di marketing** ha tre livelli:
 
-1. **Context references** — entità, business identity collegata, versione, proprietario e data di revisione;
-2. **Stable marketing rules** — le cinque aree approvate del setup;
-3. **Governance** — fonti e provenienza, conflitti, regole mancanti, trigger di aggiornamento e changelog.
+1. **Riferimenti di contesto**: entità, business identity collegata, versione, proprietario e data di revisione;
+2. **Regole di marketing stabili**: le cinque aree approvate del setup;
+3. **Governance**: fonti e provenienza, conflitti, regole mancanti, trigger di aggiornamento e changelog.
 
 Il primo livello referenzia la business identity canonica senza ricopiarne i contenuti. Il secondo contiene soltanto regole persistenti e approvate. Il terzo rende visibili base, limiti e manutenzione dell'artefatto.
 
 #### Formato dell'artefatto — decisione approvata
 
-Il file canonico è Markdown in inglese, leggibile sia dal responsabile sia dall'agente. Usa un frontmatter minimo per rendere verificabili almeno versione, stato, entità, scope, proprietario, data dell'ultima revisione e percorso/versione del business context collegato. Il corpo usa titoli e regole esplicite; non è un dump YAML o JSON né richiede all'utente di comprendere una struttura dati per revisionarlo.
+Il file canonico è Markdown nella lingua di lavoro del responsabile, leggibile sia dal responsabile sia dall'agente. Il frontmatter tecnico resta minimo e rende verificabili almeno versione, stato, entità, scope, proprietario, data dell'ultima revisione e percorso/versione del business context collegato. Il corpo usa titoli e regole esplicite; non è un dump YAML o JSON né richiede all'utente di comprendere una struttura dati per revisionarlo. In italiano, stati, etichette e spiegazioni restano in italiano; l'inglese è riservato a termini di marketing consolidati quando naturali.
 
 Durante l'onboarding la skill presenta il contenuto in linguaggio manageriale e in una forma compatta, pur rendendo integralmente revisionabili le informazioni che entreranno nell'artefatto al gate di approvazione. Non espone serializzazioni tecniche come meccanismo di stato o continuità della conversazione. La struttura tecnica viene spiegata soltanto quando serve a comprendere una modifica, un riferimento o una conseguenza dell'approvazione.
 
@@ -286,7 +286,7 @@ Questi elementi sono requisiti di chiarezza, non quattro campi obbligatori da co
 
 Quando una decisione manca, la skill non inventa una direttiva: registra il vuoto con stato, impatto e comportamento prudente. Conflitti, assunzioni e regole proposte restano distinguibili dalle regole approvate fino alla loro risoluzione.
 
-##### 1. Offer–Audience–Situation Fit — decisione approvata
+##### 1. Coerenza tra offerta, pubblico e situazione: decisione approvata
 
 Questa area non ricopia il catalogo delle offerte né le descrizioni dei pubblici presenti nel business context. Referenzia le entità canoniche e registra le regole stabili necessarie per collegarle correttamente nel lavoro di marketing:
 
@@ -297,7 +297,7 @@ Questa area non ricopia il catalogo delle offerte né le descrizioni dei pubblic
 
 Non contiene priorità trimestrali, segmentazioni di una campagna o personas create per una singola iniziativa. Il business context stabilisce chi è l'organizzazione, cosa offre e quali pubblici conosce; le Marketing Foundations stabiliscono come usare stabilmente queste relazioni nelle attività di marketing.
 
-##### 2. Messaging, Claims & Evidence Rules — decisione approvata
+##### 2. Messaggi, claim ed evidenze: decisione approvata
 
 Questa area stabilisce:
 
@@ -311,7 +311,7 @@ Per **evidence** si intendono riscontri verificabili già esistenti, come specif
 
 La sezione non duplica il registro delle prove del business context; lo referenzia e definisce come i riscontri possono essere usati nel marketing. Se la base è insufficiente, l'agente non usa il claim come fatto: può proporre una formulazione più prudente da approvare oppure richiedere verifica. Non contiene copy di campagna e non trasforma automaticamente un'ipotesi di posizionamento in un messaggio approvato.
 
-##### 3. Channel & Format Roles — decisione approvata
+##### 3. Ruolo di canali e formati: decisione approvata
 
 Questa area descrive soltanto decisioni stabili:
 
@@ -321,11 +321,11 @@ Questa area descrive soltanto decisioni stabili:
 - quali limiti, usi impropri e condizioni devono essere rispettati;
 - quale comportamento prudente adottare quando il ruolo di un canale o formato non è definito.
 
-La skill ricava queste regole dal lavoro e dai materiali reali dell'organizzazione; non impone al responsabile di compilare in anticipo una matrice di tutte le piattaforme. Un canale non trovato nelle fonti resta `not established from supplied sources` finché l'utente non ne classifica lo stato: non viene dichiarato automaticamente inattivo o non utilizzato.
+La skill ricava queste regole dal lavoro e dai materiali reali dell'organizzazione; non impone al responsabile di compilare in anticipo una matrice di tutte le piattaforme. Un canale non trovato nelle fonti resta `non stabilito dalle fonti fornite` finché l'utente non ne classifica lo stato: non viene dichiarato automaticamente inattivo o non utilizzato.
 
 La sezione non contiene calendario editoriale, frequenze temporanee, budget, media plan, mix di una campagna o configurazione degli account. Queste sono decisioni riferite a un periodo o a un'iniziativa e appartengono ai workflow a valle.
 
-##### 4. Editorial, Visual & Quality Standards — decisione approvata
+##### 4. Standard editoriali, visivi e di qualità: decisione approvata
 
 Questa area contiene le regole minime che ogni output marketing deve rispettare:
 
@@ -340,7 +340,7 @@ Le Marketing Foundations contengono le istruzioni applicabili dagli agenti e ref
 
 Nella prima versione questa area non genera automaticamente un secondo profilo editoriale o visuale. Un artefatto separato richiederà una necessità osservabile di portabilità, manutenzione, proprietà o permessi differenti; le differenze di un brand appartenente a un'azienda possono invece vivere nel relativo overlay marketing.
 
-##### 5. Controls, Authority & Approvals — decisione approvata
+##### 5. Controlli, autorità e approvazioni: decisione approvata
 
 Questa area stabilisce:
 
@@ -413,6 +413,7 @@ La prima versione dovrebbe usare la struttura minima seguente:
 ```text
 skills/setup-marketing-system/
 ├── SKILL.md
+├── INSTALL.md
 ├── agents/
 │   └── openai.yaml
 └── references/
@@ -424,7 +425,8 @@ skills/setup-marketing-system/
 Responsabilità dei file:
 
 - `SKILL.md` — frontmatter con nome, descrizione discriminante e versione; trigger di creazione, aggiornamento e installazione; controllo del business context; workflow chat-first; cinque aree; provenienza; gate; confini e routing alle reference;
-- `agents/openai.yaml` — metadati UI in inglese coerenti con la skill, mantenendo l'invocazione automatica disponibile;
+- `INSTALL.md` — installazione da ZIP o sorgente GitHub, verifica della versione, checksum e avvertenze sul caricamento della skill in una nuova sessione;
+- `agents/openai.yaml` — metadati UI nella lingua di lavoro del repository, coerenti con la skill e con l'invocazione automatica disponibile;
 - `references/marketing-foundations-template.md` — frontmatter dell'artefatto, schema completo, composizione base/overlay, regole di versione e un esempio minimo di regola;
 - `references/question-routing.md` — criteri per estrarre una prima proposta utile e scegliere al massimo tre vuoti decisivi senza eseguire un questionario;
 - `references/installation.md` — adattatori per instruction file, blocchi gestiti, diff da approvare, composizione identity/foundations/overlay e FYI obbligatorio.
@@ -453,13 +455,13 @@ Durante gli eval non si scrive nei percorsi canonici e non si modificano instruc
 
 ##### Stato dell'authoring locale — 2026-08-25
 
-Il blueprint è stato tradotto in una candidata sorgente `v0.1.0` sotto `skills/setup-marketing-system/`, con `SKILL.md`, metadati UI e le tre reference approvate. Non sono stati aggiunti script, asset o README interni alla skill.
+Il blueprint è stato tradotto nella skill approvata `v0.2.0` sotto `skills/setup-marketing-system/`, con `SKILL.md`, metadati UI, tre reference e istruzioni di installazione. Non sono stati aggiunti script o asset: non esiste ancora una trasformazione deterministica ripetuta che ne giustifichi l'uso.
 
 Gli eval locali includono un catalogo comportamentale, una fixture standalone sintetica, una fixture multi-brand sintetica e tre run indipendenti in sola lettura: dry onboarding Relaybird, forward test Relaybird e forward test Fieldnote/Copperline. Nei run osservati non sono emersi hard fail: il processo ha limitato i claim non supportati, escluso regole temporanee, mantenuto separata l'autorizzazione alla pubblicazione, composto correttamente parent e overlay e mostrato il FYI.
 
 Il validatore strutturale di `skill-creator` ha dato esito positivo tramite un adattatore YAML temporaneo isolato, necessario perché i runtime Python disponibili non includono PyYAML. Anche `agents/openai.yaml`, i frontmatter delle fixture e `git diff --check` risultano validi. Nessun percorso canonico `.agents/`, instruction file, installazione, commit o pubblicazione è stato creato o modificato.
 
-Questa evidenza rende la candidata revisionabile, non automaticamente approvata. Fino a un gate esplicito di approvazione della skill, `setup-business-context` resta l'unica skill approvata del progetto.
+Le fixture sintetiche, i tre eval indipendenti registrati e i controlli di release rendono `setup-marketing-system` una skill approvata. La release v0.2.0 non amplia i suoi confini: non definisce strategie temporanee, non esegue campagne e non autorizza azioni esterne.
 
 ### 3. Strategy Core
 
@@ -578,7 +580,7 @@ Per `setup-marketing-system`, il criterio di successo combina eval realistici e 
 
 Sono hard fail almeno: una scrittura canonica durante il test, una falsa dichiarazione di caricamento nel FYI, l'uso di un overlay non pertinente, un'inferenza trattata come regola approvata, il superamento silenzioso di un conflitto bloccante o un'azione esterna senza l'approvazione richiesta.
 
-Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, definire criteri quantitativi in base agli abbandoni, ai riusi e agli errori realmente osservati; solo allora valutare versione inglese, distribuzione pubblica e cataloghi esterni.
+Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, definire criteri quantitativi in base agli abbandoni, ai riusi e agli errori realmente osservati; solo allora valutare adattamenti ad altre lingue, distribuzione pubblica e cataloghi esterni.
 
 ## Decisioni da non perdere
 
@@ -597,15 +599,15 @@ Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, defini
 - Ogni risposta che svolge o fa avanzare un'attività marketing aziendale mostra un FYI compatto con entità e versioni del contesto realmente applicato. Se il profilo non è utilizzabile, il FYI viene sostituito da un avviso azionabile e non da una falsa dichiarazione di caricamento.
 - `setup-marketing-system` è l'unico punto d'ingresso percepito dall'utente: se il business context manca, orchestra `setup-business-context` nello stesso dialogo e riusa materiali e risposte, senza duplicarne la logica né approvare Marketing Foundations prive di identità canonica.
 - Se `setup-business-context` non è disponibile, la skill può suggerirne l'acquisizione soltanto da una fonte e versione verificabili. Download e installazione richiedono consensi distinti e una verifica intermedia del pacchetto; senza la dipendenza il risultato marketing resta una bozza non canonica.
-- La prima versione produce un unico artefatto canonico in inglese chiamato **Marketing Foundations**. Non separa profilo strategico e operativo; le strategie temporanee restano artefatti dei workflow a valle.
+- La prima versione produce un unico artefatto canonico nella lingua di lavoro del responsabile, chiamato **Fondamenti di marketing** in italiano. Non separa profilo strategico e operativo; le strategie temporanee restano artefatti dei workflow a valle.
 - **Marketing Foundations** è organizzato in tre livelli: riferimenti al contesto, regole stabili e governance. Referenzia la business identity senza duplicarla e mantiene visibili provenienza, conflitti e aggiornamenti.
-- L'artefatto è Markdown in inglese con frontmatter minimo e corpo human-readable. L'onboarding lo presenta in linguaggio manageriale senza usare YAML o JSON come stato visibile; lo schema completo vivrà in una reference dedicata, non nel corpo principale della skill.
+- L'artefatto è Markdown nella lingua di lavoro del responsabile, con frontmatter minimo e corpo leggibile. L'onboarding lo presenta in linguaggio manageriale senza usare YAML o JSON come stato visibile; lo schema completo vive in una reference dedicata, non nel corpo principale della skill.
 - Le Marketing Foundations adottano un modello rule-first: ogni regola rende chiari comportamento, scope e base, aggiungendo eccezioni, approvazioni o fallback solo quando servono. Non impongono una scheda rigida e non trasformano descrizioni narrative in direttive implicite.
-- **Offer–Audience–Situation Fit** collega per regola offerte e pubblici già canonici alle situazioni in cui il marketing può considerarli pertinenti, includendo fit, esclusioni e fallback senza introdurre segmentazioni o priorità di campagna.
-- **Messaging, Claims & Evidence Rules** definisce messaggi consentiti e uso dei riscontri esistenti senza chiedere di produrne di nuovi durante l'onboarding. Un claim non adeguatamente sostenuto viene limitato, riformulato per approvazione o bloccato.
-- **Channel & Format Roles** registra il ruolo stabile, l'idoneità e i limiti di canali e formati ricavati dal lavoro reale, senza introdurre calendario, budget, media plan o configurazione degli account.
-- **Editorial, Visual & Quality Standards** contiene le regole minime applicabili dagli agenti e referenzia guideline, template e asset autorevoli senza duplicarli o generarli. La prima versione non crea automaticamente un secondo profilo editoriale o visuale.
-- **Controls, Authority & Approvals** distingue attività autonome, proposte e vietate, identifica i controlli necessari e separa l'approvazione del contenuto dall'autorizzazione a eseguire. In assenza di una regola essenziale, l'agente resta in modalità bozza o raccomandazione.
+- **Coerenza tra offerta, pubblico e situazione** collega per regola offerte e pubblici già canonici alle situazioni in cui il marketing può considerarli pertinenti, includendo fit, esclusioni e comportamento prudente senza introdurre segmentazioni o priorità di campagna.
+- **Messaggi, claim ed evidenze** definisce messaggi consentiti e uso dei riscontri esistenti senza chiedere di produrne di nuovi durante l'onboarding. Un claim non adeguatamente sostenuto viene limitato, riformulato per approvazione o bloccato.
+- **Ruolo di canali e formati** registra il ruolo stabile, l'idoneità e i limiti di canali e formati ricavati dal lavoro reale, senza introdurre calendario, budget, media plan o configurazione degli account.
+- **Standard editoriali, visivi e di qualità** contiene le regole minime applicabili dagli agenti e referenzia linee guida, template e asset autorevoli senza duplicarli o generarli. La prima versione non crea automaticamente un secondo profilo editoriale o visuale.
+- **Controlli, autorità e approvazioni** distingue attività autonome, proposte e vietate, identifica i controlli necessari e separa l'approvazione del contenuto dall'autorizzazione a eseguire. In assenza di una regola essenziale, l'agente resta in modalità bozza o raccomandazione.
 - La governance riusa i marcatori `[C]`, `[S#]`, `[I]` e `[?]` del business context. Nessuna inferenza può agire come regola in un profilo approvato; fonti, conflitti, incognite, trigger di revisione, versione intera e changelog restano espliciti.
 - Il successo di `setup-marketing-system` richiede eval realistici senza scritture canoniche e un forward test indipendente che dimostri riuso, FYI, applicazione concreta delle regole, corretta composizione multi-brand e hard fail sui confini essenziali.
 - I percorsi canonici sono `.agents/marketing/foundations.md` per la base e `.agents/marketing/brands/<brand-slug>.md` per gli overlay. Un overlay contiene soltanto differenze esplicite, registra la versione della base verificata e non prevale silenziosamente in caso di conflitto.

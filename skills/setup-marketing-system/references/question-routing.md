@@ -1,105 +1,111 @@
-# Marketing Foundations question routing
+# Instradamento delle domande per i fondamenti di marketing
 
-Read this guide when a new or existing profile has several gaps, conflicts, or proposed rules and the agent must choose what deserves the marketing leader's attention. Do not run it as a fixed questionnaire.
+Leggi questa guida quando un profilo nuovo o esistente presenta più gap, conflitti o regole proposte e devi scegliere cosa richiede davvero l'attenzione del responsabile di marketing. Non usarla come questionario fisso.
 
-## Build a rule ledger privately
+## Costruisci privatamente un registro delle regole
 
-For each of the five areas, classify consequential items as:
+Per ciascuna delle cinque aree, classifica gli elementi rilevanti come:
 
-- supported by a supplied source;
-- confirmed by an authorized user;
-- inferred and awaiting confirmation;
-- conflicting across sources or with the business identity;
-- missing and not yet classified;
-- explicitly unavailable, not defined, unknown, or not applicable.
+- supportati da una fonte fornita;
+- confermati da un utente autorizzato;
+- inferiti e in attesa di conferma;
+- in conflitto tra fonti o con l'identità di business;
+- mancanti e non ancora classificati;
+- esplicitamente non disponibili, non definiti, sconosciuti al referente o non applicabili.
 
-Also classify whether the gap is blocking, material but non-blocking, or enrichment/task-specific. Do not expose a long ledger; use it to draft the first useful proposal and select questions.
+Classifica inoltre se il gap è bloccante, rilevante ma non bloccante, oppure specifico dell'attività. Non esporre un lungo registro: usalo per preparare la prima proposta utile e selezionare le domande.
 
-## Rank by consequence
+## Chiedi le fonti utili prima delle decisioni
 
-Ask at most three questions per batch. Prefer questions that:
+Quando una fonte esistente potrebbe cambiare una regola stabile, chiedi esplicitamente al manager di caricarla o citarla prima di trasformare il vuoto informativo in una domanda decisionale. Indica sempre perché è utile e lascia libera la scelta di proseguire senza il documento.
 
-1. prevent an unauthorized action, unsafe claim, privacy/compliance issue, or material identity conflict;
-2. clarify a high-use offer–audience–situation rule;
-3. determine whether an important claim is approved, supportable, conditional, or prohibited;
-4. establish a default channel role or quality rule that would change frequent work;
-5. classify a non-blocking gap so the profile can be approved honestly.
+Per gli standard editoriali, visivi e di qualità, chiedi in modo esplicito linee guida verbali, brand book, linee guida visuali, template o esempi approvati. Per messaggi e prove, chiedi messaggi approvati, claim sheet, casi, fonti delle credenziali o pagine autorizzate. Per i controlli, chiedi procedure di approvazione o policy esistenti. Non chiedere tutte le categorie se non incidono sul perimetro.
 
-Do not ask for a detail that is already supported unless confirmation resolves a real ambiguity. An explicit missing-information state is a valid answer; it does not make the underlying rule known.
+## Ordina per conseguenza
 
-## Shape the first useful response
+Poni al massimo tre domande per volta. Dai priorità alle domande che:
 
-Lead with a compact provisional proposal derived from the identity and marketing materials. Normally include:
+1. impediscono un'azione non autorizzata, un claim rischioso, un problema di privacy o compliance, oppure un conflitto rilevante con l'identità;
+2. chiariscono una regola molto usata su offerta, pubblico e situazione;
+3. stabiliscono se un claim importante è approvato, supportabile, condizionato o vietato;
+4. definiscono un ruolo di canale o una regola di qualità che cambierebbe attività frequenti;
+5. classificano un gap non bloccante affinché il profilo possa essere approvato in modo trasparente.
 
-- entity and scope being used;
-- strongest stable rules already supported across the five areas;
-- material conflicts, unsupported claims, or authority risks;
-- no more than three questions that could change approval readiness;
-- a compact source key.
+Non chiedere un dettaglio già supportato, salvo che la conferma risolva una vera ambiguità. Un'informazione mancante esplicitamente classificata è una risposta valida: non rende nota la regola sottostante.
 
-Do not mirror the full artifact template, show raw YAML/JSON, generate a wizard, or spend a turn only describing progress. Defer the complete profile to approval gate 1.
+## Dai forma alla prima risposta utile
 
-## Question lenses
+Inizia con una proposta provvisoria compatta ricavata dall'identità e dai materiali di marketing. In genere includi:
 
-The prompts below are examples for selection, not a sequence.
+- entità e perimetro utilizzati;
+- le regole stabili più solide nelle cinque aree;
+- conflitti rilevanti, claim non supportati o rischi di autorità;
+- non più di tre domande che potrebbero cambiare la preparazione all'approvazione;
+- una chiave compatta delle fonti.
 
-### Offer–Audience–Situation Fit
+Non riprodurre il template completo, non mostrare YAML o JSON grezzi, non generare un wizard e non dedicare un turno solo a descrivere i progressi. Rimanda il profilo completo al primo passaggio di approvazione.
 
-- For this offer, which documented audience and situation should agents treat as a valid fit?
-- Which conditions indicate poor fit or require qualification?
-- If the sources mention several audiences, is the relationship stable or only a current campaign choice?
+## Lenti per le domande
 
-Do not ask the manager to choose a new growth market or campaign segment.
+I prompt seguenti sono esempi da selezionare, non una sequenza.
 
-### Messaging, Claims & Evidence
+### Coerenza tra offerta, pubblico e situazione
 
-- Which of these source-backed messages are approved for routine use, and which need review?
-- What existing source supports this numerical or comparative claim, and where may it be used?
-- If evidence is insufficient, should agents use a weaker qualitative formulation or avoid the claim?
+- Per questa offerta, quale pubblico e quale situazione documentati devono essere considerati una corrispondenza valida?
+- Quali condizioni indicano un caso non adatto o richiedono una qualificazione?
+- Se le fonti citano più pubblici, la relazione è stabile o appartiene solo a una campagna attuale?
 
-Do not request a new study or evidence pack merely to finish onboarding.
+Non chiedere al manager di scegliere un nuovo mercato di crescita o un segmento di campagna.
 
-### Channel & Format Roles
+### Messaggi, claim ed evidenze
 
-- What stable job does this channel perform, if any, across marketing work?
-- Which audience, situation, or format is it generally suited or unsuited for?
-- Is the documented cadence a durable rule or only a current operating plan?
+- Quali messaggi supportati dalle fonti sono approvati per l'uso ordinario e quali richiedono revisione?
+- Quale fonte esistente supporta questo claim numerico o comparativo, e dove può essere usato?
+- Se l'evidenza non è sufficiente, l'agente deve usare una formulazione qualitativa più prudente o evitare il claim?
 
-Do not build a media plan, content calendar, or account configuration.
+Non richiedere un nuovo studio o un nuovo dossier di prove per completare la configurazione.
 
-### Editorial, Visual & Quality Standards
+### Ruolo di canali e formati
 
-- Which existing guideline, template, or representative output is authoritative?
-- Which minimum check must every output pass before it is ready for review?
-- Which common error or off-brand practice must agents avoid?
+- Quale funzione stabile svolge questo canale, se ne svolge una, nelle attività di marketing?
+- Per quale pubblico, situazione o formato è in genere adatto o inadatto?
+- La frequenza documentata è una regola durevole o solo un piano operativo attuale?
 
-Do not create a new identity or detailed style system under the guise of setup.
+Non costruire un media plan, un calendario editoriale o la configurazione di un account.
 
-### Controls, Authority & Approvals
+### Standard editoriali, visivi e di qualità
 
-- Which work may an agent complete autonomously, and which must remain a proposal?
-- Who may approve this kind of claim or output, and is that approval content-only or also execution authority?
-- Which legal, privacy, compliance, or brand review is triggered by this topic or action?
+- Quale linea guida, template o output rappresentativo esistente è autorevole?
+- Quale controllo minimo deve superare ogni output prima di essere pronto per la revisione?
+- Quale errore comune o pratica incoerente con il brand devono evitare gli agenti?
 
-If the route is absent, record `not defined`; do not appoint an owner.
+Non creare una nuova identità o un manuale di stile dettagliato con il pretesto della configurazione.
 
-## Proposing a missing stable rule
+### Controlli, autorità e approvazioni
 
-When a necessary rule is genuinely `not defined`, the skill may offer a concise recommendation or two meaningful alternatives. Label the basis as `[I]`, explain the consequence, and ask the authorized leader to approve, correct, or leave it unresolved. Never smuggle the recommendation into the approved profile as an existing practice.
+- Quale attività può completare autonomamente un agente e quale deve restare una proposta?
+- Chi può approvare questo tipo di claim o output, e l'approvazione riguarda solo il contenuto o anche l'esecuzione?
+- Quale revisione legale, di privacy, compliance o brand è attivata da questo tema o da questa azione?
 
-## Update mode
+Se il percorso non è disponibile, registra `non definito`; non nominare un responsabile per inferenza.
 
-For an approved profile, ask what materially changed, inspect the affected sources, and show the impacted rules and downstream consequences. Do not reopen all five areas unless the change creates a cross-cutting conflict. Preserve unaffected rules, source history, unresolved decisions, and prior changelog entries.
+## Proporre una regola stabile mancante
 
-## Check before approval
+Quando una regola necessaria è davvero `non definita`, la skill può proporre una raccomandazione concisa o due alternative significative. Indica la base come `[I]`, spiega la conseguenza e chiedi al responsabile autorizzato di approvarla, correggerla o lasciarla irrisolta. Non introdurre la raccomandazione nel profilo approvato come prassi esistente.
 
-Verify that:
+## Modalità di aggiornamento
 
-- every area has supported rules or an explicit gap state;
-- temporary priorities have not become stable foundations;
-- evidence usage is narrower than or equal to what the sources support;
-- content approval is not confused with execution authority;
-- no inferred rule is active;
-- no blocking conflict remains;
-- every non-blocking gap has a cautious fallback;
-- the complete draft references rather than duplicates business identity and external guidelines.
+Per un profilo approvato, chiedi cosa è cambiato in modo rilevante, esamina le fonti interessate e mostra regole coinvolte e conseguenze a valle. Non riaprire tutte e cinque le aree salvo che il cambiamento crei un conflitto trasversale. Conserva le regole non interessate, la cronologia delle fonti, le decisioni aperte e le voci precedenti del registro modifiche.
+
+## Verifica prima dell'approvazione
+
+Verifica che:
+
+- ogni area abbia regole supportate o uno stato di gap esplicito;
+- priorità temporanee non siano diventate fondamenti stabili;
+- l'uso delle evidenze sia uguale o più ristretto di quanto le fonti supportano;
+- l'approvazione del contenuto non sia confusa con l'autorizzazione all'esecuzione;
+- nessuna regola inferita sia attiva;
+- non resti alcun conflitto bloccante;
+- ogni gap non bloccante abbia un comportamento prudente;
+- il profilo completo faccia riferimento, senza duplicarli, all'identità di business e alle linee guida esterne.

@@ -2,7 +2,7 @@
 name: setup-marketing-system
 description: "Build, update, and install source-aware Marketing Foundations: the stable marketing rules AI agents should apply before company-specific marketing work. Use when a marketing leader wants to define or maintain durable rules for offer-audience fit, messaging and evidence, channel roles, quality standards, and approvals. Do not use to answer generic marketing questions, define time-bound strategy, complete campaigns, configure tools, or produce assets."
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Setup Marketing System
@@ -21,7 +21,7 @@ Identify the entity in plain language and inspect the canonical business identit
 
 The identity must be approved, readable, and coherent with the requested scope. Reference its path and version; never copy its identity facts into Marketing Foundations.
 
-If the identity is missing or materially stale and `setup-business-context` is available, use it within the same conversation to create or update the minimum usable context. Reuse sources and answers already supplied, preserve its approval gates, then resume this setup without asking the manager to restart another workflow.
+If the identity is missing or materially stale and `setup-business-context` is available, use it within the same conversation to create or update the minimum usable context. That workflow first examines the sources already available and then asks the manager only for the missing identity information that matters. Reuse sources and answers already supplied, preserve its approval gates, then resume this setup without asking the manager to restart another workflow.
 
 If that dependency is unavailable, explain why it is required and offer acquisition only from a verified source and version. Obtain separate approvals before download and installation, and verify the package between them. Never invent a download URL or reproduce the missing skill's identity-building logic. Without an approved identity, continue only with a provisional marketing draft and do not call it canonical or usable.
 
@@ -36,6 +36,14 @@ For a child brand, read in order: parent company identity, child brand identity,
 
 When creating a new artifact, restructuring an incomplete one, or checking approval readiness, read [the Marketing Foundations template](references/marketing-foundations-template.md).
 
+## Language and guided source collection
+
+Write the interaction and canonical artifact in the manager's working language. For Italian, use Italian for all labels, states, headings, and explanations. Preserve English only for established marketing or business terms that the manager would normally recognize, such as `branded content`, `claim`, `brief`, or `case study`. Never present generic system states in English when a natural Italian equivalent exists.
+
+After the identity is readable, identify the existing materials that could materially change the five rule areas. If they have not been supplied or cited, explicitly invite the manager to upload or cite the most relevant available materials. Name the category and why it is useful, rather than asking generically for “more information”. In particular, ask for verbal/editorial guidelines or representative approved outputs when they would clarify voice and quality, and for visual guidelines, brand books, templates, or approved examples when visual standards are in scope.
+
+Also invite, when relevant, approved messaging, claim sheets, proof sources, channel guidance, and approval policies. State that the manager may continue without any unavailable document: record the resulting gap precisely and apply a cautious fallback. Do not ask for materials that would not affect a stable rule, request a new evidence pack, or turn source collection into a generic workshop.
+
 ## Start from real marketing work
 
 1. Inspect the canonical identity, any existing Marketing Foundations or relevant brand overlay, and applicable instruction files read-only.
@@ -44,11 +52,11 @@ When creating a new artifact, restructuring an incomplete one, or checking appro
 4. Reuse identity facts by reference. Extract only stable marketing decisions that should apply across activities and time.
 5. If an approved profile exists, summarize its entity, version, concrete freshness risks, and affected rules; update only what materially changed instead of repeating onboarding.
 
-Do not turn absence from supplied sources into “does not exist.” Classify consequential gaps as `not established from supplied sources`, `exists but unavailable`, `not defined`, `unknown to user`, or `not applicable`.
+Do not turn absence from supplied sources into “does not exist.” In Italian artifacts, classify consequential gaps only as `non stabilito dalle fonti fornite`, `esiste ma non è disponibile`, `non definito`, `sconosciuto al referente`, or `non applicabile`. In another working language, use a consistent natural equivalent.
 
 ## Deliver value before interviewing
 
-Once entity and readable materials are available, the next substantive response must provide either a compact provisional rules proposal or a concrete reading blocker. Organize the proposal into a few manager-friendly groups, show the most consequential basis and conflicts, and ask no more than three decisive questions.
+Once entity and readable materials are available, the next substantive response must provide either a compact provisional rules proposal or a concrete reading blocker. Organize the proposal into a few manager-friendly groups, show the most consequential basis and conflicts, and ask no more than three decisive questions. If the material request above is needed, make it the first useful response rather than silently drafting around an avoidable gap.
 
 For a new or materially incomplete profile, or whenever several gaps compete for attention, read [the question-routing guide](references/question-routing.md) before selecting questions. It is a prioritization guide, not a questionnaire.
 
@@ -93,7 +101,7 @@ Before creating or materially updating a canonical artifact, show the manager:
 
 Request explicit approval from an authorized owner. Until then, call the result a draft and do not write the canonical path.
 
-After approval, save `v1` with status `approved` and the current review date. Increment the integer version for a substantive change, preserve it for a typo-only correction, and prepend a concise changelog entry. If the workspace is not writable, return the approved artifact and intended path without claiming it was saved.
+After approval, save `v1` with status `approvato` and the current review date in an Italian artifact. Increment the integer version for a substantive change, preserve it for a typo-only correction, and prepend a concise changelog entry. If the workspace is not writable, return the approved artifact and intended path without claiming it was saved.
 
 ## Approval gate 2: install for agents
 
@@ -103,12 +111,18 @@ If installation is declined, keep the approved artifact and explain that it must
 
 ## Make downstream use visible
 
-Every substantive response that performs or advances company-specific marketing work must include one compact FYI naming the entity and versions actually read, for example:
+Every substantive response that performs or advances company-specific marketing work must include one compact FYI naming the entity and versions actually read, in the manager's working language. For example, in Italian:
 
-> FYI — Applied context: Acme Company Identity v2 + Marketing Foundations v1 + Brand X overlay v1.
+> Nota operativa: contesto applicato, Identità Acme v2 + Fondamenti di marketing v1 + integrazione Brand X v1.
 
 Do not list paths or source details unless useful or requested. If any required artifact is missing, unreadable, unapproved, incoherent, or materially stale, replace the FYI with an actionable warning and do not pretend the profile was applied.
 
 ## Finish clearly
 
-Report entity, artifact path and version, linked identity path/version, sources incorporated, unresolved non-blocking gaps, and instruction hosts configured—if any. Distinguish what was authored, saved, configured, and observed at runtime. The profile is shared context, not permission to perform downstream work.
+Report entity, artifact path and version, linked identity path/version, sources incorporated, unresolved non-blocking gaps, and instruction hosts configured, if any. Distinguish what was authored, saved, configured, and observed at runtime. The profile is shared context, not permission to perform downstream work.
+
+## Skill versioning
+
+- Keep `metadata.version` current whenever the skill's behavior, user-facing workflow, or instructions change.
+- Use Semantic Versioning: increment the patch for compatible clarity fixes, the minor for compatible new capabilities, and the major for incompatible workflow or contract changes.
+- For a substantive change, update the repository documentation and release materials that describe the skill's current behavior. Do not claim a stable release before validation and publication have completed.

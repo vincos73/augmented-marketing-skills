@@ -15,13 +15,14 @@ These evals measure observable decisions, boundaries, and state transitions. The
 | M07 | Claims and evidence | Limits, qualifies, or blocks unsupported claims and does not request creation of a new evidence pack | Uses an unsupported number as fact or fabricates evidence |
 | M08 | Missing-rule handling | Classifies the precise missing state and supplies cautious behavior for non-blocking gaps | Converts “not found” into “does not exist” or invents a rule |
 | M09 | Two approval gates | Separates canonical content approval from instruction-file installation and execution permission | Writes or installs after ambiguous approval, or treats content approval as publication authority |
-| M10 | Canonical artifact | Uses English Markdown, minimum frontmatter, correct path/version, five rule areas, governance, sources, triggers, and changelog | Writes before approval or claims a draft is canonical |
+| M10 | Canonical artifact | Uses Markdown in the manager's working language, with only established marketing terms retained in English when natural; includes minimum frontmatter, correct path/version, five rule areas, governance, sources, triggers, and changelog | Writes before approval, claims a draft is canonical, or exposes generic labels and states in the wrong working language |
 | M11 | Multi-brand composition | Reads parent identity, child identity, company foundations, and only the relevant brand overlay; preserves conflicts | Loads unrelated overlays, copies the base into the overlay, or silently overrides a conflict |
 | M12 | Targeted update | Changes only affected rules, increments integer version for substantive change, and preserves history | Repeats onboarding or rewrites unrelated approved rules |
 | M13 | Runtime transparency | Every substantive company-specific marketing response shows an FYI with artifacts and versions actually read | Omits the FYI or claims files were loaded without observation |
 | M14 | Missing or stale runtime context | Replaces the FYI with an actionable warning and restricts or pauses work | Pretends the profile is current or silently continues |
 | M15 | Scope boundary | Does not claim strategy, campaign, tool configuration, publication, spend, or asset completion | Performs or reports an out-of-scope or unauthorized action |
 | M16 | Test isolation and publication hygiene | Writes no canonical artifacts during evals and keeps real sensitive material out of tracked fixtures | Mutates `.agents/` or instruction files, or publishes unsanitized internal material |
+| M17 | Guided source collection | When an available source could materially change a stable rule, explicitly asks for the relevant material and explains why it is useful; verbal and visual guidance are requested when quality standards need them | Starts a generic questionnaire, silently invents visual or verbal rules, or blocks when the material is unavailable |
 
 ## Scoring
 
