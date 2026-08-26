@@ -2,7 +2,7 @@
 name: setup-business-context
 description: "Build, update, and install a source-aware identity context for a company or brand. Use when managers want AI agents to understand a business before company-related work, when onboarding a new company or brand workspace, or when existing business context is missing or stale. Do not use to create strategy, campaigns, brand identity, or tool configuration."
 metadata:
-  version: "0.6.0"
+  version: "0.6.1"
 ---
 
 # Setup Business Context
@@ -57,6 +57,8 @@ Treat freshness as evidence-based, not as an arbitrary expiration interval. A re
 
 Chat is the primary interface. Do not invoke an inline visualization or browser, generate a wizard, or interpose a UI state transfer automatically. The presence of a supported visual surface is not sufficient reason to use it.
 
+Accompagna il manager con un tono umano e orientato al passo successivo. All'inizio di una nuova attivazione, apri con una frase breve che spieghi cosa succederà, per esempio: `Bene, partiamo dalla carta d'identità del brand. Useremo i materiali che mi dai, ti mostrerò una prima sintesi e poi decideremo insieme cosa confermare, cosa lasciare aperto e se installarla per il tuo agente.` Non iniziare con un resoconto tecnico del workflow o con nomi di file.
+
 Treat onboarding as four macro phases, not four fixed questions:
 
 1. establish the entity and collect the user's sources;
@@ -76,7 +78,7 @@ Keep the transitions compact:
 - present provisional understanding, corrections, the complete draft, and both approval gates directly in chat;
 - echo captured answers briefly and never ask the manager to repeat information already supplied.
 
-Write every manager-facing passage as natural conversation, not as a projection of the artifact schema. Translate internal concepts into familiar language: for example, use `per chi l'offerta è particolarmente adatta` instead of `caratteristiche dell'adeguatezza migliore`, and `per chi potrebbe non essere adatta` instead of `non adatto o deliberatamente non servito`. Avoid abstract labels and phrases built around `adeguatezza`, `non adeguatezza`, or `idoneità`; describe the concrete customer or situation instead. Do not expose raw HTML entities such as `&#x20;`, serialized values, field names, or transport encoding. If source text contains encoded characters, normalize them for display without changing the underlying meaning.
+Write every manager-facing passage as natural conversation, not as a projection of the artifact schema. Accompagna ogni transizione con una frase che dica in modo semplice dove siamo e quale scelta segue. Translate internal concepts into familiar language: for example, use `per chi l'offerta è particolarmente adatta` instead of `caratteristiche dell'adeguatezza migliore`, and `per chi potrebbe non essere adatta` instead of `non adatto o deliberatamente non servito`. Avoid abstract labels and phrases built around `adeguatezza`, `non adeguatezza`, or `idoneità`; describe the concrete customer or situation instead. Do not expose raw HTML entities such as `&#x20;`, serialized values, field names, or transport encoding. If source text contains encoded characters, normalize them for display without changing the underlying meaning.
 
 If the user explicitly asks for a visual, it may be offered only as a one-shot review after the source analysis is ready. Do not use it to collect required input, transport state, capture approval, or create a continuous multi-turn wizard. Continue all consequential choices and approvals in chat.
 
@@ -168,8 +170,11 @@ After approval:
 - for a substantive update, increment the integer version, update `Ultima revisione`, and prepend a concise changelog entry explaining what changed and why;
 - for a typo-only correction, preserve the version and changelog;
 - preserve prior changelog entries and unresolved items.
+- confirm the result in plain language, naming the path only as useful context; do not make the manager decode an implementation status.
 
 If the workspace is not writable, return the complete approved artifact and state the intended path without claiming it was installed.
+
+When the identity has been saved but has not been installed for an agent, say so as two distinct actions and offer the next choice conversationally. For example: `Bene, ho salvato l'identità che hai approvato. Non l'ho ancora installata per il tuo agente: per farla leggere e utilizzare dobbiamo aggiungere un riferimento alle istruzioni del workspace. Lo facciamo ora o preferisci farlo dopo?` Never say that the identity is both saved and not saved, and never imply installation or runtime loading unless it was actually observed.
 
 ## Gate 2: installazione per gli agenti
 
@@ -199,5 +204,11 @@ Report:
 - instruction hosts configured, if any, and whether runtime loading was verified;
 - downstream reference to use: entity, canonical path, version, and last review date;
 - unresolved gaps that could materially affect future work.
+
+## Versioning della skill
+
+- Mantieni sempre aggiornato `metadata.version` in questo file quando cambi il comportamento o le istruzioni della skill.
+- Usa Semantic Versioning: incrementa la patch per correzioni di tono, chiarezza o comportamento compatibile; la minor per nuove capacità compatibili; la major per cambiamenti incompatibili del workflow o dei contratti.
+- Per ogni modifica sostanziale aggiorna anche il changelog dell'artefatto interessato quando il cambiamento riguarda un'identità già esistente; non lasciare la versione della skill invariata dopo una modifica alle sue istruzioni.
 
 The identity is shared context, not permission to perform downstream work. If a later task supplies a fact that conflicts with the approved identity, surface the conflict and offer a targeted update rather than silently rewriting history.

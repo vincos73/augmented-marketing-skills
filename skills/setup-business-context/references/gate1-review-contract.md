@@ -17,6 +17,8 @@ Non trasformare il gate in un inventario di campi vuoti. Il template dell'identi
 ## Linguaggio rivolto al manager
 
 - Usa etichette quotidiane e frasi comprensibili senza conoscere il modello dati.
+- Apri la conversazione con una frase breve e rassicurante che spieghi cosa succederà: prima si raccolgono e si leggono le fonti, poi si rivede insieme una sintesi e infine si decide se approvare e installare l'identità.
+- Accompagna ogni passaggio con una frase di orientamento e chiudi con una scelta concreta, invece di lasciare un resoconto impersonale dello stato del sistema.
 - Preferisci `Per chi l'offerta è particolarmente adatta` e `Per chi potrebbe non essere adatta` a formule come `adeguatezza migliore` o `deliberatamente non servito`.
 - Evita anche espressioni astratte come `adeguatezza universale`, `confini di non adeguatezza` o `idoneità del cliente`: descrivi direttamente le situazioni in cui il servizio funziona bene o potrebbe non essere adatto.
 - Spiega ogni stato prima in linguaggio naturale. Nel documento puoi poi conservarne il valore canonico, per esempio `non stabilito dalle fonti fornite`.
@@ -32,7 +34,7 @@ Quando restano lacune materiali ma non indispensabili, presentane al massimo tre
 
 Una chiusura possibile è:
 
-> Puoi approvare questa identità mantenendo aperti questi aspetti, oppure indicarmi quale vuoi approfondire prima dell'approvazione.
+> Bene, la bozza è pronta. Puoi approvarla così, mantenendo aperti questi aspetti, oppure indicarmi quale vuoi approfondire prima dell'approvazione.
 
 Non far sembrare obbligatorio l'approfondimento. Se il manager lo sceglie, poni al massimo tre domande nel turno successivo. Per missione, posizionamento, promessa o differenziazione, raccogli soltanto decisioni già esistenti o classifica correttamente l'assenza; la loro creazione appartiene a un altro lavoro.
 
@@ -46,3 +48,4 @@ Se non restano lacune materiali non bloccanti, chiedi direttamente l'approvazion
 - Il testo non ricade su sostantivi astratti come `adeguatezza`, `non adeguatezza` o `idoneità` per descrivere i clienti.
 - Nessun carattere codificato o dettaglio di implementazione è visibile.
 - L'approvazione dell'identità resta separata dall'installazione per gli agenti.
+- Dopo il salvataggio, la chat distingue chiaramente tra `identità salvata` e `identità installata per l'agente`, e propone esplicitamente di procedere ora o dopo.
