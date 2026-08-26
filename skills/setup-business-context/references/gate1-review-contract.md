@@ -19,6 +19,7 @@ Non trasformare il gate in un inventario di campi vuoti. Il template dell'identi
 - Usa etichette quotidiane e frasi comprensibili senza conoscere il modello dati.
 - Apri la conversazione con una frase breve e rassicurante che spieghi cosa succederà: prima si raccolgono e si leggono le fonti, poi si rivede insieme una sintesi e infine si decide se approvare e installare l'identità.
 - Accompagna ogni passaggio con una frase di orientamento e chiudi con una scelta concreta, invece di lasciare un resoconto impersonale dello stato del sistema.
+- Quando compaiono i marcatori di provenienza, ricordane brevemente il significato: `[C]` è confermato dall'utente o da uno stakeholder autorizzato; `[S1]` è documentato nella prima fonte elencata.
 - Preferisci `Per chi l'offerta è particolarmente adatta` e `Per chi potrebbe non essere adatta` a formule come `adeguatezza migliore` o `deliberatamente non servito`.
 - Evita anche espressioni astratte come `adeguatezza universale`, `confini di non adeguatezza` o `idoneità del cliente`: descrivi direttamente le situazioni in cui il servizio funziona bene o potrebbe non essere adatto.
 - Spiega ogni stato prima in linguaggio naturale. Nel documento puoi poi conservarne il valore canonico, per esempio `non stabilito dalle fonti fornite`.

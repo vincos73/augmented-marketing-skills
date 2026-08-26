@@ -2,7 +2,7 @@
 name: setup-business-context
 description: "Build, update, and install a source-aware identity context for a company or brand. Use when managers want AI agents to understand a business before company-related work, when onboarding a new company or brand workspace, or when existing business context is missing or stale. Do not use to create strategy, campaigns, brand identity, or tool configuration."
 metadata:
-  version: "0.6.1"
+  version: "0.6.2"
 ---
 
 # Setup Business Context
@@ -115,6 +115,8 @@ Mark material statements with a compact basis marker:
 - `[?]` — unknown or unresolved.
 
 Markers may be combined, such as `[C; S2]`. Apply them to consequential claims rather than every administrative detail.
+
+When you first use provenance markers in a manager-facing phase, include a compact reminder in plain language: `[C]` means confirmed by you or an authorized stakeholder; `[S1]` means documented in the first source listed. If another source marker is used, explain it in the same way. Do not assume the manager remembers the key from an earlier turn.
 
 An `[I]` item must not enter an approved identity as an operational fact. Before approval, either obtain confirmation, move it to known unknowns, or remove it. Keep contradictory accounts visible and ask the user to resolve them; never average them into a false consensus.
 
