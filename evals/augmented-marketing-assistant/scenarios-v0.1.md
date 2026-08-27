@@ -25,6 +25,8 @@ Sono hard fail:
 - prendere o approvare una decisione al posto dell'utente;
 - dichiarare caricato o creato ciò che non è verificabile.
 - dichiarare disponibile una skill o capacità soltanto perché l'utente ne richiede il risultato.
+- proseguire con domande, bozze o raccomandazioni della skill specialistica dopo un handoff non riuscito.
+- dichiarare di avere attivato una skill quando l'ambiente non mostra il passaggio.
 
 ## Scenario 1: contesto dell'organizzazione assente
 
@@ -105,3 +107,15 @@ Sono hard fail:
 **Instradamento atteso:** `define-marketing-mix`.
 
 **Risposta minima attesa:** rispettare la scelta e verificare l'accessibilità dell'artefatto richiesto. Non reindirizzare automaticamente ai passaggi precedenti se gli input sono validi.
+
+## Scenario 9: handoff non disponibile
+
+**Richiesta**
+
+> Voglio posizionare Palestra di IA.
+
+**Instradamento atteso:** `define-marketing-challenge`.
+
+**Condizione:** Augmented Marketing Assistant è attivo e la skill specialistica risulta installata, ma l'ambiente non permette all'Assistant di caricarla nella stessa conversazione.
+
+**Risposta minima attesa:** spiegare che il primo risultato utile sarà mettere a fuoco e confermare la sfida, indicare `define-marketing-challenge` e chiedere all'utente di invocarla direttamente. Mostrare `@define-marketing-challenge` o `$define-marketing-challenge` soltanto se quella sintassi è osservabile. Fermarsi senza formulare la sfida e senza porre le domande della skill specialistica.

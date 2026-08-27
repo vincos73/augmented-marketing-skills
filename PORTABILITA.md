@@ -1,6 +1,6 @@
 ---
 artifact: portability-contract
-version: 2
+version: 3
 status: approvato
 last_reviewed: 2026-08-27
 scope: "Contratto minimo di portabilità per skill installabili di Augmented Marketing Suite"
@@ -82,9 +82,11 @@ Le istruzioni essenziali devono restare nella cartella distribuibile della singo
 
 ### Adattatore OpenAI osservato
 
-Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Per ChatGPT e Codex, la beta.3 distribuisce Augmented Marketing Suite (`augmented-marketing-suite`) con un manifesto `.codex-plugin/plugin.json` e presenta Augmented Marketing Assistant come skill tecnica di coordinamento (`augmented-marketing-assistant`). Questa forma non cambia il ruolo dell'Assistant: continua a orientare, mentre le cinque skill specialistiche possiedono metodo, artefatti e approvazioni.
+Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Per ChatGPT e Codex, la beta.4 distribuisce Augmented Marketing Suite (`augmented-marketing-suite`) con un manifesto `.codex-plugin/plugin.json` e presenta Augmented Marketing Assistant come skill tecnica di orientamento (`augmented-marketing-assistant`). Questa forma non cambia il ruolo dell'Assistant: continua a orientare, mentre le cinque skill specialistiche possiedono metodo, artefatti e approvazioni.
 
-L'adattatore OpenAI non introduce MCP, connector o nuove capacità di marketing. La sua installazione e il suo caricamento devono essere verificati in una nuova chat o sessione.
+Un test su ChatGPT Web ha mostrato che una skill già attiva può individuare una skill specialistica senza riuscire a caricarla nella stessa conversazione. L'adattatore non deve quindi presumere un handoff tra skill. Quando il passaggio non è disponibile, indica il nome tecnico esatto da invocare e si ferma senza simulare il workflow specialistico.
+
+L'adattatore OpenAI non introduce MCP, connector o nuove capacità di marketing. La sua installazione e il suo caricamento devono essere verificati in una nuova chat o sessione. I titoli visibili delle skill coincidono con i nomi tecnici inglesi, mentre le descrizioni restano in italiano.
 
 ## Verifica minima
 
@@ -109,5 +111,6 @@ La verifica strutturale dimostra la validità del pacchetto, non la portabilità
 
 ## Registro modifiche
 
+- v3, 2026-08-27: aggiunto il fallback esplicito dopo il limite di handoff osservato su ChatGPT Web e allineati i titoli visibili ai nomi tecnici delle skill.
 - v2, 2026-08-27: documentato l'adattatore OpenAI dopo il fallimento osservato del bundle neutro su ChatGPT Web.
 - v1, 2026-08-27: definito il contratto minimo indipendente dalla piattaforma.

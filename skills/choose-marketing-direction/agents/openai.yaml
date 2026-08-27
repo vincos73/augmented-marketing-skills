@@ -1,4 +1,4 @@
 interface:
-  display_name: "Scegli la direzione di marketing"
+  display_name: "choose-marketing-direction"
   short_description: "Diagnostica e confronta direzioni strategiche"
   default_prompt: "Usa $choose-marketing-direction per diagnosticare questa sfida, sottoporre a stress test direzioni plausibili e preparare una scelta strategica approvabile."

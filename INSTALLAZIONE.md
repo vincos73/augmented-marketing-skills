@@ -1,6 +1,6 @@
 # Installazione di Augmented Marketing Suite
 
-La beta 0.1.0-beta.3 è un plugin OpenAI per ChatGPT e Codex. Riunisce le cinque skill disponibili e Augmented Marketing Assistant, l'ingresso conversazionale che orienta verso la skill pertinente.
+La beta 0.1.0-beta.4 è un plugin OpenAI per ChatGPT e Codex. Riunisce le cinque skill disponibili e Augmented Marketing Assistant, l'ingresso conversazionale che orienta verso la skill pertinente.
 
 Non include MCP, connector, hook o automazioni.
 
@@ -18,8 +18,8 @@ skills/define-marketing-mix/
 
 | Componente | Versione |
 | --- | --- |
-| Plugin Augmented Marketing Suite (`augmented-marketing-suite`) | 0.1.0-beta.3 |
-| Augmented Marketing Assistant (`augmented-marketing-assistant`) | 0.1.0-beta.3 |
+| Plugin Augmented Marketing Suite (`augmented-marketing-suite`) | 0.1.0-beta.4 |
+| Augmented Marketing Assistant (`augmented-marketing-assistant`) | 0.1.0-beta.4 |
 | Setup Business Context (`setup-business-context`) | 0.6.2 |
 | Setup Marketing System (`setup-marketing-system`) | 0.2.1 |
 | Define Marketing Challenge (`define-marketing-challenge`) | 0.1.1 |
@@ -34,15 +34,17 @@ Finché questa beta non è presente nel catalogo Plugin generale, installala com
 
 Se hai già installato la beta.2 come Augmented Marketing Assistant, rimuovi quel plugin prima di installare la Suite. Il nuovo identificatore tecnico farebbe altrimenti comparire due plugin distinti.
 
+Se hai installato Augmented Marketing Suite beta.3, aggiorna o reinstalla lo stesso plugin con il pacchetto beta.4, poi apri una nuova chat per evitare di riusare skill già caricate nella sessione precedente.
+
 1. apri una nuova chat in modalità Work;
 2. richiama Plugin Creator (`@plugin-creator`);
-3. allega lo ZIP della beta.3;
+3. allega lo ZIP della beta.4;
 4. usa la richiesta seguente;
 5. al termine, apri il catalogo Plugin e verifica la sezione personale o “Created by me”;
 6. installa il plugin e avvia una nuova chat.
 
 ````text
-Crea un plugin personale dal pacchetto allegato Augmented Marketing Suite 0.1.0-beta.3.
+Crea un plugin personale dal pacchetto allegato Augmented Marketing Suite 0.1.0-beta.4.
 
 Verifica che la radice contenga .codex-plugin/plugin.json e che il manifesto dichiari skills/ come directory delle skill. Non aggiungere MCP, connector, hook o altri componenti.
 
@@ -57,21 +59,24 @@ Il pacchetto usa lo stesso manifesto OpenAI. Aggiungilo attraverso un marketplac
 
 ## Come iniziare
 
-In ChatGPT puoi richiamare esplicitamente l'adattatore con una menzione `@` e il nome Augmented Marketing Assistant. In Codex puoi richiamarlo con `$augmented-marketing-assistant`.
-
-Puoi anche descrivere direttamente il bisogno, per esempio:
+Descrivi direttamente il bisogno, per esempio:
 
 > Vorrei che l'agente conoscesse bene la mia organizzazione prima di aiutarmi con il marketing.
 
-L'Assistant deve spiegare prima il passaggio utile in linguaggio comune e indicare poi tra parentesi il nome tecnico della skill pertinente.
+Quando la richiesta corrisponde chiaramente a una skill specialistica, l'ambiente dovrebbe selezionarla direttamente. Usa Augmented Marketing Assistant soltanto quando non sai da quale passaggio iniziare: in ChatGPT puoi richiamarlo con `@Augmented Marketing Assistant`, in Codex con `$augmented-marketing-assistant`.
+
+L'Assistant spiega prima il passaggio utile in linguaggio comune e indica poi tra parentesi il nome tecnico della skill pertinente. Se l'ambiente non gli permette di attivarla, ti chiede di invocarla direttamente e si ferma senza simularne il lavoro.
+
+Nel catalogo, le skill sono mostrate con il titolo tecnico inglese, per esempio `setup-business-context`, e con una breve descrizione italiana. Nome della cartella, titolo visibile e nome da invocare restano così allineati.
 
 ## Verifica della beta
 
-La beta.3 può essere validata strutturalmente e installata come plugin OpenAI. Restano da verificare con test separati:
+La beta.4 può essere validata strutturalmente e installata come plugin OpenAI. Restano da verificare con test separati:
 
 - l'installazione effettiva nell'account ChatGPT dell'utente;
 - il caricamento delle sei skill in una nuova chat;
-- l'handoff completo dall'Assistant alla skill pertinente;
+- la selezione diretta della skill pertinente a partire dalla richiesta;
+- il fallback dell'Assistant quando l'handoff non è disponibile;
 - la comprensibilità presso marketer esterni;
 - gli adattatori per piattaforme diverse da OpenAI.
 

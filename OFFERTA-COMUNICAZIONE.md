@@ -45,7 +45,7 @@ Augmented Marketing Suite nasce per intervenire prima e durante la produzione, r
 
 Il progetto non è un agente generalista che promette di fare il lavoro di un CMO. Non è neppure un catalogo di generatori organizzati per canale. Ogni skill possiede una decisione, un artefatto e un confine riconoscibili.
 
-**Augmented Marketing Assistant** è l'ingresso conversazionale al framework: comprende il bisogno espresso nel linguaggio dell'utente, spiega il passaggio utile e attiva la skill pertinente. Non aggiunge una competenza di marketing e non prende decisioni al posto delle skill o del responsabile.
+**Augmented Marketing Assistant** è l'ingresso conversazionale per chi non sa da quale passaggio iniziare: comprende il bisogno espresso nel linguaggio dell'utente, spiega il passaggio utile e attiva la skill pertinente quando l'ambiente lo consente. Se il passaggio non è disponibile, indica quale skill invocare e si ferma. Non aggiunge una competenza di marketing e non prende decisioni al posto delle skill o del responsabile.
 
 ## Offerta in una frase
 
@@ -120,7 +120,7 @@ La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è 
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Suite | Beta 0.1.0-beta.3 con plugin OpenAI, cinque skill stabili e Assistant; installazione nell'account ChatGPT e comportamento multipiattaforma ancora da verificare separatamente |
+| Augmented Marketing Suite | Beta 0.1.0-beta.4 con plugin OpenAI, cinque skill stabili e Assistant; fallback di handoff definito dopo un test reale su ChatGPT Web, comportamento multipiattaforma ancora da verificare separatamente |
 | Augmented Marketing Assistant | Ingresso conversazionale incluso nella Suite come adattatore tecnico (`augmented-marketing-assistant`) |
 | Business Identity | Skill approvata; verificare nel README la versione sorgente e quella pubblicata |
 | Marketing Foundations | Skill approvata e disponibile come release stabile |
@@ -333,6 +333,7 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 
 ## Registro modifiche
 
+- v6, 2026-08-27: ristretto l'Assistant all'orientamento, aggiunto il fallback esplicito quando l'handoff non è disponibile e allineati i titoli visibili ai nomi tecnici inglesi.
 - v5, 2026-08-27: adottato Augmented Marketing Suite come nome del prodotto e del plugin, mantenendo Augmented Marketing Assistant come ingresso conversazionale.
 - v4, 2026-08-27: aggiunto il plugin OpenAI beta.2 e distinto il suo adattatore tecnico dal ruolo dell'Assistant.
 - v3, 2026-08-27: introdotto Augmented Marketing Assistant come ingresso conversazionale e promosso alla beta, separandolo dalla logica delle skill.

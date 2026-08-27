@@ -1,5 +1,5 @@
 interface:
-  display_name: "Configura le basi di marketing"
+  display_name: "setup-marketing-system"
   short_description: "Definisci regole di marketing stabili per gli agenti"
   brand_color: "#072743"
   default_prompt: "Usa $setup-marketing-system per creare o aggiornare le basi di marketing dell'organizzazione, partendo dal contesto identitario e dalle fonti disponibili."

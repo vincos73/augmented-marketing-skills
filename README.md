@@ -43,11 +43,11 @@ Ogni skill produce un artefatto che può essere rivisto, corretto, approvato e u
 
 ## Un ingresso semplice
 
-[`Augmented Marketing Assistant`](agents/augmented-marketing-assistant.md) è l'ingresso conversazionale incluso nella Suite. Riceve il bisogno nel linguaggio dell'utente, spiega il passaggio utile e attiva la skill pertinente senza chiedere di conoscere in anticipo l'architettura del framework.
+[`Augmented Marketing Assistant`](agents/augmented-marketing-assistant.md) è l'ingresso conversazionale incluso nella Suite per chi non sa da quale passaggio iniziare. Riceve il bisogno nel linguaggio dell'utente, spiega il passaggio utile e attiva la skill pertinente quando l'ambiente lo consente. Se non può effettuare il passaggio, indica all'utente quale skill invocare direttamente e si ferma.
 
 L'Assistant non sostituisce né duplica le skill: non formula la sfida, non sceglie la direzione e non definisce il marketing mix. Mantiene la continuità della conversazione mentre ogni skill conserva metodo, artefatto e gate di approvazione propri.
 
-La versione corrente è la beta 0.1.0-beta.3, accompagnata da [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md) e da un [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md). La beta.3 adotta Augmented Marketing Suite come nome del prodotto e del plugin, mantenendo Augmented Marketing Assistant come ingresso conversazionale. Non è ancora stata validata con un pilot di marketer esterni o verificata in modo completo su più piattaforme.
+La versione corrente è la beta 0.1.0-beta.4, accompagnata da [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md), da un [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md) e da un test reale su ChatGPT Web che ha mostrato il limite dell'handoff tra skill. La beta.4 mantiene Augmented Marketing Assistant come ingresso di orientamento, introduce un fallback esplicito quando l'ambiente non consente il passaggio e uniforma i titoli visibili ai nomi tecnici inglesi delle skill. Non è ancora stata validata con un pilot di marketer esterni o verificata in modo completo su più piattaforme.
 
 ## Le skill disponibili
 
@@ -97,11 +97,11 @@ Puoi installare il plugin completo per ChatGPT e Codex oppure scegliere soltanto
 
 ### 1. Plugin completo per ChatGPT e Codex
 
-Scarica la [release beta.3 di Augmented Marketing Suite](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.3) e segui [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
+Scarica la [release beta.4 di Augmented Marketing Suite](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.4) e segui [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
 
 Il plugin Augmented Marketing Suite (`augmented-marketing-suite`) contiene le cinque skill stabili e un adattatore tecnico (`augmented-marketing-assistant`) che rende l'Assistant caricabile su OpenAI senza duplicare il metodo delle skill specialistiche. Non include MCP, connector o automazioni.
 
-Dopo l'installazione, apri una nuova chat e richiama l'Assistant con una menzione `@`, oppure descrivi direttamente il bisogno.
+Dopo l'installazione, apri una nuova chat e descrivi direttamente il bisogno. ChatGPT può selezionare la skill specialistica in base alla richiesta. Richiama Augmented Marketing Assistant soltanto se non sai da quale passaggio iniziare; se l'ambiente non permette l'handoff, l'Assistant ti indicherà la skill da invocare direttamente.
 
 ### 2. Chiedi al tuo agente di installare una singola skill
 

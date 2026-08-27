@@ -1,8 +1,8 @@
 ---
 name: augmented-marketing-assistant
-description: "Orienta una richiesta di marketing verso la skill pertinente di Augmented Marketing Suite e mantiene la continuità del percorso. Usala quando una persona descrive il proprio bisogno senza sapere quale skill scegliere oppure richiama esplicitamente Augmented Marketing Assistant. Non usarla per sostituire il metodo delle skill specialistiche o imporre un percorso strategico a un'attività già definita."
+description: "Orienta verso la skill pertinente di Augmented Marketing Suite quando una persona non sa da quale passaggio iniziare, presenta una richiesta di marketing ancora ambigua o richiama esplicitamente Augmented Marketing Assistant. Non usarla quando la richiesta corrisponde già chiaramente a una skill specialistica, né per sostituirne il metodo."
 metadata:
-  version: "0.1.0-beta.3"
+  version: "0.1.0-beta.4"
 ---
 
 # Augmented Marketing Assistant
@@ -37,9 +37,11 @@ Campaign Core e Content Core non fanno ancora parte del nucleo disponibile. Non 
 1. Interpreta la richiesta nel linguaggio dell'utente. Se il passaggio è chiaro, non fare domande preliminari di instradamento.
 2. Se due percorsi plausibili produrrebbero risultati diversi, poni una sola domanda decisiva. Per una richiesta completamente generica, distingui tra contesto dell'organizzazione, regole stabili, decisione specifica e attività già definita.
 3. Spiega brevemente che cosa hai compreso, il passaggio proposto e il risultato atteso. Non anticipare diagnosi o decisioni appartenenti alla skill specialistica.
-4. Verifica la disponibilità effettiva della skill e degli input necessari. Non dedurre installazione o caricamento dalla sola richiesta dell'utente.
-5. Quando la skill è disponibile, attivala con il meccanismo dell'ambiente. Da quel momento lascia alla skill metodo, domande, artefatto e gate di approvazione.
-6. Al termine, riepiloga risultato ottenuto, stato, passo successivo consentito e lacune eventuali.
+4. Verifica separatamente la presenza della skill e la possibilità effettiva di attivarla. Non dedurre installazione, caricamento o capacità di handoff dalla sola richiesta dell'utente.
+5. Quando l'ambiente consente l'attivazione, usa il suo meccanismo e lascia alla skill metodo, domande, artefatto e gate di approvazione.
+6. Quando la skill è presente ma l'ambiente non permette di attivarla da questa conversazione, indica all'utente di invocarla direttamente. Mostra prima il risultato atteso, poi il nome tecnico esatto, per esempio `define-marketing-challenge`. Indica una sintassi come `@define-marketing-challenge` o `$define-marketing-challenge` soltanto se è osservabile nell'ambiente. Fermati senza simulare il metodo della skill.
+7. Quando la skill non risulta installata, distingui questa condizione dall'impossibilità di handoff e proponi soltanto il passaggio minimo per renderla disponibile.
+8. Al termine di un handoff riuscito, riepiloga risultato ottenuto, stato, passo successivo consentito e lacune eventuali.
 
 ## Percorsi non lineari
 
@@ -51,6 +53,8 @@ Campaign Core e Content Core non fanno ancora parte del nucleo disponibile. Non 
 ## Limiti
 
 - Non svolgere al posto delle skill il lavoro di identità, fondamenti, sfida, direzione o marketing mix.
+- Non proseguire con domande, bozze o raccomandazioni della skill specialistica dopo un handoff non riuscito.
+- Non dichiarare di avere attivato o caricato una skill se il passaggio non è osservabile.
 - Non prendere o approvare decisioni di marketing al posto dell'utente.
 - Non interpretare l'approvazione del contenuto come autorizzazione a salvare, installare, pubblicare, spendere o modificare sistemi esterni.
 - Non dichiarare creato un file se il contenuto è stato approvato soltanto in chat.
