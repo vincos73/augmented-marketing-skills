@@ -1,19 +1,18 @@
 {
-  "format": "openai-codex-plugin-zip",
+  "format": "claude-plugin-zip",
   "suite_version": "0.1.0-beta.8",
-  "archive": "augmented-marketing-suite-0.1.0-beta.8.zip",
+  "archive": "augmented-marketing-suite-claude-v0.1.0-beta.8.zip",
   "source": {
-    "base_commit": "871cd43dd63c9f75c3a5d495b00a47974a87dc35",
     "base_tag": "augmented-marketing-suite-v0.1.0-beta.7",
     "state": "beta.8 release artifact"
   },
-  "archive_root": [".codex-plugin/plugin.json", "skills/"],
-  "skills": [
-    "augmented-marketing-assistant@0.1.0",
+  "archive_root": [".claude-plugin/plugin.json", "skills/"],
+  "included": [
     "setup-business-context@0.6.4",
     "setup-marketing-system@0.3.1",
     "define-marketing-challenge@0.1.3",
     "choose-marketing-direction@0.2.2",
     "define-marketing-mix@0.1.3"
-  ]
+  ],
+  "excluded": ["augmented-marketing-assistant", "MCP", "connectors", "hooks", "subagents"]
 }

@@ -1,4 +1,4 @@
-# Augmented Marketing Suite beta.7: skill portabili
+# Augmented Marketing Suite beta.8: skill portabili
 
 Questa cartella contiene una custom skill per archivio ZIP. Ogni archivio ha una sola cartella radice, con `SKILL.md` e gli eventuali `references/`, ed è adatto ai flussi che caricano una skill alla volta.
 
@@ -25,4 +25,4 @@ Questi archivi contengono esclusivamente le cinque skill specialistiche. Non inc
 
 - L'upload e la selezione automatica dipendono da prodotto, piano, amministratore e versione dell'ambiente.
 - Allegare uno ZIP a una chat normale non prova l'installazione persistente.
-- Questo pacchetto fa parte della release GitHub di Augmented Marketing Suite beta.7.
+- Questo pacchetto fa parte della release GitHub di Augmented Marketing Suite beta.8.

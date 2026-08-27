@@ -1,10 +1,10 @@
 {
   "format": "agent-skill-zip",
-  "suite_version": "0.1.0-beta.7",
+  "suite_version": "0.1.0-beta.8",
   "source": {
     "base_commit": "551f23a18faf7897de81ff7f8937d3ecdc2f482b",
-    "base_tag": "augmented-marketing-suite-v0.1.0-beta.6",
-    "state": "published Augmented Marketing Suite v0.1.0-beta.7 release"
+    "base_tag": "augmented-marketing-suite-v0.1.0-beta.7",
+    "state": "beta.8 release artifact"
   },
   "package_policy": {
     "archive_root": "one specialist skill folder",

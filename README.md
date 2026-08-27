@@ -69,7 +69,7 @@ Solo dopo puoi passare a pagine, campagne e contenuti. Le competenze per campagn
 
 ## Ultime versioni pubblicate
 
-Queste sono le ultime versioni pubblicate e taggate singolarmente. Le versioni beta.7 delle cinque skill sono pubblicate insieme nella [release della Suite beta.7](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.7), con gli archivi e i checksum nel repository.
+Queste sono le ultime versioni pubblicate e taggate singolarmente. Le versioni correnti delle cinque skill sono pubblicate insieme nella [release della Suite beta.8](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.8), con gli archivi e i checksum nel repository.
 
 | Skill | Versione stabile | Risultato principale |
 | --- | --- | --- |
@@ -88,15 +88,27 @@ Queste sono le ultime versioni pubblicate e taggate singolarmente. Le versioni b
 
 ## Installazione
 
+La regola è semplice: **per una skill singola usa uno ZIP portabile; per tutte le skill usa il plugin dedicato alla piattaforma**. Non caricare mai il bundle OpenAI/Codex in Claude, né il bundle Claude in ChatGPT/Codex.
+
+| Ambiente | Una skill | Tutte le skill |
+| --- | --- | --- |
+| Claude | Uno ZIP in `dist/agent-skills/` | `dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.8.zip` in **Personalizza → Plugin** |
+| ChatGPT | Uno ZIP in `dist/agent-skills/` nel flusso Skills | `dist/openai/augmented-marketing-suite-0.1.0-beta.8.zip` nel flusso Plugin |
+| Codex | Uno ZIP in `dist/agent-skills/` quando il flusso locale lo consente | `dist/openai/augmented-marketing-suite-0.1.0-beta.8.zip` nel marketplace o catalogo Plugin |
+
 ### Per Claude o ChatGPT: una skill alla volta
 
-La beta.7 pubblicata offre un archivio ZIP per ciascuna delle cinque skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Ogni archivio contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
+La beta.8 pubblicata offre un archivio ZIP per ciascuna delle cinque skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Ogni archivio contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
 
 Scegli la skill che ti serve, caricala con il meccanismo di skill del tuo ambiente e avvia una nuova chat. Claude non usa l'Assistant incluso nella Suite OpenAI, quindi gli archivi portabili contengono soltanto le cinque skill specialistiche.
 
+### Per Claude: tutte e cinque le skill con un solo upload
+
+Carica [`dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.8.zip`](dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.8.zip) nella sezione **Personalizza → Plugin** di Claude. È un plugin Claude dedicato: ha `.claude-plugin/plugin.json` e include le cinque skill specialistiche, senza Augmented Marketing Assistant.
+
 ### Per ChatGPT e Codex: Suite completa
 
-La beta.7 pubblicata offre anche [`dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip`](dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip), con il manifesto `.codex-plugin` e tutte e sei le skill, incluso Augmented Marketing Assistant. Segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
+La beta.8 pubblicata offre anche [`dist/openai/augmented-marketing-suite-0.1.0-beta.8.zip`](dist/openai/augmented-marketing-suite-0.1.0-beta.8.zip), con il manifesto `.codex-plugin` e tutte e sei le skill, incluso Augmented Marketing Assistant. Segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
 
 > Allegare uno ZIP a una chat normale consente di leggerlo, ma non registra automaticamente un plugin o una skill. Usa soltanto il flusso di installazione disponibile nel tuo account o workspace.
 
