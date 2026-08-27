@@ -1,0 +1,42 @@
+{
+  "format": "agent-skill-zip",
+  "suite_version": "0.1.0-beta.7",
+  "source": {
+    "base_commit": "551f23a18faf7897de81ff7f8937d3ecdc2f482b",
+    "base_tag": "augmented-marketing-suite-v0.1.0-beta.6",
+    "state": "local beta.7 worktree; not a published GitHub release"
+  },
+  "package_policy": {
+    "archive_root": "one specialist skill folder",
+    "included": ["SKILL.md", "references/"],
+    "excluded": ["agents/", "INSTALL.md", "augmented-marketing-assistant"],
+    "reason": "Portable custom-skill package for environments that install one Agent Skill at a time."
+  },
+  "skills": [
+    {
+      "name": "setup-business-context",
+      "version": "0.6.4",
+      "archive": "setup-business-context-0.6.4.zip"
+    },
+    {
+      "name": "setup-marketing-system",
+      "version": "0.3.1",
+      "archive": "setup-marketing-system-0.3.1.zip"
+    },
+    {
+      "name": "define-marketing-challenge",
+      "version": "0.1.3",
+      "archive": "define-marketing-challenge-0.1.3.zip"
+    },
+    {
+      "name": "choose-marketing-direction",
+      "version": "0.2.2",
+      "archive": "choose-marketing-direction-0.2.2.zip"
+    },
+    {
+      "name": "define-marketing-mix",
+      "version": "0.1.3",
+      "archive": "define-marketing-mix-0.1.3.zip"
+    }
+  ]
+}

@@ -1,84 +1,90 @@
-# Installazione di Augmented Marketing Suite
+# Installazione di Augmented Marketing Suite beta.7
 
-La beta 0.1.0-beta.6 è un plugin OpenAI per ChatGPT e Codex. Riunisce le cinque skill disponibili e Augmented Marketing Assistant, l'ingresso conversazionale che orienta verso la skill pertinente.
+La beta `0.1.0-beta.7` separa deliberatamente due formati:
 
-Non include MCP, connector, hook o automazioni.
+- `dist/agent-skills/`: cinque ZIP individuali e portabili, uno per skill specialistica, per Claude o altri ambienti che caricano una skill alla volta;
+- `dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip`: pacchetto OpenAI/Codex con il manifesto `.codex-plugin`, le cinque skill e Augmented Marketing Assistant.
 
-## Contenuto
+Non chiamare il primo formato "plugin Claude": per un utente Claude la via più lineare è caricare una singola custom skill. Claude dispone anche di plugin, ma non sono necessari a queste cinque skill, che non richiedono strumenti, MCP, hook o automazioni.
 
-```text
-.codex-plugin/plugin.json
-skills/augmented-marketing-assistant/
-skills/setup-business-context/
-skills/setup-marketing-system/
-skills/define-marketing-challenge/
-skills/choose-marketing-direction/
-skills/define-marketing-mix/
-```
+## Quale archivio scegliere
 
-| Componente | Versione |
-| --- | --- |
-| Plugin Augmented Marketing Suite (`augmented-marketing-suite`) | 0.1.0-beta.6 |
-| Augmented Marketing Assistant (`augmented-marketing-assistant`) | 0.1.0 stabile |
-| Setup Business Context (`setup-business-context`) | 0.6.3 |
-| Setup Marketing System (`setup-marketing-system`) | 0.3.0 |
-| Define Marketing Challenge (`define-marketing-challenge`) | 0.1.2 |
-| Choose Marketing Direction (`choose-marketing-direction`) | 0.2.1 |
-| Define Marketing Mix (`define-marketing-mix`) | 0.1.2 |
+| Se usi | Scegli | Contiene |
+| --- | --- | --- |
+| Claude | Uno ZIP in `dist/agent-skills/` | Una skill specialistica con i suoi riferimenti. |
+| ChatGPT con caricamento diretto delle skill | Uno ZIP in `dist/agent-skills/` | La stessa skill portabile. |
+| ChatGPT o Codex con Plugin Creator/catalogo plugin | `dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip` | Le cinque skill più Augmented Marketing Assistant. |
+| Claude Projects senza custom skill | I file estratti, come contesto di progetto | Alternativa statica, non installazione di skill. |
 
-La beta.6 contiene le versioni indicate nella tabella.
+Gli ZIP portabili non includono Augmented Marketing Assistant: il suo testo dichiara esplicitamente di essere un adattatore per ChatGPT e Codex. In Claude scegli direttamente la skill dal bisogno, oppure consulta la tabella nel README.
 
-## ChatGPT sul web
+## Claude: caricamento di una custom skill
 
-Allegare lo ZIP a una chat normale permette a ChatGPT di leggerne i file, ma non registra il plugin e non rende le skill disponibili nelle chat successive.
+1. Apri Claude e crea o apri uno spazio in cui le custom skill sono disponibili nel tuo piano o workspace.
+2. Apri le impostazioni o il pannello delle skill, scegli di caricare una skill e seleziona uno ZIP da `dist/agent-skills/`.
+3. Verifica che Claude mostri il nome tecnico della skill, per esempio `define-marketing-challenge`.
+4. Avvia una nuova chat e fai una richiesta pertinente, per esempio: “Ho l'obiettivo di far conoscere un nuovo servizio ma non so ancora quale problema di marketing affrontare.”
 
-Finché questa beta non è presente nel catalogo Plugin generale, installala come plugin personale soltanto se Plugin Creator è disponibile nel tuo account o workspace:
+Una custom skill Claude richiede un archivio con una sola cartella radice e un file `SKILL.md`; gli archivi beta.7 rispettano questa struttura. Se il tuo workspace non mostra il caricamento delle skill, non allegare lo ZIP a una chat normale aspettandoti che resti installato: chiedi all'amministratore se sono abilitate le custom skill o usa un Project come alternativa documentale.
 
-Se hai già installato la beta.2 come Augmented Marketing Assistant, rimuovi quel plugin prima di installare la Suite. Il nuovo identificatore tecnico farebbe altrimenti comparire due plugin distinti.
+### Claude Code e Claude Desktop
 
-Se hai installato una beta precedente di Augmented Marketing Suite, aggiorna o reinstalla lo stesso plugin con il pacchetto beta.6, poi apri una nuova chat per evitare di riusare skill già caricate nella sessione precedente.
+Se il tuo ambiente Claude consente skill locali, estrai uno ZIP in una cartella di skill del progetto o dell'utente, senza rinominare la cartella radice. Verifica prima la documentazione e il percorso mostrato dalla tua versione di Claude Code/Desktop: i percorsi e le funzioni disponibili possono dipendere da piano, amministratore e canale di rilascio.
 
-1. apri una nuova chat in modalità Work;
-2. richiama Plugin Creator (`@plugin-creator`);
-3. allega lo ZIP della beta.6;
-4. usa la richiesta seguente;
-5. al termine, apri il catalogo Plugin e verifica la sezione personale o “Created by me”;
-6. installa il plugin e avvia una nuova chat.
+L'installazione sul disco non dimostra che una sessione già aperta abbia caricato la skill. Apri una nuova sessione e controlla che il nome sia visibile o invocabile secondo l'interfaccia disponibile.
+
+### Claude Projects come alternativa
+
+Un Project può conservare i file come istruzioni o conoscenza di progetto, ma non equivale a una custom skill selezionata automaticamente. Carica soltanto il contenuto della skill scelta, mantieni `SKILL.md` e la cartella `references/` insieme e descrivi nella chat quale skill vuoi applicare. Questa strada non offre una prova di discovery, invocazione o aggiornamento automatico.
+
+## ChatGPT: caricamento diretto di una skill
+
+1. Apri il flusso **Skills** disponibile nel tuo account o workspace.
+2. Crea o carica una skill e seleziona lo ZIP portabile desiderato da `dist/agent-skills/`.
+3. Controlla nome e versione dichiarati in `SKILL.md`.
+4. Apri una nuova chat e prova una richiesta coerente con quella skill.
+
+La disponibilità del caricamento diretto dipende da prodotto, piano e amministratore. Le skill seguono lo standard Agent Skills e il formato portabile è intenzionalmente separato dal pacchetto plugin OpenAI/Codex.
+
+## ChatGPT e Codex: Suite completa come plugin
+
+Usa `dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip` solo in un ambiente che mostra Plugin Creator, un catalogo plugin o un marketplace compatibile.
+
+1. Apri una nuova chat o sessione.
+2. Carica l'archivio nel flusso di creazione o aggiornamento plugin disponibile.
+3. Verifica che la radice dell'archivio contenga `.codex-plugin/plugin.json` e `skills/`.
+4. Controlla che il manifesto dichiari versione `0.1.0-beta.7` e che `skills` sia la directory delle skill.
+5. Installa o aggiorna il plugin nel marketplace consentito dal tuo ambiente, poi avvia una nuova chat.
+
+Se usi un flusso che chiede un prompt di registrazione, puoi usare questo testo:
 
 ````text
-Crea un plugin personale dal pacchetto allegato Augmented Marketing Suite 0.1.0-beta.6.
+Crea o aggiorna il plugin personale dal pacchetto allegato Augmented Marketing Suite 0.1.0-beta.7.
 
-Verifica che la radice contenga .codex-plugin/plugin.json e che il manifesto dichiari skills/ come directory delle skill. Non aggiungere MCP, connector, hook o altri componenti.
+Verifica che la radice contenga .codex-plugin/plugin.json e che il manifesto dichiari skills/ come directory delle skill. Mantieni intatte le sei skill incluse. Non aggiungere MCP, connector, hook o altri componenti.
 
-Registra il plugin nel mio marketplace personale senza modificare le skill incluse. Al termine dimmi come installarlo dal catalogo Plugin e ricordami di provarlo in una nuova chat.
+Al termine, indica come installarlo dal catalogo disponibile e ricorda di provarlo in una nuova chat.
 ````
 
-Se Plugin Creator o i plugin personali non sono disponibili, lo ZIP non può essere installato direttamente da una chat normale. In quel caso è possibile soltanto ispezionarlo oppure installare separatamente le singole skill con il meccanismo disponibile nell'ambiente.
+## Contenuto e versioni della beta.7
 
-## Codex
+| Componente | Versione beta.7 |
+| --- | --- |
+| Plugin Augmented Marketing Suite (`augmented-marketing-suite`) | `0.1.0-beta.7` |
+| Augmented Marketing Assistant, solo pacchetto OpenAI/Codex | `0.1.0` |
+| Setup Business Context | `0.6.4` |
+| Setup Marketing System | `0.3.1` |
+| Define Marketing Challenge | `0.1.3` |
+| Choose Marketing Direction | `0.2.2` |
+| Define Marketing Mix | `0.1.3` |
 
-Il pacchetto usa lo stesso manifesto OpenAI. Aggiungilo attraverso un marketplace personale o di progetto e installalo dal catalogo Plugin. Dopo l'installazione, avvia una nuova sessione: la presenza dei file sul disco non dimostra che la sessione corrente li abbia caricati.
+Questa è documentazione della beta locale: una versione dichiarata qui non implica che esistano già tag o release GitHub con lo stesso numero.
 
-## Come iniziare
+## Verifica prima del test
 
-Descrivi direttamente il bisogno, per esempio:
+1. Confronta lo SHA-256 dello ZIP con `SHA256SUMS` nella stessa cartella di distribuzione.
+2. Estrai in una cartella temporanea e controlla che ogni ZIP portabile abbia una sola cartella radice, `SKILL.md` e gli eventuali `references/`.
+3. Per il pacchetto OpenAI/Codex, controlla che `.codex-plugin/plugin.json` sia alla radice dell'archivio.
+4. Dopo l'installazione, apri una nuova chat e chiedi un risultato che appartenga chiaramente alla skill scelta.
 
-> Vorrei che l'agente conoscesse bene la mia organizzazione prima di aiutarmi con il marketing.
-
-Quando la richiesta corrisponde chiaramente a una skill specialistica, l'ambiente dovrebbe selezionarla direttamente. Usa Augmented Marketing Assistant soltanto quando non sai da quale passaggio iniziare: in ChatGPT puoi richiamarlo con `@Augmented Marketing Assistant`, in Codex con `$augmented-marketing-assistant`.
-
-L'Assistant spiega prima il passaggio utile in linguaggio comune e indica poi tra parentesi il nome tecnico della skill pertinente. Se l'ambiente non gli permette di attivarla, ti chiede di invocarla direttamente e si ferma senza simularne il lavoro.
-
-Nel catalogo, le skill sono mostrate con il titolo tecnico inglese, per esempio `setup-business-context`, e con una breve descrizione italiana. Nome della cartella, titolo visibile e nome da invocare restano così allineati.
-
-## Verifica della Suite beta
-
-La beta.6 può essere validata strutturalmente e installata come plugin OpenAI. Augmented Marketing Assistant v0.1.0 ha superato i test runtime Codex di richiesta ambigua, selezione diretta e handoff. Restano da verificare separatamente:
-
-- l'installazione effettiva nell'account ChatGPT dell'utente;
-- il caricamento delle sei skill in una nuova chat;
-- il fallback dell'Assistant quando l'handoff non è disponibile;
-- la comprensibilità presso marketer esterni;
-- gli adattatori per piattaforme diverse da OpenAI.
-
-La beta.1 resta un archivio neutro per installazioni manuali. Non deve essere presentata come plugin ChatGPT.
+La verifica strutturale non sostituisce la prova in un account reale. Restano manuali la disponibilità dell'interfaccia nel piano dell'utente, l'upload effettivo, la discovery nella nuova chat e la comprensibilità per tester esterni.

@@ -67,9 +67,9 @@ Immagina di voler proporre un nuovo servizio di formazione.
 
 Solo dopo puoi passare a pagine, campagne e contenuti. Le competenze per campagne, contenuti e apprendimento sono previste per uno sviluppo futuro e non fanno parte delle skill disponibili in questo progetto.
 
-## Skill disponibili oggi
+## Ultime versioni pubblicate
 
-Queste sono le versioni stabili installabili dalla Suite beta.
+Queste sono le ultime versioni pubblicate e taggate singolarmente. La sorgente della beta.7 locale prepara le versioni successive, indicate nel manifesto degli artefatti, ma non le presenta come release GitHub già pubblicate.
 
 | Skill | Versione stabile | Risultato principale |
 | --- | --- | --- |
@@ -88,17 +88,21 @@ Queste sono le versioni stabili installabili dalla Suite beta.
 
 ## Installazione
 
-### Il modo più semplice: Suite completa
+### Per Claude o ChatGPT: una skill alla volta
 
-La [versione beta.6 di Augmented Marketing Suite pubblicata su GitHub](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.6) contiene le cinque skill e l'Assistant, comprese le versioni più recenti delle due skill di setup. Segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
+La beta.7 locale produce un archivio ZIP per ciascuna delle cinque skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Ogni archivio contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
 
-La beta.6 è pensata per ChatGPT e Codex in ambienti che supportano l'installazione di skill. Dopo l'installazione, apri una nuova chat e descrivi il bisogno. La presenza dei file sul disco non dimostra che una chat già aperta abbia caricato la versione aggiornata.
+Scegli la skill che ti serve, caricala con il meccanismo di skill del tuo ambiente e avvia una nuova chat. Claude non usa l'Assistant incluso nella Suite OpenAI, quindi gli archivi portabili contengono soltanto le cinque skill specialistiche.
 
-> Allegare uno ZIP a una chat normale non registra automaticamente un plugin. Se il tuo ambiente non mostra un catalogo o un meccanismo di installazione, chiedi all'amministratore dell'ambiente quale procedura supporta.
+### Per ChatGPT e Codex: Suite completa
 
-### Installare una sola skill
+La beta.7 locale produce anche [`dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip`](dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip), con il manifesto `.codex-plugin` e tutte e sei le skill, incluso Augmented Marketing Assistant. Segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
 
-Questa è un'opzione per chi gestisce direttamente l'installazione. Scarica la versione pubblicata della skill desiderata, estraila e segui il file `INSTALL.md` incluso nella cartella. Mantieni l'intera cartella, compresi istruzioni, riferimenti ed eventuali controlli.
+> Allegare uno ZIP a una chat normale consente di leggerlo, ma non registra automaticamente un plugin o una skill. Usa soltanto il flusso di installazione disponibile nel tuo account o workspace.
+
+### Installare una versione pubblicata
+
+Per una release già pubblicata, scarica la skill desiderata, estraila e segui il file `INSTALL.md` incluso nella cartella. Mantieni l'intera cartella, compresi istruzioni, riferimenti ed eventuali controlli.
 
 | Skill | Versione pubblicata da installare |
 | --- | --- |

@@ -1,8 +1,8 @@
 ---
 name: choose-marketing-direction
-description: "Diagnostica una sfida di marketing confermata, confronta e sottopone a stress test direzioni strategiche plausibili, raccomanda una scelta falsificabile e prepara il primo test utile. Usala quando un responsabile deve decidere come affrontare una sfida prima di definire il marketing mix o una campagna. Non usarla per svolgere automaticamente ricerca di mercato, riprogettare unilateralmente prodotto o prezzo, dettagliare le quattro P, pianificare campagne o produrre asset."
+description: "Confronta direzioni strategiche plausibili per una sfida confermata e prepara una scelta falsificabile. Usala prima del marketing mix o di una campagna."
 metadata:
-  version: "0.2.1"
+  version: "0.2.2"
 ---
 
 # Scegliere la direzione di marketing

@@ -1,13 +1,10 @@
 {
   "name": "augmented-marketing-suite",
-  "version": "0.1.0-beta.6",
+  "version": "0.1.0-beta.7",
   "description": "Una suite di skill di marketing con un Assistant conversazionale per ChatGPT e Codex.",
   "author": {
-    "name": "Vincenzo Cosenza",
-    "url": "https://github.com/vincos73"
+    "name": "Augmented Marketing Suite"
   },
-  "homepage": "https://github.com/vincos73/augmented-marketing-skills",
-  "repository": "https://github.com/vincos73/augmented-marketing-skills",
   "keywords": [
     "marketing",
     "strategy",
@@ -19,7 +16,7 @@
     "displayName": "Augmented Marketing Suite",
     "shortDescription": "Contesto e metodo per decisioni di marketing",
     "longDescription": "Riunisce cinque skill specialistiche e Augmented Marketing Assistant. Le richieste operative vengono affidate direttamente alla skill pertinente; l'Assistant orienta quando il punto di partenza non è chiaro.",
-    "developerName": "Vincenzo Cosenza",
+    "developerName": "Augmented Marketing Suite",
     "category": "Productivity",
     "capabilities": [
       "Read",

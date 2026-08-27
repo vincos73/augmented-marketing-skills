@@ -1,8 +1,8 @@
 ---
 name: setup-marketing-system
-description: "Costruisce, aggiorna e installa Fondamenti di marketing basati su fonti: regole stabili che gli agenti applicano prima di svolgere attività di marketing per un'azienda o un brand. Usala quando un responsabile marketing vuole definire o mantenere regole durevoli su coerenza tra offerta e pubblico, messaggi e prove, ruoli dei canali, qualità e approvazioni. Non usarla per rispondere a domande generiche di marketing, definire strategie temporanee, completare campagne, configurare strumenti o produrre asset."
+description: "Costruisce o aggiorna fondamenti di marketing basati su fonti per un'azienda o brand. Usala per regole durevoli su coerenza, messaggi, canali e approvazioni, non per campagne o asset."
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 
 # Configurazione dei fondamenti di marketing

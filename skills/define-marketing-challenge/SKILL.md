@@ -1,8 +1,8 @@
 ---
 name: define-marketing-challenge
-description: "Trasforma un obiettivo, problema, opportunità, segnale o proposta tattica interna in una sfida di marketing chiara e confermabile, basata sul contesto approvato dell'organizzazione. Usala quando un responsabile aziendale o un professionista deve mettere a fuoco quale cambiamento cercare prima di confrontare le direzioni. Non usarla per interpretare unilateralmente il brief di un cliente, scegliere la direzione, progettare campagne, allocare budget o produrre asset."
+description: "Trasforma un obiettivo, problema, opportunità o proposta tattica in una sfida di marketing confermabile. Usala prima di scegliere una direzione, non per campagne, budget o asset."
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
 ---
 
 # Definire la sfida di marketing

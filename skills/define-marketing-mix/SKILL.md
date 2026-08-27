@@ -1,8 +1,8 @@
 ---
 name: define-marketing-mix
-description: "Traduce una direzione di marketing approvata in scelte coerenti su Product, Price, Place e Promotion, distinguendo vincoli, decisioni, ipotesi e autorità. Usala prima della progettazione di campagne o altre attivazioni quando il marketing mix deve essere definito o revisionato. Non usarla per prendere decisioni tecniche di prodotto, fissare unilateralmente prezzi, progettare il piano di campagna o produrre asset."
+description: "Traduce una direzione approvata in scelte su Product, Price, Place e Promotion. Usala prima di campagne o asset, non per fissare unilateralmente prezzi."
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
 ---
 
 # Definire il marketing mix
