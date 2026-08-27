@@ -6,6 +6,8 @@
 
 **Ambiente verificato:** repository locale e pacchetto estratto
 
+**Riscontro runtime aggiuntivo:** primo test manuale in Codex riferito dall'utente
+
 ## Correzione verificata
 
 La beta.4 distingue tre stati che la beta.3 trattava come equivalenti:
@@ -49,6 +51,14 @@ Le descrizioni e i prompt iniziali restano in italiano. Augmented Marketing Assi
 - parità tra sorgente e contenuto estratto;
 - assenza di MCP, connector, hook e automazioni nel pacchetto.
 
+## Riscontro manuale in Codex
+
+Dopo l'installazione, l'utente ha riferito che l'Assistant “sembra funzionare” nel routing. Il riscontro è coerente con il comportamento atteso della beta.4 ed è un segnale positivo, ma non viene classificato come PASS riproducibile perché non sono stati conservati in questo run la richiesta completa, la risposta e l'evidenza tecnica dell'effettivo caricamento della skill specialistica.
+
+La parità tra la sorgente dell'adattatore `skills/augmented-marketing-assistant` e la copia installata in Codex è stata verificata con `diff -qr` senza differenze.
+
+Il successivo [smoke test runtime in Codex](2026-08-27-codex-runtime-smoke-beta4.md) ha coperto i tre casi definiti nel catalogo degli scenari. Ha dimostrato il caricamento diretto di `choose-marketing-direction` e il passaggio reale dall'Assistant a `define-marketing-challenge`. La richiesta completamente generica ha invece prodotto un soft fail perché la domanda non contemplava un'attività già definita.
+
 ## Limite
 
-La verifica strutturale non dimostra che ChatGPT selezioni sempre la skill attesa. Dopo l'installazione, la beta.4 richiede un nuovo test in una chat pulita sia con richiesta diretta sia passando esplicitamente dall'Assistant.
+La verifica strutturale e lo smoke test Codex non dimostrano che ChatGPT o Codex selezionino sempre la skill attesa. Prima del micro-pilot resta da correggere e ritestare il soft fail della richiesta generica; il comportamento va poi verificato con persone poco tecniche.

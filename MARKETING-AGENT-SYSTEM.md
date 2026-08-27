@@ -43,13 +43,15 @@ Augmented Marketing Suite
 
 **Augmented Marketing Assistant** è un agente sottile e non un nuovo core. Riceve il bisogno nel linguaggio dell'utente, verifica soltanto stati e artefatti osservabili, spiega il passaggio utile e attiva la skill pertinente quando l'ambiente lo consente. Se non può effettuare il passaggio, indica all'utente la skill da invocare e si ferma senza simularne il metodo. Non possiede logica strategica, artefatti o approvazioni propri e non impone il percorso completo quando l'input necessario esiste già. Nel plugin OpenAI compare tecnicamente come sesta skill (`augmented-marketing-assistant`), ma questa forma è soltanto un adattatore di caricamento e non una nuova competenza di marketing.
 
-La [definizione canonica della beta 0.1.0-beta.4](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex. Gli [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md), il [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md) e il test reale su ChatGPT Web verificano aspetti diversi, ma non equivalgono a un pilot con marketer esterni.
+La [definizione canonica della beta 0.1.0-beta.4](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex. Gli [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md), il [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md), il [test runtime Codex](evals/augmented-marketing-assistant/runs/2026-08-27-codex-runtime-smoke-beta4.md) e il test reale su ChatGPT Web verificano aspetti diversi, ma non equivalgono a un pilot con marketer esterni. Il test runtime ha dimostrato selezione diretta e handoff effettivo, con un soft fail residuo nella gestione delle richieste completamente generiche.
 
 I tre core non sono cartelle decorative e non devono diventare tre agenti generalisti. Sono famiglie di decisioni con artefatti e confini diversi:
 
 - **Strategy Core:** definisce quale problema, pubblico, comportamento o opportunità richiedono una decisione, sceglie la direzione e la traduce in un marketing mix coerente su Product, Price, Place e Promotion;
 - **Campaign Core:** traduce la componente Promotion e le attivazioni pertinenti di un marketing mix approvato in un sistema coordinato di messaggi, canali, asset, responsabilità, misure e apprendimento;
 - **Content Core:** valuta e produce singoli contenuti o famiglie di contenuti, mantenendo il giudizio specifico nei builder.
+
+Nel nucleo minimo non è previsto un agente **Strategist** separato. Il lavoro strategico appartiene alle tre skill dello Strategy Core, mentre l'Assistant conserva soltanto orientamento e continuità. Un eventuale componente trasversale potrà essere valutato soltanto se l'uso reale farà emergere un compito distinto, con una propria user story e un proprio artefatto, per esempio una revisione di coerenza tra sfida, direzione e marketing mix. Non dovrà duplicare il routing dell'Assistant né il metodo delle skill specialistiche.
 
 `setup-marketing-system` è l'onboarding delle Marketing Foundations, non il punto d'ingresso generale e non un quarto core. Aiuta l'organizzazione a definire e approvare le regole di marketing stabili che un agente deve conoscere prima di qualsiasi attività di marketing. Parte dal business context canonico e dalle regole, decisioni, materiali e pratiche reali già disponibili; quando una regola operativa essenziale manca, può guidarne la formulazione invece di limitarsi a registrare il vuoto. Costruisce un profilo operativo riusabile dai tre core. Per aziende multi-brand può mantenere un livello aziendale e overlay di brand, sempre referenziando le identità canoniche create da `setup-business-context` invece di copiarle.
 
@@ -604,10 +606,11 @@ Le due release includono `SKILL.md`, metadati UI, istruzioni di installazione, r
 1. `setup-business-context` — fondazione riusabile consolidata;
 2. progettare e testare `setup-marketing-system` come onboarding delle Marketing Foundations;
 3. validare lo Strategy Core con `define-marketing-challenge` + `choose-marketing-direction` + `define-marketing-mix`;
-4. testare `Augmented Marketing Assistant` come ingresso comprensibile alle cinque skill disponibili;
-5. collegare il primo percorso Content ai builder già esistenti;
-6. introdurre il Campaign Core quando esistono marketing mix approvati da tradurre in attivazioni;
-7. aggiungere apprendimento continuo e monitoring solo nei processi che mostrano un uso ripetuto.
+4. verificare `Augmented Marketing Assistant` in sessioni pulite, distinguendo selezione diretta della skill, handoff riuscito e fallback quando l'handoff non è disponibile;
+5. svolgere un micro-pilot con persone poco tecniche prima di aggiungere un altro agente generalista;
+6. collegare il primo percorso Content ai builder già esistenti;
+7. introdurre il Campaign Core quando esistono marketing mix approvati da tradurre in attivazioni;
+8. aggiungere apprendimento continuo e monitoring solo nei processi che mostrano un uso ripetuto.
 
 ## Content Director: responsabilità e confini
 

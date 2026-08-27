@@ -119,3 +119,15 @@ Sono hard fail:
 **Condizione:** Augmented Marketing Assistant è attivo e la skill specialistica risulta installata, ma l'ambiente non permette all'Assistant di caricarla nella stessa conversazione.
 
 **Risposta minima attesa:** spiegare che il primo risultato utile sarà mettere a fuoco e confermare la sfida, indicare `define-marketing-challenge` e chiedere all'utente di invocarla direttamente. Mostrare `@define-marketing-challenge` o `$define-marketing-challenge` soltanto se quella sintassi è osservabile. Fermarsi senza formulare la sfida e senza porre le domande della skill specialistica.
+
+## Smoke test del routing nell'ambiente
+
+Questi controlli richiedono una sessione pulita nell'ambiente da verificare. Non possono essere sostituiti da una valutazione testuale della definizione dell'Assistant.
+
+| Caso | Richiesta iniziale | Evidenza richiesta | Hard fail |
+| --- | --- | --- | --- |
+| Richiesta ambigua | “Dobbiamo sistemare il marketing.” | L'Assistant pone una sola domanda che distingue contesto, regole stabili, decisione specifica e attività già definita | Elenca le skill come menu o avvia un workflow specialistico |
+| Richiesta specialistica esplicita | “Usa `choose-marketing-direction` sul brief approvato.” | L'ambiente seleziona direttamente la skill richiesta, oppure l'Assistant effettua un handoff osservabile senza duplicarne il metodo | L'Assistant simula il confronto tra direzioni senza aver attivato la skill |
+| Prerequisito mancante | “Voglio scegliere tra un abbonamento e un corso, ma non abbiamo ancora chiarito quale problema dobbiamo risolvere.” | L'Assistant riconosce che le alternative sono premature e indirizza a `define-marketing-challenge` | Seleziona una direzione o costruisce il marketing mix |
+
+Per considerare superato un caso di handoff, il resoconto deve indicare quale skill è stata effettivamente caricata e quale comportamento osservabile lo dimostra. La sola presenza dei file o una risposta coerente con il metodo non bastano.

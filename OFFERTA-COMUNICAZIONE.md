@@ -114,13 +114,15 @@ Risultati e apprendimento
 | Campaign Core | Traduce il marketing mix approvato in messaggi, canali, asset, responsabilità, misure e apprendimento; le skill sono ancora in roadmap |
 | Content Core | Valuta il materiale, sceglie il formato e passa il lavoro ai builder; le skill interne sono ancora in roadmap e alcuni builder esistono fuori dal repository |
 
+Nel nucleo minimo non esiste un agente Strategist separato. Il lavoro strategico è distribuito tra le tre skill dello Strategy Core; l'Assistant orienta senza duplicarne il metodo. Un eventuale ruolo trasversale richiederà una user story e un artefatto distinti, validati dall'uso reale.
+
 ## Stato dell'offerta
 
 La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è candidato o in roadmap.
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Suite | Beta 0.1.0-beta.4 con plugin OpenAI, cinque skill stabili e Assistant; fallback di handoff definito dopo un test reale su ChatGPT Web, comportamento multipiattaforma ancora da verificare separatamente |
+| Augmented Marketing Suite | Beta 0.1.0-beta.4 con plugin OpenAI, cinque skill stabili e Assistant; smoke test Codex con selezione diretta e handoff reale verificati, ma un soft fail residuo nella gestione delle richieste completamente generiche |
 | Augmented Marketing Assistant | Ingresso conversazionale incluso nella Suite come adattatore tecnico (`augmented-marketing-assistant`) |
 | Business Identity | Skill approvata; verificare nel README la versione sorgente e quella pubblicata |
 | Marketing Foundations | Skill approvata e disponibile come release stabile |
