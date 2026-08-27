@@ -3,14 +3,14 @@ artifact: portability-contract
 version: 2
 status: approvato
 last_reviewed: 2026-08-27
-scope: "Contratto minimo di portabilità per skill installabili di Augmented Marketing Skills"
+scope: "Contratto minimo di portabilità per skill installabili di Augmented Marketing Suite"
 ---
 
 # Contratto di portabilità
 
 ## Scopo
 
-Augmented Marketing Skills deve mantenere lo stesso metodo, gli stessi confini di autorità e gli stessi artefatti essenziali negli ambienti che supportano l'installazione di skill, senza dipendere dalle funzioni esclusive di un singolo agente o fornitore.
+Augmented Marketing Suite deve mantenere lo stesso metodo, gli stessi confini di autorità e gli stessi artefatti essenziali negli ambienti che supportano l'installazione di skill, senza dipendere dalle funzioni esclusive di un singolo agente o fornitore.
 
 Portabilità non significa esperienza identica su ogni piattaforma. Significa che una skill conserva il proprio risultato essenziale quando cambiano filesystem, connector, interfacce visuali, subagenti o altre capability opzionali.
 
@@ -82,7 +82,7 @@ Le istruzioni essenziali devono restare nella cartella distribuibile della singo
 
 ### Adattatore OpenAI osservato
 
-Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Per ChatGPT e Codex, la beta.2 usa un manifesto `.codex-plugin/plugin.json` e presenta Augmented Marketing Assistant come skill tecnica di coordinamento (`augmented-marketing-assistant`). Questa forma non cambia la natura del prodotto: l'Assistant continua a orientare, mentre le cinque skill specialistiche possiedono metodo, artefatti e approvazioni.
+Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Per ChatGPT e Codex, la beta.3 distribuisce Augmented Marketing Suite (`augmented-marketing-suite`) con un manifesto `.codex-plugin/plugin.json` e presenta Augmented Marketing Assistant come skill tecnica di coordinamento (`augmented-marketing-assistant`). Questa forma non cambia il ruolo dell'Assistant: continua a orientare, mentre le cinque skill specialistiche possiedono metodo, artefatti e approvazioni.
 
 L'adattatore OpenAI non introduce MCP, connector o nuove capacità di marketing. La sua installazione e il suo caricamento devono essere verificati in una nuova chat o sessione.
 

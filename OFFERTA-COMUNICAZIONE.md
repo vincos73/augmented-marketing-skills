@@ -1,16 +1,16 @@
 ---
 artifact: offer-communication
-version: 4
+version: 5
 status: bozza
 last_reviewed: 2026-08-27
-scope: "Fonte di lavoro per posizionamento, README pubblico e materiali di comunicazione di Augmented Marketing Skills"
+scope: "Fonte di lavoro per posizionamento, README pubblico e materiali di comunicazione di Augmented Marketing Suite"
 ---
 
-# Offerta e comunicazione di Augmented Marketing Skills
+# Offerta e comunicazione di Augmented Marketing Suite
 
 ## Scopo del documento
 
-Questo documento stabilisce come presentare Augmented Marketing Skills: quale problema affronta, quale valore offre, a chi serve, che cosa lo distingue e quali promesse sono sostenibili allo stato attuale.
+Questo documento stabilisce come presentare Augmented Marketing Suite: quale problema affronta, quale valore offre, a chi serve, che cosa lo distingue e quali promesse sono sostenibili allo stato attuale.
 
 È la fonte di lavoro per:
 
@@ -35,7 +35,7 @@ Nell'uso ordinario degli agenti emergono quattro difficoltà:
 3. una tattica iniziale può essere scambiata per una strategia;
 4. una buona esecuzione può nascondere una decisione debole.
 
-Augmented Marketing Skills nasce per intervenire prima e durante la produzione, rendendo persistente il contesto e guidando le decisioni che collegano identità, strategia, marketing mix, campagne e contenuti.
+Augmented Marketing Suite nasce per intervenire prima e durante la produzione, rendendo persistente il contesto e guidando le decisioni che collegano identità, strategia, marketing mix, campagne e contenuti.
 
 ## Categoria e tesi di prodotto
 
@@ -49,15 +49,15 @@ Il progetto non è un agente generalista che promette di fare il lavoro di un CM
 
 ## Offerta in una frase
 
-> Augmented Marketing Skills è un framework di skill che aiuta manager e agenti IA a prendere decisioni di marketing usando contesto condiviso, regole approvate, alternative esplicite e artefatti verificabili.
+> Augmented Marketing Suite è un framework di skill che aiuta manager e agenti IA a prendere decisioni di marketing usando contesto condiviso, regole approvate, alternative esplicite e artefatti verificabili.
 
 ## Descrizione breve
 
-Augmented Marketing Skills porta metodo nel lavoro di marketing con gli agenti IA. Le skill aiutano a costruire un contesto riusabile, distinguere fatti e assunzioni, formulare la sfida, confrontare direzioni strategiche, coordinare le quattro P e trasformare le decisioni approvate in attività verificabili.
+Augmented Marketing Suite porta metodo nel lavoro di marketing con gli agenti IA. Le skill aiutano a costruire un contesto riusabile, distinguere fatti e assunzioni, formulare la sfida, confrontare direzioni strategiche, coordinare le quattro P e trasformare le decisioni approvate in attività verificabili.
 
 ## Descrizione estesa
 
-Augmented Marketing Skills rende installabile una parte del processo con cui un marketer esperto prepara, prende e documenta le decisioni. Il sistema parte dall'identità dell'organizzazione e dalle regole di marketing approvate, non da un prompt isolato. Prima di produrre una campagna o un contenuto, può chiarire la sfida, confrontare alternative, esplicitare trade-off, individuare l'assunzione più fragile e verificare la coerenza tra Product, Price, Place e Promotion. Le decisioni restano in documenti versionati e l'approvazione del contenuto non autorizza automaticamente pubblicazione, spesa o altre azioni esterne.
+Augmented Marketing Suite rende installabile una parte del processo con cui un marketer esperto prepara, prende e documenta le decisioni. Il sistema parte dall'identità dell'organizzazione e dalle regole di marketing approvate, non da un prompt isolato. Prima di produrre una campagna o un contenuto, può chiarire la sfida, confrontare alternative, esplicitare trade-off, individuare l'assunzione più fragile e verificare la coerenza tra Product, Price, Place e Promotion. Le decisioni restano in documenti versionati e l'approvazione del contenuto non autorizza automaticamente pubblicazione, spesa o altre azioni esterne.
 
 ## Pubblico prioritario di lavoro
 
@@ -120,7 +120,8 @@ La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è 
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Assistant | Beta 0.1.0-beta.2 con plugin OpenAI e cinque skill stabili; installazione nell'account ChatGPT e comportamento multipiattaforma ancora da verificare separatamente |
+| Augmented Marketing Suite | Beta 0.1.0-beta.3 con plugin OpenAI, cinque skill stabili e Assistant; installazione nell'account ChatGPT e comportamento multipiattaforma ancora da verificare separatamente |
+| Augmented Marketing Assistant | Ingresso conversazionale incluso nella Suite come adattatore tecnico (`augmented-marketing-assistant`) |
 | Business Identity | Skill approvata; verificare nel README la versione sorgente e quella pubblicata |
 | Marketing Foundations | Skill approvata e disponibile come release stabile |
 | Brief della sfida | Skill approvata e disponibile come release stabile |
@@ -268,7 +269,7 @@ La promessa ambiziosa può comparire come tesi del progetto, accompagnata dal su
 
 **Presentazione breve**
 
-> Augmented Marketing Skills aiuta manager e agenti IA a lavorare con un contesto condiviso e un processo decisionale esplicito. Prima dell'esecuzione mette a fuoco la sfida, confronta direzioni, rende visibili le assunzioni e coordina le quattro P.
+> Augmented Marketing Suite aiuta manager e agenti IA a lavorare con un contesto condiviso e un processo decisionale esplicito. Prima dell'esecuzione mette a fuoco la sfida, confronta direzioni, rende visibili le assunzioni e coordina le quattro P.
 
 **Tesi editoriale**
 
@@ -299,7 +300,6 @@ Le metriche dovrebbero riguardare qualità della diagnosi, differenza reale tra 
 
 ## Decisioni ancora aperte
 
-- nome definitivo del progetto e relazione tra “Augmented Marketing Skills” e “Marketing Decision Skills”;
 - lingua principale della distribuzione e rapporto tra versione italiana e inglese;
 - adattatori di distribuzione da mantenere per i diversi ambienti che supportano skill;
 - licenza e condizioni di riuso;
@@ -333,6 +333,7 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 
 ## Registro modifiche
 
+- v5, 2026-08-27: adottato Augmented Marketing Suite come nome del prodotto e del plugin, mantenendo Augmented Marketing Assistant come ingresso conversazionale.
 - v4, 2026-08-27: aggiunto il plugin OpenAI beta.2 e distinto il suo adattatore tecnico dal ruolo dell'Assistant.
 - v3, 2026-08-27: introdotto Augmented Marketing Assistant come ingresso conversazionale e promosso alla beta, separandolo dalla logica delle skill.
 - v2, 2026-08-27: allineato lo stato di Direzione di marketing e Marketing Mix alle release stabili e aggiunto il riferimento al contratto di portabilità.

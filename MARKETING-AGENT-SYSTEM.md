@@ -32,17 +32,18 @@ Nome di lavoro: **Marketing Decision Skills**. Alternativa editoriale: **Marketi
 ## Architettura proposta
 
 ```text
-Augmented Marketing Assistant  (ingresso conversazionale e orientamento)
-        ├── setup-business-context  (identità durevole di azienda o brand)
-        ├── setup-marketing-system  (Fondamenti di marketing)
-        ├── Strategy Core  → define-marketing-challenge → choose-marketing-direction → define-marketing-mix
-        ├── Campaign Core  → to-campaign-spec → campaign-review → learn-from-results
-        └── Content Core   → Content Director → builder specializzati
+Augmented Marketing Suite
+        └── Augmented Marketing Assistant  (ingresso conversazionale e orientamento)
+                ├── setup-business-context  (identità durevole di azienda o brand)
+                ├── setup-marketing-system  (Fondamenti di marketing)
+                ├── Strategy Core  → define-marketing-challenge → choose-marketing-direction → define-marketing-mix
+                ├── Campaign Core  → to-campaign-spec → campaign-review → learn-from-results
+                └── Content Core   → Content Director → builder specializzati
 ```
 
 **Augmented Marketing Assistant** è un agente sottile e non un nuovo core. Riceve il bisogno nel linguaggio dell'utente, verifica soltanto stati e artefatti osservabili, spiega il passaggio utile e attiva la skill pertinente. Non possiede logica strategica, artefatti o approvazioni propri e non impone il percorso completo quando l'input necessario esiste già. Nel plugin OpenAI compare tecnicamente come sesta skill (`augmented-marketing-assistant`), ma questa forma è soltanto un adattatore di caricamento e non una nuova competenza di marketing.
 
-La [definizione canonica della beta 0.1.0-beta.2](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex. Gli [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md) e il [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md) verificano instradamento e confini, ma non equivalgono a un pilot con marketer esterni.
+La [definizione canonica della beta 0.1.0-beta.3](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex. Gli [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md) e il [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md) verificano instradamento e confini, ma non equivalgono a un pilot con marketer esterni.
 
 I tre core non sono cartelle decorative e non devono diventare tre agenti generalisti. Sono famiglie di decisioni con artefatti e confini diversi:
 

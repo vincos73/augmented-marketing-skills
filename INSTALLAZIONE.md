@@ -1,6 +1,6 @@
-# Installazione di Augmented Marketing Assistant
+# Installazione di Augmented Marketing Suite
 
-La beta 0.1.0-beta.2 è un plugin OpenAI per ChatGPT e Codex. Riunisce le cinque skill disponibili e un adattatore tecnico che espone Augmented Marketing Assistant negli ambienti OpenAI.
+La beta 0.1.0-beta.3 è un plugin OpenAI per ChatGPT e Codex. Riunisce le cinque skill disponibili e Augmented Marketing Assistant, l'ingresso conversazionale che orienta verso la skill pertinente.
 
 Non include MCP, connector, hook o automazioni.
 
@@ -18,8 +18,8 @@ skills/define-marketing-mix/
 
 | Componente | Versione |
 | --- | --- |
-| Plugin Augmented Marketing Assistant | 0.1.0-beta.2 |
-| Adattatore OpenAI (`augmented-marketing-assistant`) | 0.1.0-beta.2 |
+| Plugin Augmented Marketing Suite (`augmented-marketing-suite`) | 0.1.0-beta.3 |
+| Augmented Marketing Assistant (`augmented-marketing-assistant`) | 0.1.0-beta.3 |
 | Setup Business Context (`setup-business-context`) | 0.6.2 |
 | Setup Marketing System (`setup-marketing-system`) | 0.2.1 |
 | Define Marketing Challenge (`define-marketing-challenge`) | 0.1.1 |
@@ -32,15 +32,17 @@ Allegare lo ZIP a una chat normale permette a ChatGPT di leggerne i file, ma non
 
 Finché questa beta non è presente nel catalogo Plugin generale, installala come plugin personale soltanto se Plugin Creator è disponibile nel tuo account o workspace:
 
+Se hai già installato la beta.2 come Augmented Marketing Assistant, rimuovi quel plugin prima di installare la Suite. Il nuovo identificatore tecnico farebbe altrimenti comparire due plugin distinti.
+
 1. apri una nuova chat in modalità Work;
 2. richiama Plugin Creator (`@plugin-creator`);
-3. allega lo ZIP della beta.2;
+3. allega lo ZIP della beta.3;
 4. usa la richiesta seguente;
 5. al termine, apri il catalogo Plugin e verifica la sezione personale o “Created by me”;
 6. installa il plugin e avvia una nuova chat.
 
 ````text
-Crea un plugin personale dal pacchetto allegato Augmented Marketing Assistant 0.1.0-beta.2.
+Crea un plugin personale dal pacchetto allegato Augmented Marketing Suite 0.1.0-beta.3.
 
 Verifica che la radice contenga .codex-plugin/plugin.json e che il manifesto dichiari skills/ come directory delle skill. Non aggiungere MCP, connector, hook o altri componenti.
 
@@ -65,7 +67,7 @@ L'Assistant deve spiegare prima il passaggio utile in linguaggio comune e indica
 
 ## Verifica della beta
 
-La beta.2 può essere validata strutturalmente e installata come plugin OpenAI. Restano da verificare con test separati:
+La beta.3 può essere validata strutturalmente e installata come plugin OpenAI. Restano da verificare con test separati:
 
 - l'installazione effettiva nell'account ChatGPT dell'utente;
 - il caricamento delle sei skill in una nuova chat;

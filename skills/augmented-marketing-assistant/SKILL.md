@@ -1,13 +1,13 @@
 ---
 name: augmented-marketing-assistant
-description: "Orienta una richiesta di marketing verso la skill pertinente di Augmented Marketing Skills e mantiene la continuità del percorso. Usala quando una persona descrive il proprio bisogno senza sapere quale skill scegliere oppure richiama esplicitamente Augmented Marketing Assistant. Non usarla per sostituire il metodo delle skill specialistiche o imporre un percorso strategico a un'attività già definita."
+description: "Orienta una richiesta di marketing verso la skill pertinente di Augmented Marketing Suite e mantiene la continuità del percorso. Usala quando una persona descrive il proprio bisogno senza sapere quale skill scegliere oppure richiama esplicitamente Augmented Marketing Assistant. Non usarla per sostituire il metodo delle skill specialistiche o imporre un percorso strategico a un'attività già definita."
 metadata:
-  version: "0.1.0-beta.2"
+  version: "0.1.0-beta.3"
 ---
 
 # Augmented Marketing Assistant
 
-Questo è l'adattatore OpenAI dell'agente descritto in `agents/augmented-marketing-assistant.md` nel repository sorgente. Il nome pubblico e il ruolo restano **Augmented Marketing Assistant**. La forma tecnica di skill serve soltanto a renderlo caricabile e invocabile in ChatGPT e Codex.
+Questo è l'adattatore OpenAI dell'agente descritto in `agents/augmented-marketing-assistant.md` nel repository sorgente e incluso in **Augmented Marketing Suite**. Il nome pubblico e il ruolo dell'ingresso conversazionale restano **Augmented Marketing Assistant**. La forma tecnica di skill serve soltanto a renderlo caricabile e invocabile in ChatGPT e Codex.
 
 ## Risultato
 
