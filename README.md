@@ -55,9 +55,9 @@ L'Assistant non sostituisce né duplica le skill: non formula la sfida, non sceg
 | --- | --- | --- | --- |
 | [`setup-business-context`](skills/setup-business-context/) | Raccogliere identità, fatti approvati, vincoli e aspetti aperti di un'organizzazione. | Un contesto riutilizzabile per gli agenti. | [Release stabile v0.6.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-business-context-v0.6.2). |
 | [`setup-marketing-system`](skills/setup-marketing-system/) | Tradurre il contesto in fondamenti, regole e limiti di marketing condivisi. | Un sistema di riferimento per le decisioni successive. | [Release stabile v0.2.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-marketing-system-v0.2.1). |
-| [`define-marketing-challenge`](skills/define-marketing-challenge/) | Capire se una richiesta è davvero una sfida di marketing e formularla in modo verificabile. | Un brief della sfida, con evidenze, ipotesi e criteri di successo. | [Release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.1). |
-| [`choose-marketing-direction`](skills/choose-marketing-direction/) | Confrontare direzioni possibili e scegliere quella più coerente con obiettivi, vincoli e rischi. | Una direzione, con trade-off e assunzioni espliciti. | [Release stabile v0.2.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/choose-marketing-direction-v0.2.0). |
-| [`define-marketing-mix`](skills/define-marketing-mix/) | Tradurre una direzione approvata in decisioni coerenti su Product, Price, Place e Promotion. | Un marketing mix verificabile prima dell'esecuzione. | [Release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-mix-v0.1.1). |
+| [`define-marketing-challenge`](skills/define-marketing-challenge/) | Capire se una richiesta è davvero una sfida di marketing e formularla in modo verificabile. | Un brief della sfida, con evidenze, ipotesi e criteri di successo. | [Release stabile v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.2). |
+| [`choose-marketing-direction`](skills/choose-marketing-direction/) | Confrontare direzioni possibili e scegliere quella più coerente con obiettivi, vincoli e rischi. | Una direzione, con trade-off e assunzioni espliciti. | [Release stabile v0.2.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/choose-marketing-direction-v0.2.1). |
+| [`define-marketing-mix`](skills/define-marketing-mix/) | Tradurre una direzione approvata in decisioni coerenti su Product, Price, Place e Promotion. | Un marketing mix verificabile prima dell'esecuzione. | [Release stabile v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-mix-v0.1.2). |
 
 Le skill per campagne, contenuti e apprendimento sono in roadmap e non vanno considerate disponibili. I builder specializzati, come Carousel Builder, sono moduli esterni e non fanno parte di questo repository.
 
@@ -115,9 +115,9 @@ Usa la cartella:
 skills/define-marketing-challenge
 
 Installa esattamente la versione indicata dal tag:
-define-marketing-challenge-v0.1.1
+define-marketing-challenge-v0.1.2
 
-Prima verifica che il file SKILL.md dichiari la versione 0.1.1.
+Prima verifica che il file SKILL.md dichiari la versione 0.1.2.
 Installa l'intera cartella della skill nel percorso corretto per il tuo ambiente, senza modificare o sostituire altre skill.
 
 Al termine, verifica che la skill sia disponibile in una nuova sessione e dimmi:
@@ -134,9 +134,9 @@ Per installare un'altra skill, sostituisci nome, cartella, tag e numero di versi
 | --- | --- | --- |
 | `setup-business-context` | `skills/setup-business-context` | `setup-business-context-v0.6.2` |
 | `setup-marketing-system` | `skills/setup-marketing-system` | `setup-marketing-system-v0.2.1` |
-| `define-marketing-challenge` | `skills/define-marketing-challenge` | `define-marketing-challenge-v0.1.1` |
-| `choose-marketing-direction` | `skills/choose-marketing-direction` | `choose-marketing-direction-v0.2.0` |
-| `define-marketing-mix` | `skills/define-marketing-mix` | `define-marketing-mix-v0.1.1` |
+| `define-marketing-challenge` | `skills/define-marketing-challenge` | `define-marketing-challenge-v0.1.2` |
+| `choose-marketing-direction` | `skills/choose-marketing-direction` | `choose-marketing-direction-v0.2.1` |
+| `define-marketing-mix` | `skills/define-marketing-mix` | `define-marketing-mix-v0.1.2` |
 
 Fissare una release precisa evita di installare involontariamente una versione di sviluppo del ramo principale.
 

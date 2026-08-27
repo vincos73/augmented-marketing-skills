@@ -22,9 +22,9 @@ skills/define-marketing-mix/
 | Augmented Marketing Assistant (`augmented-marketing-assistant`) | 0.1.0 stabile |
 | Setup Business Context (`setup-business-context`) | 0.6.2 |
 | Setup Marketing System (`setup-marketing-system`) | 0.2.1 |
-| Define Marketing Challenge (`define-marketing-challenge`) | 0.1.1 |
-| Choose Marketing Direction (`choose-marketing-direction`) | 0.2.0 |
-| Define Marketing Mix (`define-marketing-mix`) | 0.1.1 |
+| Define Marketing Challenge (`define-marketing-challenge`) | 0.1.2 |
+| Choose Marketing Direction (`choose-marketing-direction`) | 0.2.1 |
+| Define Marketing Mix (`define-marketing-mix`) | 0.1.2 |
 
 ## ChatGPT sul web
 

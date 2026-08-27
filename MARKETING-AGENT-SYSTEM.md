@@ -150,11 +150,11 @@ Al momento il repository contiene cinque skill sorgente approvate:
 
 - `setup-business-context`: identità aziendale o di brand persistente, verificabile e riusabile.
 - `setup-marketing-system`: regole di marketing stabili, verificabili e riusabili dai workflow a valle.
-- `define-marketing-challenge`: Brief della sfida confermato e pronto al confronto strategico, disponibile come release stabile `v0.1.1`.
-- `choose-marketing-direction`: confronto strategico e Direzione di marketing approvabile, disponibile come release stabile `v0.2.0`.
-- `define-marketing-mix`: traduzione della direzione approvata nelle quattro P, disponibile come release stabile `v0.1.1`.
+- `define-marketing-challenge`: Brief della sfida confermato e pronto al confronto strategico, disponibile come release stabile `v0.1.2`.
+- `choose-marketing-direction`: confronto strategico e Direzione di marketing approvabile, disponibile come release stabile `v0.2.1`.
+- `define-marketing-mix`: traduzione della direzione approvata nelle quattro P, disponibile come release stabile `v0.1.2`.
 
-Le due skill di Strategy Core sono approvate e disponibili come release stabili, con istruzioni di installazione, fixture sintetiche e forward test indipendenti senza hard fail. Non sono automaticamente installate o attive nell'ambiente dell'utente. Gli altri core e le relative competenze restano roadmap o ipotesi da validare. Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione.
+Le tre skill di Strategy Core sono approvate e disponibili come release stabili, con istruzioni di installazione, fixture sintetiche e test senza hard fail. Non sono automaticamente installate o attive nell'ambiente dell'utente. Gli altri core e le relative competenze restano roadmap o ipotesi da validare. Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione.
 
 Le cartelle sotto `skills/` sono sorgenti di authoring, non prova di installazione attiva. Ogni ambiente che supporta skill può richiedere una destinazione, un pacchetto o un adattatore specifico. Authoring, installazione locale e distribuzione restano tre gate distinti, e la presenza della sorgente non dimostra il caricamento nella sessione.
 
@@ -538,15 +538,15 @@ Il Brief della sfida può essere confermato quando i contesti richiesti sono uti
 
 Il fascicolo non viene installato in `AGENTS.md`, `CLAUDE.md` o istruzioni equivalenti: è un artefatto riferito a una decisione, da caricare quando si lavora su quella decisione, non un contesto globale da applicare a ogni attività.
 
-##### Stato della release: 2026-08-26
+##### Stato della release: 2026-08-27
 
-Il blueprint è stato pubblicato come release stabile `v0.1.1` sotto `skills/define-marketing-challenge/`, con `SKILL.md`, metadati UI, template del Brief della sfida, routing delle domande e istruzioni di installazione. Non sono stati aggiunti script o asset perché la prima versione non richiede trasformazioni deterministiche né una superficie visuale. Il primo forward test indipendente non ha rilevato hard fail; la patch chiarisce provenienza, dati aggregati, fallback per brief cliente e conferma senza salvataggio.
+Il blueprint è pubblicato come release stabile `v0.1.2` sotto `skills/define-marketing-challenge/`, con `SKILL.md`, metadati UI, template del Brief della sfida, routing delle domande e istruzioni di installazione. Non sono stati aggiunti script o asset perché la skill non richiede trasformazioni deterministiche né una superficie visuale. La patch rende la prima risposta più proporzionata, elimina note tecniche ridondanti e conserva provenienza, autorità e distinzione tra segnali e cause presunte.
 
 Il catalogo iniziale comprende 18 eval comportamentali, una fixture Relaybird a due turni, un forward test nuovo e una regressione per i brief cliente ricevuti dalle agenzie. Il self-check locale dell'autore ha prodotto una prima risposta di 322 parole, quattro gruppi e tre domande, superando il controllo meccanico di compattezza senza scritture canoniche. Questo controllo non è indipendente perché l'autore conosceva le aspettative della fixture.
 
-La validazione strutturale di `skill-creator`, `git diff --check` e il retest indipendente della `v0.1.1` hanno esito positivo. La release contiene lo ZIP della sola skill e il relativo checksum SHA-256.
+La validazione strutturale di `skill-creator`, `git diff --check` e il [retest sintetico di compattezza della v0.1.2](evals/define-marketing-challenge/runs/2026-08-27-compactness-retest-v0.1.2.md) hanno esito positivo. La [release stabile v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.2) contiene lo ZIP della sola skill e il relativo checksum SHA-256.
 
-#### `choose-marketing-direction`: approvata v0.2.0
+#### `choose-marketing-direction`: approvata v0.2.1
 
 > Come proprietario di una decisione marketing, parto da una sfida confermata, formulo una diagnosi provvisoria e confronto alternative realmente strategiche per scegliere come produrre il cambiamento cercato. Ottengo una direzione approvabile sottoposta a stress test, con trade-off, non-scelte, assunzione più fragile e primo test utile, senza trasformarla prematuramente in marketing mix o campagna.
 
@@ -564,9 +564,9 @@ L'artefatto proposto è:
 .agents/marketing/decisions/<decision-slug>/direction.md
 ```
 
-Usa gli stati `bozza`, `approvata` e `superata`, referenzia la versione esatta di `challenge.md` e richiede sia approvazione della scelta sia autorizzazione al salvataggio. Il [forward test indipendente](evals/choose-marketing-direction/runs/2026-08-26-independent-forward-v0.2.0.md) della v0.2.0 è passato senza hard fail. La [release stabile v0.2.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/choose-marketing-direction-v0.2.0) contiene lo ZIP della sola skill e il relativo checksum. Il passaggio successivo normale è `define-marketing-mix`.
+Usa gli stati `bozza`, `approvata` e `superata`, referenzia la versione esatta di `challenge.md` e richiede sia approvazione della scelta sia autorizzazione al salvataggio. Il [forward test indipendente](evals/choose-marketing-direction/runs/2026-08-26-independent-forward-v0.2.0.md) della v0.2.0 è passato senza hard fail; il [retest sintetico di compattezza della v0.2.1](evals/choose-marketing-direction/runs/2026-08-27-compactness-retest-v0.2.1.md) non ha rilevato hard fail. La [release stabile v0.2.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/choose-marketing-direction-v0.2.1) contiene lo ZIP della sola skill e il relativo checksum. Il passaggio successivo normale è `define-marketing-mix`.
 
-#### `define-marketing-mix`: approvata v0.1.1
+#### `define-marketing-mix`: approvata v0.1.2
 
 > Come responsabile marketing, traduco una direzione approvata in decisioni coerenti su Product, Price, Place e Promotion, rendendo visibili vincoli, ipotesi, dipendenze e proprietari prima di progettare la campagna o altre attivazioni.
 
@@ -585,9 +585,9 @@ L'artefatto proposto è:
 .agents/marketing/decisions/<decision-slug>/marketing-mix.md
 ```
 
-Usa gli stati `bozza`, `approvato` e `superato`, referenzia versioni esatte di sfida e direzione e richiede approvazione del contenuto più autorizzazione al salvataggio. Il [forward test indipendente](evals/define-marketing-mix/runs/2026-08-26-independent-forward-v0.1.1.md) della v0.1.1 è passato senza hard fail. La [release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-mix-v0.1.1) contiene lo ZIP della sola skill e il relativo checksum. La componente Promotion può essere passata a `to-campaign-spec` soltanto quando dipendenze e autorità non rendono l'attivazione prematura.
+Usa gli stati `bozza`, `approvato` e `superato`, referenzia versioni esatte di sfida e direzione e richiede approvazione del contenuto più autorizzazione al salvataggio. Il [forward test indipendente](evals/define-marketing-mix/runs/2026-08-26-independent-forward-v0.1.1.md) della v0.1.1 è passato senza hard fail; il [retest sintetico di compattezza della v0.1.2](evals/define-marketing-mix/runs/2026-08-27-compactness-retest-v0.1.2.md) non ha rilevato hard fail. La [release stabile v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-mix-v0.1.2) contiene lo ZIP della sola skill e il relativo checksum. La componente Promotion può essere passata a `to-campaign-spec` soltanto quando dipendenze e autorità non rendono l'attivazione prematura.
 
-Le due release includono `SKILL.md`, metadati UI, istruzioni di installazione, reference, cataloghi comportamentali e pacchetti verificabili. La validazione strutturale e i forward test non equivalgono a una prova con marketer reali né autorizzano l'esecuzione delle attività descritte dalle skill.
+Le release dello Strategy Core includono `SKILL.md`, metadati UI, istruzioni di installazione, reference, cataloghi comportamentali e pacchetti verificabili. La validazione strutturale e gli eval sintetici non equivalgono a una prova con marketer reali né autorizzano l'esecuzione delle attività descritte dalle skill.
 
 ### 4. Campaign Core
 
