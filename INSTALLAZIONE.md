@@ -78,7 +78,7 @@ Al termine, indica come installarlo dal catalogo disponibile e ricorda di provar
 | Choose Marketing Direction | `0.2.2` |
 | Define Marketing Mix | `0.1.3` |
 
-Questa è documentazione della beta locale: una versione dichiarata qui non implica che esistano già tag o release GitHub con lo stesso numero.
+Questa documentazione corrisponde alla [release GitHub della Suite beta.7](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.7). Le singole skill non richiedono necessariamente un tag separato quando sono distribuite insieme alla Suite.
 
 ## Verifica prima del test
 

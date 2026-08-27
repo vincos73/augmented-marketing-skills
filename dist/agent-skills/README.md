@@ -25,4 +25,4 @@ Questi archivi contengono esclusivamente le cinque skill specialistiche. Non inc
 
 - L'upload e la selezione automatica dipendono da prodotto, piano, amministratore e versione dell'ambiente.
 - Allegare uno ZIP a una chat normale non prova l'installazione persistente.
-- Questo pacchetto beta locale non è una release GitHub pubblicata.
+- Questo pacchetto fa parte della release GitHub di Augmented Marketing Suite beta.7.

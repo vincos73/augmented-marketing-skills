@@ -69,7 +69,7 @@ Solo dopo puoi passare a pagine, campagne e contenuti. Le competenze per campagn
 
 ## Ultime versioni pubblicate
 
-Queste sono le ultime versioni pubblicate e taggate singolarmente. La sorgente della beta.7 locale prepara le versioni successive, indicate nel manifesto degli artefatti, ma non le presenta come release GitHub già pubblicate.
+Queste sono le ultime versioni pubblicate e taggate singolarmente. Le versioni beta.7 delle cinque skill sono pubblicate insieme nella [release della Suite beta.7](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.7), con gli archivi e i checksum nel repository.
 
 | Skill | Versione stabile | Risultato principale |
 | --- | --- | --- |
@@ -90,13 +90,13 @@ Queste sono le ultime versioni pubblicate e taggate singolarmente. La sorgente d
 
 ### Per Claude o ChatGPT: una skill alla volta
 
-La beta.7 locale produce un archivio ZIP per ciascuna delle cinque skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Ogni archivio contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
+La beta.7 pubblicata offre un archivio ZIP per ciascuna delle cinque skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Ogni archivio contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
 
 Scegli la skill che ti serve, caricala con il meccanismo di skill del tuo ambiente e avvia una nuova chat. Claude non usa l'Assistant incluso nella Suite OpenAI, quindi gli archivi portabili contengono soltanto le cinque skill specialistiche.
 
 ### Per ChatGPT e Codex: Suite completa
 
-La beta.7 locale produce anche [`dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip`](dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip), con il manifesto `.codex-plugin` e tutte e sei le skill, incluso Augmented Marketing Assistant. Segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
+La beta.7 pubblicata offre anche [`dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip`](dist/openai/augmented-marketing-suite-0.1.0-beta.7.zip), con il manifesto `.codex-plugin` e tutte e sei le skill, incluso Augmented Marketing Assistant. Segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
 
 > Allegare uno ZIP a una chat normale consente di leggerlo, ma non registra automaticamente un plugin o una skill. Usa soltanto il flusso di installazione disponibile nel tuo account o workspace.
 
