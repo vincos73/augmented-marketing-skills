@@ -2,7 +2,7 @@
 name: setup-business-context
 description: "Costruisce, aggiorna e installa un contesto identitario per un'azienda o un brand, basato su fonti. Usala quando un responsabile vuole far conoscere un'attività agli agenti prima di lavorare su temi aziendali, quando apre un nuovo workspace o quando il contesto esistente manca o non è più attuale. Non usarla per creare strategia, campagne, identità visiva o configurazioni di strumenti."
 metadata:
-  version: "0.6.2"
+  version: "0.6.3"
 ---
 
 # Configurazione del contesto aziendale

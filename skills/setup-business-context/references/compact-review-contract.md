@@ -16,6 +16,8 @@ La risposta deve:
 8. rinviare il dettaglio completo al gate 1 invece di trasformare la prima revisione in un inventario.
 9. usare etichette naturali per il manager, senza calchi del modello dati o campi del template esposti meccanicamente;
 10. non mostrare entità HTML, serializzazioni o caratteri codificati come `&#x20;`.
+11. trattare ciascuna domanda come una decisione principale: non accorpare nella stessa domanda lacune che richiedono responsabili o percorsi diversi, come pagatore, privacy e approvazione dei claim;
+12. se mostra percorso o versione prima dell'approvazione, presentarli come proposta e dichiarare esplicitamente che l'identità non è stata salvata né installata per gli agenti.
 
 Il tetto di 450 parole è un limite operativo, non un obiettivo da raggiungere. Una risposta più breve è preferibile se conserva comprensione, provenienza e guardrail.
 

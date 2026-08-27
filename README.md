@@ -49,7 +49,20 @@ L'Assistant non sostituisce né duplica le skill: non formula la sfida, non sceg
 
 [**Augmented Marketing Assistant v0.1.0**](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-assistant-v0.1.0) è la componente stabile inclusa nella Suite beta 0.1.0-beta.5. La correzione del soft fail rilevato nella beta.4 ha superato un [regression test runtime in Codex con tre PASS](evals/augmented-marketing-assistant/runs/2026-08-27-codex-runtime-smoke-beta5.md): richiesta ambigua, selezione diretta della skill e handoff reale verso una skill specialistica. Restano disponibili gli [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md), il [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md) e il test reale su ChatGPT Web. La Suite non è stata validata con un pilot di marketer esterni o verificata in modo completo su più piattaforme.
 
+## Stato della candidate e test comparativo
+
+Le modifiche recenti a `setup-business-context` e `setup-marketing-system` sono candidate in sorgente, non ancora release stabili né installate come versioni di controllo:
+
+- `setup-business-context` v0.6.3, rispetto alla release stabile v0.6.2;
+- `setup-marketing-system` v0.3.0, rispetto alla release stabile v0.2.1.
+
+Il [forward test comparativo cieco](evals/comparative-blind/2026-08-27-forward-v2/report.md) usa sei fixture sintetiche, dodici giudizi accoppiati con ordine A/B invertito e un valutatore descritto come marketer strategico senior con almeno 15 anni di esperienza. La mappatura tra versione e risposta è stata mantenuta separata dai pacchetti di valutazione. Nel perimetro dell'eval, la candidate ha ottenuto un gap medio di +0,67 per `setup-business-context`, +0,83 per `setup-marketing-system` e +0,75 complessivo su scala 1-5, con preferenza della candidate in 12 casi su 12 e zero hard fail.
+
+Questi sono risultati di un eval controllato su casi sintetici. Non dimostrano efficacia con utenti reali, risultati di business, superiorità generale o validazione su più ambienti. La suite è pronta per un test esterno controllato delle candidate; la decisione di trasformarle in release stabili va presa dopo quella verifica.
+
 ## Le skill disponibili
+
+La tabella riporta le versioni stabili installabili dalla Suite. Le candidate indicate sopra non vanno installate da `main` come se fossero release versionate.
 
 | Skill | A cosa serve | Risultato | Stato |
 | --- | --- | --- | --- |

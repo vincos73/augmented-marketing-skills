@@ -19,6 +19,8 @@ Classifica inoltre se il gap è bloccante, rilevante ma non bloccante, oppure sp
 
 Quando una fonte esistente potrebbe cambiare una regola stabile, chiedi esplicitamente al manager di caricarla o citarla prima di trasformare il vuoto informativo in una domanda decisionale. Indica sempre perché è utile e lascia libera la scelta di proseguire senza il documento.
 
+Se una fonte o il responsabile ha già classificato un materiale come `esiste ma non è disponibile`, `non definito`, `sconosciuto al referente` o `non applicabile`, considera risolta la classificazione per il turno corrente. Registra lo stato e il comportamento prudente senza chiedere di nuovo se il materiale esiste o sia disponibile. Puoi chiedere un diverso riferimento approvato soltanto se potrebbe sbloccare una regola materiale e le fonti non ne hanno già escluso la disponibilità.
+
 Per gli standard editoriali, visivi e di qualità, chiedi in modo esplicito linee guida verbali, brand book, linee guida visuali, template o esempi approvati. Per messaggi e prove, chiedi messaggi approvati, claim sheet, casi, fonti delle credenziali o pagine autorizzate. Per i controlli, chiedi procedure di approvazione o policy esistenti. Non chiedere tutte le categorie se non incidono sul perimetro.
 
 ## Ordina per conseguenza
@@ -39,7 +41,9 @@ Inizia con una proposta provvisoria compatta ricavata dall'identità e dai mater
 
 - entità e perimetro utilizzati;
 - le regole stabili più solide nelle cinque aree;
+- alternative reali o status quo e divieti identitari che cambiano il comportamento di marketing;
 - conflitti rilevanti, claim non supportati o rischi di autorità;
+- elementi temporanei in conflitto da rinviare a un brief o a un'altra decisione, senza trasformarli in regole permanenti;
 - non più di tre domande che potrebbero cambiare la preparazione all'approvazione;
 - una chiave compatta delle fonti.
 

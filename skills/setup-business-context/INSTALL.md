@@ -2,11 +2,11 @@
 
 Questo pacchetto contiene solo la skill installabile. Non contiene identità aziendali, brand profile o file `AGENTS.md`/`CLAUDE.md`.
 
-La versione della sorgente, della release e della copia attualmente installata è `0.6.2`.
+Questa sorgente candidata dichiara `0.6.3`. La release stabile e la copia locale osservata al momento di questa modifica restano `0.6.2`: la presenza della candidata nella sorgente non dimostra che sia stata pubblicata o installata.
 
 ## Installazione da ZIP
 
-1. Scarica uno ZIP ufficiale della versione che vuoi installare oppure usa la sorgente verificata; la copia attualmente installata deve dichiarare `0.6.2` in `SKILL.md`.
+1. Scarica uno ZIP ufficiale della versione che vuoi installare oppure usa la sorgente verificata; la versione dichiarata in `SKILL.md` deve coincidere con la versione che hai scelto.
 2. Verifica lo ZIP con il file `SHA256SUMS` della stessa release quando la verifica dell'integrità è richiesta.
 3. Estrai lo ZIP. Deve contenere una sola cartella radice: `setup-business-context/`.
 4. Copia quella cartella in `~/.codex/skills/`.
@@ -26,10 +26,10 @@ Apri le prime righe di `SKILL.md` e verifica che riportino:
 ```yaml
 name: setup-business-context
 metadata:
-  version: "0.6.2"
+  version: "0.6.3"
 ```
 
-Per verificare la parità del pacchetto puoi confrontare il checksum dello ZIP con il file `SHA256SUMS` della release.
+Il valore sopra descrive questa sorgente candidata. Per uno ZIP di release verifica invece la versione dichiarata dalla release e confronta il checksum con il relativo file `SHA256SUMS`.
 
 ## Dopo l'installazione
 
