@@ -47,7 +47,7 @@ Ogni skill produce un artefatto che può essere rivisto, corretto, approvato e u
 
 L'Assistant non sostituisce né duplica le skill: non formula la sfida, non sceglie la direzione e non definisce il marketing mix. Mantiene la continuità della conversazione mentre ogni skill conserva metodo, artefatto e gate di approvazione propri.
 
-La versione corrente è la beta 0.1.0-beta.1, accompagnata da [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md) e da un [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md). È distribuita in un pacchetto neutro con le cinque skill, ma non è ancora stata validata con un pilot di marketer esterni o verificata in modo completo su più piattaforme.
+La versione corrente è la beta 0.1.0-beta.2, accompagnata da [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md) e da un [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md). La beta.2 aggiunge un plugin OpenAI installabile per ChatGPT e Codex. Non è ancora stata validata con un pilot di marketer esterni o verificata in modo completo su più piattaforme.
 
 ## Le skill disponibili
 
@@ -90,23 +90,18 @@ Il contratto e i relativi scenari di verifica sono descritti in [PORTABILITA.md]
 
 ## Installazione
 
-Puoi installare il pacchetto completo, con l'Assistant e tutte le skill, oppure scegliere soltanto le skill che ti servono.
+Puoi installare il plugin completo per ChatGPT e Codex oppure scegliere soltanto le skill che ti servono.
 
-> [!NOTE]
-> Il pacchetto beta è portabile, ma non è un plugin universale. ChatGPT, Claude, Codex e altri agenti possono usare procedure diverse per caricare un agente o un'istruzione persistente. Le istruzioni non devono far credere che un file sia stato caricato soltanto perché è presente sul disco.
+> [!IMPORTANT]
+> Allegare lo ZIP a una chat normale non installa il plugin. ChatGPT deve registrarlo attraverso il catalogo Plugin. Finché la beta non è pubblicata nel catalogo generale, occorre aggiungerla come plugin personale con Plugin Creator, se disponibile per l'account o il workspace.
 
-### 1. Installa il pacchetto completo
+### 1. Plugin completo per ChatGPT e Codex
 
-Scarica la [release beta dell'Augmented Marketing Assistant](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-assistant-v0.1.0-beta.1), estrai lo ZIP e segui [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
+Scarica la [release beta.2 dell'Augmented Marketing Assistant](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-assistant-v0.1.0-beta.2) e segui [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
 
-Il pacchetto contiene la definizione dell'Assistant e le versioni stabili delle cinque skill. L'installazione ha due passaggi distinti:
+Il plugin contiene le cinque skill stabili e un adattatore tecnico (`augmented-marketing-assistant`) che rende l'Assistant caricabile su OpenAI senza duplicare il metodo delle skill specialistiche. Non include MCP, connector o automazioni.
 
-1. copiare le cartelle delle skill nel percorso previsto dall'ambiente;
-2. configurare la definizione dell'Assistant come agente o istruzione persistente con il meccanismo supportato dall'ambiente.
-
-Dopo l'installazione, apri una nuova sessione e scrivi, per esempio:
-
-> Aiutami a capire da dove iniziare con questa attività di marketing usando Augmented Marketing Assistant.
+Dopo l'installazione, apri una nuova chat e richiama l'Assistant con una menzione `@`, oppure descrivi direttamente il bisogno.
 
 ### 2. Chiedi al tuo agente di installare una singola skill
 

@@ -1,6 +1,6 @@
 ---
 artifact: augmented-marketing-assistant
-version: 0.1.0-beta.1
+version: 0.1.0-beta.2
 status: beta
 last_reviewed: 2026-08-27
 scope: "Ingresso conversazionale alle skill di Augmented Marketing Skills"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Augmented Marketing Assistant"
+  short_description: "Orienta il lavoro verso la skill di marketing utile"
+  default_prompt: "Usa $augmented-marketing-assistant per capire da quale passaggio di marketing iniziare."

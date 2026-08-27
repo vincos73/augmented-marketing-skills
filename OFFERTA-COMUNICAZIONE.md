@@ -1,6 +1,6 @@
 ---
 artifact: offer-communication
-version: 3
+version: 4
 status: bozza
 last_reviewed: 2026-08-27
 scope: "Fonte di lavoro per posizionamento, README pubblico e materiali di comunicazione di Augmented Marketing Skills"
@@ -120,7 +120,7 @@ La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è 
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Assistant | Beta 0.1.0-beta.1 distribuita in un pacchetto neutro con le cinque skill; non ancora validata con un pilot esterno o verificata in modo completo su più piattaforme |
+| Augmented Marketing Assistant | Beta 0.1.0-beta.2 con plugin OpenAI e cinque skill stabili; installazione nell'account ChatGPT e comportamento multipiattaforma ancora da verificare separatamente |
 | Business Identity | Skill approvata; verificare nel README la versione sorgente e quella pubblicata |
 | Marketing Foundations | Skill approvata e disponibile come release stabile |
 | Brief della sfida | Skill approvata e disponibile come release stabile |
@@ -333,6 +333,7 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 
 ## Registro modifiche
 
-- v3, 2026-08-27: introdotto Augmented Marketing Assistant come ingresso conversazionale, poi promosso alla beta 0.1.0-beta.1 e separato dalla logica delle skill.
+- v4, 2026-08-27: aggiunto il plugin OpenAI beta.2 e distinto il suo adattatore tecnico dal ruolo dell'Assistant.
+- v3, 2026-08-27: introdotto Augmented Marketing Assistant come ingresso conversazionale e promosso alla beta, separandolo dalla logica delle skill.
 - v2, 2026-08-27: allineato lo stato di Direzione di marketing e Marketing Mix alle release stabili e aggiunto il riferimento al contratto di portabilità.
 - v1, 2026-08-26: prima formulazione dell'offerta, della promessa, dei confini dei claim e delle linee guida per README e comunicazione.

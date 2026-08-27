@@ -1,13 +1,14 @@
 # Installazione di Augmented Marketing Assistant
 
-Questo pacchetto beta riunisce Augmented Marketing Assistant e le cinque skill disponibili di Augmented Marketing Skills.
+La beta 0.1.0-beta.2 è un plugin OpenAI per ChatGPT e Codex. Riunisce le cinque skill disponibili e un adattatore tecnico che espone Augmented Marketing Assistant negli ambienti OpenAI.
 
-Non è un plugin universale. Le skill seguono una struttura portabile basata su cartelle con `SKILL.md`; il modo in cui un ambiente registra un agente o carica istruzioni persistenti può invece cambiare.
+Non include MCP, connector, hook o automazioni.
 
-## Contenuto del pacchetto
+## Contenuto
 
 ```text
-agents/augmented-marketing-assistant.md
+.codex-plugin/plugin.json
+skills/augmented-marketing-assistant/
 skills/setup-business-context/
 skills/setup-marketing-system/
 skills/define-marketing-challenge/
@@ -15,71 +16,61 @@ skills/choose-marketing-direction/
 skills/define-marketing-mix/
 ```
 
-Le versioni incluse sono:
-
 | Componente | Versione |
 | --- | --- |
-| Augmented Marketing Assistant | 0.1.0-beta.1 |
+| Plugin Augmented Marketing Assistant | 0.1.0-beta.2 |
+| Adattatore OpenAI (`augmented-marketing-assistant`) | 0.1.0-beta.2 |
 | Setup Business Context (`setup-business-context`) | 0.6.2 |
 | Setup Marketing System (`setup-marketing-system`) | 0.2.1 |
 | Define Marketing Challenge (`define-marketing-challenge`) | 0.1.1 |
 | Choose Marketing Direction (`choose-marketing-direction`) | 0.2.0 |
 | Define Marketing Mix (`define-marketing-mix`) | 0.1.1 |
 
-## Installazione assistita
+## ChatGPT sul web
 
-Apri una nuova conversazione nel tuo ambiente e fornisci lo ZIP oppure il link alla release. Puoi usare questa richiesta:
+Allegare lo ZIP a una chat normale permette a ChatGPT di leggerne i file, ma non registra il plugin e non rende le skill disponibili nelle chat successive.
+
+Finché questa beta non è presente nel catalogo Plugin generale, installala come plugin personale soltanto se Plugin Creator è disponibile nel tuo account o workspace:
+
+1. apri una nuova chat in modalità Work;
+2. richiama Plugin Creator (`@plugin-creator`);
+3. allega lo ZIP della beta.2;
+4. usa la richiesta seguente;
+5. al termine, apri il catalogo Plugin e verifica la sezione personale o “Created by me”;
+6. installa il plugin e avvia una nuova chat.
 
 ````text
-Installa Augmented Marketing Assistant 0.1.0-beta.1 e le cinque skill incluse in questo pacchetto.
+Crea un plugin personale dal pacchetto allegato Augmented Marketing Assistant 0.1.0-beta.2.
 
-Prima di modificare file o configurazioni:
-1. individua i percorsi supportati dal mio ambiente per skill e istruzioni persistenti o agenti;
-2. spiegami quali file copierai e dove;
-3. non sovrascrivere componenti esistenti senza il mio consenso.
+Verifica che la radice contenga .codex-plugin/plugin.json e che il manifesto dichiari skills/ come directory delle skill. Non aggiungere MCP, connector, hook o altri componenti.
 
-Installa ogni cartella completa contenuta in skills/. Configura agents/augmented-marketing-assistant.md come agente o istruzione persistente soltanto con un meccanismo documentato e disponibile nel mio ambiente. Non trasformare l'Assistant in una nuova skill e non dichiararlo caricato se hai verificato soltanto la presenza del file.
-
-Al termine, apri o richiedi una nuova sessione e verifica separatamente:
-- percorso e versione di ciascuna skill;
-- disponibilità delle skill nella nuova sessione;
-- caricamento effettivo dell'Assistant;
-- modalità con cui posso invocarlo.
-
-Se il mio ambiente non supporta una delle operazioni, fermati e indicami il passaggio manuale minimo.
+Registra il plugin nel mio marketplace personale senza modificare le skill incluse. Al termine dimmi come installarlo dal catalogo Plugin e ricordami di provarlo in una nuova chat.
 ````
 
-L'installazione del contenuto non autorizza l'agente a cambiare altre istruzioni, plugin o configurazioni non necessarie.
+Se Plugin Creator o i plugin personali non sono disponibili, lo ZIP non può essere installato direttamente da una chat normale. In quel caso è possibile soltanto ispezionarlo oppure installare separatamente le singole skill con il meccanismo disponibile nell'ambiente.
 
-## Installazione manuale
+## Codex
 
-1. Estrai lo ZIP senza modificare la struttura delle cartelle.
-2. Copia ciascuna cartella contenuta in `skills/` nella directory delle skill prevista dal tuo ambiente.
-3. Conserva l'intera cartella di ogni skill, inclusi `references/`, `agents/`, esempi e istruzioni di installazione.
-4. Usa il meccanismo documentato dal tuo ambiente per registrare o caricare `agents/augmented-marketing-assistant.md` come agente o istruzione persistente.
-5. Apri una nuova sessione e verifica che le cinque skill siano visibili e che l'Assistant sia stato effettivamente caricato.
-
-La semplice presenza dei file sul disco non dimostra che una sessione già aperta li abbia caricati.
+Il pacchetto usa lo stesso manifesto OpenAI. Aggiungilo attraverso un marketplace personale o di progetto e installalo dal catalogo Plugin. Dopo l'installazione, avvia una nuova sessione: la presenza dei file sul disco non dimostra che la sessione corrente li abbia caricati.
 
 ## Come iniziare
 
-Non devi conoscere il nome delle skill. In una nuova sessione puoi scrivere:
-
-> Aiutami a capire da dove iniziare con questa attività di marketing usando Augmented Marketing Assistant.
+In ChatGPT puoi richiamare esplicitamente l'adattatore con una menzione `@` e il nome Augmented Marketing Assistant. In Codex puoi richiamarlo con `$augmented-marketing-assistant`.
 
 Puoi anche descrivere direttamente il bisogno, per esempio:
 
 > Vorrei che l'agente conoscesse bene la mia organizzazione prima di aiutarmi con il marketing.
 
-L'Assistant deve spiegare prima il passaggio utile in linguaggio comune e mostrare soltanto dopo il nome tecnico della skill pertinente, tra parentesi.
+L'Assistant deve spiegare prima il passaggio utile in linguaggio comune e indicare poi tra parentesi il nome tecnico della skill pertinente.
 
-## Verifica e limiti della beta
+## Verifica della beta
 
-Il pacchetto è stato verificato strutturalmente e l'Assistant ha superato scenari conversazionali interni e un test cieco in una sessione Codex separata. Non sono ancora dimostrati:
+La beta.2 può essere validata strutturalmente e installata come plugin OpenAI. Restano da verificare con test separati:
 
-- l'installazione nativa con un unico gesto su tutti gli agenti;
-- il comportamento completo su piattaforme diverse;
-- la comprensibilità presso un campione di marketer esterni;
-- l'handoff end-to-end dopo la produzione e l'approvazione di tutti gli artefatti.
+- l'installazione effettiva nell'account ChatGPT dell'utente;
+- il caricamento delle sei skill in una nuova chat;
+- l'handoff completo dall'Assistant alla skill pertinente;
+- la comprensibilità presso marketer esterni;
+- gli adattatori per piattaforme diverse da OpenAI.
 
-Plugin specifici per singole piattaforme potranno essere aggiunti come adattatori separati senza cambiare il nucleo del metodo.
+La beta.1 resta un archivio neutro per installazioni manuali. Non deve essere presentata come plugin ChatGPT.

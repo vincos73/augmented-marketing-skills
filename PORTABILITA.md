@@ -1,6 +1,6 @@
 ---
 artifact: portability-contract
-version: 1
+version: 2
 status: approvato
 last_reviewed: 2026-08-27
 scope: "Contratto minimo di portabilità per skill installabili di Augmented Marketing Skills"
@@ -80,6 +80,12 @@ Un adattatore può migliorare scoperta, caricamento, diagnostica o sicurezza, ma
 
 Le istruzioni essenziali devono restare nella cartella distribuibile della singola skill. Un pacchetto installato separatamente non deve dipendere dalla presenza di questo documento nel repository.
 
+### Adattatore OpenAI osservato
+
+Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Per ChatGPT e Codex, la beta.2 usa un manifesto `.codex-plugin/plugin.json` e presenta Augmented Marketing Assistant come skill tecnica di coordinamento (`augmented-marketing-assistant`). Questa forma non cambia la natura del prodotto: l'Assistant continua a orientare, mentre le cinque skill specialistiche possiedono metodo, artefatti e approvazioni.
+
+L'adattatore OpenAI non introduce MCP, connector o nuove capacità di marketing. La sua installazione e il suo caricamento devono essere verificati in una nuova chat o sessione.
+
 ## Verifica minima
 
 Ogni skill nuova o aggiornata deve essere verificata almeno in questi scenari:
@@ -100,3 +106,8 @@ La verifica strutturale dimostra la validità del pacchetto, non la portabilità
 - se introdurre un manifest comune di release;
 - quando un caso d'uso ripetuto giustifica un connector dedicato;
 - come documentare in modo uniforme le capability osservate a runtime.
+
+## Registro modifiche
+
+- v2, 2026-08-27: documentato l'adattatore OpenAI dopo il fallimento osservato del bundle neutro su ChatGPT Web.
+- v1, 2026-08-27: definito il contratto minimo indipendente dalla piattaforma.
