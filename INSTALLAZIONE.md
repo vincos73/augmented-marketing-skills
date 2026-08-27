@@ -20,8 +20,8 @@ skills/define-marketing-mix/
 | --- | --- |
 | Plugin Augmented Marketing Suite (`augmented-marketing-suite`) | 0.1.0-beta.5 |
 | Augmented Marketing Assistant (`augmented-marketing-assistant`) | 0.1.0 stabile |
-| Setup Business Context (`setup-business-context`) | 0.6.2 |
-| Setup Marketing System (`setup-marketing-system`) | 0.2.1 |
+| Setup Business Context (`setup-business-context`) | 0.6.3 |
+| Setup Marketing System (`setup-marketing-system`) | 0.3.0 |
 | Define Marketing Challenge (`define-marketing-challenge`) | 0.1.2 |
 | Choose Marketing Direction (`choose-marketing-direction`) | 0.2.1 |
 | Define Marketing Mix (`define-marketing-mix`) | 0.1.2 |

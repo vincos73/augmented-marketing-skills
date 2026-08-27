@@ -2,7 +2,7 @@
 
 Questo pacchetto contiene solo la skill installabile. Non contiene Business Identity, Fondamenti di marketing o file `AGENTS.md`/`CLAUDE.md` dell'organizzazione.
 
-Questa sorgente candidata dichiara `0.3.0`. La release stabile e la copia locale osservata al momento di questa modifica restano `0.2.1`: la presenza della candidata nella sorgente non dimostra che sia stata pubblicata o installata.
+Questa è la versione stabile `0.3.0` della skill. Il pacchetto contiene solo la cartella installabile `setup-marketing-system`.
 
 ## Installazione da ZIP
 
@@ -29,7 +29,7 @@ metadata:
   version: "0.3.0"
 ```
 
-Il valore sopra descrive questa sorgente candidata. Per uno ZIP di release verifica invece la versione dichiarata dalla release e confronta il checksum con il relativo file `SHA256SUMS`.
+Per uno ZIP di release confronta la versione dichiarata dalla release e il checksum con il relativo file `SHA256SUMS`.
 
 ## Dopo l'installazione
 
@@ -37,4 +37,4 @@ La skill sarà disponibile per le attività successive. Avvia una nuova attivit�
 
 ## Installazione dalla sorgente GitHub
 
-Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/setup-marketing-system`, fissando un commit o il tag `setup-marketing-system-v0.2.1` che contenga davvero la versione `0.2.1`. Questo metodo non sostituisce la verifica della versione e della destinazione locale.
+Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/setup-marketing-system`, fissando un commit o il tag `setup-marketing-system-v0.3.0` che contenga davvero la versione `0.3.0`. Questo metodo non sostituisce la verifica della versione e della destinazione locale.

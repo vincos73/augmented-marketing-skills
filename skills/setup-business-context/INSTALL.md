@@ -2,7 +2,7 @@
 
 Questo pacchetto contiene solo la skill installabile. Non contiene identità aziendali, brand profile o file `AGENTS.md`/`CLAUDE.md`.
 
-Questa sorgente candidata dichiara `0.6.3`. La release stabile e la copia locale osservata al momento di questa modifica restano `0.6.2`: la presenza della candidata nella sorgente non dimostra che sia stata pubblicata o installata.
+Questa è la versione stabile `0.6.3` della skill. Il pacchetto contiene solo la cartella installabile `setup-business-context`.
 
 ## Installazione da ZIP
 
@@ -29,7 +29,7 @@ metadata:
   version: "0.6.3"
 ```
 
-Il valore sopra descrive questa sorgente candidata. Per uno ZIP di release verifica invece la versione dichiarata dalla release e confronta il checksum con il relativo file `SHA256SUMS`.
+Per uno ZIP di release confronta la versione dichiarata dalla release e il checksum con il relativo file `SHA256SUMS`.
 
 ## Dopo l'installazione
 
@@ -37,4 +37,4 @@ La skill sarà disponibile per le attività successive. Avvia una nuova attivit�
 
 ## Installazione dalla sorgente GitHub
 
-Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/setup-business-context`, fissando il tag `setup-business-context-v0.6.2` che contiene la versione `0.6.2`. Questo metodo non sostituisce la verifica della versione e della destinazione locale.
+Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/setup-business-context`, fissando il tag `setup-business-context-v0.6.3` che contiene la versione `0.6.3`. Questo metodo non sostituisce la verifica della versione e della destinazione locale.
