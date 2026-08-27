@@ -32,13 +32,17 @@ Nome di lavoro: **Marketing Decision Skills**. Alternativa editoriale: **Marketi
 ## Architettura proposta
 
 ```text
-setup-business-context  (fondazione autonoma: fatti durevoli su azienda e brand)
-        ↓ riferimento, non duplicazione
-setup-marketing-system  (punto d'ingresso e profilo operativo)
+Augmented Marketing Assistant  (ingresso conversazionale e orientamento)
+        ├── setup-business-context  (identità durevole di azienda o brand)
+        ├── setup-marketing-system  (Fondamenti di marketing)
         ├── Strategy Core  → define-marketing-challenge → choose-marketing-direction → define-marketing-mix
         ├── Campaign Core  → to-campaign-spec → campaign-review → learn-from-results
         └── Content Core   → Content Director → builder specializzati
 ```
+
+**Augmented Marketing Assistant** è un agente sottile, non un nuovo core e non una sesta skill. Riceve il bisogno nel linguaggio dell'utente, verifica soltanto stati e artefatti osservabili, spiega il passaggio utile e attiva la skill pertinente. Non possiede logica strategica, artefatti o approvazioni propri e non impone il percorso completo quando l'input necessario esiste già.
+
+La [definizione canonica della beta 0.1.0-beta.1](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Gli adattatori di installazione per i singoli ambienti sono una decisione di packaging separata. Gli [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md) e il [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md) verificano instradamento e confini, ma non equivalgono a un pilot con marketer esterni.
 
 I tre core non sono cartelle decorative e non devono diventare tre agenti generalisti. Sono famiglie di decisioni con artefatti e confini diversi:
 
@@ -46,7 +50,7 @@ I tre core non sono cartelle decorative e non devono diventare tre agenti genera
 - **Campaign Core:** traduce la componente Promotion e le attivazioni pertinenti di un marketing mix approvato in un sistema coordinato di messaggi, canali, asset, responsabilità, misure e apprendimento;
 - **Content Core:** valuta e produce singoli contenuti o famiglie di contenuti, mantenendo il giudizio specifico nei builder.
 
-`setup-marketing-system` è l'onboarding del framework, non un quarto core. Aiuta l'organizzazione a definire e approvare le regole di marketing stabili che un agente deve conoscere prima di qualsiasi attività di marketing. Parte dal business context canonico e dalle regole, decisioni, materiali e pratiche reali già disponibili; quando una regola operativa essenziale manca, può guidarne la formulazione invece di limitarsi a registrare il vuoto. Costruisce un profilo operativo riusabile dai tre core. Per aziende multi-brand può mantenere un livello aziendale e overlay di brand, sempre referenziando le identità canoniche create da `setup-business-context` invece di copiarle.
+`setup-marketing-system` è l'onboarding delle Marketing Foundations, non il punto d'ingresso generale e non un quarto core. Aiuta l'organizzazione a definire e approvare le regole di marketing stabili che un agente deve conoscere prima di qualsiasi attività di marketing. Parte dal business context canonico e dalle regole, decisioni, materiali e pratiche reali già disponibili; quando una regola operativa essenziale manca, può guidarne la formulazione invece di limitarsi a registrare il vuoto. Costruisce un profilo operativo riusabile dai tre core. Per aziende multi-brand può mantenere un livello aziendale e overlay di brand, sempre referenziando le identità canoniche create da `setup-business-context` invece di copiarle.
 
 Ogni regola formulata con l'aiuto dell'agente resta una proposta finché un responsabile non la approva esplicitamente. La skill può facilitare la definizione di standard operativi persistenti, ma non deve trasformare il setup in una strategia completa, scegliere autonomamente obiettivi, segmenti, posizionamento, budget o campagne, né presentare una raccomandazione come decisione aziendale già adottata.
 
@@ -241,9 +245,9 @@ Il FYI indica almeno entità e versioni della business identity, delle Marketing
 
 Se un artefatto richiesto manca, è illeggibile, non approvato, incoerente o materialmente obsoleto, l'agente sostituisce il FYI con un avviso esplicito e azionabile; non afferma di aver applicato un profilo valido. Le domande generiche sul marketing e i messaggi di puro coordinamento non richiedono il FYI.
 
-#### Ingresso unico e dipendenza dal business context — decisione approvata
+#### Percorso continuo delle Foundations e dipendenza dal business context — decisione approvata
 
-Dal punto di vista del responsabile, `setup-marketing-system` è un unico punto d'ingresso anche quando il business context non è ancora stato creato. All'avvio verifica l'identità canonica pertinente:
+Nel percorso dedicato alle Marketing Foundations, `setup-marketing-system` mantiene la continuità anche quando il business context non è ancora stato creato. All'avvio verifica l'identità canonica pertinente:
 
 - se è approvata e utilizzabile, procede con le Marketing Foundations;
 - se manca o deve essere aggiornata e `setup-business-context` è disponibile, orchestra nello stesso dialogo la creazione o l'aggiornamento del contesto minimo necessario, riutilizzando materiali e risposte già acquisiti;
@@ -597,11 +601,12 @@ Le due release includono `SKILL.md`, metadati UI, istruzioni di installazione, r
 ### Ordine di costruzione
 
 1. `setup-business-context` — fondazione riusabile consolidata;
-2. progettare e testare `setup-marketing-system` come punto d'ingresso;
+2. progettare e testare `setup-marketing-system` come onboarding delle Marketing Foundations;
 3. validare lo Strategy Core con `define-marketing-challenge` + `choose-marketing-direction` + `define-marketing-mix`;
-4. collegare il primo percorso Content ai builder già esistenti;
-5. introdurre il Campaign Core quando esistono marketing mix approvati da tradurre in attivazioni;
-6. aggiungere apprendimento continuo e monitoring solo nei processi che mostrano un uso ripetuto.
+4. testare `Augmented Marketing Assistant` come ingresso comprensibile alle cinque skill disponibili;
+5. collegare il primo percorso Content ai builder già esistenti;
+6. introdurre il Campaign Core quando esistono marketing mix approvati da tradurre in attivazioni;
+7. aggiungere apprendimento continuo e monitoring solo nei processi che mostrano un uso ripetuto.
 
 ## Content Director: responsabilità e confini
 
@@ -701,12 +706,13 @@ Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, defini
 - Il perimetro minimo comprende agenti che possono installare e caricare skill; i chatbot privi di skill non sono un target. Filesystem, connector, subagenti, viste visuali e automazioni sono capability da osservare, non da presumere.
 - Le skill mantengono il risultato essenziale anche senza scrittura nel workspace: restituiscono l'artefatto completo e il percorso previsto senza dichiarare che il file esista. Nessun connector è obbligatorio per Fondazione e Strategy Core.
 - Comandi, hook, manifest e marketplace sono adattatori di ambiente e non devono cambiare artefatti, provenienza, gate o confini di autorità.
+- **Augmented Marketing Assistant** è l'ingresso conversazionale generale: orienta e attiva le skill senza possedere o duplicare il loro metodo.
 - **Setup Business Context** è la base persistente per azienda o brand e registra l'identità esistente senza crearne la strategia.
 - Il supporto visuale delle skill di setup è un miglioramento opzionale e capability-gated: può offrire una vista singola di revisione, ma chat, stato confermato, approvazioni e scritture canoniche restano autorevoli. Se la capability manca o fallisce, il percorso continua senza perdita di informazioni; un wizard persistente e deterministico richiederebbe un'app o uno strumento dedicato.
 - Un dato assente dalle fonti non è automaticamente inesistente; i vuoti vengono classificati e quelli non bloccanti restano espliciti nell'identità.
 - Le domande non formano un questionario fisso: un router seleziona fino a tre lacune ad alto impatto, usando lenti da marketer e business strategist ma senza creare nuove scelte strategiche.
 - L'installazione negli instruction file degli agenti è separata dall'approvazione del contenuto e richiede un consenso esplicito dopo la spiegazione della modifica.
-- **Setup Marketing System** è il punto d'ingresso del framework e parte dal lavoro reale dell'organizzazione, non dalla scelta di una skill interna.
+- **Setup Marketing System** è l'ingresso specifico alla costruzione delle Marketing Foundations e parte dal lavoro reale dell'organizzazione, non dalla scelta di un file interno.
 - Quando una regola operativa di marketing essenziale manca, **Setup Marketing System** può aiutare il responsabile a formularla; la proposta non diventa una regola aziendale finché non viene approvata esplicitamente.
 - La prima versione di **Setup Marketing System** raccoglie soltanto regole stabili. Priorità di periodo, campagne, budget e KPI temporanei restano fuori dall'onboarding per mantenerlo breve.
 - Il nucleo minimo comprende cinque aree: relazione tra offerte, pubblici e situazioni d'uso; messaggi, claim e prove; ruolo di canali e formati; standard editoriali, visivi e qualitativi; controlli e approvazioni. Sono risultati da ottenere, non sezioni di un questionario obbligatorio.
@@ -714,7 +720,7 @@ Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, defini
 - L'utente di riferimento è un responsabile interno competente sul business e sul marketing, ma non necessariamente su skill e agenti AI. L'esperienza usa linguaggio manageriale e nasconde l'architettura tecnica finché una scelta operativa non richiede di spiegarla.
 - La user story primaria è: il direttore marketing crea e approva una volta il profilo marketing stabile, poi l'agente lo legge e lo applica a ogni attività di marketing specifica dell'organizzazione. Il profilo persistente è un prerequisito verificabile, non memoria implicita della chat.
 - Ogni risposta che svolge o fa avanzare un'attività marketing aziendale mostra un FYI compatto con entità e versioni del contesto realmente applicato. Se il profilo non è utilizzabile, il FYI viene sostituito da un avviso azionabile e non da una falsa dichiarazione di caricamento.
-- `setup-marketing-system` è l'unico punto d'ingresso percepito dall'utente: se il business context manca, orchestra `setup-business-context` nello stesso dialogo e riusa materiali e risposte, senza duplicarne la logica né approvare Marketing Foundations prive di identità canonica.
+- Nel percorso di costruzione delle Marketing Foundations, `setup-marketing-system` resta l'unico ingresso percepito: se il business context manca, orchestra `setup-business-context` nello stesso dialogo e riusa materiali e risposte, senza duplicarne la logica né approvare Marketing Foundations prive di identità canonica.
 - Se `setup-business-context` non è disponibile, la skill può suggerirne l'acquisizione soltanto da una fonte e versione verificabili. Download e installazione richiedono consensi distinti e una verifica intermedia del pacchetto; senza la dipendenza il risultato marketing resta una bozza non canonica.
 - La prima versione produce un unico artefatto canonico nella lingua di lavoro del responsabile, chiamato **Fondamenti di marketing** in italiano. Non separa profilo strategico e operativo; le strategie temporanee restano artefatti dei workflow a valle.
 - **Marketing Foundations** è organizzato in tre livelli: riferimenti al contesto, regole stabili e governance. Referenzia la business identity senza duplicarla e mantiene visibili provenienza, conflitti e aggiornamenti.

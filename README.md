@@ -41,6 +41,14 @@ Risultati e apprendimento
 
 Ogni skill produce un artefatto che può essere rivisto, corretto, approvato e usato come input nel passaggio seguente.
 
+## Un ingresso semplice
+
+[`Augmented Marketing Assistant`](agents/augmented-marketing-assistant.md) è il primo agente del progetto. Riceve il bisogno nel linguaggio dell'utente, spiega il passaggio utile e attiva la skill pertinente senza chiedere di conoscere in anticipo l'architettura del framework.
+
+L'Assistant non sostituisce né duplica le skill: non formula la sfida, non sceglie la direzione e non definisce il marketing mix. Mantiene la continuità della conversazione mentre ogni skill conserva metodo, artefatto e gate di approvazione propri.
+
+La versione corrente è la beta 0.1.0-beta.1, accompagnata da [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md) e da un [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md). È distribuita in un pacchetto neutro con le cinque skill, ma non è ancora stata validata con un pilot di marketer esterni o verificata in modo completo su più piattaforme.
+
 ## Le skill disponibili
 
 | Skill | A cosa serve | Risultato | Stato |
@@ -82,12 +90,25 @@ Il contratto e i relativi scenari di verifica sono descritti in [PORTABILITA.md]
 
 ## Installazione
 
-Puoi installare una skill chiedendolo direttamente al tuo agente oppure scaricandola da GitHub.
+Puoi installare il pacchetto completo, con l'Assistant e tutte le skill, oppure scegliere soltanto le skill che ti servono.
 
 > [!NOTE]
-> ChatGPT, Claude e Codex possono usare procedure diverse. Se non sai quale sia quella prevista dal tuo ambiente, usa il primo metodo: l'agente deve confermare se può completare l'installazione e, se non può, indicarti il passaggio manuale minimo.
+> Il pacchetto beta è portabile, ma non è un plugin universale. ChatGPT, Claude, Codex e altri agenti possono usare procedure diverse per caricare un agente o un'istruzione persistente. Le istruzioni non devono far credere che un file sia stato caricato soltanto perché è presente sul disco.
 
-### 1. Chiedi al tuo agente di installarla
+### 1. Installa il pacchetto completo
+
+Scarica la [release beta dell'Augmented Marketing Assistant](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-assistant-v0.1.0-beta.1), estrai lo ZIP e segui [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
+
+Il pacchetto contiene la definizione dell'Assistant e le versioni stabili delle cinque skill. L'installazione ha due passaggi distinti:
+
+1. copiare le cartelle delle skill nel percorso previsto dall'ambiente;
+2. configurare la definizione dell'Assistant come agente o istruzione persistente con il meccanismo supportato dall'ambiente.
+
+Dopo l'installazione, apri una nuova sessione e scrivi, per esempio:
+
+> Aiutami a capire da dove iniziare con questa attività di marketing usando Augmented Marketing Assistant.
+
+### 2. Chiedi al tuo agente di installare una singola skill
 
 Apri una nuova conversazione con il tuo agente e copia il prompt qui sotto. GitHub mostra un pulsante per copiare il testo del blocco.
 
@@ -124,7 +145,7 @@ Per installare un'altra skill, sostituisci nome, cartella, tag e numero di versi
 
 Fissare una release precisa evita di installare involontariamente una versione di sviluppo del ramo principale.
 
-### 2. Installa manualmente dalla release
+### 3. Installa manualmente una singola skill dalla release
 
 1. Apri la pagina delle [release](https://github.com/vincos73/augmented-marketing-skills/releases).
 2. Scarica il file `.zip` della skill desiderata.

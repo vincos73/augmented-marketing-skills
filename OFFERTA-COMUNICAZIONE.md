@@ -1,6 +1,6 @@
 ---
 artifact: offer-communication
-version: 2
+version: 3
 status: bozza
 last_reviewed: 2026-08-27
 scope: "Fonte di lavoro per posizionamento, README pubblico e materiali di comunicazione di Augmented Marketing Skills"
@@ -45,6 +45,8 @@ Augmented Marketing Skills nasce per intervenire prima e durante la produzione, 
 
 Il progetto non è un agente generalista che promette di fare il lavoro di un CMO. Non è neppure un catalogo di generatori organizzati per canale. Ogni skill possiede una decisione, un artefatto e un confine riconoscibili.
 
+**Augmented Marketing Assistant** è l'ingresso conversazionale al framework: comprende il bisogno espresso nel linguaggio dell'utente, spiega il passaggio utile e attiva la skill pertinente. Non aggiunge una competenza di marketing e non prende decisioni al posto delle skill o del responsabile.
+
 ## Offerta in una frase
 
 > Augmented Marketing Skills è un framework di skill che aiuta manager e agenti IA a prendere decisioni di marketing usando contesto condiviso, regole approvate, alternative esplicite e artefatti verificabili.
@@ -87,6 +89,8 @@ Il percorso non deve essere imposto quando obiettivo, formato e vincoli sono gi�
 ## Architettura dell'offerta
 
 ```text
+Augmented Marketing Assistant
+        ↓ orientamento e handoff
 Business Identity
         ↓
 Marketing Foundations
@@ -104,6 +108,7 @@ Risultati e apprendimento
 
 | Livello | Ruolo |
 |---|---|
+| Ingresso conversazionale | `Augmented Marketing Assistant` orienta verso il passaggio pertinente senza duplicare il metodo delle skill |
 | Fondazione | `setup-business-context` crea l'identità persistente; `setup-marketing-system` definisce le regole stabili che gli agenti devono applicare |
 | Strategy Core | `define-marketing-challenge` chiarisce il cambiamento cercato; `choose-marketing-direction` confronta alternative; `define-marketing-mix` coordina le quattro P |
 | Campaign Core | Traduce il marketing mix approvato in messaggi, canali, asset, responsabilità, misure e apprendimento; le skill sono ancora in roadmap |
@@ -115,6 +120,7 @@ La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è 
 
 | Area | Stato comunicabile |
 |---|---|
+| Augmented Marketing Assistant | Beta 0.1.0-beta.1 distribuita in un pacchetto neutro con le cinque skill; non ancora validata con un pilot esterno o verificata in modo completo su più piattaforme |
 | Business Identity | Skill approvata; verificare nel README la versione sorgente e quella pubblicata |
 | Marketing Foundations | Skill approvata e disponibile come release stabile |
 | Brief della sfida | Skill approvata e disponibile come release stabile |
@@ -181,6 +187,7 @@ Resta da completare la validazione realistica di questi comportamenti e un ciclo
 
 - **Contesto persistente:** identità, regole e decisioni vivono in artefatti versionati. Non dipendono dalla memoria della chat in cui sono stati creati.
 - **Una decisione per skill:** le skill non sono ruoli generici o agenti che fanno tutto. Ognuna trasforma un input riconoscibile in un artefatto utile al passaggio successivo.
+- **Un ingresso comprensibile:** l'Assistant parte dal bisogno dell'utente e attiva il percorso pertinente senza trasformarsi in un decisore o in un router software.
 - **Assunzioni riconoscibili:** fonti, inferenze, conflitti e incognite restano visibili. Un'opinione confermata dal management può restare un'assunzione.
 - **Decisione prima della produzione:** una tattica o un asset non vengono usati per evitare una scelta strategica. Il sistema può anche concludere che non sia il momento di produrre.
 - **Approvazione umana:** la skill formula e struttura, il responsabile approva. L'approvazione del contenuto resta distinta dall'autorizzazione a salvare, spendere, pubblicare o modificare sistemi esterni.
@@ -200,6 +207,7 @@ Resta da completare la validazione realistica di questi comportamenti e un ciclo
 ## Messaggi da usare
 
 - “Dai all'agente un contesto che può riusare.”
+- “Descrivi il lavoro da fare: l'Assistant ti accompagna al passaggio utile.”
 - “Trasforma chat e prompt in decisioni verificabili.”
 - “Metti a fuoco la sfida prima di scegliere la soluzione.”
 - “Confronta direzioni, non semplici varianti tattiche.”
@@ -225,6 +233,7 @@ Evitare anche formule generiche come “rivoluziona il marketing”, “sblocca 
 
 | Domanda del pubblico | Risposta centrale | Elemento di supporto | Limite da dichiarare |
 |---|---|---|---|
+| Devo sapere quale skill usare? | No, l'Assistant può partire dal bisogno e proporre il passaggio pertinente | Mappa di instradamento, handoff esplicito e pacchetto beta | Non è ancora stato testato con marketer esterni e il caricamento dell'Assistant dipende dall'ambiente |
 | Perché non basta un buon prompt? | Il prompt non conserva da solo contesto, regole e decisioni tra attività diverse | Artefatti persistenti e versionati | Richiede che l'organizzazione mantenga aggiornati i propri contesti |
 | Decide davvero la strategia? | Guida la formulazione, il confronto e l'approvazione della decisione | Alternative, trade-off, assunzione fragile e test | La qualità dipende dalle fonti, dal modello e dal giudizio del responsabile |
 | Sostituisce il marketer? | No, struttura il lavoro e rende più controllabile l'uso dell'agente | Gate di approvazione e limiti di autorità | Non assume responsabilità professionale o aziendale |
@@ -240,12 +249,13 @@ Il futuro README dovrebbe seguire questo ordine:
 2. **Perché esiste:** limite dei generatori e dei prompt isolati.
 3. **Come funziona:** percorso da Business Identity a risultati e apprendimento.
 4. **Che cosa lo distingue:** decisioni, provenienza, artefatti e approvazioni.
-5. **Skill disponibili:** tabella con input, output e stato verificato.
-6. **Esempio di percorso:** una sfida che diventa direzione, mix e attivazione.
-7. **Uso modulare:** quando saltare il percorso e usare direttamente un builder.
-8. **Installazione:** solo procedure realmente disponibili e versioni verificate.
-9. **Eval e limiti:** che cosa è stato testato e che cosa non è ancora dimostrato.
-10. **Roadmap:** componenti candidate e future senza presentarli come disponibili.
+5. **Ingresso conversazionale:** ruolo e stato verificato di Augmented Marketing Assistant.
+6. **Skill disponibili:** tabella con input, output e stato verificato.
+7. **Esempio di percorso:** una sfida che diventa direzione, mix e attivazione.
+8. **Uso modulare:** quando saltare il percorso e usare direttamente un builder.
+9. **Installazione:** solo procedure realmente disponibili e versioni verificate.
+10. **Eval e limiti:** che cosa è stato testato e che cosa non è ancora dimostrato.
+11. **Roadmap:** componenti candidate e future senza presentarli come disponibili.
 
 La promessa ambiziosa può comparire come tesi del progetto, accompagnata dal suo grado di maturità. La prima schermata non deve far credere che tutti i core siano già operativi.
 
@@ -314,6 +324,7 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 - [MARKETING-AGENT-SYSTEM.md](MARKETING-AGENT-SYSTEM.md)
 - [README.md](README.md)
 - [PORTABILITA.md](PORTABILITA.md)
+- [Augmented Marketing Assistant](agents/augmented-marketing-assistant.md)
 - [setup-business-context](skills/setup-business-context/SKILL.md)
 - [setup-marketing-system](skills/setup-marketing-system/SKILL.md)
 - [define-marketing-challenge](skills/define-marketing-challenge/SKILL.md)
@@ -322,5 +333,6 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 
 ## Registro modifiche
 
+- v3, 2026-08-27: introdotto Augmented Marketing Assistant come ingresso conversazionale, poi promosso alla beta 0.1.0-beta.1 e separato dalla logica delle skill.
 - v2, 2026-08-27: allineato lo stato di Direzione di marketing e Marketing Mix alle release stabili e aggiunto il riferimento al contratto di portabilità.
 - v1, 2026-08-26: prima formulazione dell'offerta, della promessa, dei confini dei claim e delle linee guida per README e comunicazione.
