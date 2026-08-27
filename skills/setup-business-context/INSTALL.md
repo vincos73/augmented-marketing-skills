@@ -2,7 +2,7 @@
 
 Questo pacchetto contiene solo la skill installabile. Non contiene identità aziendali, brand profile o file `AGENTS.md`/`CLAUDE.md`.
 
-La versione della sorgente e della copia attualmente installata è `0.6.2`. Una modifica della sorgente non implica che esistano già un tag o una release pubblica con la stessa versione.
+La versione della sorgente, della release e della copia attualmente installata è `0.6.2`.
 
 ## Installazione da ZIP
 
@@ -37,4 +37,4 @@ La skill sarà disponibile per le attività successive. Avvia una nuova attivit�
 
 ## Installazione dalla sorgente GitHub
 
-Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/setup-business-context`, fissando un commit o un tag che contenga davvero la versione `0.6.2`. Non indicare `v0.6.2` finché quel tag non è stato creato e verificato. Questo metodo non sostituisce la verifica della versione e della destinazione locale.
+Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/setup-business-context`, fissando il tag `setup-business-context-v0.6.2` che contiene la versione `0.6.2`. Questo metodo non sostituisce la verifica della versione e della destinazione locale.

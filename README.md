@@ -45,7 +45,7 @@ Ogni skill produce un artefatto che può essere rivisto, corretto, approvato e u
 
 | Skill | A cosa serve | Risultato | Stato |
 | --- | --- | --- | --- |
-| [`setup-business-context`](skills/setup-business-context/) | Raccogliere identità, fatti approvati, vincoli e aspetti aperti di un'organizzazione. | Un contesto riutilizzabile per gli agenti. | Sorgente v0.6.2; [release pubblica v0.6.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/v0.6.0). |
+| [`setup-business-context`](skills/setup-business-context/) | Raccogliere identità, fatti approvati, vincoli e aspetti aperti di un'organizzazione. | Un contesto riutilizzabile per gli agenti. | [Release stabile v0.6.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-business-context-v0.6.2). |
 | [`setup-marketing-system`](skills/setup-marketing-system/) | Tradurre il contesto in fondamenti, regole e limiti di marketing condivisi. | Un sistema di riferimento per le decisioni successive. | [Release stabile v0.2.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-marketing-system-v0.2.1). |
 | [`define-marketing-challenge`](skills/define-marketing-challenge/) | Capire se una richiesta è davvero una sfida di marketing e formularla in modo verificabile. | Un brief della sfida, con evidenze, ipotesi e criteri di successo. | [Release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.1). |
 | [`choose-marketing-direction`](skills/choose-marketing-direction/) | Confrontare direzioni possibili e scegliere quella più coerente con obiettivi, vincoli e rischi. | Una direzione, con trade-off e assunzioni espliciti. | [Release stabile v0.2.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/choose-marketing-direction-v0.2.0). |
@@ -116,7 +116,7 @@ Per installare un'altra skill, sostituisci nome, cartella, tag e numero di versi
 
 | Skill | Cartella GitHub | Versione da fissare |
 | --- | --- | --- |
-| `setup-business-context` | `skills/setup-business-context` | release pubblica `v0.6.0` |
+| `setup-business-context` | `skills/setup-business-context` | `setup-business-context-v0.6.2` |
 | `setup-marketing-system` | `skills/setup-marketing-system` | `setup-marketing-system-v0.2.1` |
 | `define-marketing-challenge` | `skills/define-marketing-challenge` | `define-marketing-challenge-v0.1.1` |
 | `choose-marketing-direction` | `skills/choose-marketing-direction` | `choose-marketing-direction-v0.2.0` |
