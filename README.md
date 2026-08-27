@@ -72,6 +72,14 @@ L'agente non decide al posto tuo. Ti aiuta a rendere la decisione più leggibile
 
 Le skill sono modulari. Se obiettivo, formato e vincoli sono già chiari, puoi partire da una skill più operativa. Se la decisione è incerta o coinvolge più persone, il percorso completo aiuta a non saltare passaggi importanti.
 
+## Portabilità tra agenti
+
+Il nucleo non dipende da comandi, hook, connector o interfacce proprietarie. Si rivolge ad ambienti che possono installare e caricare skill, ma distingue le capability obbligatorie da quelle opzionali.
+
+Quando il workspace è scrivibile, le skill possono salvare artefatti Markdown persistenti dopo l'autorizzazione prevista. Quando non lo è, devono restituire l'artefatto completo e dichiarare con precisione che il file non è stato creato. Web, connector, subagenti e viste visuali possono migliorare il lavoro, ma non sono dipendenze del nucleo Fondazione o Strategy Core.
+
+Il contratto e i relativi scenari di verifica sono descritti in [PORTABILITA.md](PORTABILITA.md).
+
 ## Installazione
 
 Puoi installare una skill chiedendolo direttamente al tuo agente oppure scaricandola da GitHub.
@@ -149,6 +157,7 @@ Le skill includono esempi sintetici, controlli di struttura e valutazioni di coe
 La qualità delle decisioni dipende dalla qualità del contesto, delle fonti disponibili e dalla revisione di chi ne ha la responsabilità.
 
 Il documento autorevole su architettura, decisioni, confini ed eval è [MARKETING-AGENT-SYSTEM.md](MARKETING-AGENT-SYSTEM.md).
+Il contratto trasversale per capability, artefatti e adattatori di ambiente è [PORTABILITA.md](PORTABILITA.md).
 
 ## Roadmap
 
@@ -161,5 +170,3 @@ Le prossime aree previste includono:
 ## Contribuire
 
 Il repository accoglie contributi su istruzioni, template, controlli ed esempi sintetici. Non includere dati di clienti, casi reali riservati o informazioni personali.
-
-Consulta [AGENTS.md](AGENTS.md) per le convenzioni del progetto.

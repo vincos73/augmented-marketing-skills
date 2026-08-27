@@ -1,8 +1,8 @@
 ---
 artifact: offer-communication
-version: 1
+version: 2
 status: bozza
-last_reviewed: 2026-08-26
+last_reviewed: 2026-08-27
 scope: "Fonte di lavoro per posizionamento, README pubblico e materiali di comunicazione di Augmented Marketing Skills"
 ---
 
@@ -118,8 +118,8 @@ La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è 
 | Business Identity | Skill approvata; verificare nel README la versione sorgente e quella pubblicata |
 | Marketing Foundations | Skill approvata e disponibile come release stabile |
 | Brief della sfida | Skill approvata e disponibile come release stabile |
-| Direzione di marketing | Candidata di authoring, non ancora approvata o pubblicata |
-| Marketing Mix | Candidata di authoring, non ancora approvata o pubblicata |
+| Direzione di marketing | Skill approvata e disponibile come release stabile v0.2.0 |
+| Marketing Mix | Skill approvata e disponibile come release stabile v0.1.1 |
 | Campaign Core | Roadmap |
 | Content Core | Roadmap; builder esterni non inclusi |
 | Monitoring | Ipotesi opzionale di roadmap |
@@ -170,7 +170,7 @@ Il sistema è progettato per:
 - verificare la coerenza delle quattro P;
 - riconoscere le decisioni che richiedono Product, Finance, Sales, Operations o altre autorità.
 
-La candidata `choose-marketing-direction` incorpora ora due rafforzamenti progettuali:
+`choose-marketing-direction` incorpora due rafforzamenti progettuali:
 
 1. diagnosi provvisoria di situazione, clienti o pubblici, alternative e capacità dell'organizzazione;
 2. stress test della raccomandazione con miglior argomento contrario, condizioni necessarie, risposte plausibili e conseguenze indesiderate.
@@ -230,7 +230,7 @@ Evitare anche formule generiche come “rivoluziona il marketing”, “sblocca 
 | Sostituisce il marketer? | No, struttura il lavoro e rende più controllabile l'uso dell'agente | Gate di approvazione e limiti di autorità | Non assume responsabilità professionale o aziendale |
 | Perché usare file invece della chat? | I file permettono riuso, verifica, versionamento e handoff | Business Identity, Foundations e fascicoli decisionali | Non ogni informazione deve diventare contesto globale |
 | Devo usare tutte le skill? | No, il percorso è modulare e selettivo | Attivazione basata sul lavoro richiesto | Saltare un passaggio è corretto solo quando l'input necessario esiste già |
-| È già pronto per un flusso completo? | Le fondazioni e il Brief della sfida sono disponibili; direzione e marketing mix sono candidate | Stato dichiarato nel README e nelle release | Campaign e Content Core sono ancora in roadmap |
+| È già pronto per un flusso completo? | Fondazioni e Strategy Core fino al marketing mix sono disponibili | Stato dichiarato nel README e nelle release | Campaign e Content Core sono ancora in roadmap |
 
 ## Struttura consigliata per il README
 
@@ -291,7 +291,7 @@ Le metriche dovrebbero riguardare qualità della diagnosi, differenza reale tra 
 
 - nome definitivo del progetto e relazione tra “Augmented Marketing Skills” e “Marketing Decision Skills”;
 - lingua principale della distribuzione e rapporto tra versione italiana e inglese;
-- formato pubblico finale: repository di skill, plugin o entrambe le modalità;
+- adattatori di distribuzione da mantenere per i diversi ambienti che supportano skill;
 - licenza e condizioni di riuso;
 - modalità con cui un test riapre e aggiorna gli artefatti strategici approvati;
 - soglia di prove necessaria per usare il paragone con uno strategist esperto;
@@ -313,6 +313,7 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 
 - [MARKETING-AGENT-SYSTEM.md](MARKETING-AGENT-SYSTEM.md)
 - [README.md](README.md)
+- [PORTABILITA.md](PORTABILITA.md)
 - [setup-business-context](skills/setup-business-context/SKILL.md)
 - [setup-marketing-system](skills/setup-marketing-system/SKILL.md)
 - [define-marketing-challenge](skills/define-marketing-challenge/SKILL.md)
@@ -321,4 +322,5 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 
 ## Registro modifiche
 
+- v2, 2026-08-27: allineato lo stato di Direzione di marketing e Marketing Mix alle release stabili e aggiunto il riferimento al contratto di portabilità.
 - v1, 2026-08-26: prima formulazione dell'offerta, della promessa, dei confini dei claim e delle linee guida per README e comunicazione.

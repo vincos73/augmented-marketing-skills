@@ -149,7 +149,9 @@ Al momento il repository contiene cinque skill sorgente approvate:
 
 Le due skill di Strategy Core sono approvate e disponibili come release stabili, con istruzioni di installazione, fixture sintetiche e forward test indipendenti senza hard fail. Non sono automaticamente installate o attive nell'ambiente dell'utente. Gli altri core e le relative competenze restano roadmap o ipotesi da validare. Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione.
 
-Le cartelle sotto `skills/` sono sorgenti di authoring, non prova di installazione attiva. Per la scoperta locale in un repository Codex, una skill approvata dovrà essere collocata in `.agents/skills/`; per distribuirla in ChatGPT sul web, desktop e mobile dovrà essere confezionata come plugin. Authoring, installazione locale e distribuzione restano tre gate distinti.
+Le cartelle sotto `skills/` sono sorgenti di authoring, non prova di installazione attiva. Ogni ambiente che supporta skill può richiedere una destinazione, un pacchetto o un adattatore specifico. Authoring, installazione locale e distribuzione restano tre gate distinti, e la presenza della sorgente non dimostra il caricamento nella sessione.
+
+Il nucleo è indipendente dall'adattatore di distribuzione. Il [contratto di portabilità](PORTABILITA.md) definisce capability obbligatorie e opzionali, comportamento degli artefatti quando il workspace non è scrivibile, limiti dei connector e scenari minimi di verifica. Comandi, hook, manifest, marketplace e instruction file specifici non appartengono al contratto essenziale delle skill.
 
 ### Supporto visuale opzionale all'onboarding
 
@@ -696,6 +698,9 @@ Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, defini
 
 ## Decisioni da non perdere
 
+- Il perimetro minimo comprende agenti che possono installare e caricare skill; i chatbot privi di skill non sono un target. Filesystem, connector, subagenti, viste visuali e automazioni sono capability da osservare, non da presumere.
+- Le skill mantengono il risultato essenziale anche senza scrittura nel workspace: restituiscono l'artefatto completo e il percorso previsto senza dichiarare che il file esista. Nessun connector è obbligatorio per Fondazione e Strategy Core.
+- Comandi, hook, manifest e marketplace sono adattatori di ambiente e non devono cambiare artefatti, provenienza, gate o confini di autorità.
 - **Setup Business Context** è la base persistente per azienda o brand e registra l'identità esistente senza crearne la strategia.
 - Il supporto visuale delle skill di setup è un miglioramento opzionale e capability-gated: può offrire una vista singola di revisione, ma chat, stato confermato, approvazioni e scritture canoniche restano autorevoli. Se la capability manca o fallisce, il percorso continua senza perdita di informazioni; un wizard persistente e deterministico richiederebbe un'app o uno strumento dedicato.
 - Un dato assente dalle fonti non è automaticamente inesistente; i vuoti vengono classificati e quelli non bloccanti restano espliciti nell'identità.
