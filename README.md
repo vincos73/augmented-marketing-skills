@@ -1,126 +1,165 @@
 # Augmented Marketing Skills
 
-Un framework di skill per aiutare manager e agenti AI a svolgere attività di marketing usando un contesto condiviso, regole approvate e decisioni verificabili.
+> Skill installabili per portare contesto, metodo e decisioni verificabili nel marketing con agenti IA.
 
-Il progetto non vuole costruire un «CMO artificiale» né un catalogo di generatori per canale. L'obiettivo è rendere riutilizzabile il processo di lavoro di un marketer esperto: capire il contesto, distinguere fatti e ipotesi, decidere che cosa vale la pena fare, tradurre la decisione in un brief e controllare il risultato.
+Augmented Marketing Skills aiuta manager, marketer e consulenti a lavorare con agenti IA, tra cui ChatGPT, Claude e Codex, quando il loro ambiente supporta l'installazione di skill.
 
-Il principio di base è semplice: ogni passaggio importante produce un documento persistente. Le informazioni non restano affidate alla memoria della chat e le skill successive possono leggere gli artefatti già approvati senza chiedere ogni volta le stesse cose.
+Prima dell'esecuzione, le skill aiutano a mettere a fuoco la sfida, confrontare direzioni alternative, rendere visibili le assunzioni e coordinare prodotto, prezzo, distribuzione e comunicazione.
 
-## Come funziona il framework
+Non sostituiscono un marketer o un CMO. Rendono più esplicito e ricostruibile il processo con cui si arriva a una decisione.
+
+## Perché esiste
+
+Un agente IA può generare velocemente analisi, idee e contenuti. Un testo ben scritto, però, non garantisce che il problema iniziale sia quello giusto, che la scelta sia coerente con il contesto o che una tattica non stia prendendo il posto della strategia.
+
+Queste skill aiutano a:
+
+- evitare di ricostruire il contesto dell'organizzazione a ogni conversazione;
+- distinguere fonti, fatti, inferenze, assunzioni e aspetti ancora aperti;
+- verificare una richiesta tattica prima di trasformarla in una soluzione;
+- confrontare alternative e trade-off prima di scegliere;
+- coordinare le quattro P del marketing mix;
+- lasciare una traccia che possa essere rivista e approvata.
+
+## Come funziona
 
 ```text
-Business Identity
-        ↓
-Marketing Foundations
-        ↓
-Decisione strategica
-        ↓
-Marketing Mix: Product · Price · Place · Promotion
-        ↓
-Campaign Spec oppure Content Brief
-        ↓
-Asset prodotti dai builder specializzati
-        ↓
+Identità e contesto dell'organizzazione
+                 ↓
+Fondamenti di marketing condivisi
+                 ↓
+Definizione della sfida
+                 ↓
+Confronto e scelta della direzione
+                 ↓
+Marketing mix: prodotto, prezzo, distribuzione, comunicazione
+                 ↓
+Campagne, contenuti e attivazioni
+                 ↓
 Risultati e apprendimento
 ```
 
-Il percorso non è obbligatoriamente lineare. Se obiettivo e formato sono già chiari, l'utente può usare direttamente un builder. Se invece manca il contesto necessario, l'agente deve segnalarlo prima di procedere.
+Ogni skill produce un artefatto che può essere rivisto, corretto, approvato e usato come input nel passaggio seguente.
 
-## Esigenza, skill e output
+## Le skill disponibili
 
-| Esigenza dell'utente | Skill che la risolve | Output della skill | Stato |
+| Skill | A cosa serve | Risultato | Stato |
 | --- | --- | --- | --- |
-| Fare in modo che l'agente conosca l'azienda o il brand prima di lavorarci | [`setup-business-context`](skills/setup-business-context/SKILL.md) | **Business Identity** verificabile e versionata: identità aziendale, identità di un brand autonomo oppure identità di un brand collegata all'azienda | **Approvata**, v0.6.2 |
-| Definire le regole di marketing stabili che l'agente deve applicare in ogni attività aziendale | [`setup-marketing-system`](skills/setup-marketing-system/SKILL.md) | **Fondamenti di marketing** aziendali ed eventuali integrazioni di brand: regole su offerte e pubblici, messaggi e prove, ruolo dei canali, qualità e approvazioni | **Approvata**, v0.2.1 |
-| Mettere a fuoco una sfida di marketing e scegliere come affrontarla | Strategy Core: `define-marketing-challenge`, `choose-marketing-direction` | Brief della sfida confermato e direzione approvata con diagnosi, stress test, trade-off, assunzione fragile e primo test utile | `define-marketing-challenge` e `choose-marketing-direction` approvate, v0.2.0 |
-| Tradurre la direzione in scelte coerenti sulle quattro P | Strategy Core: `define-marketing-mix` | Marketing Mix approvato con Product, Price, Place e Promotion, dipendenze e autorità | **Approvata**, v0.1.1 |
-| Trasformare la componente Promotion e le altre attivazioni pertinenti in una campagna coordinata | Campaign Core: `to-campaign-spec`, `campaign-review`, `learn-from-results` | Campaign Spec con messaggi, canali, asset, responsabilità, approvazioni e misure; review e apprendimento finale | **Roadmap** |
-| Capire se un materiale merita di diventare un contenuto e quale formato usare | Content Core: `content-director` | Content Brief con obiettivo, pubblico, idea centrale, fonti, punti da verificare, formato e sequenza consigliata | **Roadmap** |
-| Produrre il contenuto nel formato scelto | Builder specializzati, per esempio Carousel Builder e Quote Card Builder | Asset finale con i controlli editoriali, strutturali, visivi e tecnici specifici del formato | **Moduli esterni già esistenti**, non inclusi in questo repository |
-| Costruire un sistema di ascolto su competitor, reputazione, normative o altri temi | `monitoring-setup` | Mappa delle fonti, query, frequenze, alert, configurazione, digest e runbook di manutenzione | **Ipotesi opzionale di roadmap** |
+| [`setup-business-context`](skills/setup-business-context/) | Raccogliere identità, fatti approvati, vincoli e aspetti aperti di un'organizzazione. | Un contesto riutilizzabile per gli agenti. | Sorgente v0.6.2; [release pubblica v0.6.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/v0.6.0). |
+| [`setup-marketing-system`](skills/setup-marketing-system/) | Tradurre il contesto in fondamenti, regole e limiti di marketing condivisi. | Un sistema di riferimento per le decisioni successive. | [Release stabile v0.2.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-marketing-system-v0.2.1). |
+| [`define-marketing-challenge`](skills/define-marketing-challenge/) | Capire se una richiesta è davvero una sfida di marketing e formularla in modo verificabile. | Un brief della sfida, con evidenze, ipotesi e criteri di successo. | [Release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.1). |
+| [`choose-marketing-direction`](skills/choose-marketing-direction/) | Confrontare direzioni possibili e scegliere quella più coerente con obiettivi, vincoli e rischi. | Una direzione, con trade-off e assunzioni espliciti. | [Release stabile v0.2.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/choose-marketing-direction-v0.2.0). |
+| [`define-marketing-mix`](skills/define-marketing-mix/) | Tradurre una direzione approvata in decisioni coerenti su Product, Price, Place e Promotion. | Un marketing mix verificabile prima dell'esecuzione. | [Release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-mix-v0.1.1). |
 
-I nomi delle skill in roadmap descrivono il lavoro ancora da progettare. Non indicano componenti già approvati, installati o disponibili in questo repository.
+Le skill per campagne, contenuti e apprendimento sono in roadmap e non vanno considerate disponibili. I builder specializzati, come Carousel Builder, sono moduli esterni e non fanno parte di questo repository.
 
-## Che cosa esiste oggi
+## Un esempio pratico
 
-### `setup-business-context` v0.6.2
+Immagina di voler lanciare un percorso di formazione continua per professionisti del marketing e della comunicazione.
 
-È una skill sorgente approvata. Costruisce una carta d'identità persistente partendo dalle fonti fornite dall'utente. Mantiene visibili provenienza, conflitti e aspetti ancora aperti; il template è modulare e al gate 1 permette di approvare lasciando aperti i punti non bloccanti oppure di approfondirli prima. Non inventa un posizionamento e non definisce la strategia.
+Invece di chiedere subito all'agente di creare una landing page o un piano editoriale, puoi:
 
-Gli output canonici previsti sono:
+1. fornirgli il contesto reale dell'organizzazione e le regole già approvate;
+2. trasformare l'idea iniziale in una sfida: quale cambiamento pratico vuoi ottenere, per chi e con quali vincoli?
+3. confrontare più direzioni, ad esempio una community leggera, un laboratorio mensile o un percorso più strutturato;
+4. scegliere una direzione, dichiarando ciò che resta da verificare;
+5. definire offerta, prezzo, canale di accesso e comunicazione;
+6. passare a campagne, pagine e contenuti solo dopo questa decisione.
 
-- `.agents/company-identity.md` per un'azienda;
-- `.agents/brand-identity.md` per un brand autonomo;
-- `.agents/brands/<brand>.md` per un brand appartenente a un'azienda.
+L'agente non decide al posto tuo. Ti aiuta a rendere la decisione più leggibile, discutibile e condivisibile.
 
-La sorgente e la copia locale attualmente installata sono alla versione v0.6.2. La [release pubblica stabile v0.6.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/v0.6.0) contiene lo ZIP della precedente versione pubblicata e il relativo checksum. Le istruzioni per l'installazione manuale sono in [`skills/setup-business-context/INSTALL.md`](skills/setup-business-context/INSTALL.md).
+## Non devi usare tutto il percorso
 
-### `setup-marketing-system` v0.2.1
+Le skill sono modulari. Se obiettivo, formato e vincoli sono già chiari, puoi partire da una skill più operativa. Se la decisione è incerta o coinvolge più persone, il percorso completo aiuta a non saltare passaggi importanti.
 
-È una skill approvata del framework. Aiuta un responsabile marketing a ricostruire dai materiali reali le regole stabili che un agente deve seguire. Presenta presto una prima proposta utile, chiede soltanto decisioni mancanti con impatto reale e invita esplicitamente a caricare le fonti utili, come linee guida verbali o visuali, quando possono cambiare una regola stabile.
+## Installazione
 
-Produce un unico artefatto canonico, presentato nella lingua di lavoro del responsabile. In italiano il titolo è **Fondamenti di marketing**:
+Puoi installare una skill chiedendolo direttamente al tuo agente oppure scaricandola da GitHub.
 
-- `.agents/marketing/foundations.md` per la base aziendale o per un brand autonomo;
-- `.agents/marketing/brands/<brand-slug>.md` per le sole differenze di un brand appartenente all'azienda.
+> [!NOTE]
+> ChatGPT, Claude e Codex possono usare procedure diverse. Se non sai quale sia quella prevista dal tuo ambiente, usa il primo metodo: l'agente deve confermare se può completare l'installazione e, se non può, indicarti il passaggio manuale minimo.
 
-La skill verifica prima che esista una Business Identity utilizzabile e la referenzia senza copiarla. Non definisce obiettivi trimestrali, budget, campagne o piani di canale temporanei. Non configura strumenti, non pubblica e non produce asset.
+### 1. Chiedi al tuo agente di installarla
 
-La [release stabile v0.2.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-marketing-system-v0.2.1) contiene lo ZIP della sola skill e il relativo checksum. Le istruzioni per l'installazione manuale sono in [`skills/setup-marketing-system/INSTALL.md`](skills/setup-marketing-system/INSTALL.md).
+Apri una nuova conversazione con il tuo agente e copia il prompt qui sotto. GitHub mostra un pulsante per copiare il testo del blocco.
 
-### `define-marketing-challenge` v0.1.1
+````text
+Installa la skill `define-marketing-challenge` dal repository GitHub:
+https://github.com/vincos73/augmented-marketing-skills
 
-È una skill approvata dello Strategy Core. Aiuta il proprietario di una decisione a trasformare un obiettivo, problema, opportunità, segnale o proposta tattica in un **Brief della sfida di marketing** confermabile, senza scegliere ancora la direzione.
+Usa la cartella:
+skills/define-marketing-challenge
 
-La skill legge Business Identity e Marketing Foundations pertinenti, produce una prima formulazione utile prima delle domande e mantiene distinti sintomo, causa presunta, tattica, vincolo e sfida. Budget, tempo e capacità entrano solo come limiti necessari a rendere realistico il confronto successivo; la skill non crea campagne, piani di spesa o asset.
+Installa esattamente la versione indicata dal tag:
+define-marketing-challenge-v0.1.1
 
-La [release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.1) contiene lo ZIP della sola skill e il relativo checksum. Il [catalogo degli eval](evals/define-marketing-challenge/eval-catalog.md) include una fixture sintetica a due turni, un forward test e una regressione per i brief cliente ricevuti dalle agenzie. Il primo forward test indipendente su `v0.1.0` non ha rilevato hard fail e ha prodotto due correzioni compatibili confluite in `v0.1.1`; il [retest indipendente](evals/define-marketing-challenge/runs/2026-08-26-independent-retest-v0.1.1.md) della versione corretta è passato senza errori sostanziali.
+Prima verifica che il file SKILL.md dichiari la versione 0.1.1.
+Installa l'intera cartella della skill nel percorso corretto per il tuo ambiente, senza modificare o sostituire altre skill.
 
-### Strategy Core approvato
+Al termine, verifica che la skill sia disponibile in una nuova sessione e dimmi:
+- dove l'hai installata;
+- quale versione hai installato;
+- come posso richiamarla.
 
-`choose-marketing-direction` v0.2.0 formula una diagnosi strategica provvisoria e confronta alternative realmente strategiche rispetto a una sfida confermata. Distingue osservazioni, interpretazioni e ipotesi causali; stressa condizioni, capacità, reazioni e conseguenze; raccomanda anche in forma condizionata o può concludere che nessuna opzione sia pronta. Produce la bozza di `direction.md`, con non-scelte, assunzione più fragile, primo test utile e condizioni di riapertura, ma non definisce ancora le quattro P e non autorizza l'esecuzione. La [release stabile v0.2.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/choose-marketing-direction-v0.2.0) contiene lo ZIP della sola skill, il relativo checksum e il [forward test indipendente](evals/choose-marketing-direction/runs/2026-08-26-independent-forward-v0.2.0.md), passato senza hard fail.
+Se non puoi accedere a GitHub o installare skill direttamente, spiegami il passaggio manuale minimo.
+````
 
-`define-marketing-mix` v0.1.1 traduce una direzione approvata in Product, Price, Place e Promotion. Ogni P viene classificata con esattamente uno stato canonico, separando condizioni e dipendenze. La skill controlla la coerenza del sistema senza trasformare Product in roadmap tecnica, Price in una decisione finanziaria unilaterale, Place in un elenco di media o Promotion in un campaign plan. La [release stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-mix-v0.1.1) contiene lo ZIP della sola skill, il relativo checksum e forward test indipendenti senza hard fail.
+Per installare un'altra skill, sostituisci nome, cartella, tag e numero di versione con quelli nella tabella seguente.
 
-Le due skill approvate includono sorgenti, metadati UI, istruzioni di installazione, template e cataloghi di eval. Le release pubbliche non implicano installazione locale né attivazione nella sessione corrente.
+| Skill | Cartella GitHub | Versione da fissare |
+| --- | --- | --- |
+| `setup-business-context` | `skills/setup-business-context` | release pubblica `v0.6.0` |
+| `setup-marketing-system` | `skills/setup-marketing-system` | `setup-marketing-system-v0.2.1` |
+| `define-marketing-challenge` | `skills/define-marketing-challenge` | `define-marketing-challenge-v0.1.1` |
+| `choose-marketing-direction` | `skills/choose-marketing-direction` | `choose-marketing-direction-v0.2.0` |
+| `define-marketing-mix` | `skills/define-marketing-mix` | `define-marketing-mix-v0.1.1` |
 
-## Regole comuni alle skill di setup
+Fissare una release precisa evita di installare involontariamente una versione di sviluppo del ramo principale.
 
-- Le fonti e la provenienza restano visibili.
-- Fatti, inferenze, assunzioni, conflitti e incognite non vengono confusi.
-- La prima risposta utile arriva prima di un eventuale approfondimento e contiene al massimo tre domande decisive.
-- Una proposta dell'agente non diventa una regola aziendale senza approvazione esplicita.
-- Approvazione del contenuto, scrittura canonica, installazione locale e pubblicazione sono gate distinti.
-- L'onboarding deve poter essere completato interamente in chat. Una vista interattiva può aiutare la revisione, ma non conserva lo stato e non raccoglie approvazioni canoniche.
-- Durante gli eval non vengono scritti artefatti canonici né modificati i file di istruzioni dell'agente.
+### 2. Installa manualmente dalla release
 
-## Stato del progetto
+1. Apri la pagina delle [release](https://github.com/vincos73/augmented-marketing-skills/releases).
+2. Scarica il file `.zip` della skill desiderata.
+3. Estrai il contenuto dello ZIP.
+4. Segui le istruzioni nel file `INSTALL.md` incluso nella cartella.
 
-| Componente | Stato attuale |
-| --- | --- |
-| `setup-business-context` | approvata; sorgente e installazione locale v0.6.2; release pubblica stabile v0.6.0 |
-| `setup-marketing-system` | approvata e disponibile come release stabile v0.2.1 |
-| Strategy Core | `define-marketing-challenge` v0.1.1, `choose-marketing-direction` v0.2.0 e `define-marketing-mix` v0.1.1 approvate e disponibili come release stabili; evidence pack autonomo opzionale e rinviato |
-| Campaign Core | roadmap; riceverà il marketing mix approvato e nessuna skill è ancora inclusa |
-| Content Core | roadmap; collegamento con builder esterni ancora da validare |
-| `monitoring-setup` | ipotesi opzionale; non inclusa |
-
-La presenza di una cartella sotto `skills/` prova soltanto che esiste una sorgente di authoring. Non dimostra che la skill sia approvata, installata o attiva nell'ambiente dell'utente.
-
-Il documento autorevole con architettura, decisioni, confini ed eval è [`MARKETING-AGENT-SYSTEM.md`](MARKETING-AGENT-SYSTEM.md).
-
-## Struttura del repository
+In Codex, di norma, la cartella completa della skill va copiata in:
 
 ```text
-skills/                         sorgenti delle skill
-  setup-business-context/       skill approvata
-  setup-marketing-system/       skill approvata
-  define-marketing-challenge/   skill approvata
-  choose-marketing-direction/   skill approvata Strategy Core
-  define-marketing-mix/         skill approvata Strategy Core
-evals/                          cataloghi, fixture sintetiche e risultati osservati
-experiments/                    prove non incluse nelle skill attive
-MARKETING-AGENT-SYSTEM.md       framework e decisioni autorevoli
+~/.codex/skills/
 ```
 
-Il repository è privato. Le fixture versionate sono sintetiche e pubblicabili; materiali reali di clienti, contatti, prezzi, note interne e risultati sensibili devono restare fuori dal repository finché non vengono sanificati e approvati separatamente.
+Su macOS, nel Finder puoi scegliere **Vai alla cartella** con `⌘⇧G` e inserire quel percorso.
+
+Mantieni la struttura completa della cartella: istruzioni, esempi, template e script di verifica fanno parte della skill. Dopo l'installazione, apri una nuova sessione: la presenza dei file sul disco non dimostra che una chat già aperta li abbia caricati.
+
+## Cosa rende diverso questo progetto
+
+- Ogni skill ha un compito preciso, un artefatto atteso e un confine di approvazione.
+- Il contesto dell'organizzazione è separato dalle decisioni specifiche.
+- Fonti, fatti, inferenze, ipotesi e aspetti aperti non vengono trattati come equivalenti.
+- Le alternative vengono confrontate con criteri e trade-off espliciti.
+- La comunicazione è una delle quattro leve del marketing mix, non l'unica.
+- L'approvazione di un documento non autorizza automaticamente azioni esterne, come pubblicazioni, acquisti media o modifiche a sistemi.
+
+## Limiti e stato del progetto
+
+Le skill includono esempi sintetici, controlli di struttura e valutazioni di coerenza. Queste verifiche dimostrano che il processo è stato progettato e testato in modo controllato, non che abbia già prodotto risultati misurabili con utenti reali.
+
+La qualità delle decisioni dipende dalla qualità del contesto, delle fonti disponibili e dalla revisione di chi ne ha la responsabilità.
+
+Il documento autorevole su architettura, decisioni, confini ed eval è [MARKETING-AGENT-SYSTEM.md](MARKETING-AGENT-SYSTEM.md).
+
+## Roadmap
+
+Le prossime aree previste includono:
+
+- specifica e progettazione delle campagne;
+- produzione e adattamento dei contenuti;
+- osservazione dei risultati e apprendimento.
+
+## Contribuire
+
+Il repository accoglie contributi su istruzioni, template, controlli ed esempi sintetici. Non includere dati di clienti, casi reali riservati o informazioni personali.
+
+Consulta [AGENTS.md](AGENTS.md) per le convenzioni del progetto.
