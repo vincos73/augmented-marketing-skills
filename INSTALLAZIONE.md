@@ -1,6 +1,6 @@
 # Installazione di Augmented Marketing Suite
 
-La beta 0.1.0-beta.5 è un plugin OpenAI per ChatGPT e Codex. Riunisce le cinque skill disponibili e Augmented Marketing Assistant, l'ingresso conversazionale che orienta verso la skill pertinente.
+La beta 0.1.0-beta.6 è un plugin OpenAI per ChatGPT e Codex. Riunisce le cinque skill disponibili e Augmented Marketing Assistant, l'ingresso conversazionale che orienta verso la skill pertinente.
 
 Non include MCP, connector, hook o automazioni.
 
@@ -18,15 +18,15 @@ skills/define-marketing-mix/
 
 | Componente | Versione |
 | --- | --- |
-| Plugin Augmented Marketing Suite (`augmented-marketing-suite`) | 0.1.0-beta.5 |
+| Plugin Augmented Marketing Suite (`augmented-marketing-suite`) | 0.1.0-beta.6 |
 | Augmented Marketing Assistant (`augmented-marketing-assistant`) | 0.1.0 stabile |
-| Setup Business Context (`setup-business-context`) | 0.6.2 |
-| Setup Marketing System (`setup-marketing-system`) | 0.2.1 |
+| Setup Business Context (`setup-business-context`) | 0.6.3 |
+| Setup Marketing System (`setup-marketing-system`) | 0.3.0 |
 | Define Marketing Challenge (`define-marketing-challenge`) | 0.1.2 |
 | Choose Marketing Direction (`choose-marketing-direction`) | 0.2.1 |
 | Define Marketing Mix (`define-marketing-mix`) | 0.1.2 |
 
-La beta.5 contiene le versioni indicate nella tabella. Le versioni stabili più recenti di `setup-business-context` e `setup-marketing-system` sono disponibili anche come pacchetti singoli e si installano seguendo le istruzioni nelle rispettive cartelle.
+La beta.6 contiene le versioni indicate nella tabella.
 
 ## ChatGPT sul web
 
@@ -36,17 +36,17 @@ Finché questa beta non è presente nel catalogo Plugin generale, installala com
 
 Se hai già installato la beta.2 come Augmented Marketing Assistant, rimuovi quel plugin prima di installare la Suite. Il nuovo identificatore tecnico farebbe altrimenti comparire due plugin distinti.
 
-Se hai installato una beta precedente di Augmented Marketing Suite, aggiorna o reinstalla lo stesso plugin con il pacchetto beta.5, poi apri una nuova chat per evitare di riusare skill già caricate nella sessione precedente.
+Se hai installato una beta precedente di Augmented Marketing Suite, aggiorna o reinstalla lo stesso plugin con il pacchetto beta.6, poi apri una nuova chat per evitare di riusare skill già caricate nella sessione precedente.
 
 1. apri una nuova chat in modalità Work;
 2. richiama Plugin Creator (`@plugin-creator`);
-3. allega lo ZIP della beta.5;
+3. allega lo ZIP della beta.6;
 4. usa la richiesta seguente;
 5. al termine, apri il catalogo Plugin e verifica la sezione personale o “Created by me”;
 6. installa il plugin e avvia una nuova chat.
 
 ````text
-Crea un plugin personale dal pacchetto allegato Augmented Marketing Suite 0.1.0-beta.5.
+Crea un plugin personale dal pacchetto allegato Augmented Marketing Suite 0.1.0-beta.6.
 
 Verifica che la radice contenga .codex-plugin/plugin.json e che il manifesto dichiari skills/ come directory delle skill. Non aggiungere MCP, connector, hook o altri componenti.
 
@@ -73,7 +73,7 @@ Nel catalogo, le skill sono mostrate con il titolo tecnico inglese, per esempio 
 
 ## Verifica della Suite beta
 
-La beta.5 può essere validata strutturalmente e installata come plugin OpenAI. Augmented Marketing Assistant v0.1.0 ha superato i test runtime Codex di richiesta ambigua, selezione diretta e handoff. Restano da verificare separatamente:
+La beta.6 può essere validata strutturalmente e installata come plugin OpenAI. Augmented Marketing Assistant v0.1.0 ha superato i test runtime Codex di richiesta ambigua, selezione diretta e handoff. Restano da verificare separatamente:
 
 - l'installazione effettiva nell'account ChatGPT dell'utente;
 - il caricamento delle sei skill in una nuova chat;

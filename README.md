@@ -90,9 +90,9 @@ Queste sono le versioni stabili installabili dalla Suite beta.
 
 ### Il modo più semplice: Suite completa
 
-La [versione beta.5 di Augmented Marketing Suite pubblicata su GitHub](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.5) contiene le cinque skill e l'Assistant. Per usare le versioni più recenti delle due skill di setup, installale come pacchetti singoli seguendo le istruzioni più sotto. Per la Suite completa, segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
+La [versione beta.6 di Augmented Marketing Suite pubblicata su GitHub](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.6) contiene le cinque skill e l'Assistant, comprese le versioni più recenti delle due skill di setup. Segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
 
-La beta.5 è pensata per ChatGPT e Codex in ambienti che supportano l'installazione di skill. Dopo l'installazione, apri una nuova chat e descrivi il bisogno. La presenza dei file sul disco non dimostra che una chat già aperta abbia caricato la versione aggiornata.
+La beta.6 è pensata per ChatGPT e Codex in ambienti che supportano l'installazione di skill. Dopo l'installazione, apri una nuova chat e descrivi il bisogno. La presenza dei file sul disco non dimostra che una chat già aperta abbia caricato la versione aggiornata.
 
 > Allegare uno ZIP a una chat normale non registra automaticamente un plugin. Se il tuo ambiente non mostra un catalogo o un meccanismo di installazione, chiedi all'amministratore dell'ambiente quale procedura supporta.
 

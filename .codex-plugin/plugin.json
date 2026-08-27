@@ -1,6 +1,6 @@
 {
   "name": "augmented-marketing-suite",
-  "version": "0.1.0-beta.5",
+  "version": "0.1.0-beta.6",
   "description": "Una suite di skill di marketing con un Assistant conversazionale per ChatGPT e Codex.",
   "author": {
     "name": "Vincenzo Cosenza",
