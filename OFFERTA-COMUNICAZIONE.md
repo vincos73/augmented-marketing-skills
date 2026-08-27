@@ -122,8 +122,8 @@ La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è 
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Suite | Beta 0.1.0-beta.4 con plugin OpenAI, cinque skill stabili e Assistant; smoke test Codex con selezione diretta e handoff reale verificati, ma un soft fail residuo nella gestione delle richieste completamente generiche |
-| Augmented Marketing Assistant | Ingresso conversazionale incluso nella Suite come adattatore tecnico (`augmented-marketing-assistant`) |
+| Augmented Marketing Suite | Beta 0.1.0-beta.5 con plugin OpenAI, cinque skill stabili e Assistant stabile; comportamento multipiattaforma e pilot esterno ancora incompleti |
+| Augmented Marketing Assistant | v0.1.0 stabile; ingresso conversazionale incluso nella Suite come adattatore tecnico (`augmented-marketing-assistant`), con tre smoke test runtime Codex superati |
 | Business Identity | Skill approvata; verificare nel README la versione sorgente e quella pubblicata |
 | Marketing Foundations | Skill approvata e disponibile come release stabile |
 | Brief della sfida | Skill approvata e disponibile come release stabile |
@@ -335,6 +335,7 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 
 ## Registro modifiche
 
+- v7, 2026-08-27: promosso Augmented Marketing Assistant a v0.1.0 stabile dopo tre smoke test runtime Codex superati, mantenendo Augmented Marketing Suite in beta.
 - v6, 2026-08-27: ristretto l'Assistant all'orientamento, aggiunto il fallback esplicito quando l'handoff non è disponibile e allineati i titoli visibili ai nomi tecnici inglesi.
 - v5, 2026-08-27: adottato Augmented Marketing Suite come nome del prodotto e del plugin, mantenendo Augmented Marketing Assistant come ingresso conversazionale.
 - v4, 2026-08-27: aggiunto il plugin OpenAI beta.2 e distinto il suo adattatore tecnico dal ruolo dell'Assistant.

@@ -47,7 +47,7 @@ Ogni skill produce un artefatto che può essere rivisto, corretto, approvato e u
 
 L'Assistant non sostituisce né duplica le skill: non formula la sfida, non sceglie la direzione e non definisce il marketing mix. Mantiene la continuità della conversazione mentre ogni skill conserva metodo, artefatto e gate di approvazione propri.
 
-La versione corrente è la beta 0.1.0-beta.4, accompagnata da [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md), da un [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md), da un test reale su ChatGPT Web che ha mostrato il limite dell'handoff tra skill e da uno [smoke test runtime in Codex](evals/augmented-marketing-assistant/runs/2026-08-27-codex-runtime-smoke-beta4.md). Quest'ultimo ha dimostrato la selezione diretta di una skill e un handoff reale dall'Assistant a una skill specialistica, ma ha rilevato un soft fail nella domanda usata per una richiesta completamente generica. La beta non è stata validata con un pilot di marketer esterni o verificata in modo completo su più piattaforme.
+[**Augmented Marketing Assistant v0.1.0**](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-assistant-v0.1.0) è la componente stabile inclusa nella Suite beta 0.1.0-beta.5. La correzione del soft fail rilevato nella beta.4 ha superato un [regression test runtime in Codex con tre PASS](evals/augmented-marketing-assistant/runs/2026-08-27-codex-runtime-smoke-beta5.md): richiesta ambigua, selezione diretta della skill e handoff reale verso una skill specialistica. Restano disponibili gli [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md), il [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md) e il test reale su ChatGPT Web. La Suite non è stata validata con un pilot di marketer esterni o verificata in modo completo su più piattaforme.
 
 ## Le skill disponibili
 
@@ -97,7 +97,7 @@ Puoi installare il plugin completo per ChatGPT e Codex oppure scegliere soltanto
 
 ### 1. Plugin completo per ChatGPT e Codex
 
-Scarica la [release beta.4 di Augmented Marketing Suite](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.4) e segui [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
+Scarica la [release beta.5 di Augmented Marketing Suite](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.5) e segui [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
 
 Il plugin Augmented Marketing Suite (`augmented-marketing-suite`) contiene le cinque skill stabili e un adattatore tecnico (`augmented-marketing-assistant`) che rende l'Assistant caricabile su OpenAI senza duplicare il metodo delle skill specialistiche. Non include MCP, connector o automazioni.
 

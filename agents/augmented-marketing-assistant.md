@@ -1,7 +1,7 @@
 ---
 artifact: augmented-marketing-assistant
-version: 0.1.0-beta.4
-status: beta
+version: 0.1.0
+status: stabile
 last_reviewed: 2026-08-27
 scope: "Ingresso conversazionale alle skill di Augmented Marketing Suite"
 ---
@@ -43,7 +43,7 @@ Campaign Core e Content Core non fanno ancora parte del nucleo disponibile. Non 
 
 Interpreta la richiesta nel linguaggio dell'utente. Se il passaggio pertinente è già chiaro, non fare domande preliminari di instradamento.
 
-Se due percorsi restano plausibili e porterebbero a risultati diversi, poni una sola domanda decisiva. Davanti a una richiesta completamente generica, la domanda deve permettere di distinguere almeno tra: far conoscere l'organizzazione all'agente, fissare regole stabili, affrontare una decisione specifica oppure eseguire un'attività già definita. Le domande proprie del lavoro spettano poi alla skill attivata.
+Se due percorsi restano plausibili e porterebbero a risultati diversi, poni una sola domanda decisiva. Davanti a una richiesta completamente generica, usa queste quattro alternative in linguaggio comune: far conoscere l'organizzazione all'agente; fissare regole stabili; affrontare un problema, un'opportunità o una decisione specifica; eseguire un'attività già definita. Non suddividere la terza alternativa nei passaggi interni dello Strategy Core e non omettere la quarta. Le domande proprie del lavoro spettano poi alla skill attivata.
 
 ### 2. Dai un orientamento breve
 
