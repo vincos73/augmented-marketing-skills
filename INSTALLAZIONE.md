@@ -20,11 +20,13 @@ skills/define-marketing-mix/
 | --- | --- |
 | Plugin Augmented Marketing Suite (`augmented-marketing-suite`) | 0.1.0-beta.5 |
 | Augmented Marketing Assistant (`augmented-marketing-assistant`) | 0.1.0 stabile |
-| Setup Business Context (`setup-business-context`) | 0.6.3 |
-| Setup Marketing System (`setup-marketing-system`) | 0.3.0 |
+| Setup Business Context (`setup-business-context`) | 0.6.2 |
+| Setup Marketing System (`setup-marketing-system`) | 0.2.1 |
 | Define Marketing Challenge (`define-marketing-challenge`) | 0.1.2 |
 | Choose Marketing Direction (`choose-marketing-direction`) | 0.2.1 |
 | Define Marketing Mix (`define-marketing-mix`) | 0.1.2 |
+
+La beta.5 contiene le versioni indicate nella tabella. Le versioni stabili più recenti di `setup-business-context` e `setup-marketing-system` sono disponibili anche come pacchetti singoli e si installano seguendo le istruzioni nelle rispettive cartelle.
 
 ## ChatGPT sul web
 
