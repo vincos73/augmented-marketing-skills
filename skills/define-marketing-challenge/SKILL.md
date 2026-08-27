@@ -2,7 +2,7 @@
 name: define-marketing-challenge
 description: "Trasforma un obiettivo, problema, opportunità, segnale o proposta tattica interna in una sfida di marketing chiara e confermabile, basata sul contesto approvato dell'organizzazione. Usala quando un responsabile aziendale o un professionista deve mettere a fuoco quale cambiamento cercare prima di confrontare le direzioni. Non usarla per interpretare unilateralmente il brief di un cliente, scegliere la direzione, progettare campagne, allocare budget o produrre asset."
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # Definire la sfida di marketing
@@ -36,6 +36,7 @@ Ogni risposta sostanziale che fa avanzare una sfida aziendale mostra una nota co
 > Nota operativa: contesto applicato, Identità Acme v2 + Fondamenti di marketing v1.
 
 Non dichiarare mai di aver applicato un file che non hai verificato nella sessione.
+La nota operativa sostituisce una successiva lista dei percorsi letti: non ripetere nomi di file, versioni o limiti tecnici se non servono a decidere, approvare o salvare. Se l'utente ha già vietato scritture o azioni, rispetta il vincolo senza concludere con formule come `nessun file creato` o `nessuna azione eseguita`.
 
 ## Partire dalla richiesta e dai materiali reali
 
@@ -56,7 +57,7 @@ La prima risposta usa normalmente quattro gruppi brevi e manageriali:
 3. **Cosa sappiamo e cosa stiamo supponendo**;
 4. **Cosa serve per confermarla**.
 
-Resta entro 450 parole, comprese domande e chiave delle fonti, e poni non più di tre domande ad alta conseguenza. Il limite è un tetto, non un obiettivo: comprimi esempi e dettagli prima di eliminare un vincolo critico.
+Usa il minimo testo necessario a rendere la bozza decidibile. Nei casi semplici mira normalmente a 200-300 parole; resta comunque entro 450 parole, comprese domande e chiave delle fonti, e poni non più di tre domande ad alta conseguenza. Non ripetere in prosa ciò che una tabella o un elenco rende già evidente. Il limite è un tetto, non un obiettivo: comprimi esempi, note procedurali e dettagli prima di eliminare un vincolo critico.
 
 Per una sfida nuova o incompleta, per fonti in conflitto o quando più lacune competono per attenzione, leggi [il routing delle domande](references/question-routing.md) prima di scegliere cosa chiedere. Usalo come guida di priorità, non come questionario.
 

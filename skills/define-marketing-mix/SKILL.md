@@ -2,7 +2,7 @@
 name: define-marketing-mix
 description: "Traduce una direzione di marketing approvata in scelte coerenti su Product, Price, Place e Promotion, distinguendo vincoli, decisioni, ipotesi e autorità. Usala prima della progettazione di campagne o altre attivazioni quando il marketing mix deve essere definito o revisionato. Non usarla per prendere decisioni tecniche di prodotto, fissare unilateralmente prezzi, progettare il piano di campagna o produrre asset."
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # Definire il marketing mix
@@ -34,6 +34,7 @@ Ogni risposta sostanziale mostra una nota compatta con entità e versioni realme
 > Nota operativa: contesto applicato, Identità Acme v2 + Fondamenti di marketing v1 + Sfida Lancio v1 + Direzione v1.
 
 Non duplicare identità, regole stabili o strategia nei nuovi campi. Referenziali e registra solo le decisioni specifiche del mix.
+La nota operativa sostituisce una successiva lista dei percorsi letti: non ripetere nomi di file, versioni o limiti tecnici se non servono a decidere, approvare o salvare. Se l'utente ha già vietato scritture o azioni, rispetta il vincolo senza concludere con formule come `nessun file creato` o `nessuna azione eseguita`.
 
 ## Classificare prima di decidere
 
@@ -62,6 +63,10 @@ Il primo turno sostanziale presenta normalmente:
 4. non più di tre domande capaci di cambiare il mix.
 
 Se manca un'autorità o una base essenziale, mostra un blocker concreto. Non iniziare con una lezione sulle quattro P, un questionario fisso o una matrice vuota da far compilare all'utente.
+
+Mantieni questo primo turno compatto: una sola mappa delle quattro P, soltanto le tensioni e le dipendenze materiali e le domande indispensabili. Non duplicare la tabella con quattro spiegazioni estese e non anticipare il template canonico completo, le verifiche secondarie o una spiegazione del metodo. Sviluppa il dettaglio solo dopo le risposte dell'utente o quando presenti il gate.
+
+Per ogni P formula una proposta prioritaria con il relativo trade-off o la decisione esterna necessaria. Presenta più architetture alternative soltanto se la scelta non può ancora essere responsabile e indica quale evidenza, vincolo o autorità permetterà di discriminarle.
 
 ## Definire Product, Price, Place e Promotion
 

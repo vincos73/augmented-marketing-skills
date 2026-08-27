@@ -11,10 +11,10 @@ La fixture iniziale è in [`fixtures/synthetic-standalone/`](fixtures/synthetic-
 | DMM01 | Catena decisionale | Legge direzione, sfida, Identity, Foundations ed eventuale overlay e mostra versioni reali | Procede senza verificare la catena o usa una direzione superata |
 | DMM02 | Readiness della direzione | Richiede una direzione approvata o un equivalente per un mix canonico; con una bozza resta in esplorazione | Approva o salva il mix partendo da una direzione non approvata o incompatibile |
 | DMM03 | Attivazione selettiva | Non forza il workflow se il mix è già approvato o la richiesta è soltanto esecutiva | Ricostruisce tutto il mix senza necessità o blocca una campagna già sufficientemente specificata |
-| DMM04 | Prima risposta utile | Presenta una mappa iniziale delle quattro P, tensioni e al massimo tre domande, oppure un blocker | Avvia una lezione, un questionario fisso o una matrice vuota |
+| DMM04 | Prima risposta utile e proporzionata | Presenta una sola mappa iniziale delle quattro P, soltanto tensioni e dipendenze materiali e al massimo tre domande, oppure un blocker | Avvia una lezione, un questionario fisso o una matrice vuota, duplica la mappa in spiegazioni estese, ripete azioni vietate già date o anticipa il documento canonico completo |
 | DMM05 | Stato di ogni P | Classifica ciascuna P con esattamente uno degli stati canonici: vincolo approvato, scelta da definire, proposta, ipotesi da verificare, decisione esterna o non applicabile; registra le condizioni separatamente | Interpreta un vuoto come libertà, usa stati ibridi o inventa una scelta per completare la tabella |
 | DMM06 | Confine Product | Limita Product a configurazione dell'offerta, packaging, esperienza e implicazioni marketing; indirizza roadmap e fattibilità | Definisce unilateralmente caratteristiche tecniche, sviluppo o requisiti regolamentati |
-| DMM07 | Autorità Price | Collega prezzo e condizioni a valore, economics, evidenze e proprietario | Fissa prezzo o sconto senza base e autorità oppure inventa margini ed elasticità |
+| DMM07 | Autorità e scelta Price | Collega prezzo e condizioni a valore, economics, evidenze e proprietario; formula una proposta prioritaria oppure lega le alternative al criterio che permetterà di scegliere | Fissa prezzo o sconto senza base e autorità, inventa margini ed elasticità oppure elenca architetture intercambiabili senza trade-off o criterio di scelta |
 | DMM08 | Significato di Place | Tratta Place come accesso, distribuzione, vendita ed erogazione | Riduce Place ai social, media o canali di comunicazione |
 | DMM09 | Confine Promotion | Definisce ruolo, priorità e territorio di comunicazione senza produrre il campaign plan | Scrive messaggi, calendario, media plan, asset o allocazione operativa |
 | DMM10 | Coerenza tra P | Controlla almeno le tensioni materiali tra offerta, prezzo, distribuzione e promessa | Compila quattro sezioni indipendenti ignorando contraddizioni che rendono il mix non eseguibile |
@@ -35,6 +35,8 @@ La fixture iniziale è in [`fixtures/synthetic-standalone/`](fixtures/synthetic-
 - domande superflue;
 - correzioni richieste dal responsabile;
 - chiarezza dell'handoff verso Campaign Core e altre funzioni.
+- proporzione tra lunghezza della risposta e complessità del mix;
+- duplicazioni tra mappa, prosa e note procedurali.
 
 Nel primo ciclo non usare un punteggio globale. I gate di autorità, approvazione, coerenza e isolamento sono vincoli assoluti.
 
