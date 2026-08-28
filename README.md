@@ -1,3 +1,4 @@
+
 # Augmented Marketing Suite
 
 > Un insieme di skill per aiutarti a prendere decisioni di marketing più chiare, verificabili e approvabili con un agente IA.
@@ -5,6 +6,8 @@
 Se usi ChatGPT, Codex o un altro ambiente compatibile, puoi chiedere all'agente di aiutarti a capire un problema di marketing, confrontare alcune strade e preparare il passo successivo.
 
 Non devi conoscere il metodo o i nomi tecnici per iniziare. Puoi descrivere il bisogno con parole tue.
+
+<img width="1800" height="1200" alt="AMS-framework-1" src="https://github.com/user-attachments/assets/2469268c-85b4-42d4-9eb1-fe8d8481b34a" />
 
 ## Che cos'è una skill?
 
@@ -102,11 +105,11 @@ La beta.8 pubblicata offre un archivio ZIP per ciascuna delle cinque skill speci
 
 Scegli la skill che ti serve, caricala con il meccanismo di skill del tuo ambiente e avvia una nuova chat. Claude non usa l'Assistant incluso nella Suite OpenAI, quindi gli archivi portabili contengono soltanto le cinque skill specialistiche.
 
-### Per Claude: tutte e cinque le skill con un solo upload
+### Per Claude: Suite completa con un solo upload
 
 Carica [`dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.8.zip`](dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.8.zip) nella sezione **Personalizza → Plugin** di Claude. È un plugin Claude dedicato: ha `.claude-plugin/plugin.json` e include le cinque skill specialistiche, senza Augmented Marketing Assistant.
 
-### Per ChatGPT e Codex: Suite completa
+### Per ChatGPT e Codex: Suite completa con un solo upload
 
 La beta.8 pubblicata offre anche [`dist/openai/augmented-marketing-suite-0.1.0-beta.8.zip`](dist/openai/augmented-marketing-suite-0.1.0-beta.8.zip), con il manifesto `.codex-plugin` e tutte e sei le skill, incluso Augmented Marketing Assistant. Segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
 
