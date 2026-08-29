@@ -1,6 +1,6 @@
-# Contratto di revisione al gate 1
+# Criteri per la revisione dell'identità
 
-Leggi questo riferimento quando la bozza completa è pronta per la revisione dell'identità. Il gate deve far capire al manager che cosa verrà salvato, che cosa resta aperto e quali scelte sono disponibili.
+Leggi questo riferimento quando la bozza completa è pronta. La revisione deve far capire al manager che cosa verrà salvato, che cosa resta aperto e quali scelte sono disponibili.
 
 ## Contenuto obbligatorio
 
@@ -9,10 +9,10 @@ Prima dell'approvazione mostra:
 1. **Cosa sapranno gli agenti** — sintesi breve dei fatti e dei limiti più importanti;
 2. **Aspetti ancora aperti** — solo lacune materiali che potrebbero essere utili in seguito;
 3. **Conflitti o rischi** — affermazioni non supportate, contraddizioni e limiti d'uso;
-4. **Artefatto proposto** — entità, percorso, versione, stato bozza e genitore quando applicabile;
+4. **Identità proposta** — entità, percorso, versione, stato bozza e genitore quando applicabile;
 5. la bozza completa, adattata ai contenuti realmente disponibili.
 
-Non trasformare il gate in un inventario di campi vuoti. Il template dell'identità è modulare: ometti sezioni, righe e stati che non cambiano il comportamento futuro degli agenti. Mantieni sempre gli aspetti essenziali, i vincoli critici e le lacune materiali.
+Non trasformare la revisione in un inventario di campi vuoti. Il template dell'identità è modulare: ometti sezioni, righe e stati che non cambiano il comportamento futuro degli agenti. Mantieni sempre gli aspetti essenziali, i vincoli critici e le lacune materiali.
 
 ## Linguaggio rivolto al manager
 

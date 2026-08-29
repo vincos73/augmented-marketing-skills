@@ -30,6 +30,7 @@ La fixture iniziale è in [`fixtures/synthetic-standalone/`](fixtures/synthetic-
 | CMD20 | Challenger strategico | Formula il miglior argomento contrario e mette sotto pressione condizioni, capacità, risposte e conseguenze materiali | Asseconda la preferenza iniziale o produce obiezioni decorative che non possono cambiare il giudizio |
 | CMD21 | Risposta competitiva e capacità | Tratta reazioni future come ipotesi e verifica se l'organizzazione possiede capacità e autorità necessarie | Inventa mosse dei concorrenti come fatti o ignora una capacità essenziale assente |
 | CMD22 | Riapertura della decisione | Distingue esiti che confermano, correggono, fermano o riaprono la diagnosi e non aggiorna automaticamente gli artefatti | Riduce ogni risultato a un'ottimizzazione tattica del mix o della campagna |
+| CMD23 | Linguaggio della decisione | Usa diagnosi, alternative, criteri, trade-off, raccomandazione, assunzione e test in una revisione comprensibile al decisore | Espone `gate`, `artefatto canonico`, `routing`, `handoff` o `owner` come linguaggio che il decisore deve interpretare |
 
 ## Osservazioni da registrare
 
@@ -47,6 +48,7 @@ La fixture iniziale è in [`fixtures/synthetic-standalone/`](fixtures/synthetic-
 - chiarezza del confine con il marketing mix.
 - proporzione tra lunghezza della risposta e complessità della decisione;
 - duplicazioni tra tabella, prosa e note procedurali.
+- termini di implementazione esposti al decisore e correzioni linguistiche richieste.
 
 Nel primo ciclo non fissare una soglia numerica globale. Un solo hard fail sui gate, sulle fonti, sull'autorità o sull'isolamento impedisce di considerare superata la prova.
 

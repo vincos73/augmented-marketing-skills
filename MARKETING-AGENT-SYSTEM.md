@@ -37,18 +37,18 @@ Augmented Marketing Suite
                 ├── setup-business-context  (identità durevole di azienda o brand)
                 ├── setup-marketing-system  (Fondamenti di marketing)
                 ├── Strategy Core  → define-marketing-challenge → choose-marketing-direction → define-marketing-mix
-                ├── Campaign Core  → to-campaign-spec → campaign-review → learn-from-results
+                ├── Campaign Core  → design-campaign → campaign-review → learn-from-results
                 └── Content Core   → Content Director → builder specializzati
 ```
 
 **Augmented Marketing Assistant** è un agente sottile e non un nuovo core. Riceve il bisogno nel linguaggio dell'utente, verifica soltanto stati e artefatti osservabili, spiega il passaggio utile e attiva la skill pertinente quando l'ambiente lo consente. Se non può effettuare il passaggio, indica all'utente la skill da invocare e si ferma senza simularne il metodo. Non possiede logica strategica, artefatti o approvazioni propri e non impone il percorso completo quando l'input necessario esiste già. Nel plugin OpenAI compare tecnicamente come sesta skill (`augmented-marketing-assistant`), ma questa forma è soltanto un adattatore di caricamento e non una nuova competenza di marketing.
 
-La [definizione canonica stabile v0.1.0](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex ed è incluso nella Suite beta 0.1.0-beta.5. Gli [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md), il [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md), il [regression test runtime Codex della beta.5](evals/augmented-marketing-assistant/runs/2026-08-27-codex-runtime-smoke-beta5.md) e il test reale su ChatGPT Web verificano aspetti diversi, ma non equivalgono a un pilot con marketer esterni. Il regression test ha superato con tre PASS richiesta ambigua, selezione diretta e handoff effettivo.
+La [definizione canonica stabile v0.1.0](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex ed è incluso nella Suite beta 0.1.0-beta.8. Gli [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md), il [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md), il regression test runtime Codex storico della beta.5 e il test reale su ChatGPT Web verificano aspetti diversi, ma non equivalgono a un pilot con marketer esterni. Il regression test ha superato con tre PASS richiesta ambigua, selezione diretta e handoff effettivo.
 
 I tre core non sono cartelle decorative e non devono diventare tre agenti generalisti. Sono famiglie di decisioni con artefatti e confini diversi:
 
 - **Strategy Core:** definisce quale problema, pubblico, comportamento o opportunità richiedono una decisione, sceglie la direzione e la traduce in un marketing mix coerente su Product, Price, Place e Promotion;
-- **Campaign Core:** traduce la componente Promotion e le attivazioni pertinenti di un marketing mix approvato in un sistema coordinato di messaggi, canali, asset, responsabilità, misure e apprendimento;
+- **Campaign Core:** progetta un sistema coordinato di messaggi, canali, asset, responsabilità, misure e apprendimento partendo da un'esigenza di campagna oppure traducendo la componente Promotion e le attivazioni pertinenti di un marketing mix approvato;
 - **Content Core:** valuta e produce singoli contenuti o famiglie di contenuti, mantenendo il giudizio specifico nei builder.
 
 Nel nucleo minimo non è previsto un agente **Strategist** separato. Il lavoro strategico appartiene alle tre skill dello Strategy Core, mentre l'Assistant conserva soltanto orientamento e continuità. Un eventuale componente trasversale potrà essere valutato soltanto se l'uso reale farà emergere un compito distinto, con una propria user story e un proprio artefatto, per esempio una revisione di coerenza tra sfida, direzione e marketing mix. Non dovrà duplicare il routing dell'Assistant né il metodo delle skill specialistiche.
@@ -148,15 +148,21 @@ La promessa concreta può essere:
 
 Al momento il repository contiene cinque skill sorgente approvate:
 
-- `setup-business-context`: identità aziendale o di brand persistente, verificabile e riusabile.
-- `setup-marketing-system`: regole di marketing stabili, verificabili e riusabili dai workflow a valle.
-- `define-marketing-challenge`: Brief della sfida confermato e pronto al confronto strategico, disponibile come release stabile `v0.1.2`.
-- `choose-marketing-direction`: confronto strategico e Direzione di marketing approvabile, disponibile come release stabile `v0.2.1`.
-- `define-marketing-mix`: traduzione della direzione approvata nelle quattro P, disponibile come release stabile `v0.1.2`.
+- `setup-business-context`: identità aziendale o di brand persistente, nella Suite beta.8 come `v0.6.4`.
+- `setup-marketing-system`: regole di marketing stabili, nella Suite beta.8 come `v0.3.1`.
+- `define-marketing-challenge`: Brief della sfida confermato e pronto al confronto strategico, nella Suite beta.8 come `v0.1.3`.
+- `choose-marketing-direction`: confronto strategico e Direzione di marketing approvabile, nella Suite beta.8 come `v0.2.2`.
+- `define-marketing-mix`: traduzione della direzione approvata nelle quattro P, nella Suite beta.8 come `v0.1.3`.
 
 Le tre skill di Strategy Core sono approvate e disponibili come release stabili, con istruzioni di installazione, fixture sintetiche e test senza hard fail. Non sono automaticamente installate o attive nell'ambiente dell'utente. Gli altri core e le relative competenze restano roadmap o ipotesi da validare. Il set resta intenzionalmente incompleto: non produce campagne complete e non automatizza la pubblicazione.
 
+Il Campaign Core include ora la sorgente candidata `design-campaign` v0.1.4. La v0.1.3 è stata installata e provata sulla stessa campagna con Luna high e Sol high: Sol ha evitato le domande superflue osservate con Luna, ma la revisione ha fatto emergere termini da authoring tecnico come `contratto` e `architettura`. La v0.1.4 conserva le correzioni di proporzione e progressione per differenza e separa il lessico interno da quello rivolto a marketer e manager. È installata localmente con parità verificata rispetto alla sorgente e resta da retestare; la presenza della sorgente o dell'installazione locale non equivale a release pubblica o prova con marketer esterni.
+
 Le cartelle sotto `skills/` sono sorgenti di authoring, non prova di installazione attiva. Ogni ambiente che supporta skill può richiedere una destinazione, un pacchetto o un adattatore specifico. Authoring, installazione locale e distribuzione restano tre gate distinti, e la presenza della sorgente non dimostra il caricamento nella sessione.
+
+La progettazione delle prossime skill e le revisioni sostanziali seguono lo [standard comune di progettazione](STANDARD-PROGETTAZIONE-SKILL.md). Il blueprint deve dichiarare eventuali eccezioni e ogni pacchetto deve incorporare le regole necessarie durante l'uso: il documento comune governa l'authoring, ma non diventa una dipendenza runtime implicita. Lo standard privilegia prima risposta utile, progressione per differenza, gate compatti, template modulari, isolamento dei test e verifica del rework richiesto al responsabile.
+
+La revisione terminologica del 29 agosto 2026 crea sorgenti candidate per `setup-business-context` v0.6.5, `setup-marketing-system` v0.3.2, `define-marketing-challenge` v0.1.4, `choose-marketing-direction` v0.2.3, `define-marketing-mix` v0.1.4 e `design-campaign` v0.1.4. Le versioni pubblicate nella Suite restano invariate. Le candidate mantengono interni termini come `gate`, `routing`, `artefatto canonico`, `handoff`, `owner` e `runtime` e usano nell'interfaccia il lessico del dominio pertinente. Sono installate localmente per i test e richiedono verifiche comportamentali prima di una nuova distribuzione.
 
 Il nucleo è indipendente dall'adattatore di distribuzione. Il [contratto di portabilità](PORTABILITA.md) definisce capability obbligatorie e opzionali, comportamento degli artefatti quando il workspace non è scrivibile, limiti dei connector e scenari minimi di verifica. Comandi, hook, manifest, marketplace e instruction file specifici non appartengono al contratto essenziale delle skill.
 
@@ -546,7 +552,7 @@ Il catalogo iniziale comprende 18 eval comportamentali, una fixture Relaybird a 
 
 La validazione strutturale di `skill-creator`, `git diff --check` e il [retest sintetico di compattezza della v0.1.2](evals/define-marketing-challenge/runs/2026-08-27-compactness-retest-v0.1.2.md) hanno esito positivo. La [release stabile v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.2) contiene lo ZIP della sola skill e il relativo checksum SHA-256.
 
-#### `choose-marketing-direction`: approvata v0.2.1
+#### `choose-marketing-direction`: sorgente candidata v0.2.3; Suite beta.8 v0.2.2; release singola verificata v0.2.1
 
 > Come proprietario di una decisione marketing, parto da una sfida confermata, formulo una diagnosi provvisoria e confronto alternative realmente strategiche per scegliere come produrre il cambiamento cercato. Ottengo una direzione approvabile sottoposta a stress test, con trade-off, non-scelte, assunzione più fragile e primo test utile, senza trasformarla prematuramente in marketing mix o campagna.
 
@@ -566,7 +572,7 @@ L'artefatto proposto è:
 
 Usa gli stati `bozza`, `approvata` e `superata`, referenzia la versione esatta di `challenge.md` e richiede sia approvazione della scelta sia autorizzazione al salvataggio. Il [forward test indipendente](evals/choose-marketing-direction/runs/2026-08-26-independent-forward-v0.2.0.md) della v0.2.0 è passato senza hard fail; il [retest sintetico di compattezza della v0.2.1](evals/choose-marketing-direction/runs/2026-08-27-compactness-retest-v0.2.1.md) non ha rilevato hard fail. La [release stabile v0.2.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/choose-marketing-direction-v0.2.1) contiene lo ZIP della sola skill e il relativo checksum. Il passaggio successivo normale è `define-marketing-mix`.
 
-#### `define-marketing-mix`: approvata v0.1.2
+#### `define-marketing-mix`: sorgente v0.1.4; Suite beta.8 v0.1.3; release singola verificata v0.1.2
 
 > Come responsabile marketing, traduco una direzione approvata in decisioni coerenti su Product, Price, Place e Promotion, rendendo visibili vincoli, ipotesi, dipendenze e proprietari prima di progettare la campagna o altre attivazioni.
 
@@ -585,15 +591,17 @@ L'artefatto proposto è:
 .agents/marketing/decisions/<decision-slug>/marketing-mix.md
 ```
 
-Usa gli stati `bozza`, `approvato` e `superato`, referenzia versioni esatte di sfida e direzione e richiede approvazione del contenuto più autorizzazione al salvataggio. Il [forward test indipendente](evals/define-marketing-mix/runs/2026-08-26-independent-forward-v0.1.1.md) della v0.1.1 è passato senza hard fail; il [retest sintetico di compattezza della v0.1.2](evals/define-marketing-mix/runs/2026-08-27-compactness-retest-v0.1.2.md) non ha rilevato hard fail. La [release stabile v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-mix-v0.1.2) contiene lo ZIP della sola skill e il relativo checksum. La componente Promotion può essere passata a `to-campaign-spec` soltanto quando dipendenze e autorità non rendono l'attivazione prematura.
+Usa gli stati `bozza`, `approvato` e `superato`, referenzia versioni esatte di sfida e direzione e richiede approvazione del contenuto più autorizzazione al salvataggio. Il [forward test indipendente](evals/define-marketing-mix/runs/2026-08-26-independent-forward-v0.1.1.md) della v0.1.1 è passato senza hard fail; il [retest sintetico di compattezza della v0.1.2](evals/define-marketing-mix/runs/2026-08-27-compactness-retest-v0.1.2.md) non ha rilevato hard fail. La [release stabile v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-mix-v0.1.2) contiene lo ZIP della sola skill e il relativo checksum. La componente Promotion può essere passata a `design-campaign` soltanto quando dipendenze e autorità non rendono l'attivazione prematura.
 
 Le release dello Strategy Core includono `SKILL.md`, metadati UI, istruzioni di installazione, reference, cataloghi comportamentali e pacchetti verificabili. La validazione strutturale e gli eval sintetici non equivalgono a una prova con marketer reali né autorizzano l'esecuzione delle attività descritte dalle skill.
 
 ### 4. Campaign Core
 
-- `to-campaign-spec`: traduce la componente Promotion e le attivazioni pertinenti di un marketing mix approvato in messaggi, ruolo dei canali, asset, dipendenze, responsabilità, approvazioni e piano di misurazione;
+- `design-campaign`, sorgente candidata v0.1.4: parte autonomamente da un'esigenza o da un brief di campagna, oppure riusa la componente Promotion e le attivazioni pertinenti di un marketing mix approvato; produce un funnel o percorso coordinato con messaggi, ruolo dei canali, asset, dipendenze, responsabilità, approvazioni e piano di misurazione senza obbligare l'utente a completare prima lo Strategy Core;
 - `campaign-review`: verifica separatamente coerenza strategica, solidità delle affermazioni e qualità degli asset;
 - `learn-from-results`: confronta previsioni e risultati, separa segnale e rumore e aggiorna il playbook.
+
+Il [blueprint del Campaign Core](CAMPAIGN-CORE.md) e la [sorgente candidata](skills/design-campaign/) definiscono l'esperienza standalone, il routing delle domande e il template della Campaign Spec. La [fixture Fabriloom e il catalogo degli eval](evals/design-campaign/) preparano la validazione. Dopo due FAIL sul routing, il [retest cieco della v0.1.2](evals/design-campaign/runs/2026-08-29-fabriloom-independent-retest-v0.1.2.md) è passato con zero hard fail e due soft fail. Il [primo test dell'utente](evals/design-campaign/runs/2026-08-29-vincos-guide-user-test-v0.1.2.md) ha fatto emergere ridondanza e scrittura impropria in modalità test; il [test successivo su Sol high](evals/design-campaign/runs/2026-08-29-vincos-guide-sol-high-v0.1.3.md) ha superato la progressione per differenza ma ha evidenziato lessico troppo tecnico. La v0.1.4 interviene su questo punto e resta da retestare. Queste prove non dimostrano efficacia con marketer esterni.
 
 ### 5. Content Core
 
@@ -609,7 +617,7 @@ Le release dello Strategy Core includono `SKILL.md`, metadati UI, istruzioni di 
 4. verificare `Augmented Marketing Assistant` in sessioni pulite, distinguendo selezione diretta della skill, handoff riuscito e fallback quando l'handoff non è disponibile;
 5. svolgere un micro-pilot con persone poco tecniche prima di aggiungere un altro agente generalista;
 6. collegare il primo percorso Content ai builder già esistenti;
-7. introdurre il Campaign Core quando esistono marketing mix approvati da tradurre in attivazioni;
+7. introdurre il Campaign Core con un test standalone e una regressione collegata a un marketing mix approvato;
 8. aggiungere apprendimento continuo e monitoring solo nei processi che mostrano un uso ripetuto.
 
 ## Content Director: responsabilità e confini

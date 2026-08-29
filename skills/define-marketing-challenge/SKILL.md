@@ -2,7 +2,7 @@
 name: define-marketing-challenge
 description: "Trasforma un obiettivo, problema, opportunità o proposta tattica in una sfida di marketing confermabile. Usala prima di scegliere una direzione, non per campagne, budget o asset."
 metadata:
-  version: "0.1.3"
+  version: "0.1.4"
 ---
 
 # Definire la sfida di marketing
@@ -10,6 +10,10 @@ metadata:
 Trasforma una richiesta ancora ambigua in un **Brief della sfida di marketing** che un responsabile autorizzato possa confermare. Il risultato deve permettere a un workflow successivo di confrontare direzioni plausibili senza reinterpretare il problema, inventare pubblico o vincoli oppure scambiare una tattica proposta per una decisione.
 
 Questa skill mette a fuoco la decisione da affrontare. Non la risolve.
+
+## Usare il linguaggio di marketing e management
+
+Nelle risposte rivolte al responsabile usa termini riconoscibili come `brief`, `situazione di partenza`, `problema o opportunità`, `pubblico`, `cambiamento cercato`, `segnali`, `vincoli`, `decisione da prendere` e `revisione finale`. Mantieni interni `gate`, `routing`, `artefatto canonico`, `schema` e `handoff`: quando serve parlarne, usa rispettivamente `approvazione`, `domande più utili`, `brief salvato`, `struttura del brief` e `passaggio alla scelta della direzione`.
 
 ## Verificare che il workflow sia pertinente
 
@@ -100,7 +104,7 @@ Il tipo dell'elemento resta distinto dalla base. Una regola letta in un contesto
 
 Se una richiesta temporanea contraddice Business Identity o Marketing Foundations, non sovrascrivere la regola stabile. Mostra il conflitto e chiedi se esista una decisione autorizzata di aggiornamento; senza di essa mantieni la sfida entro il contesto approvato o lasciala in bozza.
 
-## Verificare la preparazione e presentare il gate
+## Verificare la preparazione e presentare la revisione finale
 
 Quando costruisci un nuovo artefatto, ne aggiorni uno esistente o verifichi se la bozza sia confermabile, leggi [il template del Brief della sfida](references/marketing-challenge-template.md).
 

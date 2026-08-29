@@ -17,6 +17,8 @@ Qui per agente IA intendiamo l'assistente con cui lavori, per esempio ChatGPT o 
 
 La Suite non è un direttore marketing automatico e non decide al posto tuo. Ti aiuta a rendere più ordinato e ricostruibile il percorso che porta a una decisione.
 
+Chi contribuisce nuove skill trova i criteri comuni nello [standard di progettazione](STANDARD-PROGETTAZIONE-SKILL.md): risposte proporzionate, dialogo per differenza, fonti separate dai materiali metodologici, gate compatti e test senza scritture canoniche.
+
 ## Da dove cominciare
 
 | Se ti trovi in questa situazione | Cosa usare | Che cosa ottieni |
@@ -29,6 +31,12 @@ La Suite non è un direttore marketing automatico e non decide al posto tuo. Ti 
 | Hai scelto una direzione e devi renderla concreta. | [`define-marketing-mix`](skills/define-marketing-mix/) | Scelte coerenti su offerta, prezzo, distribuzione e comunicazione. |
 
 I nomi tra parentesi sono quelli da usare per richiamare direttamente le skill. Se l'ambiente supporta l'Assistant, puoi invece descrivere semplicemente ciò che vuoi fare.
+
+### Sorgente candidata in sviluppo
+
+| Se ti trovi in questa situazione | Cosa usare | Che cosa ottieni | Stato |
+| --- | --- | --- | --- |
+| Vuoi progettare una campagna partendo da un'esigenza, un brief o un marketing mix. | [`design-campaign`](skills/design-campaign/) | Una Campaign Spec con funnel, messaggi, canali, asset, responsabilità e misurazione. | v0.1.4 candidata; non inclusa nella Suite pubblicata |
 
 ## Il percorso, in parole semplici
 
@@ -68,19 +76,19 @@ Immagina di voler proporre un nuovo servizio di formazione.
 4. Scegli una direzione, rendendo esplicite le ipotesi ancora da verificare.
 5. Definisci in modo coerente l'offerta, il prezzo, il modo di accesso e la comunicazione.
 
-Solo dopo puoi passare a pagine, campagne e contenuti. Le competenze per campagne, contenuti e apprendimento sono previste per uno sviluppo futuro e non fanno parte delle skill disponibili in questo progetto.
+Solo dopo puoi passare a pagine, campagne e contenuti. `design-campaign` è presente come sorgente candidata non ancora pubblicata; le altre competenze per campagne, contenuti e apprendimento restano previste per uno sviluppo futuro.
 
-## Ultime versioni pubblicate
+## Versioni della Suite e release singole
 
-Queste sono le ultime versioni pubblicate e taggate singolarmente. Le versioni correnti delle cinque skill sono pubblicate insieme nella [release della Suite beta.8](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.8), con gli archivi e i checksum nel repository.
+Le versioni correnti delle cinque skill sono incluse nella [release della Suite beta.8](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.8), con gli archivi e i checksum nel repository. Le release singole precedenti restano indicate nella tabella di installazione quando sono il riferimento verificato per quella skill.
 
-| Skill | Versione stabile | Risultato principale |
+| Skill | Versione inclusa nella Suite beta.8 | Risultato principale |
 | --- | --- | --- |
-| [`setup-business-context`](skills/setup-business-context/) | [v0.6.3](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-business-context-v0.6.3) | Contesto identitario riutilizzabile. |
-| [`setup-marketing-system`](skills/setup-marketing-system/) | [v0.3.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/setup-marketing-system-v0.3.0) | Fondamenti e regole di marketing condivisi. |
-| [`define-marketing-challenge`](skills/define-marketing-challenge/) | [v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.2) | Documento sintetico e verificabile della sfida. |
-| [`choose-marketing-direction`](skills/choose-marketing-direction/) | [v0.2.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/choose-marketing-direction-v0.2.1) | Confronto e scelta della direzione. |
-| [`define-marketing-mix`](skills/define-marketing-mix/) | [v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-mix-v0.1.2) | Marketing mix su offerta, prezzo, distribuzione e comunicazione. |
+| [`setup-business-context`](skills/setup-business-context/) | v0.6.4 | Contesto identitario riutilizzabile. |
+| [`setup-marketing-system`](skills/setup-marketing-system/) | v0.3.1 | Fondamenti e regole di marketing condivisi. |
+| [`define-marketing-challenge`](skills/define-marketing-challenge/) | v0.1.3 | Documento sintetico e verificabile della sfida. |
+| [`choose-marketing-direction`](skills/choose-marketing-direction/) | v0.2.2 | Confronto e scelta della direzione. |
+| [`define-marketing-mix`](skills/define-marketing-mix/) | v0.1.3 | Marketing mix su offerta, prezzo, distribuzione e comunicazione. |
 
 ## Cosa non devi aspettarti
 
@@ -121,11 +129,11 @@ Per una release già pubblicata, scarica la skill desiderata, estraila e segui i
 
 | Skill | Versione pubblicata da installare |
 | --- | --- |
-| `setup-business-context` | `setup-business-context-v0.6.3` |
-| `setup-marketing-system` | `setup-marketing-system-v0.3.0` |
-| `define-marketing-challenge` | `define-marketing-challenge-v0.1.2` |
-| `choose-marketing-direction` | `choose-marketing-direction-v0.2.1` |
-| `define-marketing-mix` | `define-marketing-mix-v0.1.2` |
+| `setup-business-context` | Suite beta.8: `v0.6.4` |
+| `setup-marketing-system` | Suite beta.8: `v0.3.1` |
+| `define-marketing-challenge` | Suite beta.8: `v0.1.3` |
+| `choose-marketing-direction` | Suite beta.8: `v0.2.2` |
+| `define-marketing-mix` | Suite beta.8: `v0.1.3` |
 
 Scegliere una versione pubblicata precisa evita di installare involontariamente una versione ancora in sviluppo. In Codex, la destinazione abituale è `~/.codex/skills/`, ma il percorso può cambiare in base all'ambiente.
 

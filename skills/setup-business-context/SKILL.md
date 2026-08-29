@@ -2,7 +2,7 @@
 name: setup-business-context
 description: "Costruisce o aggiorna un contesto identitario basato su fonti per un'azienda o brand, prima del lavoro degli agenti. Non definisce strategia, campagne, identità visiva o strumenti."
 metadata:
-  version: "0.6.4"
+  version: "0.6.5"
 ---
 
 # Configurazione del contesto aziendale
@@ -47,7 +47,7 @@ Per il lavoro su un brand figlio, leggi prima il genitore e poi il figlio. Il ge
 
 Per una nuova identità, per un'identità materialmente incompleta o quando più lacune competono per attenzione, leggi [la guida al routing delle domande](references/expert-question-routing.md) prima di scegliere le domande. Usala per selezionare le lacune ad alta conseguenza, non per eseguire ogni domanda come un questionario.
 
-Per la prima revisione basata sulle fonti, leggi anche [il contratto della prima revisione compatta](references/compact-review-contract.md). Considera criteri di accettazione il limite di 450 parole, il numero di gruppi, il limite di domande, la provenienza e la conservazione dei vincoli critici.
+Per la prima revisione basata sulle fonti, leggi anche [i criteri della prima revisione compatta](references/compact-review-contract.md). Considera criteri di accettazione il limite di 450 parole, il numero di gruppi, il limite di domande, la provenienza e la conservazione dei vincoli critici.
 
 Se l'utente non fornisce fonti, costruisci una versione minima utile attraverso la conversazione. Non trasformare il percorso in un questionario generico sul brand.
 
@@ -71,7 +71,7 @@ Mantieni compatte le transizioni:
  - quando mancano entità o fonti, chiedile insieme in un unico gruppo quando è naturale farlo;
  - quando le fonti sono disponibili, la risposta sostanziale successiva deve contenere un'identità provvisoria sostenuta dalle fonti e non più di tre lacune rilevanti, oppure un ostacolo concreto alla lettura delle fonti;
  - organizza la prima revisione provvisoria in quattro-sei gruppi informativi compatti, normalmente con non più di due brevi frasi per gruppo, invece di riprodurre ogni campo dell'identità;
- - mantieni la prima risposta completa, comprese domande e chiave delle fonti, entro un limite rigido di 450 parole; se le evidenze sono più numerose, segui il contratto della revisione compatta e rinvia i dettagli senza eliminare un confine critico;
+ - mantieni la prima risposta completa, comprese domande e chiave delle fonti, entro un limite rigido di 450 parole; se le evidenze sono più numerose, segui i criteri della revisione compatta e rinvia i dettagli senza eliminare un confine critico;
  - dai priorità a entità e perimetro, offerta corrente, clienti e ruoli d'acquisto, valore e alternative, conflitti nelle prove e vincoli critici; rinvia identità completa, modello di business dettagliato, voce, terminologia, accessibilità, registro delle prove, registro delle fonti e trigger di revisione alla bozza completa del gate 1, salvo che uno di questi elementi crei un conflitto o una domanda immediata;
  - non omettere mai un limite irrisolto su autorizzazioni, privacy, diritto, regolamentazione, sicurezza o uso pubblico delle prove per rientrare nel limite; comprimi prima la descrizione e unisci le lacune collegate in una sola domanda quando possibile;
  - non dedicare un turno a un messaggio di solo avanzamento, alla generazione di un'interfaccia o al trasferimento di stato tecnico;
@@ -79,6 +79,8 @@ Mantieni compatte le transizioni:
  - riepiloga brevemente le risposte raccolte e non chiedere mai di ripetere informazioni già fornite.
 
 Scrivi ogni passaggio rivolto al responsabile come una conversazione naturale, non come una proiezione dello schema dell'artefatto. Accompagna ogni transizione con una frase che dica in modo semplice dove siamo e quale scelta segue. Traduce i concetti interni in un linguaggio familiare: usa, per esempio, `per chi l'offerta è particolarmente adatta` invece di `caratteristiche dell'adeguatezza migliore`, e `per chi potrebbe non essere adatta` invece di `non adatto o deliberatamente non servito`. Evita etichette astratte e formule basate su `adeguatezza`, `non adeguatezza` o `idoneità`; descrivi invece il cliente o la situazione concreta. Non mostrare entità HTML come `&#x20;`, valori serializzati, nomi di campo o codifiche di trasporto. Se il testo della fonte contiene caratteri codificati, normalizzali nella visualizzazione senza alterarne il significato.
+
+Considera `gate 1`, `gate 2`, `artefatto canonico`, `routing`, `schema`, `host` e `runtime` termini interni. Nelle risposte rivolte al responsabile usa invece `revisione dell'identità`, `approvazione dell'identità`, `salvataggio`, `installazione per gli agenti`, `domande più utili` e `nuova sessione`, secondo il caso. Non usare le etichette interne come titoli o richieste di conferma.
 
 Se l'utente chiede esplicitamente una vista visuale, puoi offrirla soltanto come revisione singola dopo che l'analisi delle fonti è pronta. Non usarla per raccogliere input necessari, trasferire stato, acquisire approvazioni o creare un wizard continuo su più turni. Mantieni in chat tutte le scelte e le approvazioni rilevanti.
 
@@ -146,7 +148,7 @@ Quando un altro workflow usa l'identità, fagli indicare entità, percorso canon
 
 Per un brand figlio, il contesto riutilizzabile è la coppia `identità dell'azienda genitore + identità del brand figlio`, con entrambi i percorsi e le versioni registrati. Non caricare per impostazione predefinita contesti di brand non pertinenti.
 
-## Gate 1: approvazione dell'identità
+## Approvare l'identità
 
 Prima di presentare questo gate, leggi e segui [il contratto del gate 1 rivolto al responsabile](references/gate1-review-contract.md).
 
@@ -155,7 +157,7 @@ Prima di salvare una nuova identità canonica o aggiornare materialmente quella 
 - **Cosa sapranno gli agenti** — una breve sintesi esecutiva;
 - **Cosa resta da chiarire** — solo le lacune che potrebbero contare in seguito;
 - **Conflitti o rischi** — incluse le affermazioni non supportate;
-- **Artefatto proposto** — tipo di entità, percorso, versione e riferimento al genitore quando applicabile.
+- **Identità proposta** — tipo di entità, percorso, versione e riferimento al genitore quando applicabile.
 
 Presenta la bozza completa per la revisione e chiedi un'approvazione esplicita. Fino all'approvazione chiamala bozza e non sovrascrivere l'identità canonica.
 
@@ -178,7 +180,7 @@ Se il workspace non è scrivibile, restituisci l'artefatto approvato completo e 
 
 Quando l'identità è stata salvata ma non è stata installata per un agente, descrivi le due azioni separatamente e proponi conversazionalmente la scelta successiva. Per esempio: `Bene, ho salvato l'identità che hai approvato. Non l'ho ancora installata per il tuo agente: per farla leggere e utilizzare dobbiamo aggiungere un riferimento alle istruzioni del workspace. Lo facciamo ora o preferisci farlo dopo?` Non dire mai che l'identità è contemporaneamente salvata e non salvata e non lasciare intendere che sia stata installata o caricata a runtime se non lo hai osservato.
 
-## Gate 2: installazione per gli agenti
+## Installare l'identità per gli agenti
 
 L'approvazione del contenuto non autorizza modifiche ai file di istruzioni dell'agente.
 

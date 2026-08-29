@@ -2,7 +2,7 @@
 name: define-marketing-mix
 description: "Traduce una direzione approvata in scelte su Product, Price, Place e Promotion. Usala prima di campagne o asset, non per fissare unilateralmente prezzi."
 metadata:
-  version: "0.1.3"
+  version: "0.1.4"
 ---
 
 # Definire il marketing mix
@@ -10,6 +10,10 @@ metadata:
 Trasforma una **Direzione di marketing** approvata in un **Marketing Mix** approvabile e coerente. Rende esplicito che il marketing non coincide con la sola promozione e chiarisce, per ciascuna delle quattro P, che cosa è già deciso, che cosa deve cambiare, che cosa resta un'ipotesi e chi possiede l'autorità.
 
 La skill definisce scelte strategiche di marketing. Non esegue modifiche a prodotto, listini, distribuzione, account, campagne o asset.
+
+## Usare il linguaggio del marketing mix
+
+Nelle risposte al responsabile usa `mappa delle quattro P`, `scelte`, `vincoli`, `coerenza`, `tensioni`, `decisioni esterne`, `revisione finale` e `passaggio alla campagna`. `Product`, `Price`, `Place` e `Promotion` sono termini di marketing naturali e possono restare in inglese. Mantieni interni `gate`, `artefatto canonico`, `routing`, `handoff` e `owner`; non usarli come intestazioni o formule di conferma.
 
 ## Verificare input e pertinenza
 
@@ -95,7 +99,7 @@ Per ogni scelta materiale registra base, assunzione e conseguenza. Mantieni i ma
 
 Collega le verifiche all'assunzione più fragile della singola P o alla coerenza tra P. Non trasformare il mix in un piano completo di sperimentazione. Se la direzione contiene già un primo test strategico, mostra come il mix lo abilita senza sostituirlo con un test tattico più comodo.
 
-## Presentare il gate e salvare
+## Presentare la revisione finale e salvare
 
 Quando costruisci, aggiorni o revisioni il mix leggi [il template del Marketing Mix](references/marketing-mix-template.md).
 
@@ -122,7 +126,7 @@ La prima versione approvata è `v1`. Una modifica sostanziale di una o più P in
 
 Riporta che cosa è stato proposto, approvato e salvato e quali decisioni esterne restano necessarie. Il mix non implica che ogni P debba essere attivata attraverso una campagna.
 
-- Per la componente Promotion e le attivazioni coordinate, proponi `to-campaign-spec` quando disponibile.
+- Per la componente Promotion e le attivazioni coordinate, proponi `design-campaign` quando disponibile.
 - Per cambiamenti di prodotto, prezzo o distribuzione, indica proprietari e workflow competenti senza inventarli se non esistono.
 - Se una dipendenza bloccante resta aperta, non presentare la campagna come pronta.
 

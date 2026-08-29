@@ -2,7 +2,7 @@
 name: choose-marketing-direction
 description: "Confronta direzioni strategiche plausibili per una sfida confermata e prepara una scelta falsificabile. Usala prima del marketing mix o di una campagna."
 metadata:
-  version: "0.2.2"
+  version: "0.2.3"
 ---
 
 # Scegliere la direzione di marketing
@@ -10,6 +10,10 @@ metadata:
 Trasforma un **Brief della sfida di marketing** confermato in una **Direzione di marketing** approvabile. Formula una diagnosi strategica provvisoria, confronta alternative realmente strategiche, mette sotto pressione la raccomandazione e rende espliciti il principale trade-off, l'assunzione più fragile e il primo modo utile per ridurre l'incertezza.
 
 La skill prepara e documenta una scelta. La raccomandazione dell'agente non diventa una decisione dell'organizzazione senza approvazione esplicita del responsabile.
+
+## Usare il linguaggio della decisione strategica
+
+Nelle risposte al responsabile usa `diagnosi`, `alternative`, `criteri di scelta`, `trade-off`, `raccomandazione`, `assunzione più fragile`, `primo test utile`, `revisione finale` e `passaggio al marketing mix`. Mantieni interni `gate`, `artefatto canonico`, `routing`, `handoff` e `owner`; non usarli come titoli o richieste rivolte al decisore.
 
 ## Verificare input e pertinenza
 
@@ -138,7 +142,7 @@ La direzione anticipa le conseguenze su Product, Price, Place e Promotion, ma no
 
 Non definire roadmap tecnica, caratteristiche di prodotto, prezzi, sconti, distribuzione, media mix, messaggi, calendario, asset o allocazione di budget. Queste scelte appartengono a `define-marketing-mix`, ad autorità cross-funzionali oppure ai workflow esecutivi.
 
-## Presentare il gate e salvare
+## Presentare la revisione finale e salvare
 
 Quando costruisci, aggiorni o revisioni una direzione leggi [il template della Direzione di marketing](references/marketing-direction-template.md).
 

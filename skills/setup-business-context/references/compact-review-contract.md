@@ -1,6 +1,6 @@
-# Contratto della prima revisione compatta
+# Criteri per la prima revisione compatta
 
-Usa questo contratto quando entità e fonti sono già disponibili e devi mostrare la prima comprensione provvisoria al manager.
+Usa questi criteri quando entità e fonti sono già disponibili e devi mostrare la prima comprensione provvisoria al manager.
 
 ## Criteri obbligatori
 
@@ -13,7 +13,7 @@ La risposta deve:
 5. usare normalmente non più di 2 frasi brevi per gruppo;
 6. mostrare i marker di provenienza sulle affermazioni rilevanti;
 7. conservare ogni confine rilevante su privacy, diritto, sicurezza, autorizzazioni e uso pubblico delle prove;
-8. rinviare il dettaglio completo al gate 1 invece di trasformare la prima revisione in un inventario.
+8. rinviare il dettaglio completo alla revisione dell'identità invece di trasformare la prima proposta in un inventario.
 9. usare etichette naturali per il manager, senza calchi del modello dati o campi del template esposti meccanicamente;
 10. non mostrare entità HTML, serializzazioni o caratteri codificati come `&#x20;`.
 11. trattare ciascuna domanda come una decisione principale: non accorpare nella stessa domanda lacune che richiedono responsabili o percorsi diversi, come pagatore, privacy e approvazione dei claim;
