@@ -108,13 +108,13 @@ Usa come stato: `vincolo approvato`, `scelta da definire`, `proposta`, `ipotesi 
 |---|---|---|---|---|
 | | bloccante / non bloccante | | | |
 
-## Stato e handoff
+## Stato e passaggio successivo
 
 - **Stato:** bozza / approvato / superato
 - **Approvato da:**
 - **Data dell'approvazione:**
 - **Attivazioni possibili:**
-- **Passaggio Promotion possibile:** `to-campaign-spec`
+- **Passaggio Promotion possibile:** `design-campaign`
 
 ## Fonti specifiche
 

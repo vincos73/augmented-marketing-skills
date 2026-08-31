@@ -2,7 +2,7 @@
 
 Questo pacchetto contiene solo la skill installabile. Non contiene Business Identity, Fondamenti di marketing o file `AGENTS.md`/`CLAUDE.md` dell'organizzazione.
 
-La versione di questa sorgente beta.7 è `0.3.1`. La modifica locale non implica che esistano già un tag o una release GitHub con lo stesso numero. Il pacchetto contiene solo la cartella installabile `setup-marketing-system`.
+La versione corrente della sorgente è `0.3.2`. La modifica locale non implica che esistano già un tag o una release GitHub con lo stesso numero. Il pacchetto contiene solo la cartella installabile `setup-marketing-system`.
 
 ## Installazione da ZIP
 
@@ -26,7 +26,7 @@ Apri le prime righe di `SKILL.md` e verifica che riportino:
 ```yaml
 name: setup-marketing-system
 metadata:
-  version: "0.3.1"
+  version: "0.3.2"
 ```
 
 Per uno ZIP di release confronta la versione dichiarata dalla release e il checksum con il relativo file `SHA256SUMS`.
@@ -37,4 +37,4 @@ La skill sarà disponibile per le attività successive. Avvia una nuova attivit�
 
 ## Installazione dalla sorgente GitHub
 
-Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/setup-marketing-system`, fissando un commit o un tag pubblicato che contenga davvero la versione `0.3.1`. Questo metodo non sostituisce la verifica della versione e della destinazione locale.
+Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/setup-marketing-system`, fissando un commit o un tag pubblicato che contenga davvero la versione `0.3.2`. Questo metodo non sostituisce la verifica della versione e della destinazione locale.

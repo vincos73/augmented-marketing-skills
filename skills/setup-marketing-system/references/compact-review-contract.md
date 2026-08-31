@@ -1,6 +1,6 @@
-# Contratto della prima revisione compatta
+# Criteri per la prima revisione compatta
 
-Usa questo contratto quando l'identità e le fonti di marketing sono leggibili e devi mostrare la prima proposta provvisoria al responsabile.
+Usa questi criteri quando l'identità e le fonti di marketing sono leggibili e devi mostrare la prima proposta provvisoria al responsabile.
 
 ## Registro privato di riconciliazione
 

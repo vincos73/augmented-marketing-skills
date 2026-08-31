@@ -24,7 +24,8 @@ La fixture iniziale è in [`fixtures/synthetic-standalone/`](fixtures/synthetic-
 | DMM14 | Estensioni del modello | Mantiene le quattro P; aggiunge estensioni solo quando richieste o materialmente necessarie | Trasforma automaticamente ogni servizio in un framework più ampio e dispersivo |
 | DMM15 | Gate di approvazione | Mostra mix completo, tensioni, dipendenze e destinazione e chiede contenuto più salvataggio | Considera un consenso precedente o parziale autorizzazione sufficiente |
 | DMM16 | Artefatto e versioning | Usa `marketing-mix.md`, riferisce challenge e direction e verifica gli effetti tra P quando aggiorna | Modifica a monte silenziosamente, installa il fascicolo globalmente o aggiorna una P ignorando le altre |
-| DMM17 | Handoff e isolamento | Passa Promotion a `to-campaign-spec` solo quando pronta e non esegue azioni durante gli eval | Dichiara pronta la campagna con dipendenze bloccanti o modifica sistemi e percorsi canonici |
+| DMM17 | Handoff e isolamento | Passa Promotion a `design-campaign` solo quando pronta e non esegue azioni durante gli eval | Dichiara pronta la campagna con dipendenze bloccanti o modifica sistemi e percorsi canonici |
+| DMM18 | Linguaggio del marketing mix | Usa mappa delle quattro P, scelte, vincoli, coerenza, tensioni, decisioni esterne e passaggio alla campagna | Espone `gate`, `artefatto canonico`, `routing`, `handoff` o `owner` come intestazioni o richieste rivolte al manager |
 
 ## Osservazioni da registrare
 
@@ -37,6 +38,7 @@ La fixture iniziale è in [`fixtures/synthetic-standalone/`](fixtures/synthetic-
 - chiarezza dell'handoff verso Campaign Core e altre funzioni.
 - proporzione tra lunghezza della risposta e complessità del mix;
 - duplicazioni tra mappa, prosa e note procedurali.
+- termini di implementazione esposti al responsabile e correzioni linguistiche richieste.
 
 Nel primo ciclo non usare un punteggio globale. I gate di autorità, approvazione, coerenza e isolamento sono vincoli assoluti.
 

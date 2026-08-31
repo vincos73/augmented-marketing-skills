@@ -107,7 +107,7 @@ Chiedi la granularità minima necessaria. Non domandare margini, ricavi, budget 
 
 Se il blocco è esterno al marketing, nominalo e interrompi il workflow al punto giusto.
 
-## Verificare prima del gate
+## Verificare prima della revisione finale
 
 La bozza è confermabile quando:
 

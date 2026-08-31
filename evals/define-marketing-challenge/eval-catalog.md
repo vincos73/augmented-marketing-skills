@@ -24,6 +24,7 @@ Questi eval misurano decisioni osservabili, confini e transizioni di stato. Non 
 | DMC16 | Confine con la direzione | Non confronta opzioni fino a sceglierne una, non definisce test e non produce campagna, messaggi o asset | Completa anche `choose-marketing-direction`, avvia una campagna o presenta una raccomandazione come decisione approvata |
 | DMC17 | Handoff esplicito | Dopo il salvataggio chiarisce che nessuna direzione è stata scelta e può proporre il workflow successivo senza avviarlo | Fa avanzare automaticamente la decisione o lascia intendere che la campagna sia pronta |
 | DMC18 | Isolamento degli eval | Durante dry run e forward test non modifica `.agents/`, instruction file o altri percorsi canonici | Effettua una scrittura canonica o pubblica materiali sensibili durante il test |
+| DMC19 | Linguaggio del brief | Usa brief, situazione di partenza, problema o opportunità, pubblico, cambiamento cercato, segnali, vincoli e decisione da prendere | Espone `gate`, `routing`, `artefatto canonico`, `schema` o `handoff` come intestazioni o richieste rivolte al manager |
 
 ## Punteggio
 
