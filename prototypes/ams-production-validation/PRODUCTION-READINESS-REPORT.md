@@ -4,15 +4,16 @@ Data: 31 agosto 2026
 
 ## Sintesi per decisione
 
-Il confronto Codex è completo. La Vertical Slice v0.1.2 supera sia CURRENT sia GENERALIST sul
-compito Fabriloom per copertura, coerenza delle quattro P, allineamento dell'asset e minore rework.
-GENERALIST resta competitivo: completa 8/8, è leggibile e non presenta hard fail. CURRENT si
-ferma a 4/8 perché il bundle pubblicato non contiene Campaign Core o Content Core.
+Il confronto richiesto è completo su Codex e Claude. CURRENT si ferma a 4 fasi su 8 su entrambi
+gli harness perché il bundle pubblicato non contiene le capacità di campagna, asset, review e
+apprendimento. L'arresto evita simulazioni e protegge i vincoli, ma non offre un percorso di
+prodotto completo né un vantaggio end-to-end rispetto al generalista.
 
-La conclusione multipiattaforma non è completa. Il Mac si è bloccato prima dei due nuovi run
-Claude e richiede sblocco manuale. Inoltre il baseline Codex v0.1.2 non registra nei materiali
-pubblicabili il modello usato, quindi il matching stretto del modello non è dimostrabile senza
-ripetere una prova già congelata.
+La Vertical Slice supera il GENERALIST su Codex per governance decisionale e minore rework. Su
+Claude la classifica si inverte di poco: il GENERALIST completa il percorso e corregge in review
+alcuni propri errori, mentre la Vertical Slice è più leggibile ma non rileva un claim inventato.
+Entrambi producono conclusioni causali non sostenute dai risultati sintetici. Il vantaggio della
+Vertical Slice sul generalista non è quindi stabile tra harness.
 
 ## Evidenze riutilizzate
 
@@ -31,42 +32,46 @@ automaticamente una nuova baseline.
 | Harness | CURRENT | GENERALIST | Confronto cieco |
 |---|---|---|---|
 | Codex | completo, 4/8 e arresto controllato | completo, 8/8 | completo |
-| Claude | non eseguito: sblocco manuale richiesto | non eseguito: sblocco manuale richiesto | non eseguibile senza le due risposte |
+| Claude | completo, 4/8 e arresto controllato | completo, 8/8 | completo |
 
-## Lettura del confronto Codex
+## Lettura complessiva
 
 ### Vertical Slice
 
 - 8/8 fasi;
-- nessun hard fail o claim materiale inventato;
-- nessuna domanda ripetuta;
-- rework basso;
-- vantaggio osservabile rispetto al generalista nella governance decisionale.
+- migliore candidato su Codex e secondo, di poco, su Claude;
+- vantaggio osservabile su governance decisionale nel run Codex;
+- nel nuovo blind Claude presenta un claim quantitativo inventato nell'asset e conclusioni causali
+  eccessive nell'apprendimento;
+- il precedente `GO CON RISERVE` resta un'evidenza congelata, non una prova di readiness della
+  Suite CURRENT.
 
 ### CURRENT
 
 - 4/8 fasi;
-- un hard fail strutturale di copertura;
-- cinque invocazioni tecniche nel percorso;
+- hard fail strutturale di copertura su entrambi gli harness;
+- invocazioni tecniche e handoff manuale nel percorso;
 - nessun vantaggio end-to-end rispetto al generalista;
-- non richiede una semplice correzione editoriale, ma una capacità aggiuntiva.
+- alta correttezza nelle quattro fasi disponibili;
+- non richiede una semplice correzione editoriale, ma capacità aggiuntive e orchestrazione.
 
 ### GENERALIST
 
-- 8/8 fasi e nessun hard fail;
-- due riconferme ripetute;
-- un claim qualitativo eccessivo, corretto nella review;
-- rework medio su mix e collocazione dell'asset;
-- calendario di campagna più immediatamente leggibile.
+- 8/8 fasi su entrambi gli harness;
+- competitivo con la Vertical Slice, primo nel blind Claude e secondo nel blind Codex;
+- nel run Claude inventa elementi empirici nell'asset, poi li rileva in review senza emettere una
+  versione corretta;
+- nell'apprendimento Claude commette un errore numerico e trae conclusioni causali eccessive;
+- richiede rework alto sul run Claude e medio sul run Codex.
 
 ## Vantaggio provato e vantaggio non provato
 
-È provato, in una singola esecuzione Codex, che la Vertical Slice produce un percorso più coerente
-e richiede meno revisione sostanziale del GENERALIST.
+È provato che CURRENT, nella configurazione pubblicata, non completa il percorso e non supera il
+GENERALIST su nessuno dei due harness. È inoltre provato che la Vertical Slice può migliorare la
+governance su Codex, ma non mantiene lo stesso vantaggio relativo su Claude.
 
-Non è ancora provato che:
+Non è provato che:
 
-- il vantaggio si replichi su Claude nelle condizioni matched;
 - il vantaggio sia stabile tra run;
 - marketer reali lo percepiscano o lavorino meglio;
 - il tempo reale risparmiato sia positivo;
@@ -76,17 +81,25 @@ Non vengono presentate stime del modello come tempo risparmiato.
 
 ## Azioni richieste
 
-1. Sbloccare manualmente il Mac.
-2. Eseguire CURRENT e GENERALIST su Claude Opus 5 con impegno alto seguendo
-   `CLAUDE-COMPLETION-RUNBOOK.md`.
-3. Congelare e valutare in cieco le tre risposte Claude.
-4. Solo dopo un confronto multipiattaforma non ambiguo, avviare un pilot con marketer seguendo
-   `MARKETER-PILOT-RUNBOOK.md`.
+1. Non pubblicare come Suite completa il bundle CURRENT beta.8.
+2. Mantenere il pilot già avviato sul solo Strategy Core come percorso separato, congelando
+   protocollo, profilo dei marketer, osservazioni e incidenti prima di usarli come evidenza.
+3. Integrare nel bundle almeno Campaign Core e un'orchestrazione capace di trasferire lo stato
+   senza far ripetere contesto e decisioni.
+4. Correggere nei metodi la scelta prematura della soluzione, i claim empirici non supportati e
+   il passaggio da correlazione a causalità nell'apprendimento.
+5. Rendere Content Core realmente disponibile prima di presentare l'offerta come suite completa
+   di Strategy, Campaign e Content.
+6. Dopo il redesign, rieseguire una prova matched per candidato e harness. Aggiungere repliche
+   solo se allora il risultato resta ambiguo o molto variabile.
+7. Usare `MARKETER-PILOT-RUNBOOK.md` per una successiva prova osservata dell'intero percorso, non
+   come sostituto delle capacità mancanti.
 
-Confidenza sulla classifica Codex: **85%**. Il campione è singolo, ma la distanza di copertura e
-rework è netta. Confidenza sullo stato complessivo incompleto: **oltre 95%**, perché mancano due
-prove Claude esplicitamente richieste.
+Confidenza sul giudizio che CURRENT non sia pronto come Suite completa: **oltre 95%**. Il limite
+4/8 è osservato su entrambi gli harness ed è spiegato dal contenuto del bundle. Confidenza sulla
+classifica relativa tra VERTICAL e GENERALIST: **70%**. Il campione è singolo e l'ordine cambia
+tra Codex e Claude.
 
 ## Verdetto
 
-INCOMPLETE — ACTION REQUIRED
+NEEDS REDESIGN

@@ -99,14 +99,17 @@ solo comando.
 
 - modello: Claude Opus 5;
 - impegno: alto;
+- esecuzione locale in Claude Code Desktop, perché la modalità cloud non esponeva in modo
+  osservabile le skill locali in sequenza;
 - chat pulita per CURRENT e GENERALIST;
 - Vertical Slice disattivata durante CURRENT e GENERALIST;
 - suite corrente attiva solo durante CURRENT;
 - per GENERALIST nessuna skill AMS deve essere attiva o invocata;
 - nessuna simulazione di Claude da Codex.
 
-Se Claude Desktop non è controllabile in modo osservabile senza intervento manuale, il run non
-viene falsificato: si prepara una procedura esatta e il verdetto complessivo resta incompleto.
+I tentativi cloud nei quali le skill locali non erano richiamabili sono esclusi dal campione. I
+due run validi sono quelli locali, con modello, impegno, disponibilità delle skill e sequenza
+verificati nell'interfaccia e nei transcript congelati.
 
 ## Valutazione cieca
 

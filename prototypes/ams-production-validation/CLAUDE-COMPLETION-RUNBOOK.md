@@ -1,14 +1,21 @@
-# Runbook per completare il confronto Claude
+# Runbook eseguito per il confronto Claude
 
-## Blocco osservato
+Stato: completato il 31 agosto 2026.
+
+Questo documento conserva la procedura applicata. I due run validi sono stati eseguiti in locale
+con Claude Code Desktop. I tentativi cloud, nei quali le skill locali non erano disponibili in
+sequenza, sono esclusi dal campione.
+
+## Blocco iniziale risolto
 
 Claude Desktop era raggiungibile in modalità Code e mostrava `Opus 5`, impegno `Alto` e modalità
 veloce disattivata. Prima dell'invio del primo prompt, macOS si è bloccato. Lo sblocco richiede
 un'azione manuale dell'utente.
 
-Non esistono risposte Claude nuove da valutare. Non usare output Codex come sostituti.
+Il passaggio alla modalità locale ha reso disponibili le skill in sequenza. Le risposte Claude
+sono state congelate e valutate; nessun output Codex è stato usato come sostituto.
 
-## Preparazione
+## Preparazione applicata
 
 1. Sbloccare il Mac e aprire Claude Desktop.
 2. Selezionare modalità Code e il checkout locale del progetto.
@@ -20,7 +27,7 @@ Non esistono risposte Claude nuove da valutare. Non usare output Codex come sost
 7. Se il bundle CURRENT non è disponibile, fermarsi. Il caricamento o la sostituzione del plugin
    richiede una nuova autorizzazione e non appartiene a questo run.
 
-## CURRENT
+## CURRENT eseguito
 
 Creare una chat pulita. Fornire integralmente i cinque file in
 `prototypes/ams-vertical-slice/fixture/materials/` e usare gli stessi otto prompt in
@@ -40,7 +47,7 @@ Al turno 5 inviare il prompt congelato e aggiungere:
 
 Non proseguire ai turni 6-8 se il candidato si arresta strutturalmente. Non correggere le risposte.
 
-## GENERALIST
+## GENERALIST eseguito
 
 1. Disattivare temporaneamente tutte le skill AMS, inclusi CURRENT, Vertical Slice e Probe.
 2. Creare una seconda chat pulita con lo stesso modello e lo stesso impegno.
@@ -49,7 +56,7 @@ Non proseguire ai turni 6-8 se il candidato si arresta strutturalmente. Non corr
 5. Inviare i turni 2-8 senza adattamenti sostanziali.
 6. Al turno 8 fornire il file reale `fixture/simulated-results.md`.
 
-## Congelamento e controlli
+## Congelamento e controlli applicati
 
 Per ogni chat:
 
@@ -62,8 +69,13 @@ Per ogni chat:
 
 Infine ripristinare lo stato precedente: CURRENT attivo, Vertical Slice e Probe inattivi.
 
-## Valutazione
+## Valutazione completata
 
 Anonimizzare le tre risposte Claude, includendo la Vertical Slice v0.1.2 già congelata. Usare la
 stessa rubrica e una sola valutazione iniziale. Aggiungere repliche soltanto se il risultato Claude
 è ambiguo o sostanzialmente diverso tra risposte matched.
+
+La valutazione cieca è stata completata con una sola prova per candidato. Non sono state aggiunte
+repliche perché CURRENT si ferma strutturalmente a 4/8 su entrambi gli harness; una replica non
+renderebbe disponibile la capacità mancante. Esito e motivazione sono in `BLIND-COMPARISON.md` e
+`PRODUCTION-READINESS-REPORT.md`.

@@ -55,6 +55,27 @@ coerenti già in produzione.
 
 ## Esito Claude
 
-Non completato per lo stesso blocco manuale descritto in `CURRENT-RESULTS.md`. Non è stata
-prodotta né simulata alcuna risposta Anthropic. Il run GENERALIST richiede una chat nuova e tutte
-le skill AMS temporaneamente inattive, come specificato in `CLAUDE-COMPLETION-RUNBOOK.md`.
+La prova è stata eseguita in locale con Claude Code Desktop, `Claude Opus 5`, impegno `Alto`, chat
+pulita e nessuna skill AMS attiva o invocata. Ha completato **8 fasi su 8** senza azioni esterne.
+
+| Misura | Risultato Claude |
+|---|---|
+| Hard fail | 4 criteri: soluzione anticipata nella sfida, claim inventato nell'asset, conclusioni causali non sostenute e spiegazione deterministica dei risultati |
+| Soft fail | verbosità eccessiva e carico decisionale elevato, subordinati agli hard fail |
+| Correttezza sui materiali | alta sui vincoli; debole nei passaggi empirici e causali indicati sotto |
+| Claim o decisioni inventate | nell'asset attribuisce ai primi progetti un risultato sulle quattro domande e introduce una durata non fornita |
+| Domande dirette | 24, tre per ciascuna fase |
+| Domande ripetute | nessuna ripetizione materiale determinante |
+| Continuità | alta; conserva le decisioni e completa l'intero percorso |
+| Chiarezza per un marketer | alta, ma più lunga del necessario |
+| Revisione necessaria | alta: rimuovere claim empirici, correggere aritmetica e riscrivere le conclusioni causali |
+| Attrito e passaggi manuali | basso sul piano tecnico, alto sul piano conversazionale |
+| Contesto da ripetere | basso |
+
+La review interna individua e propone di correggere il claim empirico e la durata non supportata
+dell'asset, ma non produce una nuova versione corretta. Nell'apprendimento afferma relazioni
+causali non dimostrate da un singolo risultato sintetico e descrive l'aumento da 6,79% a 7,14%
+come quattro centesimi, anziché 0,35 punti percentuali.
+
+Il transcript integrale è conservato nell'area privata e congelato con SHA-256
+`9d954b9812fa8e6f84a4463d8c32ac9aaa8e767f4a85a1aec1afde8967eada5c`.

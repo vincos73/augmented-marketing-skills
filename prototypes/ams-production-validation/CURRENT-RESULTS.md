@@ -60,8 +60,31 @@ l'email entro 640 contatti e non ha compiuto scritture o azioni esterne.
 
 ## Esito Claude
 
-Non completato. Claude Desktop mostrava `Opus 5` e impegno `Alto`, ma il Mac si è bloccato prima
-dell'invio del primo prompt. Lo sblocco manuale non può essere aggirato. Non è stata prodotta né
-simulata alcuna risposta Anthropic.
+La prova valida è stata eseguita in locale con Claude Code Desktop, `Claude Opus 5` e impegno
+`Alto`, in una chat pulita. Il bundle CURRENT esponeva i cinque specialisti di contesto,
+fondamenti, sfida, direzione e marketing mix. I tentativi precedenti in cloud, nei quali le skill
+locali non erano disponibili in sequenza, sono esclusi.
 
-La procedura per completare il run è in `CLAUDE-COMPLETION-RUNBOOK.md`.
+CURRENT ha completato **4 fasi su 8**. Al quinto turno Claude ha dichiarato correttamente che il
+bundle non contiene la capacità di campagna e ha rifiutato di ricostruirla con metodo
+generalista. Ha conservato identità, sfida, direzione, mix e blocchi per un handoff futuro.
+
+| Misura | Risultato Claude |
+|---|---|
+| Hard fail | 2 criteri nella valutazione cieca: capacità di campagna assente e riapertura di decisioni già confermate |
+| Soft fail | domande accorpate o ripetute, base iniziale incompleta e gergo tecnico nel finale |
+| Correttezza sui materiali | alta nelle quattro fasi completate |
+| Claim o decisioni inventate | nessun claim materiale inventato e nessuna falsa autorizzazione |
+| Domande dirette | 12 nelle quattro fasi, incluse riconferme non necessarie |
+| Continuità | buona sullo stato conservato, ma con riapertura della finestra temporale e del ruolo d'ingresso |
+| Chiarezza per un marketer | buona fino all'arresto; il finale è utile come handoff tecnico |
+| Revisione necessaria | strutturale: aggiungere campagna, asset, review e apprendimento |
+| Attrito e passaggi manuali | molto alti: quattro skill richiamate in sequenza e metà percorso da trasferire altrove |
+| Contesto da ripetere | medio-alto nel passaggio a una capacità futura |
+
+L'arresto è sicuro e trasparente, ma non costituisce un vantaggio di prodotto rispetto a un
+generalista che completa il compito. La scrittura del transcript è avvenuta soltanto dopo il test,
+su richiesta esplicita, e non fa parte della risposta valutata.
+
+Il transcript integrale è conservato nell'area privata e congelato con SHA-256
+`494c938cd96d77a31079a9ed89a98178c8c8aeaabb428b5e14ad03206110ac4a`.

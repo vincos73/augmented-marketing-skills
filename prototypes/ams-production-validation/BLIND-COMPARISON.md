@@ -2,7 +2,7 @@
 
 Data: 31 agosto 2026
 
-## Metodo
+## Metodo Codex
 
 Le risposte Codex congelate sono state copiate con tre codici anonimi. Sono stati rimossi nomi di
 candidato, marker architetturali e riferimenti espliciti alle skill. Il valutatore, eseguito in un
@@ -70,4 +70,59 @@ Non sono state aggiunte repliche. Una prova per candidato è coerente con il bas
 risultato Codex non è ambiguo: due candidati completano 8/8, uno si ferma a 4/8; tra i due completi
 le differenze di rework sono osservabili e localizzate. Questo non misura la variabilità tra run.
 
-Il confronto matched su Claude resta assente e impedisce una conclusione multipiattaforma.
+## Valutazione cieca Claude
+
+Le tre risposte Claude sono state congelate e anonimizzate con codici diversi da quelli Codex. Un
+nuovo valutatore isolato, eseguito con `gpt-5.6-sol` e reasoning `xhigh`, ha ricevuto soltanto i
+tre candidati anonimi, i materiali Fabriloom, le decisioni controllate, i risultati sintetici e
+la rubrica. La mappatura è stata aperta solo dopo il congelamento della valutazione:
+
+| Codice cieco | Candidato |
+|---|---|
+| MICA | GENERALIST |
+| PINE | Vertical Slice v0.1.2 |
+| QUARTZ | CURRENT beta.8 |
+
+| Misura | VERTICAL | CURRENT | GENERALIST |
+|---|---:|---:|---:|
+| Hard fail | 4 criteri | 2 criteri | 4 criteri |
+| Fasi completate | 8/8 | 4/8 | 8/8 |
+| Claim o decisioni inventate | 1 claim quantitativo nell'asset | 0 | 1 claim empirico e 1 durata non supportata nell'asset |
+| Domande dirette | circa 14 | 12 in quattro fasi | 24 |
+| Continuità | alta, con scelta anticipata della soluzione | buona fino all'arresto, con due decisioni riaperte | alta |
+| Chiarezza per marketer | la migliore e più compatta | buona fino all'arresto | alta, ma verbosa |
+| Rework | alto su asset e apprendimento | strutturale | alto su asset e apprendimento |
+| Attrito manuale | medio | molto alto | basso tecnicamente, alto conversazionalmente |
+| Contesto da ripetere | basso | medio-alto | basso |
+
+La classifica cieca Claude è:
+
+1. **GENERALIST**, per copertura completa, continuità e capacità di autocorrezione;
+2. **VERTICAL**, molto vicino al primo e più leggibile, ma con un claim inventato non rilevato in
+   review e conclusioni causali eccessive;
+3. **CURRENT**, accurato e prudente nelle prime quattro fasi, ma incompleto per costruzione.
+
+Tutti e tre risultano `NO-GO` se giudicati come singole risposte con la soglia rigida della
+rubrica. Per VERTICAL e GENERALIST pesano soprattutto claim non supportati e conclusioni causali
+che i dati non consentono. Per CURRENT pesa la mancanza della capacità end-to-end. Questa nuova
+valutazione non riscrive il referto v0.1.2 congelato: applica la rubrica al nuovo confronto
+pre-produzione e rende visibili errori sostanziali che il controllo strutturale precedente non
+aveva escluso.
+
+## Conclusione tra harness
+
+| Harness | Primo | Secondo | Terzo |
+|---|---|---|---|
+| Codex | VERTICAL | GENERALIST | CURRENT |
+| Claude | GENERALIST | VERTICAL | CURRENT |
+
+Il vantaggio della Vertical Slice sul GENERALIST non è stabile tra i due harness. Su Codex emerge
+una migliore governance decisionale e meno rework; su Claude il GENERALIST è leggermente avanti
+per completezza e autocorrezione, ma nessuno dei due supera la soglia rigida. CURRENT arriva
+ultimo in entrambi e non dimostra un vantaggio reale end-to-end.
+
+Non sono state aggiunte repliche. La conclusione di prodotto non è ambigua: il limite di CURRENT
+è strutturale e si ripete sui due harness. La vicinanza fra VERTICAL e GENERALIST rende instabile
+la loro classifica relativa, ma un'altra replica prima del redesign non risolverebbe la capacità
+mancante né i difetti di claim e causalità. Le nuove prove matched vanno eseguite dopo le
+correzioni.
