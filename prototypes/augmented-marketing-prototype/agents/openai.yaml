@@ -1,0 +1,4 @@
+interface:
+  display_name: "Augmented Marketing Prototype"
+  short_description: "Prototipo di percorso marketing unificato"
+  default_prompt: "Usa $augmented-marketing-prototype per aiutarmi a capire e affrontare il prossimo passaggio di marketing."

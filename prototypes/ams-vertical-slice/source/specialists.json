@@ -1,0 +1,43 @@
+[
+  {
+    "name": "establish-marketing-base",
+    "stage": "base",
+    "description": "Specialista manuale del test Vertical Slice per ricostruire una base verificabile da fonti, claim, vincoli e lacune prima delle decisioni di marketing."
+  },
+  {
+    "name": "define-marketing-challenge",
+    "stage": "challenge",
+    "description": "Specialista manuale del test Vertical Slice per formulare una sfida di marketing confermabile senza scegliere ancora la soluzione."
+  },
+  {
+    "name": "choose-marketing-direction",
+    "stage": "direction",
+    "description": "Specialista manuale del test Vertical Slice per confrontare direzioni strategiche realmente diverse e raccomandare una scelta falsificabile."
+  },
+  {
+    "name": "define-marketing-mix",
+    "stage": "mix",
+    "description": "Specialista manuale del test Vertical Slice per tradurre una direzione approvata nelle scelte coerenti di Product, Price, Place e Promotion."
+  },
+  {
+    "name": "design-campaign",
+    "stage": "campaign",
+    "description": "Specialista manuale del test Vertical Slice per progettare una campagna coordinata con pubblico, messaggi, canali, conversione e misurazione."
+  },
+  {
+    "name": "build-campaign-asset",
+    "stage": "asset",
+    "description": "Specialista manuale del test Vertical Slice per produrre un singolo asset candidato da un brief approvato, rispettando claim, CTA e vincoli."
+  },
+  {
+    "name": "review-campaign",
+    "stage": "review",
+    "description": "Specialista manuale del test Vertical Slice per revisionare asset e percorso prima del lancio senza autorizzare o compiere l'esecuzione."
+  },
+  {
+    "name": "read-campaign-results",
+    "stage": "learning",
+    "description": "Specialista manuale del test Vertical Slice per leggere risultati, limiti e capacità e raccomandare il prossimo passo senza falsa causalità."
+  }
+]
+

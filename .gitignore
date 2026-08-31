@@ -1,3 +1,16 @@
 # Local Codex discovery links and generated company or brand context
 /.agents/
-/.DS_Store
+
+# Local and editor-generated files
+.DS_Store
+*.lock
+__pycache__/
+*.pyc
+
+# Regenerable prototype bundles and temporary harness state
+prototypes/*/dist/
+prototypes/ams-vertical-slice/runtime/codex-marketplace/
+
+# Separate tool output and workstream
+.impeccable/critique/
+carousel-ia-valore/

@@ -1,0 +1,5 @@
+# Preserve exact bytes of the AMS sources already tested at runtime.
+
+prototypes/ams-probe/source/playbooks/*.md whitespace=-blank-at-eof
+prototypes/ams-vertical-slice/source/playbooks/*.md whitespace=-blank-at-eof
+prototypes/ams-vertical-slice/source/specialists.json whitespace=-blank-at-eof
