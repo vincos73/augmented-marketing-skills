@@ -49,7 +49,7 @@ I tre core non sono cartelle decorative e non devono diventare tre agenti genera
 
 - **Strategy Core:** definisce quale problema, pubblico, comportamento o opportunità richiedono una decisione, sceglie la direzione e la traduce in un marketing mix coerente su Product, Price, Place e Promotion;
 - **Campaign Core:** progetta un sistema coordinato di messaggi, canali, asset, responsabilità, misure e apprendimento partendo da un'esigenza di campagna oppure traducendo la componente Promotion e le attivazioni pertinenti di un marketing mix approvato;
-- **Content Core:** valuta e produce singoli contenuti o famiglie di contenuti, mantenendo il giudizio specifico nei builder.
+- **Content Core:** valuta il merito e coordina il percorso verso singoli contenuti o famiglie di contenuti, mantenendo la produzione e il giudizio specifico nei builder.
 
 Nel nucleo minimo non è previsto un agente **Strategist** separato. Il lavoro strategico appartiene alle tre skill dello Strategy Core, mentre l'Assistant conserva soltanto orientamento e continuità. Un eventuale componente trasversale potrà essere valutato soltanto se l'uso reale farà emergere un compito distinto, con una propria user story e un proprio artefatto, per esempio una revisione di coerenza tra sfida, direzione e marketing mix. Non dovrà duplicare il routing dell'Assistant né il metodo delle skill specialistiche.
 
