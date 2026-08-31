@@ -42,7 +42,7 @@ I test esistenti non provano ancora il percorso completo con marketer esterni, l
 3. Correggere la skill solo se il retest lo richiede.
 4. Verificare installazione/parità e decidere se proporre la pubblicazione.
 
-`campaign-review` e `learn-from-results` restano skill successive: non vanno implementate in parallelo al retest di `design-campaign`.
+`campaign-review` e `campaign-debrief` restano moduli successivi: non vanno implementati in parallelo al retest di `design-campaign`. Il blueprint e il catalogo eval di `campaign-debrief` sono ora presenti nel branch.
 
 ## Contesto Git
 
@@ -62,4 +62,3 @@ sed -n '1,240p' CAMPAIGN-CORE-STATUS.md
 ```
 
 Dopo aver letto questo file, il riferimento progettuale completo è [`CAMPAIGN-CORE.md`](CAMPAIGN-CORE.md); la skill candidata e i materiali di test sono nella cartella [`skills/design-campaign/`](skills/design-campaign/) e in [`evals/design-campaign/`](evals/design-campaign/).
-

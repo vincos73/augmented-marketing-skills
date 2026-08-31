@@ -56,7 +56,7 @@ Il [catalogo degli eval](evals/design-campaign/eval-catalog.md) definisce 29 con
 |---|---|---|---|
 | «Voglio progettare una campagna» oppure «Abbiamo già una direzione: come la attiviamo?» | `design-campaign` | Campaign Spec approvabile, pronta per assegnazione e produzione | prima candidata |
 | «La campagna e gli asset sono davvero pronti?» | `campaign-review` | Review con esito, problemi bloccanti, correzioni e autorizzazioni mancanti | seconda candidata |
-| «Che cosa abbiamo imparato e che cosa cambiamo?» | `learn-from-results` | Learning Record con decisione raccomandata e aggiornamenti proposti | roadmap successiva |
+| «Come è andata davvero e che cosa facciamo adesso?» | `campaign-debrief` | Lettura dei risultati con limiti, decisione consigliata e prossima verifica | terza candidata, blueprint v0.1 |
 
 Le tre skill condividono il fascicolo della campagna, ma possiedono decisioni e artefatti distinti. Non sono tre schermate obbligatorie e non devono essere eseguite quando il loro lavoro è già stato svolto e documentato in modo affidabile.
 
@@ -77,7 +77,7 @@ esecuzione esterna autorizzata
         ↓
 dati e osservazioni sufficienti
         ↓
-learn-from-results
+campaign-debrief
         ↓
 decisione: continuare, correggere, scalare, fermare o riaprire la strategia
 ```
@@ -296,7 +296,7 @@ La review non corregge automaticamente asset, spec o sistemi. Le correzioni veng
 
 Per una bozza interna a basso rischio può bastare una review leggera. Claim sensibili, spesa rilevante, pubblicazione, dati personali, settori regolamentati o molti handoff richiedono il percorso completo. La governance deve essere proporzionata al rischio e non diventare un passaggio rituale.
 
-## 3. `learn-from-results`
+## 3. `campaign-debrief`
 
 ### User story
 
@@ -304,7 +304,7 @@ Per una bozza interna a basso rischio può bastare una review leggera. Claim sen
 
 ### Contratto
 
-La skill parte dalla Campaign Spec approvata, dall'eventuale review, dai dati disponibili e dalle note operative. Prima di interpretare verifica:
+La skill parte dalla Campaign Spec approvata, dall'eventuale review, dai dati disponibili e dalle note operative. La progettazione operativa è nel [blueprint di `campaign-debrief`](blueprints/campaign-debrief/campaign-debrief-blueprint.md), con catalogo degli eval in [evals/campaign-debrief](evals/campaign-debrief/).
 
 - definizioni delle metriche e finestre temporali;
 - copertura e qualità della strumentazione;
@@ -357,7 +357,7 @@ richiesta e materiali di un responsabile marketing
 
 Una regressione separata usa invece un marketing mix sintetico già approvato e verifica che `design-campaign` riusi la catena di contesto senza ripetere domande, perdere vincoli o riaprire decisioni strategiche.
 
-`learn-from-results` entra solo dopo una campagna reale o una fixture con dati longitudinali abbastanza credibili da testare qualità del dato, confondenti e regole decisionali.
+`campaign-debrief` entra solo dopo una campagna reale o una fixture con dati longitudinali abbastanza credibili da testare qualità del dato, fattori alternativi e regole decisionali.
 
 ### Criteri osservabili
 
@@ -405,6 +405,7 @@ La sorgente `define-marketing-mix` v0.1.4 usa l'handoff `design-campaign`. Quest
 
 ## Registro modifiche
 
+- v1.2, 2026-08-31: ripristinato `campaign-debrief` come terzo modulo, insieme al blueprint v0.1 e al catalogo degli eval già progettati; `learn-from-results` era una rinomina intermedia non validata.
 - v1.1, 2026-08-29: registrata l'installazione locale verificata di `design-campaign` v0.1.4; il retest comportamentale e la distribuzione pubblica restano separati.
 - v1.0, 2026-08-29: il test utente della v0.1.3 su Sol high ha superato la progressione per differenza e ha evidenziato lessico troppo tecnico; candidata aggiornata a v0.1.4 con brief, funnel, fasi di marketing pertinenti, revisione finale e passaggio alla produzione come linguaggio visibile.
 - v0.5, 2026-08-29: creata la sorgente candidata `design-campaign` v0.1.0; validazione strutturale superata e author self-check Fabriloom registrato con due residui da osservare.

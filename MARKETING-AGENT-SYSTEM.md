@@ -37,7 +37,7 @@ Augmented Marketing Suite
                 ├── setup-business-context  (identità durevole di azienda o brand)
                 ├── setup-marketing-system  (Fondamenti di marketing)
                 ├── Strategy Core  → define-marketing-challenge → choose-marketing-direction → define-marketing-mix
-                ├── Campaign Core  → design-campaign → campaign-review → learn-from-results
+                ├── Campaign Core  → design-campaign → campaign-review → campaign-debrief
                 └── Content Core   → Content Director → builder specializzati
 ```
 
@@ -599,7 +599,7 @@ Le release dello Strategy Core includono `SKILL.md`, metadati UI, istruzioni di 
 
 - `design-campaign`, sorgente candidata v0.1.4: parte autonomamente da un'esigenza o da un brief di campagna, oppure riusa la componente Promotion e le attivazioni pertinenti di un marketing mix approvato; produce un funnel o percorso coordinato con messaggi, ruolo dei canali, asset, dipendenze, responsabilità, approvazioni e piano di misurazione senza obbligare l'utente a completare prima lo Strategy Core;
 - `campaign-review`: verifica separatamente coerenza strategica, solidità delle affermazioni e qualità degli asset;
-- `learn-from-results`: confronta previsioni e risultati, separa segnale e rumore e aggiorna il playbook.
+- `campaign-debrief`, blueprint v0.1: confronta ciò che era atteso, ciò che è stato realmente eseguito e ciò che i dati permettono di sostenere; raccomanda il prossimo passo senza inventare causalità o aggiornare automaticamente il playbook.
 
 Il [blueprint del Campaign Core](CAMPAIGN-CORE.md) e la [sorgente candidata](skills/design-campaign/) definiscono l'esperienza standalone, il routing delle domande e il template della Campaign Spec. La [fixture Fabriloom e il catalogo degli eval](evals/design-campaign/) preparano la validazione. Dopo due FAIL sul routing, il [retest cieco della v0.1.2](evals/design-campaign/runs/2026-08-29-fabriloom-independent-retest-v0.1.2.md) è passato con zero hard fail e due soft fail. Il [primo test dell'utente](evals/design-campaign/runs/2026-08-29-vincos-guide-user-test-v0.1.2.md) ha fatto emergere ridondanza e scrittura impropria in modalità test; il [test successivo su Sol high](evals/design-campaign/runs/2026-08-29-vincos-guide-sol-high-v0.1.3.md) ha superato la progressione per differenza ma ha evidenziato lessico troppo tecnico. La v0.1.4 interviene su questo punto e resta da retestare. Queste prove non dimostrano efficacia con marketer esterni.
 
