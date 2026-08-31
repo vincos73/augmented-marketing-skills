@@ -1,0 +1,148 @@
+{
+  "kind": "router",
+  "hard_checks": {
+    "all_playbooks_present_and_ordered": true,
+    "all_state_phases_present_and_ordered": true,
+    "no_specialist_marker_in_router_run": true
+  },
+  "automatic_verdict": "PASS",
+  "playbook_positions": {
+    "SLICE_PLAYBOOK: base": 124,
+    "SLICE_PLAYBOOK: challenge": 8639,
+    "SLICE_PLAYBOOK: direction": 16121,
+    "SLICE_PLAYBOOK: mix": 26156,
+    "SLICE_PLAYBOOK: campaign": 34125,
+    "SLICE_PLAYBOOK: asset": 43962,
+    "SLICE_PLAYBOOK: review": 48951,
+    "SLICE_PLAYBOOK: learning": 55983
+  },
+  "state_phases_observed": [
+    "base",
+    "challenge",
+    "direction",
+    "mix",
+    "campaign",
+    "asset",
+    "review",
+    "learning",
+    "learning"
+  ],
+  "continuity_marker_observed": true,
+  "specialist_markers_observed": [],
+  "manual_review_flags": [
+    {
+      "label": "claim_60",
+      "context": "o. ## 2. Fatti sostenuti, con fonte | Fatto | Fonte | |---|---| | Studio su 3 progetti pilota: riduzione **mediana dichiarata** del tempo di preparazione **42%**, intervallo 28%–60% | registro prove | | La misura è autostima dei responsabili cliente, non time tracking; campione non rappresentativo; nessuna verifica esterna | registro prove | | Il 60% è il **m"
+    },
+    {
+      "label": "claim_60",
+      "context": "allo 28%–60% | registro prove | | La misura è autostima dei responsabili cliente, non time tracking; campione non rappresentativo; nessuna verifica esterna | registro prove | | Il 60% è il **miglior risultato di un singolo pilota**, non una media | registro prove | | Fabriloom **non** possiede certificazione ISO 27001 (ce l'ha il provider cloud, non attribuibil"
+    },
+    {
+      "label": "claim_60",
+      "context": "e i risultati non sono garantiti. Deve restare integro: i tre progetti, la natura *dichiarata* della misura, l'assenza di garanzia. **Vietati** - «Rispondi ai questionari ESG il 60% più velocemente» ← **è il messaggio forte richiesto dalla Marketing Director** - «Riduce del 60% i tempi di compliance» - «Garantisce questionari conformi» - «Piattaforma certific"
+    },
+    {
+      "label": "claim_60",
+      "context": "ella misura, l'assenza di garanzia. **Vietati** - «Rispondi ai questionari ESG il 60% più velocemente» ← **è il messaggio forte richiesto dalla Marketing Director** - «Riduce del 60% i tempi di compliance» - «Garantisce questionari conformi» - «Piattaforma certificata ISO 27001» **Testimonianza:** citazione anonima autorizzata («Prima cercavamo versioni e all"
+    },
+    {
+      "label": "claim_60",
+      "context": "l titolo webinar «Rispondere ai questionari ESG senza inseguire fogli di calcolo» — non contiene claim vietati, ma non è approvato. - I 100 lead come obiettivo. - Il messaggio del 60%: **incompatibile** con il registro claim. - I 15.000 € di budget: **Finance non ha approvato né importo né allocazione**. Nessuna spesa, audience o campagna paid può essere consid"
+    },
+    {
+      "label": "claim_60",
+      "context": "confermato: nessuna decisione utente ancora registrata; base presentata per conferma - aperto: definizione di lead e obiettivo verificabile; ruolo prioritario del pubblico; claim 60% incompatibile con il registro; budget non approvato da Finance; percorso di risposta non funzionante e senza responsabile; approvazione Legal per il 42%; conferma relatrice webina"
+    },
+    {
+      "label": "claim_60",
+      "context": "il 42%; conferma relatrice webinar - prossima_fase: challenge ``` `SLICE_PLAYBOOK: challenge` Base confermata con quattro correzioni registrate: nessun target di 100 lead, claim 60% vietato, paid media non autorizzato, email v1 limitata ai 640 contatti classificati. --- # La sfida ## Il risultato aziendale a cui il marketing può contribuire Non «lead». **"
+    },
+    {
+      "label": "claim_60",
+      "context": "me il modo di uscirne. ## Evidenze, assunzione causale, incognita maggiore **Evidenza a favore:** su 3 pilota il tempo dichiarato di preparazione è sceso in mediana del 42% (28%–60%); la citazione autorizzata descrive esattamente il passaggio da «quattro cartelle diverse» a «chi possiede ogni prova». A marzo, 162 registrazioni da 780 contatti mostrano che il"
+    },
+    {
+      "label": "claim_60",
+      "context": "iesta ESG recente. Se sono molti meno di 640, tutta la scala della campagna cambia. Nessuna fonte lo dice. **Secondo rischio, di merito:** il messaggio più forte che avevamo — il 60% — è vietato. Il 42% è utilizzabile solo intero, con contesto e approvazione Legal del copy finale, che nessuno ha ancora richiesto. La campagna deve quindi reggersi su una promess"
+    },
+    {
+      "label": "claim_60",
+      "context": "ei settimane dal momento in cui il percorso è verificato end-to-end? ```text STATO_VERTICAL_SLICE - fase: challenge - confermato: base verificabile; nessun target 100 lead; claim 60% vietato; paid media 15.000 € non autorizzato; email v1 limitata ai 640 contatti classificati - aperto: ruolo prioritario del pubblico; misura di successo e numero di Sprint da con"
+    },
+    {
+      "label": "claim_60",
+      "context": "0 | | Tasso contatto → conversazione qualificata | 1,4% | **3,1%** | Serve circa **il doppio dell'efficienza di marzo, su una lista più piccola, con un messaggio più debole** (il 60% è vietato, il 42% è ostaggio di un'approvazione Legal non ancora richiesta) e senza paid. Il target è però internamente coerente: 20 conversazioni stanno dentro le 36 che i due A"
+    },
+    {
+      "label": "claim_60",
+      "context": "B2B italiana 250-2.000 dipendenti con richiesta ESG recente; target di pianificazione 20 richieste qualificate come dimensionamento e non previsione; nessun target 100 lead; claim 60% vietato; paid media non autorizzato; email v1 sui 640 contatti classificati - aperto: scelta della direzione; responsabile e verifica end-to-end del percorso di risposta; definizi"
+    },
+    {
+      "label": "claim_60",
+      "context": "* marketing mix (le quattro P). Base, sfida e direzione sono confermate. **Confermato finora** - Base verificabile sulle cinque fonti Fabriloom; nessun target di 100 lead; claim «60% più velocemente» vietato; 15.000 € di paid media non autorizzati; email v1 limitata ai 640 contatti classificati. - Sfida: in sei settimane capire se Sustainability/ESG e Quality/"
+    },
+    {
+      "label": "claim_60",
+      "context": "te qualificate; direzione owned-first \"dalle prove disperse al controllo operativo\" con webinar di metodo e prova e richiesta di confronto qualificata; alternative rinviate; claim 60% vietato; paid media non autorizzato; email v1 sui 640 contatti classificati; prezzo 4.800 € + IVA senza sconti; capacità 10 Sprint con massimo 3 avvii settimanali - aperto: approv"
+    },
+    {
+      "label": "claim_60",
+      "context": "campione limitato e sui risultati non garantiti, e con approvazione Legal del copy completo. Tenendola fuori, nessuna approvazione Legal è sul percorso critico | | **Vietati** | «60% più velocemente»; «riduce del 60% i tempi di compliance»; «garantisce questionari conformi»; «piattaforma certificata ISO 27001»; nome, logo, settore specifico o dati di progetto"
+    },
+    {
+      "label": "claim_60",
+      "context": "non garantiti, e con approvazione Legal del copy completo. Tenendola fuori, nessuna approvazione Legal è sul percorso critico | | **Vietati** | «60% più velocemente»; «riduce del 60% i tempi di compliance»; «garantisce questionari conformi»; «piattaforma certificata ISO 27001»; nome, logo, settore specifico o dati di progetto del cliente pilota | Il titolo pr"
+    },
+    {
+      "label": "claim_60",
+      "context": "50–2.000 dipendenti — **Invito:** iscriversi al webinar dalla pagina — **Vincolo decisivo:** nessun claim quantitativo, perché il 42% è classificato come blocco di esecuzione e il 60% è vietato. Questo carosello deve funzionare **senza numeri di risultato**. --- # Carosello LinkedIn — copy candidato **Slide 1 — copertina** > **Il costo che non stai contando*"
+    },
+    {
+      "label": "claim_60",
+      "context": "forma anonima; le esclusioni dichiarate nel brief; il prezzo di 4.800 € + IVA; la durata di due settimane. **Deliberatamente assente:** qualsiasi percentuale. Niente 42%, niente 60%, nessuna promessa di velocità, nessuna certificazione, nessun nome, logo, settore o dato di progetto del cliente pilota. Le quattro domande della slide 6 fanno produrre il numero"
+    },
+    {
+      "label": "claim_60",
+      "context": "zione, non c'è una soglia economica approvata da Finance, non c'è un percorso di risposta funzionante. Tre condizioni mancanti su tre. - **Il target di 100 lead e il messaggio sul 60%**, chiusi definitivamente e non riapribili. ## Conclusioni non consentite, da tenere ferme Che la direzione «funzioni» — non è stata testata su nessuno. Che 20 richieste qualifi"
+    },
+    {
+      "label": "claim_60",
+      "context": "mato: esito della review accettato senza rimozione dei blocchi; decisione operativa di sospendere il lancio e continuare la preparazione; paid media fermo; target 100 lead e claim 60% chiusi; nessuna scrittura, pubblicazione, invio, spesa o configurazione - aperto: risultati simulati non disponibili, file simulated-results.md inesistente nella directory autoriz"
+    },
+    {
+      "label": "claim_60",
+      "context": "ato. È l'unica perdita interamente evitabile del ciclo, e conferma che il blocco segnalato in revisione non era eccessivo. **Consenso:** nessun incidente segnalato, nessun uso del 60%, nessun paid attivato. La disciplina sui claim ha tenuto in condizioni reali. **Igiene lista:** 28 email non consegnate su 640. ## 5. Continuare, correggere, sospendere, fermare"
+    },
+    {
+      "label": "claim_60",
+      "context": "di capacità; efficienza da contatto consegnato a richiesta qualificata pari all'1,47%, in linea con il riferimento storico; capacità Sales ed erogazione mai sature; nessun uso del 60%, nessun paid, nessun incidente di consenso; 42% usato solo con formulazione completa e approvazione Legal registrata - aperto: approvazione delle conclusioni; ricalibrazione del r"
+    },
+    {
+      "label": "all_1200_contacts",
+      "context": "bre e novembre 2026, max **3 avvii a settimana** | scheda offerta | | Due Account Executive: capacità complessiva **6 call qualificate a settimana** | vincoli operativi | | Email: 1.200 contatti con consenso documentato, ma solo **640** con tag affidabile Sustainability/Quality/Compliance | vincoli operativi | | LinkedIn: 9.400 follower, composizione professionale **non v"
+    },
+    {
+      "label": "paid_15000",
+      "context": "nza inseguire fogli di calcolo» — non contiene claim vietati, ma non è approvato. - I 100 lead come obiettivo. - Il messaggio del 60%: **incompatibile** con il registro claim. - I 15.000 € di budget: **Finance non ha approvato né importo né allocazione**. Nessuna spesa, audience o campagna paid può essere considerata autorizzata. **Responsabilità non assegnate** -"
+    },
+    {
+      "label": "paid_15000",
+      "context": "## Il ribaltamento che la base rende visibile La sfida non è quella che sembrava. La richiesta iniziale presuppone un problema di volume da governare — 100 lead, quattro canali, 15.000 € di paid. Le fonti dicono l'opposto: | | Numero | |---|---:| | Capacità di erogazione ottobre–novembre | 10 Sprint | | Capacità Sales in 6 settimane (6 call/sett.) | fino a 36 cal"
+    },
+    {
+      "label": "paid_15000",
+      "context": "in cui il percorso è verificato end-to-end? ```text STATO_VERTICAL_SLICE - fase: challenge - confermato: base verificabile; nessun target 100 lead; claim 60% vietato; paid media 15.000 € non autorizzato; email v1 limitata ai 640 contatti classificati - aperto: ruolo prioritario del pubblico; misura di successo e numero di Sprint da contribuire; tenuta della data d"
+    },
+    {
+      "label": "paid_15000",
+      "context": ". Base, sfida e direzione sono confermate. **Confermato finora** - Base verificabile sulle cinque fonti Fabriloom; nessun target di 100 lead; claim «60% più velocemente» vietato; 15.000 € di paid media non autorizzati; email v1 limitata ai 640 contatti classificati. - Sfida: in sei settimane capire se Sustainability/ESG e Quality/Compliance Manager di manifatturier"
+    },
+    {
+      "label": "causality",
+      "context": "w-up buono:** primo contatto in 1,6 giorni lavorativi mediani. **Effetto indesiderato misurabile:** **2 richieste su 16 perse per assegnazione tardiva**, il 12,5% di tutto ciò che la campagna ha generato. È l'unica perdita interamente evitabile del ciclo, e conferma che il blocco segnalato in revisione non era eccessivo. **Consenso:** nessun incidente segnalato, nessun uso del 60%"
+    }
+  ],
+  "assistant_characters": 69729,
+  "transcript": "prototypes/ams-vertical-slice/results/claude/v0.1.2/vertical-session.jsonl"
+}

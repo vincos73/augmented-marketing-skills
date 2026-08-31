@@ -14,3 +14,6 @@ prototypes/ams-vertical-slice/runtime/codex-marketplace/
 # Separate tool output and workstream
 .impeccable/critique/
 carousel-ia-valore/
+
+# Blind evaluation keys are local-only test secrets
+**/blind-key.md
