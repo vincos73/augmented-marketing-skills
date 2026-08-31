@@ -53,10 +53,11 @@ limite viene mantenuto nell'interpretazione.
 Usa il bundle rilasciato `augmented-marketing-suite-0.1.0-beta.8.zip`, hash dichiarato nel
 repository `27f2f650f24ff306d8a4f21256a49f0a196a0061a717603ab64e31d2953f379d`.
 
-Il bundle contiene l'Assistant conversazionale e cinque specialisti: contesto, fondamenti,
-sfida, direzione e marketing mix. Le skill candidate presenti nel branch ma assenti dal bundle
-rilasciato non appartengono a CURRENT. Per ogni passaggio disponibile si usa una vera invocazione
-runtime. Le capacità assenti non vengono simulate né sostituite con lavoro generalista.
+L'adattatore OpenAI contiene l'Assistant conversazionale e cinque specialisti: contesto,
+fondamenti, sfida, direzione e marketing mix. L'adattatore Claude contiene i cinque specialisti,
+ma non l'Assistant. Le skill candidate presenti nel branch ma assenti dai bundle rilasciati non
+appartengono a CURRENT. Per ogni passaggio disponibile si usa una vera invocazione runtime. Le
+capacità assenti non vengono simulate né sostituite con lavoro generalista.
 
 ### GENERALIST
 
