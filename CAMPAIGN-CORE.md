@@ -2,7 +2,7 @@
 artifact: campaign-core-blueprint
 version: 1.1
 status: bozza-di-progettazione
-last_reviewed: 2026-08-29
+last_reviewed: 2026-08-31
 scope: "Campaign Core del Marketing Agent System"
 implementation_status: authoring-candidate
 ---
@@ -401,10 +401,13 @@ Sono hard fail almeno:
 
 Questo documento è una proposta di progettazione. Le decisioni confermate su nome e accesso sono registrate nel documento autorevole del Marketing Agent System, ma non costituiscono ancora approvazione dell'intero Campaign Core, non creano skill installabili e non provano il funzionamento del workflow.
 
+La sorgente candidata `campaign-review` v0.1.1 è stata implementata separatamente da `design-campaign` sotto `skills/campaign-review/`. Include una reference per il contratto della review, fixture sintetiche, catalogo degli eval e pacchetto candidato verificabile. La presenza della sorgente o del pacchetto non equivale a installazione attiva, release pubblica o prova con marketer esterni.
+
 La sorgente `define-marketing-mix` v0.1.4 usa l'handoff `design-campaign`. Questa patch di authoring non modifica retroattivamente la versione v0.1.3 inclusa nella Suite beta.8 né la release singola pubblicata.
 
 ## Registro modifiche
 
+- v1.2, 2026-08-31: registrata la sorgente candidata `campaign-review` v0.1.1 con fixture, eval e pacchetto separati; installazione e distribuzione pubblica restano escluse.
 - v1.1, 2026-08-29: registrata l'installazione locale verificata di `design-campaign` v0.1.4; il retest comportamentale e la distribuzione pubblica restano separati.
 - v1.0, 2026-08-29: il test utente della v0.1.3 su Sol high ha superato la progressione per differenza e ha evidenziato lessico troppo tecnico; candidata aggiornata a v0.1.4 con brief, funnel, fasi di marketing pertinenti, revisione finale e passaggio alla produzione come linguaggio visibile.
 - v0.5, 2026-08-29: creata la sorgente candidata `design-campaign` v0.1.0; validazione strutturale superata e author self-check Fabriloom registrato con due residui da osservare.

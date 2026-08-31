@@ -1,0 +1,5 @@
+interface:
+  display_name: "campaign-review"
+  short_description: "Verifica la campagna prima del lancio"
+  brand_color: "#072743"
+  default_prompt: "Usa $campaign-review per verificare questa campagna e i suoi asset prima dell'azione richiesta, indicando esito, rilievi, responsabili e cosa manca."
