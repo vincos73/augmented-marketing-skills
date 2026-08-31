@@ -17,3 +17,6 @@ carousel-ia-valore/
 
 # Blind evaluation keys are local-only test secrets
 **/blind-key.md
+
+# Private runtime transcripts and identifiers for AMS production validation
+prototypes/ams-production-validation/private/
