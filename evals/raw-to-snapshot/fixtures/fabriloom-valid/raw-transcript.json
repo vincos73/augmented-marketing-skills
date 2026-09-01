@@ -1,0 +1,145 @@
+{
+  "schema_version": "2.0.0",
+  "run_id": "FABRILOOM-RAW-RUN-2",
+  "profile": "integrated-postexecution-v1",
+  "identity": {"id": "FABRILOOM-CONTEXT", "state": "confirmed_in_chat", "version": "chat-v1"},
+  "scenario": {"id": "FABRILOOM-ERS-INTEGRATED-POSTEXEC-V1", "profile": "integrated-postexecution-v1", "version": "integrated-v1", "evidence_mode": "synthetic_fixture", "source_scope": "synthetic nine-skill transcript with post-boundary lineage evidence"},
+  "shared_invariant_ids": ["speed-60", "speed-42-conditional", "pilot-quote-01", "operations-total-sprints", "operations-weekly-starts", "sales-weekly-qualified-calls", "TRK-FAB-ERS-OWNED@1", "paid-media"],
+  "events": [
+    {
+      "sequence": 1,
+      "skill": "setup-business-context",
+      "skill_version": "0.6.5",
+      "raw_output": {
+        "invariants": [
+          {"id": "speed-60", "status": "forbidden"},
+          {"id": "speed-42-conditional", "status": "conditional", "value": {"formula": "Nei tre progetti pilota osservati, il tempo dichiarato per preparare un questionario si è ridotto in mediana del 42%. Il campione è limitato e i risultati non sono garantiti.", "approval_required": "legal"}},
+          {"id": "pilot-quote-01", "status": "anonymous_only"},
+          {"id": "conversation-state", "status": "confirmed_in_chat", "value": "chat-v1"},
+          {"id": "TRK-FAB-ERS-OWNED@1", "status": "unverified", "value": {"verification": "pending_until_operations_readiness"}}
+        ],
+        "decisions": [
+          {"id": "canonical-artifact-save", "status": "denied", "mode": "simulated", "scope": ["write_file"], "authority": "Marketing Director"},
+          {"id": "chat-execution", "status": "denied", "mode": "simulated", "scope": ["execute"], "authority": "Marketing Director"}
+        ],
+        "observations": [
+          {"id": "canonical-save-decision", "subject": "decision", "decision_id": "canonical-artifact-save", "status": "observed", "mode": "simulated", "evidence_refs": ["/events/0/raw_output/decisions/0"]},
+          {"id": "canonical-save-action", "subject": "action", "decision_id": "canonical-artifact-save", "status": "not_observed", "mode": "simulated", "evidence_refs": ["/events/0/raw_output/decisions/0"]},
+          {"id": "chat-execution-decision", "subject": "decision", "decision_id": "chat-execution", "status": "observed", "mode": "simulated", "evidence_refs": ["/events/0/raw_output/decisions/1"]},
+          {"id": "chat-execution-action", "subject": "action", "decision_id": "chat-execution", "status": "not_observed", "mode": "simulated", "evidence_refs": ["/events/0/raw_output/decisions/1"]}
+        ]
+      }
+    },
+    {
+      "sequence": 2,
+      "skill": "setup-marketing-system",
+      "skill_version": "0.3.2",
+      "raw_output": {
+        "invariants": [
+          {"id": "operations-total-sprints", "status": "hard_ceiling", "value": 10},
+          {"id": "operations-weekly-starts", "status": "hard_ceiling", "value": 3},
+          {"id": "TRK-FAB-ERS-OWNED@1", "status": "unverified", "value": {"verification": "pending_until_operations_readiness"}}
+        ]
+      }
+    },
+    {
+      "sequence": 3,
+      "skill": "define-marketing-challenge",
+      "skill_version": "0.1.4",
+      "raw_output": {
+        "invariants": [
+          {"id": "sales-weekly-qualified-calls", "status": "hard_ceiling", "value": {"limit": 6, "unit": "qualified_calls", "window": "week", "follow_up_sla_business_days": 2}},
+          {"id": "TRK-FAB-ERS-OWNED@1", "status": "unverified", "value": {"verification": "pending_until_operations_readiness"}}
+        ]
+      }
+    },
+    {
+      "sequence": 4,
+      "skill": "choose-marketing-direction",
+      "skill_version": "0.2.3",
+      "raw_output": {"invariants": [
+        {"id": "paid-media", "status": "not_authorized", "value": "finance_authorization_required"},
+        {"id": "TRK-FAB-ERS-OWNED@1", "status": "unverified", "value": {"verification": "pending_until_operations_readiness"}}
+      ]}
+    },
+    {
+      "sequence": 5,
+      "skill": "define-marketing-mix",
+      "skill_version": "0.1.4",
+      "raw_output": {"invariants": [
+        {"id": "FABRILOOM-ERS-BRIDGE@1", "status": "static_boundary", "value": "new_evidence_required"},
+        {"id": "TRK-FAB-ERS-OWNED@1", "status": "unverified", "value": {"verification": "pending_until_operations_readiness"}}
+      ]}
+    },
+    {
+      "sequence": 6,
+      "skill": "design-campaign",
+      "skill_version": "0.1.4",
+      "raw_output": {
+        "artifact": {"ref": "SPEC-FAB-ERS@1", "version": "1", "digest": {"algorithm": "sha256", "value": "86f32c1623c131b1f2dadc5868791146ef16516d70f0057001c4a3a9fe5933fa"}, "state": "provided_by_external_evidence", "evidence_ref": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md"},
+        "tracking_verification": {"id": "TRK-FAB-ERS-OWNED@1", "status": "verified", "value": {"evidence_ref": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/operations-readiness.md", "test_ref": "E2E-FAB-ERS-04"}}
+      }
+    },
+    {
+      "sequence": 7,
+      "skill": "content-director",
+      "skill_version": "0.1.1",
+      "raw_output": {
+        "artifact": {"ref": "ASSET-FAB-ERS-CAROUSEL@1", "version": "1", "digest": {"algorithm": "sha256", "value": "b551a4b1cb5c0849e56234c863b393903c805a68fca28a1c485e12de1c04d190"}, "state": "provided"},
+        "lineage_edge": {"from": "SPEC-FAB-ERS@1", "to": "ASSET-FAB-ERS-CAROUSEL@1", "relation": "campaign_spec_to_asset"}
+      }
+    },
+    {
+      "sequence": 8,
+      "skill": "campaign-review",
+      "skill_version": "0.1.3",
+      "raw_output": {
+        "review_event": {
+          "trace_index": 71,
+          "artifact": {"ref": "REVIEW-FAB-ERS-PRELAUNCH@2", "version": "2", "digest": {"algorithm": "sha256", "value": "6cd0e54937d8b914c592e573a2210b6e79cd959c2305e9eb867c60d19bfd56cb"}, "state": "observed"},
+          "lineage_edge": {"from": "ASSET-FAB-ERS-CAROUSEL@1", "to": "REVIEW-FAB-ERS-PRELAUNCH@2", "relation": "asset_reviewed"}
+        },
+        "authorization_event": {
+          "trace_index": 72,
+          "event_ref": "AUTH-FAB-ERS-ORGANIC@1",
+          "asset_ref": "ASSET-FAB-ERS-CAROUSEL@1",
+          "review_ref": "REVIEW-FAB-ERS-PRELAUNCH@2",
+          "scope": ["linkedin_organic"],
+          "authority": "Marketing Director",
+          "provenance": "simulated",
+          "decision": {"id": "AUTH-FAB-ERS-ORGANIC@1", "status": "authorized", "mode": "simulated", "scope": ["linkedin_organic"], "authority": "Marketing Director"},
+          "decision_observation": {"id": "organic-authorization-decision", "subject": "decision", "decision_id": "AUTH-FAB-ERS-ORGANIC@1", "status": "observed", "mode": "simulated", "evidence_refs": ["/events/7/raw_output/authorization_event"]}
+        }
+      }
+    },
+    {
+      "sequence": 9,
+      "skill": "campaign-debrief",
+      "skill_version": "0.1.6",
+      "raw_output": {
+        "execution_event": {
+          "trace_index": 81,
+          "artifact": {"ref": "EXEC-FAB-ERS@1", "version": "1", "digest": {"algorithm": "sha256", "value": "474c1a04fc93d29063e87e22c4824ce9a60170a9a4397a4b4299d50b23b845e9"}, "state": "observed"},
+          "authorization_ref": "AUTH-FAB-ERS-ORGANIC@1",
+          "action_observation": {"id": "organic-publication-action", "subject": "action", "decision_id": "AUTH-FAB-ERS-ORGANIC@1", "status": "observed", "mode": "simulated", "evidence_refs": ["/events/8/raw_output/execution_event"]},
+          "lineage_edge": {"from": "REVIEW-FAB-ERS-PRELAUNCH@2", "to": "EXEC-FAB-ERS@1", "relation": "authorized_execution"}
+        },
+        "results_event": {
+          "trace_index": 82,
+          "artifact": {"ref": "RESULTS-FAB-ERS@1", "version": "1", "digest": {"algorithm": "sha256", "value": "eb6a7ebf194f691d0a319fde2ca6f29d7f4542d456d7f100e695d93374ce7d7d"}, "state": "observed"},
+          "metrics": {"impressions": 1480, "clicks": 38, "forms": 9, "source_coverage": "9/9", "qualified": 7, "pending": 2, "sprints_started": 1},
+          "lineage_edge": {"from": "EXEC-FAB-ERS@1", "to": "RESULTS-FAB-ERS@1", "relation": "execution_to_results"}
+        },
+        "debrief_event": {
+          "trace_index": 83,
+          "artifact": {"ref": "DEBRIEF-FAB-ERS@1", "version": "1", "digest": {"algorithm": "sha256", "value": "7e480dc98199082101619a915d4407cf67652c77394a972df0a68a1f688e6847"}, "state": "observed"},
+          "expected_ref": "SPEC-FAB-ERS@1",
+          "executed_ref": "EXEC-FAB-ERS@1",
+          "observed_ref": "RESULTS-FAB-ERS@1",
+          "causality": "not_attributed",
+          "lineage_edge": {"from": "RESULTS-FAB-ERS@1", "to": "DEBRIEF-FAB-ERS@1", "relation": "results_to_debrief"}
+        }
+      }
+    }
+  ]
+}

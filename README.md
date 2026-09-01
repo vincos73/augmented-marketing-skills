@@ -21,7 +21,7 @@ Chi contribuisce nuove skill trova i criteri comuni nello [standard di progettaz
 
 ## Da dove cominciare
 
-### Skill pubblicate nella Suite beta.9
+### Skill pubblicate nella Suite beta.10
 
 | Se ti trovi in questa situazione | Cosa usare | Che cosa ottieni |
 | --- | --- | --- |
@@ -34,21 +34,21 @@ Chi contribuisce nuove skill trova i criteri comuni nello [standard di progettaz
 
 I nomi tra parentesi sono quelli da usare per richiamare direttamente le skill. Se l'ambiente supporta l'Assistant, puoi invece descrivere semplicemente ciò che vuoi fare.
 
-### Campaign Core: incluso nella beta.9
+### Campaign Core: incluso nella beta.10
 
 | Se ti trovi in questa situazione | Cosa usare | Che cosa ottieni | Stato |
 | --- | --- | --- | --- |
-| Vuoi progettare una campagna partendo da un'esigenza, un brief o un marketing mix. | [`design-campaign`](skills/design-campaign/) | Una Campaign Spec con percorso, messaggi, canali, asset, responsabilità e misurazione. | v0.1.4 inclusa nella beta.9 |
-| Vuoi verificare una campagna prima della pubblicazione o dell'invio. | [`campaign-review`](skills/campaign-review/) | Una review separata di coerenza strategica, affermazioni e prontezza operativa. | v0.1.2 inclusa nella beta.9 |
-| Devi leggere i risultati e decidere che cosa fare dopo. | [`campaign-debrief`](skills/campaign-debrief/) | Una lettura dei risultati con limiti, decisione consigliata e prossima verifica. | v0.1.6 inclusa nella beta.9 |
+| Vuoi progettare una campagna partendo da un'esigenza, un brief o un marketing mix. | [`design-campaign`](skills/design-campaign/) | Una Campaign Spec con percorso, messaggi, canali, asset, responsabilità e misurazione. | v0.1.4 inclusa nella beta.10 |
+| Vuoi verificare una campagna prima della pubblicazione o dell'invio. | [`campaign-review`](skills/campaign-review/) | Una review separata di coerenza strategica, affermazioni, prontezza operativa e baseline decisionale per il debrief. | v0.1.3 inclusa nella beta.10 |
+| Devi leggere i risultati e decidere che cosa fare dopo. | [`campaign-debrief`](skills/campaign-debrief/) | Una lettura dei risultati con limiti, decisione consigliata e prossima verifica. | v0.1.6 inclusa nella beta.10 |
 
-Le tre skill completano la sequenza del Campaign Core e sono distribuite insieme per la prima volta nella beta.9. La pubblicazione non dimostra installazione attiva, caricamento nella sessione o validazione con marketer reali.
+Le tre skill completano la sequenza del Campaign Core. La beta.10 aggiunge `campaign-review` v0.1.3 e una suite di robustezza pubblicabile; la verifica end-to-end controllata sulla fixture sintetica Fabriloom è PASS. La pubblicazione non dimostra validazione con marketer reali o funzionamento identico in ogni runtime.
 
-### Content Core: incluso nella beta.9
+### Content Core: incluso nella beta.10
 
 | Se ti trovi in questa situazione | Cosa usare | Che cosa ottieni | Stato |
 | --- | --- | --- | --- |
-| Hai fonti o un'idea, ma non sai quale singolo contenuto sarebbe più utile. | [`content-director`](skills/content-director/) | Una raccomandazione editoriale agnostica e, dopo approvazione, un Content Brief. | v0.1.1 inclusa nella beta.9 e disponibile come [release singola stabile](https://github.com/vincos73/augmented-marketing-skills/releases/tag/content-director-v0.1.1) |
+| Hai fonti o un'idea, ma non sai quale singolo contenuto sarebbe più utile. | [`content-director`](skills/content-director/) | Una raccomandazione editoriale agnostica e, dopo approvazione, un Content Brief. | v0.1.1 inclusa nella beta.10 e disponibile come [release singola stabile](https://github.com/vincos73/augmented-marketing-skills/releases/tag/content-director-v0.1.1) |
 
 ## Il percorso, in parole semplici
 
@@ -92,23 +92,23 @@ Immagina di voler proporre un nuovo servizio di formazione.
 4. Scegli una direzione, rendendo esplicite le ipotesi ancora da verificare.
 5. Definisci in modo coerente l'offerta, il prezzo, il modo di accesso e la comunicazione.
 
-Solo dopo puoi passare a pagine, campagne e contenuti. La beta.9 include il Campaign Core completo con `design-campaign`, `campaign-review` e `campaign-debrief`, oltre a `content-director` per scegliere la strada editoriale di un singolo contenuto. Research & Evidence e monitoring restano sviluppi successivi da validare.
+Solo dopo puoi passare a pagine, campagne e contenuti. La beta.10 include il Campaign Core completo con `design-campaign`, `campaign-review` e `campaign-debrief`, oltre a `content-director` per scegliere la strada editoriale di un singolo contenuto. Research & Evidence e monitoring restano sviluppi successivi da validare.
 
 ## Stato della roadmap
 
 | Area | Stato attuale | Prossimo passaggio |
 | --- | --- | --- |
-| Fondazione e Strategy Core | Pubblicati nella Suite beta.9 con le revisioni sorgente più recenti | Osservare utilizzo e riuso con marketer reali |
-| Campaign Core | Tre skill incluse nella Suite beta.9 | Installare e svolgere un pilot completo end-to-end |
-| Content Core | `content-director` v0.1.1 inclusa nella Suite beta.9 e pubblicata singolarmente | Collegare il Content Brief ai builder specializzati e provarlo con manager reali |
+| Fondazione e Strategy Core | Pubblicati nella Suite beta.10 con le revisioni sorgente più recenti | Osservare utilizzo e riuso con marketer reali |
+| Campaign Core | Tre skill incluse nella Suite beta.10; run integrato controllato a nove skill PASS su Codex Desktop | Svolgere un pilot con un responsabile reale e rinnovare le prove sugli altri runtime |
+| Content Core | `content-director` v0.1.1 inclusa nella Suite beta.10 e pubblicata singolarmente | Collegare il Content Brief ai builder specializzati e provarlo con manager reali |
 | Research & Evidence | Roadmap opzionale | Aggiungere capacità autonome solo quando emerge un uso ripetuto |
 | Monitoring | Roadmap opzionale | Validare il bisogno prima di introdurre setup e automazioni dedicate |
 
 ## Versioni della Suite e release singole
 
-La [release della Suite beta.9](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.9) porta nei pacchetti le versioni sorgente correnti su `main`. Le release singole precedenti restano disponibili come riferimenti storici verificati.
+La [release della Suite beta.10](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.10) porta nei pacchetti le versioni sorgente correnti su `main`. Le release singole precedenti restano disponibili come riferimenti storici verificati.
 
-| Skill | Versione sorgente su `main` | Versione inclusa nella Suite beta.9 | Risultato principale |
+| Skill | Versione sorgente su `main` | Versione inclusa nella Suite beta.10 | Risultato principale |
 | --- | --- | --- | --- |
 | [`Augmented Marketing Assistant`](skills/augmented-marketing-assistant/) | v0.2.0 | v0.2.0, solo OpenAI/Codex | Orientamento verso il passaggio pertinente. |
 | [`setup-business-context`](skills/setup-business-context/) | v0.6.5 | v0.6.5 | Contesto identitario riutilizzabile. |
@@ -117,7 +117,7 @@ La [release della Suite beta.9](https://github.com/vincos73/augmented-marketing-
 | [`choose-marketing-direction`](skills/choose-marketing-direction/) | v0.2.3 | v0.2.3 | Confronto e scelta della direzione. |
 | [`define-marketing-mix`](skills/define-marketing-mix/) | v0.1.4 | v0.1.4 | Marketing mix su offerta, prezzo, distribuzione e comunicazione. |
 | [`design-campaign`](skills/design-campaign/) | v0.1.4 | v0.1.4 | Campaign Spec approvabile. |
-| [`campaign-review`](skills/campaign-review/) | v0.1.2 | v0.1.2 | Review pre-lancio separata. |
+| [`campaign-review`](skills/campaign-review/) | v0.1.3 | v0.1.3 | Review pre-lancio separata con baseline decisionale per il debrief. |
 | [`campaign-debrief`](skills/campaign-debrief/) | v0.1.6 | v0.1.6 | Lettura dei risultati e decisione successiva. |
 | [`content-director`](skills/content-director/) | v0.1.1 | v0.1.1 | Raccomandazione editoriale e Content Brief. |
 
@@ -134,23 +134,23 @@ La regola è semplice: **per una skill singola usa uno ZIP portabile; per tutte 
 
 | Ambiente | Una skill | Tutte le skill |
 | --- | --- | --- |
-| Claude | Uno ZIP in `dist/agent-skills/` | `dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.9.zip` in **Personalizza → Plugin** |
-| ChatGPT | Uno ZIP in `dist/agent-skills/` nel flusso Skills | `dist/openai/augmented-marketing-suite-0.1.0-beta.9.zip` nel flusso Plugin |
-| Codex | Uno ZIP in `dist/agent-skills/` quando il flusso locale lo consente | `dist/openai/augmented-marketing-suite-0.1.0-beta.9.zip` nel marketplace o catalogo Plugin |
+| Claude | Uno ZIP in `dist/agent-skills/` | `dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.10.zip` in **Personalizza → Plugin** |
+| ChatGPT | Uno ZIP in `dist/agent-skills/` nel flusso Skills | `dist/openai/augmented-marketing-suite-0.1.0-beta.10.zip` nel flusso Plugin |
+| Codex | Uno ZIP in `dist/agent-skills/` quando il flusso locale lo consente | `dist/openai/augmented-marketing-suite-0.1.0-beta.10.zip` nel marketplace o catalogo Plugin |
 
 ### Per Claude o ChatGPT: una skill alla volta
 
-La beta.9 pubblicata offre un archivio ZIP per ciascuna delle nove skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Ogni archivio contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
+La beta.10 pubblicata offre un archivio ZIP per ciascuna delle nove skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Ogni archivio contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
 
 Scegli la skill che ti serve, caricala con il meccanismo di skill del tuo ambiente e avvia una nuova chat. Claude non usa l'Assistant incluso nella Suite OpenAI, quindi gli archivi portabili contengono soltanto le nove skill specialistiche.
 
 ### Per Claude: Suite completa con un solo upload
 
-Carica [`dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.9.zip`](dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.9.zip) nella sezione **Personalizza → Plugin** di Claude. È un plugin Claude dedicato: ha `.claude-plugin/plugin.json` e include le nove skill specialistiche, senza Augmented Marketing Assistant.
+Carica [`dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.10.zip`](dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.10.zip) nella sezione **Personalizza → Plugin** di Claude. È un plugin Claude dedicato: ha `.claude-plugin/plugin.json` e include le nove skill specialistiche, senza Augmented Marketing Assistant.
 
 ### Per ChatGPT e Codex: Suite completa con un solo upload
 
-La beta.9 pubblicata offre anche [`dist/openai/augmented-marketing-suite-0.1.0-beta.9.zip`](dist/openai/augmented-marketing-suite-0.1.0-beta.9.zip), con il manifesto `.codex-plugin`, nove skill specialistiche e Augmented Marketing Assistant. Segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
+La beta.10 pubblicata offre anche [`dist/openai/augmented-marketing-suite-0.1.0-beta.10.zip`](dist/openai/augmented-marketing-suite-0.1.0-beta.10.zip), con il manifesto `.codex-plugin`, nove skill specialistiche e Augmented Marketing Assistant. Segui le istruzioni di [`INSTALLAZIONE.md`](INSTALLAZIONE.md).
 
 > Allegare uno ZIP a una chat normale consente di leggerlo, ma non registra automaticamente un plugin o una skill. Usa soltanto il flusso di installazione disponibile nel tuo account o workspace.
 
@@ -160,15 +160,15 @@ Per una release già pubblicata, scarica la skill desiderata, estraila e segui i
 
 | Skill | Versione pubblicata da installare |
 | --- | --- |
-| `setup-business-context` | Suite beta.9: `v0.6.5` |
-| `setup-marketing-system` | Suite beta.9: `v0.3.2` |
-| `define-marketing-challenge` | Suite beta.9: `v0.1.4` |
-| `choose-marketing-direction` | Suite beta.9: `v0.2.3` |
-| `define-marketing-mix` | Suite beta.9: `v0.1.4` |
-| `design-campaign` | Suite beta.9: `v0.1.4` |
-| `campaign-review` | Suite beta.9: `v0.1.2` |
-| `campaign-debrief` | Suite beta.9: `v0.1.6` |
-| `content-director` | Suite beta.9: `v0.1.1` |
+| `setup-business-context` | Suite beta.10: `v0.6.5` |
+| `setup-marketing-system` | Suite beta.10: `v0.3.2` |
+| `define-marketing-challenge` | Suite beta.10: `v0.1.4` |
+| `choose-marketing-direction` | Suite beta.10: `v0.2.3` |
+| `define-marketing-mix` | Suite beta.10: `v0.1.4` |
+| `design-campaign` | Suite beta.10: `v0.1.4` |
+| `campaign-review` | Suite beta.10: `v0.1.3` |
+| `campaign-debrief` | Suite beta.10: `v0.1.6` |
+| `content-director` | Suite beta.10: `v0.1.1` |
 
 Scegliere una versione pubblicata precisa evita di installare involontariamente una versione ancora in sviluppo. In Codex, la destinazione abituale è `~/.codex/skills/`, ma il percorso può cambiare in base all'ambiente.
 

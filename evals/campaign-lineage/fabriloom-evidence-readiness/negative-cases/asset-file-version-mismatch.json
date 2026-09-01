@@ -1,0 +1,9 @@
+{
+  "name": "asset v0 riferito al file v1",
+  "mutations": [
+    {"path": "artifacts.assets.0.path", "value": "fixture/asset-candidate-v1.md"},
+    {"path": "artifacts.assets.0.sha256", "value": "b551a4b1cb5c0849e56234c863b393903c805a68fca28a1c485e12de1c04d190"}
+  ],
+  "check_files": true,
+  "expected_error": "versione del file"
+}

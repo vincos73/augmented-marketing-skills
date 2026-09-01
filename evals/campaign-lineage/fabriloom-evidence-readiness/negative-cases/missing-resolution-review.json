@@ -1,0 +1,5 @@
+{
+  "name": "resolution review non risolta",
+  "mutations": [{"path": "artifacts.reviews.1.resolutions.0.review_ref", "value": "REVIEW-UNKNOWN@1"}],
+  "expected_error": "Review della risoluzione"
+}

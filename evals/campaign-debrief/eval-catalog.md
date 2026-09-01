@@ -70,3 +70,11 @@ Le fixture sono sintetiche e pubblicabili. L'oracolo della fixture Fabriloom res
 - package, installazione, runtime e uso con marketer esterni: non verificati.
 
 La fixture e gli eval devono restare fuori dai percorsi canonici e non autorizzano pubblicazione o azioni esterne. Il valore va confrontato con un buon agente generalista, il workflow abituale del responsabile e uno specialista Analytics.
+
+## Integrazione lineage Fabriloom
+
+L’eval isolato [campaign-lineage](../campaign-lineage/fabriloom-evidence-readiness/) verifica che il debrief usi la coppia asset-review effettivamente approvata ed eseguita, non una review superata. Estende LR02, LR05, LR08 e LR16 per la sola catena Fabriloom, mantenendo distinti Campaign Spec, esecuzione e risultati osservati.
+
+Il profilo comune e il confine statico tra la fixture conversazionale e lo scenario integrato post-execution sono descritti in [state-contract](../common/state-contract.schema.json) e [fabriloom-nine-step](../robustness/fabriloom-nine-step/). Il confine non promuove una chat in artefatto persistente e non sostituisce un run comportamentale.
+
+La regressione [baseline-decision-capsule](../campaign-review/baseline-decision-capsule/) verifica che la review conservi il minimo atteso necessario al confronto collegato. `campaign-debrief` non deve ricostruire target, definizioni o finestre mancanti. Quando target o regola, definizione e finestra o maturità sono presenti, il confronto descrittivo è predisposto in attesa di risultati maturi anche senza baseline comparabile; il confronto incrementale, causale o controfattuale resta invece non disponibile senza baseline, comparatore o controllo adeguato.

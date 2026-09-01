@@ -82,7 +82,7 @@ Le istruzioni essenziali devono restare nella cartella distribuibile della singo
 
 ### Adattatore OpenAI osservato
 
-Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Per ChatGPT e Codex, la beta.9 distribuisce Augmented Marketing Suite (`augmented-marketing-suite`) con un manifesto `.codex-plugin/plugin.json` e presenta Augmented Marketing Assistant come skill tecnica di orientamento (`augmented-marketing-assistant`). Questa forma non cambia il ruolo dell'Assistant: continua a orientare, mentre le nove skill specialistiche possiedono metodo, artefatti e approvazioni.
+Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Per ChatGPT e Codex, la beta.10 distribuisce Augmented Marketing Suite (`augmented-marketing-suite`) con un manifesto `.codex-plugin/plugin.json` e presenta Augmented Marketing Assistant come skill tecnica di orientamento (`augmented-marketing-assistant`). Questa forma non cambia il ruolo dell'Assistant: continua a orientare, mentre le nove skill specialistiche possiedono metodo, artefatti e approvazioni.
 
 Un test su ChatGPT Web ha mostrato che una skill già attiva può individuare una skill specialistica senza riuscire a caricarla nella stessa conversazione. L'adattatore non deve quindi presumere un handoff tra skill. Quando il passaggio non è disponibile, indica il nome tecnico esatto da invocare e si ferma senza simulare il workflow specialistico.
 

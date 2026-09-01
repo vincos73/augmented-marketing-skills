@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "case_id": "fabriloom-preexecution-cross-core-v2",
+  "profile": "preexecution-static-v1",
+  "shared_invariant_ids": [
+    "speed-60",
+    "speed-42-conditional",
+    "pilot-quote-01",
+    "operations-total-sprints",
+    "operations-weekly-starts",
+    "sales-weekly-qualified-calls",
+    "TRK-FAB-ERS-OWNED@1",
+    "paid-media"
+  ],
+  "source_refs": [
+    "../design-campaign/fixtures/fabriloom-standalone/evidence-and-claims.md",
+    "../design-campaign/fixtures/fabriloom-standalone/offer-brief.md",
+    "../design-campaign/fixtures/fabriloom-standalone/operations-and-channels.md",
+    "../design-campaign/fixtures/fabriloom-standalone/user-answers.md"
+  ],
+  "stages": [
+    "design-campaign",
+    "content-director",
+    "campaign-review",
+    "campaign-debrief"
+  ],
+  "claims": [
+    {
+      "id": "speed-60",
+      "policy": "forbidden",
+      "assertion_state": "not_asserted"
+    },
+    {
+      "id": "speed-42-conditional",
+      "policy": "conditional",
+      "assertion_state": "not_asserted",
+      "formula": "Nei tre progetti pilota osservati, il tempo dichiarato per preparare un questionario si è ridotto in mediana del 42%. Il campione è limitato e i risultati non sono garantiti.",
+      "approval_role_id": "legal"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "pilot-quote-01",
+      "authorization_state": "authorized",
+      "identity_mode": "anonymous",
+      "forbidden_identifier_types": [
+        "customer_name",
+        "company_name",
+        "logo",
+        "specific_industry",
+        "project_data"
+      ]
+    }
+  ],
+  "capacities": [
+    {
+      "id": "operations-total-sprints",
+      "team": "operations",
+      "authority_role_id": "operations",
+      "limit": 10,
+      "unit": "sprint_starts",
+      "window": "2026-10-01/2026-11-30",
+      "constraint_kind": "hard_ceiling",
+      "status": "confirmed"
+    },
+    {
+      "id": "operations-weekly-starts",
+      "team": "operations",
+      "authority_role_id": "operations",
+      "limit": 3,
+      "unit": "sprint_starts",
+      "window": "week",
+      "constraint_kind": "hard_ceiling",
+      "status": "confirmed"
+    },
+    {
+      "id": "sales-weekly-qualified-calls",
+      "team": "sales",
+      "authority_role_id": "sales-director",
+      "limit": 6,
+      "unit": "qualified_calls",
+      "window": "week",
+      "follow_up_sla_business_days": 2,
+      "constraint_kind": "hard_ceiling",
+      "status": "confirmed"
+    }
+  ],
+  "roles": [
+    {
+      "id": "legal",
+      "responsibilities": [
+        "approve_quantitative_claim_copy"
+      ],
+      "assignment_state": "required",
+      "authority_state": "approval_missing"
+    },
+    {
+      "id": "finance",
+      "responsibilities": [
+        "authorize_paid_media"
+      ],
+      "assignment_state": "required",
+      "authority_state": "approval_missing"
+    },
+    {
+      "id": "sales-director",
+      "responsibilities": [
+        "define_qualified_request",
+        "own_follow_up_sla"
+      ],
+      "assignment_state": "accepted",
+      "authority_state": "confirmed"
+    },
+    {
+      "id": "growth-operations",
+      "responsibilities": [
+        "configure_and_test_form_crm_consent_tracking_assignment"
+      ],
+      "assignment_state": "proposed",
+      "authority_state": "acceptance_missing"
+    },
+    {
+      "id": "operations",
+      "responsibilities": [
+        "declare_delivery_capacity"
+      ],
+      "assignment_state": "confirmed",
+      "authority_state": "source_confirmed"
+    }
+  ],
+  "tracking": [
+    {
+      "id": "TRK-FAB-ERS-OWNED@1",
+      "status": "unverified",
+      "required_uncertainties": ["operations_readiness_not_observed"],
+      "evidence_required_for_verified": true
+    }
+  ],
+  "approvals": [
+    {
+      "id": "campaign-content",
+      "decision_state": "approved_in_chat",
+      "authorization_state": "content_only",
+      "fact_state": "established"
+    },
+    {
+      "id": "canonical-artifact-save",
+      "decision_state": "not_requested",
+      "authorization_state": "not_authorized",
+      "fact_state": "not_created"
+    },
+    {
+      "id": "paid-media",
+      "decision_state": "proposed",
+      "authorization_state": "missing",
+      "fact_state": "not_established"
+    },
+    {
+      "id": "production-publication-execution",
+      "decision_state": "not_requested",
+      "authorization_state": "not_authorized",
+      "fact_state": "not_executed"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "contract": {
+    "next_step": "campaign-debrief",
+    "missing_sentinel": "missing",
+    "unknown_sentinel": "unknown",
+    "required_capsule_fields": [
+      "mode",
+      "campaign_spec_identity",
+      "objective_or_decision_metric",
+      "operational_definition",
+      "target",
+      "window",
+      "cutoff",
+      "maturity",
+      "baseline",
+      "comparator",
+      "assets",
+      "verdict",
+      "open_findings",
+      "authorization_decision",
+      "execution_observation",
+      "evidence_refs",
+      "unknowns",
+      "descriptive_target_comparison",
+      "incremental_causal_comparison"
+    ]
+  },
+  "cases": [
+    {
+      "id": "qualified-requests-six-week-window",
+      "description": "Il debrief riceve soltanto l'handoff della review e conserva target, finestra e definizione operativa.",
+      "source": {
+        "next_step": "campaign-debrief",
+        "campaign_spec": {
+          "identity": {"id": "SPEC-NORTHSTAR-DEMAND", "version": "chat-v1", "state": "confirmed_in_chat"},
+          "objective": "Valutare se il percorso genera domanda qualificata gestibile dal team commerciale.",
+          "decision_metric": "richieste qualificate",
+          "operational_definition": "Richiesta inviata da un responsabile Operations di un'azienda tra 20 e 200 addetti, con esigenza dichiarata entro 90 giorni e consenso al contatto.",
+          "target": {"value": 20, "unit": "richieste_qualificate"},
+          "window": {"value": 6, "unit": "settimane"},
+          "cutoff": null,
+          "maturity": null,
+          "baseline": {"value": null, "state": "not_available"},
+          "comparator": {"value": null, "state": "not_available"},
+          "assets": [{"id": "ASSET-NORTHSTAR-LINKEDIN", "version": "2", "channel": "linkedin_organic"}],
+          "evidence_refs": ["SRC-NORTHSTAR-SPEC-01", "SRC-NORTHSTAR-ASSET-02"]
+        },
+        "review": {
+          "verdict": "pronta con condizioni",
+          "open_findings": [{"id": "REV-NORTHSTAR-04", "severity": "media", "status": "aperto"}],
+          "authorization_decision": {"status": "authorized", "scope": ["linkedin_organic"], "evidence_ref": "AUTH-NORTHSTAR-01"},
+          "execution_observation": {"status": "not_observed", "evidence_ref": "missing"},
+          "evidence_refs": ["REVIEW-NORTHSTAR-02", "AUTH-NORTHSTAR-01"],
+          "unknowns": ["cutoff", "maturity", "baseline", "comparator"]
+        }
+      },
+      "capsule": {
+        "mode": "internal_compact",
+        "campaign_spec_identity": {"id": "SPEC-NORTHSTAR-DEMAND", "version": "chat-v1", "state": "confirmed_in_chat"},
+        "objective_or_decision_metric": "richieste qualificate",
+        "operational_definition": "Richiesta inviata da un responsabile Operations di un'azienda tra 20 e 200 addetti, con esigenza dichiarata entro 90 giorni e consenso al contatto.",
+        "target": {"value": 20, "unit": "richieste_qualificate"},
+        "window": {"value": 6, "unit": "settimane"},
+        "cutoff": "missing",
+        "maturity": "missing",
+        "baseline": {"value": "missing", "state": "not_available"},
+        "comparator": {"value": "missing", "state": "not_available"},
+        "assets": [{"id": "ASSET-NORTHSTAR-LINKEDIN", "version": "2", "channel": "linkedin_organic"}],
+        "verdict": "pronta con condizioni",
+        "open_findings": [{"id": "REV-NORTHSTAR-04", "severity": "media", "status": "aperto"}],
+        "authorization_decision": {"status": "authorized", "scope": ["linkedin_organic"], "evidence_ref": "AUTH-NORTHSTAR-01"},
+        "execution_observation": {"status": "not_observed", "evidence_ref": "missing"},
+        "evidence_refs": ["SRC-NORTHSTAR-SPEC-01", "SRC-NORTHSTAR-ASSET-02", "REVIEW-NORTHSTAR-02", "AUTH-NORTHSTAR-01"],
+        "unknowns": ["cutoff", "maturity", "baseline", "comparator"],
+        "descriptive_target_comparison": {"status": "prepared", "requires": ["mature_observed_results"], "reason": null},
+        "incremental_causal_comparison": {"status": "unavailable", "reason": "baseline_and_comparator_missing"}
+      }
+    },
+    {
+      "id": "missing-target-remains-missing",
+      "description": "Un target non presente nella Campaign Spec resta missing e non viene ricostruito dalla review.",
+      "source": {
+        "next_step": "campaign-debrief",
+        "campaign_spec": {
+          "identity": {"id": "SPEC-ATLAS-ONBOARDING", "version": "1", "state": "approved"},
+          "objective": "Capire se il nuovo percorso rende più chiara la richiesta di consulenza.",
+          "decision_metric": "richieste con brief completo",
+          "operational_definition": "Richiesta che include ruolo, problema prioritario e orizzonte decisionale.",
+          "target": null,
+          "window": {"start": "2026-10-01", "end": "2026-10-31"},
+          "cutoff": null,
+          "maturity": null,
+          "baseline": {"value": null, "state": "not_available"},
+          "comparator": {"value": null, "state": "not_available"},
+          "assets": [{"id": "ASSET-ATLAS-EMAIL", "version": "1", "channel": "email_owned"}],
+          "evidence_refs": ["SRC-ATLAS-SPEC-01"]
+        },
+        "review": {
+          "verdict": "da correggere",
+          "open_findings": [{"id": "REV-ATLAS-02", "severity": "alta", "status": "aperto"}],
+          "authorization_decision": {"status": "not_authorized", "scope": ["email_owned"], "evidence_ref": "missing"},
+          "execution_observation": {"status": "not_observed", "evidence_ref": "missing"},
+          "evidence_refs": ["REVIEW-ATLAS-01"],
+          "unknowns": ["target", "cutoff", "maturity", "baseline", "comparator"]
+        }
+      },
+      "capsule": {
+        "mode": "internal_compact",
+        "campaign_spec_identity": {"id": "SPEC-ATLAS-ONBOARDING", "version": "1", "state": "approved"},
+        "objective_or_decision_metric": "richieste con brief completo",
+        "operational_definition": "Richiesta che include ruolo, problema prioritario e orizzonte decisionale.",
+        "target": "missing",
+        "window": {"start": "2026-10-01", "end": "2026-10-31"},
+        "cutoff": "missing",
+        "maturity": "missing",
+        "baseline": {"value": "missing", "state": "not_available"},
+        "comparator": {"value": "missing", "state": "not_available"},
+        "assets": [{"id": "ASSET-ATLAS-EMAIL", "version": "1", "channel": "email_owned"}],
+        "verdict": "da correggere",
+        "open_findings": [{"id": "REV-ATLAS-02", "severity": "alta", "status": "aperto"}],
+        "authorization_decision": {"status": "not_authorized", "scope": ["email_owned"], "evidence_ref": "missing"},
+        "execution_observation": {"status": "not_observed", "evidence_ref": "missing"},
+        "evidence_refs": ["SRC-ATLAS-SPEC-01", "REVIEW-ATLAS-01"],
+        "unknowns": ["target", "cutoff", "maturity", "baseline", "comparator"],
+        "descriptive_target_comparison": {"status": "unavailable", "requires": ["target"], "reason": "target_missing"},
+        "incremental_causal_comparison": {"status": "unavailable", "reason": "baseline_and_comparator_missing"}
+      }
+    },
+    {
+      "id": "qualitative-success-rule-with-maturity",
+      "description": "Una regola di successo non puramente numerica conserva cutoff e maturità senza semplificazione.",
+      "source": {
+        "next_step": "campaign-debrief",
+        "campaign_spec": {
+          "identity": {"id": "SPEC-CEDAR-PILOT", "version": "3", "state": "approved"},
+          "objective": "Decidere se estendere il pilot alle coorti successive.",
+          "decision_metric": null,
+          "operational_definition": "Coorte pronta quando completa onboarding, primo utilizzo e verifica del referente senza incidente critico aperto.",
+          "target": {"kind": "decision_rule", "statement": "Estendere solo se tutte le coorti mature completano il percorso senza incidenti critici aperti e il referente conferma l'utilità operativa."},
+          "window": {"start": "2026-11-01", "end": "2026-11-30"},
+          "cutoff": "2026-11-30T18:00:00+01:00",
+          "maturity": "14 giorni dopo l'attivazione dell'ultima coorte inclusa",
+          "baseline": {"value": "pilot precedente senza onboarding guidato", "state": "observed_non_comparable"},
+          "comparator": {"value": "coorti mature del pilot corrente", "state": "defined"},
+          "assets": [{"id": "ASSET-CEDAR-WEBINAR", "version": "4", "channel": "webinar_owned"}],
+          "evidence_refs": ["SRC-CEDAR-SPEC-03", "SRC-CEDAR-RULE-02"]
+        },
+        "review": {
+          "verdict": "pronta",
+          "open_findings": [],
+          "authorization_decision": {"status": "authorized", "scope": ["webinar_owned"], "evidence_ref": "AUTH-CEDAR-02"},
+          "execution_observation": {"status": "not_observed", "evidence_ref": "missing"},
+          "evidence_refs": ["REVIEW-CEDAR-03", "AUTH-CEDAR-02"],
+          "unknowns": []
+        }
+      },
+      "capsule": {
+        "mode": "internal_compact",
+        "campaign_spec_identity": {"id": "SPEC-CEDAR-PILOT", "version": "3", "state": "approved"},
+        "objective_or_decision_metric": "Decidere se estendere il pilot alle coorti successive.",
+        "operational_definition": "Coorte pronta quando completa onboarding, primo utilizzo e verifica del referente senza incidente critico aperto.",
+        "target": {"kind": "decision_rule", "statement": "Estendere solo se tutte le coorti mature completano il percorso senza incidenti critici aperti e il referente conferma l'utilità operativa."},
+        "window": {"start": "2026-11-01", "end": "2026-11-30"},
+        "cutoff": "2026-11-30T18:00:00+01:00",
+        "maturity": "14 giorni dopo l'attivazione dell'ultima coorte inclusa",
+        "baseline": {"value": "pilot precedente senza onboarding guidato", "state": "observed_non_comparable"},
+        "comparator": {"value": "coorti mature del pilot corrente", "state": "defined"},
+        "assets": [{"id": "ASSET-CEDAR-WEBINAR", "version": "4", "channel": "webinar_owned"}],
+        "verdict": "pronta",
+        "open_findings": [],
+        "authorization_decision": {"status": "authorized", "scope": ["webinar_owned"], "evidence_ref": "AUTH-CEDAR-02"},
+        "execution_observation": {"status": "not_observed", "evidence_ref": "missing"},
+        "evidence_refs": ["SRC-CEDAR-SPEC-03", "SRC-CEDAR-RULE-02", "REVIEW-CEDAR-03", "AUTH-CEDAR-02"],
+        "unknowns": [],
+        "descriptive_target_comparison": {"status": "prepared", "requires": ["mature_observed_results"], "reason": null},
+        "incremental_causal_comparison": {"status": "unavailable", "reason": "baseline_not_comparable"}
+      }
+    }
+  ],
+  "negative_cases": [
+    {"id": "numeric-target-changed", "base_case": "qualified-requests-six-week-window", "path": "/capsule/target/value", "value": 7, "expected_rule_ids": ["C002"]},
+    {"id": "missing-target-invented", "base_case": "missing-target-remains-missing", "path": "/capsule/target", "value": {"value": 12, "unit": "richieste"}, "expected_rule_ids": ["C003"]},
+    {"id": "qualitative-rule-simplified", "base_case": "qualitative-success-rule-with-maturity", "path": "/capsule/target/statement", "value": "Estendere se il pilot ottiene risultati positivi.", "expected_rule_ids": ["C002"]},
+    {"id": "authorization-used-as-execution", "base_case": "qualified-requests-six-week-window", "path": "/capsule/execution_observation", "value": {"status": "authorized", "scope": ["linkedin_organic"], "evidence_ref": "AUTH-NORTHSTAR-01"}, "expected_rule_ids": ["C002", "C004"]},
+    {"id": "target-comparison-blocked-by-missing-baseline", "base_case": "qualified-requests-six-week-window", "path": "/capsule/descriptive_target_comparison", "value": {"status": "unavailable", "requires": ["baseline", "comparator", "control"], "reason": "baseline_and_comparator_missing"}, "expected_rule_ids": ["C005"]},
+    {"id": "causal-comparison-invented", "base_case": "qualified-requests-six-week-window", "path": "/capsule/incremental_causal_comparison", "value": {"status": "prepared", "reason": null}, "expected_rule_ids": ["C007"]}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "rilievo bloccante non chiuso",
+  "mutations": [
+    {
+      "path": "artifacts.reviews.1.findings",
+      "value": [
+        {
+          "id": "CR-LIN-99",
+          "severity": "bloccante",
+          "status": "aperto",
+          "closure_criteria": "Verifica ancora necessaria"
+        }
+      ]
+    }
+  ],
+  "expected_error": "rilievo bloccante non chiuso"
+}

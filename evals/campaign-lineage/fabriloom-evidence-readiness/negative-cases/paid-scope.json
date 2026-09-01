@@ -1,0 +1,5 @@
+{
+  "name": "scope paid non autorizzato",
+  "mutations": [{"path": "artifacts.authorization.scope", "value": "pubblicazione paid sponsorizzata"}],
+  "expected_error": "paid scope"
+}

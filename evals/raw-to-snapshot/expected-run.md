@@ -1,0 +1,7 @@
+# Oracolo qualitativo
+
+Il risultato positivo richiede che i fatti essenziali degli input e output raw siano presenti anche nello snapshot, con lo stesso valore e con evidenza raw risolvibile. L'adattatore non può usare lo snapshot per colmare una perdita del raw.
+
+Per il profilo minimo a nove skill i fatti essenziali sono target 20, decisione di autorizzazione proveniente dall'input del committente, separazione tra autorizzazione ed esecuzione, coerenza di asset/versione/canale, esclusione Paid, tracking successivo a evidenza operativa, risultato 7 su 20 e divieto di causalità o ROI. L'input del turno 9 può autorizzare la pubblicazione organica e l'output dello stesso turno può osservarne l'esecuzione, perché l'ordine logico input-output resta verificabile. Le asserzioni statiche complete e gli ID Fabriloom restano nel profilo `integrated-postexecution-v1`.
+
+Un caso negativo deve fallire se il fatto raw è mancante o contraddittorio, se un oggetto snapshot non coincide con la propria evidenza locale o se un campo non ha grounding. La review, l'output del modello, i proof metadata, expected e oracle non possono sostituire l'autorizzazione del committente. Un puntatore input-output incrociato, un asset o una versione divergenti e l'estensione dell'autorizzazione a Paid devono fallire. La provenienza simulata non può diventare osservata e il digest dell'oracolo expected non può diventare il digest del debrief effettivo.

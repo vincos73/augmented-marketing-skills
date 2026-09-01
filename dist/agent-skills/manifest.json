@@ -1,10 +1,10 @@
 {
   "format": "agent-skill-zip",
-  "suite_version": "0.1.0-beta.9",
+  "suite_version": "0.1.0-beta.10",
   "source": {
-    "base_commit": "856b85e6ec8f977f94aba1e8b46cc8fff1040912",
-    "base_tag": "content-director-v0.1.1",
-    "state": "beta.9 release artifact"
+    "base_commit": "2bed5fbc560402c0b96f16992ab9f4a5fae15e6e",
+    "previous_release_tag": "augmented-marketing-suite-v0.1.0-beta.9",
+    "state": "beta.10 release artifact"
   },
   "package_policy": {
     "archive_root": "one specialist skill folder",
@@ -45,8 +45,8 @@
     },
     {
       "name": "campaign-review",
-      "version": "0.1.2",
-      "archive": "campaign-review-0.1.2.zip"
+      "version": "0.1.3",
+      "archive": "campaign-review-0.1.3.zip"
     },
     {
       "name": "campaign-debrief",

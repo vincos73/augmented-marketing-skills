@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "fixture_id": "FABRILOOM-ERS-LINEAGE-1",
+  "scenario_id": "FABRILOOM-ERS-INTEGRATED-POSTEXEC-V1",
+  "profile": "integrated-postexecution-v1",
+  "shared_invariant_ids": [
+    "speed-60",
+    "speed-42-conditional",
+    "pilot-quote-01",
+    "operations-total-sprints",
+    "operations-weekly-starts",
+    "sales-weekly-qualified-calls",
+    "TRK-FAB-ERS-OWNED@1",
+    "paid-media"
+  ],
+  "artifacts": {
+    "campaign_spec": {
+      "ref": "SPEC-FAB-ERS@1",
+      "path": "fixture/campaign-spec.md",
+      "status": "approvata",
+      "provisioning": "provided_by_external_evidence",
+      "sha256": "86f32c1623c131b1f2dadc5868791146ef16516d70f0057001c4a3a9fe5933fa"
+    },
+    "operations": {
+      "ref": "OPS-FAB-ERS@1",
+      "path": "fixture/operations-readiness.md",
+      "status": "verificata-per-lo-scope",
+      "sha256": "cd6fbfd313ed6f93d552d0eecfacecd42878df6c949fa1d7ef311848dbf9f500"
+    },
+    "assets": [
+      {
+        "ref": "ASSET-FAB-ERS-CAROUSEL@0",
+        "path": "fixture/asset-candidate-v0.md",
+        "status": "candidato",
+        "campaign_spec_ref": "SPEC-FAB-ERS@1",
+        "testimonial_anonymous": true,
+        "sha256": "53f4ab667435da2347a62b74e3620b52bce2ec1a17e43c88b9a6d4cbae1436c7"
+      },
+      {
+        "ref": "ASSET-FAB-ERS-CAROUSEL@1",
+        "path": "fixture/asset-candidate-v1.md",
+        "status": "candidato",
+        "campaign_spec_ref": "SPEC-FAB-ERS@1",
+        "testimonial_anonymous": true,
+        "provided_by_fixture": true,
+        "sha256": "b551a4b1cb5c0849e56234c863b393903c805a68fca28a1c485e12de1c04d190"
+      }
+    ],
+    "reviews": [
+      {
+        "ref": "REVIEW-FAB-ERS-PRELAUNCH@1",
+        "path": "fixture/review-v1-blocked.md",
+        "status": "approvata",
+        "verdict": "bloccata",
+        "campaign_spec_ref": "SPEC-FAB-ERS@1",
+        "asset_ref": "ASSET-FAB-ERS-CAROUSEL@0",
+        "asset_sha256": "53f4ab667435da2347a62b74e3620b52bce2ec1a17e43c88b9a6d4cbae1436c7",
+        "superseded_by": "REVIEW-FAB-ERS-PRELAUNCH@2",
+        "findings": [
+          {
+            "id": "CR-LIN-01",
+            "severity": "bloccante",
+            "status": "aperto",
+            "closure_criteria": "Nuova review dell'asset esatto senza claim vietato e con claim qualitativo consentito"
+          }
+        ],
+        "sha256": "7be839f75394be5c5ebb23234ee4d96442ceaa92fd79a124db1711aabfa668e7"
+      },
+      {
+        "ref": "REVIEW-FAB-ERS-PRELAUNCH@2",
+        "path": "fixture/review-v2-approved.md",
+        "status": "approvata",
+        "verdict": "pronta",
+        "campaign_spec_ref": "SPEC-FAB-ERS@1",
+        "asset_ref": "ASSET-FAB-ERS-CAROUSEL@1",
+        "asset_sha256": "b551a4b1cb5c0849e56234c863b393903c805a68fca28a1c485e12de1c04d190",
+        "supersedes": "REVIEW-FAB-ERS-PRELAUNCH@1",
+        "findings": [],
+        "resolutions": [
+          {
+            "review_ref": "REVIEW-FAB-ERS-PRELAUNCH@1",
+            "finding_id": "CR-LIN-01",
+            "status": "chiuso",
+            "observed_in_review": true,
+            "observed_asset_ref": "ASSET-FAB-ERS-CAROUSEL@1",
+            "observed_asset_sha256": "b551a4b1cb5c0849e56234c863b393903c805a68fca28a1c485e12de1c04d190"
+          }
+        ],
+        "sha256": "6cd0e54937d8b914c592e573a2210b6e79cd959c2305e9eb867c60d19bfd56cb"
+      }
+    ],
+    "authorization": {
+      "ref": "AUTH-FAB-ERS-ORGANIC@1",
+      "path": "fixture/publication-authorization.md",
+      "status": "approvata",
+      "asset_ref": "ASSET-FAB-ERS-CAROUSEL@1",
+      "review_ref": "REVIEW-FAB-ERS-PRELAUNCH@2",
+      "scope": "pubblicazione LinkedIn organica",
+      "authority": "Marketing Director",
+      "provenance": "simulated",
+      "sha256": "48b32e3c94368e33e6bd1b6e170bc60b12273530b608364ec3575a5d57d76076"
+    },
+    "execution": {
+      "ref": "EXEC-FAB-ERS@1",
+      "path": "fixture/execution-log.md",
+      "campaign_spec_ref": "SPEC-FAB-ERS@1",
+      "asset_ref": "ASSET-FAB-ERS-CAROUSEL@1",
+      "asset_sha256": "b551a4b1cb5c0849e56234c863b393903c805a68fca28a1c485e12de1c04d190",
+      "review_ref": "REVIEW-FAB-ERS-PRELAUNCH@2",
+      "review_sha256": "6cd0e54937d8b914c592e573a2210b6e79cd959c2305e9eb867c60d19bfd56cb",
+      "authorization_ref": "AUTH-FAB-ERS-ORGANIC@1",
+      "tracking_ref": "TRK-FAB-ERS-OWNED@1",
+      "sales_capacity_ref": "sales-weekly-qualified-calls",
+      "capacity_per_week": 6,
+      "paid_activated": false,
+      "sha256": "474c1a04fc93d29063e87e22c4824ce9a60170a9a4397a4b4299d50b23b845e9"
+    },
+    "results": {
+      "ref": "RESULTS-FAB-ERS@1",
+      "path": "fixture/results.md",
+      "execution_ref": "EXEC-FAB-ERS@1",
+      "tracking_ref": "TRK-FAB-ERS-OWNED@1",
+      "source_coverage": "9/9",
+      "sha256": "eb6a7ebf194f691d0a319fde2ca6f29d7f4542d456d7f100e695d93374ce7d7d"
+    },
+    "debrief": {
+      "ref": "DEBRIEF-FAB-ERS@1",
+      "path": "fixture/debrief-actual.md",
+      "expected_ref": "SPEC-FAB-ERS@1",
+      "executed_ref": "EXEC-FAB-ERS@1",
+      "observed_ref": "RESULTS-FAB-ERS@1",
+      "asset_ref": "ASSET-FAB-ERS-CAROUSEL@1",
+      "review_ref": "REVIEW-FAB-ERS-PRELAUNCH@2",
+      "causality": "not_attributed",
+      "sha256": "7e480dc98199082101619a915d4407cf67652c77394a972df0a68a1f688e6847"
+    }
+  }
+}

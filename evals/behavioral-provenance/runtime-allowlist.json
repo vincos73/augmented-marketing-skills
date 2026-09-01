@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "source_base_commit": "2bed5fbc560402c0b96f16992ab9f4a5fae15e6e",
+  "package_digest_algorithm": "sha256(sorted relative_path + NUL + sha256(file) + LF; excludes __pycache__ and .DS_Store)",
+  "provider_runtime_allowlist": [
+    {"provider": "openai", "runtime": "codex-desktop"},
+    {"provider": "openai", "runtime": "codex-cli"}
+  ],
+  "skills": [
+    {"sequence": 1, "skill_id": "setup-business-context", "skill_version": "0.6.5", "path": "skills/setup-business-context", "skill_sha256": "3ec2f9acf4d238e6e6ee77f6ae8315605620d9ec4cb1a709937c1435374709b8"},
+    {"sequence": 2, "skill_id": "setup-marketing-system", "skill_version": "0.3.2", "path": "skills/setup-marketing-system", "skill_sha256": "65dc6bf3c48a20f7b4d6e4aefd03ee5d34b5abc04ab0517c9465f09c15499ef9"},
+    {"sequence": 3, "skill_id": "define-marketing-challenge", "skill_version": "0.1.4", "path": "skills/define-marketing-challenge", "skill_sha256": "c0cfff908411d25d14b86784e9a5fafa6a443298ee0e7525de799560f31017b6"},
+    {"sequence": 4, "skill_id": "choose-marketing-direction", "skill_version": "0.2.3", "path": "skills/choose-marketing-direction", "skill_sha256": "5055b411d402cc8182f2b5d2a82bb3e986e1f195b6f710886e79d4821808eb4d"},
+    {"sequence": 5, "skill_id": "define-marketing-mix", "skill_version": "0.1.4", "path": "skills/define-marketing-mix", "skill_sha256": "f90dad8dfc2797e691888efbd34d62d753a8510e99388d824d46b87fb303ce36"},
+    {"sequence": 6, "skill_id": "design-campaign", "skill_version": "0.1.4", "path": "skills/design-campaign", "skill_sha256": "bf43b48e06b92cbe3ebf0d35cf52328c1aa5b0f4554bf58eab0fcf38b4d4469d"},
+    {"sequence": 7, "skill_id": "content-director", "skill_version": "0.1.1", "path": "skills/content-director", "skill_sha256": "69212b6cbc96a8f377957885ad1a0decbd0ec0d1f215c19ee139bb1b42a5984e"},
+    {"sequence": 8, "skill_id": "campaign-review", "skill_version": "0.1.3", "path": "skills/campaign-review", "skill_sha256": "d833faf8895bde4ba4095169e98c4a50a8170cc66522b2bbd8cab3bc55dd31e5"},
+    {"sequence": 9, "skill_id": "campaign-debrief", "skill_version": "0.1.6", "path": "skills/campaign-debrief", "skill_sha256": "110d09d3ab8131216fb5e8247b3dc95940b37f416682b5a42fd49796bea264a9"}
+  ]
+}

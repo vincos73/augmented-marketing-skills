@@ -1,0 +1,14 @@
+{
+  "name": "execution log con review superata",
+  "mutations": [
+    {
+      "path": "artifacts.execution.review_ref",
+      "value": "REVIEW-FAB-ERS-PRELAUNCH@1"
+    },
+    {
+      "path": "artifacts.execution.review_sha256",
+      "value": "7be839f75394be5c5ebb23234ee4d96442ceaa92fd79a124db1711aabfa668e7"
+    }
+  ],
+  "expected_error": "review superata"
+}

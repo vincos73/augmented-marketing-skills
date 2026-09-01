@@ -14,8 +14,8 @@
       "source": "skills/campaign-review/",
       "source_commit": "4d5c8ada478b01e90604b11a64eebb9aee32a525",
       "status": "historical-superseded",
-      "current_source": "skills/campaign-review@0.1.2",
-      "published_in": "augmented-marketing-suite-v0.1.0-beta.9"
+      "current_source": "skills/campaign-review@0.1.3",
+      "published_in": "augmented-marketing-suite-v0.1.0-beta.10"
     }
   ]
 }

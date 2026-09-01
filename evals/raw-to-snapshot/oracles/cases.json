@@ -1,0 +1,32 @@
+{
+  "oracle_version": "2.0.0",
+  "base_raw": "../fixtures/fabriloom-valid/raw-transcript.json",
+  "base_snapshot": "../fixtures/fabriloom-valid/snapshot.json",
+  "cases": [
+    {"id": "positive", "expected": "pass", "expected_rule_ids": [], "mutations": []},
+    {"id": "raw-authorization-omitted", "expected": "fail", "expected_rule_ids": ["R002", "R005", "R006"], "mutations": [{"target": "raw", "op": "remove", "path": "/events/7/raw_output/authorization_event"}]},
+    {"id": "raw-claim-contradiction", "expected": "fail", "expected_rule_ids": ["R003", "R009"], "mutations": [{"target": "raw", "op": "replace", "path": "/events/0/raw_output/invariants/0/status", "value": "allowed"}]},
+    {"id": "snapshot-added-ungrounded-field", "expected": "fail", "expected_rule_ids": ["R003", "S001"], "mutations": [{"target": "snapshot", "op": "add", "path": "/invariants/0/unverified_note", "value": "invented"}]},
+    {"id": "review-promoted-to-authorization", "expected": "fail", "expected_rule_ids": ["R003", "R006"], "mutations": [{"target": "snapshot", "op": "replace", "path": "/authorization/decisions/2/source_ref", "value": "/events/7/raw_output/review_event/artifact"}]},
+    {"id": "simulated-authorization-promoted", "expected": "fail", "expected_rule_ids": ["R003", "R006"], "mutations": [{"target": "snapshot", "op": "replace", "path": "/authorization/decisions/2/mode", "value": "observed"}]},
+    {"id": "denied-action-promoted-to-observed", "expected": "fail", "expected_rule_ids": ["R003", "R014", "S006"], "mutations": [{"target": "snapshot", "op": "replace", "path": "/authorization/observations/1/status", "value": "observed"}]},
+    {"id": "expected-debrief-used-as-actual", "expected": "fail", "expected_rule_ids": ["R004", "R008"], "mutations": [
+      {"target": "raw", "op": "replace", "path": "/events/8/raw_output/debrief_event/artifact/digest/value", "value": "65e4d87b0bb8e40cedc389eb8fe2529d4e917709bb7af4c81f679edecd091ef2"},
+      {"target": "snapshot", "op": "replace", "path": "/artifacts/5/digest/value", "value": "65e4d87b0bb8e40cedc389eb8fe2529d4e917709bb7af4c81f679edecd091ef2"}
+    ]},
+    {"id": "static-copy-self-declared-behavioral", "expected": "fail", "expected_rule_ids": ["P011"], "mutations": [
+      {"target": "raw", "op": "replace", "path": "/scenario/evidence_mode", "value": "behavioral_run"},
+      {"target": "snapshot", "op": "replace", "path": "/scenario/evidence_mode", "value": "behavioral_run"}
+    ]},
+    {"id": "tracking-promoted-before-operations-boundary", "expected": "fail", "expected_rule_ids": ["R012"], "mutations": [
+      {"target": "raw", "op": "replace", "path": "/events/0/raw_output/invariants/4/status", "value": "verified"}
+    ]},
+    {"id": "campaign-spec-promoted-to-persistent-without-save", "expected": "fail", "expected_rule_ids": ["R013", "S002"], "mutations": [
+      {"target": "raw", "op": "replace", "path": "/events/5/raw_output/artifact/state", "value": "persistent"},
+      {"target": "snapshot", "op": "replace", "path": "/artifacts/0/state", "value": "persistent"}
+    ]},
+    {"id": "synthetic-mode-promoted-to-observed", "expected": "fail", "expected_rule_ids": ["R003", "R015"], "mutations": [
+      {"target": "raw", "op": "replace", "path": "/events/0/raw_output/decisions/0/mode", "value": "observed"}
+    ]}
+  ]
+}

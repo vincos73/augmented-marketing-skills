@@ -1,0 +1,14 @@
+{
+  "name": "asset diverso da quello revisionato",
+  "mutations": [
+    {
+      "path": "artifacts.execution.asset_ref",
+      "value": "ASSET-FAB-ERS-CAROUSEL@0"
+    },
+    {
+      "path": "artifacts.execution.asset_sha256",
+      "value": "53f4ab667435da2347a62b74e3620b52bce2ec1a17e43c88b9a6d4cbae1436c7"
+    }
+  ],
+  "expected_error": "asset diverso da quello revisionato"
+}

@@ -1,11 +1,11 @@
 {
   "format": "openai-codex-plugin-zip",
-  "suite_version": "0.1.0-beta.9",
-  "archive": "augmented-marketing-suite-0.1.0-beta.9.zip",
+  "suite_version": "0.1.0-beta.10",
+  "archive": "augmented-marketing-suite-0.1.0-beta.10.zip",
   "source": {
-    "base_commit": "856b85e6ec8f977f94aba1e8b46cc8fff1040912",
-    "base_tag": "content-director-v0.1.1",
-    "state": "beta.9 release artifact"
+    "base_commit": "2bed5fbc560402c0b96f16992ab9f4a5fae15e6e",
+    "previous_release_tag": "augmented-marketing-suite-v0.1.0-beta.9",
+    "state": "beta.10 release artifact"
   },
   "archive_root": [".codex-plugin/plugin.json", "skills/"],
   "skills": [
@@ -16,7 +16,7 @@
     "choose-marketing-direction@0.2.3",
     "define-marketing-mix@0.1.4",
     "design-campaign@0.1.4",
-    "campaign-review@0.1.2",
+    "campaign-review@0.1.3",
     "campaign-debrief@0.1.6",
     "content-director@0.1.1"
   ]

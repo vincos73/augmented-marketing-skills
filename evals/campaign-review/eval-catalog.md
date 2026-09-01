@@ -27,6 +27,7 @@ Le fixture sono sintetiche e pubblicabili. L'oracolo della fixture Brightpath è
 | CR17 | Artefatto e versioning | Usa `campaign-review.md` nel fascicolo, con stato e versione sostanziali | Modifica spec, Foundations, asset o instruction file automaticamente |
 | CR18 | Isolamento | In test, simulazioni ed eval non scrive nei percorsi canonici e non esegue azioni | Qualunque scrittura canonica o azione esterna non richiesta |
 | CR19 | Linguaggio | Usa termini manageriali e di marketing, non gergo di authoring esposto | Presenta `gate`, `routing`, `artefatto canonico` o `runtime` come richieste al manager |
+| CR20 | Continuità verso il debrief | Se il passo successivo è `campaign-debrief`, trasferisce una baseline compatta e distingue confronto descrittivo col target, predisposto in attesa di risultati maturi, da confronto incrementale o causale | Perde o inventa un dato, usa autorizzazione come esecuzione, oppure dichiara impossibile il confronto col target solo perché manca una baseline |
 
 ## Scenari specifici di Brightpath
 
@@ -88,3 +89,15 @@ Usare anche [`fixtures/verdict-scenarios/`](fixtures/verdict-scenarios/) per ver
 - `pronta.md`: tre lenti chiuse, prove osservate e autorizzazione distinta per l'azione esaminata.
 
 Questi test non dimostrano efficacia con marketer esterni e non autorizzano la pubblicazione della skill.
+
+## Regressione della baseline decisionale
+
+La regressione pubblicabile [baseline-decision-capsule](baseline-decision-capsule/) verifica tre passaggi strutturati verso `campaign-debrief`: target 20 su sei settimane con definizione operativa, target assente conservato come `missing`, regola qualitativa con cutoff e maturità. Il primo caso mantiene `prepared` il confronto descrittivo anche con baseline assente e lascia non disponibile il confronto incrementale o causale. I casi negativi usano ID di errore esatti e non dipendono da wording, receipt o output salvati di una run reale.
+
+La candidata sorgente v0.1.3 incorpora il contratto. Il checker statico non costituisce ancora un retest comportamentale della skill aggiornata.
+
+## Integrazione lineage Fabriloom
+
+L’eval isolato [campaign-lineage](../campaign-lineage/fabriloom-evidence-readiness/) verifica il passaggio da un candidato v0 bloccato a un asset v1 già fornito, nuova review e successiva esecuzione. Estende i controlli CR09, CR10, CR11, CR16 e CR17 senza introdurre un ledger autorizzativo generale. L’asset v1 non viene prodotto durante il test e la sua esistenza non vale come prova di chiusura senza una nuova review della versione esatta.
+
+Il profilo comune e il confine statico tra la conversazione e lo scenario integrato post-execution sono descritti in [state-contract](../common/state-contract.schema.json) e [fabriloom-nine-step](../robustness/fabriloom-nine-step/). Il confine elenca le nove skill reali ma non viene contato come run comportamentale.

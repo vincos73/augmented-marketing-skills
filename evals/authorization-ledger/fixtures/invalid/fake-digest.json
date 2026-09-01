@@ -1,0 +1,4 @@
+{
+  "base": "../fabriloom-valid/persistent-ledger.json",
+  "mutations": [{"op": "replace", "path": "/records/3/entity/digest", "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}]
+}

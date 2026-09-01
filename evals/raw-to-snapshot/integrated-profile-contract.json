@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_id": "FABRILOOM-ERS-INTEGRATED-POSTEXEC-V1",
+  "profile": "integrated-postexecution-v1",
+  "shared_invariant_ids": [
+    "speed-60",
+    "speed-42-conditional",
+    "pilot-quote-01",
+    "operations-total-sprints",
+    "operations-weekly-starts",
+    "sales-weekly-qualified-calls",
+    "TRK-FAB-ERS-OWNED@1",
+    "paid-media"
+  ],
+  "pre_boundary_stage_count": 5,
+  "tracking_id": "TRK-FAB-ERS-OWNED@1",
+  "tracking_pre_boundary_state": "unverified",
+  "tracking_verified_stage": 6,
+  "tracking_evidence_ref": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/operations-readiness.md",
+  "campaign_spec_ref": "SPEC-FAB-ERS@1",
+  "campaign_spec_route": "provided_by_external_evidence",
+  "authorized_decision_ids_at_debrief": ["AUTH-FAB-ERS-ORGANIC@1"],
+  "observed_action_ids_at_debrief": ["organic-publication-action"],
+  "paid_invariant_state": "not_authorized",
+  "synthetic_event_mode": "simulated"
+}

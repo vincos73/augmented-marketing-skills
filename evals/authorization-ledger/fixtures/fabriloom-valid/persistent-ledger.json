@@ -1,0 +1,56 @@
+{
+  "schema_version": "2.0.0",
+  "ledger_id": "fabriloom-persistent-lineage-v1",
+  "profile": "persistent-lineage-v1",
+  "identity": {"id": "SPEC-FAB-ERS", "version": "SPEC-FAB-ERS@1", "state": "persistent"},
+  "shared_invariant_ids": ["speed-60", "speed-42-conditional", "pilot-quote-01", "operations-total-sprints", "operations-weekly-starts", "sales-weekly-qualified-calls", "TRK-FAB-ERS-OWNED@1", "paid-media"],
+  "role_action_matrix": {
+    "approve_content": ["Marketing Director"],
+    "write_file": ["Repository Maintainer"],
+    "install": ["Runtime Administrator"],
+    "execute": ["Campaign Operator"]
+  },
+  "evaluation_context": {"mode": "simulation", "fixture": "campaign-lineage/fabriloom-evidence-readiness", "generated_at": "2026-09-01T10:00:00Z"},
+  "records": [
+    {
+      "id": "persistent-content", "transition": "content_approval",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md", "digest": "86f32c1623c131b1f2dadc5868791146ef16516d70f0057001c4a3a9fe5933fa"},
+      "version": {"kind": "persistent", "value": "SPEC-FAB-ERS@1"},
+      "scope": {"actions": ["approve_content"], "targets": ["SPEC-FAB-ERS@1"], "exclusions": ["write_file", "install", "execute"]},
+      "decision": {"status": "approved", "mode": "simulated", "basis": {"kind": "simulated", "source_entry_id": null, "summary": "Approvazione sintetica isolata."}},
+      "authority": {"status": "confirmed", "role": "Marketing Director"},
+      "observation": {"subject": "decision", "status": "observed", "occurred_at": "2026-09-01T10:00:00Z", "evidence": [{"kind": "file", "mode": "simulated", "ref": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md", "summary": "Spec persistente della fixture."}]},
+      "recorded_at": "2026-09-01T10:00:00Z", "dependencies": [], "notes": []
+    },
+    {
+      "id": "persistent-save", "transition": "saving",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md", "digest": "86f32c1623c131b1f2dadc5868791146ef16516d70f0057001c4a3a9fe5933fa"},
+      "version": {"kind": "persistent", "value": "SPEC-FAB-ERS@1"},
+      "scope": {"actions": ["write_file"], "targets": ["evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md"], "exclusions": ["install", "execute"]},
+      "decision": {"status": "authorized", "mode": "simulated", "basis": {"kind": "simulated", "source_entry_id": null, "summary": "Salvataggio sintetico autorizzato per verificare il ledger."}},
+      "authority": {"status": "confirmed", "role": "Repository Maintainer"},
+      "observation": {"subject": "action", "status": "observed", "occurred_at": "2026-09-01T10:00:01Z", "evidence": [{"kind": "file", "mode": "simulated", "ref": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md", "summary": "File persistente risolvibile."}]},
+      "recorded_at": "2026-09-01T10:00:01Z", "dependencies": ["persistent-content"], "notes": []
+    },
+    {
+      "id": "persistent-install", "transition": "installation",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md", "digest": "86f32c1623c131b1f2dadc5868791146ef16516d70f0057001c4a3a9fe5933fa"},
+      "version": {"kind": "persistent", "value": "SPEC-FAB-ERS@1"},
+      "scope": {"actions": ["install"], "targets": ["SPEC-FAB-ERS@1"], "exclusions": ["execute"]},
+      "decision": {"status": "authorized", "mode": "simulated", "basis": {"kind": "simulated", "source_entry_id": null, "summary": "Installazione sintetica autorizzata separatamente."}},
+      "authority": {"status": "confirmed", "role": "Runtime Administrator"},
+      "observation": {"subject": "action", "status": "observed", "occurred_at": "2026-09-01T10:00:02Z", "evidence": [{"kind": "file", "mode": "simulated", "ref": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md", "summary": "Identità installata conservata nella fixture."}]},
+      "recorded_at": "2026-09-01T10:00:02Z", "dependencies": ["persistent-save"], "notes": []
+    },
+    {
+      "id": "persistent-execute", "transition": "execution",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md", "digest": "86f32c1623c131b1f2dadc5868791146ef16516d70f0057001c4a3a9fe5933fa"},
+      "version": {"kind": "persistent", "value": "SPEC-FAB-ERS@1"},
+      "scope": {"actions": ["execute"], "targets": ["SPEC-FAB-ERS@1"], "exclusions": []},
+      "decision": {"status": "authorized", "mode": "simulated", "basis": {"kind": "simulated", "source_entry_id": null, "summary": "Esecuzione sintetica autorizzata separatamente."}},
+      "authority": {"status": "confirmed", "role": "Campaign Operator"},
+      "observation": {"subject": "action", "status": "observed", "occurred_at": "2026-09-01T10:00:03Z", "evidence": [{"kind": "file", "mode": "simulated", "ref": "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md", "summary": "Esecuzione sintetica sulla stessa identità persistente."}]},
+      "recorded_at": "2026-09-01T10:00:03Z", "dependencies": ["persistent-save", "persistent-install"], "notes": []
+    }
+  ]
+}
