@@ -73,7 +73,7 @@ raccolta di evidenze opzionale → Strategy Core / Campaign Core / Content Direc
 
 Il percorso non è sempre lineare:
 
-- fonte o idea con formato incerto → **Content Director** → builder consigliato;
+- fonte o idea con forma o strada incerta → **Content Director** → Content Brief e percorso produttivo;
 - formato già deciso → builder direttamente;
 - contenuto prodotto altrove → **Editorial Review** autonoma, eventualmente futura.
 
@@ -126,7 +126,7 @@ Il mercato offre già motori potenti; il vuoto interessante è la metodologia di
 
 ### Relazione con il framework
 
-`monitoring-setup` non decide ancora quale contenuto produrre. Fornisce segnali e materiali ai workflow Strategy, a `Content Director` o direttamente a un sistema di briefing. Un eventuale `build-evidence-pack` resta una capacità opzionale futura per i casi in cui fonti numerose, conflittuali o riusate da più workflow giustifichino un artefatto autonomo; non è un passaggio obbligatorio dello Strategy Core. Il Content Director continua a valutare rilevanza, solidità, obiettivo e formato; i builder producono l’asset.
+`monitoring-setup` non decide ancora quale contenuto produrre. Fornisce segnali e materiali ai workflow Strategy, a `Content Director` o direttamente a un sistema di briefing. Un eventuale `build-evidence-pack` resta una capacità opzionale futura per i casi in cui fonti numerose, conflittuali o riusate da più workflow giustifichino un artefatto autonomo; non è un passaggio obbligatorio dello Strategy Core. Il Content Director continua a valutare valore, funzione, solidità e strada editoriale; builder, team o fornitori producono l'asset.
 
 Per questo è una skill **abilitante e opzionale**, non un passaggio obbligatorio di ogni campagna.
 
@@ -619,11 +619,11 @@ La catena è quindi completa e osservata a livello di sorgente, ma non ancora di
 
 ### 5. Content Core
 
-- `content-director`: valuta se il materiale merita un contenuto, quale obiettivo può servire e quale formato lo valorizza;
+- `content-director`: valuta quale opportunità editoriale è sostenuta da un materiale, quale funzione può servire e quale combinazione di trattamento, forma, contesto di fruizione e percorso produttivo la valorizza;
 - builder specializzati: producono l'asset e mantengono selezione, fedeltà, struttura, resa e QA specifici;
 - `editorial-review`, eventualmente futura: serve per contenuti creati altrove o audit multi-asset, non come passaggio obbligatorio dopo ogni builder.
 
-Questa sezione descrive una direzione di progettazione. Il repository non contiene ancora una sorgente approvata `content-director` o `editorial-review`. Il prossimo vertical slice deve collegare un brief del Content Director a un builder già esistente e verificare che il passaggio riduca rework senza duplicare il giudizio del builder.
+Il [blueprint del Content Core](CONTENT-CORE.md) e i [riferimenti di authoring](blueprints/content-director/) definiscono il percorso standalone e collegato, il routing editoriale e il template del Content Brief. La [sorgente `content-director` v0.1.1](skills/content-director/) e la [fixture sintetica con catalogo degli eval](evals/content-director/) documentano la validazione. Il [primo forward test indipendente della v0.1.0](evals/content-director/runs/2026-09-01-latticeway-independent-forward-v0.1.0.md) è terminato con FAIL perché la prima risposta ha privilegiato la forma già producibile. Il [retest indipendente della v0.1.1](evals/content-director/runs/2026-09-01-latticeway-independent-retest-v0.1.1.md) ha superato lo scenario con zero hard fail e due soft fail: l'optimum editoriale viene ora scelto prima della verifica di capacità e budget, mentre l'alternativa dichiara la perdita. Il [pacchetto indipendente di sei regressioni](evals/content-director/runs/2026-09-01-latticeway-independent-regressions-v0.1.1.md) è passato con zero hard fail e sei soft fail di criterio, coprendo modalità collegata, bypass, multi-asset, scelta manageriale contraria, stato limite e handoff simulato. La [release singola stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/content-director-v0.1.1) resta separata dalla Suite beta.8. La pubblicazione non dimostra caricamento runtime, produzione reale o utilità con manager reali.
 
 ### Ordine di costruzione
 
@@ -639,32 +639,44 @@ Questa sezione descrive una direzione di progettazione. Il repository non contie
 
 **Content Director** è il nome preferibile rispetto a Content Router: comunica giudizio editoriale, non semplice instradamento tecnico.
 
-Riceve URL, articolo, documento, appunti, trascrizione, ricerca o idea incompleta. Legge il business context e il profilo operativo o overlay di brand pertinente, quando disponibili, e valuta:
+Riceve URL, articolo, documento, appunti, trascrizione, ricerca, materiale multimediale o idea incompleta. Può partire standalone oppure riusare Business Identity, Marketing Foundations, Campaign Spec e brief equivalenti quando sono disponibili e pertinenti. Valuta:
 
 1. valore editoriale;
-2. struttura dell’idea;
-3. solidità delle prove;
-4. obiettivo;
-5. formato più adatto.
+2. pubblico, situazione e funzione;
+3. idea centrale, angolo e progressione;
+4. solidità delle prove, attribuzioni e limiti;
+5. trattamento editoriale;
+6. forma o esperienza;
+7. contesto di fruizione;
+8. percorso produttivo.
 
-Deve raccomandare un formato principale e, solo quando esiste una vera alternativa, una seconda opzione. Deve poter concludere che il materiale non è ancora sufficiente per produrre un contenuto.
+La raccomandazione è agnostica rispetto ai builder e agli strumenti disponibili. La skill decide prima la strada editoriale migliore e verifica soltanto dopo come realizzarla. L'assenza di un builder può cambiare fattibilità, costo o passaggio operativo, ma non deve far ripiegare silenziosamente su una forma meno adatta.
 
-Produce un brief, non le slide né la card:
+La skill raccomanda una strada principale e, solo quando esiste una vera alternativa, una seconda opzione. Su richiesta può mostrare una mappa più ampia delle possibilità organizzata per trade-off, non un catalogo generico.
+
+I cinque percorsi raccomandabili sono: produrre ora, produrre con vincoli, trasformare l'impostazione, rafforzare il materiale prima di produrre e, come stato limite, non produrre nella forma attuale. Prima dell'ultimo esito cerca se il valore può essere recuperato cambiando angolo, funzione, pubblico, prove, forza delle affermazioni, forma, momento o uso pubblico/interno. Nei casi dubbi formula il miglior argomento a favore e contro la produzione e indica le condizioni che la renderebbero difendibile.
+
+Produce un brief, non l'asset finale:
 
 ```markdown
-Formato: carosello
-Obiettivo: spiegare un meccanismo controintuitivo
+Percorso: trasformare l'impostazione
+Funzione: spiegare un meccanismo controintuitivo
 Pubblico: ...
 Idea centrale: ...
 Fonte primaria: ...
-Affermazioni da verificare: ...
-Sequenza: ...
+Affermazioni consentite, da qualificare o escludere: ...
+Progressione semantica: ...
+Forma o esperienza raccomandata: ...
+Contesto di fruizione: ...
+Percorso produttivo da verificare: ...
 CTA: ...
 ```
 
-Non decide numero preciso delle slide, formulazione finale, a capo, composizione, leggibilità o applicazione grafica.
+Non decide copy finale, numero preciso di unità, montaggio, a capo, composizione, impaginazione, leggibilità o applicazione grafica. Queste scelte restano al builder o allo specialista del formato.
 
-## Confine con Carousel Builder e Quote Card Builder
+La prima versione riguarda un singolo contenuto. Strategia editoriale, pilastri, portafoglio, calendario e famiglie multi-asset richiedono decisioni distinte e non vengono simulati dentro `content-director`.
+
+## Confine con builder e specialisti
 
 Il giudizio editoriale specifico non va spostato in una terza review obbligatoria. I builder possiedono il contesto necessario e intervengono nel punto giusto.
 
@@ -672,9 +684,8 @@ Il giudizio editoriale specifico non va spostato in una terza review obbligatori
 |---|---|
 | Setup Business Context | Identità generale e verificabile dell'azienda o del brand, fonti, limiti e contesto persistente |
 | Setup Marketing System | Profilo operativo aziendale e overlay di brand riusabili da strategia, campagne e contenuti |
-| Content Director | Se l’idea merita un contenuto e quale formato la valorizza |
-| Carousel Builder | Selezione, fedeltà, struttura, slide, grafica, leggibilità e QA del carosello |
-| Quote Card Builder | Selezione della frase, attribuzione, adattamento, gerarchia e QA della card |
+| Content Director | Quale opportunità editoriale è sostenibile e quale strada la valorizza |
+| Builder, specialista o team | Selezione finale, struttura, copy, resa, accessibilità e QA specifici della forma scelta |
 | Editorial Review futura | Audit di contenuti creati altrove o di campagne multi-asset |
 
 Una skill Editorial Review autonoma, se introdotta, dovrebbe servire soprattutto a revisionare contenuti esterni, confrontare più asset o fare audit; non deve diventare un passaggio standard dopo ogni builder.
@@ -779,8 +790,10 @@ Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, defini
 - `choose-marketing-direction` distingue alternative strategiche da tattiche, rende falsificabile la raccomandazione e passa le implicazioni sulle quattro P senza definirle.
 - `define-marketing-mix` impedisce che il sistema riduca il marketing alla Promotion: classifica e collega Product, Price, Place e Promotion rispettando autorità e dipendenze cross-funzionali.
 - `build-evidence-pack` è una capacità opzionale futura, non un passaggio del percorso essenziale `define-marketing-challenge` + `choose-marketing-direction` + `define-marketing-mix`.
-- **Content Director** è opzionale quando il formato è già deciso.
-- Carousel Builder e Quote Card Builder mantengono il giudizio editoriale e il QA specifici del proprio output.
+- **Content Director** è opzionale quando funzione, pubblico, idea, fonti, formato e vincoli sono già sufficientemente chiari.
+- **Content Director** raccomanda in modo agnostico rispetto ai builder disponibili; capacità e strumenti vengono verificati soltanto dopo la decisione editoriale.
+- `non produrre nella forma attuale` è uno stato limite: prima la skill cerca una trasformazione credibile e, nei casi dubbi, formula il miglior argomento a favore e contro la produzione.
+- I builder specializzati mantengono il giudizio editoriale e il QA specifici del proprio output.
 - Editorial Review non è un passaggio obbligatorio del sistema iniziale.
 - `monitoring-setup` è un modulo di ascolto a monte, non un sostituto degli strumenti di monitoring e non un passaggio obbligatorio.
 - Il framework deve ottimizzare decisioni e apprendimento, non il numero di asset prodotti.
