@@ -1,6 +1,8 @@
-# Readiness della prossima beta candidata
+# Snapshot pre-package della candidata beta.10
 
 Data di riferimento: 1 settembre 2026.
+
+Questo report è la vista portabile e prudente precedente al package. Non incorpora ricevute positive, export issue o prove di package temporanee; il workflow di release le verifica separatamente senza persisterle nel repository.
 
 ## Esito
 
@@ -16,7 +18,7 @@ Restano da verificare assenza di P0/P1 aperti e package parity/checksum. `packag
 |---|---|---|
 | `campaign-review` v0.1.3 locale | `static_only`, PASS | Sorgente e regressioni statiche valide; nessuna prova runtime o pilot. |
 | Forward indipendente Review→Debrief sotto compattazione | `observed_unverified`, PASS | Due ruoli separati; osservato 7 su target 20, scarto 13; nessuna causalità. Manca provenance host completa. |
-| Candidata a nove skill su Codex Desktop | `provenance_verified`, PASS esterno | Nove input e nove output host conservati, receipt concatenate, grounding input/output e `BEHAVIOR_PASS` verificati. Prova la sorgente candidata, non un package installato. |
+| Candidata beta.10 a nove skill su Codex Desktop | `provenance_verified`, PASS esterno | Nove input e nove output host conservati, receipt concatenate, grounding input/output e `BEHAVIOR_PASS` verificati. Prova la sorgente candidata, non un package installato. |
 | Beta.9 a nove skill su Codex Desktop | `observed_unverified`, issue observed | Il run manuale ha rilevato perdita dell'obiettivo. Non ha receipt normalizzate, non produce `BEHAVIOR_PASS` e non prova la candidata corrente. |
 | Codex Desktop con package candidato installato | `not_run` | Installazione e caricamento della candidata non sono verificati. |
 | Codex CLI sulla candidata | `not_run` | Nessuna prova corrente. |

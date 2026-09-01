@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "source_base_commit": "561dc936a011ac7b8b3842a1897572fe5abd1ad1",
+  "source_base_commit": "2bed5fbc560402c0b96f16992ab9f4a5fae15e6e",
   "package_digest_algorithm": "sha256(sorted relative_path + NUL + sha256(file) + LF; excludes __pycache__ and .DS_Store)",
   "provider_runtime_allowlist": [
     {"provider": "openai", "runtime": "codex-desktop"},
@@ -14,7 +14,7 @@
     {"sequence": 5, "skill_id": "define-marketing-mix", "skill_version": "0.1.4", "path": "skills/define-marketing-mix", "skill_sha256": "f90dad8dfc2797e691888efbd34d62d753a8510e99388d824d46b87fb303ce36"},
     {"sequence": 6, "skill_id": "design-campaign", "skill_version": "0.1.4", "path": "skills/design-campaign", "skill_sha256": "bf43b48e06b92cbe3ebf0d35cf52328c1aa5b0f4554bf58eab0fcf38b4d4469d"},
     {"sequence": 7, "skill_id": "content-director", "skill_version": "0.1.1", "path": "skills/content-director", "skill_sha256": "69212b6cbc96a8f377957885ad1a0decbd0ec0d1f215c19ee139bb1b42a5984e"},
-    {"sequence": 8, "skill_id": "campaign-review", "skill_version": "0.1.3", "path": "skills/campaign-review", "skill_sha256": "a393abb404ecf0c67310dc6a8bb60d76ac6d934c083ce47d6d30282b4e166783"},
+    {"sequence": 8, "skill_id": "campaign-review", "skill_version": "0.1.3", "path": "skills/campaign-review", "skill_sha256": "d833faf8895bde4ba4095169e98c4a50a8170cc66522b2bbd8cab3bc55dd31e5"},
     {"sequence": 9, "skill_id": "campaign-debrief", "skill_version": "0.1.6", "path": "skills/campaign-debrief", "skill_sha256": "110d09d3ab8131216fb5e8247b3dc95940b37f416682b5a42fd49796bea264a9"}
   ]
 }

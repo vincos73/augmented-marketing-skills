@@ -718,7 +718,7 @@ def validate(report_path: Path = DEFAULT_REPORT, external_index_path: Path | Non
     if not exact_keys(candidate, candidate_keys, "$.candidate", errors):
         candidate = {}
     candidate_id = candidate.get("candidate_id")
-    if candidate.get("artifact_kind") != "source_candidate" or candidate.get("campaign_review_version") != "0.1.3" or candidate.get("plugin_version_changed") is not False or candidate.get("package_state") not in {"not_built", "packaged_candidate"}:
+    if candidate.get("artifact_kind") != "source_candidate" or candidate.get("campaign_review_version") != "0.1.3" or not isinstance(candidate.get("plugin_version_changed"), bool) or candidate.get("package_state") not in {"not_built", "packaged_candidate"}:
         errors.append(issue("M003", "$.candidate", "candidata sorgente, versione o package_state non validi"))
     if not COMMIT_RE.fullmatch(str(candidate.get("source_base_commit", ""))):
         errors.append(issue("M001", "$.candidate.source_base_commit", "commit base non valido"))

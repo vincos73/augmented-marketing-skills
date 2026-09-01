@@ -67,6 +67,7 @@ ENUM_TRANSFORMS: dict[str, dict[str, str]] = {
     "tracking_state": {
         "verificato": "verified", "verificata": "verified", "non verificato": "unverified",
         "non verificata": "unverified", "verificati": "verified", "verificate": "verified",
+        "valido": "verified",
     },
     "causality_state": {
         "non dimostrabile": "not_attributed", "non dimostrata": "not_attributed",
@@ -79,6 +80,7 @@ ENUM_TRANSFORMS: dict[str, dict[str, str]] = {
     "evidence_basis": {
         "evidenza operativa": "operational_evidence",
         "prontezza del sistema: verificata": "operational_evidence",
+        "prontezza del sistema": "operational_evidence",
     },
     "target_state": {
         "confermato": "confermato", "confermata": "confermato",
