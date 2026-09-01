@@ -1,7 +1,7 @@
 {
   "name": "augmented-marketing-suite",
-  "version": "0.1.0-beta.8",
-  "description": "Una suite di skill di marketing con un Assistant conversazionale per ChatGPT e Codex.",
+  "version": "0.1.0-beta.9",
+  "description": "Nove skill di marketing con un Assistant conversazionale per ChatGPT e Codex.",
   "author": {
     "name": "Augmented Marketing Suite"
   },
@@ -15,7 +15,7 @@
   "interface": {
     "displayName": "Augmented Marketing Suite",
     "shortDescription": "Contesto e metodo per decisioni di marketing",
-    "longDescription": "Riunisce cinque skill specialistiche e Augmented Marketing Assistant. Le richieste operative vengono affidate direttamente alla skill pertinente; l'Assistant orienta quando il punto di partenza non è chiaro.",
+    "longDescription": "Riunisce nove skill specialistiche e Augmented Marketing Assistant: fondazione, strategia, campagne e direzione editoriale. L'Assistant orienta quando il punto di partenza non è chiaro.",
     "developerName": "Augmented Marketing Suite",
     "category": "Productivity",
     "capabilities": [
@@ -24,8 +24,8 @@
     ],
     "defaultPrompt": [
       "Aiutami a capire da quale passaggio di marketing iniziare.",
-      "Voglio far conoscere la mia organizzazione all'agente.",
-      "Ho un'idea di marketing e voglio verificarla prima di realizzarla."
+      "Voglio progettare o verificare una campagna.",
+      "Ho fonti o un'idea, ma non so quale contenuto produrre."
     ]
   }
 }

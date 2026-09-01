@@ -389,7 +389,7 @@ Sono hard fail almeno:
 - salvataggio, pubblicazione, invio, spesa o configurazione senza l'approvazione richiesta;
 - aggiornamento automatico di Marketing Foundations o altri artefatti approvati.
 
-## Decisioni da validare prima della distribuzione del Core
+## Decisioni da validare dopo la prima distribuzione del Core
 
 1. **Granularità del fascicolo:** confermare un solo documento iniziale e creare review/learning solo quando esistono, evitando una document factory.
 2. **Budget:** verificare negli eval se ordine di grandezza, capacità e scenari bastano senza spingere la skill verso un media plan.
@@ -399,18 +399,19 @@ Sono hard fail almeno:
 
 ## Stato del lavoro
 
-Questo documento registra progettazione e stato del Campaign Core. Le tre skill sono considerate pronte come sorgente, ma questo non costituisce approvazione del Core come prodotto distribuito e non prova da solo package, release, installazione, caricamento nella sessione o funzionamento del workflow sul mercato.
+Questo documento registra progettazione e stato del Campaign Core. Le tre skill sono incluse nella Suite beta.9. Package e release non provano da soli installazione, caricamento nella sessione o funzionamento del workflow sul mercato.
 
 La sorgente `design-campaign` v0.1.4 è considerata pronta dopo installazione locale con parità verificata e retest indipendente PASS con zero hard e zero soft fail sulla prima risposta standalone. I passaggi successivi, l'intero artefatto e il workflow reale restano da verificare nel pilot end-to-end.
 
-La sorgente `campaign-review` v0.1.2 è considerata pronta ed è implementata separatamente sotto `skills/campaign-review/`. Include una reference per il contratto della review, fixture sintetiche e catalogo degli eval. Conserva il forward test indipendente PASS della v0.1.1; la patch v0.1.2 aggiorna soltanto il passaggio post-lancio al nome ufficiale `campaign-debrief`. La presenza della sorgente non equivale a installazione attiva, release pubblica o prova con marketer esterni.
+La sorgente `campaign-review` v0.1.2 è considerata pronta ed è implementata separatamente sotto `skills/campaign-review/`. Include una reference per il contratto della review, fixture sintetiche e catalogo degli eval. Conserva il forward test indipendente PASS della v0.1.1; la patch v0.1.2 aggiorna soltanto il passaggio post-lancio al nome ufficiale `campaign-debrief`. L'inclusione nella beta.9 non equivale a installazione attiva o prova con marketer esterni.
 
-La sorgente `campaign-debrief` v0.1.6 è considerata pronta ed è sotto `skills/campaign-debrief/`. Include una guida alla sufficienza dei dati, il template unico di `campaign-learning.md` e una fixture sintetica longitudinale. Dopo il PASS collegato della v0.1.3, i test standalone v0.1.3-v0.1.5 hanno reso espliciti distinzione tra controllo intermedio e riesame paid, coorte realmente osservata, disponibilità della definizione, livelli del risultato e routing a `design-campaign`. La v0.1.6 supera la prima risposta standalone e il follow-up con zero hard e zero soft fail; la regressione collegata resta PASS con tre soft fail. Persistenza isolata e confronto con tre baseline sono completati. Lo stato pronto riguarda la sorgente: package, release, installazione e validazione con marketer reali restano separati.
+La sorgente `campaign-debrief` v0.1.6 è considerata pronta ed è sotto `skills/campaign-debrief/`. Include una guida alla sufficienza dei dati, il template unico di `campaign-learning.md` e una fixture sintetica longitudinale. Dopo il PASS collegato della v0.1.3, i test standalone v0.1.3-v0.1.5 hanno reso espliciti distinzione tra controllo intermedio e riesame paid, coorte realmente osservata, disponibilità della definizione, livelli del risultato e routing a `design-campaign`. La v0.1.6 supera la prima risposta standalone e il follow-up con zero hard e zero soft fail; la regressione collegata resta PASS con tre soft fail. Persistenza isolata e confronto con tre baseline sono completati. Installazione, caricamento e validazione con marketer reali restano gate separati.
 
 La sorgente `define-marketing-mix` v0.1.4 usa l'handoff `design-campaign`. Questa patch di authoring non modifica retroattivamente la versione v0.1.3 inclusa nella Suite beta.8 né la release singola pubblicata.
 
 ## Registro modifiche
 
+- v1.7, 2026-09-01: le tre skill del Campaign Core sono incluse nella Suite beta.9; installazione, caricamento e pilot end-to-end restano da verificare separatamente.
 - v1.6, 2026-09-01: `design-campaign` v0.1.4 e `campaign-review` v0.1.2 promosse a pronte come sorgente; l'intera catena Campaign Core è ora source-ready, mentre distribuzione e pilot restano gate separati.
 - v1.5, 2026-09-01: `campaign-debrief` v0.1.6 considerata pronta come sorgente; package, release, installazione e validazione di mercato restano stati separati.
 - v1.4, 2026-08-31: completati standalone, follow-up, confronto generalista/workflow proxy/Analytics, persistenza isolata e regressione collegata di `campaign-debrief`; candidata aggiornata a v0.1.6 e suite comportamentale PASS.
