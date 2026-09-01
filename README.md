@@ -21,6 +21,8 @@ Chi contribuisce nuove skill trova i criteri comuni nello [standard di progettaz
 
 ## Da dove cominciare
 
+### Skill pubblicate nella Suite beta.8
+
 | Se ti trovi in questa situazione | Cosa usare | Che cosa ottieni |
 | --- | --- | --- |
 | Non sai da quale passaggio iniziare. | [`Augmented Marketing Assistant`](agents/augmented-marketing-assistant.md) | Un orientamento in linguaggio comune verso il passaggio più utile. |
@@ -32,11 +34,15 @@ Chi contribuisce nuove skill trova i criteri comuni nello [standard di progettaz
 
 I nomi tra parentesi sono quelli da usare per richiamare direttamente le skill. Se l'ambiente supporta l'Assistant, puoi invece descrivere semplicemente ciò che vuoi fare.
 
-### Sorgente candidata in sviluppo
+### Campaign Core: sorgenti presenti su `main`
 
 | Se ti trovi in questa situazione | Cosa usare | Che cosa ottieni | Stato |
 | --- | --- | --- | --- |
-| Vuoi progettare una campagna partendo da un'esigenza, un brief o un marketing mix. | [`design-campaign`](skills/design-campaign/) | Una Campaign Spec con funnel, messaggi, canali, asset, responsabilità e misurazione. | v0.1.4 candidata; non inclusa nella Suite pubblicata |
+| Vuoi progettare una campagna partendo da un'esigenza, un brief o un marketing mix. | [`design-campaign`](skills/design-campaign/) | Una Campaign Spec con percorso, messaggi, canali, asset, responsabilità e misurazione. | v0.1.4 pronta come sorgente |
+| Vuoi verificare una campagna prima della pubblicazione o dell'invio. | [`campaign-review`](skills/campaign-review/) | Una review separata di coerenza strategica, affermazioni e prontezza operativa. | v0.1.2 pronta come sorgente |
+| Devi leggere i risultati e decidere che cosa fare dopo. | [`campaign-debrief`](skills/campaign-debrief/) | Una lettura dei risultati con limiti, decisione consigliata e prossima verifica. | v0.1.6 pronta come sorgente |
+
+Le tre sorgenti completano la sequenza del Campaign Core, ma non sono ancora incluse in una Suite pubblicata. `Pronta come sorgente` significa che authoring ed eval sintetici sono completati; non significa package, release, installazione attiva o validazione con marketer reali.
 
 ## Il percorso, in parole semplici
 
@@ -50,6 +56,10 @@ Confronti le alternative
 Scegli una direzione
           ↓
 Definisci offerta, prezzo, distribuzione e comunicazione
+          ↓
+Progetti e verifichi la campagna
+          ↓
+Dopo i risultati decidi il passo successivo
 ```
 
 Puoi usare tutto il percorso oppure solo il passaggio che ti serve. Le skill non pubblicano contenuti, non fanno pubblicità a pagamento e non cambiano strumenti o account esterni senza un'autorizzazione distinta.
@@ -76,7 +86,17 @@ Immagina di voler proporre un nuovo servizio di formazione.
 4. Scegli una direzione, rendendo esplicite le ipotesi ancora da verificare.
 5. Definisci in modo coerente l'offerta, il prezzo, il modo di accesso e la comunicazione.
 
-Solo dopo puoi passare a pagine, campagne e contenuti. `design-campaign` è presente come sorgente candidata non ancora pubblicata; le altre competenze per campagne, contenuti e apprendimento restano previste per uno sviluppo futuro.
+Solo dopo puoi passare a pagine, campagne e contenuti. Il Campaign Core è ora presente su `main` con `design-campaign`, `campaign-review` e `campaign-debrief`. Le tre skill non sono ancora incluse nella Suite pubblicata. Content Core, Research & Evidence e monitoring restano sviluppi successivi da validare.
+
+## Stato della roadmap
+
+| Area | Stato attuale | Prossimo passaggio |
+| --- | --- | --- |
+| Fondazione e Strategy Core | Pubblicati nella Suite beta.8 | Osservare utilizzo e riuso con marketer reali |
+| Campaign Core | Catena completa su `main`; le tre skill sono pronte come sorgente | Decidere package, release e installazione; poi svolgere un pilot completo |
+| Content Core | Progettazione documentata, nessuna skill sorgente approvata nel repository | Collegare il primo percorso Content ai builder specializzati e testarlo |
+| Research & Evidence | Roadmap opzionale | Aggiungere capacità autonome solo quando emerge un uso ripetuto |
+| Monitoring | Roadmap opzionale | Validare il bisogno prima di introdurre setup e automazioni dedicate |
 
 ## Versioni della Suite e release singole
 
@@ -89,6 +109,14 @@ Le versioni correnti delle cinque skill sono incluse nella [release della Suite 
 | [`define-marketing-challenge`](skills/define-marketing-challenge/) | v0.1.3 | Documento sintetico e verificabile della sfida. |
 | [`choose-marketing-direction`](skills/choose-marketing-direction/) | v0.2.2 | Confronto e scelta della direzione. |
 | [`define-marketing-mix`](skills/define-marketing-mix/) | v0.1.3 | Marketing mix su offerta, prezzo, distribuzione e comunicazione. |
+
+### Sorgenti Campaign Core non incluse nella beta.8
+
+| Skill | Versione su `main` | Stato |
+| --- | --- | --- |
+| [`design-campaign`](skills/design-campaign/) | v0.1.4 | Pronta come sorgente, con retest sintetico PASS |
+| [`campaign-review`](skills/campaign-review/) | v0.1.2 | Pronta come sorgente; conserva il forward test PASS e allinea il passaggio a `campaign-debrief` |
+| [`campaign-debrief`](skills/campaign-debrief/) | v0.1.6 | Pronta come sorgente, con suite comportamentale sintetica PASS |
 
 ## Cosa non devi aspettarti
 
@@ -109,7 +137,7 @@ La regola è semplice: **per una skill singola usa uno ZIP portabile; per tutte 
 
 ### Per Claude o ChatGPT: una skill alla volta
 
-La beta.8 pubblicata offre un archivio ZIP per ciascuna delle cinque skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Ogni archivio contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
+La beta.8 pubblicata offre un archivio ZIP per ciascuna delle cinque skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Le sorgenti del Campaign Core non sono ancora comprese in questi pacchetti. Ogni archivio pubblicato contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
 
 Scegli la skill che ti serve, caricala con il meccanismo di skill del tuo ambiente e avvia una nuova chat. Claude non usa l'Assistant incluso nella Suite OpenAI, quindi gli archivi portabili contengono soltanto le cinque skill specialistiche.
 

@@ -1,10 +1,10 @@
 ---
 artifact: campaign-core-blueprint
-version: 1.1
-status: bozza-di-progettazione
-last_reviewed: 2026-08-31
+version: 1.6
+status: sorgenti-pronte
+last_reviewed: 2026-09-01
 scope: "Campaign Core del Marketing Agent System"
-implementation_status: authoring-candidate
+implementation_status: source-ready
 ---
 
 # Campaign Core
@@ -42,7 +42,7 @@ La progettazione dettagliata della prima skill è separata in tre riferimenti:
 
 Questi documenti sono blueprint, non sorgente installabile della skill.
 
-La sorgente candidata [`design-campaign` v0.1.4](skills/design-campaign/) traduce il blueprint in una skill installabile con due riferimenti caricati progressivamente. La v0.1.3 è stata provata sulla guida Da Chat a Work con Luna high e Sol high. Sol ha evitato le domande superflue osservate con Luna; entrambi i test hanno però mostrato che termini interni come `contratto`, `architettura` e `gate` possono filtrare nell'interfaccia. La v0.1.4 introduce il lessico di marketing e management ed è installata localmente con parità verificata rispetto alla sorgente. Il retest indipendente Fabriloom del 31 agosto è PASS con zero hard fail e zero soft fail sulla prima risposta standalone; distribuzione pubblica e prove sugli altri passaggi restano separate.
+La sorgente [`design-campaign` v0.1.4](skills/design-campaign/) traduce il blueprint in una skill installabile con due riferimenti caricati progressivamente. La v0.1.3 è stata provata sulla guida Da Chat a Work con Luna high e Sol high. Sol ha evitato le domande superflue osservate con Luna; entrambi i test hanno però mostrato che termini interni come `contratto`, `architettura` e `gate` possono filtrare nell'interfaccia. La v0.1.4 introduce il lessico di marketing e management ed è installata localmente con parità verificata rispetto alla sorgente. Il retest indipendente Fabriloom del 31 agosto è PASS con zero hard fail e zero soft fail sulla prima risposta standalone. La skill è considerata pronta come sorgente; distribuzione pubblica e prove end-to-end restano separate.
 
 ## Fixture ed eval iniziali
 
@@ -54,9 +54,9 @@ Il [catalogo degli eval](evals/design-campaign/eval-catalog.md) definisce 29 con
 
 | Esigenza iniziale | Skill del core | Risultato ottenibile | Stato |
 |---|---|---|---|
-| «Voglio progettare una campagna» oppure «Abbiamo già una direzione: come la attiviamo?» | `design-campaign` | Campaign Spec approvabile, pronta per assegnazione e produzione | prima candidata |
-| «La campagna e gli asset sono davvero pronti?» | `campaign-review` | Review con esito, problemi bloccanti, correzioni e autorizzazioni mancanti | seconda candidata |
-| «Come è andata davvero e che cosa facciamo adesso?» | `campaign-debrief` | Lettura dei risultati con limiti, decisione consigliata e prossima verifica | terza candidata, sorgente v0.1.6 con suite comportamentale PASS |
+| «Voglio progettare una campagna» oppure «Abbiamo già una direzione: come la attiviamo?» | `design-campaign` | Campaign Spec approvabile, pronta per assegnazione e produzione | sorgente v0.1.4 pronta |
+| «La campagna e gli asset sono davvero pronti?» | `campaign-review` | Review con esito, problemi bloccanti, correzioni e autorizzazioni mancanti | sorgente v0.1.2 pronta |
+| «Come è andata davvero e che cosa facciamo adesso?» | `campaign-debrief` | Lettura dei risultati con limiti, decisione consigliata e prossima verifica | sorgente v0.1.6 pronta |
 
 Le tre skill condividono il fascicolo della campagna, ma possiedono decisioni e artefatti distinti. Non sono tre schermate obbligatorie e non devono essere eseguite quando il loro lavoro è già stato svolto e documentato in modo affidabile.
 
@@ -339,9 +339,9 @@ Nessuna regola stabile, identità o decisione approvata viene aggiornata automat
 
 La Campaign Spec può generare brief per i builder, ma non prescrive decisioni specialistiche come numero di slide, montaggio, gerarchia grafica, impaginazione o resa finale. Un asset già definito può andare direttamente al builder senza passare dal Campaign Core quando non appartiene a una campagna coordinata.
 
-## Primo vertical slice da costruire
+## Vertical slice end-to-end da validare
 
-Non conviene implementare contemporaneamente le tre skill. La prima candidata è `design-campaign`, perché crea il contratto che review e apprendimento dovranno verificare.
+Le tre skill sorgente sono ora implementate. Il prossimo passaggio non è aggiungere un altro modulo, ma verificare la catena completa, partendo da `design-campaign`, che crea il contratto poi usato da review e debrief.
 
 Il primo vertical slice deve partire da una richiesta standalone realistica, perché l'autonomia della skill è parte della proposta di valore:
 
@@ -389,7 +389,7 @@ Sono hard fail almeno:
 - salvataggio, pubblicazione, invio, spesa o configurazione senza l'approvazione richiesta;
 - aggiornamento automatico di Marketing Foundations o altri artefatti approvati.
 
-## Decisioni da validare prima dell'approvazione della skill
+## Decisioni da validare prima della distribuzione del Core
 
 1. **Granularità del fascicolo:** confermare un solo documento iniziale e creare review/learning solo quando esistono, evitando una document factory.
 2. **Budget:** verificare negli eval se ordine di grandezza, capacità e scenari bastano senza spingere la skill verso un media plan.
@@ -399,9 +399,11 @@ Sono hard fail almeno:
 
 ## Stato del lavoro
 
-Questo documento registra progettazione e stato del Campaign Core. Le sorgenti candidate non costituiscono approvazione dell'intero Core e non provano da sole installazione, caricamento nella sessione o funzionamento del workflow sul mercato.
+Questo documento registra progettazione e stato del Campaign Core. Le tre skill sono considerate pronte come sorgente, ma questo non costituisce approvazione del Core come prodotto distribuito e non prova da solo package, release, installazione, caricamento nella sessione o funzionamento del workflow sul mercato.
 
-La sorgente candidata `campaign-review` v0.1.2 è stata implementata separatamente da `design-campaign` sotto `skills/campaign-review/`. Include una reference per il contratto della review, fixture sintetiche e catalogo degli eval; la patch v0.1.2 aggiorna il passaggio post-lancio al nome ufficiale `campaign-debrief`. La presenza della sorgente o di un pacchetto candidato non equivale a installazione attiva, release pubblica o prova con marketer esterni.
+La sorgente `design-campaign` v0.1.4 è considerata pronta dopo installazione locale con parità verificata e retest indipendente PASS con zero hard e zero soft fail sulla prima risposta standalone. I passaggi successivi, l'intero artefatto e il workflow reale restano da verificare nel pilot end-to-end.
+
+La sorgente `campaign-review` v0.1.2 è considerata pronta ed è implementata separatamente sotto `skills/campaign-review/`. Include una reference per il contratto della review, fixture sintetiche e catalogo degli eval. Conserva il forward test indipendente PASS della v0.1.1; la patch v0.1.2 aggiorna soltanto il passaggio post-lancio al nome ufficiale `campaign-debrief`. La presenza della sorgente non equivale a installazione attiva, release pubblica o prova con marketer esterni.
 
 La sorgente `campaign-debrief` v0.1.6 è considerata pronta ed è sotto `skills/campaign-debrief/`. Include una guida alla sufficienza dei dati, il template unico di `campaign-learning.md` e una fixture sintetica longitudinale. Dopo il PASS collegato della v0.1.3, i test standalone v0.1.3-v0.1.5 hanno reso espliciti distinzione tra controllo intermedio e riesame paid, coorte realmente osservata, disponibilità della definizione, livelli del risultato e routing a `design-campaign`. La v0.1.6 supera la prima risposta standalone e il follow-up con zero hard e zero soft fail; la regressione collegata resta PASS con tre soft fail. Persistenza isolata e confronto con tre baseline sono completati. Lo stato pronto riguarda la sorgente: package, release, installazione e validazione con marketer reali restano separati.
 
@@ -409,6 +411,7 @@ La sorgente `define-marketing-mix` v0.1.4 usa l'handoff `design-campaign`. Quest
 
 ## Registro modifiche
 
+- v1.6, 2026-09-01: `design-campaign` v0.1.4 e `campaign-review` v0.1.2 promosse a pronte come sorgente; l'intera catena Campaign Core è ora source-ready, mentre distribuzione e pilot restano gate separati.
 - v1.5, 2026-09-01: `campaign-debrief` v0.1.6 considerata pronta come sorgente; package, release, installazione e validazione di mercato restano stati separati.
 - v1.4, 2026-08-31: completati standalone, follow-up, confronto generalista/workflow proxy/Analytics, persistenza isolata e regressione collegata di `campaign-debrief`; candidata aggiornata a v0.1.6 e suite comportamentale PASS.
 - v1.3, 2026-08-31: integrata `campaign-review` e fissato `campaign-debrief` come nome ufficiale del terzo modulo; i FAIL indipendenti v0.1.0-v0.1.2 portano alla candidata v0.1.3, che supera il retest con zero hard fail e tre soft fail; aggiornato anche l'handoff della review nella candidata v0.1.2.
