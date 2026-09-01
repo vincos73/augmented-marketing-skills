@@ -2,7 +2,7 @@
 name: campaign-review
 description: "Verifica prima del lancio una campagna già progettata, controllando coerenza strategica, integrità dei claim e prontezza operativa. Usala per ottenere un esito motivato, non per progettare campagne, produrre asset o pubblicare."
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
 ---
 
 # Revisionare una campagna
@@ -137,6 +137,26 @@ Quando la lettura è completa, mostra una revisione manageriale compatta con:
 5. condizioni per chiudere la review e cosa non è stato verificato;
 6. distinzione netta tra approvazione della review, salvataggio e azioni esterne.
 
+Se il prossimo passaggio dichiarato è `campaign-debrief`, aggiungi anche una **Baseline decisionale per il debrief** compatta. Non duplicare la Campaign Spec e non interpretare risultati. Conserva soltanto il minimo necessario perché il debrief possa confrontare atteso, eseguito e osservato:
+
+- identità, versione e stato della Campaign Spec, anche quando esiste soltanto come contenuto conversazionale;
+- obiettivo o metrica decisionale, definizione operativa, target e finestra;
+- cutoff e maturità del dato, quando rilevanti;
+- baseline o comparatore e relativo stato probatorio;
+- asset, versione e canale esatti revisionati;
+- esito della review e rilievi ancora aperti;
+- decisione di autorizzazione e osservazione dell'esecuzione come stati separati;
+- riferimenti alle evidenze e aspetti ancora sconosciuti.
+
+Mantieni questo passaggio interno compatto e strutturato, mentre la parte rivolta al responsabile resta marketer-friendly. Se un campo non è disponibile, usa `missing` o `unknown`: non ricostruirlo da risultati, benchmark, obiettivi vicini o formulazioni plausibili. Una regola di successo qualitativa, un cutoff o una condizione di maturità devono essere conservati fedelmente, non ridotti a un numero più semplice.
+
+Distingui sempre due livelli di confronto:
+
+- **Confronto descrittivo con target o regola decisionale:** segnalo come `predisposto` quando target o regola, definizione operativa e finestra o maturità sono disponibili. Diventa eseguibile nel debrief quando arrivano risultati osservati sufficientemente maturi. L'assenza di baseline, comparatore o controllo non rende indisponibile questo confronto descrittivo.
+- **Confronto incrementale, causale o controfattuale:** resta `non disponibile` quando mancano baseline comparabile, comparatore o controllo adeguato. Non suggerire effetti incrementali, causalità o ROI da un semplice scarto rispetto al target.
+
+Se manca la Campaign Spec o un'evidenza equivalente sufficiente, indica separatamente quali confronti non possono essere predisposti e quali dati servono. Non usare una generica etichetta `confronto non disponibile` quando il confronto descrittivo con il target è invece predisposto.
+
 Usa [il contratto della review](references/campaign-review-contract.md) per lo schema completo soltanto quando devi produrre, aggiornare o verificare `campaign-review.md`. Il template è modulare: non compilare sezioni vuote e non duplicare la Campaign Spec o il QA del builder.
 
 Il documento, quando richiesto e autorizzato, appartiene al fascicolo della campagna:
@@ -153,6 +173,6 @@ Durante test, simulazioni ed eval non scrivere nei percorsi canonici, anche se i
 
 ## Concludere senza eseguire
 
-Se l'utente porta risultati dopo l'esecuzione, trattali come dati osservati soltanto per chiarire lo stato della review. Non interpretare performance, non attribuire cause e non proporre aggiornamenti al playbook: indirizza quel lavoro a `campaign-debrief` quando disponibile.
+Se l'utente porta risultati dopo l'esecuzione, trattali come dati osservati soltanto per chiarire lo stato della review. Non interpretare performance, non attribuire cause e non proporre aggiornamenti al playbook: indirizza quel lavoro a `campaign-debrief` quando disponibile. Quando effettui quel passaggio, includi la Baseline decisionale descritta sopra, ma non anticipare il confronto.
 
 Chiudi indicando esito, rilievi aperti, responsabili, prove mancanti e prossimo passaggio minimo. Puoi proporre la skill o il team competente per una correzione, ma non avviare automaticamente `design-campaign`, builder, invii, pubblicazioni, spesa, configurazioni o `campaign-debrief`.

@@ -1,0 +1,28 @@
+{
+  "name": "lineage completa promossa a asset v0 mentre il file resta v1",
+  "mutations": [
+    {
+      "path": "artifacts.assets",
+      "value": [
+        {
+          "ref": "ASSET-FAB-ERS-CAROUSEL@0",
+          "path": "fixture/asset-candidate-v1.md",
+          "status": "candidato",
+          "campaign_spec_ref": "SPEC-FAB-ERS@1",
+          "testimonial_anonymous": true,
+          "provided_by_fixture": true,
+          "sha256": "b551a4b1cb5c0849e56234c863b393903c805a68fca28a1c485e12de1c04d190"
+        }
+      ]
+    },
+    {"path": "artifacts.reviews.0.asset_ref", "value": "ASSET-FAB-ERS-CAROUSEL@0"},
+    {"path": "artifacts.reviews.0.asset_sha256", "value": "b551a4b1cb5c0849e56234c863b393903c805a68fca28a1c485e12de1c04d190"},
+    {"path": "artifacts.reviews.1.asset_ref", "value": "ASSET-FAB-ERS-CAROUSEL@0"},
+    {"path": "artifacts.reviews.1.resolutions.0.observed_asset_ref", "value": "ASSET-FAB-ERS-CAROUSEL@0"},
+    {"path": "artifacts.authorization.asset_ref", "value": "ASSET-FAB-ERS-CAROUSEL@0"},
+    {"path": "artifacts.execution.asset_ref", "value": "ASSET-FAB-ERS-CAROUSEL@0"},
+    {"path": "artifacts.debrief.asset_ref", "value": "ASSET-FAB-ERS-CAROUSEL@0"}
+  ],
+  "check_files": true,
+  "expected_error": "versione del file"
+}

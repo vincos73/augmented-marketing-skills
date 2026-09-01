@@ -1,0 +1,10 @@
+{
+  "schema_version": "2.0.0",
+  "identity": {"id": "FABRILOOM-CONTEXT", "state": "confirmed_in_chat", "version": "chat-v1", "source_ref": "/identity"},
+  "scenario": {"id": "FABRILOOM-CHAT-EMPTY", "profile": "chat-v1", "version": "chat-v1", "evidence_mode": "synthetic_fixture", "source_scope": "conversation only", "source_ref": "/scenario"},
+  "shared_invariant_ids": ["speed-60", "speed-42-conditional", "pilot-quote-01", "operations-total-sprints", "operations-weekly-starts", "sales-weekly-qualified-calls", "TRK-FAB-ERS-OWNED@1", "paid-media"],
+  "artifacts": [],
+  "invariants": [],
+  "authorization": {"decisions": [], "observations": []},
+  "lineage": {"edges": []}
+}

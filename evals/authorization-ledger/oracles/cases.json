@@ -1,0 +1,9 @@
+{
+  "oracle_version": "2.0.0",
+  "cases": [
+    {"id": "chat-v1-valid", "path": "../fixtures/fabriloom-valid/ledger.json", "expected": "pass", "expected_rule_ids": []},
+    {"id": "persistent-chain-valid", "path": "../fixtures/fabriloom-valid/persistent-ledger.json", "expected": "pass", "expected_rule_ids": []},
+    {"id": "intern-role-rejected", "path": "../fixtures/invalid/intern-role.json", "expected": "fail", "expected_rule_ids": ["L013"]},
+    {"id": "fake-digest-rejected", "path": "../fixtures/invalid/fake-digest.json", "expected": "fail", "expected_rule_ids": ["L008", "L009"]}
+  ]
+}

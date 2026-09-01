@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "packages": [
+    {
+      "id": "e2e-conversation",
+      "allowed": [
+        "evals/end-to-end/fabriloom-evidence-readiness/forward-test.md",
+        "evals/end-to-end/fabriloom-evidence-readiness/materials.md",
+        "evals/end-to-end/fabriloom-evidence-readiness/conversation-script.md",
+        "evals/end-to-end/fabriloom-evidence-readiness/handoff-contract.md"
+      ],
+      "forbidden": ["expected-run.md", "isolation.md", "scripts/check_fixture.py", "oracles"]
+    },
+    {
+      "id": "lineage-review-v0",
+      "allowed": [
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/asset-candidate-v0.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/operations-readiness.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/requests/review-v0.md"
+      ],
+      "forbidden": ["asset-candidate-v1.md", "oracles"]
+    },
+    {
+      "id": "lineage-review-v1",
+      "allowed": [
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/asset-candidate-v1.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/review-v1-blocked.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/operations-readiness.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/requests/review-v1.md"
+      ],
+      "forbidden": ["oracles"]
+    },
+    {
+      "id": "lineage-debrief",
+      "allowed": [
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/review-v2-approved.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/publication-authorization.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/execution-log.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/fixture/results.md",
+        "evals/campaign-lineage/fabriloom-evidence-readiness/requests/debrief.md"
+      ],
+      "forbidden": ["asset-candidate-v0.md", "review-v1-blocked.md", "oracles"]
+    },
+    {
+      "id": "raw-to-snapshot-run",
+      "allowed": ["evals/raw-to-snapshot/fixtures/fabriloom-valid/raw-transcript.json"],
+      "forbidden": ["snapshot.json", "expected-run.md", "oracles"]
+    }
+  ]
+}

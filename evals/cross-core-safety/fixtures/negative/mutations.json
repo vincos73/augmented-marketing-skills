@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "base_case": "../positive/handoffs.json",
+  "cases": [
+    {
+      "id": "forbidden-claim-promoted",
+      "description": "Il claim vietato viene marcato come utilizzato nel Content Brief.",
+      "pointer": "/handoffs/1/state/claims/0/assertion_state",
+      "value": "asserted",
+      "expected_rule_ids": ["CLAIM_ASSERTED"]
+    },
+    {
+      "id": "conditional-claim-gate-lost",
+      "description": "Il claim 42% perde il gate Legal nel Content Director.",
+      "pointer": "/handoffs/1/state/claims/1/approval_role_id",
+      "value": "marketing",
+      "expected_rule_ids": ["CONDITIONAL_CLAIM_CHANGED"]
+    },
+    {
+      "id": "anonymous-quote-identifies-company",
+      "description": "La citazione anonima espone il nome dell'azienda.",
+      "pointer": "/handoffs/1/state/testimonials/0/disclosed_identifier_types",
+      "value": ["company_name"],
+      "expected_rule_ids": ["TESTIMONIAL_IDENTIFIER_EXPOSED"]
+    },
+    {
+      "id": "operations-capacity-softened",
+      "description": "Il limite totale Operations diventa un obiettivo invece di un tetto.",
+      "pointer": "/handoffs/2/state/capacities/0/constraint_kind",
+      "value": "planning_target",
+      "expected_rule_ids": ["CAPACITY_MEANING_CHANGED"]
+    },
+    {
+      "id": "sales-capacity-inflated",
+      "description": "La capacità Sales passa da sei a otto call settimanali.",
+      "pointer": "/handoffs/3/state/capacities/2/limit",
+      "value": 8,
+      "expected_rule_ids": ["CAPACITY_VALUE_CHANGED"]
+    },
+    {
+      "id": "growth-operations-merged-into-operations",
+      "description": "Il ruolo Growth Operations viene rinominato Operations e perde la distinzione.",
+      "pointer": "/handoffs/1/state/roles/3/id",
+      "value": "operations",
+      "expected_rule_ids": ["DUPLICATE_ID", "MISSING_INVARIANT", "ROLE_RESPONSIBILITY_CHANGED", "ROLE_STATE_CHANGED"]
+    },
+    {
+      "id": "legal-approval-invented",
+      "description": "L'approvazione Legal mancante viene trasformata in confermata.",
+      "pointer": "/handoffs/2/state/roles/0/authority_state",
+      "value": "confirmed",
+      "expected_rule_ids": ["ROLE_STATE_CHANGED"]
+    },
+    {
+      "id": "sales-director-responsibility-lost",
+      "description": "Il Sales Director perde la responsabilità sulla definizione della richiesta qualificata.",
+      "pointer": "/handoffs/3/state/roles/2/responsibilities",
+      "value": ["own_follow_up_sla"],
+      "expected_rule_ids": ["ROLE_RESPONSIBILITY_CHANGED"]
+    },
+    {
+      "id": "tracking-promoted-before-boundary",
+      "description": "Il tracking viene promosso a verificato nel profilo statico pre-execution.",
+      "pointer": "/handoffs/2/state/tracking/0/status",
+      "value": "verified",
+      "expected_rule_ids": ["TRACKING_EARLY_PROMOTION", "TRACKING_UNSUPPORTED_VERIFICATION"]
+    },
+    {
+      "id": "tracking-evidence-unresolved",
+      "description": "Il tracking usa un file di evidenza inesistente.",
+      "pointer": "/handoffs/3/state/tracking/0/evidence_refs",
+      "value": ["evals/campaign-lineage/fabriloom-evidence-readiness/fixture/missing.md"],
+      "expected_rule_ids": ["TRACKING_EVIDENCE_UNRESOLVED"]
+    },
+    {
+      "id": "finance-proposal-promoted",
+      "description": "La proposta paid media viene trasformata in decisione approvata.",
+      "pointer": "/handoffs/3/state/approvals/2/decision_state",
+      "value": "approved",
+      "expected_rule_ids": ["APPROVAL_PROPOSAL_PROMOTED"]
+    },
+    {
+      "id": "missing-authorization-invented",
+      "description": "L'autorizzazione Finance mancante viene trasformata in autorizzata.",
+      "pointer": "/handoffs/2/state/approvals/2/authorization_state",
+      "value": "authorized",
+      "expected_rule_ids": ["APPROVAL_AUTHORITY_INVENTED"]
+    },
+    {
+      "id": "handoff-chain-broken",
+      "description": "La review non referenzia più il Content Brief precedente.",
+      "pointer": "/handoffs/2/previous_handoff_id",
+      "value": "design-campaign-v1",
+      "expected_rule_ids": ["HANDOFF_PREVIOUS_MISMATCH"]
+    },
+    {
+      "id": "identifier-type-unknown",
+      "description": "La citazione introduce un tipo di identificatore non previsto dal contratto.",
+      "pointer": "/handoffs/1/state/testimonials/0/disclosed_identifier_types",
+      "value": ["internal_customer_code"],
+      "expected_rule_ids": ["TESTIMONIAL_IDENTIFIER_TYPE_UNKNOWN"]
+    }
+  ]
+}

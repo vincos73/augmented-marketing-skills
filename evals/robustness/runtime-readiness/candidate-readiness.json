@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0.0",
+  "report_id": "ams-next-beta-runtime-readiness-2026-09-01",
+  "as_of": "2026-09-01",
+  "candidate": {
+    "candidate_id": "ams-nine-skill-candidate-campaign-review-v0.1.3",
+    "artifact_kind": "source_candidate",
+    "source_base_commit": "561dc936a011ac7b8b3842a1897572fe5abd1ad1",
+    "suite_base_version": "0.1.0-beta.9",
+    "plugin_version_changed": false,
+    "campaign_review_version": "0.1.3",
+    "candidate_manifest_ref": "evals/behavioral-provenance/runtime-allowlist.json",
+    "package_state": "not_built",
+    "package": null
+  },
+  "evidence_records": [
+    {
+      "id": "EV-STATIC-CANDIDATE-REVIEW-013",
+      "axis": "source",
+      "artifact": {
+        "id": "ams-nine-skill-candidate-campaign-review-v0.1.3",
+        "kind": "source_candidate",
+        "source_candidate_id": null
+      },
+      "surface": null,
+      "state": "static_only",
+      "outcome": "pass",
+      "prerequisite_record_ids": [],
+      "evidence": [
+        {
+          "scope": "repository",
+          "kind": "static_regression",
+          "ref": "evals/campaign-review/baseline-decision-capsule/cases.json",
+          "verification": "static_verified"
+        },
+        {
+          "scope": "repository",
+          "kind": "static_structure",
+          "ref": "evals/behavioral-provenance/runtime-allowlist.json",
+          "verification": "static_verified"
+        }
+      ],
+      "observations": {
+        "campaign_review_version": "0.1.3",
+        "static_suite_pass": true
+      },
+      "limitations": [
+        "La validazione statica non prova comportamento, installazione, caricamento runtime o pilot."
+      ]
+    },
+    {
+      "id": "EV-FORWARD-REVIEW-DEBRIEF-COMPACTION",
+      "axis": "behavior",
+      "artifact": {
+        "id": "ams-nine-skill-candidate-campaign-review-v0.1.3",
+        "kind": "source_candidate",
+        "source_candidate_id": null
+      },
+      "surface": "codex-desktop",
+      "state": "observed_unverified",
+      "outcome": "pass",
+      "prerequisite_record_ids": [
+        "EV-STATIC-CANDIDATE-REVIEW-013"
+      ],
+      "evidence": [
+        {
+          "scope": "external",
+          "kind": "manual_observation",
+          "ref": "external://operator-observation/review-debrief-compaction",
+          "verification": "unverified"
+        }
+      ],
+      "observations": {
+        "scenario": "review_to_debrief_compaction",
+        "independent_forward_test": true,
+        "context_compaction_observed": true,
+        "reviewer_and_debriefer_separate": true,
+        "observed_value": 7,
+        "target_value": 20,
+        "gap_to_target": 13,
+        "causal_claim_made": false
+      },
+      "limitations": [
+        "Manca una receipt host completa e verificabile.",
+        "Non prova installazione o caricamento della candidata.",
+        "Non è un run completo a nove skill."
+      ]
+    },
+    {
+      "id": "EV-BETA9-NINE-SKILL-CODEX-DESKTOP",
+      "axis": "behavior",
+      "artifact": {
+        "id": "augmented-marketing-suite-0.1.0-beta.9",
+        "kind": "released_package",
+        "source_candidate_id": null
+      },
+      "surface": "codex-desktop",
+      "state": "observed_unverified",
+      "outcome": "issue_observed",
+      "prerequisite_record_ids": [],
+      "evidence": [
+        {
+          "scope": "external",
+          "kind": "manual_observation",
+          "ref": "external://operator-observation/beta9-nine-skill-codex-desktop",
+          "verification": "unverified"
+        }
+      ],
+      "observations": {
+        "scenario": "beta9_nine_skill_manual_run",
+        "skill_count": 9,
+        "objective_loss_observed": true,
+        "behavior_pass_normalized": false
+      },
+      "limitations": [
+        "Il run riguarda la beta.9, non la candidata corrente.",
+        "Non è normalizzato in receipt o BEHAVIOR_PASS.",
+        "Non costituisce PASS comportamentale della candidata."
+      ]
+    }
+  ],
+  "runtime_surfaces": [
+    {
+      "id": "codex-desktop",
+      "display_name": "Codex Desktop",
+      "artifact": {
+        "id": "ams-nine-skill-candidate-campaign-review-v0.1.3",
+        "kind": "source_candidate",
+        "source_candidate_id": null
+      },
+      "state": "observed_unverified",
+      "outcome": "pass",
+      "evidence_record_ids": [
+        "EV-FORWARD-REVIEW-DEBRIEF-COMPACTION"
+      ],
+      "candidate_installed_verified": false,
+      "runtime_loaded_verified": false,
+      "limitations": [
+        "Il forward osservato non dimostra installazione o caricamento runtime."
+      ]
+    },
+    {
+      "id": "codex-cli",
+      "display_name": "Codex CLI",
+      "artifact": {
+        "id": "ams-nine-skill-candidate-campaign-review-v0.1.3",
+        "kind": "source_candidate",
+        "source_candidate_id": null
+      },
+      "state": "not_run",
+      "outcome": "not_run",
+      "evidence_record_ids": [],
+      "candidate_installed_verified": false,
+      "runtime_loaded_verified": false,
+      "limitations": [
+        "Nessuna prova pertinente alla candidata corrente."
+      ]
+    },
+    {
+      "id": "claude-local",
+      "display_name": "Claude Code/Desktop locale",
+      "artifact": {
+        "id": "ams-nine-skill-candidate-campaign-review-v0.1.3",
+        "kind": "source_candidate",
+        "source_candidate_id": null
+      },
+      "state": "not_run",
+      "outcome": "not_run",
+      "evidence_record_ids": [],
+      "candidate_installed_verified": false,
+      "runtime_loaded_verified": false,
+      "limitations": [
+        "Le osservazioni storiche su versioni precedenti non vengono promosse alla candidata corrente."
+      ]
+    },
+    {
+      "id": "claude-cloud",
+      "display_name": "Claude Cloud",
+      "artifact": {
+        "id": "ams-nine-skill-candidate-campaign-review-v0.1.3",
+        "kind": "source_candidate",
+        "source_candidate_id": null
+      },
+      "state": "not_run",
+      "outcome": "not_run",
+      "evidence_record_ids": [],
+      "candidate_installed_verified": false,
+      "runtime_loaded_verified": false,
+      "limitations": [
+        "Le osservazioni storiche su cataloghi cloud differenti non provano la candidata corrente."
+      ]
+    }
+  ],
+  "pilot": {
+    "state": "not_run",
+    "outcome": "not_run",
+    "artifact_id": "ams-nine-skill-candidate-campaign-review-v0.1.3",
+    "artifact_kind": "source_candidate",
+    "source_candidate_id": null,
+    "surface_id": null,
+    "evidence_record_ids": [],
+    "prerequisite_gate_ids": [
+      "nine-skill-candidate-provenance",
+      "no-open-p0-p1",
+      "package-parity-checksum"
+    ],
+    "real_marketer_verified": false,
+    "owner_role": "pilot owner"
+  },
+  "candidate_readiness": {
+    "target": "next_beta_candidate",
+    "required_gate_ids": [
+      "static-suite",
+      "compacted-forward",
+      "nine-skill-candidate-provenance",
+      "no-open-p0-p1",
+      "package-parity-checksum"
+    ],
+    "gates": [
+      {
+        "id": "static-suite",
+        "state": "satisfied",
+        "evidence_record_ids": [
+          "EV-STATIC-CANDIDATE-REVIEW-013"
+        ],
+        "owner_role": "quality owner"
+      },
+      {
+        "id": "compacted-forward",
+        "state": "satisfied",
+        "evidence_record_ids": [
+          "EV-FORWARD-REVIEW-DEBRIEF-COMPACTION"
+        ],
+        "owner_role": "quality owner"
+      },
+      {
+        "id": "nine-skill-candidate-provenance",
+        "state": "pending",
+        "evidence_record_ids": [],
+        "owner_role": "runtime validation owner"
+      },
+      {
+        "id": "no-open-p0-p1",
+        "state": "pending",
+        "evidence_record_ids": [],
+        "owner_role": "quality owner"
+      },
+      {
+        "id": "package-parity-checksum",
+        "state": "pending",
+        "evidence_record_ids": [],
+        "owner_role": "release owner"
+      }
+    ],
+    "ready": false,
+    "next_step": {
+      "action": "Catturare un run end-to-end delle nove skill candidate su Codex Desktop con provenance host verificabile e normalizzarlo fino a BEHAVIOR_PASS.",
+      "owner_role": "runtime validation owner",
+      "expected_evidence": "Capture manifest, receipt, raw e snapshot esterni verificati dal runner."
+    }
+  },
+  "later_promotion": {
+    "target": "cross_runtime_and_real_pilot",
+    "gates": [
+      {
+        "id": "cross-runtime-refresh",
+        "state": "pending",
+        "required_surface_ids": [
+          "codex-desktop",
+          "codex-cli",
+          "claude-local",
+          "claude-cloud"
+        ],
+        "owner_role": "runtime validation owner"
+      },
+      {
+        "id": "real-marketer-pilot",
+        "state": "pending",
+        "required_surface_ids": [],
+        "owner_role": "pilot owner"
+      }
+    ],
+    "ready": false
+  }
+}

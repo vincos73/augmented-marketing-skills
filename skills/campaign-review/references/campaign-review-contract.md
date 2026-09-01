@@ -68,6 +68,29 @@ superseded_by: null
 - **Autorizzazione al salvataggio:**
 - **Azioni esterne:** non autorizzate da questa review; verificare separatamente responsabile, condizioni ed evidenza.
 
+## Baseline decisionale per il debrief
+
+Compila questo modulo soltanto quando il prossimo passaggio è `campaign-debrief`. Mantienilo compatto e non duplicare la Campaign Spec.
+
+- **Campaign Spec:** id; versione; stato (`bozza`, `approvata`, `confirmed_in_chat`, `missing` o altro stato osservato)
+- **Obiettivo o metrica decisionale:**
+- **Definizione operativa:**
+- **Target:**
+- **Finestra:**
+- **Cutoff:**
+- **Maturità del dato:**
+- **Baseline o comparatore:** valore o regola; stato probatorio
+- **Asset revisionati:** id; versione; canale
+- **Esito e rilievi aperti:**
+- **Decisione di autorizzazione:** stato; evidenza
+- **Esecuzione osservata:** stato; evidenza
+- **Riferimenti alle evidenze:**
+- **Unknowns:**
+- **Confronto descrittivo con target o regola:** predisposto / non disponibile; dati già disponibili; dati ancora richiesti
+- **Confronto incrementale, causale o controfattuale:** predisposto / non disponibile; motivo e stato di baseline, comparatore o controllo
+
+Il confronto descrittivo è predisposto quando sono disponibili target o regola, definizione operativa e finestra o maturità. Sarà eseguito da `campaign-debrief` soltanto dopo l'arrivo di risultati osservati maturi. Una baseline mancante non blocca questo confronto. Il confronto incrementale, causale o controfattuale richiede invece una base comparabile adeguata e non può essere dedotto dallo scarto rispetto al target.
+
 ## Registro modifiche
 
 - v1 (YYYY-MM-DD): prima review.
@@ -110,6 +133,7 @@ La review leggera può consolidare le tre lenti in una sintesi e usare una tabel
 - La prima review parte da `version: 1` e `status: bozza`.
 - Lo stato del documento può diventare `approvata` soltanto dopo approvazione del contenuto e autorizzazione separata al salvataggio; `approvata` non è un quinto esito della review.
 - Una modifica a esito, scope, azione, Campaign Spec di riferimento o rilievo materiale incrementa la versione.
+- Una modifica a target, definizione operativa, finestra, cutoff, maturità o baseline trasferiti al debrief è materiale e incrementa la versione.
 - La chiusura o riapertura di un rilievo della stessa review aggiorna il registro e richiede una nuova approvazione quando cambia l'esito.
 - La review non modifica Campaign Spec, Marketing Foundations, asset, CRM, account, tracking o altri sistemi.
 - Durante test, simulazioni ed eval gli output restano fuori dal percorso canonico.

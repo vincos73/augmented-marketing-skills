@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "profile": "nine-skill-minimum-v1",
+  "metric": "richieste qualificate",
+  "target": 20,
+  "result": 7,
+  "tracking_verified_min_sequence": 6,
+  "shared_invariant_ids": [
+    "campaign-target",
+    "campaign-result",
+    "paid-media",
+    "tracking-state",
+    "execution-state",
+    "causal-attribution",
+    "roi-state"
+  ]
+}

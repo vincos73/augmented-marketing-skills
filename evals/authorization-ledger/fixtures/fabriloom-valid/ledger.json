@@ -1,0 +1,56 @@
+{
+  "schema_version": "2.0.0",
+  "ledger_id": "fabriloom-chat-v1",
+  "profile": "chat-v1",
+  "identity": {"id": "SPEC-FAB-ERS", "version": "chat-v1", "state": "confirmed_in_chat"},
+  "shared_invariant_ids": ["speed-60", "speed-42-conditional", "pilot-quote-01", "operations-total-sprints", "operations-weekly-starts", "sales-weekly-qualified-calls", "TRK-FAB-ERS-OWNED@1", "paid-media"],
+  "role_action_matrix": {
+    "approve_content": ["Marketing Director"],
+    "write_file": ["Repository Maintainer"],
+    "install": ["Runtime Administrator"],
+    "execute": ["Campaign Operator"]
+  },
+  "evaluation_context": {"mode": "simulation", "fixture": "design-campaign/fabriloom-standalone", "generated_at": "2026-09-01T09:00:00Z"},
+  "records": [
+    {
+      "id": "fabriloom-content", "transition": "content_approval",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": null, "digest": null},
+      "version": {"kind": "conversational", "value": "chat-v1"},
+      "scope": {"actions": ["approve_content"], "targets": ["SPEC-FAB-ERS chat-v1"], "exclusions": ["write_file", "install", "execute"]},
+      "decision": {"status": "approved", "mode": "simulated", "basis": {"kind": "simulated", "source_entry_id": null, "summary": "Contenuto approvato nella conversazione sintetica."}},
+      "authority": {"status": "confirmed", "role": "Marketing Director"},
+      "observation": {"subject": "decision", "status": "observed", "occurred_at": "2026-09-01T09:00:00Z", "evidence": [{"kind": "message", "mode": "simulated", "ref": "fabriloom-chat-v1/content-approval", "summary": "Decisione di contenuto osservata nella fixture."}]},
+      "recorded_at": "2026-09-01T09:00:00Z", "dependencies": [], "notes": ["Nessun artefatto persistente creato."]
+    },
+    {
+      "id": "fabriloom-save", "transition": "saving",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": null, "digest": null},
+      "version": {"kind": "conversational", "value": "chat-v1"},
+      "scope": {"actions": ["write_file"], "targets": ["SPEC-FAB-ERS"], "exclusions": ["install", "execute"]},
+      "decision": {"status": "denied", "mode": "simulated", "basis": {"kind": "simulated", "source_entry_id": null, "summary": "La fixture nega il salvataggio canonico."}},
+      "authority": {"status": "confirmed", "role": "Repository Maintainer"},
+      "observation": {"subject": "action", "status": "not_observed", "occurred_at": null, "evidence": [{"kind": "message", "mode": "simulated", "ref": "fabriloom-chat-v1/save-denied", "summary": "Nessun file creato."}]},
+      "recorded_at": "2026-09-01T09:00:01Z", "dependencies": ["fabriloom-content"], "notes": []
+    },
+    {
+      "id": "fabriloom-install", "transition": "installation",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": null, "digest": null},
+      "version": {"kind": "conversational", "value": "chat-v1"},
+      "scope": {"actions": ["install"], "targets": ["SPEC-FAB-ERS"], "exclusions": ["execute"]},
+      "decision": {"status": "not_requested", "mode": "not_applicable", "basis": {"kind": "none", "source_entry_id": null, "summary": "Installazione non richiesta."}},
+      "authority": {"status": "to_confirm", "role": "Runtime Administrator"},
+      "observation": {"subject": "action", "status": "not_observed", "occurred_at": null, "evidence": []},
+      "recorded_at": "2026-09-01T09:00:02Z", "dependencies": ["fabriloom-save"], "notes": []
+    },
+    {
+      "id": "fabriloom-execute", "transition": "execution",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": null, "digest": null},
+      "version": {"kind": "conversational", "value": "chat-v1"},
+      "scope": {"actions": ["execute"], "targets": ["SPEC-FAB-ERS"], "exclusions": []},
+      "decision": {"status": "denied", "mode": "simulated", "basis": {"kind": "simulated", "source_entry_id": null, "summary": "La fixture nega produzione e pubblicazione."}},
+      "authority": {"status": "confirmed", "role": "Campaign Operator"},
+      "observation": {"subject": "action", "status": "not_observed", "occurred_at": null, "evidence": [{"kind": "message", "mode": "simulated", "ref": "fabriloom-chat-v1/execution-denied", "summary": "Nessuna azione esterna osservata."}]},
+      "recorded_at": "2026-09-01T09:00:03Z", "dependencies": ["fabriloom-content", "fabriloom-save", "fabriloom-install"], "notes": []
+    }
+  ]
+}

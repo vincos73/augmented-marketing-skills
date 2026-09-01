@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "boundary_ref": "FABRILOOM-ERS-BRIDGE@1",
+  "boundary_kind": "static_evidence_boundary",
+  "source_profile": "chat-v1",
+  "target_profile": "integrated-postexecution-v1",
+  "source_scenario_id": "FABRILOOM-ERS-PREEXEC-STATIC-V1",
+  "target_scenario_id": "FABRILOOM-ERS-INTEGRATED-POSTEXEC-V1",
+  "skills": [
+    {"sequence": 1, "skill": "setup-business-context", "evidence": "../../end-to-end/fabriloom-evidence-readiness/conversation-script.md"},
+    {"sequence": 2, "skill": "setup-marketing-system", "evidence": "../../end-to-end/fabriloom-evidence-readiness/conversation-script.md"},
+    {"sequence": 3, "skill": "define-marketing-challenge", "evidence": "../../end-to-end/fabriloom-evidence-readiness/conversation-script.md"},
+    {"sequence": 4, "skill": "choose-marketing-direction", "evidence": "../../end-to-end/fabriloom-evidence-readiness/conversation-script.md"},
+    {"sequence": 5, "skill": "define-marketing-mix", "evidence": "../../end-to-end/fabriloom-evidence-readiness/conversation-script.md"},
+    {"sequence": 6, "skill": "design-campaign", "evidence": "../../campaign-lineage/fabriloom-evidence-readiness/fixture/campaign-spec.md"},
+    {"sequence": 7, "skill": "content-director", "evidence": "../../campaign-lineage/fabriloom-evidence-readiness/fixture/asset-candidate-v1.md"},
+    {"sequence": 8, "skill": "campaign-review", "evidence": "../../campaign-lineage/fabriloom-evidence-readiness/fixture/review-v2-approved.md"},
+    {"sequence": 9, "skill": "campaign-debrief", "evidence": "../../campaign-lineage/fabriloom-evidence-readiness/fixture/debrief-actual.md"}
+  ],
+  "source_terminal_state": {"conversation_version": "chat-v1", "content_state": "confirmed_in_chat", "canonical_save": "denied", "execution": "denied", "tracking_state": "unverified"},
+  "target_entrypoint": {
+    "campaign_spec_ref": "SPEC-FAB-ERS@1",
+    "asset_ref": "ASSET-FAB-ERS-CAROUSEL@1",
+    "review_ref": "REVIEW-FAB-ERS-PRELAUNCH@2",
+    "authorization_ref": "AUTH-FAB-ERS-ORGANIC@1",
+    "execution_ref": "EXEC-FAB-ERS@1",
+    "results_ref": "RESULTS-FAB-ERS@1",
+    "debrief_ref": "DEBRIEF-FAB-ERS@1"
+  },
+  "boundary_observation": {
+    "id": "BRIDGE-OBS-01",
+    "kind": "static_evidence_boundary",
+    "status": "observed",
+    "evidence": ["../../end-to-end/fabriloom-evidence-readiness/conversation-script.md", "../../campaign-lineage/fabriloom-evidence-readiness/lineage-manifest.json", "../../campaign-lineage/fabriloom-evidence-readiness/fixture/operations-readiness.md"],
+    "assertion": "Il profilo persistente è una fixture distinta e non deriva da salvataggio o autorizzazione del profilo chat-v1."
+  },
+  "guards": {"source_to_target_requires_new_evidence": true, "implicit_promotion": "forbidden", "behavioral_run_claim": "not_observed", "runtime_claim": "not_observed", "pilot_claim": "not_observed"}
+}

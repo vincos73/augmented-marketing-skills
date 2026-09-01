@@ -1,0 +1,72 @@
+{
+  "schema_version": "2.0.0",
+  "ledger_id": "replace-me",
+  "profile": "chat-v1",
+  "identity": {"id": "SPEC-FAB-ERS", "version": "chat-v1", "state": "confirmed_in_chat"},
+  "shared_invariant_ids": ["speed-60", "speed-42-conditional", "pilot-quote-01", "operations-total-sprints", "operations-weekly-starts", "sales-weekly-qualified-calls", "TRK-FAB-ERS-OWNED@1", "paid-media"],
+  "role_action_matrix": {
+    "approve_content": ["Marketing Director"],
+    "write_file": ["Repository Maintainer"],
+    "install": ["Runtime Administrator"],
+    "execute": ["Campaign Operator"]
+  },
+  "evaluation_context": {
+    "mode": "review",
+    "fixture": "replace-me",
+    "generated_at": "2026-09-01T00:00:00Z"
+  },
+  "records": [
+    {
+      "id": "content",
+      "transition": "content_approval",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": null, "digest": null},
+      "version": {"kind": "conversational", "value": "chat-v1"},
+      "scope": {"actions": ["approve_content"], "targets": ["artifact"], "exclusions": ["write_file", "install", "execute"]},
+      "decision": {"status": "unknown", "mode": "unknown", "basis": {"kind": "none", "source_entry_id": null, "summary": ""}},
+      "authority": {"status": "to_confirm", "role": "Marketing Director"},
+      "observation": {"subject": "decision", "status": "unknown", "occurred_at": null, "evidence": []},
+      "recorded_at": "2026-09-01T00:00:00Z",
+      "dependencies": [],
+      "notes": []
+    },
+    {
+      "id": "save",
+      "transition": "saving",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": null, "digest": null},
+      "version": {"kind": "conversational", "value": "chat-v1"},
+      "scope": {"actions": ["write_file"], "targets": ["artifact"], "exclusions": ["install", "execute"]},
+      "decision": {"status": "not_requested", "mode": "not_applicable", "basis": {"kind": "none", "source_entry_id": null, "summary": ""}},
+      "authority": {"status": "to_confirm", "role": "Repository Maintainer"},
+      "observation": {"subject": "action", "status": "not_observed", "occurred_at": null, "evidence": []},
+      "recorded_at": "2026-09-01T00:00:00Z",
+      "dependencies": ["content"],
+      "notes": []
+    },
+    {
+      "id": "install",
+      "transition": "installation",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": null, "digest": null},
+      "version": {"kind": "conversational", "value": "chat-v1"},
+      "scope": {"actions": ["install"], "targets": ["replace-me"], "exclusions": ["execute"]},
+      "decision": {"status": "not_requested", "mode": "not_applicable", "basis": {"kind": "none", "source_entry_id": null, "summary": ""}},
+      "authority": {"status": "to_confirm", "role": "Runtime Administrator"},
+      "observation": {"subject": "action", "status": "not_observed", "occurred_at": null, "evidence": []},
+      "recorded_at": "2026-09-01T00:00:00Z",
+      "dependencies": ["save"],
+      "notes": []
+    },
+    {
+      "id": "execute",
+      "transition": "execution",
+      "entity": {"id": "SPEC-FAB-ERS", "type": "campaign-spec", "path": null, "digest": null},
+      "version": {"kind": "conversational", "value": "chat-v1"},
+      "scope": {"actions": ["execute"], "targets": ["replace-me"], "exclusions": []},
+      "decision": {"status": "not_requested", "mode": "not_applicable", "basis": {"kind": "none", "source_entry_id": null, "summary": ""}},
+      "authority": {"status": "to_confirm", "role": "Campaign Operator"},
+      "observation": {"subject": "action", "status": "not_observed", "occurred_at": null, "evidence": []},
+      "recorded_at": "2026-09-01T00:00:00Z",
+      "dependencies": ["install"],
+      "notes": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "versione mancante",
+  "mutations": [
+    {
+      "path": "artifacts.execution.asset_ref",
+      "value": "ASSET-FAB-ERS-CAROUSEL"
+    }
+  ],
+  "expected_error": "non include una versione"
+}

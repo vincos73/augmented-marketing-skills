@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vincos.it/schemas/ams-behavioral-capture-v1.json",
+  "title": "AMS nine-skill behavioral capture manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "capture_id", "evidence_mode", "source_base_commit",
+    "provider", "runtime", "thread_id", "model", "raw_manifest_path",
+    "raw_manifest_sha256", "snapshot_path", "snapshot_sha256", "events"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "capture_id": {"type": "string", "minLength": 1},
+    "evidence_mode": {"const": "behavioral_run"},
+    "source_base_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "provider": {"type": "string", "minLength": 1},
+    "runtime": {"type": "string", "minLength": 1},
+    "thread_id": {"type": "string", "minLength": 1},
+    "model": {"type": "string", "minLength": 1},
+    "raw_manifest_path": {"type": "string", "minLength": 1},
+    "raw_manifest_sha256": {"$ref": "#/$defs/sha256"},
+    "snapshot_path": {"type": "string", "minLength": 1},
+    "snapshot_sha256": {"$ref": "#/$defs/sha256"},
+    "events": {
+      "type": "array", "minItems": 9, "maxItems": 9,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["sequence", "skill_id", "receipt_path", "receipt_sha256"],
+        "properties": {
+          "sequence": {"type": "integer", "minimum": 1, "maximum": 9},
+          "skill_id": {"type": "string", "minLength": 1},
+          "receipt_path": {"type": "string", "minLength": 1},
+          "receipt_sha256": {"$ref": "#/$defs/sha256"}
+        }
+      }
+    }
+  },
+  "$defs": {"sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+}
