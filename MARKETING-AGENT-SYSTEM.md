@@ -43,7 +43,7 @@ Augmented Marketing Suite
 
 **Augmented Marketing Assistant** è un agente sottile e non un nuovo core. Riceve il bisogno nel linguaggio dell'utente, verifica soltanto stati e artefatti osservabili, spiega il passaggio utile e attiva la skill pertinente quando l'ambiente lo consente. Se non può effettuare il passaggio, indica all'utente la skill da invocare e si ferma senza simularne il metodo. Non possiede logica strategica, artefatti o approvazioni propri e non impone il percorso completo quando l'input necessario esiste già. Nel plugin OpenAI compare tecnicamente come sesta skill (`augmented-marketing-assistant`), ma questa forma è soltanto un adattatore di caricamento e non una nuova competenza di marketing.
 
-La [definizione canonica stabile v0.1.0](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex ed è incluso nella Suite beta 0.1.0-beta.8. Gli [scenari conversazionali sintetici](evals/augmented-marketing-assistant/scenarios-v0.1.md), il [test cieco in una sessione Codex separata](evals/augmented-marketing-assistant/runs/2026-08-27-blind-codex-v0.1.md), il regression test runtime Codex storico della beta.5 e il test reale su ChatGPT Web verificano aspetti diversi, ma non equivalgono a un pilot con marketer esterni. Il regression test ha superato con tre PASS richiesta ambigua, selezione diretta e handoff effettivo.
+La [definizione canonica beta v0.2.0](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex ed è incluso nella Suite `0.1.0-beta.9`. Gli [scenari conversazionali sintetici v0.2](evals/augmented-marketing-assistant/scenarios-v0.2.md) aggiungono routing verso Campaign Core e Content Director; la [verifica statica del routing](evals/augmented-marketing-assistant/runs/2026-09-01-routing-expansion-v0.2.0.md) è PASS. Il test cieco e gli smoke test runtime precedenti restano evidenza storica della v0.1.0 e non provano il nuovo routing, la comprensibilità per marketer esterni o il comportamento in ogni ambiente.
 
 I tre core non sono cartelle decorative e non devono diventare tre agenti generalisti. Sono famiglie di decisioni con artefatti e confini diversi:
 
@@ -148,9 +148,9 @@ Aggiornato al 1 settembre 2026.
 
 | Area | Stato | Evidenza e limite |
 |---|---|---|
-| Fondazione e Strategy Core | Pubblicati nella Suite beta.8 | Cinque skill specialistiche versionate; installazione e caricamento restano verifiche separate |
-| Campaign Core | Catena sorgente completa su `main` | `design-campaign` v0.1.4, `campaign-review` v0.1.2 e `campaign-debrief` v0.1.6 sono pronte come sorgente |
-| Content Core | Roadmap progettata | Nessuna skill sorgente approvata nel repository; primo percorso ancora da collegare ai builder |
+| Fondazione e Strategy Core | Pubblicati nella Suite beta.9 | Cinque skill specialistiche versionate; installazione e caricamento restano verifiche separate |
+| Campaign Core | Pubblicato nella Suite beta.9 | `design-campaign` v0.1.4, `campaign-review` v0.1.2 e `campaign-debrief` v0.1.6 |
+| Content Core | Primo percorso pubblicato nella Suite beta.9 | `content-director` v0.1.1 sceglie la strada editoriale e produce un Content Brief dopo approvazione |
 | Research & Evidence | Roadmap opzionale | Introdurre moduli autonomi soltanto quando il riuso giustifica un artefatto separato |
 | Monitoring | Roadmap opzionale | Il bisogno e la forma di distribuzione devono ancora essere validati |
 
@@ -158,23 +158,23 @@ Aggiornato al 1 settembre 2026.
 
 ### Fondazione consolidata e Strategy Core
 
-Al momento il repository contiene cinque skill sorgente approvate:
+Fondazione e Strategy Core comprendono cinque skill sorgente approvate:
 
-- `setup-business-context`: identità aziendale o di brand persistente, nella Suite beta.8 come `v0.6.4`.
-- `setup-marketing-system`: regole di marketing stabili, nella Suite beta.8 come `v0.3.1`.
-- `define-marketing-challenge`: Brief della sfida confermato e pronto al confronto strategico, nella Suite beta.8 come `v0.1.3`.
-- `choose-marketing-direction`: confronto strategico e Direzione di marketing approvabile, nella Suite beta.8 come `v0.2.2`.
-- `define-marketing-mix`: traduzione della direzione approvata nelle quattro P, nella Suite beta.8 come `v0.1.3`.
+- `setup-business-context`: identità aziendale o di brand persistente, nella Suite beta.9 come `v0.6.5`.
+- `setup-marketing-system`: regole di marketing stabili, nella Suite beta.9 come `v0.3.2`.
+- `define-marketing-challenge`: Brief della sfida confermato e pronto al confronto strategico, nella Suite beta.9 come `v0.1.4`.
+- `choose-marketing-direction`: confronto strategico e Direzione di marketing approvabile, nella Suite beta.9 come `v0.2.3`.
+- `define-marketing-mix`: traduzione della direzione approvata nelle quattro P, nella Suite beta.9 come `v0.1.4`.
 
-Le tre skill di Strategy Core sono approvate e disponibili come release stabili, con istruzioni di installazione, fixture sintetiche e test senza hard fail. Non sono automaticamente installate o attive nell'ambiente dell'utente. La Suite beta.8 non include ancora il Campaign Core o il Content Core e non automatizza la pubblicazione.
+Le tre skill di Strategy Core sono approvate e distribuite nella Suite beta.9, con istruzioni di installazione, fixture sintetiche e test senza hard fail. Non sono automaticamente installate o attive nell'ambiente dell'utente. La Suite non automatizza la pubblicazione.
 
-Il Campaign Core ha ora una catena sorgente completa e pronta: `design-campaign` v0.1.4, `campaign-review` v0.1.2 e `campaign-debrief` v0.1.6. La prima ha installazione locale e retest standalone verificati. La seconda conserva il forward test PASS della v0.1.1; la patch v0.1.2 corregge soltanto il nome del passaggio post-lancio. La terza ha superato test collegati, standalone, follow-up, comparativi e di persistenza. Nessuna delle tre è inclusa in una release della Suite o provata con marketer esterni.
+Il Campaign Core ha una catena completa distribuita nella Suite beta.9: `design-campaign` v0.1.4, `campaign-review` v0.1.2 e `campaign-debrief` v0.1.6. La prima ha installazione locale e retest standalone verificati. La seconda conserva il forward test PASS della v0.1.1; la patch v0.1.2 corregge soltanto il nome del passaggio post-lancio. La terza ha superato test collegati, standalone, follow-up, comparativi e di persistenza. Il packaging non equivale a installazione attiva o prova con marketer esterni.
 
 Le cartelle sotto `skills/` sono sorgenti di authoring, non prova di installazione attiva. Ogni ambiente che supporta skill può richiedere una destinazione, un pacchetto o un adattatore specifico. Authoring, installazione locale e distribuzione restano tre gate distinti, e la presenza della sorgente non dimostra il caricamento nella sessione.
 
 La progettazione delle prossime skill e le revisioni sostanziali seguono lo [standard comune di progettazione](STANDARD-PROGETTAZIONE-SKILL.md). Il blueprint deve dichiarare eventuali eccezioni e ogni pacchetto deve incorporare le regole necessarie durante l'uso: il documento comune governa l'authoring, ma non diventa una dipendenza runtime implicita. Lo standard privilegia prima risposta utile, progressione per differenza, gate compatti, template modulari, isolamento dei test e verifica del rework richiesto al responsabile.
 
-La revisione terminologica del 29 agosto 2026 ha creato sorgenti aggiornate per `setup-business-context` v0.6.5, `setup-marketing-system` v0.3.2, `define-marketing-challenge` v0.1.4, `choose-marketing-direction` v0.2.3, `define-marketing-mix` v0.1.4 e `design-campaign` v0.1.4. Le versioni pubblicate nella Suite restano invariate. Le sorgenti mantengono interni termini come `gate`, `routing`, `artefatto canonico`, `handoff`, `owner` e `runtime` e usano nell'interfaccia il lessico del dominio pertinente. Sono state installate localmente per i test; le cinque revisioni di Fondazione e Strategy restano candidate, mentre `design-campaign` è ora pronta come sorgente.
+La revisione terminologica del 29 agosto 2026 ha creato sorgenti aggiornate per `setup-business-context` v0.6.5, `setup-marketing-system` v0.3.2, `define-marketing-challenge` v0.1.4, `choose-marketing-direction` v0.2.3, `define-marketing-mix` v0.1.4 e `design-campaign` v0.1.4. Queste versioni sono incluse nella Suite beta.9. Le sorgenti mantengono interni termini come `gate`, `routing`, `artefatto canonico`, `handoff`, `owner` e `runtime` e usano nell'interfaccia il lessico del dominio pertinente.
 
 Il nucleo è indipendente dall'adattatore di distribuzione. Il [contratto di portabilità](PORTABILITA.md) definisce capability obbligatorie e opzionali, comportamento degli artefatti quando il workspace non è scrivibile, limiti dei connector e scenari minimi di verifica. Comandi, hook, manifest, marketplace e instruction file specifici non appartengono al contratto essenziale delle skill.
 
@@ -564,7 +564,7 @@ Il catalogo iniziale comprende 18 eval comportamentali, una fixture Relaybird a 
 
 La validazione strutturale di `skill-creator`, `git diff --check` e il [retest sintetico di compattezza della v0.1.2](evals/define-marketing-challenge/runs/2026-08-27-compactness-retest-v0.1.2.md) hanno esito positivo. La [release stabile v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/define-marketing-challenge-v0.1.2) contiene lo ZIP della sola skill e il relativo checksum SHA-256.
 
-#### `choose-marketing-direction`: sorgente candidata v0.2.3; Suite beta.8 v0.2.2; release singola verificata v0.2.1
+#### `choose-marketing-direction`: Suite beta.9 v0.2.3; release singola verificata v0.2.1
 
 > Come proprietario di una decisione marketing, parto da una sfida confermata, formulo una diagnosi provvisoria e confronto alternative realmente strategiche per scegliere come produrre il cambiamento cercato. Ottengo una direzione approvabile sottoposta a stress test, con trade-off, non-scelte, assunzione più fragile e primo test utile, senza trasformarla prematuramente in marketing mix o campagna.
 
@@ -584,7 +584,7 @@ L'artefatto proposto è:
 
 Usa gli stati `bozza`, `approvata` e `superata`, referenzia la versione esatta di `challenge.md` e richiede sia approvazione della scelta sia autorizzazione al salvataggio. Il [forward test indipendente](evals/choose-marketing-direction/runs/2026-08-26-independent-forward-v0.2.0.md) della v0.2.0 è passato senza hard fail; il [retest sintetico di compattezza della v0.2.1](evals/choose-marketing-direction/runs/2026-08-27-compactness-retest-v0.2.1.md) non ha rilevato hard fail. La [release stabile v0.2.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/choose-marketing-direction-v0.2.1) contiene lo ZIP della sola skill e il relativo checksum. Il passaggio successivo normale è `define-marketing-mix`.
 
-#### `define-marketing-mix`: sorgente v0.1.4; Suite beta.8 v0.1.3; release singola verificata v0.1.2
+#### `define-marketing-mix`: Suite beta.9 v0.1.4; release singola verificata v0.1.2
 
 > Come responsabile marketing, traduco una direzione approvata in decisioni coerenti su Product, Price, Place e Promotion, rendendo visibili vincoli, ipotesi, dipendenze e proprietari prima di progettare la campagna o altre attivazioni.
 
@@ -611,11 +611,11 @@ Le release dello Strategy Core includono `SKILL.md`, metadati UI, istruzioni di 
 
 - `design-campaign`, sorgente v0.1.4 considerata pronta: parte autonomamente da un'esigenza o da un brief di campagna, oppure riusa la componente Promotion e le attivazioni pertinenti di un marketing mix approvato; produce un funnel o percorso coordinato con messaggi, ruolo dei canali, asset, dipendenze, responsabilità, approvazioni e piano di misurazione senza obbligare l'utente a completare prima lo Strategy Core;
 - `campaign-review`, sorgente v0.1.2 considerata pronta: verifica separatamente coerenza strategica, integrità delle affermazioni e prontezza del sistema, senza sostituire il QA specialistico degli asset; indirizza i risultati post-lancio a `campaign-debrief`;
-- `campaign-debrief`, sorgente v0.1.6 considerata pronta con suite comportamentale sintetica PASS: confronta ciò che era atteso, ciò che è stato realmente eseguito e ciò che i dati permettono di sostenere; raccomanda il prossimo passo senza inventare causalità o aggiornare automaticamente il playbook. Lo stato pronto non implica package, release, installazione o validazione di mercato.
+- `campaign-debrief`, sorgente v0.1.6 considerata pronta con suite comportamentale sintetica PASS: confronta ciò che era atteso, ciò che è stato realmente eseguito e ciò che i dati permettono di sostenere; raccomanda il prossimo passo senza inventare causalità o aggiornare automaticamente il playbook. Il risultato sintetico non implica installazione, caricamento o validazione di mercato.
 
 Il [blueprint del Campaign Core](CAMPAIGN-CORE.md) definisce la sequenza completa `design-campaign` → `campaign-review` → `campaign-debrief`. Il [retest indipendente di `design-campaign`](evals/design-campaign/runs/2026-08-31-fabriloom-independent-retest-v0.1.4.md) è PASS con zero hard e zero soft fail sulla prima risposta standalone. `campaign-review` include tre lenti indipendenti e un forward test PASS della v0.1.1; la patch v0.1.2 allinea il passaggio post-lancio. `campaign-debrief` v0.1.6 ha superato il [percorso standalone](evals/campaign-debrief/runs/2026-08-31-fabriloom-independent-standalone-v0.1.3-v0.1.6.md) e il [follow-up](evals/campaign-debrief/runs/2026-08-31-fabriloom-independent-follow-up-v0.1.6.md) con zero hard e zero soft fail. Il [confronto](evals/campaign-debrief/runs/2026-08-31-fabriloom-comparative-v0.1.6.md) mostra un vantaggio stretto sul buon generalista in questa fixture; persistenza e regressione collegata restano PASS con rilievi.
 
-La catena è quindi completa e osservata a livello di sorgente, ma non ancora distribuita come prodotto unico. I prossimi gate sono package e release del Campaign Core, installazione e parità, pilot end-to-end con un responsabile reale e verifica del passaggio tra i tre artefatti. Le prove sintetiche non dimostrano efficacia con marketer esterni o superiorità generale.
+La catena è completa e distribuita come parte della Suite beta.9. I prossimi gate sono caricamento in sessioni pulite, pilot end-to-end con un responsabile reale e verifica del passaggio tra i tre artefatti. Le prove sintetiche non dimostrano efficacia con marketer esterni o superiorità generale.
 
 ### 5. Content Core
 
@@ -623,12 +623,12 @@ La catena è quindi completa e osservata a livello di sorgente, ma non ancora di
 - builder specializzati: producono l'asset e mantengono selezione, fedeltà, struttura, resa e QA specifici;
 - `editorial-review`, eventualmente futura: serve per contenuti creati altrove o audit multi-asset, non come passaggio obbligatorio dopo ogni builder.
 
-Il [blueprint del Content Core](CONTENT-CORE.md) e i [riferimenti di authoring](blueprints/content-director/) definiscono il percorso standalone e collegato, il routing editoriale e il template del Content Brief. La [sorgente `content-director` v0.1.1](skills/content-director/) e la [fixture sintetica con catalogo degli eval](evals/content-director/) documentano la validazione. Il [primo forward test indipendente della v0.1.0](evals/content-director/runs/2026-09-01-latticeway-independent-forward-v0.1.0.md) è terminato con FAIL perché la prima risposta ha privilegiato la forma già producibile. Il [retest indipendente della v0.1.1](evals/content-director/runs/2026-09-01-latticeway-independent-retest-v0.1.1.md) ha superato lo scenario con zero hard fail e due soft fail: l'optimum editoriale viene ora scelto prima della verifica di capacità e budget, mentre l'alternativa dichiara la perdita. Il [pacchetto indipendente di sei regressioni](evals/content-director/runs/2026-09-01-latticeway-independent-regressions-v0.1.1.md) è passato con zero hard fail e sei soft fail di criterio, coprendo modalità collegata, bypass, multi-asset, scelta manageriale contraria, stato limite e handoff simulato. La [release singola stabile v0.1.1](https://github.com/vincos73/augmented-marketing-skills/releases/tag/content-director-v0.1.1) resta separata dalla Suite beta.8. La pubblicazione non dimostra caricamento runtime, produzione reale o utilità con manager reali.
+Il [blueprint del Content Core](CONTENT-CORE.md) e i [riferimenti di authoring](blueprints/content-director/) definiscono il percorso standalone e collegato, il routing editoriale e il template del Content Brief. La [sorgente `content-director` v0.1.1](skills/content-director/) e la [fixture sintetica con catalogo degli eval](evals/content-director/) documentano la validazione. Il [primo forward test indipendente della v0.1.0](evals/content-director/runs/2026-09-01-latticeway-independent-forward-v0.1.0.md) è terminato con FAIL perché la prima risposta ha privilegiato la forma già producibile. Il [retest indipendente della v0.1.1](evals/content-director/runs/2026-09-01-latticeway-independent-retest-v0.1.1.md) ha superato lo scenario con zero hard fail e due soft fail: l'optimum editoriale viene ora scelto prima della verifica di capacità e budget, mentre l'alternativa dichiara la perdita. Il [pacchetto indipendente di sei regressioni](evals/content-director/runs/2026-09-01-latticeway-independent-regressions-v0.1.1.md) è passato con zero hard fail e sei soft fail di criterio, coprendo modalità collegata, bypass, multi-asset, scelta manageriale contraria, stato limite e handoff simulato. La v0.1.1 è disponibile sia come [release singola stabile](https://github.com/vincos73/augmented-marketing-skills/releases/tag/content-director-v0.1.1) sia nella Suite beta.9. La pubblicazione non dimostra caricamento runtime, produzione reale o utilità con manager reali.
 
 ### Ordine di costruzione
 
 1. mantenere Fondazione e Strategy Core pubblicati e verificare il riuso con marketer reali;
-2. preparare package e release del Campaign Core soltanto quando si decide di distribuirlo;
+2. verificare installazione e caricamento della Suite beta.9 in sessioni pulite;
 3. verificare in un pilot end-to-end il passaggio `design-campaign` → `campaign-review` → `campaign-debrief`;
 4. collegare il primo percorso Content a un builder già esistente e misurare il rework;
 5. verificare `Augmented Marketing Assistant` in sessioni pulite anche sul Campaign Core;

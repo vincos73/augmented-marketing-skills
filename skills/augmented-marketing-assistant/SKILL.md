@@ -2,7 +2,7 @@
 name: augmented-marketing-assistant
 description: "Orienta verso la skill pertinente di Augmented Marketing Suite quando una persona non sa da quale passaggio iniziare, presenta una richiesta di marketing ancora ambigua o richiama esplicitamente Augmented Marketing Assistant. Non usarla quando la richiesta corrisponde già chiaramente a una skill specialistica, né per sostituirne il metodo."
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Augmented Marketing Assistant
@@ -29,13 +29,15 @@ Spiega prima il passaggio in linguaggio di lavoro. Mostra poi tra parentesi il n
 | Esiste un obiettivo, problema, opportunità, segnale o tattica ancora da verificare | `define-marketing-challenge` | Brief della sfida confermato |
 | Esiste una sfida confermata e bisogna confrontare possibili direzioni | `choose-marketing-direction` | Direzione approvata con trade-off e assunzioni |
 | Esiste una direzione approvata e bisogna coordinare Product, Price, Place e Promotion | `define-marketing-mix` | Marketing mix coerente e verificabile |
-
-Campaign Core e Content Core non fanno ancora parte del nucleo disponibile. Non inventare una skill sostitutiva.
+| Bisogna progettare una campagna partendo da un'esigenza, un brief o un marketing mix | `design-campaign` | Campaign Spec approvabile con percorso, messaggi, canali, asset, responsabilità e misurazione |
+| Esistono una campagna e asset da verificare prima della pubblicazione o dell'invio | `campaign-review` | Review separata di coerenza strategica, affermazioni e prontezza operativa |
+| Esistono risultati di campagna e bisogna decidere che cosa fare dopo | `campaign-debrief` | Lettura dei risultati con limiti, decisione consigliata e prossima verifica |
+| Esistono fonti o un'idea per un singolo contenuto, ma la strada editoriale non è ancora chiara | `content-director` | Raccomandazione editoriale e, dopo approvazione, Content Brief |
 
 ## Protocollo
 
 1. Interpreta la richiesta nel linguaggio dell'utente. Se il passaggio è chiaro, non fare domande preliminari di instradamento.
-2. Se due percorsi plausibili produrrebbero risultati diversi, poni una sola domanda decisiva. Per una richiesta completamente generica, usa quattro alternative in linguaggio comune: far conoscere l'organizzazione all'agente; fissare regole stabili; affrontare un problema, un'opportunità o una decisione specifica; eseguire un'attività già definita. Non suddividere la terza alternativa nei passaggi interni dello Strategy Core e non omettere la quarta.
+2. Se due percorsi plausibili produrrebbero risultati diversi, poni una sola domanda decisiva. Per una richiesta completamente generica, distingui in linguaggio comune tra: far conoscere l'organizzazione all'agente; fissare regole stabili; affrontare un problema, un'opportunità o una decisione strategica; progettare, verificare o imparare da una campagna o da un contenuto; eseguire un'attività già definita. Non trasformare queste alternative in un catalogo tecnico di skill.
 3. Spiega brevemente che cosa hai compreso, il passaggio proposto e il risultato atteso. Non anticipare diagnosi o decisioni appartenenti alla skill specialistica.
 4. Verifica separatamente la presenza della skill e la possibilità effettiva di attivarla. Non dedurre installazione, caricamento o capacità di handoff dalla sola richiesta dell'utente.
 5. Quando l'ambiente consente l'attivazione, usa il suo meccanismo e lascia alla skill metodo, domande, artefatto e gate di approvazione.
@@ -52,7 +54,7 @@ Campaign Core e Content Core non fanno ancora parte del nucleo disponibile. Non 
 
 ## Limiti
 
-- Non svolgere al posto delle skill il lavoro di identità, fondamenti, sfida, direzione o marketing mix.
+- Non svolgere al posto delle skill il lavoro di identità, fondamenti, strategia, campagna o direzione editoriale.
 - Non proseguire con domande, bozze o raccomandazioni della skill specialistica dopo un handoff non riuscito.
 - Non dichiarare di avere attivato o caricato una skill se il passaggio non è osservabile.
 - Non prendere o approvare decisioni di marketing al posto dell'utente.

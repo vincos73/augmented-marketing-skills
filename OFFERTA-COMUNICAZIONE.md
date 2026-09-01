@@ -111,8 +111,8 @@ Risultati e apprendimento
 | Ingresso conversazionale | `Augmented Marketing Assistant` orienta verso il passaggio pertinente senza duplicare il metodo delle skill |
 | Fondazione | `setup-business-context` crea l'identità persistente; `setup-marketing-system` definisce le regole stabili che gli agenti devono applicare |
 | Strategy Core | `define-marketing-challenge` chiarisce il cambiamento cercato; `choose-marketing-direction` confronta alternative; `define-marketing-mix` coordina le quattro P |
-| Campaign Core | Traduce il marketing mix approvato in messaggi, canali, asset, responsabilità, misure e apprendimento; le skill sono ancora in roadmap |
-| Content Core | Valuta il materiale, sceglie il formato e passa il lavoro ai builder; le skill interne sono ancora in roadmap e alcuni builder esistono fuori dal repository |
+| Campaign Core | `design-campaign` progetta la campagna, `campaign-review` la verifica prima del lancio e `campaign-debrief` interpreta i risultati |
+| Content Core | `content-director` valuta fonti o idee, raccomanda la strada editoriale e passa un Content Brief ai builder |
 
 Nel nucleo minimo non esiste un agente Strategist separato. Il lavoro strategico è distribuito tra le tre skill dello Strategy Core; l'Assistant orienta senza duplicarne il metodo. Un eventuale ruolo trasversale richiederà una user story e un artefatto distinti, validati dall'uso reale.
 
@@ -122,15 +122,15 @@ La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è 
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Suite | Beta 0.1.0-beta.5 con plugin OpenAI, cinque skill stabili e Assistant stabile; comportamento multipiattaforma e pilot esterno ancora incompleti |
-| Augmented Marketing Assistant | v0.1.0 stabile; ingresso conversazionale incluso nella Suite come adattatore tecnico (`augmented-marketing-assistant`), con tre smoke test runtime Codex superati |
-| Business Identity | Skill approvata; verificare nel README la versione sorgente e quella pubblicata |
-| Marketing Foundations | Skill approvata e disponibile come release stabile |
-| Brief della sfida | Skill approvata e disponibile come release stabile |
-| Direzione di marketing | Skill approvata e disponibile come release stabile v0.2.0 |
-| Marketing Mix | Skill approvata e disponibile come release stabile v0.1.1 |
-| Campaign Core | Roadmap |
-| Content Core | Roadmap; builder esterni non inclusi |
+| Augmented Marketing Suite | Beta 0.1.0-beta.9 con plugin OpenAI/Codex, plugin Claude, nove skill specialistiche e Assistant; caricamento multipiattaforma e pilot esterno restano verifiche separate |
+| Augmented Marketing Assistant | v0.2.0 beta; orienta anche verso Campaign Core e Content Director; gli smoke test runtime precedenti riguardano la v0.1.0 |
+| Business Identity | `setup-business-context` v0.6.5 nella Suite beta.9 |
+| Marketing Foundations | `setup-marketing-system` v0.3.2 nella Suite beta.9 |
+| Brief della sfida | `define-marketing-challenge` v0.1.4 nella Suite beta.9 |
+| Direzione di marketing | `choose-marketing-direction` v0.2.3 nella Suite beta.9 |
+| Marketing Mix | `define-marketing-mix` v0.1.4 nella Suite beta.9 |
+| Campaign Core | Tre skill pubblicate nella Suite beta.9; pilot end-to-end ancora mancante |
+| Content Core | `content-director` v0.1.1 pubblicata singolarmente e nella Suite beta.9; builder esterni non inclusi |
 | Monitoring | Ipotesi opzionale di roadmap |
 
 Una cartella presente nel repository dimostra che esiste una sorgente di authoring. Non dimostra approvazione, installazione, pubblicazione o affidabilità in produzione.

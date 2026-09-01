@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "augmented-marketing-suite",
   "displayName": "Augmented Marketing Suite",
-  "version": "0.1.0-beta.8",
-  "description": "Cinque skill specialistiche per decisioni di marketing verificabili: contesto, fondamenti, sfida, direzione e marketing mix.",
+  "version": "0.1.0-beta.9",
+  "description": "Nove skill specialistiche per fondazione, strategia, campagne e direzione editoriale verificabili.",
   "author": {
     "name": "Augmented Marketing Suite"
   },

@@ -1,10 +1,10 @@
-# Installazione di Augmented Marketing Suite beta.8
+# Installazione di Augmented Marketing Suite beta.9
 
-La beta `0.1.0-beta.8` offre tre formati separati:
+La beta `0.1.0-beta.9` offre tre formati separati:
 
-- `dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.8.zip`: plugin Claude con cinque skill specialistiche;
-- `dist/agent-skills/`: cinque ZIP individuali e portabili, uno per skill specialistica;
-- `dist/openai/augmented-marketing-suite-0.1.0-beta.8.zip`: pacchetto OpenAI/Codex con il manifesto `.codex-plugin`, le cinque skill e Augmented Marketing Assistant.
+- `dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.9.zip`: plugin Claude con nove skill specialistiche;
+- `dist/agent-skills/`: nove ZIP individuali e portabili, uno per skill specialistica;
+- `dist/openai/augmented-marketing-suite-0.1.0-beta.9.zip`: pacchetto OpenAI/Codex con il manifesto `.codex-plugin`, le nove skill e Augmented Marketing Assistant.
 
 **Regola di scelta:** per una sola skill usa uno ZIP in `dist/agent-skills/`; per il bundle completo usa il plugin dedicato alla piattaforma. Non caricare lo ZIP OpenAI/Codex in Claude, né lo ZIP Claude in ChatGPT/Codex.
 
@@ -12,20 +12,20 @@ La beta `0.1.0-beta.8` offre tre formati separati:
 
 | Se usi | Scegli | Contiene |
 | --- | --- | --- |
-| Claude, tutte e cinque le skill | `dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.8.zip` | Plugin Claude con cinque skill specialistiche. |
+| Claude, tutte le skill specialistiche | `dist/claude/augmented-marketing-suite-claude-v0.1.0-beta.9.zip` | Plugin Claude con nove skill specialistiche. |
 | Claude, una sola skill | Uno ZIP in `dist/agent-skills/` | Una skill specialistica con i suoi riferimenti. |
 | ChatGPT con caricamento diretto delle skill | Uno ZIP in `dist/agent-skills/` | La stessa skill portabile. |
-| ChatGPT o Codex con Plugin Creator/catalogo plugin | `dist/openai/augmented-marketing-suite-0.1.0-beta.8.zip` | Le cinque skill più Augmented Marketing Assistant. |
+| ChatGPT o Codex con Plugin Creator/catalogo plugin | `dist/openai/augmented-marketing-suite-0.1.0-beta.9.zip` | Le nove skill più Augmented Marketing Assistant. |
 | Claude Projects senza custom skill | I file estratti, come contesto di progetto | Alternativa statica, non installazione di skill. |
 
 Gli archivi Claude e portabili non includono Augmented Marketing Assistant: il suo testo dichiara esplicitamente di essere un adattatore per ChatGPT e Codex.
 
 ## Claude: plugin con tutte le skill
 
-1. Scarica `augmented-marketing-suite-claude-v0.1.0-beta.8.zip` dalla release beta.8.
+1. Scarica `augmented-marketing-suite-claude-v0.1.0-beta.9.zip` dalla release beta.9.
 2. In Claude apri **Personalizza → Plugin** e scegli il caricamento di un plugin.
-3. Seleziona quello ZIP, non `augmented-marketing-suite-0.1.0-beta.8.zip`: quest'ultimo è il pacchetto OpenAI/Codex e contiene `.codex-plugin`, non `.claude-plugin`.
-4. Dopo l'installazione, apri una nuova chat e usa `/` o il pulsante `+` per vedere le cinque skill del plugin.
+3. Seleziona quello ZIP, non `augmented-marketing-suite-0.1.0-beta.9.zip`: quest'ultimo è il pacchetto OpenAI/Codex e contiene `.codex-plugin`, non `.claude-plugin`.
+4. Dopo l'installazione, apri una nuova chat e usa `/` o il pulsante `+` per vedere le nove skill del plugin.
 
 Il plugin Claude contiene `.claude-plugin/plugin.json` alla radice e le skill in `skills/<nome>/SKILL.md`, senza MCP, connector, hook o subagenti.
 
@@ -59,38 +59,42 @@ La disponibilità del caricamento diretto dipende da prodotto, piano e amministr
 
 ## ChatGPT e Codex: Suite completa come plugin
 
-Usa `dist/openai/augmented-marketing-suite-0.1.0-beta.8.zip` solo in un ambiente che mostra Plugin Creator, un catalogo plugin o un marketplace compatibile. Non è un file da caricare in Claude.
+Usa `dist/openai/augmented-marketing-suite-0.1.0-beta.9.zip` solo in un ambiente che mostra Plugin Creator, un catalogo plugin o un marketplace compatibile. Non è un file da caricare in Claude.
 
 1. Apri una nuova chat o sessione.
 2. Carica l'archivio nel flusso di creazione o aggiornamento plugin disponibile.
 3. Verifica che la radice dell'archivio contenga `.codex-plugin/plugin.json` e `skills/`.
-4. Controlla che il manifesto dichiari versione `0.1.0-beta.8` e che `skills` sia la directory delle skill.
+4. Controlla che il manifesto dichiari versione `0.1.0-beta.9` e che `skills` sia la directory delle skill.
 5. Installa o aggiorna il plugin nel marketplace consentito dal tuo ambiente, poi avvia una nuova chat.
 
 Se usi un flusso che chiede un prompt di registrazione, puoi usare questo testo:
 
 ````text
-Crea o aggiorna il plugin personale dal pacchetto allegato Augmented Marketing Suite 0.1.0-beta.8.
+Crea o aggiorna il plugin personale dal pacchetto allegato Augmented Marketing Suite 0.1.0-beta.9.
 
-Verifica che la radice contenga .codex-plugin/plugin.json e che il manifesto dichiari skills/ come directory delle skill. Mantieni intatte le sei skill incluse. Non aggiungere MCP, connector, hook o altri componenti.
+Verifica che la radice contenga .codex-plugin/plugin.json e che il manifesto dichiari skills/ come directory delle skill. Mantieni intatte le dieci skill incluse. Non aggiungere MCP, connector, hook o altri componenti.
 
 Al termine, indica come installarlo dal catalogo disponibile e ricorda di provarlo in una nuova chat.
 ````
 
-## Contenuto e versioni della beta.8
+## Contenuto e versioni della beta.9
 
-| Componente | Versione beta.8 |
+| Componente | Versione beta.9 |
 | --- | --- |
-| Plugin Claude Augmented Marketing Suite | `0.1.0-beta.8` |
-| Plugin OpenAI/Codex Augmented Marketing Suite (`augmented-marketing-suite`) | `0.1.0-beta.8` |
-| Augmented Marketing Assistant, solo pacchetto OpenAI/Codex | `0.1.0` |
-| Setup Business Context | `0.6.4` |
-| Setup Marketing System | `0.3.1` |
-| Define Marketing Challenge | `0.1.3` |
-| Choose Marketing Direction | `0.2.2` |
-| Define Marketing Mix | `0.1.3` |
+| Plugin Claude Augmented Marketing Suite | `0.1.0-beta.9` |
+| Plugin OpenAI/Codex Augmented Marketing Suite (`augmented-marketing-suite`) | `0.1.0-beta.9` |
+| Augmented Marketing Assistant, solo pacchetto OpenAI/Codex | `0.2.0` |
+| Setup Business Context | `0.6.5` |
+| Setup Marketing System | `0.3.2` |
+| Define Marketing Challenge | `0.1.4` |
+| Choose Marketing Direction | `0.2.3` |
+| Define Marketing Mix | `0.1.4` |
+| Design Campaign | `0.1.4` |
+| Campaign Review | `0.1.2` |
+| Campaign Debrief | `0.1.6` |
+| Content Director | `0.1.1` |
 
-Questa documentazione corrisponde alla [release GitHub della Suite beta.8](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.8). Le singole skill non richiedono necessariamente un tag separato quando sono distribuite insieme alla Suite.
+Questa documentazione corrisponde alla [release GitHub della Suite beta.9](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v0.1.0-beta.9). Le singole skill non richiedono necessariamente un tag separato quando sono distribuite insieme alla Suite.
 
 ## Verifica prima del test
 
