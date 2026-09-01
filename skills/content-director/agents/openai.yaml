@@ -1,0 +1,4 @@
+interface:
+  display_name: "content-director"
+  short_description: "Sceglie la strada editoriale più utile"
+  default_prompt: "Usa $content-director per valutare questi materiali e consigliarmi la strada editoriale più utile."

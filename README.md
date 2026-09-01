@@ -37,6 +37,7 @@ I nomi tra parentesi sono quelli da usare per richiamare direttamente le skill. 
 | Se ti trovi in questa situazione | Cosa usare | Che cosa ottieni | Stato |
 | --- | --- | --- | --- |
 | Vuoi progettare una campagna partendo da un'esigenza, un brief o un marketing mix. | [`design-campaign`](skills/design-campaign/) | Una Campaign Spec con funnel, messaggi, canali, asset, responsabilità e misurazione. | v0.1.4 candidata; non inclusa nella Suite pubblicata |
+| Hai fonti o un'idea, ma non sai quale singolo contenuto sarebbe più utile. | [`content-director`](skills/content-director/) | Una raccomandazione editoriale agnostica e, dopo approvazione, un Content Brief. | [v0.1.1 stabile](https://github.com/vincos73/augmented-marketing-skills/releases/tag/content-director-v0.1.1); retest e sei regressioni: PASS, zero hard fail |
 
 ## Il percorso, in parole semplici
 
@@ -76,7 +77,7 @@ Immagina di voler proporre un nuovo servizio di formazione.
 4. Scegli una direzione, rendendo esplicite le ipotesi ancora da verificare.
 5. Definisci in modo coerente l'offerta, il prezzo, il modo di accesso e la comunicazione.
 
-Solo dopo puoi passare a pagine, campagne e contenuti. `design-campaign` è presente come sorgente candidata non ancora pubblicata; le altre competenze per campagne, contenuti e apprendimento restano previste per uno sviluppo futuro.
+Solo dopo puoi passare a pagine, campagne e contenuti. `design-campaign` è presente come sorgente candidata non ancora pubblicata; `content-director` è disponibile come release singola stabile e non è incluso nella Suite beta.8. Le altre competenze per campagne, contenuti e apprendimento restano previste per uno sviluppo futuro.
 
 ## Versioni della Suite e release singole
 
@@ -110,6 +111,8 @@ La regola è semplice: **per una skill singola usa uno ZIP portabile; per tutte 
 ### Per Claude o ChatGPT: una skill alla volta
 
 La beta.8 pubblicata offre un archivio ZIP per ciascuna delle cinque skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Ogni archivio contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
+
+`content-director` v0.1.1 è pubblicata separatamente nella [release singola stabile](https://github.com/vincos73/augmented-marketing-skills/releases/tag/content-director-v0.1.1). Non fa parte degli archivi della Suite beta.8.
 
 Scegli la skill che ti serve, caricala con il meccanismo di skill del tuo ambiente e avvia una nuova chat. Claude non usa l'Assistant incluso nella Suite OpenAI, quindi gli archivi portabili contengono soltanto le cinque skill specialistiche.
 
