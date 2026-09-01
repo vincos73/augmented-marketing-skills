@@ -1,10 +1,10 @@
 {
   "format": "agent-skill-zip",
-  "suite_version": "0.1.0-beta.8",
+  "suite_version": "0.1.0-beta.9",
   "source": {
-    "base_commit": "551f23a18faf7897de81ff7f8937d3ecdc2f482b",
-    "base_tag": "augmented-marketing-suite-v0.1.0-beta.7",
-    "state": "beta.8 release artifact"
+    "base_commit": "856b85e6ec8f977f94aba1e8b46cc8fff1040912",
+    "base_tag": "content-director-v0.1.1",
+    "state": "beta.9 release artifact"
   },
   "package_policy": {
     "archive_root": "one specialist skill folder",
@@ -15,28 +15,48 @@
   "skills": [
     {
       "name": "setup-business-context",
-      "version": "0.6.4",
-      "archive": "setup-business-context-0.6.4.zip"
+      "version": "0.6.5",
+      "archive": "setup-business-context-0.6.5.zip"
     },
     {
       "name": "setup-marketing-system",
-      "version": "0.3.1",
-      "archive": "setup-marketing-system-0.3.1.zip"
+      "version": "0.3.2",
+      "archive": "setup-marketing-system-0.3.2.zip"
     },
     {
       "name": "define-marketing-challenge",
-      "version": "0.1.3",
-      "archive": "define-marketing-challenge-0.1.3.zip"
+      "version": "0.1.4",
+      "archive": "define-marketing-challenge-0.1.4.zip"
     },
     {
       "name": "choose-marketing-direction",
-      "version": "0.2.2",
-      "archive": "choose-marketing-direction-0.2.2.zip"
+      "version": "0.2.3",
+      "archive": "choose-marketing-direction-0.2.3.zip"
     },
     {
       "name": "define-marketing-mix",
-      "version": "0.1.3",
-      "archive": "define-marketing-mix-0.1.3.zip"
+      "version": "0.1.4",
+      "archive": "define-marketing-mix-0.1.4.zip"
+    },
+    {
+      "name": "design-campaign",
+      "version": "0.1.4",
+      "archive": "design-campaign-0.1.4.zip"
+    },
+    {
+      "name": "campaign-review",
+      "version": "0.1.2",
+      "archive": "campaign-review-0.1.2.zip"
+    },
+    {
+      "name": "campaign-debrief",
+      "version": "0.1.6",
+      "archive": "campaign-debrief-0.1.6.zip"
+    },
+    {
+      "name": "content-director",
+      "version": "0.1.1",
+      "archive": "content-director-0.1.1.zip"
     }
   ]
 }

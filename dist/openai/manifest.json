@@ -1,19 +1,23 @@
 {
   "format": "openai-codex-plugin-zip",
-  "suite_version": "0.1.0-beta.8",
-  "archive": "augmented-marketing-suite-0.1.0-beta.8.zip",
+  "suite_version": "0.1.0-beta.9",
+  "archive": "augmented-marketing-suite-0.1.0-beta.9.zip",
   "source": {
-    "base_commit": "871cd43dd63c9f75c3a5d495b00a47974a87dc35",
-    "base_tag": "augmented-marketing-suite-v0.1.0-beta.7",
-    "state": "beta.8 release artifact"
+    "base_commit": "856b85e6ec8f977f94aba1e8b46cc8fff1040912",
+    "base_tag": "content-director-v0.1.1",
+    "state": "beta.9 release artifact"
   },
   "archive_root": [".codex-plugin/plugin.json", "skills/"],
   "skills": [
-    "augmented-marketing-assistant@0.1.0",
-    "setup-business-context@0.6.4",
-    "setup-marketing-system@0.3.1",
-    "define-marketing-challenge@0.1.3",
-    "choose-marketing-direction@0.2.2",
-    "define-marketing-mix@0.1.3"
+    "augmented-marketing-assistant@0.2.0",
+    "setup-business-context@0.6.5",
+    "setup-marketing-system@0.3.2",
+    "define-marketing-challenge@0.1.4",
+    "choose-marketing-direction@0.2.3",
+    "define-marketing-mix@0.1.4",
+    "design-campaign@0.1.4",
+    "campaign-review@0.1.2",
+    "campaign-debrief@0.1.6",
+    "content-director@0.1.1"
   ]
 }
