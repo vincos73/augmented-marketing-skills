@@ -44,6 +44,12 @@ I nomi tra parentesi sono quelli da usare per richiamare direttamente le skill. 
 
 Le tre sorgenti completano la sequenza del Campaign Core, ma non sono ancora incluse in una Suite pubblicata. `Pronta come sorgente` significa che authoring ed eval sintetici sono completati; non significa package, release, installazione attiva o validazione con marketer reali.
 
+### Content Core: release singola
+
+| Se ti trovi in questa situazione | Cosa usare | Che cosa ottieni | Stato |
+| --- | --- | --- | --- |
+| Hai fonti o un'idea, ma non sai quale singolo contenuto sarebbe più utile. | [`content-director`](skills/content-director/) | Una raccomandazione editoriale agnostica e, dopo approvazione, un Content Brief. | [v0.1.1 stabile](https://github.com/vincos73/augmented-marketing-skills/releases/tag/content-director-v0.1.1); retest e sei regressioni: PASS, zero hard fail |
+
 ## Il percorso, in parole semplici
 
 ```text
@@ -86,7 +92,7 @@ Immagina di voler proporre un nuovo servizio di formazione.
 4. Scegli una direzione, rendendo esplicite le ipotesi ancora da verificare.
 5. Definisci in modo coerente l'offerta, il prezzo, il modo di accesso e la comunicazione.
 
-Solo dopo puoi passare a pagine, campagne e contenuti. Il Campaign Core è ora presente su `main` con `design-campaign`, `campaign-review` e `campaign-debrief`. Le tre skill non sono ancora incluse nella Suite pubblicata. Content Core, Research & Evidence e monitoring restano sviluppi successivi da validare.
+Solo dopo puoi passare a pagine, campagne e contenuti. Il Campaign Core è presente su `main` con `design-campaign`, `campaign-review` e `campaign-debrief`, ma non è ancora incluso nella Suite pubblicata. `content-director` è disponibile come release singola stabile e non fa parte della Suite beta.8. Research & Evidence e monitoring restano sviluppi successivi da validare.
 
 ## Stato della roadmap
 
@@ -94,7 +100,7 @@ Solo dopo puoi passare a pagine, campagne e contenuti. Il Campaign Core è ora p
 | --- | --- | --- |
 | Fondazione e Strategy Core | Pubblicati nella Suite beta.8 | Osservare utilizzo e riuso con marketer reali |
 | Campaign Core | Catena completa su `main`; le tre skill sono pronte come sorgente | Decidere package, release e installazione; poi svolgere un pilot completo |
-| Content Core | Progettazione documentata, nessuna skill sorgente approvata nel repository | Collegare il primo percorso Content ai builder specializzati e testarlo |
+| Content Core | `content-director` v0.1.1 pubblicata come release singola stabile | Collegare il Content Brief ai builder specializzati e provarlo con manager reali |
 | Research & Evidence | Roadmap opzionale | Aggiungere capacità autonome solo quando emerge un uso ripetuto |
 | Monitoring | Roadmap opzionale | Validare il bisogno prima di introdurre setup e automazioni dedicate |
 
@@ -139,6 +145,8 @@ La regola è semplice: **per una skill singola usa uno ZIP portabile; per tutte 
 
 La beta.8 pubblicata offre un archivio ZIP per ciascuna delle cinque skill specialistiche in [`dist/agent-skills/`](dist/agent-skills/). Le sorgenti del Campaign Core non sono ancora comprese in questi pacchetti. Ogni archivio pubblicato contiene una sola cartella radice con `SKILL.md` e i riferimenti necessari: è il formato più semplice per il caricamento diretto di una skill compatibile con Agent Skills.
 
+`content-director` v0.1.1 è pubblicata separatamente nella [release singola stabile](https://github.com/vincos73/augmented-marketing-skills/releases/tag/content-director-v0.1.1). Non fa parte degli archivi della Suite beta.8.
+
 Scegli la skill che ti serve, caricala con il meccanismo di skill del tuo ambiente e avvia una nuova chat. Claude non usa l'Assistant incluso nella Suite OpenAI, quindi gli archivi portabili contengono soltanto le cinque skill specialistiche.
 
 ### Per Claude: Suite completa con un solo upload
@@ -162,6 +170,7 @@ Per una release già pubblicata, scarica la skill desiderata, estraila e segui i
 | `define-marketing-challenge` | Suite beta.8: `v0.1.3` |
 | `choose-marketing-direction` | Suite beta.8: `v0.2.2` |
 | `define-marketing-mix` | Suite beta.8: `v0.1.3` |
+| `content-director` | Release singola: `v0.1.1` |
 
 Scegliere una versione pubblicata precisa evita di installare involontariamente una versione ancora in sviluppo. In Codex, la destinazione abituale è `~/.codex/skills/`, ma il percorso può cambiare in base all'ambiente.
 
