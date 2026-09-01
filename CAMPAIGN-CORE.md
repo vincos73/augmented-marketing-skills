@@ -42,7 +42,7 @@ La progettazione dettagliata della prima skill è separata in tre riferimenti:
 
 Questi documenti sono blueprint, non sorgente installabile della skill.
 
-La sorgente candidata [`design-campaign` v0.1.4](skills/design-campaign/) traduce il blueprint in una skill installabile con due riferimenti caricati progressivamente. La v0.1.3 è stata provata sulla guida Da Chat a Work con Luna high e Sol high. Sol ha evitato le domande superflue osservate con Luna; entrambi i test hanno però mostrato che termini interni come `contratto`, `architettura` e `gate` possono filtrare nell'interfaccia. La v0.1.4 introduce il lessico di marketing e management, è installata localmente con parità verificata rispetto alla sorgente e resta da retestare prima di una distribuzione pubblica.
+La sorgente candidata [`design-campaign` v0.1.4](skills/design-campaign/) traduce il blueprint in una skill installabile con due riferimenti caricati progressivamente. La v0.1.3 è stata provata sulla guida Da Chat a Work con Luna high e Sol high. Sol ha evitato le domande superflue osservate con Luna; entrambi i test hanno però mostrato che termini interni come `contratto`, `architettura` e `gate` possono filtrare nell'interfaccia. La v0.1.4 introduce il lessico di marketing e management ed è installata localmente con parità verificata rispetto alla sorgente. Il retest indipendente Fabriloom del 31 agosto è PASS con zero hard fail e zero soft fail sulla prima risposta standalone; distribuzione pubblica e prove sugli altri passaggi restano separate.
 
 ## Fixture ed eval iniziali
 
@@ -56,7 +56,7 @@ Il [catalogo degli eval](evals/design-campaign/eval-catalog.md) definisce 29 con
 |---|---|---|---|
 | «Voglio progettare una campagna» oppure «Abbiamo già una direzione: come la attiviamo?» | `design-campaign` | Campaign Spec approvabile, pronta per assegnazione e produzione | prima candidata |
 | «La campagna e gli asset sono davvero pronti?» | `campaign-review` | Review con esito, problemi bloccanti, correzioni e autorizzazioni mancanti | seconda candidata |
-| «Che cosa abbiamo imparato e che cosa cambiamo?» | `learn-from-results` | Learning Record con decisione raccomandata e aggiornamenti proposti | roadmap successiva |
+| «Come è andata davvero e che cosa facciamo adesso?» | `campaign-debrief` | Lettura dei risultati con limiti, decisione consigliata e prossima verifica | terza candidata, sorgente v0.1.6 con suite comportamentale PASS |
 
 Le tre skill condividono il fascicolo della campagna, ma possiedono decisioni e artefatti distinti. Non sono tre schermate obbligatorie e non devono essere eseguite quando il loro lavoro è già stato svolto e documentato in modo affidabile.
 
@@ -77,7 +77,7 @@ esecuzione esterna autorizzata
         ↓
 dati e osservazioni sufficienti
         ↓
-learn-from-results
+campaign-debrief
         ↓
 decisione: continuare, correggere, scalare, fermare o riaprire la strategia
 ```
@@ -296,7 +296,7 @@ La review non corregge automaticamente asset, spec o sistemi. Le correzioni veng
 
 Per una bozza interna a basso rischio può bastare una review leggera. Claim sensibili, spesa rilevante, pubblicazione, dati personali, settori regolamentati o molti handoff richiedono il percorso completo. La governance deve essere proporzionata al rischio e non diventare un passaggio rituale.
 
-## 3. `learn-from-results`
+## 3. `campaign-debrief`
 
 ### User story
 
@@ -304,7 +304,7 @@ Per una bozza interna a basso rischio può bastare una review leggera. Claim sen
 
 ### Contratto
 
-La skill parte dalla Campaign Spec approvata, dall'eventuale review, dai dati disponibili e dalle note operative. Prima di interpretare verifica:
+La skill parte dalla Campaign Spec approvata, dall'eventuale review, dai dati disponibili e dalle note operative. La progettazione operativa è nel [blueprint di `campaign-debrief`](blueprints/campaign-debrief/campaign-debrief-blueprint.md), con catalogo degli eval in [evals/campaign-debrief](evals/campaign-debrief/).
 
 - definizioni delle metriche e finestre temporali;
 - copertura e qualità della strumentazione;
@@ -357,7 +357,7 @@ richiesta e materiali di un responsabile marketing
 
 Una regressione separata usa invece un marketing mix sintetico già approvato e verifica che `design-campaign` riusi la catena di contesto senza ripetere domande, perdere vincoli o riaprire decisioni strategiche.
 
-`learn-from-results` entra solo dopo una campagna reale o una fixture con dati longitudinali abbastanza credibili da testare qualità del dato, confondenti e regole decisionali.
+`campaign-debrief` entra solo dopo una campagna reale o una fixture con dati longitudinali abbastanza credibili da testare qualità del dato, fattori alternativi e regole decisionali.
 
 ### Criteri osservabili
 
@@ -399,15 +399,19 @@ Sono hard fail almeno:
 
 ## Stato del lavoro
 
-Questo documento è una proposta di progettazione. Le decisioni confermate su nome e accesso sono registrate nel documento autorevole del Marketing Agent System, ma non costituiscono ancora approvazione dell'intero Campaign Core, non creano skill installabili e non provano il funzionamento del workflow.
+Questo documento registra progettazione e stato del Campaign Core. Le sorgenti candidate non costituiscono approvazione dell'intero Core e non provano da sole installazione, caricamento nella sessione o funzionamento del workflow sul mercato.
 
-La sorgente candidata `campaign-review` v0.1.1 è stata implementata separatamente da `design-campaign` sotto `skills/campaign-review/`. Include una reference per il contratto della review, fixture sintetiche, catalogo degli eval e pacchetto candidato verificabile. La presenza della sorgente o del pacchetto non equivale a installazione attiva, release pubblica o prova con marketer esterni.
+La sorgente candidata `campaign-review` v0.1.2 è stata implementata separatamente da `design-campaign` sotto `skills/campaign-review/`. Include una reference per il contratto della review, fixture sintetiche e catalogo degli eval; la patch v0.1.2 aggiorna il passaggio post-lancio al nome ufficiale `campaign-debrief`. La presenza della sorgente o di un pacchetto candidato non equivale a installazione attiva, release pubblica o prova con marketer esterni.
+
+La sorgente `campaign-debrief` v0.1.6 è considerata pronta ed è sotto `skills/campaign-debrief/`. Include una guida alla sufficienza dei dati, il template unico di `campaign-learning.md` e una fixture sintetica longitudinale. Dopo il PASS collegato della v0.1.3, i test standalone v0.1.3-v0.1.5 hanno reso espliciti distinzione tra controllo intermedio e riesame paid, coorte realmente osservata, disponibilità della definizione, livelli del risultato e routing a `design-campaign`. La v0.1.6 supera la prima risposta standalone e il follow-up con zero hard e zero soft fail; la regressione collegata resta PASS con tre soft fail. Persistenza isolata e confronto con tre baseline sono completati. Lo stato pronto riguarda la sorgente: package, release, installazione e validazione con marketer reali restano separati.
 
 La sorgente `define-marketing-mix` v0.1.4 usa l'handoff `design-campaign`. Questa patch di authoring non modifica retroattivamente la versione v0.1.3 inclusa nella Suite beta.8 né la release singola pubblicata.
 
 ## Registro modifiche
 
-- v1.2, 2026-08-31: registrata la sorgente candidata `campaign-review` v0.1.1 con fixture, eval e pacchetto separati; installazione e distribuzione pubblica restano escluse.
+- v1.5, 2026-09-01: `campaign-debrief` v0.1.6 considerata pronta come sorgente; package, release, installazione e validazione di mercato restano stati separati.
+- v1.4, 2026-08-31: completati standalone, follow-up, confronto generalista/workflow proxy/Analytics, persistenza isolata e regressione collegata di `campaign-debrief`; candidata aggiornata a v0.1.6 e suite comportamentale PASS.
+- v1.3, 2026-08-31: integrata `campaign-review` e fissato `campaign-debrief` come nome ufficiale del terzo modulo; i FAIL indipendenti v0.1.0-v0.1.2 portano alla candidata v0.1.3, che supera il retest con zero hard fail e tre soft fail; aggiornato anche l'handoff della review nella candidata v0.1.2.
 - v1.1, 2026-08-29: registrata l'installazione locale verificata di `design-campaign` v0.1.4; il retest comportamentale e la distribuzione pubblica restano separati.
 - v1.0, 2026-08-29: il test utente della v0.1.3 su Sol high ha superato la progressione per differenza e ha evidenziato lessico troppo tecnico; candidata aggiornata a v0.1.4 con brief, funnel, fasi di marketing pertinenti, revisione finale e passaggio alla produzione come linguaggio visibile.
 - v0.5, 2026-08-29: creata la sorgente candidata `design-campaign` v0.1.0; validazione strutturale superata e author self-check Fabriloom registrato con due residui da osservare.

@@ -22,7 +22,7 @@ Le fixture sono sintetiche e pubblicabili. L'oracolo della fixture Brightpath è
 | CR12 | Review proporzionata | Propone review leggera o completa in base al rischio senza abbassare i controlli essenziali | Usa una review leggera per ignorare claim, consenso o autorizzazioni |
 | CR13 | Confine con builder | Segnala soltanto problemi degli asset che compromettono la campagna | Svolge QA di composizione, montaggio, impaginazione o leggibilità come responsabilità propria |
 | CR14 | Confine con design-campaign | Individua divergenze e prepara correzioni senza riscrivere la Campaign Spec | Riprojeta la campagna invece di registrare il rilievo |
-| CR15 | Confine con learn-from-results | Tratta risultati post-lancio come stato osservato e indirizza interpretazione e aggiornamento del playbook al workflow pertinente | Produce conclusioni di apprendimento o aggiorna il playbook nella review |
+| CR15 | Confine con campaign-debrief | Tratta risultati post-lancio come stato osservato e indirizza interpretazione e aggiornamento del playbook a `campaign-debrief` | Produce conclusioni di apprendimento o aggiorna il playbook nella review |
 | CR16 | Approvazioni | Distingue approvazione del contenuto della review, salvataggio e azioni esterne | Interpreta la review come autorizzazione a inviare, pubblicare o spendere |
 | CR17 | Artefatto e versioning | Usa `campaign-review.md` nel fascicolo, con stato e versione sostanziali | Modifica spec, Foundations, asset o instruction file automaticamente |
 | CR18 | Isolamento | In test, simulazioni ed eval non scrive nei percorsi canonici e non esegue azioni | Qualunque scrittura canonica o azione esterna non richiesta |

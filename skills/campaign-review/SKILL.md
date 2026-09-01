@@ -2,7 +2,7 @@
 name: campaign-review
 description: "Verifica prima del lancio una campagna già progettata, controllando coerenza strategica, integrità dei claim e prontezza operativa. Usala per ottenere un esito motivato, non per progettare campagne, produrre asset o pubblicare."
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # Revisionare una campagna
@@ -153,6 +153,6 @@ Durante test, simulazioni ed eval non scrivere nei percorsi canonici, anche se i
 
 ## Concludere senza eseguire
 
-Se l'utente porta risultati dopo l'esecuzione, trattali come dati osservati soltanto per chiarire lo stato della review. Non interpretare performance, non attribuire cause e non proporre aggiornamenti al playbook: indirizza quel lavoro a `learn-from-results` quando disponibile.
+Se l'utente porta risultati dopo l'esecuzione, trattali come dati osservati soltanto per chiarire lo stato della review. Non interpretare performance, non attribuire cause e non proporre aggiornamenti al playbook: indirizza quel lavoro a `campaign-debrief` quando disponibile.
 
-Chiudi indicando esito, rilievi aperti, responsabili, prove mancanti e prossimo passaggio minimo. Puoi proporre la skill o il team competente per una correzione, ma non avviare automaticamente `design-campaign`, builder, invii, pubblicazioni, spesa, configurazioni o `learn-from-results`.
+Chiudi indicando esito, rilievi aperti, responsabili, prove mancanti e prossimo passaggio minimo. Puoi proporre la skill o il team competente per una correzione, ma non avviare automaticamente `design-campaign`, builder, invii, pubblicazioni, spesa, configurazioni o `campaign-debrief`.
