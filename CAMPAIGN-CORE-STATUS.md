@@ -27,7 +27,7 @@ Le tre skill possiedono decisioni diverse e non sono passaggi obbligatori per og
 - Modifica v0.1.2 nel branch corrente: il passaggio post-lancio usa il nome ufficiale `campaign-debrief`.
 - Modifica candidata v0.1.3: quando il passo successivo è `campaign-debrief`, la review conserva una baseline decisionale compatta con target o regola, definizione, finestra, stato probatorio, asset, rilievi, autorizzazione ed esecuzione separate. Predispone il confronto descrittivo con il target senza presentarlo come confronto incrementale o causale.
 - Evidenza: regressioni statiche PASS, forward Review→Debrief sotto compattazione PASS e run integrato controllato sulla fixture sintetica Fabriloom delle nove skill candidate su Codex Desktop, con provenance verificata e `BEHAVIOR_PASS`. Il run prova la sorgente candidata, non un package installato o una campagna reale.
-- Limite: la beta.9 distribuita resta a v0.1.2; la candidata v0.1.3 non è ancora stata pacchettizzata, installata, pubblicata o validata con marketer esterni.
+- Distribuzione: v0.1.3 è inclusa nella Suite beta.10. Package, checksum, installazione e release vengono verificati nel workflow di pubblicazione della Suite; la validazione con marketer esterni resta separata.
 
 ### `campaign-debrief`
 

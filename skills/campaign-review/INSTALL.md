@@ -2,7 +2,7 @@
 
 Questo pacchetto contiene solo la skill installabile. Non contiene Campaign Spec, asset, dati di campagna, autorizzazioni o file `AGENTS.md`/`CLAUDE.md` dell'organizzazione.
 
-La versione candidata corrente della sorgente è `0.1.3`. La presenza nel repository non implica che esista già un pacchetto, un tag, una release pubblica o un'installazione attiva con la stessa versione. La distribuzione beta.9 può quindi restare a `0.1.2` finché non viene svolto un workflow di release separato.
+La versione corrente della sorgente è `0.1.3` ed è inclusa in Augmented Marketing Suite `0.1.0-beta.10`. La presenza nel repository non dimostra da sola installazione attiva o caricamento in una sessione: verifica sempre versione, checksum e destinazione del pacchetto effettivamente usato.
 
 ## Installazione da ZIP
 

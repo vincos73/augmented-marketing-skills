@@ -122,15 +122,15 @@ La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è 
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Suite | Beta 0.1.0-beta.9 con plugin OpenAI/Codex, plugin Claude, nove skill specialistiche e Assistant; caricamento multipiattaforma e pilot esterno restano verifiche separate |
+| Augmented Marketing Suite | Beta 0.1.0-beta.10 con plugin OpenAI/Codex, plugin Claude, nove skill specialistiche e Assistant; caricamento multipiattaforma e pilot esterno restano verifiche separate |
 | Augmented Marketing Assistant | v0.2.0 beta; orienta anche verso Campaign Core e Content Director; gli smoke test runtime precedenti riguardano la v0.1.0 |
-| Business Identity | `setup-business-context` v0.6.5 nella Suite beta.9 |
-| Marketing Foundations | `setup-marketing-system` v0.3.2 nella Suite beta.9 |
-| Brief della sfida | `define-marketing-challenge` v0.1.4 nella Suite beta.9 |
-| Direzione di marketing | `choose-marketing-direction` v0.2.3 nella Suite beta.9 |
-| Marketing Mix | `define-marketing-mix` v0.1.4 nella Suite beta.9 |
-| Campaign Core | Tre skill pubblicate nella Suite beta.9; pilot end-to-end ancora mancante |
-| Content Core | `content-director` v0.1.1 pubblicata singolarmente e nella Suite beta.9; builder esterni non inclusi |
+| Business Identity | `setup-business-context` v0.6.5 nella Suite beta.10 |
+| Marketing Foundations | `setup-marketing-system` v0.3.2 nella Suite beta.10 |
+| Brief della sfida | `define-marketing-challenge` v0.1.4 nella Suite beta.10 |
+| Direzione di marketing | `choose-marketing-direction` v0.2.3 nella Suite beta.10 |
+| Marketing Mix | `define-marketing-mix` v0.1.4 nella Suite beta.10 |
+| Campaign Core | Tre skill pubblicate nella Suite beta.10; run integrato controllato a nove skill PASS su Codex Desktop, pilot con responsabile reale ancora mancante |
+| Content Core | `content-director` v0.1.1 pubblicata singolarmente e nella Suite beta.10; builder esterni non inclusi |
 | Monitoring | Ipotesi opzionale di roadmap |
 
 Una cartella presente nel repository dimostra che esiste una sorgente di authoring. Non dimostra approvazione, installazione, pubblicazione o affidabilità in produzione.
