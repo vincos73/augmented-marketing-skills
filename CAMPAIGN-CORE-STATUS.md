@@ -1,64 +1,62 @@
-# Campaign Core — punto della situazione
+# Campaign Core: punto della situazione
 
-Aggiornato: 31 agosto 2026
+Aggiornato: 1 settembre 2026
 
-## Dove siamo
+## Stato verificato
 
-Il Campaign Core è definito come proposta di progettazione in [`CAMPAIGN-CORE.md`](CAMPAIGN-CORE.md).
+Il Campaign Core usa la sequenza ufficiale:
 
-La prima skill candidata è `design-campaign`. Trasforma un'esigenza di campagna, un brief o un marketing mix approvato in una Campaign Spec con:
+```text
+design-campaign → campaign-review → campaign-debrief
+```
 
-- obiettivo, pubblico e cambiamento cercato;
-- funnel o sequenza della campagna;
-- messaggi, prove e limiti dei claim;
-- ruolo dei canali e matrice degli asset;
-- responsabilità, dipendenze, approvazioni e capacità;
-- percorso di risposta, conversione e follow-up;
-- misurazione, assunzioni e condizioni per continuare, correggere o fermare.
+Le tre skill possiedono decisioni diverse e non sono passaggi obbligatori per ogni campagna.
 
-La skill non produce gli asset finali, non pubblica, non acquista media, non modifica CRM o piattaforme e non autorizza budget.
-
-## Versione candidata
+### `design-campaign`
 
 - Sorgente: [`skills/design-campaign/`](skills/design-campaign/)
-- Versione: `0.1.4`
-- Stato: candidata, installata localmente con parità verificata rispetto alla sorgente
-- Pubblicazione: non ancora inclusa nella Suite pubblicata
+- Versione candidata: `0.1.4`
+- Evidenza: il [retest indipendente Fabriloom](evals/design-campaign/runs/2026-08-31-fabriloom-independent-retest-v0.1.4.md) è PASS, con zero hard fail e zero soft fail sulla prima risposta standalone.
+- Limite: non sono ancora provati l'intero dialogo, la Campaign Spec finale, il percorso collegato o l'efficacia sul mercato.
 
-La v0.1.4 deriva dai test della v0.1.3 e corregge il linguaggio visibile verso termini comprensibili a marketer e manager: brief, funnel, revisione finale e passaggio alla produzione.
+### `campaign-review`
 
-## Evidenze disponibili
+- Sorgente: [`skills/campaign-review/`](skills/campaign-review/)
+- Versione candidata: `0.1.2`
+- Stato GitHub osservato: la v0.1.1 è stata unita su `main` con la PR #4; include contratto, fixture, eval, forward test indipendente PASS e pacchetto candidato.
+- Modifica v0.1.2 nel branch corrente: il passaggio post-lancio usa il nome ufficiale `campaign-debrief`.
+- Limite: candidata e pacchetto non equivalgono a installazione attiva, release pubblica o prova con marketer esterni.
 
-- La v0.1.2 ha superato il retest indipendente su Fabriloom con zero hard fail e due soft fail non bloccanti.
-- Il test utente della v0.1.3 ha confermato il valore della progressione, ma ha evidenziato prolissità multi-turn e lessico ancora troppo tecnico.
-- La v0.1.4 richiede ancora un retest comportamentale indipendente.
+### `campaign-debrief`
 
-I test esistenti non provano ancora il percorso completo con marketer esterni, la produzione reale di asset, la review pre-lancio o l'efficacia di una campagna.
+- Blueprint: [`blueprints/campaign-debrief/campaign-debrief-blueprint.md`](blueprints/campaign-debrief/campaign-debrief-blueprint.md)
+- Sorgente candidata: [`skills/campaign-debrief/`](skills/campaign-debrief/)
+- Versione: `0.1.6`, sorgente pronta con suite comportamentale sintetica PASS
+- Riferimenti: guida a sufficienza e domande, più template unico di `campaign-learning.md`
+- Eval: catalogo esistente e prima fixture longitudinale sintetica [`fabriloom-results`](evals/campaign-debrief/fixtures/fabriloom-results/README.md)
 
-## Prossimo passaggio
+La sorgente è considerata pronta nella versione v0.1.6. Confronta atteso, esecuzione reale e dati osservati; limita causalità e comparazioni; raccomanda un'azione con responsabile e nuovo controllo; non modifica campagne, budget, tracking o playbook. La prima risposta standalone e il follow-up con dati maturati sono PASS con zero hard e zero soft fail. La regressione collegata è PASS con tre soft fail non bloccanti; la persistenza isolata è PASS con un soft fail. Nel confronto matched-input la candidata è prima sulla fixture, con vantaggio stretto sul buon generalista e complementare rispetto ad Analytics.
 
-1. Eseguire un retest indipendente della v0.1.4 usando la fixture Fabriloom, senza leggere prima catalogo, run precedenti o baseline.
-2. Registrare hard fail, soft fail, limiti e materiali letti.
-3. Correggere la skill solo se il retest lo richiede.
-4. Verificare installazione/parità e decidere se proporre la pubblicazione.
+## Prossimi passaggi
 
-`campaign-review` e `campaign-debrief` restano moduli successivi: non vanno implementati in parallelo al retest di `design-campaign`. Il blueprint e il catalogo eval di `campaign-debrief` sono ora presenti nel branch.
+1. Allineare la sorgente v0.1.6 su GitHub tramite pull request.
+2. Decidere separatamente se e quando creare package, checksum, release e installazione.
+3. In una fase successiva, ripetere il confronto su più fixture e con parità di modello e harness.
+4. Provare il workflow con marketer esterni e con il processo reale del responsabile.
+5. Valutare i soft fail residui solo se ricompaiono in nuovi scenari.
+
+## Confini
+
+- Tutte le fixture sono sintetiche e restano fuori dai percorsi canonici.
+- La presenza di una sorgente non dimostra installazione o caricamento nella sessione.
+- Commit, push, pull request, release e installazione non sono impliciti nella validazione locale.
+- Gli eval non autorizzano spesa, pubblicazione o modifiche operative.
+- Il confronto con il workflow abituale usa un proxy sintetico e non costituisce prova sul workflow reale di Vincenzo.
+- Lo stato `pronta` riguarda la sorgente v0.1.6 e non equivale a package, release pubblica, installazione o validazione di mercato.
 
 ## Contesto Git
 
-- Branch: `codex/campaign-core-skill-candidates`
-- Commit di base: `a9b8364 feat: add Campaign Core candidate and align skill UX`
+- Branch di lavoro: `codex/campaign-debrief-skill`
+- Base: `origin/codex/campaign-core-skill-candidates` integrata con `origin/main`
 - Remoto: `https://github.com/vincos73/augmented-marketing-skills.git`
-- Il branch contiene il lavoro del Campaign Core; il worktree locale ha anche modifiche non pertinenti che non devono essere incluse automaticamente.
-
-## Come continuare sul portatile
-
-```bash
-git clone https://github.com/vincos73/augmented-marketing-skills.git
-cd augmented-marketing-skills
-git fetch origin
-git switch --track origin/codex/campaign-core-skill-candidates
-sed -n '1,240p' CAMPAIGN-CORE-STATUS.md
-```
-
-Dopo aver letto questo file, il riferimento progettuale completo è [`CAMPAIGN-CORE.md`](CAMPAIGN-CORE.md); la skill candidata e i materiali di test sono nella cartella [`skills/design-campaign/`](skills/design-campaign/) e in [`evals/design-campaign/`](evals/design-campaign/).
+- Il checkout principale con lavoro non correlato non viene modificato.

@@ -1,9 +1,9 @@
 ---
 artifact: campaign-debrief-blueprint
 version: 0.1
-status: bozza-di-progettazione
-last_reviewed: 2026-08-29
-implementation_status: blueprint-only
+status: pronta
+last_reviewed: 2026-09-01
+implementation_status: source-v0.1.6-ready
 ---
 
 # Blueprint di `campaign-debrief`
@@ -66,5 +66,4 @@ L'approvazione della lettura non autorizza modifiche a campagne, budget, piattaf
 
 La prima fixture deve includere almeno quattro-sei settimane, previsione datata, esecuzione reale, risultati per più fasi, modifica a metà periodo, limite di tracking, fattore alternativo plausibile e vincolo di capacità o costo.
 
-Gli eval coprono percorso collegato e standalone, dati insufficienti, confronto improprio, esecuzione divergente, segnale misto, tracking cambiato, decisione reversibile, richiesta di scalare senza autorità e proposta di aggiornamento stabile non applicata. Prima della sorgente installabile vanno confrontati buon agente generalista, workflow abituale e Analytics specialist.
-
+Gli eval coprono percorso collegato e standalone, dati insufficienti, confronto improprio, esecuzione divergente, segnale misto, tracking cambiato, decisione reversibile, richiesta di scalare senza autorità e proposta di aggiornamento stabile non applicata. Prima di impacchettare, installare o proporre la pubblicazione della candidata vanno confrontati buon agente generalista, workflow abituale e Analytics specialist.

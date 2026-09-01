@@ -1,0 +1,20 @@
+{
+  "format": "agent-skill-candidate",
+  "status": "candidate-not-release",
+  "package_policy": {
+    "archive_root": "one specialist skill folder",
+    "included": ["SKILL.md", "references/"],
+    "excluded": ["agents/", "INSTALL.md", "fixtures/", "evals/", "organization-context/"]
+  },
+  "skills": [
+    {
+      "name": "campaign-review",
+      "version": "0.1.1",
+      "archive": "campaign-review-0.1.1.zip",
+      "source": "skills/campaign-review/",
+      "source_commit": "4d5c8ada478b01e90604b11a64eebb9aee32a525",
+      "status": "superseded-by-source-v0.1.2",
+      "release": null
+    }
+  ]
+}
