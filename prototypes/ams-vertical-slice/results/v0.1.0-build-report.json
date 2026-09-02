@@ -1,0 +1,22 @@
+{
+  "prototype": "ams-vertical-slice",
+  "version": "0.1.0",
+  "source": "source/",
+  "generated_targets": [
+    "openai",
+    "claude"
+  ],
+  "skills": 9,
+  "archives": [
+    {
+      "file": "ams-vertical-slice-openai-v0.1.0.zip",
+      "sha256": "cabb1f822819c7b622bdf6f565936ce349907bc3be11c9319b96d638d9c18a1b",
+      "bytes": 21400
+    },
+    {
+      "file": "ams-vertical-slice-claude-v0.1.0.zip",
+      "sha256": "86dce525f817d5d9270f6ff87bd1864e0cefd1a1a0dc459819c8241e72a5fc39",
+      "bytes": 18079
+    }
+  ]
+}

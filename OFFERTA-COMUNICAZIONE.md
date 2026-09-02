@@ -122,13 +122,13 @@ La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è 
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Suite | Beta 0.1.0-beta.5 con plugin OpenAI, cinque skill stabili e Assistant stabile; comportamento multipiattaforma e pilot esterno ancora incompleti |
+| Augmented Marketing Suite | Beta 0.1.0-beta.8 con plugin OpenAI/Codex, plugin Claude, cinque skill specialistiche e Assistant stabile; comportamento multipiattaforma e pilot esterno ancora incompleti |
 | Augmented Marketing Assistant | v0.1.0 stabile; ingresso conversazionale incluso nella Suite come adattatore tecnico (`augmented-marketing-assistant`), con tre smoke test runtime Codex superati |
-| Business Identity | Skill approvata; verificare nel README la versione sorgente e quella pubblicata |
-| Marketing Foundations | Skill approvata e disponibile come release stabile |
-| Brief della sfida | Skill approvata e disponibile come release stabile |
-| Direzione di marketing | Skill approvata e disponibile come release stabile v0.2.0 |
-| Marketing Mix | Skill approvata e disponibile come release stabile v0.1.1 |
+| Business Identity | Skill approvata, v0.6.4 nella Suite beta.8 |
+| Marketing Foundations | Skill approvata, v0.3.1 nella Suite beta.8 |
+| Brief della sfida | Skill approvata, v0.1.3 nella Suite beta.8 |
+| Direzione di marketing | Skill approvata, v0.2.2 nella Suite beta.8; ultima release singola verificata v0.2.1 |
+| Marketing Mix | Skill approvata, v0.1.3 nella Suite beta.8; ultima release singola verificata v0.1.2 |
 | Campaign Core | Roadmap |
 | Content Core | Roadmap; builder esterni non inclusi |
 | Monitoring | Ipotesi opzionale di roadmap |

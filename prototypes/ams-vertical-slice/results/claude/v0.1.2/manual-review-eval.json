@@ -1,0 +1,17 @@
+{
+  "kind": "manual-specialist",
+  "specialist": "review-campaign",
+  "hard_checks": {
+    "specialist_marker_present": true,
+    "router_state_absent": true
+  },
+  "automatic_verdict": "PASS",
+  "manual_review_flags": [
+    {
+      "label": "claim_60",
+      "context": "elli previsti. Va confrontato con chi tiene quei documenti prima di considerare chiuso il capitolo contenuto. ## Claim, citazioni, qualifiche, approvazioni - Bene la rinuncia al 60% e al 42%: nessun numero non sostenuto entra nel pezzo. - Restano però due affermazioni che funzionano come promesse anche senza cifre: che il collo di bottiglia sia altrove rispet"
+    }
+  ],
+  "assistant_characters": 5049,
+  "transcript": "prototypes/ams-vertical-slice/results/claude/v0.1.2/manual-review-session.jsonl"
+}

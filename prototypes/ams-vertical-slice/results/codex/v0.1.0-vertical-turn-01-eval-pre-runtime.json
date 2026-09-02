@@ -1,0 +1,25 @@
+{
+  "kind": "router",
+  "hard_checks": {
+    "all_playbooks_present_and_ordered": false,
+    "all_state_phases_present_and_ordered": false,
+    "no_specialist_marker_in_router_run": true
+  },
+  "automatic_verdict": "FAIL",
+  "playbook_positions": {
+    "SLICE_PLAYBOOK: base": -1,
+    "SLICE_PLAYBOOK: challenge": -1,
+    "SLICE_PLAYBOOK: direction": -1,
+    "SLICE_PLAYBOOK: mix": -1,
+    "SLICE_PLAYBOOK: campaign": -1,
+    "SLICE_PLAYBOOK: asset": -1,
+    "SLICE_PLAYBOOK: review": -1,
+    "SLICE_PLAYBOOK: learning": -1
+  },
+  "state_phases_observed": [],
+  "continuity_marker_observed": false,
+  "specialist_markers_observed": [],
+  "manual_review_flags": [],
+  "assistant_characters": 0,
+  "transcript": "prototypes/ams-vertical-slice/results/codex/vertical-turn-01.jsonl"
+}

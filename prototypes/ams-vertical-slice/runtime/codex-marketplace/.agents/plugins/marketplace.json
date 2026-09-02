@@ -1,0 +1,20 @@
+{
+  "name": "ams-vertical-slice-local",
+  "interface": {
+    "displayName": "AMS Vertical Slice Local"
+  },
+  "plugins": [
+    {
+      "name": "ams-vertical-slice",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ams-vertical-slice"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

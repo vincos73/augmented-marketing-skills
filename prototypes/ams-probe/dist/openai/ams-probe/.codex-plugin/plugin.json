@@ -1,0 +1,29 @@
+{
+  "name": "ams-probe",
+  "version": "0.0.2",
+  "description": "Probe isolato per verificare router automatico e specialisti manuali su Codex.",
+  "author": {
+    "name": "Augmented Marketing Suite"
+  },
+  "keywords": [
+    "marketing",
+    "skills",
+    "probe",
+    "portability"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AMS Probe",
+    "shortDescription": "Test isolato della portabilità delle skill",
+    "longDescription": "Verifica un router conversazionale e due specialisti manuali senza modificare Augmented Marketing Suite.",
+    "developerName": "Augmented Marketing Suite",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "defaultPrompt": [
+      "Ho un obiettivo di marketing ma non so da quale problema partire.",
+      "Confronta possibili direzioni per una sfida già confermata."
+    ]
+  }
+}

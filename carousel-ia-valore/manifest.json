@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.4",
+  "source_type": "article",
+  "sequence_mode": "narrative",
+  "visual_style_system": "editorial-frame",
+  "logo_mode": "hidden",
+  "source_url": "https://vincos.it/2026/08/14/lia-non-ti-rubera-il-lavoro-ma-potrebbe-abbassarne-il-valore/",
+  "target_channels": ["instagram_feed", "linkedin_document"],
+  "channel_variants": [],
+  "workflow_state": "bozza",
+  "revision": 1,
+  "workflow_receipts": [],
+  "production": {
+    "mode": "renderer",
+    "producer": "approved-preview-dom-v2",
+    "supported_style_systems": ["editorial-frame"],
+    "expected_outputs": ["pdf", "png", "contact_sheet"]
+  },
+  "proof": {
+    "slide_ids": ["cover", "item-4", "outro"],
+    "style_system_verified": false,
+    "browser": null,
+    "approved": false
+  },
+  "format": {
+    "ratio": "4:5",
+    "master_width": 1080,
+    "master_height": 1350,
+    "width": 1440,
+    "height": 1800,
+    "preview_width": 480,
+    "preview_height": 600
+  },
+  "typography": {
+    "cover_px": 112,
+    "cover_subtitle_px": 56,
+    "section_title_px": 72,
+    "body_px": 64,
+    "metadata_px": 26,
+    "cover_weight": 800,
+    "cover_subtitle_weight": 500,
+    "section_title_weight": 800,
+    "body_weight": 620,
+    "body_line_height": 1.12,
+    "sentence_gap_em": 0.6,
+    "cover_subtitle_line_height": 1.08,
+    "body_tracking_em": -0.025,
+    "min_auto_scale": 0.92,
+    "overflow_policy": "error_and_copy_revision"
+  },
+  "cover_title": "L’IA non ti ruberà il lavoro.\nMa potrebbe abbassarne il valore.",
+  "cover_subtitle": "",
+  "cover_title_bold": ["abbassarne il valore"],
+  "cover_title_italic": [],
+  "cover_title_underline": [],
+  "cover_title_accent": [],
+  "cover_image": "",
+  "cover_image_position": "50% 50%",
+  "cover_alt_text": "Copertina tipografica: l’intelligenza artificiale potrebbe non sostituire il lavoro, ma ridurne il valore economico.",
+  "cover_visual_concepts": [],
+  "cover_visual_metaphor": "",
+  "cover_visual_prompt": "",
+  "cover_mode": "typographic",
+  "brand": {
+    "profile_type": "carousel-brand",
+    "schema_version": "1.1",
+    "name": "Editorial Carousel",
+    "website": "",
+    "signature": "",
+    "tagline": "",
+    "logos": {"on_light": "", "on_dark": ""},
+    "fonts": {
+      "display": {"family": "Arial", "source": "system"},
+      "body": {"family": "Arial", "source": "system"},
+      "emphasis_italic": {"family": "Arial", "source": "system"}
+    },
+    "palette": {
+      "surface_mode": "alternating",
+      "background_light": "#F8F7F4",
+      "background_dark": "#2D2E2F",
+      "text_on_light": "#2D2E2F",
+      "text_on_dark": "#FFFFFF",
+      "accent": "#6B3F5D"
+    },
+    "visual_direction": {
+      "mode": "editorial-geometric",
+      "description": "Tipografia pulita, cornice netta e accento melanzana sobrio",
+      "references": [],
+      "avoid": [],
+      "internal_slides": "clean_typographic"
+    },
+    "visual_signature": {"style_system": "editorial-frame"},
+    "outro": {"enabled": true, "goal": "visit_blog", "copy_mode": "generate_from_source", "eyebrow": "", "fixed_title": "", "fixed_body": ""}
+  },
+  "items": [
+    {
+      "id": "item-1",
+      "layout": "editorial",
+      "title": "",
+      "title_bold": [], "title_italic": [], "title_underline": [], "title_accent": [],
+      "summary": "Produrre di più e lavorare più velocemente non significa necessariamente rendere il proprio lavoro più prezioso.",
+      "summary_bold": ["non significa necessariamente rendere il proprio lavoro più prezioso"],
+      "summary_italic": [], "summary_underline": [], "summary_accent": [],
+      "alt_text": "Aumentare produttività e velocità non garantisce che il lavoro abbia un valore economico maggiore."
+    },
+    {
+      "id": "item-2",
+      "layout": "editorial",
+      "title": "",
+      "title_bold": [], "title_italic": [], "title_underline": [], "title_accent": [],
+      "summary": "Quando l’IA porta molte persone più vicino al livello dei senior, il divario tra esperti e meno esperti può ridursi.\nLa competenza non scompare.\nMa potrebbe essere pagata meno perché è diventata meno rara.",
+      "summary_bold": ["il divario tra esperti e meno esperti può ridursi", "pagata meno"],
+      "summary_italic": [], "summary_underline": [], "summary_accent": [],
+      "alt_text": "L’IA può ridurre il divario di competenza e rendere meno rara una capacità prima più remunerata."
+    },
+    {
+      "id": "item-3",
+      "layout": "editorial",
+      "title": "",
+      "title_bold": [], "title_italic": [], "title_underline": [], "title_accent": [],
+      "summary": "L’augmentation aumenta la produttività del singolo.\nMa produttività individuale e potere contrattuale non coincidono.\nIl passaggio dalla compressione delle performance alla riduzione dei compensi non è automatico.",
+      "summary_bold": ["produttività individuale e potere contrattuale non coincidono"],
+      "summary_italic": [], "summary_underline": [], "summary_accent": [],
+      "alt_text": "Aumentare la produttività non implica automaticamente aumentare il potere contrattuale o ridurre i compensi."
+    },
+    {
+      "id": "item-4",
+      "layout": "editorial",
+      "title": "",
+      "title_bold": [], "title_italic": [], "title_underline": [], "title_accent": [],
+      "summary": "Il problema potrebbe riguardare soprattutto i lavoratori junior.\nMolte attività automatizzabili sono proprio quelle attraverso cui si impara un mestiere.\nL’IA può aumentare la produttività del principiante e, nello stesso tempo, ridurre la domanda complessiva di principianti.",
+      "summary_bold": ["ridurre la domanda complessiva di principianti"],
+      "summary_italic": [], "summary_underline": [], "summary_accent": [],
+      "alt_text": "Le attività formative dei lavoratori junior possono essere automatizzate, aumentando la produttività ma riducendo la domanda di principianti."
+    },
+    {
+      "id": "item-5",
+      "layout": "editorial",
+      "title": "",
+      "title_bold": [], "title_italic": [], "title_underline": [], "title_accent": [],
+      "summary": "La domanda decisiva non è quanto lavoro verrà automatizzato.\nÈ quale parte dell’esperienza diventerà superflua e quale diventerà più importante.\nIl valore potrebbe spostarsi verso giudizio, contesto, verifica, responsabilità e fiducia.",
+      "summary_bold": ["quale parte dell’esperienza diventerà superflua", "giudizio, contesto, verifica, responsabilità e fiducia"],
+      "summary_italic": [], "summary_underline": [], "summary_accent": [],
+      "alt_text": "Il valore del lavoro dipenderà da quali attività l’IA renderà superflue e da competenze come giudizio, verifica e responsabilità."
+    }
+  ],
+  "outro": {
+    "enabled": true,
+    "eyebrow": "",
+    "title": "Imparare a usare l’IA non basta.",
+    "body": "Il prossimo vantaggio competitivo sarà costruire competenze che non dipendono soltanto dalla produzione dell’output.\nLeggi l’articolo completo sul blog di Vincos.",
+    "goal": "visit_blog",
+    "alt_text": "Chiusura: imparare a usare l’IA non basta. Invito a leggere l’articolo completo sul blog di Vincos."
+  },
+  "accessibility": {
+    "reading_order": ["cover", "item-1", "item-2", "item-3", "item-4", "item-5", "outro"],
+    "transcript": "L’IA non ti ruberà il lavoro. Ma potrebbe abbassarne il valore.\nProdurre di più e lavorare più velocemente non significa necessariamente rendere il proprio lavoro più prezioso.\nQuando l’IA porta molte persone più vicino al livello dei senior, il divario tra esperti e meno esperti può ridursi. La competenza non scompare. Ma potrebbe essere pagata meno perché è diventata meno rara.\nL’augmentation aumenta la produttività del singolo. Ma produttività individuale e potere contrattuale non coincidono. Il passaggio dalla compressione delle performance alla riduzione dei compensi non è automatico.\nIl problema potrebbe riguardare soprattutto i lavoratori junior. Molte attività automatizzabili sono proprio quelle attraverso cui si impara un mestiere. L’IA può aumentare la produttività del principiante e, nello stesso tempo, ridurre la domanda complessiva di principianti.\nLa domanda decisiva non è quanto lavoro verrà automatizzato. È quale parte dell’esperienza diventerà superflua e quale diventerà più importante. Il valore potrebbe spostarsi verso giudizio, contesto, verifica, responsabilità e fiducia.\nImparare a usare l’IA non basta. Il prossimo vantaggio competitivo sarà costruire competenze che non dipendono soltanto dalla produzione dell’output. Leggi l’articolo completo sul blog di Vincos."
+  }
+}

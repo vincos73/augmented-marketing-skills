@@ -1,0 +1,6 @@
+interface:
+  display_name: "Define Challenge Probe"
+  short_description: "Specialista manuale per chiarire la sfida"
+  default_prompt: "Use $ams-probe-define-marketing-challenge to run the isolated AMS probe."
+policy:
+  allow_implicit_invocation: false

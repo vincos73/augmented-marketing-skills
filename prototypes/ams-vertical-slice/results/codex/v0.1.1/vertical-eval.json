@@ -1,0 +1,83 @@
+{
+  "kind": "router",
+  "hard_checks": {
+    "all_playbooks_present_and_ordered": true,
+    "all_state_phases_present_and_ordered": false,
+    "no_specialist_marker_in_router_run": true
+  },
+  "automatic_verdict": "FAIL",
+  "playbook_positions": {
+    "SLICE_PLAYBOOK: base": 617,
+    "SLICE_PLAYBOOK: challenge": 6726,
+    "SLICE_PLAYBOOK: direction": 10677,
+    "SLICE_PLAYBOOK: mix": 15716,
+    "SLICE_PLAYBOOK: campaign": 19353,
+    "SLICE_PLAYBOOK: asset": 25975,
+    "SLICE_PLAYBOOK: review": 29673,
+    "SLICE_PLAYBOOK: learning": 34338
+  },
+  "state_phases_observed": [
+    "base",
+    "challenge",
+    "direction",
+    "mix",
+    "campagna",
+    "asset",
+    "review",
+    "apprendimento"
+  ],
+  "continuity_marker_observed": true,
+  "specialist_markers_observed": [],
+  "manual_review_flags": [
+    {
+      "label": "claim_60",
+      "context": "bile | Testimonianza anonima sulle prove prima disperse in quattro cartelle e ora associate a proprietario e versione riutilizzabile. | | Vietato | «Rispondi ai questionari ESG il 60% più velocemente». | | Vietato | Riduzione generale del 60%, garanzie di conformità e attribuzione a Fabriloom della certificazione ISO 27001 del provider cloud. | Il **60% è solt"
+    },
+    {
+      "label": "claim_60",
+      "context": "quattro cartelle e ora associate a proprietario e versione riutilizzabile. | | Vietato | «Rispondi ai questionari ESG il 60% più velocemente». | | Vietato | Riduzione generale del 60%, garanzie di conformità e attribuzione a Fabriloom della certificazione ISO 27001 del provider cloud. | Il **60% è soltanto il miglior risultato di un singolo pilota**, non la me"
+    },
+    {
+      "label": "claim_60",
+      "context": "ESG il 60% più velocemente». | | Vietato | Riduzione generale del 60%, garanzie di conformità e attribuzione a Fabriloom della certificazione ISO 27001 del provider cloud. | Il **60% è soltanto il miglior risultato di un singolo pilota**, non la media e non una promessa approvata. Fonte: `evidence-and-claims.md`. ### Capacità, canali e percorso di risposta"
+    },
+    {
+      "label": "claim_60",
+      "context": "ilità di Growth Operations; - regole e tempi del passaggio a Sales; - copy quantitativo pubblico del 42%. ### Limiti che condizioneranno le decisioni successive Il messaggio del 60% non è utilizzabile. Il funnel non è ancora operativo. Il budget paid non è autorizzato. La capacità produttiva, commerciale e operativa è limitata. Inoltre, l’obiettivo di volume"
+    },
+    {
+      "label": "claim_60",
+      "context": "ima_fase: challenge, soltanto dopo conferma esplicita della base Registro la base come confermata con quattro vincoli espliciti: nessun obiettivo approvato di 100 lead, claim del 60% vietato, paid non autorizzato ed email v1 circoscritta ai 640 contatti classificati. Il percorso AMS mi porta ora al playbook della sfida; resterò sul problema da risolvere e sui"
+    },
+    {
+      "label": "claim_60",
+      "context": "ubblico prioritario, oppure vuoi correggere questo elemento?** STATO_VERTICAL_SLICE - fase: challenge - confermato: base verificabile; target di 100 lead non approvato; claim del 60% vietato; paid non autorizzato; email v1 limitata ai 640 contatti classificati - aperto: conferma della sfida e del Sustainability/ESG Manager come pubblico prioritario - prossima_"
+    },
+    {
+      "label": "claim_60",
+      "context": "smo:** usare il risultato mediano dichiarato del 42% come prova quantitativa, completo di tutte le limitazioni. - **Evidenze favorevoli:** tre piloti osservati, con intervallo 28%–60%. - **Assunzione fragile:** campione selezionato, autostima, nessuna verifica esterna; non sappiamo se il dato aumenti fiducia o scetticismo. - **Trade-off e rinuncia:** maggiore c"
+    },
+    {
+      "label": "claim_60",
+      "context": "metodo, offre prova credibile nel webinar e invita al confronto qualificato. Email limitata ai 640 contatti classificati; niente paid. Il 42% rimane subordinato a Legal, mentre il 60% resta escluso. | ## Tensioni e dipendenze - **Promotion → Place:** non si può generare domanda prima che form, consenso, tracking, notifica e assegnazione siano verificati end-t"
+    },
+    {
+      "label": "claim_60",
+      "context": "ersione riutilizzabile. - **Condizionato:** riduzione mediana dichiarata del 42% nei tre progetti pilota osservati, solo con contesto completo e approvazione Legal. - **Vietato:** 60%, promesse di conformità o successo, garanzie di risultato e certificazione ISO 27001 di Fabriloom. Raccomando di **escludere il 42% dalla prima versione**: la campagna può dimost"
+    },
+    {
+      "label": "claim_60",
+      "context": "provati dello Sprint; - claim qualitativo autorizzato sulla riduzione del lavoro manuale; - testimonianza anonima autorizzata; - limiti espliciti dell’offerta. Non usa il 42%, il 60%, certificazioni, risultati garantiti o dati della campagna precedente. Confermi questo asset candidato per passare alla review? ASSET_CANDIDATO: non pubblicato STATO_VERTICAL_S"
+    },
+    {
+      "label": "claim_60",
+      "context": "aumento di scala o introduzione di paid media. **Fermare** - L’uso del target di 20 come previsione o promessa. - Qualsiasi attribuzione dei tre Sprint alla sola campagna. - Il 60% e ogni claim di risultato garantito. - Ogni valutazione positiva o negativa del carousel basata su questi dati aggregati. ### Prossimo test raccomandato **Ipotesi:** correggere"
+    },
+    {
+      "label": "all_1200_contacts",
+      "context": "avviare al massimo **10 Sprint** fra ottobre e novembre, non più di tre nella stessa settimana. - Sales può gestire complessivamente **sei call qualificate a settimana**. - Email: 1.200 contatti con consenso documentato; soltanto 640 hanno tag tematici affidabili. Nessun invio indiscriminato ai contatti non classificati. - LinkedIn: 9.400 follower, composizione profession"
+    }
+  ],
+  "assistant_characters": 39360,
+  "transcript": "prototypes/ams-vertical-slice/results/codex/vertical-combined.jsonl"
+}

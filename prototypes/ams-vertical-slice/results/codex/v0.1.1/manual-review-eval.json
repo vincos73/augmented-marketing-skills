@@ -1,0 +1,17 @@
+{
+  "kind": "manual-specialist",
+  "specialist": "review-campaign",
+  "hard_checks": {
+    "specialist_marker_present": true,
+    "router_state_absent": true
+  },
+  "automatic_verdict": "PASS",
+  "manual_review_flags": [
+    {
+      "label": "claim_60",
+      "context": "abbia autorità o budget per acquistare lo Sprint. - Messaggio: prove disperse e responsabilità poco chiare costruiscono un problema coerente con l’offerta. - Claim: l’assenza del 60% e del 42% elimina il rischio legato a quelle statistiche. Resta da qualificare l’affermazione categorica «non è il vero collo di bottiglia»: meglio circoscriverla, per esempio «Sp"
+    }
+  ],
+  "assistant_characters": 3128,
+  "transcript": "prototypes/ams-vertical-slice/results/codex/manual-review.jsonl"
+}

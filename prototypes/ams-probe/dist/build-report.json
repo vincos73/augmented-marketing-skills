@@ -1,0 +1,21 @@
+{
+  "probe": "ams-probe",
+  "version": "0.0.2",
+  "source": "source/",
+  "generated_targets": [
+    "openai",
+    "claude"
+  ],
+  "archives": [
+    {
+      "file": "ams-probe-openai-v0.0.2.zip",
+      "sha256": "89bd2b377b40b5b893257cf021271a9adae4df86dd4558cd69a2bc9f2c554b96",
+      "bytes": 8036
+    },
+    {
+      "file": "ams-probe-claude-v0.0.2.zip",
+      "sha256": "944ce46499969f1f6e31de50f2b27e96b13c66625a8c1933ad082d7c60f6ce4b",
+      "bytes": 6804
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "kind": "router",
+  "hard_checks": {
+    "all_playbooks_present_and_ordered": true,
+    "all_state_phases_present_and_ordered": true,
+    "no_specialist_marker_in_router_run": true
+  },
+  "automatic_verdict": "PASS",
+  "playbook_positions": {
+    "SLICE_PLAYBOOK: base": 601,
+    "SLICE_PLAYBOOK: challenge": 7227,
+    "SLICE_PLAYBOOK: direction": 11440,
+    "SLICE_PLAYBOOK: mix": 17442,
+    "SLICE_PLAYBOOK: campaign": 21291,
+    "SLICE_PLAYBOOK: asset": 27461,
+    "SLICE_PLAYBOOK: review": 30914,
+    "SLICE_PLAYBOOK: learning": 35042
+  },
+  "state_phases_observed": [
+    "base",
+    "challenge",
+    "direction",
+    "mix",
+    "campaign",
+    "asset",
+    "review",
+    "learning"
+  ],
+  "continuity_marker_observed": true,
+  "specialist_markers_observed": [],
+  "manual_review_flags": [
+    {
+      "label": "claim_60",
+      "context": "print tra ottobre e novembre, non più di 3 nella stessa settimana | `offer-brief.md` | | Nei 3 piloti la riduzione mediana dichiarata del tempo è stata del 42%, con intervallo 28%–60% | `evidence-and-claims.md` | | La misura è autostimata, il campione non è rappresentativo e non esiste verifica esterna | `evidence-and-claims.md` | | La lista email utilizzabile"
+    },
+    {
+      "label": "claim_60",
+      "context": "to per preparare un questionario si è ridotto in mediana del 42%. Il campione è limitato e i risultati non sono garantiti. **Non utilizzabile** - «Rispondi ai questionari ESG il 60% più velocemente». - Qualsiasi generalizzazione del miglior risultato del singolo pilota. - Garanzie di conformità, superamento di questionari o gare. - Affermazioni secondo cui Fa"
+    },
+    {
+      "label": "claim_60",
+      "context": "si e responsabile interno — è un precedente utile, non ancora una definizione approvata per questa campagna. ### Limiti che condizionano le decisioni successive - Il claim del **60%** richiesto dalla Marketing Director è esplicitamente vietato. - Il target di **100 lead** non è valutabile finché “lead” non viene definito. - La landing e il passaggio a Sales n"
+    },
+    {
+      "label": "claim_60",
+      "context": "e, né quale quota dell’interesse possa diventare una call qualificata attraverso un percorso di risposta ancora da completare. ### Vincoli incorporati - Nessun uso del claim del 60%. - Nessun obiettivo di 100 lead assunto come approvato. - Nessuna dipendenza da paid media non autorizzati. - Nessuna estensione iniziale dell’email oltre i 640 contatti classific"
+    },
+    {
+      "label": "claim_60",
+      "context": "blico primario, oppure vuoi correggere uno dei due elementi?** STATO_VERTICAL_SLICE - fase: challenge - confermato: base verificabile; target di 100 lead non approvato; claim del 60% vietato; paid media non autorizzati; email v1 limitata ai 640 contatti classificati - aperto: conferma della sfida e del Sustainability/ESG Manager come pubblico primario - prossi"
+    },
+    {
+      "label": "claim_60",
+      "context": "l costo delle prove frammentate, mostrare un metodo credibile e offrire nel webinar una prova contestualizzata, conducendo alla richiesta volontaria di confronto. Niente claim del 60%, paid media o promesse di conformità. | ## Tensioni e dipendenze - **Target e capacità:** 20 richieste qualificate possono essere gestibili nel periodo, ma non equivalgono a 20"
+    },
+    {
+      "label": "claim_60",
+      "context": "iarata del 42% può apparire soltanto dopo approvazione Legal e con campione, intervallo, natura autodichiarata e assenza di garanzia chiaramente contestualizzati. **Vietati** - “60% più veloce” o formulazioni equivalenti. - Garanzie su tempi, conformità o completamento dei questionari. - Dichiarare o suggerire una certificazione ISO 27001 di Fabriloom. ## Do"
+    },
+    {
+      "label": "claim_60",
+      "context": "| Il webinar è il passaggio appropriato per questo primo contenuto. La registrazione resta distinta dalla richiesta commerciale. | | Claim | Conformi. Non vengono usati il 42%, il 60%, certificazioni o promesse di conformità e risultato. | La precisazione sul pubblico è una correzione consigliata, non una riscrittura silenziosa del copy approvato. ## Possibil"
+    },
+    {
+      "label": "claim_60",
+      "context": "webinar e richiesta commerciale separata. - L’offerta e il prezzo correnti nel prossimo test controllato. - La governance dei claim: 42% solo con approvazione e contesto completo; 60% escluso. - La distinzione tra registrazioni, richieste complete e richieste qualificate. **Correggere** - L’assegnazione CRM: due richieste perse sono incompatibili con un nuovo"
+    },
+    {
+      "label": "all_1200_contacts",
+      "context": "ce-and-claims.md` | | La misura è autostimata, il campione non è rappresentativo e non esiste verifica esterna | `evidence-and-claims.md` | | La lista email utilizzabile comprende 1.200 contatti consenzienti, ma solo 640 con tag di ruolo affidabile | `operations-and-channels.md` | | Sales può gestire complessivamente 6 call qualificate a settimana | `operations-and-channe"
+    },
+    {
+      "label": "paid_15000",
+      "context": "ivo di almeno 100 lead. - Uso combinato di LinkedIn, email, webinar e retargeting. - Titolo proposto del webinar. - Sequenza della campagna e CTA verso una consulenza. - Budget di 15.000 euro. - Pubblico prioritario. - Uso pubblico del dato del 42%. - Partecipazione della Head of Customer Success. ### Responsabilità e definizioni mancanti - Significato operativo di *"
+    }
+  ],
+  "assistant_characters": 40868,
+  "transcript": "prototypes/ams-vertical-slice/results/codex/v0.1.2/vertical-combined.jsonl"
+}

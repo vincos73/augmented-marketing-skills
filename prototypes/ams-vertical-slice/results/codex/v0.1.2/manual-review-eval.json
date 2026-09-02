@@ -1,0 +1,17 @@
+{
+  "kind": "manual-specialist",
+  "specialist": "review-campaign",
+  "hard_checks": {
+    "specialist_marker_present": true,
+    "router_state_absent": true
+  },
+  "automatic_verdict": "PASS",
+  "manual_review_flags": [
+    {
+      "label": "claim_60",
+      "context": "e invita a richiedere un confronto. **Esito unico: NON PUÒ PROCEDERE** Il contenuto ha una struttura coerente — problema, conseguenze, offerta e CTA — e non utilizza i dati del 60% o del 42%. Tuttavia, un asset corretto non compensa un percorso operativo non collaudato. **Contenuto** - Il pubblico non è esplicitato: va chiarito se il messaggio è rivolto a"
+    }
+  ],
+  "assistant_characters": 2809,
+  "transcript": "prototypes/ams-vertical-slice/results/codex/v0.1.2/manual-review.jsonl"
+}
