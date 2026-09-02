@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "ams-probe",
+  "displayName": "AMS Probe",
+  "version": "0.0.2",
+  "description": "Probe isolato per verificare router automatico e specialisti manuali su Claude Code.",
+  "author": {
+    "name": "Augmented Marketing Suite"
+  },
+  "keywords": [
+    "marketing",
+    "skills",
+    "probe",
+    "portability"
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AMS Vertical Slice"
+  short_description: "Percorso marketing completo e verificabile"
+  default_prompt: "Use $ams-vertical-router for the isolated AMS Vertical Slice test."

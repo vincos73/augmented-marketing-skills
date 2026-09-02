@@ -1,0 +1,6 @@
+interface:
+  display_name: "Build Campaign Asset"
+  short_description: "Specialista manuale: fase asset"
+  default_prompt: "Use $ams-vs-build-campaign-asset for the isolated AMS Vertical Slice test."
+policy:
+  allow_implicit_invocation: false
