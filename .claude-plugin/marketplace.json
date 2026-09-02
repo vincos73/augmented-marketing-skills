@@ -1,0 +1,18 @@
+{
+  "name": "augmented-marketing-skills",
+  "owner": {
+    "name": "Vincenzo Cosenza",
+    "url": "https://github.com/vincos73"
+  },
+  "plugins": [
+    {
+      "name": "augmented-marketing-suite",
+      "description": "Nove skill specialistiche per fondazione, strategia, campagne e direzione editoriale verificabili.",
+      "source": {
+        "source": "archive",
+        "url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/augmented-marketing-suite-v0.1.0-beta.10/augmented-marketing-suite-claude-v0.1.0-beta.10.zip",
+        "sha256": "c0c7e2b8ad1e0f435ea948ab920ec91892389f1c988230a756218339275b853b"
+      }
+    }
+  ]
+}
