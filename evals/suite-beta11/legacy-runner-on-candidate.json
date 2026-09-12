@@ -1,0 +1,86 @@
+{
+  "mode": "static-only",
+  "pass": false,
+  "checks": [
+    {
+      "id": "FIXTURE_VALID",
+      "state": "pass",
+      "rule_ids": [],
+      "detail": "fixture={\n  \"fixture\": \"/Users/vincos/Documents/ChatGPT/Marketing Skills Project/evals/end-to-end/fabriloom-evidence-readiness\",\n  \"fixture_errors\": [],\n  \"pass\": true\n}; input_boundary=PASS: isolamento input per 5 pacchetti"
+    },
+    {
+      "id": "LINEAGE_PASS",
+      "state": "pass",
+      "rule_ids": [],
+      "detail": "lineage=PASS manifest positivo: FABRILOOM-ERS-LINEAGE-1\nPASS caso negativo respinto: asset v0 riferito al file v1\nPASS caso negativo respinto: lineage completa promossa a asset v0 mentre il file resta v1\nPASS caso negativo respinto: resolution review non risolta\nPASS caso negativo respinto: versione mancante\nPASS caso negativo respinto: rilievo bloccante non chiuso\nPASS caso negativo respinto: scope paid non autorizzato\nPASS caso negativo respinto: execution log con review superata\nPASS caso negativo respinto: asset diverso da quello revisionato; static_boundary=PASS: static evidence boundary su nove skill reali"
+    },
+    {
+      "id": "INVARIANTS_PASS",
+      "state": "pass",
+      "rule_ids": [],
+      "detail": "PASS positive/fabriloom-preexecution-cross-core-v2\nPASS negative/forbidden-claim-promoted -> CLAIM_ASSERTED\nPASS negative/conditional-claim-gate-lost -> CONDITIONAL_CLAIM_CHANGED\nPASS negative/anonymous-quote-identifies-company -> TESTIMONIAL_IDENTIFIER_EXPOSED\nPASS negative/operations-capacity-softened -> CAPACITY_MEANING_CHANGED\nPASS negative/sales-capacity-inflated -> CAPACITY_VALUE_CHANGED\nPASS negative/growth-operations-merged-into-operations -> DUPLICATE_ID, MISSING_INVARIANT, ROLE_RESPONSIBILITY_CHANGED, ROLE_STATE_CHANGED\nPASS negative/legal-approval-invented -> ROLE_STATE_CHANGED\nPASS negative/sales-director-responsibility-lost -> ROLE_RESPONSIBILITY_CHANGED\nPASS negative/tracking-promoted-before-boundary -> TRACKING_EARLY_PROMOTION, TRACKING_UNSUPPORTED_VERIFICATION\nPASS negative/tracking-evidence-unresolved -> TRACKING_EVIDENCE_UNRESOLVED\nPASS negative/finance-proposal-promoted -> APPROVAL_PROPOSAL_PROMOTED\nPASS negative/missing-authorization-invented -> APPROVAL_AUTHORITY_INVENTED\nPASS negative/handoff-chain-broken -> HANDOFF_PREVIOUS_MISMATCH\nPASS negative/identifier-type-unknown -> TESTIMONIAL_IDENTIFIER_TYPE_UNKNOWN\n\nSELF-TEST PASS: 1 positivo, 14 negativi"
+    },
+    {
+      "id": "REVIEW_BASELINE_PASS",
+      "state": "pass",
+      "rule_ids": [],
+      "detail": "PASS positive/qualified-requests-six-week-window\nPASS positive/missing-target-remains-missing\nPASS positive/qualitative-success-rule-with-maturity\nPASS negative/numeric-target-changed -> C002\nPASS negative/missing-target-invented -> C003\nPASS negative/qualitative-rule-simplified -> C002\nPASS negative/authorization-used-as-execution -> C002, C004\nPASS negative/target-comparison-blocked-by-missing-baseline -> C005\nPASS negative/causal-comparison-invented -> C007\nSELF-TEST PASS: 3 positivi, 6 negativi"
+    },
+    {
+      "id": "AUTHORITY_PASS",
+      "state": "pass",
+      "rule_ids": [],
+      "detail": "{\n  \"oracle\": \"evals/authorization-ledger/oracles/cases.json\",\n  \"oracle_version\": \"2.0.0\",\n  \"pass\": true,\n  \"cases\": [\n    {\n      \"id\": \"chat-v1-valid\",\n      \"expected\": \"pass\",\n      \"actual\": \"pass\",\n      \"expected_rule_ids\": [],\n      \"actual_rule_ids\": [],\n      \"oracle_match\": true\n    },\n    {\n      \"id\": \"persistent-chain-valid\",\n      \"expected\": \"pass\",\n      \"actual\": \"pass\",\n      \"expected_rule_ids\": [],\n      \"actual_rule_ids\": [],\n      \"oracle_match\": true\n    },\n    {\n      \"id\": \"intern-role-rejected\",\n      \"expected\": \"fail\",\n      \"actual\": \"fail\",\n      \"expected_rule_ids\": [\n        \"L013\"\n      ],\n      \"actual_rule_ids\": [\n        \"L013\"\n      ],\n      \"oracle_match\": true\n    },\n    {\n      \"id\": \"fake-digest-rejected\",\n      \"expected\": \"fail\",\n      \"actual\": \"fail\",\n      \"expected_rule_ids\": [\n        \"L008\",\n        \"L009\"\n      ],\n      \"actual_rule_ids\": [\n        \"L008\",\n        \"L009\"\n      ],\n      \"oracle_match\": true\n    }\n  ]\n}"
+    },
+    {
+      "id": "ADAPTER_STATIC_REGRESSIONS",
+      "state": "fail",
+      "rule_ids": [
+        "R001",
+        "R016"
+      ],
+      "detail": "chat={\n  \"snapshot\": \"/Users/vincos/Documents/ChatGPT/Marketing Skills Project/evals/common/fixtures/chat-v1-empty.json\",\n  \"pass\": true,\n  \"rule_ids\": [],\n  \"errors\": []\n}; full_profile=\",\n        \"R008\"\n      ],\n      \"actual_rule_ids\": [\n        \"R004\",\n        \"R008\"\n      ],\n      \"oracle_match\": true\n    },\n    {\n      \"id\": \"static-copy-self-declared-behavioral\",\n      \"expected\": \"fail\",\n      \"actual\": \"fail\",\n      \"expected_rule_ids\": [\n        \"P011\"\n      ],\n      \"actual_rule_ids\": [\n        \"P011\"\n      ],\n      \"oracle_match\": true\n    },\n    {\n      \"id\": \"tracking-promoted-before-operations-boundary\",\n      \"expected\": \"fail\",\n      \"actual\": \"fail\",\n      \"expected_rule_ids\": [\n        \"R012\"\n      ],\n      \"actual_rule_ids\": [\n        \"R012\"\n      ],\n      \"oracle_match\": true\n    },\n    {\n      \"id\": \"campaign-spec-promoted-to-persistent-without-save\",\n      \"expected\": \"fail\",\n      \"actual\": \"fail\",\n      \"expected_rule_ids\": [\n        \"R013\",\n        \"S002\"\n      ],\n      \"actual_rule_ids\": [\n        \"R013\",\n        \"S002\"\n      ],\n      \"oracle_match\": true\n    },\n    {\n      \"id\": \"synthetic-mode-promoted-to-observed\",\n      \"expected\": \"fail\",\n      \"actual\": \"fail\",\n      \"expected_rule_ids\": [\n        \"R003\",\n        \"R015\"\n      ],\n      \"actual_rule_ids\": [\n        \"R003\",\n        \"R015\"\n      ],\n      \"oracle_match\": true\n    }\n  ]\n}; minimum_profile=FAIL positive-minimum-profile: attesi [], osservati ['P003']\nFAIL positive-authorization-from-input: attesi [], osservati ['P003']\nFAIL target-continuity-lost: attesi ['R016'], osservati ['P003', 'R016']\nFAIL authorization-conflated-with-execution: attesi ['R017'], osservati ['P003', 'R017']\nFAIL authorization-only-in-model-output: attesi ['P015', 'R017', 'R018', 'R019'], osservati ['P003', 'P015', 'R017', 'R018', 'R019']\nFAIL tracking-promoted-early: attesi ['R020'], osservati ['P003', 'R020']\nFAIL asset-version-diverges: attesi ['R018'], osservati ['P003', 'R018']\nFAIL authorization-asset-version-diverges: attesi ['R018'], osservati ['P003', 'R018']\nFAIL authorization-paid-scope-diverges: attesi ['R017', 'R019'], osservati ['P003', 'R017', 'R019']\nFAIL causality-attributed: attesi ['R022'], osservati ['P003', 'R022']; token_only_rejected={\n  \"pass\": false,\n  \"rule_ids\": [\n    \"R001\"\n  ],\n  \"errors\": [\n    {\n      \"rule_id\": \"R001\",\n      \"location\": \"$\",\n      \"message\": \"Expecting value: line 1 column 1 (char 0)\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "PROVENANCE_REGRESSIONS",
+      "state": "fail",
+      "rule_ids": [
+        "P001"
+      ],
+      "detail": "receipt_regressions= ['P003', 'P010', 'P012']\nFAIL normalized-value-not-derivable: attesi ['P012'], osservati ['P003', 'P012']\nFAIL expected-copy-normalized: attesi ['P013'], osservati ['P003', 'P013']\nFAIL invented-digest: attesi ['P012', 'P014'], osservati ['P003', 'P012', 'P014']\nFAIL harness-id-promoted-to-model-fact: attesi ['P014'], osservati ['P003', 'P014']\nFAIL invented-authorization: attesi ['P010', 'P012'], osservati ['P003', 'P010', 'P012']\nFAIL raw-input-host-mismatch: attesi ['P009'], osservati ['P003', 'P009']\nFAIL input-normalization-points-output: attesi ['P010', 'P012'], osservati ['P003', 'P010', 'P012']\nFAIL output-normalization-points-input: attesi ['P010', 'P012'], osservati ['P003', 'P010', 'P012']\nFAIL authorization-only-in-model-output: attesi ['P015'], osservati ['P003', 'P015']\nFAIL authorization-from-proof-metadata: attesi ['P010'], osservati ['P003', 'P010']\nFAIL authorization-from-expected: attesi ['P013'], osservati ['P003', 'P013']\nFAIL invented-tracking: attesi ['P010', 'P012'], osservati ['P003', 'P010', 'P012']\nFAIL snapshot-skips-normalized-output: attesi ['P010'], osservati ['P003', 'P010']\nFAIL host-payload-raw-mismatch: attesi ['P009'], osservati ['P003', 'P009']; external_static_copy={\n  \"pass\": false,\n  \"rule_ids\": [\n    \"P011\"\n  ],\n  \"errors\": [\n    {\n      \"rule_id\": \"P011\",\n      \"location\": \"$.scenario.evidence_mode\",\n      \"message\": \"behavioral_run richiede una capture manifest esterna verificata\"\n    }\n  ],\n  \"raw\": \"/private/var/folders/9t/lh_sw6796h5c3xnk5kml6vh00000gp/T/ams-static-copy-nrrd72m0/raw.json\",\n  \"snapshot\": \"/private/var/folders/9t/lh_sw6796h5c3xnk5kml6vh00000gp/T/ams-static-copy-nrrd72m0/snapshot.json\"\n}"
+    },
+    {
+      "id": "READINESS_MATRIX_VALID",
+      "state": "fail",
+      "rule_ids": [
+        "M001",
+        "M026"
+      ],
+      "detail": "matrix={\n  \"pass\": false,\n  \"matrix_valid\": false,\n  \"candidate_ready\": false,\n  \"later_promotion_ready\": false,\n  \"rule_ids\": [\n    \"M026\"\n  ],\n  \"errors\": [\n    {\n      \"rule_id\": \"M026\",\n      \"location\": \"$.candidate\",\n      \"message\": \"candidate id, commit, campaign-review o suite base divergono dai manifesti effettivi\"\n    }\n  ]\n}; self_test=: ['M006', 'M009', 'M011', 'M016', 'M020', 'M026']\nPASS reject-candidate-commit-divergence: ['M026']\nPASS reject-candidate-suite-version-divergence: ['M026']\nPASS reject-candidate-id-divergence: ['M006', 'M009', 'M011', 'M014', 'M026']\nPASS reject-campaign-review-version-divergence: ['M003', 'M026']\nPASS reject-malformed-secondary-json: ['M011', 'M020', 'M022', 'M026']\nPASS reject-invalid-utf8-external-proof: ['M007', 'M011', 'M016', 'M020', 'M026']\nPASS reject-invalid-utf8-external-index: ['M007', 'M011', 'M026']\nPASS invalid-matrix-never-exposes-ready: ['M004', 'M006', 'M008', 'M009', 'M011', 'M016', 'M020', 'M026']\nPASS runner-cli-without-index-and-forwarded-readiness-index\nFAIL positive-current-no-index: pass=False candidate=False later=False rules=['M026']\nFAIL positive-candidate-ready: pass=False candidate=False later=False rules=['M011', 'M016', 'M020', 'M026']\nFAIL positive-later-promotion: pass=False candidate=False later=False rules=['M006', 'M009', 'M011', 'M016', 'M020', 'M026']\nFAIL positive-resolved-critical-statuses: pass=False candidate=False later=False rules=['M011', 'M016', 'M020', 'M026']\nFAIL cli-modes: checker senza indice o con indice verificato non operativo"
+    },
+    {
+      "id": "RUN_CAPTURED",
+      "state": "not_run",
+      "rule_ids": [],
+      "detail": "modalità --static-only esplicita"
+    },
+    {
+      "id": "PROVENANCE_VERIFIED",
+      "state": "not_run",
+      "rule_ids": [],
+      "detail": "nessuna capture comportamentale in modalità statica"
+    },
+    {
+      "id": "ADAPTER_GROUNDED",
+      "state": "not_run",
+      "rule_ids": [],
+      "detail": "nessun run comportamentale richiesto in modalità statica"
+    },
+    {
+      "id": "BEHAVIOR_PASS",
+      "state": "not_run",
+      "rule_ids": [],
+      "detail": "la modalità statica non produce una prova comportamentale"
+    }
+  ]
+}

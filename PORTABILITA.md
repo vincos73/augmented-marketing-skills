@@ -1,8 +1,8 @@
 ---
 artifact: portability-contract
-version: 3
-status: approvato
-last_reviewed: 2026-08-27
+version: 4
+status: revisione-locale
+last_reviewed: 2026-09-12
 scope: "Contratto minimo di portabilità per skill installabili di Augmented Marketing Suite"
 ---
 
@@ -45,7 +45,7 @@ Una skill non deve dichiarare disponibile una capability che non ha osservato. S
 
 Gli artefatti canonici restano Markdown leggibile, con percorso, versione, stato, riferimenti e provenienza espliciti.
 
-- Se il workspace è scrivibile, la skill mostra il contenuto e il percorso proposti, ottiene l'autorizzazione richiesta e salva l'artefatto.
+- Se il workspace è scrivibile, la skill completa il documento e lo salva quando il mandato comprende quella scrittura, mantenendo in bozza le decisioni non approvate. Riconosce le autorizzazioni già espresse; chiede soltanto ciò che manca per l’azione e il perimetro correnti.
 - Se il workspace non è scrivibile, la skill restituisce in chat il contenuto completo e il percorso previsto. Deve dichiarare `contenuto approvato in chat; file non creato` e non attribuire al risultato una versione canonica o uno stato osservabile su disco.
 - Se un input necessario esiste ma non è accessibile, la skill chiede di allegarlo, incollarlo o renderlo disponibile attraverso una capability autorizzata. Non lo ricostruisce per supposizione.
 - Nessuna decisione approvata deve esistere soltanto in memoria implicita, in uno stato nascosto o in una vista proprietaria.
@@ -82,15 +82,15 @@ Le istruzioni essenziali devono restare nella cartella distribuibile della singo
 
 ### Adattatore OpenAI osservato
 
-Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Per ChatGPT e Codex, la beta.10 distribuisce Augmented Marketing Suite (`augmented-marketing-suite`) con un manifesto `.codex-plugin/plugin.json` e presenta Augmented Marketing Assistant come skill tecnica di orientamento (`augmented-marketing-assistant`). Questa forma non cambia il ruolo dell'Assistant: continua a orientare, mentre le nove skill specialistiche possiedono metodo, artefatti e approvazioni.
+Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Per ChatGPT e Codex, la beta.11 pubblicata distribuisce Augmented Marketing Suite (`augmented-marketing-suite`) con un manifesto `.codex-plugin/plugin.json` e presenta Augmented Marketing Assistant come skill tecnica di orientamento (`augmented-marketing-assistant`). Questa forma non cambia il ruolo dell'Assistant: continua a orientare, mentre le undici skill specialistiche possiedono metodo, artefatti e approvazioni.
 
 Un test su ChatGPT Web ha mostrato che una skill già attiva può individuare una skill specialistica senza riuscire a caricarla nella stessa conversazione. L'adattatore non deve quindi presumere un handoff tra skill. Quando il passaggio non è disponibile, indica il nome tecnico esatto da invocare e si ferma senza simulare il workflow specialistico.
 
 L'adattatore OpenAI non introduce MCP, connector o nuove capacità di marketing. La sua installazione e il suo caricamento devono essere verificati in una nuova chat o sessione. I titoli visibili delle skill coincidono con i nomi tecnici inglesi, mentre le descrizioni restano in italiano.
 
-## Verifica minima
+## Verifica proporzionata
 
-Ogni skill nuova o aggiornata deve essere verificata almeno in questi scenari:
+Scegli le prove in base alle capability e ai confini interessati dalla modifica. Questi scenari sono una mappa di copertura, non una sequenza da ripetere per ogni correzione:
 
 1. workspace leggibile e scrivibile;
 2. workspace leggibile ma non scrivibile;
@@ -99,7 +99,7 @@ Ogni skill nuova o aggiornata deve essere verificata almeno in questi scenari:
 5. capability opzionale assente o fallita;
 6. installazione presente ma caricamento nella sessione non verificato.
 
-La verifica strutturale dimostra la validità del pacchetto, non la portabilità del comportamento. Le differenze tra ambienti devono essere osservate con forward test separati.
+Documenta quali scenari sono stati eseguiti e quali restano non verificati. La verifica strutturale dimostra la validità del pacchetto, non la portabilità del comportamento. Le differenze tra ambienti devono essere osservate con forward test separati.
 
 ## Decisioni ancora aperte
 
@@ -110,6 +110,8 @@ La verifica strutturale dimostra la validità del pacchetto, non la portabilità
 - come documentare in modo uniforme le capability osservate a runtime.
 
 ## Registro modifiche
+
+- v4, 2026-09-12, revisione locale beta.11: riconoscimento delle autorizzazioni pregresse e prove proporzionate al cambiamento. I pacchetti beta.11 contengono undici specialistiche, più l’Assistant solo OpenAI/Codex; nessuna nuova verifica di installazione o caricamento cross-runtime.
 
 - v3, 2026-08-27: aggiunto il fallback esplicito dopo il limite di handoff osservato su ChatGPT Web e allineati i titoli visibili ai nomi tecnici delle skill.
 - v2, 2026-08-27: documentato l'adattatore OpenAI dopo il fallimento osservato del bundle neutro su ChatGPT Web.

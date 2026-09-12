@@ -2,7 +2,7 @@
 
 Leggi questa guida quando un profilo nuovo o esistente presenta più gap, conflitti o regole proposte e devi scegliere cosa richiede davvero l'attenzione del responsabile di marketing. Non usarla come questionario fisso.
 
-## Costruisci privatamente un registro delle regole
+## Distingui basi e lacune delle regole
 
 Per ciascuna delle cinque aree, classifica gli elementi rilevanti come:
 
@@ -21,7 +21,7 @@ Quando una fonte esistente potrebbe cambiare una regola stabile, chiedi esplicit
 
 Se una fonte o il responsabile ha già classificato un materiale come `esiste ma non è disponibile`, `non definito`, `sconosciuto al referente` o `non applicabile`, considera risolta la classificazione per il turno corrente. Registra lo stato e il comportamento prudente senza chiedere di nuovo se il materiale esiste o sia disponibile. Puoi chiedere un diverso riferimento approvato soltanto se potrebbe sbloccare una regola materiale e le fonti non ne hanno già escluso la disponibilità.
 
-Per gli standard editoriali, visivi e di qualità, chiedi in modo esplicito linee guida verbali, brand book, linee guida visuali, template o esempi approvati. Per messaggi e prove, chiedi messaggi approvati, claim sheet, casi, fonti delle credenziali o pagine autorizzate. Per i controlli, chiedi procedure di approvazione o policy esistenti. Non chiedere tutte le categorie se non incidono sul perimetro.
+Quando mancano informazioni decisive sugli standard editoriali, visivi e di qualità, puoi chiedere linee guida verbali, brand book, linee guida visuali, template o esempi approvati. Per messaggi e prove, chiedi messaggi approvati, claim sheet, casi, fonti delle credenziali o pagine autorizzate. Per i controlli, chiedi procedure di approvazione o policy esistenti. Non chiedere tutte le categorie se non incidono sul perimetro.
 
 ## Ordina per conseguenza
 
@@ -47,7 +47,7 @@ Inizia con una proposta provvisoria compatta ricavata dall'identità e dai mater
 - non più di tre domande che potrebbero cambiare la preparazione all'approvazione;
 - una chiave compatta delle fonti.
 
-Non riprodurre il template completo, non mostrare YAML o JSON grezzi, non generare un wizard e non dedicare un turno solo a descrivere i progressi. Rimanda il profilo completo al primo passaggio di approvazione.
+Una prima sintesi può precedere il profilo completo quando serve una decisione intermedia. Se la base è già sufficiente, prepara direttamente la revisione completa. Usa linguaggio naturale senza imporre wizard o serializzazioni.
 
 ## Lenti per le domande
 

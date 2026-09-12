@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-07",
+  "status": "PASS",
+  "source_files": 7,
+  "source_manifest_matches": true,
+  "yaml_metadata_valid": true,
+  "local_markdown_links_valid": true,
+  "whitespace_check": true,
+  "runtime_contains_no_fixture_names_or_machine_paths": true,
+  "archive_integrity": true,
+  "archive_source_parity": true,
+  "zip_sha256": "8f60b10dae7c3478151bb5d9ee64de8ba6a03a6ace7850edd312be512727878a",
+  "transcript_hashes_valid": true,
+  "independent_generation_runs": 10,
+  "turns": 20,
+  "first_turn_word_range": [
+    267,
+    400
+  ],
+  "save_verification": "save-verification.json",
+  "limits": "Structural and artifact checks; behavioral outcomes and incomplete coverage are in report.md."
+}

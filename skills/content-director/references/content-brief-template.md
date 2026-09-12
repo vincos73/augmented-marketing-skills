@@ -2,7 +2,7 @@
 
 Usa questo template come libreria modulare per le sezioni del corpo. Quando restituisci un Content Brief completo, il frontmatter canonico è obbligatorio anche in conversazione. Non sostituirlo con una sezione narrativa sullo stato. Includi il nucleo necessario e aggiungi soltanto le sezioni che riducono ambiguità, rischio o reinterpretazione in produzione.
 
-Non mostrare frontmatter o schema completo nella prima risposta. Prima presenta la revisione manageriale compatta richiesta dalla skill.
+Nella raccomandazione preliminare non mostrare lo schema completo. Se il brief completo è già richiesto, consegnalo senza imporre una revisione preliminare separata; usa `bozza` per le decisioni aperte.
 
 Classifica `editorial_path` rispetto alla richiesta iniziale:
 
@@ -62,7 +62,7 @@ Un'assunzione `[C]` è confermata come assunzione, non trasformata in fatto.
 
 ## Decisione editoriale
 
-- **Percorso approvato:** produrre / produrre con vincoli / trasformare / rafforzare prima
+- **Percorso proposto o approvato, secondo lo stato:** produrre / produrre con vincoli / trasformare / rafforzare prima
 - **Raccomandazione:**
 - **Perché questa strada:**
 - **Valore del materiale che preserva:**
@@ -189,7 +189,7 @@ L'approvazione del brief non compila automaticamente le azioni successive come a
 
 ## Registro modifiche
 
-- v1 (YYYY-MM-DD): primo Content Brief approvato.
+- v1 (YYYY-MM-DD): prima versione del Content Brief; indicare lo stato effettivo.
 ```
 
 ## Criterio di approvazione
@@ -202,11 +202,15 @@ Il Content Brief può diventare `approvato` quando:
 - la progressione semantica conserva il significato necessario;
 - il passaggio alla produzione distingue obblighi e libertà specialistiche;
 - diritti, rischi, dipendenze e approvazioni sono visibili;
-- il responsabile approva il contenuto e autorizza separatamente il salvataggio.
+- il responsabile approva le scelte nel perimetro indicato.
+
+Il salvataggio è distinto dall'approvazione editoriale: una richiesta di scrivere il file lo autorizza già, anche in bozza. Una direzione approvata può rimanere solo in conversazione. Conserva autorizzazioni espresse in precedenza senza richiederle nuovamente.
 
 Un brief approvato può conservare blocchi di produzione o pubblicazione. Non può essere definito prodotto, pubblicato o distribuito finché tali stati non sono stati osservati.
 
 ## Percorso e versioning
+
+Usa il percorso richiesto dall'utente. In sua assenza, per un salvataggio autorizzato adotta queste convenzioni:
 
 Standalone:
 

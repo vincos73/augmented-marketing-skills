@@ -1,0 +1,66 @@
+{
+  "quick_validate": [
+    {
+      "skill": "augmented-marketing-assistant",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "campaign-debrief",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "campaign-review",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "choose-marketing-direction",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "content-director",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "define-marketing-challenge",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "define-marketing-mix",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "design-campaign",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "setup-brand-voice",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "setup-business-context",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "setup-marketing-system",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "write-marketing-copy",
+      "exit": 0,
+      "output": "Skill is valid!"
+    }
+  ],
+  "local_markdown_links": "pass",
+  "ui_yaml": "pass"
+}

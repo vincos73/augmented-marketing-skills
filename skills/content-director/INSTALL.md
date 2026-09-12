@@ -1,36 +1,9 @@
-# Installare `content-director`
+# Installare `content-director` 0.1.2
 
-Questo pacchetto contiene solo la skill installabile. Non contiene Business Identity, Marketing Foundations, Campaign Spec aziendali, dati editoriali o autorizzazioni alla produzione e alla pubblicazione.
+Questo pacchetto contiene la skill portabile, i suoi riferimenti e i metadati dell'interfaccia. Non contiene dati aziendali o dei test né autorizzazioni a inviare o pubblicare contenuti. La versione `0.1.2` è la sorgente locale revisionata; questo documento non attesta una release pubblica o un'installazione già avvenuta.
 
-La versione stabile corrente è `0.1.1`, pubblicata nella release [`content-director-v0.1.1`](https://github.com/vincos73/augmented-marketing-skills/releases/tag/content-director-v0.1.1). La presenza nel repository o il download della release non dimostrano che una sessione già aperta abbia caricato la skill.
+Per un'installazione richiesta, estrai la cartella `content-director/` nella destinazione delle skill della piattaforma. In Codex la destinazione personale normalmente è `~/.codex/skills/content-director/`, con `SKILL.md` al suo interno. Prima di sostituire una copia esistente verifica versione e contenuti e conservala per il ripristino. Non copiare dati o cartelle dei test.
 
-## Installazione da ZIP
+Controlla `name: content-director` e `metadata.version: "0.1.2"` nel file principale; se distribuito con lo ZIP, verifica il relativo file SHA256SUMS. Una nuova sessione permette di controllare la disponibilità: la presenza sul disco non dimostra il caricamento in una sessione già aperta.
 
-1. Scarica uno ZIP ufficiale che dichiari `0.1.1` in `SKILL.md`.
-2. Verifica lo ZIP con il relativo `SHA256SUMS` quando previsto dalla release.
-3. Estrai lo ZIP. Deve contenere una sola cartella radice: `content-director/`.
-4. Copia la cartella in `~/.codex/skills/`.
-
-Il percorso finale deve essere:
-
-```text
-~/.codex/skills/content-director/SKILL.md
-```
-
-Se esiste già una copia con lo stesso nome, conservala come backup prima di sostituirla e verifica quale versione stai rimpiazzando.
-
-## Verifica
-
-Apri le prime righe di `SKILL.md` e verifica:
-
-```yaml
-name: content-director
-metadata:
-  version: "0.1.1"
-```
-
-L'installazione sul disco non dimostra che una sessione già aperta abbia caricato la skill. Avvia una nuova attività o sessione prima del test.
-
-## Installazione dalla sorgente GitHub
-
-Chi usa lo Skill Installer può installare la sorgente dal percorso `skills/content-director`, fissando il tag `content-director-v0.1.1`. Questo metodo non sostituisce la verifica della versione e della destinazione locale.
+La skill funziona anche senza le altre componenti della suite. L'accesso alle fonti e la scrittura di file dipendono dall'ambiente e dal compito autorizzato.

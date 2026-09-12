@@ -1,0 +1,117 @@
+{
+  "method": "Python str.split() words; frontmatter included. Description chars exclude surrounding YAML quotes. Baseline uses latest installed sources when present, otherwise repository baseline. Not measured tokens or model performance.",
+  "skills": [
+    {
+      "skill": "augmented-marketing-assistant",
+      "before_version": "0.2.0",
+      "after_version": "0.2.1",
+      "before_words": 857,
+      "after_words": 499,
+      "before_description_chars": 341,
+      "after_description_chars": 130
+    },
+    {
+      "skill": "campaign-debrief",
+      "before_version": "0.1.6",
+      "after_version": "0.1.7",
+      "before_words": 2312,
+      "after_words": 989,
+      "before_description_chars": 282,
+      "after_description_chars": 171
+    },
+    {
+      "skill": "campaign-review",
+      "before_version": "0.1.3",
+      "after_version": "0.1.4",
+      "before_words": 1771,
+      "after_words": 868,
+      "before_description_chars": 227,
+      "after_description_chars": 161
+    },
+    {
+      "skill": "choose-marketing-direction",
+      "before_version": "0.2.7",
+      "after_version": "0.2.8",
+      "before_words": 2234,
+      "after_words": 939,
+      "before_description_chars": 152,
+      "after_description_chars": 94
+    },
+    {
+      "skill": "content-director",
+      "before_version": "0.1.1",
+      "after_version": "0.1.2",
+      "before_words": 1241,
+      "after_words": 649,
+      "before_description_chars": 341,
+      "after_description_chars": 129
+    },
+    {
+      "skill": "define-marketing-challenge",
+      "before_version": "0.1.7",
+      "after_version": "0.1.8",
+      "before_words": 2053,
+      "after_words": 905,
+      "before_description_chars": 178,
+      "after_description_chars": 98
+    },
+    {
+      "skill": "define-marketing-mix",
+      "before_version": "0.1.8",
+      "after_version": "0.1.9",
+      "before_words": 1705,
+      "after_words": 969,
+      "before_description_chars": 152,
+      "after_description_chars": 88
+    },
+    {
+      "skill": "design-campaign",
+      "before_version": "0.1.6",
+      "after_version": "0.1.7",
+      "before_words": 2290,
+      "after_words": 1109,
+      "before_description_chars": 276,
+      "after_description_chars": 169
+    },
+    {
+      "skill": "setup-brand-voice",
+      "before_version": "0.1.1",
+      "after_version": "0.1.2",
+      "before_words": 1512,
+      "after_words": 692,
+      "before_description_chars": 370,
+      "after_description_chars": 117
+    },
+    {
+      "skill": "setup-business-context",
+      "before_version": "0.6.6",
+      "after_version": "0.6.7",
+      "before_words": 3292,
+      "after_words": 820,
+      "before_description_chars": 180,
+      "after_description_chars": 86
+    },
+    {
+      "skill": "setup-marketing-system",
+      "before_version": "0.3.3",
+      "after_version": "0.3.4",
+      "before_words": 2087,
+      "after_words": 900,
+      "before_description_chars": 183,
+      "after_description_chars": 94
+    },
+    {
+      "skill": "write-marketing-copy",
+      "before_version": "0.1.4",
+      "after_version": "0.1.5",
+      "before_words": 1146,
+      "after_words": 603,
+      "before_description_chars": 302,
+      "after_description_chars": 108
+    }
+  ],
+  "entrypoint_before_words": 22500,
+  "entrypoint_after_words": 9942,
+  "instructions_and_references_before_words": 46546,
+  "instructions_and_references_after_words": 32070
+}

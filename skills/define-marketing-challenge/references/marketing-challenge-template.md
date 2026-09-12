@@ -100,6 +100,8 @@ Il tipo descrive che cosa è l'elemento; il marker descrive da dove proviene. Un
 |---|---|---|---|---|
 | | bloccante / non bloccante | | | |
 
+Per i punti ereditati, distingui informazione non disponibile, decisione rinviata e scelta esplicita di non fissare un numero; indica prima di quale passaggio serviranno. Non equivalgono a zero, nessun obiettivo o consenso e non riaprono risposte esplicite senza un nuovo conflitto.
+
 ## Preparazione della decisione
 
 - **Stato del brief:** bozza / confermato / superato

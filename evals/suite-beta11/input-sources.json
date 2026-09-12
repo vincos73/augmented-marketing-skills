@@ -1,0 +1,148 @@
+[
+  {
+    "skill": "augmented-marketing-assistant",
+    "source": "/Users/vincos/.codex/skills/augmented-marketing-assistant",
+    "version": "0.2.0",
+    "sha256": {
+      "SKILL.md": "6fc86c538f675fffd649bf199a0b4a8c64125e82cc1eebe8f451d65e96a13d15",
+      "agents/openai.yaml": "849fbc16e8aca2a74b87dbf321c68d0fcff3b4e393c0062bf4d5e2c751acffd0"
+    }
+  },
+  {
+    "skill": "campaign-debrief",
+    "source": "/Users/vincos/.codex/skills/campaign-debrief",
+    "version": "0.1.6",
+    "sha256": {
+      "INSTALL.md": "2a919d9b794db934d89d2d6077293a1bfb2f73d9b4c69ffc94206d6a336c913a",
+      "SKILL.md": "6b69224b536a8cd54c9a4dda8c338f642690a1ae66522b03481dd3d91e55e5f0",
+      "agents/openai.yaml": "34b07a2613d40d58a406861bcdf906a05dac5237b586b17143c739a45f5abd75",
+      "references/campaign-learning-template.md": "dbf9651552aaefb5f7dade3e7edef46a283b4204f0980adc6bee8e79768a3548",
+      "references/decision-routing.md": "577b74304c860ef9d2e8f1a024e77b43ffd8d9921b0ef7f36594c90514949167"
+    }
+  },
+  {
+    "skill": "campaign-review",
+    "source": "/Users/vincos/.codex/skills/campaign-review",
+    "version": "0.1.3",
+    "sha256": {
+      "INSTALL.md": "9b8a404258b62b8a2b79a45f4b7ccda95785dd97fe28b2a992e6bffe72a401b1",
+      "SKILL.md": "87c2274cbc63a3ee9afc6c4510510cd62fb53c7a0759a0cf36f66884d5c3dde9",
+      "agents/openai.yaml": "998eea1efe6993073aaf101003ad3253be31aafc430ccc894574ab5e4db7e953",
+      "references/campaign-review-contract.md": "611f98a3f69983537fcbda4ca647b23a7fe34c96fb7d0ae3df07e2f43f5bf9f5"
+    }
+  },
+  {
+    "skill": "choose-marketing-direction",
+    "source": "/Users/vincos/.codex/skills/choose-marketing-direction",
+    "version": "0.2.7",
+    "sha256": {
+      "INSTALL.md": "68f6495f1b9d8fa94f2522bd6ddd6107f27587f8cb68f0017eac90a7572ac862",
+      "SKILL.md": "a56818ec77fb86bd4a65de756078fd18b4355ef47f945bd60ec9c3ffb93bafef",
+      "agents/openai.yaml": "68bd8ccb06b6ef6de96d20cff8cb267a4f678509abefb6f0f69db3563ae76498",
+      "references/marketing-direction-template.md": "b1a89d5ca2879a4fdeace20acb3c1136d87d2c6ab21e207531088dde224a21a8",
+      "references/strategic-comparison.md": "17e12da531c7743d6aa4926b707cdce4b4a2384de55341cd3e0cc9c4049a55e3"
+    }
+  },
+  {
+    "skill": "content-director",
+    "source": "/Users/vincos/.codex/skills/content-director",
+    "version": "0.1.1",
+    "sha256": {
+      "INSTALL.md": "632c57c0e30205ecc7cd4df88eeafc5d0339b8fccb276f08c663bbf974797284",
+      "SKILL.md": "03ab6a6f733ded48e7dfb881f4ed03434c939982d28e33241021cc4cf7f7f730",
+      "agents/openai.yaml": "8832566faa06b8460de2c2fa08b36c00822c5e50a3a6946bc155be869036eae0",
+      "references/content-brief-template.md": "2904cfac3172d41e403e3715c623d85ef8d6a6d34d8dda624cd4c1230e141e39",
+      "references/editorial-routing.md": "19ad69336683e6726e2a61887185d2b1abf1d5a68b267bd5e917cf39744c92de"
+    }
+  },
+  {
+    "skill": "define-marketing-challenge",
+    "source": "/Users/vincos/.codex/skills/define-marketing-challenge",
+    "version": "0.1.7",
+    "sha256": {
+      "INSTALL.md": "ed5db95e2544c4bb7e18ca5c3ee6795e0cf4ee9c908455231fb447b6ecfbc278",
+      "SKILL.md": "f798a2108b53e218a6c4291f3ceb3a4d89b01bc9445a951c788eb5848cc9d3c6",
+      "agents/openai.yaml": "86b41e953e35d60b709296782e6930b0775180120ec0e3c7343cf446d8f4b5c9",
+      "references/marketing-challenge-template.md": "8f2edc9e6c4e987c0f347185406c1e373b9604c423151fbfc63f4f6b368a856a",
+      "references/question-routing.md": "8a7028b564d3ef14f336838e594515e3f15019d6f76f3696437fd15765d5eb58"
+    }
+  },
+  {
+    "skill": "define-marketing-mix",
+    "source": "/Users/vincos/.codex/skills/define-marketing-mix",
+    "version": "0.1.8",
+    "sha256": {
+      "INSTALL.md": "ad77f57bde8322fb7263d323cfc4c9e977695c027ff7c6c0ac4ea15f83bd4dd8",
+      "SKILL.md": "dadbad6b26cf7b27fec675c1996a9d81c64e652059c4b7c96ba7119131484770",
+      "agents/openai.yaml": "a914f7bda59a44c151dc910e7b6ba40b11d84bd8f9f9fca8e665197eb8815af3",
+      "references/four-p-boundaries.md": "c9aaeadde3e3447d04a5f8734751761f4cfa563cccde786c9af033e0e2bcc566",
+      "references/marketing-mix-template.md": "5f940cbac3c7774dd86dcb79c46e0bd0292479e4ca3d11412c4b9f1e28196e4f"
+    }
+  },
+  {
+    "skill": "design-campaign",
+    "source": "/Users/vincos/.codex/skills/design-campaign",
+    "version": "0.1.6",
+    "sha256": {
+      "INSTALL.md": "c3d61b537fb0e48de003b4c032f58b67404615e1c32cef7415261bd5a05d697d",
+      "SKILL.md": "8382d917431b09f9a9514d389a928ffab3f970a482028c5d214bd811e6a8b989",
+      "agents/openai.yaml": "265eec9a107545865e6d34f87de82d4d4caee745bd23d18248a2d5ecfcb329d7",
+      "references/campaign-spec-template.md": "58741ca98c84f8572b0d6186ce4c87ab021b69c300a0f3c155fb6ed7a74ec511",
+      "references/question-routing.md": "1e1f6b528691adf08de137f785a424751f578cf9162ac64aa70af0df1a78570e"
+    }
+  },
+  {
+    "skill": "setup-brand-voice",
+    "source": "/Users/vincos/.codex/skills/setup-brand-voice",
+    "version": "0.1.1",
+    "sha256": {
+      "INSTALL.md": "c6fa1544c19df5b7ab7d5eedfa4091b1868626db7bed0340fa9bd7b94477102a",
+      "SKILL.md": "6e4f4caef0b25e991ad312821f1bc6b8bc2ee8001d4ade002394ff3acf67078d",
+      "agents/openai.yaml": "991164334e08009425d5a5b690501b3ec4633b9a6c7869ab28ba706714e4d6f6",
+      "references/brand-voice-guide.md": "1bb8b6ab7fedcf53b46129193c49d24a03223d60a04262afef5a9fe13dd8ff20",
+      "references/discovery-and-decisions.md": "1083ea8bc8a702927a881d1eed8a4b8f93b656fa9e49520b8e4c434a646d146c",
+      "references/example-review.md": "dee8fcf75443229f96d60f093b777a3ce11db3aa6e4db9d8a78081b3a98c1fab",
+      "references/persistence-and-reuse.md": "f0a86e964a748d43e1a5e0c780dd3a068509f21c5a704bc6bb1c3d7d87a0d8a4",
+      "references/voice-calibration.md": "5b277afd9b865f2833566b016f2fb37be5a2b7ce26c2e0183f46ac8dbf5b671e"
+    }
+  },
+  {
+    "skill": "setup-business-context",
+    "source": "/Users/vincos/.codex/skills/setup-business-context",
+    "version": "0.6.6",
+    "sha256": {
+      "INSTALL.md": "f514027f61dd51cea62507a1acd71723afd5f115c4c4ad66b68893ae3b9fbbd0",
+      "SKILL.md": "b697adb78a81a54d72bbad941add548dce38e7eed000b05f410ebcd53bbb9abc",
+      "agents/openai.yaml": "103f9b6a961ee6e0ca53f557b558c2d1941384578c25214aa28ff4bd5eb59569",
+      "references/business-identity-template.md": "418695ccb0f0e86df2bd632fbe5a08fdce64f550e1aecaea3659cbf7091ca00f",
+      "references/compact-review-contract.md": "4cd072bdbf6defc6b68da73a7caeaba3178dfccad048082991c2f1ecca615235",
+      "references/expert-question-routing.md": "59f46b219c679fee3aff2688bf79b0ae3e440ef923f6b9a56b7e58a1c6e6179e",
+      "references/gate1-review-contract.md": "98631b466507205b30db3d65111ac36a60c8dc19c7c0eb38fa187932fa5fc60d",
+      "references/installation.md": "1e364967c5c61b86fd6a01a59b1c03bb132764bf9806d1f0046685b0b5b72315"
+    }
+  },
+  {
+    "skill": "setup-marketing-system",
+    "source": "/Users/vincos/.codex/skills/setup-marketing-system",
+    "version": "0.3.3",
+    "sha256": {
+      "INSTALL.md": "a2cd4cf9fce07497d8d6e615dfb6a3dddebf92edeaeb0b50663c82dc6705f39f",
+      "SKILL.md": "bfdaacd5ca77ed448ee9c14b2dd4c5cec79cdf12797699cf56bc2f346f9a8a4e",
+      "agents/openai.yaml": "5f800c67584730924bb1bc059d44d19c036a85e608bc25b8c71b4dfae6839b55",
+      "references/compact-review-contract.md": "11e7d8fcc62b024213d178713d0fae0578512c0aa81cb71e19ea32f3e5db191e",
+      "references/installation.md": "e68e6c923fb237469c7af283f859e384ff771bf93c7f03f6602dbea738e56ed3",
+      "references/marketing-foundations-template.md": "53468b32a850bcdd728b8b513344b836773f6672e20822c8c5d1bc57299181c9",
+      "references/question-routing.md": "0d8aa688c1480e7f490a3702e6f24e8835cbd20bf421550817230775b7d90700"
+    }
+  },
+  {
+    "skill": "write-marketing-copy",
+    "source": "/Users/vincos/.codex/skills/write-marketing-copy",
+    "version": "0.1.4",
+    "sha256": {
+      "SKILL.md": "5ea0be5bf7bc0edc67983c54e0deabbbdd86584ed3c62e95e0153adbe6c2d85b",
+      "agents/openai.yaml": "0ea766239f81538f57a73fc674e2f74924a0b39b17a128f77251fe7764997569",
+      "references/copy-modes.md": "e00fae6a58f9318ed4afbf136d91a34406986ea55736b6b67517d0fa6aa6139a"
+    }
+  }
+]

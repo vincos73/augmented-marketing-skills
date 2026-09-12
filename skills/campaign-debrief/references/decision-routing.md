@@ -12,25 +12,15 @@ Dobbiamo decidere se [azione] per [perimetro] entro [momento], con un costo o ri
 
 Se l'utente chiede genericamente «com'è andata?», ricava una decisione provvisoria dai materiali e dichiarala. Chiedi conferma soltanto se decisioni plausibili diverse richiedono evidenze diverse.
 
-## Costruire il registro minimo
+## Evidenze che rendono verificabile la decisione
 
-Per ogni elemento rilevante registra privatamente:
+Per ogni elemento decisivo conserva:
 
 - fonte e data;
 - definizione;
 - finestra e denominatore;
 - stato: osservato, dichiarato, inferito, in conflitto o sconosciuto;
 - conseguenza sulla decisione.
-
-Organizza gli elementi in cinque gruppi:
-
-1. decisione e perimetro;
-2. atteso prima dell'esecuzione;
-3. esecuzione reale e modifiche;
-4. risultati, definizioni e fonti;
-5. limiti, spiegazioni alternative e autorità.
-
-Non mostrare il registro come checklist diagnostica.
 
 ## Valutare la sufficienza in proporzione al rischio
 
@@ -53,9 +43,9 @@ Anche nell'ultimo caso identifica una decisione più piccola che i dati sostengo
 | Baseline non comparabile | Andamento assoluto nel perimetro corrente | Cercare confronto pertinente o dichiararne l'assenza |
 | Capacità Sales saturata | Domanda osservata e collo di bottiglia | Non aumentare distribuzione prima della decisione operativa |
 
-## Ordinare le domande
+## Scegliere i chiarimenti
 
-Poni al massimo tre domande per turno. Dai priorità a:
+Entro il limite di tre domande, dai priorità alle lacune che cambiano la decisione:
 
 1. decisione, perimetro e costo dell'errore;
 2. divergenza di esecuzione capace di invalidare il confronto;
@@ -72,7 +62,7 @@ Ogni domanda deve richiedere una sola informazione o decisione principale e aver
 - «La decisione da prendere ora è se estendere il test a tutto il segmento oppure se correggere prima la landing?»
 - «Le 18 richieste qualificate usano la stessa definizione per tutte le sei settimane?»
 - «Il cambio di landing del 9 ottobre ha interessato tutto il traffico o solo LinkedIn?»
-- «Chi può autorizzare il limite del prossimo test e in quale data rivedrete i dati?»
+- «Chi può autorizzare il limite del prossimo test?»
 
 Se il referente non conosce la risposta, registra il limite. Non indurlo a inventare una definizione retroattiva.
 
@@ -87,3 +77,18 @@ Preferisci l'osservazione che distingue due spiegazioni capaci di produrre decis
 - quale decisione cambierà.
 
 Una richiesta generica di «più dati» non è una prossima verifica utilizzabile.
+
+## Paid, scala e ampliamenti
+
+La raccomandazione deve separare il destino del perimetro corrente dalla possibilità di aumentare esposizione o spesa. Prima di sostenere un'estensione considera le condizioni materiali del caso: tracking stabile, consenso e uso dei dati compatibili, follow-up e backlog sotto controllo, capacità disponibile e configurazione approvata. Collega la capacità a limite e carico osservati, senza inventare responsabili o soglie.
+
+La convenienza economica richiede la base pertinente, per esempio costi completi, qualità e maturazione degli esiti, margini o una soglia di test concordata con Finance. Un costo per lead favorevole, un budget disponibile o una qualifica commerciale non bastano da soli a raccomandare scala o ROI. Se la prova manca, limita la conclusione e identifica chi può definirla; non trasformare questo controllo in una richiesta universale di conto economico per ogni debrief.
+
+Quando una prova decisiva è immatura, distingui:
+
+- **controllo intermedio di prontezza:** chiusura dei pendenti, verifica di tracking, backlog, capacità o configurazione;
+- **riesame della decisione:** confronto su osservazioni abbastanza mature per paid, scala o ampliamento.
+
+Non fissare il riesame prima della maturazione delle prove dichiarate necessarie. Se serve una nuova coorte comparabile per distinguere le spiegazioni, il riesame dipende dal fatto che sia stata realmente eseguita con definizione, configurazione e tracking stabili, poi chiusa e osservata. La sola prontezza della nuova configurazione non basta, né basta elencare la coorte come attività parallela.
+
+Indica ciò che conviene fare nel frattempo, il responsabile osservato o `da confermare`, l'osservazione attesa e quando controllarla. La decisione di test e il nuovo controllo devono avere ciascuno un responsabile identificabile. L'approvazione dell'analisi o di un budget non equivale all'autorizzazione al lancio.

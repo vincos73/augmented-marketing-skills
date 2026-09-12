@@ -108,6 +108,8 @@ Non usare punteggi numerici senza un modello approvato e una base adeguata.
 |---|---|---|---|---|
 | | bloccante / non bloccante | | | |
 
+Per i punti ereditati, distingui informazione non disponibile, decisione rinviata e scelta esplicita di non fissare un numero; indica prima di quale passaggio serviranno. Non equivalgono a zero, nessun obiettivo o consenso e non riaprono risposte esplicite senza un nuovo conflitto.
+
 ## Stato della decisione
 
 - **Stato:** bozza / approvata / superata

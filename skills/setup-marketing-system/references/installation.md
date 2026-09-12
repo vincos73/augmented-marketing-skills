@@ -1,6 +1,6 @@
 # Install approved Marketing Foundations
 
-Read this reference only after approval gate 1 has produced a canonical Marketing Foundations artifact and the user has selected an agent host.
+Read this reference when preparing or applying a requested installation for the selected host. Configure only approved Marketing Foundations.
 
 ## Shared safeguards
 
@@ -11,7 +11,7 @@ Before proposing a change:
 3. Preserve all unrelated instructions. Never replace a whole instruction file to install the profile.
 4. Show the exact proposed diff and explain which identity, foundations, and conditional brand overlays it will load.
 5. Explain that instruction files guide behavior but do not grant new permissions or authorize external actions.
-6. Apply only the host changes explicitly approved.
+6. Apply changes covered by the user's authorization for this host and scope. Reuse existing authorization; ask only for missing permission after preparing the concrete diff.
 
 Use stable markers around the marketing block:
 
@@ -33,9 +33,9 @@ Use a concise block adapted to the real entity and paths:
 <!-- setup-marketing-system:start -->
 ## Contesto di marketing
 
-Prima di svolgere attività di marketing per [Entità], leggi `[identity-path]` e `[foundations-path]` e applicane fatti approvati, regole, aspetti aperti e limiti di approvazione. Per un brand figlio, leggi anche l'identità e l'integrazione di marketing corrispondenti; non caricare brand non pertinenti.
+Quando il compito dipende da fatti identitari, consulta le sezioni pertinenti di `[identity-path]`; per scelte o regole di marketing usa `[foundations-path]`. Applica fatti approvati, regole, aspetti aperti e limiti pertinenti. Riusa ciò che è già stato letto e resta valido; non rileggere l'intero contesto per una correzione locale che non lo coinvolge. Per un brand figlio consulta l'identità e l'integrazione pertinenti, senza caricare gli altri brand.
 
-All'inizio di ogni risposta sostanziale che svolge o fa avanzare attività di marketing per l'entità, aggiungi una breve nota operativa con entità e versioni effettivamente lette. Se un artefatto necessario non è disponibile, approvato, coerente o aggiornato, mostra un avviso operativo invece di dichiarare di averlo applicato.
+Quando serve alla tracciabilità della decisione, indica entità e versioni effettivamente applicate. Segnala l'indisponibilità o il conflitto di un documento quando cambia il lavoro, senza ripetere avvisi invariati.
 <!-- setup-marketing-system:end -->
 ```
 
@@ -47,20 +47,9 @@ After editing, read the saved block back from disk. Report configuration observe
 
 Prefer an existing applicable root `CLAUDE.md`; if none exists, propose creating one. Preserve existing `.claude/CLAUDE.md`, `CLAUDE.local.md`, and `@AGENTS.md` conventions.
 
-For a company or standalone brand, propose direct imports when compatible:
+Prefer the same conditional references as the Codex block, using real relative paths. Preserve an existing approved direct-import setup or an explicit user request for always-loaded context; do not introduce full-profile imports by default. For a multi-brand company, read parent identity and foundations when needed for the relevant child, plus only that child's identity and marketing overlay. Do not import every brand.
 
-```markdown
-<!-- setup-marketing-system:start -->
-@[identity-path]
-@[foundations-path]
-
-Per ogni risposta sostanziale di marketing relativa all'entità, indica in una breve nota operativa quali entità e versioni degli artefatti sono state effettivamente applicate. Non trattare questi import come autorizzazione all'esecuzione.
-<!-- setup-marketing-system:end -->
-```
-
-Replace placeholders with real relative paths. For a multi-brand company, import the parent identity and company foundations, then add a concise instruction to read only the relevant child identity and `.agents/marketing/brands/<brand-slug>.md` overlay. Do not import every brand by default.
-
-After editing, read the imports and referenced files back from disk. Explain that first-use import approval or a new session may be required. An import observed on disk is configured; it is not proof that the running session loaded or accepted it.
+After editing, read the saved references or imports and verify their target files. Explain that first-use import approval or a new session may be required. An import observed on disk is configured; it is not proof that the running session loaded or accepted it.
 
 ## Other agent hosts
 

@@ -1,6 +1,6 @@
 # Configurare l'identità aziendale approvata
 
-Leggi questa reference soltanto dopo che l'identità ha superato il gate 1 di approvazione e l'utente ha scelto l'host dell'agente.
+Leggi questo riferimento per preparare o applicare l'installazione richiesta sull'host indicato. Il contenuto deve essere approvato prima che venga configurato per gli agenti.
 
 ## Salvaguardie comuni
 
@@ -10,7 +10,7 @@ Prima di proporre una modifica:
 2. Individua eventuali istruzioni o import già presenti per il contesto aziendale. Aggiornali invece di aggiungere un duplicato.
 3. Conserva ogni contenuto non pertinente. Non sostituire mai un intero file di istruzioni per installare questo contesto.
 4. Mostra l'aggiunta o il diff esatto e spiega che i file di istruzioni guidano il comportamento dell'agente, ma non concedono nuovi permessi né autorizzano azioni esterne.
-5. Applica soltanto le modifiche all'host approvate esplicitamente dall'utente.
+5. Applica le modifiche se il mandato dell'utente comprende questo host e questo perimetro. Le autorizzazioni già espresse restano valide; chiedi solo quella eventualmente mancante dopo aver preparato il diff.
 
 Usa commenti stabili intorno al blocco inserito, così gli aggiornamenti successivi potranno individuarlo in sicurezza:
 
@@ -32,7 +32,7 @@ Usa un blocco conciso come questo:
 <!-- setup-business-context:start -->
 ## Identità aziendale
 
-Prima di lavorare per o su [Entity], leggi `[identity-path]` e applica i suoi fatti approvati, la terminologia e i vincoli. Non trattare le incognite note come fatti. Per il lavoro su un brand figlio, leggi anche il file corrispondente sotto `.agents/brands/`.
+Quando il compito dipende dall’identità di [Entity], consulta le sezioni pertinenti di `[identity-path]` e applica fatti approvati, terminologia e vincoli. Riusa il contesto già letto se ancora valido; una correzione locale che non lo coinvolge non richiede una nuova lettura. Non trattare le incognite come fatti. Per un brand figlio consulta anche il suo file sotto `.agents/brands/`, senza caricare gli altri brand.
 <!-- setup-business-context:end -->
 ```
 
@@ -46,15 +46,7 @@ Codex rileva le istruzioni del progetto una volta per esecuzione. Spiega che il 
 
 Claude Code legge i file di progetto `CLAUDE.md`, non `AGENTS.md` direttamente. Preferisci un `CLAUDE.md` esistente alla radice; se non esiste, proponi di crearne uno. Conserva le scelte già fatte dal progetto tra `.claude/CLAUDE.md` e `CLAUDE.local.md` invece di spostarle in silenzio.
 
-Claude Code supporta gli import di file con `@percorso`. Per una singola azienda o un brand autonomo, usa un import diretto così l'identità approvata viene caricata insieme alle istruzioni del progetto:
-
-```markdown
-<!-- setup-business-context:start -->
-@[identity-path]
-<!-- setup-business-context:end -->
-```
-
-Sostituisci `[identity-path]` con il percorso relativo reale, per esempio `@.agents/company-identity.md`; non lasciare le parentesi nella riga installata.
+Preferisci lo stesso rinvio condizionale del blocco Codex, con il percorso reale dell’identità: evita di caricare l’intero profilo per ogni compito. Se il progetto usa già un import diretto approvato o l’utente richiede un contesto sempre caricato, conserva quella scelta. Gli import diretti usano `@percorso`; non lasciare placeholder nelle istruzioni installate.
 
 Quando il workspace usa anche Codex, il file di Claude può importare anche le istruzioni condivise dell'agente:
 
@@ -64,9 +56,9 @@ Quando il workspace usa anche Codex, il file di Claude può importare anche le i
 
 Non aggiungere due volte questa riga. Un link simbolico non è necessario.
 
-Per un'azienda con più brand, importa l'identità aziendale come genitore sempre caricato. Aggiungi un'istruzione concisa per leggere il file pertinente `.agents/brands/<brand-slug>.md` quando un'attività riguarda un brand figlio; non importare ogni brand per impostazione predefinita.
+Per un'azienda con più brand, consulta il genitore quando serve a interpretare il brand pertinente. Aggiungi un'istruzione concisa per leggere il file pertinente `.agents/brands/<brand-slug>.md` quando un'attività riguarda un brand figlio; non importare ogni brand per impostazione predefinita.
 
-Dopo la modifica, rileggi dal disco l'import salvato e il percorso dell'identità referenziato. Spiega che Claude tratta questi file come contesto persistente del progetto, non come controlli di sicurezza vincolanti.
+Dopo la modifica, rileggi dal disco il rinvio o import salvato e il percorso dell'identità referenziato. Spiega che Claude tratta questi file come contesto persistente del progetto, non come controlli di sicurezza vincolanti.
 
 Claude Code può mostrare una finestra di approvazione al primo uso degli import di file. Di' all'utente di controllare e accettare il percorso esatto dell'identità prima di affidarsi all'import. Quando disponibile, verifica i file caricati con la vista `/memory` di Claude in una nuova sessione; un import osservato sul disco è configurato, ma non dimostra che la sessione in esecuzione lo abbia caricato o approvato.
 

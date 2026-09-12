@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-07",
+  "version": "0.1.0",
+  "stage": "corrected-candidate-for-targeted-retests",
+  "files": {
+    "INSTALL.md": "eb9c62e04115d0bad6eaab5760a0a6a172d5060491d2a1c9ef65e04a6b9f2c6e",
+    "SKILL.md": "aa61bbb44e989568e94d35d3fcac4279d7a3f22ba4a1dab12f188281518be974",
+    "agents/openai.yaml": "991164334e08009425d5a5b690501b3ec4633b9a6c7869ab28ba706714e4d6f6",
+    "references/brand-voice-guide.md": "d6dc32244b5542b6b5f4c9d21d316511725b820b8862c0c3ce653ff1077fa50a",
+    "references/discovery-and-decisions.md": "1083ea8bc8a702927a881d1eed8a4b8f93b656fa9e49520b8e4c434a646d146c",
+    "references/persistence-and-reuse.md": "f0a86e964a748d43e1a5e0c780dd3a068509f21c5a704bc6bb1c3d7d87a0d8a4",
+    "references/voice-calibration.md": "5b277afd9b865f2833566b016f2fb37be5a2b7ce26c2e0183f46ac8dbf5b671e"
+  },
+  "aggregate_sha256": "f08d95c6cebb848f48d6f630134eae801864c6a2392bf5bb9569e26478aec7e6"
+}

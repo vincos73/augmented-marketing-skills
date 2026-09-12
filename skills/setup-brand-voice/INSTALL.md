@@ -1,11 +1,9 @@
-# Pacchetto setup-brand-voice 0.1.0
+# Installare `setup-brand-voice` 0.1.2
 
-Prima versione locale. Non è una release pubblica e la creazione del pacchetto non installa la skill.
+Questo pacchetto contiene la skill portabile, i suoi riferimenti e i metadati dell'interfaccia. Non contiene dati aziendali o dei test né autorizzazioni a inviare o pubblicare contenuti. La versione `0.1.2` è la sorgente locale revisionata; questo documento non attesta una release pubblica o un'installazione già avvenuta.
 
-Lo ZIP contiene una sola cartella `setup-brand-voice/`, con istruzioni, riferimenti e metadati dell'interfaccia. Non contiene guide aziendali, dati dei test o autorizzazioni a pubblicare.
+Per un'installazione richiesta, estrai la cartella `setup-brand-voice/` nella destinazione delle skill della piattaforma. In Codex la destinazione personale normalmente è `~/.codex/skills/setup-brand-voice/`, con `SKILL.md` al suo interno. Prima di sostituire una copia esistente verifica versione e contenuti e conservala per il ripristino. Non copiare dati o cartelle dei test.
 
-Per un'installazione espressamente richiesta, estrai la cartella nella destinazione delle skill della piattaforma. In Codex la destinazione personale normalmente è `~/.codex/skills/setup-brand-voice/`, con `SKILL.md` al suo interno. Prima di sostituire una copia esistente, verifica versione e contenuti e conservala per poter tornare indietro. Non copiare la cartella dei test nella destinazione delle skill.
+Controlla `name: setup-brand-voice` e `metadata.version: "0.1.2"` nel file principale; se distribuito con lo ZIP, verifica il relativo file SHA256SUMS. Una nuova sessione permette di controllare la disponibilità: la presenza sul disco non dimostra il caricamento in una sessione già aperta.
 
-Controlla che il file principale dichiari `name: setup-brand-voice` e `metadata.version: "0.1.0"`. Se usi lo ZIP fornito, confrontalo con il file SHA256SUMS allegato. Una nuova sessione consente di verificare l'effettiva disponibilità; la sola presenza sul disco non dimostra il caricamento in una sessione già aperta.
-
-La skill funziona anche senza le altre componenti della suite. Usa materiali disponibili e chat; accesso al web e scrittura di file dipendono dall'ambiente e dal compito autorizzato.
+La skill funziona anche senza le altre componenti della suite. L'accesso alle fonti e la scrittura di file dipendono dall'ambiente e dal compito autorizzato.

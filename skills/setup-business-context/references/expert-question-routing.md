@@ -124,7 +124,7 @@ Non riscrivere mai uno scopo inferito come missione ufficiale. Distingui identit
 - Ricava le scelte suggerite dalle fonti fornite; non guidare l'utente verso risposte generiche inventate dall'agente.
 - Consenti sempre una correzione, una risposta libera e gli stati applicabili delle informazioni mancanti.
 - Quando presenti una risposta provvisoria sostenuta dalle fonti, proponi `Conferma`, `Correggi` e `Non lo so` invece di chiedere all'utente di ripeterla.
-- Ripeti brevemente la risposta acquisita prima di avanzare, soprattutto quando l'interfaccia non è disponibile o la risposta modifica un'affermazione precedente.
+- Riepiloga una risposta quando corregge un'affermazione materiale o la conferma della comprensione è utile; non ripetere ogni input.
 
 ## Rispettare il confine con la strategia
 
@@ -149,6 +149,6 @@ Prima di presentare l'identità per l'approvazione, verifica che:
 - la differenziazione non è un aggettivo generico scollegato da alternative e prove;
 - le affermazioni non sostenute e le motivazioni inferite dei clienti restano visibili;
 - le lacune non bloccanti, inclusa una missione non documentata, non impediscono il completamento;
-- quando restano lacune materiali non bloccanti, al responsabile vengono offerte sia l'approvazione con quei punti aperti sia la possibilità di approfondirne alcuni prima;
+- quando restano lacune materiali non bloccanti e la scelta non è già espressa, il responsabile può approvare con quei punti aperti oppure approfondirli;
 - i trigger concreti di revisione sono registrati quando il materiale fornito li stabilisce;
 - nessuna domanda è sconfinata nella creazione di una strategia.

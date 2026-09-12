@@ -1,6 +1,7 @@
 # Proposte di miglioramento per Augmented Marketing Suite
 
 Data: 2 settembre 2026
+Ultimo aggiornamento: 6 settembre 2026
 Stato: proposta da discutere, non ancora approvata
 
 ## Scopo
@@ -205,6 +206,23 @@ La differenza di lunghezza tra le skill è reale, ma non dimostra un difetto. No
 
 La versione compressa sostituisce quella corrente soltanto se non perde comportamento utile.
 
+### P25, creare `setup-brand-voice` come capacità distinta
+
+**Stato: completata nella beta.11.** Il nome finale è `setup-brand-voice`; blueprint, eval sintetici, ZIP portabile e pacchetti della Suite sono pubblicati.
+
+La Suite sa già documentare e applicare una voce esistente attraverso Business Identity e Marketing Foundations. Non dispone invece di un percorso dedicato per definire o riprogettare l'identità verbale quando manca, è incoerente o non è più adeguata.
+
+La skill parte da guide e materiali pertinenti, distingue voce osservata, proposta e regole approvate e produce una **Guida alla voce del brand** versionata e approvabile. Non ingloba visual identity, strategia editoriale, calendario, campagne o produzione degli asset e non reintroduce il precedente `content-profile-builder`.
+
+Prova di accettazione prima dell'authoring:
+
+- user story e decisione distinte dalle due skill di setup;
+- output riusabile e referenziabile da Business Identity, Marketing Foundations e builder;
+- confronto tra almeno due direzioni verbali realmente diverse, con trade-off ed esempi;
+- prova su più situazioni rappresentative senza trasformare gli esempi in copy definitivo;
+- approvazione della voce separata dal salvataggio, dall'installazione e dalla produzione;
+- vantaggio osservabile rispetto a un buon agente generalista sullo stesso materiale.
+
 ## Rilievi Claude non trasformati in priorità
 
 Non vengono adottati:
@@ -243,6 +261,11 @@ La ripetizione di alcune invarianti nelle skill resta un trade-off intenzionale 
 - Conservare separati esito tecnico, utilità percepita e risultato di business.
 - Eseguire P24 soltanto come esperimento controllato.
 
+### Fase 4, validare le nuove capacità pubblicate
+
+- Verificare `setup-brand-voice` e `write-marketing-copy` con materiali e responsabili reali.
+- Mantenere la Guida alla voce del brand come riferimento versionato, senza ricreare un profilo editoriale e visuale generale.
+
 ## Criterio di successo complessivo
 
 Una versione successiva dovrebbe essere promossa soltanto se dimostra contemporaneamente:
@@ -257,4 +280,4 @@ Una versione successiva dovrebbe essere promossa soltanto se dimostra contempora
 - portabilità osservata, non soltanto dedotta dai file;
 - utilità verificata con persone reali, separata dai test sintetici.
 
-La formulazione prudente resta: **beta.10 pubblicata e tecnicamente consolidata, con evidenze sintetiche e una prima esperienza qualitativa sul Core iniziale; comportamento cross-runtime e utilità end-to-end richiedono ancora validazione separata.**
+La formulazione prudente resta: **beta.11 pubblicata, con evidenze sintetiche e una prima esperienza qualitativa sul Core iniziale; comportamento cross-runtime e utilità end-to-end richiedono ancora validazione separata.**

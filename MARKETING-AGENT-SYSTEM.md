@@ -35,6 +35,7 @@ Nome di lavoro: **Marketing Decision Skills**. Alternativa editoriale: **Marketi
 Augmented Marketing Suite
         └── Augmented Marketing Assistant  (ingresso conversazionale e orientamento)
                 ├── setup-business-context  (identità durevole di azienda o brand)
+                ├── setup-brand-voice       (identità verbale riutilizzabile)
                 ├── setup-marketing-system  (Fondamenti di marketing)
                 ├── Strategy Core  → define-marketing-challenge → choose-marketing-direction → define-marketing-mix
                 ├── Campaign Core  → design-campaign → campaign-review → campaign-debrief
@@ -43,7 +44,7 @@ Augmented Marketing Suite
 
 **Augmented Marketing Assistant** è un agente sottile e non un nuovo core. Riceve il bisogno nel linguaggio dell'utente, verifica soltanto stati e artefatti osservabili, spiega il passaggio utile e attiva la skill pertinente quando l'ambiente lo consente. Se non può effettuare il passaggio, indica all'utente la skill da invocare e si ferma senza simularne il metodo. Non possiede logica strategica, artefatti o approvazioni propri e non impone il percorso completo quando l'input necessario esiste già. Nel plugin OpenAI compare tecnicamente come sesta skill (`augmented-marketing-assistant`), ma questa forma è soltanto un adattatore di caricamento e non una nuova competenza di marketing.
 
-La [definizione canonica beta v0.2.0](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex ed è incluso nella Suite `0.1.0-beta.10`. Gli [scenari conversazionali sintetici v0.2](evals/augmented-marketing-assistant/scenarios-v0.2.md) aggiungono routing verso Campaign Core e Content Director; la [verifica statica del routing](evals/augmented-marketing-assistant/runs/2026-09-01-routing-expansion-v0.2.0.md) è PASS. Il test cieco e gli smoke test runtime precedenti restano evidenza storica della v0.1.0 e non provano il nuovo routing, la comprensibilità per marketer esterni o il comportamento in ogni ambiente.
+La [definizione canonica beta v0.2.1](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex ed è incluso nella Suite `0.1.0-beta.11`. Gli scenari sintetici precedenti restano evidenza storica: la pubblicazione non prova il routing in ogni runtime, la comprensibilità per marketer esterni o il comportamento in ogni ambiente.
 
 I tre core non sono cartelle decorative e non devono diventare tre agenti generalisti. Sono famiglie di decisioni con artefatti e confini diversi:
 
@@ -53,11 +54,15 @@ I tre core non sono cartelle decorative e non devono diventare tre agenti genera
 
 Nel nucleo minimo non è previsto un agente **Strategist** separato. Il lavoro strategico appartiene alle tre skill dello Strategy Core, mentre l'Assistant conserva soltanto orientamento e continuità. Un eventuale componente trasversale potrà essere valutato soltanto se l'uso reale farà emergere un compito distinto, con una propria user story e un proprio artefatto, per esempio una revisione di coerenza tra sfida, direzione e marketing mix. Non dovrà duplicare il routing dell'Assistant né il metodo delle skill specialistiche.
 
+`setup-brand-voice` è una capacità autonoma per i casi in cui la voce del brand non è ancora definita, è incoerente oppure deve essere riprogettata. Parte da materiali e guide disponibili, conserva ciò che è approvato e prepara una **Guida alla voce del brand** versionata e approvabile. Non produce automaticamente copy di campagna o asset e non estende il proprio perimetro a visual identity, strategia editoriale o calendario.
+
+La skill resta distinta da `setup-business-context`: quest'ultima documenta voce e terminologia già stabilite senza inventarle. Quando una nuova Guida alla voce del brand viene approvata, Business Identity e Marketing Foundations la referenziano come fonte autorevole e applicano le regole pertinenti senza duplicarla. `write-marketing-copy` applica la voce a un singolo testo, senza ridefinirla.
+
 `setup-marketing-system` è l'onboarding delle Marketing Foundations, non il punto d'ingresso generale e non un quarto core. Aiuta l'organizzazione a definire e approvare le regole di marketing stabili che un agente deve conoscere prima di qualsiasi attività di marketing. Parte dal business context canonico e dalle regole, decisioni, materiali e pratiche reali già disponibili; quando una regola operativa essenziale manca, può guidarne la formulazione invece di limitarsi a registrare il vuoto. Costruisce un profilo operativo riusabile dai tre core. Per aziende multi-brand può mantenere un livello aziendale e overlay di brand, sempre referenziando le identità canoniche create da `setup-business-context` invece di copiarle.
 
 Ogni regola formulata con l'aiuto dell'agente resta una proposta finché un responsabile non la approva esplicitamente. La skill può facilitare la definizione di standard operativi persistenti, ma non deve trasformare il setup in una strategia completa, scegliere autonomamente obiettivi, segmenti, posizionamento, budget o campagne, né presentare una raccomandazione come decisione aziendale già adottata.
 
-Le regole editoriali, visive e qualitative minime fanno parte delle **Marketing Foundations**. Manuali, template, asset e brand guideline dettagliati restano documenti esterni referenziati, non un secondo profilo prodotto automaticamente. Una skill autonoma sarà giustificata solo se l'uso reale dimostrerà che importazione, portabilità o manutenzione di questi materiali costituiscono un lavoro distinto.
+Le regole editoriali, visive e qualitative minime fanno parte delle **Marketing Foundations**. Manuali, template, asset e brand guideline dettagliati restano documenti esterni referenziati, non un secondo profilo prodotto automaticamente. `setup-brand-voice` interviene soltanto quando serve definire o riprogettare l'identità verbale; un'ulteriore skill dedicata all'importazione, portabilità o manutenzione di un profilo editoriale e visuale più ampio richiederebbe invece una necessità distinta osservata nell'uso reale.
 
 Un modulo opzionale di ascolto può alimentare il sistema prima di una decisione o in modo continuativo:
 
@@ -144,13 +149,14 @@ La promessa concreta può essere:
 
 ## Stato attuale del sistema e della roadmap
 
-Aggiornato al 1 settembre 2026.
+Aggiornato al 12 settembre 2026.
 
 | Area | Stato | Evidenza e limite |
 |---|---|---|
-| Fondazione e Strategy Core | Pubblicati nella Suite beta.10 | Cinque skill specialistiche versionate; installazione e caricamento restano verifiche separate |
-| Campaign Core | Pubblicato nella Suite beta.10 | `design-campaign` v0.1.4, `campaign-review` v0.1.3 e `campaign-debrief` v0.1.6; run integrato controllato a nove skill PASS su Codex Desktop |
-| Content Core | Primo percorso pubblicato nella Suite beta.10 | `content-director` v0.1.1 sceglie la strada editoriale e produce un Content Brief dopo approvazione |
+| Fondazione e Strategy Core | Pubblicati nella Suite beta.11 | Sette skill specialistiche aggiornate; installazione e caricamento restano verifiche separate |
+| Brand Voice | Pubblicata nella Suite beta.11 | `setup-brand-voice` v0.1.2 definisce o aggiorna una voce riutilizzabile; blueprint ed eval sintetici inclusi |
+| Campaign Core | Pubblicato nella Suite beta.11 | `design-campaign` v0.1.7, `campaign-review` v0.1.4 e `campaign-debrief` v0.1.7; run integrato precedente su nove skill PASS su Codex Desktop |
+| Content Core | Pubblicato nella Suite beta.11 | `content-director` v0.1.2 sceglie la strada editoriale; `write-marketing-copy` v0.1.5 produce il testo richiesto |
 | Research & Evidence | Roadmap opzionale | Introdurre moduli autonomi soltanto quando il riuso giustifica un artefatto separato |
 | Monitoring | Roadmap opzionale | Il bisogno e la forma di distribuzione devono ancora essere validati |
 
@@ -369,7 +375,7 @@ Questa area contiene le regole minime che ogni output marketing deve rispettare:
 
 Le Marketing Foundations contengono le istruzioni applicabili dagli agenti e referenziano i documenti autorevoli già esistenti. Non creano né duplicano logo, visual identity, template, asset, manuali editoriali o brand guideline. Se un documento esterno è necessario per applicare una regola, il profilo ne registra percorso o riferimento, versione quando disponibile e scope.
 
-Nella prima versione questa area non genera automaticamente un secondo profilo editoriale o visuale. Un artefatto separato richiederà una necessità osservabile di portabilità, manutenzione, proprietà o permessi differenti; le differenze di un brand appartenente a un'azienda possono invece vivere nel relativo overlay marketing.
+Nella prima versione questa area non genera automaticamente un secondo profilo editoriale o visuale. `setup-brand-voice` può produrre una Guida alla voce del brand soltanto attraverso un percorso esplicito di definizione e approvazione; la guida viene poi referenziata dalle Marketing Foundations. Un profilo editoriale e visuale più ampio richiederà una necessità osservabile di portabilità, manutenzione, proprietà o permessi differenti; le differenze operative di un brand appartenente a un'azienda possono invece vivere nel relativo overlay marketing.
 
 ##### 5. Controlli, autorità e approvazioni: decisione approvata
 
@@ -628,12 +634,13 @@ Il [blueprint del Content Core](CONTENT-CORE.md) e i [riferimenti di authoring](
 ### Ordine di costruzione
 
 1. mantenere Fondazione e Strategy Core pubblicati e verificare il riuso con marketer reali;
-2. rinnovare installazione e caricamento della Suite beta.10 sulle superfici runtime previste;
+2. rinnovare installazione e caricamento della Suite beta.11 sulle superfici runtime previste;
 3. verificare con un responsabile reale il percorso già passato nella fixture sintetica `design-campaign` → `campaign-review` → `campaign-debrief`;
 4. collegare il primo percorso Content a un builder già esistente e misurare il rework;
 5. verificare `Augmented Marketing Assistant` in sessioni pulite anche sul Campaign Core;
-6. introdurre Research & Evidence e monitoring soltanto nei processi che mostrano un uso ripetuto;
-7. evitare un nuovo agente generalista finché i vertical slice specialistici non mostrano un vantaggio stabile.
+6. validare `setup-brand-voice` e `write-marketing-copy` con materiali e responsabili reali;
+7. introdurre Research & Evidence e monitoring soltanto nei processi che mostrano un uso ripetuto;
+8. evitare un nuovo agente generalista finché i vertical slice specialistici non mostrano un vantaggio stabile.
 
 ## Content Director: responsabilità e confini
 
@@ -781,7 +788,7 @@ Non fissare soglie numeriche prima di avere una baseline. Dopo il pilota, defini
 - Approvazione e installazione sono due gate distinti: prima si approva il contenuto e si autorizza la scrittura canonica; solo dopo un secondo consenso può modificare le istruzioni dell'agente per caricare automaticamente identità, foundations e overlay pertinente.
 - Le Marketing Foundations sono utilizzabili senza essere esaustive: tutte le cinque aree devono essere valutate, i vuoti non bloccanti devono avere stato e comportamento prudente espliciti, mentre conflitti bloccanti o controlli essenziali mancanti impediscono l'approvazione.
 - L'onboarding non chiede all'utente di scegliere quale file creare: parte dal bisogno e propone l'artefatto pertinente. Un secondo file è giustificato solo da proprietari, frequenze di aggiornamento, permessi o utilizzatori differenti.
-- Gli standard editoriali e visivi minimi vivono nelle Marketing Foundations; manuali, template e asset dettagliati restano riferimenti esterni. Non viene reintrodotto `content-profile-builder` come skill approvata.
+- Gli standard editoriali e visivi minimi vivono nelle Marketing Foundations; manuali, template e asset dettagliati restano riferimenti esterni. Non viene reintrodotto `content-profile-builder` come skill approvata. `setup-brand-voice` resta circoscritta alla definizione o riprogettazione dell'identità verbale.
 - Strategy, Campaign e Content sono tre core distinti per decisione e artefatto, non tre agenti generalisti che duplicano il lavoro.
 - `define-marketing-challenge` serve al proprietario della decisione e produce un Brief della sfida confermato prima di qualsiasi scelta di direzione. Un'agenzia che interpreta unilateralmente un brief ricevuto richiede un workflow separato.
 - La prima risposta di `define-marketing-challenge` formula già una sfida provvisoria, distingue supporto e assunzioni e pone non più di tre domande ad alta conseguenza; non apre un workshop o un questionario generico.
