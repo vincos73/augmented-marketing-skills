@@ -1,0 +1,19 @@
+{
+  "file_exists": true,
+  "only_artifact_in_requested_directory": true,
+  "matches_approved_writing_block_ignoring_outer_newline": true,
+  "literal_clause_preserved": true,
+  "links": [
+    {
+      "path": "/Users/vincos/Documents/ChatGPT/Marketing Skills Project/evals/setup-brand-voice/fixtures/ricalco/sources/approved-verbal-guide.md",
+      "exists": true
+    },
+    {
+      "path": "/Users/vincos/Documents/ChatGPT/Marketing Skills Project/evals/setup-brand-voice/fixtures/ricalco/sources/current-materials.md",
+      "exists": true
+    }
+  ],
+  "bytes": 2515,
+  "sha256": "d66ce542c271ddbf6780edcd8f0180b381ed71486b895699d0b8c9684b552dfc",
+  "limit": "Verification of designated directory and saved file, not a whole-filesystem audit."
+}

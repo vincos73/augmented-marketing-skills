@@ -1,0 +1,1 @@
+Creato [ricalco-voice-reference.md](/private/tmp/setup-brand-voice-save-fed9t51o/ricalco-voice-reference.md) con il testo approvato, senza modifiche. Ho riletto il file e verificato la corrispondenza integrale. La guida Ricalco 2.1 resta il riferimento ufficiale.

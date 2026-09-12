@@ -2,7 +2,7 @@
 
 Leggi questa guida quando la sfida è nuova o incompleta, le fonti sono in conflitto oppure più lacune competono per l'attenzione del responsabile. L'obiettivo è porre il minor numero di domande che renda la sfida onesta e confrontabile, non condurre un workshop strategico completo.
 
-## Costruire privatamente il registro delle lacune
+## Distinguere le lacune decisive
 
 Classifica gli elementi rilevanti in queste aree:
 
@@ -16,7 +16,7 @@ Classifica gli elementi rilevanti in queste aree:
 8. responsabile della conferma e autorità necessarie;
 9. decisione che il brief deve preparare.
 
-Per ogni elemento registra privatamente:
+Per gli elementi che cambiano la decisione, chiarisci quanto serve su:
 
 - supportato da un contesto o da una fonte;
 - confermato dal responsabile;
@@ -29,6 +29,10 @@ Per ogni elemento registra privatamente:
 Non mostrare il registro come una diagnosi estesa. Usalo per preparare la formulazione provvisoria e selezionare le domande.
 
 ## Ordinare le domande per conseguenza
+
+Riconcilia prima date, periodi e fatti già leggibili, verificando nei materiali successivi eventuali cambiamenti pertinenti. Chiedi in modo neutro solo quelli capaci di invalidare diagnosi, pubblico o perimetro; non suggerire eventi non documentati. Una domanda rinviata resta negli aspetti aperti con il passaggio prima del quale servirà.
+
+Distingui informazione non disponibile, decisione rinviata e scelta esplicita di non fissare un numero, senza ridurle a `non definito` o riaprire risposte già date.
 
 Poni al massimo tre domande per turno. Ordina le candidate così:
 
@@ -62,7 +66,7 @@ Mostra solo i fatti, segnali, assunzioni e vincoli più capaci di cambiare il br
 
 Poni fino a tre domande. Parti dalla proposta già ricavata e invita a confermare, correggere o dichiarare che l'informazione non è nota.
 
-L'intera risposta, comprese domande e fonti, resta entro 450 parole. Se il materiale è denso, conserva nell'ordine: conflitti con il contesto, risultato e pubblico, causa non dimostrata, autorità e vincoli; rinvia dettagli e arricchimenti.
+Circa 450 parole possono aiutare a contenere la prima risposta, senza essere un limite rigido. Se il materiale è denso, conserva nell'ordine: conflitti con il contesto, risultato e pubblico, causa non dimostrata, autorità e vincoli; rinvia dettagli e arricchimenti.
 
 ## Lenti per le domande
 

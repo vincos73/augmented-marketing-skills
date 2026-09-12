@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "displayName": "AMS Vertical Slice",
+  "name": "ams-vertical-slice",
+  "version": "0.1.2",
+  "description": "Vertical Slice isolata dal contesto ai risultati con router automatico e specialisti manuali.",
+  "author": {
+    "name": "Augmented Marketing Suite"
+  },
+  "keywords": [
+    "marketing",
+    "skills",
+    "vertical-slice",
+    "portability"
+  ]
+}

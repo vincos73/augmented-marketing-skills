@@ -1,0 +1,70 @@
+{
+  "kind": "synthetic-cross-author-execution",
+  "host_provenance_verified": false,
+  "blind": false,
+  "files": [
+    {
+      "file": "behavior/content-b-prompt.txt",
+      "sha256": "c1437c48da6a0e97de0747019cbc19f454aea4320de61d84f927e170f88054e7"
+    },
+    {
+      "file": "behavior/content-b-response.md",
+      "sha256": "0e1a4e2350b89bdb50eca94ca294c60529dd1fc657d0dc3bcfa9d3c77a5bf2e6"
+    },
+    {
+      "file": "behavior/content-brief.md",
+      "sha256": "a56d071ef7f4b358a931d32af56bf139cd5494028b59e28569a6828bebbb95a0"
+    },
+    {
+      "file": "behavior/copy-a-prompt.txt",
+      "sha256": "1977da2a5a4227a4a1ebc6b45c933ada7429879d1fb7c520e9c767a266e9fe14"
+    },
+    {
+      "file": "behavior/copy-a-response.md",
+      "sha256": "f1a456afe20f84fdb961559393148c5ee2b2f087d677f6290a1509d8c5f47f6f"
+    },
+    {
+      "file": "behavior/debrief-response.md",
+      "sha256": "c9cc1c5d9a3774951e751751d2a980b09413b10e07c91b0b8a7384e4b2b7c8c1"
+    },
+    {
+      "file": "behavior/mix-final-response.md",
+      "sha256": "e2968eb8799672634ee99520b248db571a20031a93f349175c1c849cfcef0594"
+    },
+    {
+      "file": "behavior/mix-response.md",
+      "sha256": "8b30d4ba0dd226f3b287d327f76196a75992d2338565327615fb1a163429a410"
+    },
+    {
+      "file": "behavior/voice-conditions-response.md",
+      "sha256": "8da55d03223d68b40c3f1422069c5eb338a78b09c4749698daecf3c67ea9b3c3"
+    },
+    {
+      "file": "behavior/voice-conditions.md",
+      "sha256": "3cc1c7ac941b3abfe3b9ae55debd61867ab9978f295ceccd57295c7fe437dcab"
+    },
+    {
+      "file": "behavior/voice-response.md",
+      "sha256": "780a0be52ff2a632a8112adb59fe957d5f569286dbf50afd9440045da50c9d48"
+    },
+    {
+      "file": "behavior/voice.md",
+      "sha256": "f2dd21a36a592a002ed177448cfe7969e97de62bd4ec929f0fde0c7b4aee14cd"
+    }
+  ],
+  "final_skill_versions": {
+    "augmented-marketing-assistant": "0.2.1",
+    "setup-business-context": "0.6.7",
+    "setup-marketing-system": "0.3.4",
+    "setup-brand-voice": "0.1.2",
+    "define-marketing-challenge": "0.1.8",
+    "choose-marketing-direction": "0.2.8",
+    "define-marketing-mix": "0.1.9",
+    "design-campaign": "0.1.7",
+    "campaign-review": "0.1.4",
+    "campaign-debrief": "0.1.7",
+    "content-director": "0.1.2",
+    "write-marketing-copy": "0.1.5"
+  },
+  "final_source_manifest": "../../dist/beta.11/manifest.json"
+}

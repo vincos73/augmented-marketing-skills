@@ -1,40 +1,13 @@
-# Criteri per la prima revisione compatta
+# Prima revisione dell'identità con fonti dense
 
-Usa questi criteri quando entità e fonti sono già disponibili e devi mostrare la prima comprensione provvisoria al manager.
+Consulta questa guida quando comprimere le fonti rischia di far perdere informazioni che cambiano il lavoro degli agenti.
 
-## Criteri obbligatori
+Conserva entità e perimetro, offerta corrente, clienti e ruoli d'acquisto, valore e alternative, conflitti nelle prove e vincoli critici. I dettagli di storia, business model e arricchimento possono attendere la revisione completa. Non omettere limiti su privacy, diritto, sicurezza, autorizzazioni o uso pubblico delle prove per abbreviare il testo.
 
-La risposta deve:
+Una sintesi di circa 450 parole in pochi gruppi può essere utile; non è una soglia di accettazione. Scegli struttura e lunghezza sufficienti a una decisione informata. Un materiale denso non è di per sé un blocco di lettura.
 
-1. essere il primo turno sostanziale dopo la ricezione delle fonti;
-2. contenere da 4 a 6 gruppi informativi riconoscibili;
-3. restare entro un tetto massimo di 450 parole, comprese domande e chiave delle fonti;
-4. porre al massimo 3 domande ad alta conseguenza;
-5. usare normalmente non più di 2 frasi brevi per gruppo;
-6. mostrare i marker di provenienza sulle affermazioni rilevanti;
-7. conservare ogni confine rilevante su privacy, diritto, sicurezza, autorizzazioni e uso pubblico delle prove;
-8. rinviare il dettaglio completo alla revisione dell'identità invece di trasformare la prima proposta in un inventario.
-9. usare etichette naturali per il manager, senza calchi del modello dati o campi del template esposti meccanicamente;
-10. non mostrare entità HTML, serializzazioni o caratteri codificati come `&#x20;`.
-11. trattare ciascuna domanda come una decisione principale: non accorpare nella stessa domanda lacune che richiedono responsabili o percorsi diversi, come pagatore, privacy e approvazione dei claim;
-12. se mostra percorso o versione prima dell'approvazione, presentarli come proposta e dichiarare esplicitamente che l'identità non è stata salvata né installata per gli agenti.
+Usa marcatori sulle affermazioni rilevanti, una chiave breve e stati di lacuna precisi. Presenta percorso e versione come proposti finché il documento non è stato salvato. Usa linguaggio quotidiano e caratteri leggibili, senza mostrare serializzazioni o nomi di campi interni.
 
-Il tetto di 450 parole è un limite operativo, non un obiettivo da raggiungere. Una risposta più breve è preferibile se conserva comprensione, provenienza e guardrail.
+Poni solo le domande indispensabili, massimo tre per gruppo. Non accorpare in una domanda decisioni con responsabili diversi, come pagatore, privacy e autorizzazione dei claim. Non ripetere informazioni o autorizzazioni già acquisite.
 
-## Ordine di compressione quando le fonti sono dense
-
-Se la bozza supera il limite:
-
-1. conserva entità e perimetro;
-2. conserva offerta corrente, clienti e ruoli d'acquisto;
-3. conserva valore, alternative e conflitti nelle prove;
-4. conserva gli stati canonici e i vincoli critici;
-5. elimina esempi, storia, dettagli di business model e arricchimenti;
-6. unisci gruppi affini e rinvia il resto al draft completo;
-7. non eliminare mai un limite di privacy, autorizzazione, uso pubblico, sicurezza o conformità per rientrare nel limite.
-
-Se anche dopo questa compressione la risposta non è leggibile, mostra un blocker concreto di lettura oppure chiedi una sola decisione che sblocchi la sintesi. Non inviare un messaggio di avanzamento privo di valore.
-
-## Verifica minima
-
-Per gli eval, considera la risposta superata solo se il checker conferma parole, gruppi, domande e marker richiesti. Un risultato numerico non sostituisce la revisione umana della perdita di significato.
+Valuta la sintesi per fedeltà, utilità e conservazione dei limiti: conteggi di parole, frasi o gruppi non provano la qualità.

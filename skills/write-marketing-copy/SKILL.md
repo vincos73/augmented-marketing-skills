@@ -1,49 +1,36 @@
 ---
 name: write-marketing-copy
-description: "Crea, riscrive o adatta copy marketing per post, pagine, email, titoli e CTA, rispettando pubblico, voce e informazioni disponibili. Usala quando serve un testo pronto per revisione; non per articoli giornalistici, newsletter editoriali complete, sequenze, strategie, campagne, grafica o pubblicazione."
+description: "Crea o riscrive singoli testi marketing pronti per revisione, applicando pubblico, voce e fatti disponibili."
 metadata:
-  version: "0.1.4"
+  version: "0.1.5"
 ---
 
 # Copywriting
 
-Scrivi o rielabora un testo marketing che aiuti il lettore a capire, considerare, ricordare o fare ciò che serve nel contesto dato. Il risultato è copy completo pronto per revisione, con eventuali note separate e solo quando cambiano la sicurezza o l'uso del testo.
+Consegna copy marketing completo, con note separate solo se ne cambiano l'uso o richiedono una decisione. Il lavoro riguarda un testo, non una strategia, una campagna, una sequenza, un articolo giornalistico o una newsletter editoriale completa.
 
-## Inquadra il compito
+## Contesto sufficiente
 
-Leggi prima richiesta, materiali accessibili e contesto pertinente. Nei riferimenti indicati dall'utente e nel progetto pertinente cerca, in modo proporzionato, una guida di voce o un riferimento verbale per l'entità e il perimetro del testo. Non esplorare tutti i progetti o il disco. Se trovi più guide, applica quella chiaramente pertinente; chiedi solo se resta un'ambiguità che cambierebbe il copy. Verifica, quando sono indicati, entità, perimetro, stato e versione. Una guida approvata orienta l'espressione; una bozza, una guida parziale o degli esempi restano riconoscibili come tali. La guida non prova fatti dell'offerta, risultati o promesse e non fissa da sola il target del singolo testo.
+Leggi richiesta e materiali pertinenti. Cerca proporzionatamente nei riferimenti indicati e nel progetto una guida di voce per l'entità e il perimetro del testo; non esplorare altri progetti o il disco. Applica la guida chiaramente pertinente, distinguendo versione e stato quando noti. Una guida approvata orienta l'espressione, non prova fatti, promesse o target del testo. Una bozza o un esempio resta tale; un riferimento non emerso non è necessariamente inesistente.
 
-Riusa, quando esistono e servono davvero, la voce approvata, i messaggi e le prove già disponibili, una Campaign Spec o un Content Brief. Non imporre questi documenti e non dichiarare assenti artefatti che non hai potuto verificare.
+**Se l'utente richiede espressamente la voce abituale, una guida approvata o coerenza con una comunicazione identitaria**, il riferimento mancante, inaccessibile o ambiguo è una lacuna decisiva: chiedi un riferimento utilizzabile, anche un esempio approvato o un'indicazione diretta. Puoi accompagnare la domanda con una bozza provvisoria, ma il registro scelto dall'agente o una nota di assunzione non soddisfano da soli la richiesta di voce.
 
-Quando l'utente chiede espressamente la voce abituale, una guida approvata o coerenza con una comunicazione identitaria, e il riferimento pertinente non emerge, è inaccessibile o resta ambiguo, questa è una lacuna decisiva. Prima di dichiarare sufficiente il contesto, chiedi un solo riferimento da usare — guida, esempio approvato o indicazione diretta dell'utente. Se una bozza aiuta, dichiarala provvisoria e accompagna il chiarimento effettivo: un registro provvisorio o una nota di assunzione da soli non soddisfano quella richiesta. Questa domanda rientra nel massimo complessivo di tre.
+Negli altri casi, chiedi se esiste un riferimento di voce solo quando può cambiare materialmente il testo. Se non serve o non esiste, usa un registro locale provvisorio senza inventare un'identità di brand. Riusa messaggi, prove, Campaign Spec o Content Brief quando utili, senza imporli né dichiararli assenti se non verificabili.
 
-Il lavoro può iniziare anche da una richiesta incompleta. Individua quale cambiamento deve avvenire nel lettore — comprendere, considerare, ricordare o fare qualcosa — senza presumere una vendita né una CTA. Prima di considerare sufficiente il contesto, verifica se resta una scelta comunicativa sostanziale che non è ragionevolmente ricavabile dai materiali e cambierebbe davvero il copy: per esempio lettore, funzione o tesi. Non occorre formalizzare ogni elemento. Se una direzione è già favorita dalla richiesta o dai materiali, scegli e consegna subito il copy; se restano due direzioni sostenibili, proponine una e poni una domanda mirata. Non richiedere di nuovo informazioni già presenti nei materiali o nel contesto.
+Individua quale cambiamento nel lettore deve sostenere il testo: comprendere, considerare, ricordare o agire, senza presumere vendita o CTA. Se richiesta e materiali favoriscono una direzione, scegli e scrivi. Se una scelta sostanziale di lettore, funzione, tesi o promessa resta ambigua, mostra una proposta e chiedi ciò che può cambiarla. Tutte le domande, incluse quelle sulla voce, condividono il massimo di tre per turno; non richiedere dati già presenti. Un prezzo o una data sono decisivi quando cambiano la promessa, mentre un dettaglio di consegna può restare un segnaposto dichiarato.
 
-Se una lacuna è decisiva, valuta quanto una risposta può cambiare significato, utilità o correttezza del testo e quale costo o rischio comporterebbe un'assunzione. Mostra una proposta concreta e poni al massimo tre domande, dando precedenza alle informazioni che incidono di più: per esempio funzione o risultato del testo, destinatario e stato del lettore, messaggio, offerta, fatti o limiti essenziali. Non è un ordine rigido: un link, un prezzo o una data hanno precedenza quando cambiano la promessa o rendono eseguibile il passaggio richiesto; se servono solo alla consegna o all'impaginazione, possono attendere o restare un segnaposto dichiarato. Fuori da una richiesta esplicita di voce abituale o guida, una guida non emersa non equivale a guida inesistente: chiedi una sola volta se esiste un riferimento approvato da usare soltanto quando la coerenza di voce può cambiare materialmente il testo. Se non c'è, non serve o il compito è già una scrittura rapida ben inquadrata, usa un registro provvisorio locale; chiedi del tono solo se la risposta cambierebbe il copy. Tutte queste domande condividono lo stesso massimo di tre. Esplicita le assunzioni solo quando aiutano il responsabile a decidere.
+`content-director`, se disponibile, può aiutare a scegliere un contenuto ancora indefinito; `setup-brand-voice` può definire una voce riutilizzabile. Sono risorse facoltative, non passaggi obbligatori prima della scrittura.
 
-Quando non è chiaro quale contenuto produrre, quale funzione debba avere o quale forma sia adatta, `content-director` può essere utile prima della scrittura. Quando bisogna definire o cambiare una voce riutilizzabile, può essere utile `setup-brand-voice`. Entrambi restano facoltativi: non trasformarli in passaggi obbligatori e non esporre questa logica come istruzione al responsabile.
+## Precisione e forma
 
-## Scrivi con precisione
+Ricava specificità dai fatti e dal funzionamento dell'offerta. Non inventare metriche, clienti, testimonianze, garanzie, disponibilità, approvazioni, benefici o nessi causali. Non rafforzare un'affermazione oltre le prove: conserva le condizioni necessarie o escludi il passaggio. Anche cortesia e raccordi devono rispettare quanto documentato, senza presumere contatti o azioni precedenti.
 
-- Parti dall'idea, dal problema o dalla decisione del lettore, non da una formula o dal formato. Le strutture aiutano a verificare chiarezza e progressione; non diventano un procedimento obbligatorio.
-- Ricava specificità da fatti, funzionamento dell'offerta, condizioni d'uso e prove realmente disponibili. Non inventare metriche, clienti, testimonianze, garanzie, risultati, disponibilità o approvazioni; non aggiungere nessi causali o benefici qualitativi che i materiali non sostengono.
-- Tratta una guida di voce come guida all'espressione: relazione con il lettore, ritmo, lessico e costruzione del discorso. Se non esiste, non creare un'identità fittizia: un registro o una scelta stilistica provvisoria vale solo per il testo in corso, non diventa una voce di brand.
-- Applica la voce senza sacrificare senso, precisione, qualificazioni, condizioni o testi protetti. Una correzione locale non aggiorna una guida di voce.
-- Scrivi italiano naturale e adatta lingua, settore, pubblico e piattaforma senza calchi né liste universali di parole proibite. Se adatti un testo in un'altra lingua, ricrea funzione, tono e implicazioni nel nuovo contesto invece di tradurre meccanicamente.
-- Mantieni le promesse proporzionate alle prove. Un tono assertivo non rende più forte un'affermazione debole. Se un passaggio è sostenibile solo con una condizione o una verifica, conserva la condizione oppure escludilo.
+Applica la voce alla relazione, al ritmo, al lessico e all'argomentazione, preservando significato, qualificazioni e condizioni. Copia alla lettera i testi protetti o dichiarati identici, senza normalizzarli. Una revisione locale non aggiorna la guida.
 
-## Scegli il modo di consegnare
+Adatta forma, lingua e piattaforma all'idea e alla decisione del lettore. Non imporre formule di copywriting, CTA o parole proibite. Per esigenze specifiche di post, pagina, email singola o titoli, consulta [copy-modes.md](references/copy-modes.md); una semplice riscrittura ben inquadrata non richiede il riferimento. Proponi alternative solo quando cambiano idea o argomentazione in modo utile, senza promettere conversioni.
 
-Per un post o una caption, costruisci apertura, sviluppo e chiusura in funzione della piattaforma e della voce di persona o azienda quando questa differenza è disponibile. Per una pagina, organizza il testo attorno alle domande e alle decisioni che il lettore deve poter prendere. Per un'email singola, cura oggetto, anteprima e corpo senza simulare una sequenza. Per titoli, headline o CTA, quando servono più prospettive, consegna opzioni circoscritte che svolgano ruoli diversi.
+## Consegna e revisioni
 
-Consulta [i modi di scrittura](references/copy-modes.md) quando la forma o il passaggio di revisione richiedono istruzioni più specifiche. Non caricare il riferimento per una semplice riscrittura o una CTA già ben definita.
+Consegna il testo richiesto, distinguendo eventuali assunzioni o lacune che incidono sul suo uso. Dopo il feedback modifica le parti interessate e conserva pubblico, messaggio, voce e passaggi protetti già definiti. Una review separata non è obbligatoria.
 
-Quando alternative creative sono davvero utili, proponine poche e diverse nell'idea o nell'argomentazione, non solo nella superficie. Spiega brevemente quale tensione o lettore privilegia ciascuna. Non promettere conversioni.
-
-## Revisioni e consegna
-
-Nel testo finale separa il copy dalle note. Le note possono indicare una fonte mancante, una formulazione esclusa o una decisione ancora aperta; non devono sostituire il testo con una lezione di metodo.
-
-Dopo un feedback, modifica solo ciò che cambia. Conserva il significato, le condizioni, la forza delle affermazioni e ogni testo dichiarato protetto o da mantenere identico. Non riaprire pubblico, messaggio o voce già definiti senza una ragione concreta.
-
-La revisione del copy è parte di questo lavoro. Una review separata non è obbligatoria. Salvataggio, installazione, distribuzione, invio e pubblicazione sono azioni distinte: non eseguirle né dichiararle avvenute senza una richiesta e un'autorizzazione pertinenti. In un test o una simulazione, non scrivere nei percorsi canonici e non inviare o pubblicare nulla.
+La richiesta di salvare o aggiornare un file autorizza la scrittura nel perimetro indicato; non chiedere un'altra conferma. Conserva in bozza scelte non approvate. Invio, distribuzione, pubblicazione e installazione restano azioni distinte che devono rientrare nelle autorizzazioni già espresse. In test o simulazione usa solo l'area isolata autorizzata, senza invii o pubblicazione. Dichiara soltanto operazioni effettivamente eseguite.

@@ -2,7 +2,7 @@
 
 Questo pacchetto contiene solo la skill installabile. Non contiene Campaign Spec, asset, dati di campagna, autorizzazioni o file `AGENTS.md`/`CLAUDE.md` dell'organizzazione.
 
-La versione corrente della sorgente è `0.1.3` ed è inclusa in Augmented Marketing Suite `0.1.0-beta.10`. La presenza nel repository non dimostra da sola installazione attiva o caricamento in una sessione: verifica sempre versione, checksum e destinazione del pacchetto effettivamente usato.
+La versione corrente della sorgente è `0.1.4` ed è destinata ad Augmented Marketing Suite `0.1.0-beta.11`. La presenza nel repository non dimostra da sola installazione attiva o caricamento in una sessione: verifica sempre versione, checksum e destinazione del pacchetto effettivamente usato.
 
 ## Installazione da ZIP
 
@@ -26,7 +26,7 @@ Controlla il frontmatter:
 ```yaml
 name: campaign-review
 metadata:
-  version: "0.1.3"
+  version: "0.1.4"
 ```
 
 Controlla inoltre che il pacchetto contenga `references/campaign-review-contract.md` e non contenga fixture, eval, asset di campagne o file di istruzioni dell'organizzazione.

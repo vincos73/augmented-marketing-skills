@@ -27,7 +27,7 @@ Una buona diagnosi comprime la complessità senza nasconderla: identifica la ten
 
 ## Derivare la decisione dalla diagnosi
 
-Formula poi la domanda decisionale in linguaggio manageriale. Se due letture differenti del brief producono domande diverse, non generare ancora le direzioni: chiarisci prima l'ambiguità ad alta conseguenza.
+Formula poi la domanda decisionale in linguaggio manageriale. Se due letture del brief producono domande diverse, mostra le diagnosi concorrenti e le conseguenze sulla scelta. Chiedi un chiarimento solo se non è possibile un confronto condizionato utile.
 
 ## Costruire alternative realmente differenti
 
@@ -119,6 +119,6 @@ Scegli la prova più piccola che riduca l'incertezza più costosa, non necessari
 - test del meccanismo di cambiamento;
 - test di fattibilità dell'organizzazione.
 
-Specifica una regola decisionale prima del risultato. Non inventare soglie numeriche se non esiste una base; usa criteri osservabili e dichiarane il limite. Il test resta una proposta finché non viene autorizzato separatamente.
+Specifica una regola decisionale prima del risultato. Non inventare soglie numeriche se non esiste una base; usa criteri osservabili e dichiarane il limite. L'esecuzione richiede un'autorizzazione che comprenda il test e le sue azioni; può essere già inclusa nel mandato, senza una nuova conferma.
 
 L'esito del test deve portare a uno tra quattro comportamenti: confermare la direzione, correggerla entro lo stesso meccanismo, fermarla oppure riaprire la diagnosi. Se cambia la diagnosi o il meccanismo, una semplice modifica del marketing mix non è sufficiente.

@@ -109,11 +109,11 @@ Il record può diventare `approvato` quando:
 - conclusioni e causalità sono proporzionate;
 - raccomandazione, responsabile e prossima verifica sono utilizzabili;
 - proposte verso altri artefatti restano distinte dalle modifiche applicate;
-- il responsabile approva la lettura e autorizza separatamente il salvataggio.
+- il responsabile approva la lettura. Il salvataggio richiede una richiesta o autorizzazione pertinente, che può essere già presente; non è una condizione per approvare il contenuto in chat.
 
 ## Percorso e versioning
 
-Usa:
+Una richiesta di creare il documento autorizza il salvataggio nel perimetro indicato. Completa una bozza se manca l'approvazione della lettura; riusa le autorizzazioni già date senza chiederle nuovamente. Usa una destinazione richiesta dall'utente oppure il percorso abituale:
 
 ```text
 .agents/marketing/decisions/<decision-slug>/campaigns/<campaign-slug>/campaign-learning.md

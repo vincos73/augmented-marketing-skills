@@ -1,0 +1,6 @@
+interface:
+  display_name: "Design Campaign"
+  short_description: "Specialista manuale: fase campaign"
+  default_prompt: "Use $ams-vs-design-campaign for the isolated AMS Vertical Slice test."
+policy:
+  allow_implicit_invocation: false

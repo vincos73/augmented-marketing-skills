@@ -1,0 +1,142 @@
+[
+  {
+    "path": "ardora/turn-1.md",
+    "candidate": "initial",
+    "words_whitespace": 333,
+    "sha256": "3b4a1843e90234f9ffca9b4b3c278c8c736e4bd59000e9282045a2c05ac34bee",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "ardora/turn-2.md",
+    "candidate": "initial",
+    "words_whitespace": 257,
+    "sha256": "4efa35a820b71ebfafc9666f2caa492af7f14ee2ac12fa14d4055282bf26d6b5",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "ardora/turn-3.md",
+    "candidate": "initial",
+    "words_whitespace": 246,
+    "sha256": "cdd71b02cbc46a05b2de53d670f1989c04f1211b63bbb18e4ce18237d13debc5",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "ardora-retest-1/turn-1.md",
+    "candidate": "intermediate",
+    "words_whitespace": 333,
+    "sha256": "1694f278e419f4da82d3d09ad796a779cd800006cb68d313d6bb2789cc265b15",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "ardora-retest-2/turn-1.md",
+    "candidate": "final",
+    "words_whitespace": 335,
+    "sha256": "33eacba5f6aaeb2448f24656c4d88ad58a66ebbb8aeebad8b4d3a5d295f2a17f",
+    "recorder": "coordinator_from_agent_message"
+  },
+  {
+    "path": "filoporto/turn-1.md",
+    "candidate": "initial",
+    "words_whitespace": 366,
+    "sha256": "06a8cd46b1741668eb4f14107e81285c419156fd87100728a60e3ba4fca26c15",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "filoporto/turn-2.md",
+    "candidate": "initial",
+    "words_whitespace": 214,
+    "sha256": "83515e0ef4b25e7f7790caa3bce8e709649e12257bb27620f572ecd3a83b8804",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "filoporto/turn-3.md",
+    "candidate": "initial",
+    "words_whitespace": 401,
+    "sha256": "4478484070ae762f6a4538438488f3e6d098525e77ac5797e60c5d43738f7be4",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "filoporto/turn-4.md",
+    "candidate": "initial",
+    "words_whitespace": 42,
+    "sha256": "e803b86f1aeda53d0c1cae077f847c3237b398eca58de9e85ed7173405a93f2b",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "filoporto-retest/turn-1.md",
+    "candidate": "final",
+    "words_whitespace": 400,
+    "sha256": "4c072b86a257918d5cc6a7881dc2ae466de9dfd677c33d51e99ae0a3700c1e06",
+    "recorder": "coordinator_from_agent_message"
+  },
+  {
+    "path": "filoporto-retest/turn-2.md",
+    "candidate": "final",
+    "words_whitespace": 199,
+    "sha256": "18702ab963b3517e7504db09ee11f5fe2132b1533a09df752b5e9de4045379ba",
+    "recorder": "coordinator_from_agent_message"
+  },
+  {
+    "path": "linked/turn-1.md",
+    "candidate": "final",
+    "words_whitespace": 316,
+    "sha256": "293797bf4746aebfd978d4cfce738c3cb4b6eddc29ad6b27dfc19d17a1d9a0bb",
+    "recorder": "coordinator_from_agent_message"
+  },
+  {
+    "path": "partial/turn-1.md",
+    "candidate": "initial",
+    "words_whitespace": 331,
+    "sha256": "c138279ac75043b4517d0a48dfafb368549c5eae0e8f41bb450f30752f38f638",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "ricalco/turn-1.md",
+    "candidate": "initial",
+    "words_whitespace": 330,
+    "sha256": "330f089f3d2e2608d21fa0c93b5e7d11901daebb8a843c527899c1de4b9ff307",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "ricalco/turn-2.md",
+    "candidate": "initial",
+    "words_whitespace": 327,
+    "sha256": "55d1943877bd86468972e454145a9f364ebf4b6cc32beb19d08dd9273577fcfd",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "save/turn-1.md",
+    "candidate": "intermediate",
+    "words_whitespace": 355,
+    "sha256": "19acb45492f2646f77ea75c1b982b9ac9c8ae386e45e8e0e5f80b2f9d9768ff1",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "save/turn-2.md",
+    "candidate": "intermediate",
+    "words_whitespace": 25,
+    "sha256": "adab4d617d2553e540ff50daf5807e461a44bef990ca3b6e4145568aa10fd565",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "sponda/turn-1.md",
+    "candidate": "initial",
+    "words_whitespace": 267,
+    "sha256": "9bfc3dc7be7fc936961f5fc50c1559498d5b9047807c4e88ab3dc1129f1ec07d",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "sponda/turn-2.md",
+    "candidate": "initial",
+    "words_whitespace": 153,
+    "sha256": "e7c2d789e72724303da1ac9b014dc407241356ca44b9c66778db9e690bb35971",
+    "recorder": "agent_harness_then_coordinator_copy"
+  },
+  {
+    "path": "sponda/turn-3.md",
+    "candidate": "initial",
+    "words_whitespace": 314,
+    "sha256": "667ef66811434c67de78eae44b6f4f3835d41596fb569b0b5f5b12a469742476",
+    "recorder": "agent_harness_then_coordinator_copy"
+  }
+]

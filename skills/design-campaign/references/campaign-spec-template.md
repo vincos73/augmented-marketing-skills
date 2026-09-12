@@ -93,7 +93,7 @@ Nel percorso standalone, `confermata per la campagna` indica che il responsabile
 |---|---|---|---|---|---|---|
 | | | | | | | |
 
-Mantieni normalmente da tre a cinque fasi. Usa `Awareness`, `Consideration`, `Conversion` e `Retention` o `Nurturing` quando descrivono davvero il percorso; altrimenti adatta i nomi al comportamento cercato. Aggiungi fasi solo quando corrispondono a cambiamenti o passaggi reali, non a singole date.
+Usa `Awareness`, `Consideration`, `Conversion` e `Retention` o `Nurturing` quando descrivono davvero il percorso; altrimenti adatta i nomi al comportamento cercato. Aggiungi fasi solo quando corrispondono a cambiamenti o passaggi reali, non a singole date.
 
 ## Sistema di messaggi, claim e prove
 
@@ -188,6 +188,8 @@ Non inventare target, ROI o causalità. Quando baseline o volumi non sono adegua
 |---|---|---|---|---|---|
 | | bloccante per la spec / bloccante per l'esecuzione / non bloccante | | | | |
 
+Per le questioni ereditate distingui informazione non disponibile, decisione rinviata e scelta esplicita di non fissare un numero; indica quando la questione diventa necessaria. Non riaprire risposte esplicite senza un nuovo conflitto.
+
 ## Approvazioni e autorizzazioni
 
 ### Approvazione della Campaign Spec
@@ -242,13 +244,13 @@ La Campaign Spec può diventare `approvata` quando:
 - la misurazione distingue output, outcome e risultato aziendale senza attribuzione non supportata;
 - assunzioni e regole decisionali permettono di continuare, correggere, fermare o apprendere;
 - non resta alcun conflitto bloccante per la logica della campagna;
-- il responsabile approva il contenuto e autorizza separatamente il salvataggio.
+- il responsabile approva il contenuto. Il salvataggio richiede una richiesta o autorizzazione pertinente, che può essere già presente; non è una condizione per approvare il contenuto in chat.
 
 Una Campaign Spec approvata può conservare blocchi di esecuzione espliciti. Non può chiamarsi pronta al lancio finché tali blocchi non sono risolti e verificati.
 
 ## Percorso e versioning
 
-Usa:
+Una richiesta di creare il documento autorizza il salvataggio nel perimetro indicato. Completa una bozza se manca l'approvazione del contenuto; riusa le autorizzazioni già date senza chiederle nuovamente. Usa una destinazione richiesta dall'utente oppure il percorso abituale:
 
 ```text
 .agents/marketing/decisions/<decision-slug>/campaigns/<campaign-slug>/campaign-spec.md

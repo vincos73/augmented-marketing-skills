@@ -1,139 +1,66 @@
 ---
 name: define-marketing-mix
-description: "Traduce una direzione approvata in scelte su Product, Price, Place e Promotion. Usala prima di campagne o asset, non per fissare unilateralmente prezzi."
+description: "Traduce una direzione approvata in scelte coerenti su Product, Price, Place e Promotion."
 metadata:
-  version: "0.1.4"
+  version: "0.1.9"
 ---
 
 # Definire il marketing mix
 
-Trasforma una **Direzione di marketing** approvata in un **Marketing Mix** approvabile e coerente. Rende esplicito che il marketing non coincide con la sola promozione e chiarisce, per ciascuna delle quattro P, che cosa è già deciso, che cosa deve cambiare, che cosa resta un'ipotesi e chi possiede l'autorità.
+Rendi una direzione approvata attuabile attraverso scelte coerenti sulle quattro P, distinguendo decisioni, proposte, ipotesi e autorità. Il risultato è un Marketing Mix approvabile; la sua approvazione non esegue modifiche a prodotto, listini, distribuzione o campagne.
 
-La skill definisce scelte strategiche di marketing. Non esegue modifiche a prodotto, listini, distribuzione, account, campagne o asset.
+## Base e aggiornamenti
 
-## Usare il linguaggio del marketing mix
+Usa `.agents/marketing/decisions/<decision-slug>/direction.md`, riferito a una sfida confermata, oppure una strategia equivalente già approvata con pubblico, cambiamento, logica di valore, meccanismo, vincoli, assunzioni e responsabile. Non ricreare artefatti sufficienti. Una direzione in bozza consente solo un'esplorazione provvisoria, non un mix canonico approvato.
 
-Nelle risposte al responsabile usa `mappa delle quattro P`, `scelte`, `vincoli`, `coerenza`, `tensioni`, `decisioni esterne`, `revisione finale` e `passaggio alla campagna`. `Product`, `Price`, `Place` e `Promotion` sono termini di marketing naturali e possono restare in inglese. Mantieni interni `gate`, `artefatto canonico`, `routing`, `handoff` e `owner`; non usarli come intestazioni o formule di conferma.
+Leggi direzione, sfida e contesti referenziati, verificando versioni, stato, entità e coerenza. Una modifica materiale a monte richiede il riesame delle scelte dipendenti. Se il mix esiste, aggiorna solo le P cambiate e gli effetti sulle altre. Non forzare questa fase per una campagna già specificata con P approvate e coerenti.
 
-## Verificare input e pertinenza
+Nelle risposte sostanziali indica entità e versioni realmente lette con una nota compatta. Referenzia fatti identitari e regole stabili senza duplicarli. Usa linguaggio di marketing, mantenendo interni `gate`, `routing`, `artefatto canonico` e `owner`.
 
-Usa normalmente:
+## Questioni ereditate dalla direzione
 
-```text
-.agents/marketing/decisions/<decision-slug>/direction.md
-```
+Riconcilia prima date e fatti già disponibili. Riprendi solo i punti aperti che cambiano una P, la coerenza o la fattibilità. Distingui informazione non disponibile, decisione rinviata e scelta esplicita di non fissare un numero: una lacuna non equivale a zero, nessun target o consenso. Conserva per gli altri punti il passaggio in cui serviranno, senza ripetere scelte esplicite salvo nuovo conflitto.
 
-La direzione deve essere approvata e referenziare una sfida confermata. Accetta una strategia equivalente già approvata quando contiene pubblico, cambiamento, posizionamento o logica di valore, meccanismo, vincoli, assunzioni e proprietario. Non obbligare l'utente a ricreare artefatti già sufficienti.
+Chiedi obiettivo economico, clienti necessari, costo accettabile o limite di spesa soltanto se cambiano Price, la sostenibilità delle altre P o la preparazione di Promotion per una campagna. Uno scenario economico non è una decisione approvata.
 
-Se la direzione è soltanto una bozza, puoi esplorare il mix in chat ma non approvarlo né salvarlo come canonico. Se il mix esiste già, riepiloga versione, decisioni interessate e rischi di aggiornamento; intervieni solo sulle P cambiate e sulle dipendenze che ne derivano.
+## Mappa delle quattro P
 
-Non usare il workflow per una richiesta limitata alla produzione di una campagna già specificata. Non forzarlo quando tutte le P pertinenti sono già approvate e coerenti.
+Presenta una prima mappa utile, con scelte e tensioni materiali, prima delle domande. Evita quattro spiegazioni che duplicano la tabella; chiedi solo informazioni capaci di cambiare il mix, massimo tre domande per gruppo. Per P incomplete, conflitti o autorità diverse consulta [i confini delle quattro P](references/four-p-boundaries.md).
 
-## Rileggere contesti e catena decisionale
+Assegna a ciascuna P **esattamente uno** di questi stati:
 
-Leggi la direzione, il brief della sfida e i contesti canonici referenziati. Verifica versioni, entità, stato e coerenza. Se una modifica a monte può cambiare il mix, segnala il rischio e non trattare la vecchia direzione come ancora valida.
+- **vincolo approvato:** non è una variabile della decisione;
+- **scelta da definire:** nel perimetro, ancora da decidere;
+- **proposta:** formulata e in attesa di approvazione;
+- **ipotesi da verificare:** plausibile, senza sostegno sufficiente;
+- **decisione esterna:** compete a un'altra funzione o autorità;
+- **non applicabile:** esclusa con motivazione concreta.
 
-Ogni risposta sostanziale mostra una nota compatta con entità e versioni realmente lette, per esempio:
+Condizioni e dipendenze appartengono alla scelta o a una colonna dedicata, mai a stati ibridi. Un vuoto non concede libertà decisionale. Anche una P invariata deve avere stato e dipendenze visibili, senza imporre quattro sezioni simmetriche.
 
-> Nota operativa: contesto applicato, Identità Acme v2 + Fondamenti di marketing v1 + Sfida Lancio v1 + Direzione v1.
+Mantieni i significati:
 
-Non duplicare identità, regole stabili o strategia nei nuovi campi. Referenziali e registra solo le decisioni specifiche del mix.
-La nota operativa sostituisce una successiva lista dei percorsi letti: non ripetere nomi di file, versioni o limiti tecnici se non servono a decidere, approvare o salvare. Se l'utente ha già vietato scritture o azioni, rispetta il vincolo senza concludere con formule come `nessun file creato` o `nessuna azione eseguita`.
+- **Product:** configurazione dell'offerta, componenti, packaging, esperienza, servizio e garanzie necessari a sostenere la direzione.
+- **Price:** logica di valore e prezzo, architettura e condizioni compatibili con evidenze economiche e autorità disponibili.
+- **Place:** accesso, disponibilità, distribuzione, vendita, partner ed erogazione; un canale di comunicazione appartiene a Promotion.
+- **Promotion:** ruolo della comunicazione e attivazione della domanda, priorità e territorio di messaggio, prima del campaign plan.
 
-## Classificare prima di decidere
+Formula una proposta prioritaria per ogni P che richiede scelta, con trade-off o decisione esterna. Più configurazioni alternative servono solo quando manca una base per scegliere: indica ciò che le discrimina. Usa le quattro P classiche; estensioni come People o Process sono implicazioni solo quando richieste o decisive per il servizio.
 
-Per ogni P assegna uno stato operativo:
+## Coerenza, evidenze e autorità
 
-- **vincolo approvato**: non è una variabile di questa decisione;
-- **scelta da definire**: appartiene al perimetro e richiede decisione;
-- **proposta**: formulata dall'agente e in attesa di approvazione;
-- **ipotesi da verificare**: plausibile ma non ancora sostenuta;
-- **decisione esterna**: richiede un'altra funzione o autorità;
-- **non applicabile**: esclusa con una ragione concreta.
+Verifica che promessa, offerta, prezzo, accesso e capacità si sostengano: domanda stimolata senza disponibilità, claim su caratteristiche assenti o canali distributivi inadatti cambiano l'approvabilità del mix.
 
-Usa esattamente uno di questi sei stati nella mappa. Eventuali condizioni, dipendenze o motivi di cautela vanno nella colonna della scelta o nelle sezioni dedicate, non in uno stato ibrido come `proposta condizionata` o `decisione da confermare`.
+Product non concede autorità su roadmap, fattibilità o qualità regolamentata; Price richiede responsabile ed evidenze economiche pertinenti; Place non conclude accordi o apre canali; Promotion non autorizza pubblicazione o spesa. Se una scelta eccede l'autorità marketing, identifica la funzione competente e mantieni `decisione esterna`; non mascherarla come assunzione approvata. Non inventare margini, elasticità, conversioni, disponibilità o capacità e chiedi solo i dati sensibili indispensabili.
 
-Non interpretare silenziosamente un vuoto come libertà di decisione. Non compilare quattro sezioni simmetriche quando una P non cambia la strategia; rendi comunque visibile il suo stato e le dipendenze.
+Collega ogni scelta materiale a base, assunzione e conseguenza. Conserva `[C]` conferme autorizzate, `[S1]` e seguenti fonti, `[I]` inferenze e `[?]` punti irrisolti; confermare un'assunzione non la dimostra. Le verifiche riguardano l'assunzione fragile della P o la coerenza tra P. Se esiste un primo test strategico, spiega come il mix lo abilita senza sostituirlo con un test tattico più comodo.
 
-Quando il mix è nuovo, incompleto o in conflitto leggi [i confini delle quattro P](references/four-p-boundaries.md) prima di formulare le scelte.
+## Approvazione, salvataggio e completamento
 
-## Produrre valore prima delle domande
+Per redigere o verificare il mix completo usa [il template modulare](references/marketing-mix-template.md). Mostra direzione applicata, mappa, tensioni, assunzioni e verifiche, decisioni esterne, implicazioni operative, responsabile, stato, versione, fonti e destinazione. Una dipendenza bloccante impedisce di dichiarare pronta la campagna.
 
-Il primo turno sostanziale presenta normalmente:
+Prepara il risultato concreto prima di chiedere le sole decisioni mancanti. Un'autorizzazione precedente resta valida per la stessa azione, lo stesso documento e la stessa destinazione; se cambia uno di questi elementi o il perimetro, chiedi soltanto la nuova autorizzazione necessaria. Mantieni distinte approvazione del mix, salvataggio e attivazione; possono essere autorizzati insieme. Rispetta le autorizzazioni già date per il perimetro corrente senza riconferme rituali. Se è approvato solo il contenuto, indica `contenuto approvato in chat; artefatto non creato`.
 
-1. come la direzione si traduce nel mix;
-2. una prima mappa delle quattro P con stato e scelta proposta;
-3. le incoerenze o dipendenze più importanti;
-4. non più di tre domande capaci di cambiare il mix.
+Con approvazione e autorizzazione alla scrittura salva `.agents/marketing/decisions/<decision-slug>/marketing-mix.md`: prima versione `v1`, incremento intero per modifiche sostanziali, stessa versione per refusi e stato `superato` per un mix sostituito. Non modificare silenziosamente sfida, direzione o istruzioni globali. Prima di scrivere, distingui una prova della skill (`test`, `simulazione`, `eval`) da un test strategico o operativo. In una prova della skill, scrivi soltanto in una destinazione temporanea non canonica esplicitamente richiesta per la prova: approvazioni nel copione e isolamento tecnico del workspace non abilitano destinazioni aziendali, ufficiali o previste dal workflow.
 
-Se manca un'autorità o una base essenziale, mostra un blocker concreto. Non iniziare con una lezione sulle quattro P, un questionario fisso o una matrice vuota da far compilare all'utente.
-
-Mantieni questo primo turno compatto: una sola mappa delle quattro P, soltanto le tensioni e le dipendenze materiali e le domande indispensabili. Non duplicare la tabella con quattro spiegazioni estese e non anticipare il template canonico completo, le verifiche secondarie o una spiegazione del metodo. Sviluppa il dettaglio solo dopo le risposte dell'utente o quando presenti il gate.
-
-Per ogni P formula una proposta prioritaria con il relativo trade-off o la decisione esterna necessaria. Presenta più architetture alternative soltanto se la scelta non può ancora essere responsabile e indica quale evidenza, vincolo o autorità permetterà di discriminarle.
-
-## Definire Product, Price, Place e Promotion
-
-Mantieni il significato strategico delle quattro P:
-
-- **Product**: configurazione dell'offerta, componenti, packaging, esperienza, servizio, garanzie e adattamenti necessari per sostenere la direzione;
-- **Price**: logica di valore e prezzo, architettura, condizioni, soglie, sconti e implicazioni di posizionamento, nei limiti dell'autorità e delle evidenze economiche disponibili;
-- **Place**: accesso, disponibilità, distribuzione, percorso di vendita, partner e modalità di erogazione; non confonderla con i canali di comunicazione;
-- **Promotion**: ruolo della comunicazione e dell'attivazione della domanda, priorità, territorio di messaggio e criteri generali; non è ancora un campaign plan.
-
-Le quattro P devono sostenersi a vicenda. Verifica incompatibilità come promessa premium con esperienza o prezzo incoerenti, domanda stimolata senza disponibilità, canale distributivo inadatto al pubblico oppure promozione che promette caratteristiche non offerte.
-
-Usa il modello classico delle quattro P. Aggiungi People, Process, Physical Evidence o altre estensioni soltanto se l'utente lo chiede o se una caratteristica del servizio cambia materialmente la decisione; in quel caso trattale come implicazioni esplicite, non come espansione automatica del framework.
-
-## Rispettare i confini di autorità
-
-La P di Product non autorizza l'agente a definire roadmap tecnica, fattibilità, sviluppo o qualità regolamentata. La P di Price non autorizza la fissazione di prezzi senza proprietario, economics e controlli pertinenti. La P di Place non autorizza accordi, aperture di canale o configurazioni. La P di Promotion non autorizza campagne, pubblicazione o spesa.
-
-Quando una scelta supera l'autorità marketing, formula l'implicazione, identifica il proprietario e registra la decisione come esterna. Non mascherare una dipendenza cross-funzionale come assunzione approvata.
-
-Non richiedere dettagli finanziari, personali o commerciali sensibili oltre il minimo necessario. Non inventare margini, elasticità, disponibilità, conversioni o capacità operative.
-
-## Collegare assunzioni e verifiche
-
-Per ogni scelta materiale registra base, assunzione e conseguenza. Mantieni i marcatori `[C]`, `[S1]`, `[S2]`, ... `[I]` e `[?]` usati dagli artefatti a monte.
-
-Collega le verifiche all'assunzione più fragile della singola P o alla coerenza tra P. Non trasformare il mix in un piano completo di sperimentazione. Se la direzione contiene già un primo test strategico, mostra come il mix lo abilita senza sostituirlo con un test tattico più comodo.
-
-## Presentare la revisione finale e salvare
-
-Quando costruisci, aggiorni o revisioni il mix leggi [il template del Marketing Mix](references/marketing-mix-template.md).
-
-Prima del salvataggio mostra:
-
-- sintesi della direzione applicata;
-- stato e scelta per ciascuna P;
-- coerenza e tensioni tra le P;
-- assunzioni, dipendenze, autorità e verifiche;
-- implicazioni operative senza dettagliare la campagna;
-- stato, versione, proprietario, destinazione, contesti e fonti.
-
-Chiedi in modo inequivocabile sia l'approvazione del mix sia l'autorizzazione al salvataggio. Un consenso precedente alla bozza completa non basta. Durante gli eval non scrivere mai in percorsi canonici.
-
-Dopo l'autorizzazione salva in:
-
-```text
-.agents/marketing/decisions/<decision-slug>/marketing-mix.md
-```
-
-La prima versione approvata è `v1`. Una modifica sostanziale di una o più P incrementa la versione intera e rende visibili gli effetti sulle altre; un refuso conserva la versione; un mix sostituito diventa `superato`. Non modificare silenziosamente `challenge.md` o `direction.md` e non installare il fascicolo nelle istruzioni globali.
-
-## Concludere e instradare l'attivazione
-
-Riporta che cosa è stato proposto, approvato e salvato e quali decisioni esterne restano necessarie. Il mix non implica che ogni P debba essere attivata attraverso una campagna.
-
-- Per la componente Promotion e le attivazioni coordinate, proponi `design-campaign` quando disponibile.
-- Per cambiamenti di prodotto, prezzo o distribuzione, indica proprietari e workflow competenti senza inventarli se non esistono.
-- Se una dipendenza bloccante resta aperta, non presentare la campagna come pronta.
-
-Non avviare automaticamente campagne, modifiche operative o azioni esterne.
-
-## Versioning della skill
-
-- Aggiorna `metadata.version` quando cambia il comportamento o il contratto della skill.
-- Usa Semantic Versioning: patch per correzioni compatibili, minor per nuove capacità compatibili, major per cambiamenti incompatibili.
-- Aggiorna documentazione ed eval interessati; la presenza della sorgente non dimostra approvazione, installazione o release.
+Concludi con scelte, stato effettivo e decisioni esterne ancora necessarie. Completa l'eventuale lavoro successivo già richiesto e autorizzato: Promotion può alimentare una campagna, le altre P richiedono i responsabili competenti. Senza quel mandato, proponi il passaggio pertinente senza avviare campagne, cambiamenti operativi o azioni esterne.
