@@ -2,7 +2,7 @@
 name: setup-brand-voice
 description: "Definisce, formalizza o aggiorna la voce di un'azienda, brand o persona: riusa guide approvate, interpreta materiali e accompagna le scelte con domande ed esempi. Usala quando serve una guida verbale riutilizzabile o la voce è mancante, generica, incoerente o da ripensare; per scrivere o correggere un singolo testo con regole già chiare basta il workflow di scrittura."
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Configurare la voce del brand
@@ -58,6 +58,8 @@ Dopo la scelta, prova le regole su situazioni nuove pertinenti al loro perimetro
 
 Preferenze stilistiche non autorizzano promesse, numeri, citazioni, testimonianze o certezza fattuale nuovi. Negli esempi preserva significato, qualificazioni e termini con conseguenze contrattuali o operative. La comprensione del lettore e l'esattezza prevalgono su un effetto di stile. Rendi esplicite le frasi inventate come esempi di scrittura, senza attribuirle a clienti reali.
 
+Quando un esempio contiene impegni o condizioni, applica il controllo circoscritto in [example-review.md](references/example-review.md). Se delega e autorizzazione permettono di coinvolgere un nuovo agente, puoi affidargli la revisione indipendente; altrimenti esegui lo stesso controllo e dichiaralo non indipendente.
+
 Controlla anche le affermazioni implicite nelle formule di cortesia e nei raccordi: non dare per avvenuta un'azione soltanto perché plausibile. I testi dichiarati da mantenere identici vanno copiati senza normalizzare apostrofi, punteggiatura o termini.
 
 Riferisci la cortesia all'evento documentato. Una richiesta ricevuta non prova il canale del contatto o quali dettagli siano già stati trasmessi: se questi aspetti non sono noti, non presumere che la persona abbia scritto, telefonato o inviato informazioni specifiche.
@@ -76,7 +78,7 @@ Dopo ogni risposta, aggiorna solo scelte, esempi o regole interessati; conserva 
 
 Quando il risultato è decidibile, presenta una revisione compatta: voce proposta o cambiamenti, regole e limiti essenziali, cosa mostrano le prove, eventuali parti ancora aperte e risultato previsto. La guida completa deve essere disponibile per la revisione, ma non ripeterla accanto a un riepilogo identico. L'approvazione può riguardare un perimetro delimitato; lascia fuori dalla parte approvata le lingue o situazioni ancora irrisolte.
 
-Per preparare la guida o recepire un documento esistente leggi [brand-voice-guide.md](references/brand-voice-guide.md). Per salvataggio, versioni, riuso e fallback leggi [persistence-and-reuse.md](references/persistence-and-reuse.md).
+Per preparare la guida, recepire un documento esistente o creare una nota autonoma che incorpori decisioni approvate leggi [brand-voice-guide.md](references/brand-voice-guide.md). Per salvataggio, versioni, riuso e fallback leggi [persistence-and-reuse.md](references/persistence-and-reuse.md).
 
 Rispetta autorizzazioni e decisioni già espresse: non chiedere una nuova conferma rituale. Se l'utente ha chiesto esplicitamente di creare/aggiornare un file, la scrittura nel perimetro indicato è autorizzata; conserva come bozza le proposte non ancora approvate. L'approvazione della voce senza richiesta di salvataggio non autorizza da sola modifiche ai file. L'autorizzazione a salvare non risolve scelte sostanziali rimaste aperte.
 
