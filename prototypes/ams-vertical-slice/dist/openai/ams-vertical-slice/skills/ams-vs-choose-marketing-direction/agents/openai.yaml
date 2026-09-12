@@ -1,0 +1,6 @@
+interface:
+  display_name: "Choose Marketing Direction"
+  short_description: "Specialista manuale: fase direction"
+  default_prompt: "Use $ams-vs-choose-marketing-direction for the isolated AMS Vertical Slice test."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Read Campaign Results"
+  short_description: "Specialista manuale: fase learning"
+  default_prompt: "Use $ams-vs-read-campaign-results for the isolated AMS Vertical Slice test."
+policy:
+  allow_implicit_invocation: false

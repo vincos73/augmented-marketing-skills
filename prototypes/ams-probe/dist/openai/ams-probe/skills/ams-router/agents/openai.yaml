@@ -1,0 +1,4 @@
+interface:
+  display_name: "AMS Router Probe"
+  short_description: "Instrada un test marketing isolato"
+  default_prompt: "Use $ams-router to run the isolated AMS probe."

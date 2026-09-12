@@ -1,0 +1,6 @@
+interface:
+  display_name: "Define Marketing Mix"
+  short_description: "Specialista manuale: fase mix"
+  default_prompt: "Use $ams-vs-define-marketing-mix for the isolated AMS Vertical Slice test."
+policy:
+  allow_implicit_invocation: false

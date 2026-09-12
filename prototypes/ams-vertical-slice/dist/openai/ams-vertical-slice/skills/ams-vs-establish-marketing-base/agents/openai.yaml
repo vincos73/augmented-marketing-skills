@@ -1,0 +1,6 @@
+interface:
+  display_name: "Establish Marketing Base"
+  short_description: "Specialista manuale: fase base"
+  default_prompt: "Use $ams-vs-establish-marketing-base for the isolated AMS Vertical Slice test."
+policy:
+  allow_implicit_invocation: false

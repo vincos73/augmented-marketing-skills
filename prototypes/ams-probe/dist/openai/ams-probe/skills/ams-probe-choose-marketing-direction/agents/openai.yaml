@@ -1,0 +1,6 @@
+interface:
+  display_name: "Choose Direction Probe"
+  short_description: "Specialista manuale per confrontare direzioni"
+  default_prompt: "Use $ams-probe-choose-marketing-direction to run the isolated AMS probe."
+policy:
+  allow_implicit_invocation: false

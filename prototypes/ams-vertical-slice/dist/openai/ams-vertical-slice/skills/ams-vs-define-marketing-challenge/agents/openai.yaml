@@ -1,0 +1,6 @@
+interface:
+  display_name: "Define Marketing Challenge"
+  short_description: "Specialista manuale: fase challenge"
+  default_prompt: "Use $ams-vs-define-marketing-challenge for the isolated AMS Vertical Slice test."
+policy:
+  allow_implicit_invocation: false
