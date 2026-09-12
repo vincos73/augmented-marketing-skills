@@ -1,0 +1,4 @@
+interface:
+  display_name: "Copywriting"
+  short_description: "Scrive e adatta copy marketing pronto per revisione"
+  default_prompt: "Usa $write-marketing-copy per creare o migliorare questo testo marketing rispettando pubblico, voce e informazioni disponibili."
