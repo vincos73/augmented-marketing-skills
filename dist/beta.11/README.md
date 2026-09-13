@@ -1,5 +1,7 @@
 # Augmented Marketing Suite beta.11
 
+> Archivio della release precedente. La [candidata beta.12](../beta.12/README.md) include dodici skill anche nel bundle Claude, con Assistant v0.3.0. Gli archivi beta.11 descritti qui conservano il contenuto pubblicato.
+
 Undici skill specialistiche e Augmented Marketing Assistant per OpenAI/Codex. Sono incluse per la prima volta nella Suite `setup-brand-voice` e `write-marketing-copy`; tutte le skill hanno ricevuto la revisione Astra.
 
 ## Pacchetti
@@ -13,7 +15,7 @@ La release beta.11 è pubblicata con i suoi archivi e checksum. La copia OpenAI/
 
 ## Riproduzione
 
-Dalla radice del repository:
+I comandi seguenti riproducono beta.11 solo dal relativo tag Git. Dalla sorgente corrente il builder genera beta.12:
 
 ```sh
 python3 scripts/build_suite.py

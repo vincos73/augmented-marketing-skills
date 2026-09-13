@@ -1,7 +1,9 @@
 # Sorgente del bundle Claude
 
-Questo perimetro contiene soltanto il manifesto Claude. Il pacchetto generato combina `.claude-plugin/plugin.json` con le undici skill specialistiche canoniche in `skills/`; non duplica né modifica le loro istruzioni. È il bundle da caricare in Claude, non negli ambienti OpenAI/Codex.
+Questo perimetro contiene il manifesto Claude. Il pacchetto generato combina `.claude-plugin/plugin.json` con le dodici skill canoniche in `skills/`: Augmented Marketing Assistant v0.3.0 e undici specialistiche. Non duplica né modifica le loro istruzioni.
 
-Non include Augmented Marketing Assistant: è l'adattatore del pacchetto OpenAI/Codex e non è coerente con il namespace delle skill Claude.
+Nella Suite 1.0.0 l’Assistant è il punto di ingresso conversazionale anche per Claude. È una skill di orientamento nella conversazione corrente: in Claude Code usa `Skill` con `augmented-marketing-suite:<nome-skill>`; negli altri ambienti legge il `SKILL.md` pertinente. Se l’utente nomina già una skill, questa viene usata direttamente senza passare dall’Assistant.
 
-La beta.11 è pubblicata. Il marketplace alla radice punta al relativo archivio Claude con checksum verificabile.
+Il bundle non include `agents/openai.yaml`, directory di agenti, subagenti, MCP o hook. Il pacchetto OpenAI/Codex conserva invece i suoi metadati di interfaccia. L’archivio previsto è [`dist/1.0.0/claude/augmented-marketing-suite-claude-v1.0.0.zip`](../dist/1.0.0/claude/augmented-marketing-suite-claude-v1.0.0.zip); dopo la pubblicazione si può installare dal [marketplace GitHub](https://github.com/vincos73/augmented-marketing-skills).
+
+Le verifiche locali e i limiti dei due test conversazionali Claude non verificati per autenticazione mancante sono nel [rapporto Suite 1.0.0](../evals/suite-1.0.0/README.md).

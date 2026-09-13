@@ -1,0 +1,69 @@
+{
+  "candidate": "0.1.0-beta.12",
+  "date": "2026-09-13",
+  "publication": "not_published",
+  "claude_cli": {
+    "path": "/Users/vincos/Library/Application Support/Claude/claude-code/2.1.266/claude.app/Contents/MacOS/claude",
+    "version": "2.1.266",
+    "configuration": "temporary CLAUDE_CONFIG_DIR under /private/tmp; personal configuration untouched"
+  },
+  "build": {
+    "command": "python3 scripts/build_suite.py && python3 scripts/build_suite.py --check",
+    "status": "pass",
+    "archives": 13,
+    "plugin_skills": 12,
+    "portable_specialist_archives": 11,
+    "claude_archive_sha256": "6cb65bceb5525c8ab7712ac20acade05f0013a60f8c21b4717d038845e18e651"
+  },
+  "claude_validation": {
+    "strict_bundle": "pass",
+    "strict_marketplace": "pass",
+    "local_marketplace_source": "./plugin",
+    "literal_dot_add": "failed: CLI requires ./path",
+    "local_dot_slash_add": "pass",
+    "install": {
+      "status": "pass",
+      "plugin": "augmented-marketing-suite@augmented-marketing-skills",
+      "version": "0.1.0-beta.12",
+      "enabled": true,
+      "scope": "temporary configuration user scope"
+    },
+    "cache_parity": {
+      "status": "pass",
+      "method": "diff -qr extracted-bundle installed-cache",
+      "files_per_side": 42,
+      "skills": 12,
+      "agents_directories": 0,
+      "assistant_version": "0.3.0"
+    }
+  },
+  "skill_validation": {
+    "status": "pass",
+    "command": "PYTHONPATH=/Users/vincos/Library/Python/3.9/lib/python/site-packages python3 quick_validate.py <assistant-dir>",
+    "source": "Skill is valid!",
+    "installed_cache": "Skill is valid!"
+  },
+  "builder_regressions": {
+    "status": "pass",
+    "executed_by": "Terra subagent",
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests/test_build_suite.py -v",
+    "result": "Ran 10 tests in 1.044s, OK"
+  },
+  "runtime_prompts": [
+    {
+      "prompt": "Ho un negozio e le vendite online calano, non so cosa fare",
+      "expected": "Assistant routes to define-marketing-challenge",
+      "status": "blocked",
+      "error": "authentication_failed: Not logged in - Please run /login",
+      "model_response_verified": false,
+      "subagents_spawned": 0
+    },
+    {
+      "prompt": "Usa define-marketing-challenge per chiarire il calo delle vendite online del mio negozio",
+      "expected": "direct use of define-marketing-challenge",
+      "status": "not_run",
+      "reason": "same authentication blocker; no retry after first error",
+      "model_response_verified": false
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "suite_version": "1.0.0",
+  "date": "2026-09-13",
+  "publication": "not_verified",
+  "installation": "not_run",
+  "build": {
+    "state": "built",
+    "status": "pass",
+    "command": "python3 scripts/build_suite.py && python3 scripts/build_suite.py --check",
+    "archives": 13,
+    "plugin_skills": 12,
+    "portable_specialist_archives": 11,
+    "source_base_commit": "1def4414ff325959683f695fa477e7c892013fe0",
+    "head_at_check": "455f6ed571b0e49c77847485076c25ac40673941",
+    "claude_archive_sha256": "f5791493d384d8ad798c0d8fca2fd6dddbfb9a976e254a3c5a2491eb80ae147d"
+  },
+  "claude_validation": {
+    "cli": {
+      "path": "/Users/vincos/Library/Application Support/Claude/claude-code/2.1.266/claude.app/Contents/MacOS/claude",
+      "version": "2.1.266",
+      "configuration": "temporary CLAUDE_CONFIG_DIR under /private/tmp; personal configuration untouched"
+    },
+    "strict_extracted_bundle": "pass",
+    "strict_marketplace": "pass",
+    "marketplace_release_url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/augmented-marketing-suite-v1.0.0/augmented-marketing-suite-claude-v1.0.0.zip",
+    "marketplace_remote_asset_downloaded": false,
+    "zip_integrity": "pass",
+    "bundle_files": 42,
+    "skills": 12,
+    "agents_directories": 0
+  },
+  "assistant_validation": {
+    "version": "0.3.0",
+    "command": "PYTHONPATH=/Users/vincos/Library/Python/3.9/lib/python/site-packages python3 quick_validate.py <assistant-dir>",
+    "source": "Skill is valid!",
+    "extracted_bundle": "Skill is valid!"
+  },
+  "builder_regressions": {
+    "status": "pass",
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests/test_build_suite.py -v",
+    "result": "Ran 11 tests, OK"
+  },
+  "runtime": {
+    "authentication_attempted": false,
+    "prompts_run": 0,
+    "model_response_verified": false,
+    "reason": "No authenticated Claude session was used; runtime routing remains unverified."
+  }
+}

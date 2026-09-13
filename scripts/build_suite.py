@@ -24,6 +24,13 @@ def sha(data: bytes) -> str:
 def encoded(value) -> bytes:
     return (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode()
 
+def checksums(files: dict[str, bytes]) -> bytes:
+    return ''.join(f'{sha(data)}  {rel}\n' for rel, data in sorted(files.items()) if rel != 'SHA256SUMS').encode()
+
+def build_state(version: str) -> str:
+    """Keep prerelease candidates distinct from a completed stable build."""
+    return 'local-candidate-not-published' if '-' in version else 'built'
+
 def skill_files(name: str, openai: bool) -> dict[str, bytes]:
     folder = ROOT / 'skills' / name
     result = {}
@@ -87,7 +94,7 @@ def build() -> tuple[str, dict[str, bytes]]:
     output = {}
     package_records = []
     for kind, manifest in [('openai', codex), ('claude', claude)]:
-        selected = NAMES if kind == 'openai' else NAMES[1:]
+        selected = NAMES
         prefix = '.codex-plugin' if kind == 'openai' else '.claude-plugin'
         files = {f'{prefix}/plugin.json': encoded(manifest)}
         for name in selected:
@@ -102,23 +109,40 @@ def build() -> tuple[str, dict[str, bytes]]:
         package_records.append({'archive': rel, 'sha256': sha(output[rel]), 'skills': {name: versions[name]}})
     base_commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     output['manifest.json'] = encoded({
-        'suite_version': version, 'state': 'local-candidate-not-published',
+        'suite_version': version, 'state': build_state(version),
         'source_base_commit': base_commit, 'source_state': 'working-tree; source_sha256 identifies the actual files',
         'source_sha256': source, 'packages': package_records,
         'policy': {'openai': '12 skills, including Assistant and agents metadata',
-                   'claude': '11 specialists, no Assistant or agents metadata',
+                   'claude': '12 skills, including Assistant; no agents metadata',
                    'portable': 'one specialist folder; no agents metadata or INSTALL.md'},
     })
-    output['SHA256SUMS'] = ''.join(f'{sha(data)}  {rel}\n' for rel, data in sorted(output.items())).encode()
+    output['SHA256SUMS'] = checksums(output)
     return version, output
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Verify existing files against current sources; do not write.')
-    parser.add_argument('--output', type=Path, help='Destination; defaults to dist/<beta suffix>.')
+    parser.add_argument('--output', type=Path, help='Destination; defaults to dist/<version or prerelease suffix>.')
     args = parser.parse_args()
     version, files = build()
     destination = args.output or ROOT / 'dist' / version.split('-', 1)[-1]
+    if args.check:
+        manifest_path = destination / 'manifest.json'
+        if not manifest_path.is_file():
+            raise SystemExit(f'FAIL stale or missing: {manifest_path}')
+        try:
+            recorded = json.loads(manifest_path.read_text())
+        except (ValueError, UnicodeError):
+            raise SystemExit(f'FAIL invalid manifest: {manifest_path}')
+        base_commit = recorded.get('source_base_commit') if isinstance(recorded, dict) else None
+        if not isinstance(base_commit, str) or not re.fullmatch(r'[0-9a-f]{40}|[0-9a-f]{64}', base_commit):
+            raise SystemExit(f'FAIL invalid source_base_commit: {manifest_path}')
+        # The build's base commit is provenance, not a fingerprint of its content.
+        # Keep it while comparing every source/package hash and all other metadata.
+        expected = json.loads(files['manifest.json'])
+        expected['source_base_commit'] = base_commit
+        files['manifest.json'] = encoded(expected)
+        files['SHA256SUMS'] = checksums(files)
     extra = {str(p.relative_to(destination)) for p in destination.rglob('*.zip')} - set(files)
     if extra:
         manifest = destination / 'manifest.json'
