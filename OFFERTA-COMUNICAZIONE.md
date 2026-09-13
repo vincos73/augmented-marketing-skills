@@ -1,8 +1,8 @@
 ---
 artifact: offer-communication
-version: 5
+version: 8
 status: bozza
-last_reviewed: 2026-08-27
+last_reviewed: 2026-09-13
 scope: "Fonte di lavoro per posizionamento, README pubblico e materiali di comunicazione di Augmented Marketing Suite"
 ---
 
@@ -53,7 +53,7 @@ Il progetto non è un agente generalista che promette di fare il lavoro di un CM
 
 ## Descrizione breve
 
-Augmented Marketing Suite porta metodo nel lavoro di marketing con gli agenti IA. Le skill aiutano a costruire un contesto riusabile, distinguere fatti e assunzioni, formulare la sfida, confrontare direzioni strategiche, coordinare le quattro P e trasformare le decisioni approvate in attività verificabili.
+Augmented Marketing Suite porta metodo nel lavoro di marketing con gli agenti IA. Le skill aiutano a costruire un contesto riusabile, distinguere fatti e assunzioni, formulare la sfida, confrontare direzioni strategiche, coordinare le quattro P, definire una voce del brand riutilizzabile e trasformare decisioni approvate in campagne e copy verificabili.
 
 ## Descrizione estesa
 
@@ -82,6 +82,7 @@ Il framework è pertinente quando una persona o un team vuole:
 - confrontare direzioni strategiche e rendere visibili le rinunce;
 - coordinare Product, Price, Place e Promotion;
 - passare da una decisione approvata a una campagna o a un contenuto;
+- definire una voce del brand prima di applicarla a un singolo testo marketing;
 - conservare fonti, assunzioni, approvazioni e apprendimento tra attività diverse.
 
 Il percorso non deve essere imposto quando obiettivo, formato e vincoli sono già sufficientemente chiari. Le skill esecutive possono essere usate direttamente quando i passaggi a monte non aggiungono valore.
@@ -94,6 +95,8 @@ Augmented Marketing Assistant
 Business Identity
         ↓
 Marketing Foundations
+        ↓
+Voce del brand, quando serve
         ↓
 Brief della sfida
         ↓
@@ -109,10 +112,10 @@ Risultati e apprendimento
 | Livello | Ruolo |
 |---|---|
 | Ingresso conversazionale | `Augmented Marketing Assistant` orienta verso il passaggio pertinente senza duplicare il metodo delle skill |
-| Fondazione | `setup-business-context` crea l'identità persistente; `setup-marketing-system` definisce le regole stabili che gli agenti devono applicare |
+| Fondazione | `setup-business-context` crea l'identità persistente; `setup-marketing-system` definisce le regole stabili che gli agenti devono applicare; `setup-brand-voice` definisce o aggiorna una voce riutilizzabile quando i materiali non la rendono già disponibile |
 | Strategy Core | `define-marketing-challenge` chiarisce il cambiamento cercato; `choose-marketing-direction` confronta alternative; `define-marketing-mix` coordina le quattro P |
 | Campaign Core | `design-campaign` progetta la campagna, `campaign-review` la verifica prima del lancio e `campaign-debrief` interpreta i risultati |
-| Content Core | `content-director` valuta fonti o idee, raccomanda la strada editoriale e passa un Content Brief ai builder |
+| Content Core | `content-director` valuta fonti o idee e raccomanda la strada editoriale; `write-marketing-copy` scrive o riscrive un singolo testo applicando voce e fatti disponibili |
 
 Nel nucleo minimo non esiste un agente Strategist separato. Il lavoro strategico è distribuito tra le tre skill dello Strategy Core; l'Assistant orienta senza duplicarne il metodo. Un eventuale ruolo trasversale richiederà una user story e un artefatto distinti, validati dall'uso reale.
 
@@ -122,15 +125,16 @@ La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è 
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Suite | Beta 0.1.0-beta.10 con plugin OpenAI/Codex, plugin Claude, nove skill specialistiche e Assistant; caricamento multipiattaforma e pilot esterno restano verifiche separate |
-| Augmented Marketing Assistant | v0.2.0 beta; orienta anche verso Campaign Core e Content Director; gli smoke test runtime precedenti riguardano la v0.1.0 |
-| Business Identity | `setup-business-context` v0.6.5 nella Suite beta.10 |
-| Marketing Foundations | `setup-marketing-system` v0.3.2 nella Suite beta.10 |
-| Brief della sfida | `define-marketing-challenge` v0.1.4 nella Suite beta.10 |
-| Direzione di marketing | `choose-marketing-direction` v0.2.3 nella Suite beta.10 |
-| Marketing Mix | `define-marketing-mix` v0.1.4 nella Suite beta.10 |
-| Campaign Core | Tre skill pubblicate nella Suite beta.10; run integrato controllato a nove skill PASS su Codex Desktop, pilot con responsabile reale ancora mancante |
-| Content Core | `content-director` v0.1.1 pubblicata singolarmente e nella Suite beta.10; builder esterni non inclusi |
+| Augmented Marketing Suite | Beta 0.1.0-beta.11 pubblicata con plugin OpenAI/Codex, plugin Claude, undici skill specialistiche e Assistant; caricamento multipiattaforma e pilot esterno restano verifiche separate |
+| Augmented Marketing Assistant | v0.2.1 nella Suite beta.11; orienta verso le undici skill specialistiche. La pubblicazione non prova il routing in ogni runtime o con marketer esterni |
+| Business Identity | `setup-business-context` v0.6.7 nella Suite beta.11 |
+| Marketing Foundations | `setup-marketing-system` v0.3.4 nella Suite beta.11 |
+| Brand Voice | `setup-brand-voice` v0.1.2 nella Suite beta.11; definisce o aggiorna una voce riutilizzabile |
+| Brief della sfida | `define-marketing-challenge` v0.1.8 nella Suite beta.11 |
+| Direzione di marketing | `choose-marketing-direction` v0.2.8 nella Suite beta.11 |
+| Marketing Mix | `define-marketing-mix` v0.1.9 nella Suite beta.11 |
+| Campaign Core | `design-campaign` v0.1.7, `campaign-review` v0.1.4 e `campaign-debrief` v0.1.7 nella Suite beta.11; pilot con responsabile reale ancora mancante |
+| Content Core | `content-director` v0.1.2 e `write-marketing-copy` v0.1.5 nella Suite beta.11; gli altri builder restano esterni |
 | Monitoring | Ipotesi opzionale di roadmap |
 
 Una cartella presente nel repository dimostra che esiste una sorgente di authoring. Non dimostra approvazione, installazione, pubblicazione o affidabilità in produzione.
@@ -228,7 +232,7 @@ Resta da completare la validazione realistica di questi comportamenti e un ciclo
 - “Risultati migliori garantiti.”
 - “La soluzione definitiva per ogni attività di marketing.”
 - “È come avere uno strategist esperto”, prima della relativa validazione.
-- “Suite completa”, finché Strategy, Campaign e Content Core non sono operativi e testati.
+- “Suite completa per ogni organizzazione.”
 
 Evitare anche formule generiche come “rivoluziona il marketing”, “sblocca il potenziale”, “porta la strategia al livello successivo” e altre promesse prive di un meccanismo o di una prova.
 
@@ -242,11 +246,11 @@ Evitare anche formule generiche come “rivoluziona il marketing”, “sblocca 
 | Sostituisce il marketer? | No, struttura il lavoro e rende più controllabile l'uso dell'agente | Gate di approvazione e limiti di autorità | Non assume responsabilità professionale o aziendale |
 | Perché usare file invece della chat? | I file permettono riuso, verifica, versionamento e handoff | Business Identity, Foundations e fascicoli decisionali | Non ogni informazione deve diventare contesto globale |
 | Devo usare tutte le skill? | No, il percorso è modulare e selettivo | Attivazione basata sul lavoro richiesto | Saltare un passaggio è corretto solo quando l'input necessario esiste già |
-| È già pronto per un flusso completo? | Fondazioni e Strategy Core fino al marketing mix sono disponibili | Stato dichiarato nel README e nelle release | Campaign e Content Core sono ancora in roadmap |
+| È già pronto per un flusso completo? | Fondazioni, Strategy, Campaign e Content Core sono disponibili nella beta.11 | Stato dichiarato nel README e nelle release | Manca un pilot documentato con responsabili marketing reali e la verifica di ogni runtime |
 
-## Struttura consigliata per il README
+## Struttura del README pubblico
 
-Il futuro README dovrebbe seguire questo ordine:
+Il README pubblico segue questo ordine:
 
 1. **Che cos'è:** descrizione in una frase e promessa sostenibile.
 2. **Perché esiste:** limite dei generatori e dei prompt isolati.
@@ -329,12 +333,19 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 - [Augmented Marketing Assistant](agents/augmented-marketing-assistant.md)
 - [setup-business-context](skills/setup-business-context/SKILL.md)
 - [setup-marketing-system](skills/setup-marketing-system/SKILL.md)
+- [setup-brand-voice](skills/setup-brand-voice/SKILL.md)
 - [define-marketing-challenge](skills/define-marketing-challenge/SKILL.md)
 - [choose-marketing-direction](skills/choose-marketing-direction/SKILL.md)
 - [define-marketing-mix](skills/define-marketing-mix/SKILL.md)
+- [design-campaign](skills/design-campaign/SKILL.md)
+- [campaign-review](skills/campaign-review/SKILL.md)
+- [campaign-debrief](skills/campaign-debrief/SKILL.md)
+- [content-director](skills/content-director/SKILL.md)
+- [write-marketing-copy](skills/write-marketing-copy/SKILL.md)
 
 ## Registro modifiche
 
+- v8, 2026-09-13: allineata l'offerta alla Suite beta.11 pubblicata, alle undici skill specialistiche, a `setup-brand-voice` e a `write-marketing-copy`; aggiornati maturità e limiti comunicabili.
 - v7, 2026-08-27: promosso Augmented Marketing Assistant a v0.1.0 stabile dopo tre smoke test runtime Codex superati, mantenendo Augmented Marketing Suite in beta.
 - v6, 2026-08-27: ristretto l'Assistant all'orientamento, aggiunto il fallback esplicito quando l'handoff non è disponibile e allineati i titoli visibili ai nomi tecnici inglesi.
 - v5, 2026-08-27: adottato Augmented Marketing Suite come nome del prodotto e del plugin, mantenendo Augmented Marketing Assistant come ingresso conversazionale.
