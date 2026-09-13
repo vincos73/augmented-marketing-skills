@@ -1,8 +1,8 @@
 ---
 artifact: portability-contract
-version: 4
-status: revisione-locale
-last_reviewed: 2026-09-12
+version: 6
+status: stabile-in-preparazione
+last_reviewed: 2026-09-13
 scope: "Contratto minimo di portabilità per skill installabili di Augmented Marketing Suite"
 ---
 
@@ -82,11 +82,19 @@ Le istruzioni essenziali devono restare nella cartella distribuibile della singo
 
 ### Adattatore OpenAI osservato
 
-Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Per ChatGPT e Codex, la beta.11 pubblicata distribuisce Augmented Marketing Suite (`augmented-marketing-suite`) con un manifesto `.codex-plugin/plugin.json` e presenta Augmented Marketing Assistant come skill tecnica di orientamento (`augmented-marketing-assistant`). Questa forma non cambia il ruolo dell'Assistant: continua a orientare, mentre le undici skill specialistiche possiedono metodo, artefatti e approvazioni.
+Il caricamento di un archivio generico in una chat ChatGPT non registra automaticamente skill o agenti. Come evidenza storica, la beta.11 pubblicata per ChatGPT e Codex distribuiva Augmented Marketing Suite (`augmented-marketing-suite`) con un manifesto `.codex-plugin/plugin.json` e presentava Augmented Marketing Assistant come skill tecnica di orientamento (`augmented-marketing-assistant`). Questa forma non cambia il ruolo dell'Assistant: continua a orientare, mentre le undici skill specialistiche possiedono metodo, artefatti e approvazioni.
 
 Un test su ChatGPT Web ha mostrato che una skill già attiva può individuare una skill specialistica senza riuscire a caricarla nella stessa conversazione. L'adattatore non deve quindi presumere un handoff tra skill. Quando il passaggio non è disponibile, indica il nome tecnico esatto da invocare e si ferma senza simulare il workflow specialistico.
 
 L'adattatore OpenAI non introduce MCP, connector o nuove capacità di marketing. La sua installazione e il suo caricamento devono essere verificati in una nuova chat o sessione. I titoli visibili delle skill coincidono con i nomi tecnici inglesi, mentre le descrizioni restano in italiano.
+
+### Assistant condiviso nella Suite 1.0.0
+
+La Suite 1.0.0 distribuisce Augmented Marketing Assistant v0.3.0 come normale skill in entrambi i plugin, per un totale di dodici skill ciascuno. Il bundle Claude esclude i metadati `agents/openai.yaml` e non introduce agenti o subagenti. Gli undici ZIP individuali restano dedicati alle specialistiche.
+
+Il metodo di orientamento è condiviso. In Claude Code l’Assistant invoca la specialistica con lo strumento `Skill` e il nome `augmented-marketing-suite:<nome-skill>`; negli altri ambienti legge il suo `SKILL.md` e i riferimenti con il meccanismo supportato. Restano validi il controllo di disponibilità, il fallback in caso di caricamento impedito e l’uso diretto della skill già nominata dall’utente, senza passare dall’Assistant. Il frontmatter usa solo campi dello standard Agent Skills, senza `when_to_use`.
+
+L’inclusione nel pacchetto non dimostra l’attivazione automatica. Le verifiche della Suite 1.0.0 e il limite noto dei due test conversazionali Claude non verificati per autenticazione mancante sono registrati nel [rapporto dedicato](evals/suite-1.0.0/README.md).
 
 ## Verifica proporzionata
 
@@ -110,6 +118,8 @@ Documenta quali scenari sono stati eseguiti e quali restano non verificati. La v
 - come documentare in modo uniforme le capability osservate a runtime.
 
 ## Registro modifiche
+
+- v6, 2026-09-13, Suite 1.0.0 in preparazione: Assistant condiviso nei due plugin come skill, invocazione specialistica per ambiente e assenza di agenti nel bundle Claude. Gli esiti di verifica restano separati dalle capacità previste.
 
 - v4, 2026-09-12, revisione locale beta.11: riconoscimento delle autorizzazioni pregresse e prove proporzionate al cambiamento. I pacchetti beta.11 contengono undici specialistiche, più l’Assistant solo OpenAI/Codex; nessuna nuova verifica di installazione o caricamento cross-runtime.
 

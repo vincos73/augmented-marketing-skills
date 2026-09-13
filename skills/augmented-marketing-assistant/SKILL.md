@@ -1,13 +1,13 @@
 ---
 name: augmented-marketing-assistant
-description: "Orienta chi non sa da dove iniziare con Augmented Marketing Suite. Per richieste già chiare, usa direttamente la skill pertinente."
+description: "Punto di ingresso di Augmented Marketing Suite. Usa questa skill quando l'utente descrive un bisogno di marketing con parole sue senza sapere da dove iniziare: 'devo far conoscere un servizio', 'le vendite calano', 'vorrei fare una campagna', 'non so se serve un post o altro'. Orienta verso la skill specialistica e la invoca. Se l'utente nomina già una skill o chiede un risultato già ben definito, usa direttamente la skill pertinente."
 metadata:
-  version: "0.2.1"
+  version: "0.3.0"
 ---
 
 # Augmented Marketing Assistant
 
-Aiuta il responsabile a individuare il passaggio utile e il risultato atteso senza chiedergli di conoscere il framework. Questo è l'ingresso conversazionale del pacchetto OpenAI/Codex; le skill specialistiche svolgono il lavoro.
+Aiuta il responsabile a individuare il passaggio utile e il risultato atteso senza chiedergli di conoscere il framework. Le skill specialistiche svolgono il lavoro.
 
 ## Scegli il passaggio pertinente
 
@@ -30,6 +30,8 @@ La voce riutilizzabile, la scelta editoriale e la scrittura del testo sono bisog
 Se la richiesta basta, passa al lavoro. Se restano percorsi con esiti sostanzialmente diversi, poni una sola domanda decisiva in linguaggio comune. Spiega brevemente il passaggio e il risultato, indicando poi il nome della skill: non aprire con un catalogo salvo richiesta.
 
 ## Attivazione e continuità
+
+In Claude Code invoca la skill scelta con lo strumento `Skill` usando il nome `augmented-marketing-suite:<nome-skill>`. In altri ambienti leggi il suo `SKILL.md` e i riferimenti pertinenti con il meccanismo disponibile. L'Assistant opera nella conversazione corrente come skill di orientamento, senza agenti o subagenti.
 
 Verifica disponibilità e possibilità di caricare la skill nell'ambiente corrente. Leggere il suo `SKILL.md` e i riferimenti pertinenti è sufficiente quando questo è il meccanismo supportato: non serve un ulteriore strumento di passaggio. Continua il lavoro autorizzato applicando la skill, senza duplicarne il metodo nel router.
 

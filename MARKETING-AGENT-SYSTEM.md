@@ -42,9 +42,9 @@ Augmented Marketing Suite
                 └── Content Core   → Content Director → builder specializzati
 ```
 
-**Augmented Marketing Assistant** è un agente sottile e non un nuovo core. Riceve il bisogno nel linguaggio dell'utente, verifica soltanto stati e artefatti osservabili, spiega il passaggio utile e attiva la skill pertinente quando l'ambiente lo consente. Se non può effettuare il passaggio, indica all'utente la skill da invocare e si ferma senza simularne il metodo. Non possiede logica strategica, artefatti o approvazioni propri e non impone il percorso completo quando l'input necessario esiste già. Nel plugin OpenAI compare tecnicamente come sesta skill (`augmented-marketing-assistant`), ma questa forma è soltanto un adattatore di caricamento e non una nuova competenza di marketing.
+**Augmented Marketing Assistant** è una normale skill di orientamento e non un nuovo core. Riceve il bisogno nel linguaggio dell'utente, verifica soltanto stati e artefatti osservabili, spiega il passaggio utile e attiva la skill pertinente quando l'ambiente lo consente. Se non può effettuare il passaggio, indica all'utente la skill da invocare e si ferma senza simularne il metodo. Non possiede logica strategica, artefatti o approvazioni propri e non impone il percorso completo quando l'input necessario esiste già. Nella Suite 1.0.0 è condiviso dai plugin Claude e OpenAI/Codex, che contengono dodici skill ciascuno; il bundle Claude non include agenti o subagenti.
 
-La [definizione canonica beta v0.2.1](agents/augmented-marketing-assistant.md) resta indipendente da comandi e manifest proprietari. Il [relativo adattatore OpenAI](skills/augmented-marketing-assistant/SKILL.md) ne preserva ruolo e confini nel formato caricato da ChatGPT e Codex ed è incluso nella Suite `0.1.0-beta.11`. Gli scenari sintetici precedenti restano evidenza storica: la pubblicazione non prova il routing in ogni runtime, la comprensibilità per marketer esterni o il comportamento in ogni ambiente.
+La [definizione canonica dell’Assistant v0.3.0](agents/augmented-marketing-assistant.md) è una normale skill, indipendente da comandi e manifest proprietari, distribuita nei plugin Claude e OpenAI/Codex della Suite 1.0.0. In Claude Code invoca la specialistica con lo strumento `Skill` usando `augmented-marketing-suite:<nome-skill>`; negli altri ambienti legge il relativo `SKILL.md` con il meccanismo disponibile. Una skill nominata esplicitamente dall’utente viene usata senza passare dall’Assistant. Il bundle Claude non contiene agenti o subagenti. Le prove della Suite e la pubblicazione restano verifiche separate: l’inclusione dell’Assistant in entrambi i plugin non prova il routing in ogni runtime o la comprensibilità per marketer esterni.
 
 I tre core non sono cartelle decorative e non devono diventare tre agenti generalisti. Sono famiglie di decisioni con artefatti e confini diversi:
 
@@ -149,14 +149,15 @@ La promessa concreta può essere:
 
 ## Stato attuale del sistema e della roadmap
 
-Aggiornato al 12 settembre 2026.
+Aggiornato al 13 settembre 2026.
 
 | Area | Stato | Evidenza e limite |
 |---|---|---|
-| Fondazione e Strategy Core | Pubblicati nella Suite beta.11 | Sette skill specialistiche aggiornate; installazione e caricamento restano verifiche separate |
-| Brand Voice | Pubblicata nella Suite beta.11 | `setup-brand-voice` v0.1.2 definisce o aggiorna una voce riutilizzabile; blueprint ed eval sintetici inclusi |
-| Campaign Core | Pubblicato nella Suite beta.11 | `design-campaign` v0.1.7, `campaign-review` v0.1.4 e `campaign-debrief` v0.1.7; run integrato precedente su nove skill PASS su Codex Desktop |
-| Content Core | Pubblicato nella Suite beta.11 | `content-director` v0.1.2 sceglie la strada editoriale; `write-marketing-copy` v0.1.5 produce il testo richiesto |
+| Suite 1.0.0 | Versione stabile in preparazione | Due plugin con dodici skill ciascuno: Assistant v0.3.0 e undici specialistiche; pubblicazione e verifiche live restano pending |
+| Fondazione e Strategy Core | Inclusi nella Suite 1.0.0 | Le versioni singole restano invariate; installazione e caricamento restano verifiche separate |
+| Brand Voice | Inclusa nella Suite 1.0.0 | `setup-brand-voice` v0.1.2 definisce o aggiorna una voce riutilizzabile |
+| Campaign Core | Incluso nella Suite 1.0.0 | `design-campaign` v0.1.7, `campaign-review` v0.1.4 e `campaign-debrief` v0.1.7; le prove storiche restano separate dalla decisione di uscita |
+| Content Core | Incluso nella Suite 1.0.0 | `content-director` v0.1.2 sceglie la strada editoriale; `write-marketing-copy` v0.1.5 produce il testo richiesto |
 | Research & Evidence | Roadmap opzionale | Introdurre moduli autonomi soltanto quando il riuso giustifica un artefatto separato |
 | Monitoring | Roadmap opzionale | Il bisogno e la forma di distribuzione devono ancora essere validati |
 
@@ -634,7 +635,7 @@ Il [blueprint del Content Core](CONTENT-CORE.md) e i [riferimenti di authoring](
 ### Ordine di costruzione
 
 1. mantenere Fondazione e Strategy Core pubblicati e verificare il riuso con marketer reali;
-2. rinnovare installazione e caricamento della Suite beta.11 sulle superfici runtime previste;
+2. rinnovare installazione e caricamento della Suite 1.0.0 sulle superfici runtime previste;
 3. verificare con un responsabile reale il percorso già passato nella fixture sintetica `design-campaign` → `campaign-review` → `campaign-debrief`;
 4. collegare il primo percorso Content a un builder già esistente e misurare il rework;
 5. verificare `Augmented Marketing Assistant` in sessioni pulite anche sul Campaign Core;

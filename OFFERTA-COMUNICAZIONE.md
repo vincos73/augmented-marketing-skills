@@ -1,7 +1,7 @@
 ---
 artifact: offer-communication
-version: 8
-status: bozza
+version: 9
+status: stabile-in-preparazione
 last_reviewed: 2026-09-13
 scope: "Fonte di lavoro per posizionamento, README pubblico e materiali di comunicazione di Augmented Marketing Suite"
 ---
@@ -121,20 +121,20 @@ Nel nucleo minimo non esiste un agente Strategist separato. Il lavoro strategico
 
 ## Stato dell'offerta
 
-La comunicazione deve distinguere sempre ciò che è disponibile da ciò che è candidato o in roadmap.
+La comunicazione deve distinguere sempre ciò che è disponibile, ciò che è in preparazione e ciò che resta in roadmap.
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Suite | Beta 0.1.0-beta.11 pubblicata con plugin OpenAI/Codex, plugin Claude, undici skill specialistiche e Assistant; caricamento multipiattaforma e pilot esterno restano verifiche separate |
-| Augmented Marketing Assistant | v0.2.1 nella Suite beta.11; orienta verso le undici skill specialistiche. La pubblicazione non prova il routing in ogni runtime o con marketer esterni |
-| Business Identity | `setup-business-context` v0.6.7 nella Suite beta.11 |
-| Marketing Foundations | `setup-marketing-system` v0.3.4 nella Suite beta.11 |
-| Brand Voice | `setup-brand-voice` v0.1.2 nella Suite beta.11; definisce o aggiorna una voce riutilizzabile |
-| Brief della sfida | `define-marketing-challenge` v0.1.8 nella Suite beta.11 |
-| Direzione di marketing | `choose-marketing-direction` v0.2.8 nella Suite beta.11 |
-| Marketing Mix | `define-marketing-mix` v0.1.9 nella Suite beta.11 |
-| Campaign Core | `design-campaign` v0.1.7, `campaign-review` v0.1.4 e `campaign-debrief` v0.1.7 nella Suite beta.11; pilot con responsabile reale ancora mancante |
-| Content Core | `content-director` v0.1.2 e `write-marketing-copy` v0.1.5 nella Suite beta.11; gli altri builder restano esterni |
+| Augmented Marketing Suite | Versione stabile 1.0.0 in preparazione, con plugin OpenAI/Codex, plugin Claude, Assistant v0.3.0 e undici skill specialistiche; pubblicazione e verifiche live restano separate |
+| Augmented Marketing Assistant | v0.3.0 nei due plugin; orienta verso le undici skill specialistiche senza agenti o subagenti |
+| Business Identity | `setup-business-context` v0.6.7 inclusa nella Suite 1.0.0 |
+| Marketing Foundations | `setup-marketing-system` v0.3.4 inclusa nella Suite 1.0.0 |
+| Brand Voice | `setup-brand-voice` v0.1.2 inclusa nella Suite 1.0.0; definisce o aggiorna una voce riutilizzabile |
+| Brief della sfida | `define-marketing-challenge` v0.1.8 inclusa nella Suite 1.0.0 |
+| Direzione di marketing | `choose-marketing-direction` v0.2.8 inclusa nella Suite 1.0.0 |
+| Marketing Mix | `define-marketing-mix` v0.1.9 inclusa nella Suite 1.0.0 |
+| Campaign Core | `design-campaign` v0.1.7, `campaign-review` v0.1.4 e `campaign-debrief` v0.1.7 incluse nella Suite 1.0.0; eventuali prove con responsabili reali restano verifiche separate |
+| Content Core | `content-director` v0.1.2 e `write-marketing-copy` v0.1.5 incluse nella Suite 1.0.0; gli altri builder restano esterni |
 | Monitoring | Ipotesi opzionale di roadmap |
 
 Una cartella presente nel repository dimostra che esiste una sorgente di authoring. Non dimostra approvazione, installazione, pubblicazione o affidabilità in produzione.
@@ -240,13 +240,13 @@ Evitare anche formule generiche come “rivoluziona il marketing”, “sblocca 
 
 | Domanda del pubblico | Risposta centrale | Elemento di supporto | Limite da dichiarare |
 |---|---|---|---|
-| Devo sapere quale skill usare? | No, l'Assistant può partire dal bisogno e proporre il passaggio pertinente | Mappa di instradamento, handoff esplicito e pacchetto beta | Non è ancora stato testato con marketer esterni e il caricamento dell'Assistant dipende dall'ambiente |
+| Devo sapere quale skill usare? | No, l'Assistant può partire dal bisogno e proporre il passaggio pertinente | Mappa di orientamento, handoff esplicito e pacchetto 1.0.0 | Il caricamento dell'Assistant dipende dall'ambiente; due test conversazionali Claude restano non verificati per autenticazione mancante |
 | Perché non basta un buon prompt? | Il prompt non conserva da solo contesto, regole e decisioni tra attività diverse | Artefatti persistenti e versionati | Richiede che l'organizzazione mantenga aggiornati i propri contesti |
 | Decide davvero la strategia? | Guida la formulazione, il confronto e l'approvazione della decisione | Alternative, trade-off, assunzione fragile e test | La qualità dipende dalle fonti, dal modello e dal giudizio del responsabile |
 | Sostituisce il marketer? | No, struttura il lavoro e rende più controllabile l'uso dell'agente | Gate di approvazione e limiti di autorità | Non assume responsabilità professionale o aziendale |
 | Perché usare file invece della chat? | I file permettono riuso, verifica, versionamento e handoff | Business Identity, Foundations e fascicoli decisionali | Non ogni informazione deve diventare contesto globale |
 | Devo usare tutte le skill? | No, il percorso è modulare e selettivo | Attivazione basata sul lavoro richiesto | Saltare un passaggio è corretto solo quando l'input necessario esiste già |
-| È già pronto per un flusso completo? | Fondazioni, Strategy, Campaign e Content Core sono disponibili nella beta.11 | Stato dichiarato nel README e nelle release | Manca un pilot documentato con responsabili marketing reali e la verifica di ogni runtime |
+| È già pronto per un flusso completo? | Fondazioni, Strategy, Campaign e Content Core sono incluse nella Suite 1.0.0 | Stato dichiarato nel README, nel rapporto eval e nella release | La pubblicazione e il pilot con responsabili marketing reali restano verifiche separate |
 
 ## Struttura del README pubblico
 
@@ -345,6 +345,7 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 
 ## Registro modifiche
 
+- v9, 2026-09-13: allineata l'offerta alla Suite stabile 1.0.0 in preparazione, con Assistant v0.3.0 condiviso nei due plugin; aggiornati percorsi, maturità e limiti comunicabili senza aggiungere nuove prove.
 - v8, 2026-09-13: allineata l'offerta alla Suite beta.11 pubblicata, alle undici skill specialistiche, a `setup-brand-voice` e a `write-marketing-copy`; aggiornati maturità e limiti comunicabili.
 - v7, 2026-08-27: promosso Augmented Marketing Assistant a v0.1.0 stabile dopo tre smoke test runtime Codex superati, mantenendo Augmented Marketing Suite in beta.
 - v6, 2026-08-27: ristretto l'Assistant all'orientamento, aggiunto il fallback esplicito quando l'handoff non è disponibile e allineati i titoli visibili ai nomi tecnici inglesi.
