@@ -1,8 +1,37 @@
 {
   "suite_version": "1.0.0",
   "date": "2026-09-13",
-  "publication": "not_verified",
-  "installation": "not_run",
+  "publication": {
+    "state": "public_verified",
+    "published_at": "2026-09-13T19:20:12Z",
+    "release": "augmented-marketing-suite-v1.0.0",
+    "latest": true,
+    "draft": false,
+    "prerelease": false,
+    "tag_commit": "386fdea995b8109ed5292a0b6caae705d21c167d"
+  },
+  "installation": {
+    "state": "local_verified",
+    "evidence_file": "local-installation.json",
+    "codex": {
+      "status": "pass",
+      "scope": "12 personal skills; not a registered Codex plugin",
+      "parity": "diff -qr passed for all 12 skill directories"
+    },
+    "claude_code": {
+      "status": "pass",
+      "plugin": "augmented-marketing-suite@augmented-marketing-skills",
+      "version": "1.0.0",
+      "enabled": true,
+      "skills": 12,
+      "agents_directories": 0,
+      "payload_parity": "verified Claude archive except runtime .in_use marker",
+      "legacy_beta_8": "disabled and retained as backup"
+    },
+    "restart_performed": false,
+    "new_session_required_for_conversation_loading_verification": true,
+    "claude_ai_cloud_installation_verified": false
+  },
   "build": {
     "state": "built",
     "status": "pass",
@@ -11,7 +40,7 @@
     "plugin_skills": 12,
     "portable_specialist_archives": 11,
     "source_base_commit": "1def4414ff325959683f695fa477e7c892013fe0",
-    "head_at_check": "455f6ed571b0e49c77847485076c25ac40673941",
+    "head_at_check": "386fdea995b8109ed5292a0b6caae705d21c167d",
     "claude_archive_sha256": "f5791493d384d8ad798c0d8fca2fd6dddbfb9a976e254a3c5a2491eb80ae147d"
   },
   "claude_validation": {
@@ -23,7 +52,7 @@
     "strict_extracted_bundle": "pass",
     "strict_marketplace": "pass",
     "marketplace_release_url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/augmented-marketing-suite-v1.0.0/augmented-marketing-suite-claude-v1.0.0.zip",
-    "marketplace_remote_asset_downloaded": false,
+    "marketplace_remote_asset_downloaded": true,
     "zip_integrity": "pass",
     "bundle_files": 42,
     "skills": 12,
@@ -39,6 +68,17 @@
     "status": "pass",
     "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests/test_build_suite.py -v",
     "result": "Ran 11 tests, OK"
+  },
+  "public_download": {
+    "status": "pass",
+    "base_url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/augmented-marketing-suite-v1.0.0/",
+    "downloaded_anonymously": true,
+    "assets": 15,
+    "zip_assets": 13,
+    "manifest_and_checksums_assets": 2,
+    "byte_parity_with_local_dist": "pass",
+    "checksum_verification": "pass; 14 entries after reconstruction using manifest paths",
+    "zip_integrity": "pass; 13 archives"
   },
   "runtime": {
     "authentication_attempted": false,

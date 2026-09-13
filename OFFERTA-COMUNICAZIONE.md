@@ -125,7 +125,7 @@ La comunicazione deve distinguere sempre ciò che è disponibile, ciò che è in
 
 | Area | Stato comunicabile |
 |---|---|
-| Augmented Marketing Suite | Versione stabile 1.0.0 in preparazione, con plugin OpenAI/Codex, plugin Claude, Assistant v0.3.0 e undici skill specialistiche; pubblicazione e verifiche live restano separate |
+| Augmented Marketing Suite | Versione stabile 1.0.0 pubblicata, con plugin OpenAI/Codex, plugin Claude, Assistant v0.3.0 e undici skill specialistiche; download e installazioni restano verifiche separate |
 | Augmented Marketing Assistant | v0.3.0 nei due plugin; orienta verso le undici skill specialistiche senza agenti o subagenti |
 | Business Identity | `setup-business-context` v0.6.7 inclusa nella Suite 1.0.0 |
 | Marketing Foundations | `setup-marketing-system` v0.3.4 inclusa nella Suite 1.0.0 |
@@ -246,7 +246,7 @@ Evitare anche formule generiche come “rivoluziona il marketing”, “sblocca 
 | Sostituisce il marketer? | No, struttura il lavoro e rende più controllabile l'uso dell'agente | Gate di approvazione e limiti di autorità | Non assume responsabilità professionale o aziendale |
 | Perché usare file invece della chat? | I file permettono riuso, verifica, versionamento e handoff | Business Identity, Foundations e fascicoli decisionali | Non ogni informazione deve diventare contesto globale |
 | Devo usare tutte le skill? | No, il percorso è modulare e selettivo | Attivazione basata sul lavoro richiesto | Saltare un passaggio è corretto solo quando l'input necessario esiste già |
-| È già pronto per un flusso completo? | Fondazioni, Strategy, Campaign e Content Core sono incluse nella Suite 1.0.0 | Stato dichiarato nel README, nel rapporto eval e nella release | La pubblicazione e il pilot con responsabili marketing reali restano verifiche separate |
+| È già pronto per un flusso completo? | Fondazioni, Strategy, Campaign e Content Core sono incluse nella Suite 1.0.0 | Stato dichiarato nel README, nel rapporto eval e nella release | Il pilot con responsabili marketing reali e il comportamento in ogni runtime restano verifiche separate |
 
 ## Struttura del README pubblico
 
@@ -345,6 +345,7 @@ Le decisioni aperte non devono essere presentate come fatti o funzionalità già
 
 ## Registro modifiche
 
+- v10, 2026-09-13: aggiornata l'offerta alla Suite stabile 1.0.0 pubblicata, con Assistant v0.3.0 condiviso nei due plugin; distinti asset pubblicati, verifiche di installazione e limiti comportamentali.
 - v9, 2026-09-13: allineata l'offerta alla Suite stabile 1.0.0 in preparazione, con Assistant v0.3.0 condiviso nei due plugin; aggiornati percorsi, maturità e limiti comunicabili senza aggiungere nuove prove.
 - v8, 2026-09-13: allineata l'offerta alla Suite beta.11 pubblicata, alle undici skill specialistiche, a `setup-brand-voice` e a `write-marketing-copy`; aggiornati maturità e limiti comunicabili.
 - v7, 2026-08-27: promosso Augmented Marketing Assistant a v0.1.0 stabile dopo tre smoke test runtime Codex superati, mantenendo Augmented Marketing Suite in beta.

@@ -1,0 +1,45 @@
+{
+  "release": {
+    "tag": "augmented-marketing-suite-v1.0.0",
+    "url": "https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v1.0.0",
+    "commit": "386fdea995b8109ed5292a0b6caae705d21c167d"
+  },
+  "artifacts": {
+    "openai": {
+      "filename": "augmented-marketing-suite-1.0.0.zip",
+      "sha256": "9f25cd73a0528acb1da0075f1e7e8524c17a0917c401bf0a73a084f86bc6de08",
+      "verification": ["sha256", "zip-integrity", "version-1.0.0", "12-skills", "12-agents-metadata"]
+    },
+    "claude": {
+      "filename": "augmented-marketing-suite-claude-v1.0.0.zip",
+      "sha256": "f5791493d384d8ad798c0d8fca2fd6dddbfb9a976e254a3c5a2491eb80ae147d",
+      "verification": ["sha256", "zip-integrity", "version-1.0.0", "12-skills", "no-agents-metadata"]
+    }
+  },
+  "installed": {
+    "codex": {
+      "scope": "12 personal skills, not a registered Codex plugin",
+      "destination": "/Users/vincos/.codex/skills",
+      "method": "synced only the twelve named skill directories from the verified OpenAI archive",
+      "parity": "diff -qr passed for all twelve skill directories"
+    },
+    "claude_code": {
+      "scope": "user plugin",
+      "plugin": "augmented-marketing-suite@augmented-marketing-skills",
+      "version": "1.0.0",
+      "destination": "/Users/vincos/.claude/plugins/cache/augmented-marketing-skills/augmented-marketing-suite/1.0.0",
+      "inventory": "12 skills; 0 agents, hooks, MCP servers, or LSP servers",
+      "parity": "matches the verified Claude archive except the runtime .in_use marker",
+      "legacy_plugin": "augmented-marketing-suite@local-desktop-app-uploads 0.1.0-beta.8 disabled; source retained"
+    }
+  },
+  "backups": {
+    "codex": "/Users/vincos/.codex/skills-backups/augmented-marketing-suite-pre-1.0.0-20260913-212216",
+    "claude": "/Users/vincos/.claude/plugins/backups/augmented-marketing-suite-pre-1.0.0-20260913-212216"
+  },
+  "limits": [
+    "No running application was restarted or closed.",
+    "A new Codex or Claude Code session is required to verify skill loading in conversation.",
+    "This does not verify a Claude.ai cloud installation."
+  ]
+}

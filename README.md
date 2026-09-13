@@ -19,13 +19,13 @@ La Suite non è un direttore marketing automatico e non decide al posto tuo. Ti 
 
 Chi contribuisce nuove skill trova i criteri comuni nello [standard di progettazione](STANDARD-PROGETTAZIONE-SKILL.md): risposte proporzionate, dialogo per differenza, fonti separate dai materiali metodologici, gate compatti e test senza scritture canoniche.
 
-## Versione stabile 1.0.0
+## Versione stabile 1.0.0 pubblicata
 
 Augmented Marketing Suite 1.0.0 distribuisce gli stessi dodici elementi nei plugin Claude e OpenAI/Codex: **Augmented Marketing Assistant v0.3.0** e undici skill specialistiche. L'Assistant è una normale skill di orientamento, condivisa tra i due plugin: aiuta chi descrive un bisogno senza sapere da quale passaggio iniziare e, quando il meccanismo dell'ambiente lo consente, richiama la skill pertinente nella stessa conversazione. Non introduce agenti o subagenti. Se nomini già una skill, questa viene usata direttamente.
 
-La versione stabile 1.0.0 è in preparazione; la pubblicazione GitHub e i controlli live della release sono ancora in attesa. Gli archivi locali, i manifest e i checksum sono in [`dist/1.0.0`](dist/1.0.0/README.md); il rapporto delle verifiche è [`evals/suite-1.0.0/README.md`](evals/suite-1.0.0/README.md). Il rapporto registra anche il limite noto: due test conversazionali Claude non sono verificati perché mancava l'autenticazione. Questa uscita non introduce nuove prove comportamentali né un pilot con marketer reali.
+La versione stabile 1.0.0 è pubblicata su GitHub con 15 asset: 13 ZIP, un manifest e `SHA256SUMS`. Gli archivi locali, il manifest e i checksum sono in [`dist/1.0.0`](dist/1.0.0/README.md); il rapporto delle verifiche è [`evals/suite-1.0.0/README.md`](evals/suite-1.0.0/README.md). Il rapporto registra anche il limite noto: due test conversazionali Claude non sono verificati perché mancava l'autenticazione. Questa uscita non introduce nuove prove comportamentali né un pilot con marketer reali.
 
-La pagina della release prevista è [Augmented Marketing Suite v1.0.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v1.0.0). Il link sarà utilizzabile dopo la pubblicazione.
+Pagina release: [Augmented Marketing Suite v1.0.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v1.0.0).
 
 ## Da dove cominciare
 

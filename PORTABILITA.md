@@ -1,7 +1,7 @@
 ---
 artifact: portability-contract
 version: 6
-status: stabile-in-preparazione
+status: stabile
 last_reviewed: 2026-09-13
 scope: "Contratto minimo di portabilità per skill installabili di Augmented Marketing Suite"
 ---
@@ -119,6 +119,7 @@ Documenta quali scenari sono stati eseguiti e quali restano non verificati. La v
 
 ## Registro modifiche
 
+- v7, 2026-09-13, Suite 1.0.0 pubblicata: Assistant condiviso nei due plugin come skill, invocazione specialistica per ambiente e assenza di agenti nel bundle Claude. Gli esiti di installazione e runtime restano separati dalle capacità previste.
 - v6, 2026-09-13, Suite 1.0.0 in preparazione: Assistant condiviso nei due plugin come skill, invocazione specialistica per ambiente e assenza di agenti nel bundle Claude. Gli esiti di verifica restano separati dalle capacità previste.
 
 - v4, 2026-09-12, revisione locale beta.11: riconoscimento delle autorizzazioni pregresse e prove proporzionate al cambiamento. I pacchetti beta.11 contengono undici specialistiche, più l’Assistant solo OpenAI/Codex; nessuna nuova verifica di installazione o caricamento cross-runtime.

@@ -153,7 +153,7 @@ Aggiornato al 13 settembre 2026.
 
 | Area | Stato | Evidenza e limite |
 |---|---|---|
-| Suite 1.0.0 | Versione stabile in preparazione | Due plugin con dodici skill ciascuno: Assistant v0.3.0 e undici specialistiche; pubblicazione e verifiche live restano pending |
+| Suite 1.0.0 | Versione stabile pubblicata | Due plugin con dodici skill ciascuno: Assistant v0.3.0 e undici specialistiche; download e installazioni restano verifiche separate |
 | Fondazione e Strategy Core | Inclusi nella Suite 1.0.0 | Le versioni singole restano invariate; installazione e caricamento restano verifiche separate |
 | Brand Voice | Inclusa nella Suite 1.0.0 | `setup-brand-voice` v0.1.2 definisce o aggiorna una voce riutilizzabile |
 | Campaign Core | Incluso nella Suite 1.0.0 | `design-campaign` v0.1.7, `campaign-review` v0.1.4 e `campaign-debrief` v0.1.7; le prove storiche restano separate dalla decisione di uscita |

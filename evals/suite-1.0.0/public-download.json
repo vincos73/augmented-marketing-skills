@@ -1,0 +1,48 @@
+{
+  "verified_at": "2026-09-13T19:20:12Z",
+  "release": {
+    "tag": "augmented-marketing-suite-v1.0.0",
+    "commit": "386fdea995b8109ed5292a0b6caae705d21c167d",
+    "state": "public_latest",
+    "draft": false,
+    "prerelease": false
+  },
+  "download": {
+    "method": "anonymous HTTPS download",
+    "base_url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/augmented-marketing-suite-v1.0.0/",
+    "assets": 15,
+    "zip_assets": 13,
+    "other_assets": [
+      "manifest.json",
+      "SHA256SUMS"
+    ]
+  },
+  "verification": {
+    "public_to_local_byte_parity": "pass; 15 of 15 assets",
+    "checksum": "pass; 14 entries after placing flat downloads at paths from manifest.json",
+    "zip_integrity": "pass; 13 of 13 ZIP files",
+    "builder_source_archive_parity": "pass; scripts/build_suite.py --check on tagged checkout"
+  },
+  "assets": [
+    "openai/augmented-marketing-suite-1.0.0.zip",
+    "claude/augmented-marketing-suite-claude-v1.0.0.zip",
+    "agent-skills/setup-business-context-0.6.7.zip",
+    "agent-skills/setup-marketing-system-0.3.4.zip",
+    "agent-skills/setup-brand-voice-0.1.2.zip",
+    "agent-skills/define-marketing-challenge-0.1.8.zip",
+    "agent-skills/choose-marketing-direction-0.2.8.zip",
+    "agent-skills/define-marketing-mix-0.1.9.zip",
+    "agent-skills/design-campaign-0.1.7.zip",
+    "agent-skills/campaign-review-0.1.4.zip",
+    "agent-skills/campaign-debrief-0.1.7.zip",
+    "agent-skills/content-director-0.1.2.zip",
+    "agent-skills/write-marketing-copy-0.1.5.zip",
+    "manifest.json",
+    "SHA256SUMS"
+  ],
+  "claude_archive_sha256": "f5791493d384d8ad798c0d8fca2fd6dddbfb9a976e254a3c5a2491eb80ae147d",
+  "runtime": {
+    "authenticated_prompt_run": false,
+    "model_response_verified": false
+  }
+}

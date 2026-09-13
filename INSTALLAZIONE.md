@@ -1,6 +1,6 @@
 # Installazione di Augmented Marketing Suite 1.0.0
 
-> La versione stabile 1.0.0 contiene dodici skill in entrambi i plugin: undici specialistiche e Augmented Marketing Assistant v0.3.0. La pubblicazione GitHub e i controlli live restano indicati in [`RELEASE-STATUS.md`](RELEASE-STATUS.md).
+> La versione stabile 1.0.0 contiene dodici skill in entrambi i plugin: undici specialistiche e Augmented Marketing Assistant v0.3.0. Gli asset sono disponibili nella [release GitHub v1.0.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v1.0.0); i controlli ancora aperti restano indicati in [`RELEASE-STATUS.md`](RELEASE-STATUS.md).
 
 La Suite offre tre formati separati:
 
@@ -24,7 +24,7 @@ Augmented Marketing Assistant è incluso nei plugin Claude e OpenAI/Codex. Gli u
 
 ## Claude: plugin con tutte le skill
 
-1. Dopo la pubblicazione, scarica `augmented-marketing-suite-claude-v1.0.0.zip` dalla [release GitHub v1.0.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v1.0.0), oppure usa il file locale in `dist/1.0.0/claude/`.
+1. Scarica `augmented-marketing-suite-claude-v1.0.0.zip` dalla [release GitHub v1.0.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v1.0.0), oppure usa il file locale in `dist/1.0.0/claude/`.
 2. In Claude apri **Personalizza → Plugin** e scegli il caricamento di un plugin.
 3. Seleziona lo ZIP Claude. Il pacchetto ha `.claude-plugin/plugin.json`, include dodici skill e non contiene agenti o subagenti.
 4. Dopo l'installazione, apri una nuova chat e usa `/` o il pulsante `+` per vedere le skill del plugin.
@@ -42,14 +42,14 @@ Una custom skill Claude richiede un archivio con una sola cartella radice e un f
 
 ### Claude Code e Claude Desktop
 
-Per Claude Code, estrai il bundle completo e verifica `claude plugin validate --strict <bundle-estratto>`. Dopo la pubblicazione, aggiungi il marketplace GitHub remoto:
+Per Claude Code, estrai il bundle completo e verifica `claude plugin validate --strict <bundle-estratto>`. Il marketplace GitHub remoto è disponibile:
 
 ```sh
 claude plugin marketplace add vincos73/augmented-marketing-skills
 claude plugin install augmented-marketing-suite@augmented-marketing-skills
 ```
 
-Se devi validare una copia locale del marketplace, il percorso deve essere scritto `./` (non `.`): la CLI 2.1.266 rifiuta `claude plugin marketplace add .` con `Invalid marketplace source format`. La validazione locale non dimostra la disponibilità del marketplace remoto o l'installazione nell'account personale.
+Se devi validare una copia locale del marketplace, il percorso deve essere scritto `./` (non `.`): la CLI 2.1.266 rifiuta `claude plugin marketplace add .` con `Invalid marketplace source format`. Per l'installazione corrente usa il marketplace GitHub remoto indicato sopra.
 
 In una nuova sessione, una richiesta come “Ho un negozio e le vendite online calano, non so cosa fare” dovrebbe attivare l'Assistant e portare a `define-marketing-challenge` quando il meccanismo dell'ambiente lo consente. La richiesta “Usa define-marketing-challenge per chiarire il calo delle vendite online del mio negozio” usa direttamente la specialistica senza passare dall'Assistant. In Claude Code l'Assistant richiama la specialistica con `Skill` usando `augmented-marketing-suite:<nome-skill>`; negli altri ambienti legge `SKILL.md` con il meccanismo disponibile.
 
@@ -97,7 +97,7 @@ Usa `dist/1.0.0/openai/augmented-marketing-suite-1.0.0.zip` solo in un ambiente 
 | Content Director | `0.1.2` |
 | Write Marketing Copy | `0.1.5` |
 
-Le singole versioni delle skill restano invariate. Gli archivi, i manifest e i checksum della build locale sono riepilogati in [`dist/1.0.0/README.md`](dist/1.0.0/README.md).
+Le singole versioni delle skill restano invariate. Gli archivi, i manifest e i checksum della build locale sono riepilogati in [`dist/1.0.0/README.md`](dist/1.0.0/README.md) e nella release GitHub.
 
 ## Verifica prima del test
 
