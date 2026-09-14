@@ -31,20 +31,20 @@ Pagina release: [Augmented Marketing Suite v1.0.0](https://github.com/vincos73/a
 
 ### Le dodici skill della Suite 1.0.0
 
-| Se ti trovi in questa situazione | Cosa usare | Che cosa ottieni |
-| --- | --- | --- |
-| Descrivi un bisogno di marketing, ma non sai da quale passaggio iniziare. | [`Augmented Marketing Assistant`](skills/augmented-marketing-assistant/) | Orientamento verso la skill utile; incluso in entrambi i plugin. |
-| Vuoi spiegare all'agente chi è la tua organizzazione. | [`setup-business-context`](skills/setup-business-context/) | Un contesto riutilizzabile con identità, fatti approvati, vincoli e aspetti ancora da chiarire. |
-| Vuoi definire le regole con cui fare marketing. | [`setup-marketing-system`](skills/setup-marketing-system/) | Fondamenti di marketing condivisi, con fonti, regole, limiti e responsabilità da chiarire. |
-| Vuoi definire o rivedere una voce riutilizzabile. | [`setup-brand-voice`](skills/setup-brand-voice/) | Una guida alla voce del brand o una revisione circoscritta. |
-| Hai un'idea, una richiesta o un problema, ma non sai se è davvero una sfida di marketing. | [`define-marketing-challenge`](skills/define-marketing-challenge/) | Un documento di sintesi che chiarisce problema, pubblico, cambiamento desiderato, evidenze e criteri di successo. |
-| Devi scegliere tra più strade possibili. | [`choose-marketing-direction`](skills/choose-marketing-direction/) | Un confronto tra alternative, con vantaggi, svantaggi, rischi e assunzioni espliciti. |
-| Hai scelto una direzione e devi renderla concreta. | [`define-marketing-mix`](skills/define-marketing-mix/) | Scelte coerenti su offerta, prezzo, distribuzione e comunicazione. |
-| Vuoi progettare una campagna. | [`design-campaign`](skills/design-campaign/) | Una Campaign Spec con percorso, messaggi, canali, asset, responsabilità e misurazione. |
-| Vuoi verificare una campagna prima della pubblicazione o dell'invio. | [`campaign-review`](skills/campaign-review/) | Una review separata di coerenza strategica, affermazioni, prontezza operativa e baseline decisionale per il debrief. |
-| Devi leggere i risultati e decidere che cosa fare dopo. | [`campaign-debrief`](skills/campaign-debrief/) | Una lettura dei risultati con limiti, decisione consigliata e prossima verifica. |
-| Hai fonti o un'idea, ma non sai quale singolo contenuto sarebbe più utile. | [`content-director`](skills/content-director/) | Una raccomandazione editoriale agnostica e, dopo approvazione, un Content Brief. |
-| Hai un testo marketing da scrivere, riscrivere o adattare. | [`write-marketing-copy`](skills/write-marketing-copy/) | Copy pronto per la revisione, basato su voce e fatti disponibili. |
+| Se ti trovi in questa situazione | Cosa usare | Versione | Che cosa ottieni |
+| --- | --- | --- | --- |
+| Descrivi un bisogno di marketing, ma non sai da quale passaggio iniziare. | [`Augmented Marketing Assistant`](skills/augmented-marketing-assistant/) | v0.3.0 | Orientamento verso la skill utile; incluso in entrambi i plugin. |
+| Vuoi spiegare all'agente chi è la tua organizzazione. | [`setup-business-context`](skills/setup-business-context/) | v0.6.7 | Un contesto riutilizzabile con identità, fatti approvati, vincoli e aspetti ancora da chiarire. |
+| Vuoi definire le regole con cui fare marketing. | [`setup-marketing-system`](skills/setup-marketing-system/) | v0.3.4 | Fondamenti di marketing condivisi, con fonti, regole, limiti e responsabilità da chiarire. |
+| Vuoi definire o rivedere una voce riutilizzabile. | [`setup-brand-voice`](skills/setup-brand-voice/) | v0.1.2 | Una guida alla voce del brand o una revisione circoscritta. |
+| Hai un'idea, una richiesta o un problema, ma non sai se è davvero una sfida di marketing. | [`define-marketing-challenge`](skills/define-marketing-challenge/) | v0.1.8 | Un documento di sintesi che chiarisce problema, pubblico, cambiamento desiderato, evidenze e criteri di successo. |
+| Devi scegliere tra più strade possibili. | [`choose-marketing-direction`](skills/choose-marketing-direction/) | v0.2.8 | Un confronto tra alternative, con vantaggi, svantaggi, rischi e assunzioni espliciti. |
+| Hai scelto una direzione e devi renderla concreta. | [`define-marketing-mix`](skills/define-marketing-mix/) | v0.1.9 | Scelte coerenti su offerta, prezzo, distribuzione e comunicazione. |
+| Vuoi progettare una campagna. | [`design-campaign`](skills/design-campaign/) | v0.1.7 | Una Campaign Spec con percorso, messaggi, canali, asset, responsabilità e misurazione. |
+| Vuoi verificare una campagna prima della pubblicazione o dell'invio. | [`campaign-review`](skills/campaign-review/) | v0.1.4 | Una review separata di coerenza strategica, affermazioni, prontezza operativa e baseline decisionale per il debrief. |
+| Devi leggere i risultati e decidere che cosa fare dopo. | [`campaign-debrief`](skills/campaign-debrief/) | v0.1.7 | Una lettura dei risultati con limiti, decisione consigliata e prossima verifica. |
+| Hai fonti o un'idea, ma non sai quale singolo contenuto sarebbe più utile. | [`content-director`](skills/content-director/) | v0.1.2 | Una raccomandazione editoriale agnostica e, dopo approvazione, un Content Brief. |
+| Hai un testo marketing da scrivere, riscrivere o adattare. | [`write-marketing-copy`](skills/write-marketing-copy/) | v0.1.5 | Copy pronto per la revisione, basato su voce e fatti disponibili. |
 
 I nomi tra parentesi sono quelli da usare per richiamare direttamente le skill. Puoi usare tutto il percorso oppure soltanto il passaggio che ti serve.
 
@@ -110,25 +110,6 @@ Solo dopo puoi passare a pagine, campagne e contenuti. Research & Evidence e mon
 | Content Core | `content-director` e `write-marketing-copy` incluse nella Suite 1.0.0 | Collegare il Content Brief ai builder specializzati quando emergerà il bisogno |
 | Research & Evidence | Roadmap opzionale | Aggiungere capacità autonome solo quando emerge un uso ripetuto |
 | Monitoring | Roadmap opzionale | Validare il bisogno prima di introdurre setup e automazioni dedicate |
-
-## Versioni incluse
-
-Le versioni delle skill specialistiche restano quelle già definite e non vengono incrementate dalla release della Suite.
-
-| Skill | Versione inclusa nella Suite 1.0.0 | Risultato principale |
-| --- | --- | --- |
-| [`Augmented Marketing Assistant`](skills/augmented-marketing-assistant/) | v0.3.0 | Orientamento verso il passaggio pertinente. |
-| [`setup-business-context`](skills/setup-business-context/) | v0.6.7 | Contesto identitario riutilizzabile. |
-| [`setup-marketing-system`](skills/setup-marketing-system/) | v0.3.4 | Fondamenti e regole di marketing condivisi. |
-| [`setup-brand-voice`](skills/setup-brand-voice/) | v0.1.2 | Guida alla voce del brand o revisione circoscritta. |
-| [`define-marketing-challenge`](skills/define-marketing-challenge/) | v0.1.8 | Documento sintetico e verificabile della sfida. |
-| [`choose-marketing-direction`](skills/choose-marketing-direction/) | v0.2.8 | Confronto e scelta della direzione. |
-| [`define-marketing-mix`](skills/define-marketing-mix/) | v0.1.9 | Marketing mix su offerta, prezzo, distribuzione e comunicazione. |
-| [`design-campaign`](skills/design-campaign/) | v0.1.7 | Campaign Spec approvabile. |
-| [`campaign-review`](skills/campaign-review/) | v0.1.4 | Review pre-lancio separata con baseline decisionale per il debrief. |
-| [`campaign-debrief`](skills/campaign-debrief/) | v0.1.7 | Lettura dei risultati e decisione successiva. |
-| [`content-director`](skills/content-director/) | v0.1.2 | Raccomandazione editoriale e Content Brief. |
-| [`write-marketing-copy`](skills/write-marketing-copy/) | v0.1.5 | Copy marketing pronto per revisione. |
 
 ## Cosa non devi aspettarti
 
