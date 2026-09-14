@@ -46,16 +46,6 @@ Pagina release: [Augmented Marketing Suite v1.0.0](https://github.com/vincos73/a
 | Hai fonti o un'idea, ma non sai quale singolo contenuto sarebbe più utile. | [`content-director`](skills/content-director/) | Una raccomandazione editoriale agnostica e, dopo approvazione, un Content Brief. |
 | Hai un testo marketing da scrivere, riscrivere o adattare. | [`write-marketing-copy`](skills/write-marketing-copy/) | Copy pronto per la revisione, basato su voce e fatti disponibili. |
 
-I nomi tra parentesi sono quelli da usare per richiamare direttamente le skill. Puoi usare tutto il percorso oppure soltanto il passaggio che ti serve.
-
-### Campaign Core: incluso nella Suite 1.0.0
-
-`design-campaign` progetta la campagna, `campaign-review` la verifica prima della pubblicazione o dell'invio e `campaign-debrief` interpreta i risultati. Le tre skill completano la sequenza del Campaign Core; le prove storiche restano evidenza separata e non dimostrano validazione con marketer reali o funzionamento identico in ogni runtime.
-
-### Content Core: incluso nella Suite 1.0.0
-
-`content-director` valuta fonti o idee e raccomanda la strada editoriale; `write-marketing-copy` scrive, riscrive o adatta un singolo testo. Le due skill mantengono distinti il giudizio editoriale e la produzione del copy.
-
 ## Il percorso, in parole semplici
 
 ```text
@@ -73,8 +63,6 @@ Progetti e verifichi la campagna
           ↓
 Dopo i risultati decidi il passo successivo
 ```
-
-Le skill non pubblicano contenuti, non fanno pubblicità a pagamento e non cambiano strumenti o account esterni senza un'autorizzazione distinta.
 
 ## Perché può essere utile
 
@@ -99,17 +87,6 @@ Immagina di voler proporre un nuovo servizio di formazione.
 5. Definisci in modo coerente l'offerta, il prezzo, il modo di accesso e la comunicazione.
 
 Solo dopo puoi passare a pagine, campagne e contenuti. Research & Evidence e monitoring restano sviluppi successivi da validare.
-
-## Stato della roadmap
-
-| Area | Stato attuale | Prossimo passaggio |
-| --- | --- | --- |
-| Fondazione e Strategy Core | Skill di fondazione e strategia incluse nella Suite 1.0.0 | Osservare utilizzo e riuso con marketer reali |
-| Campaign Core | Tre skill incluse nella Suite 1.0.0; le prove storiche restano separate dalla decisione di uscita | Svolgere eventuali verifiche ulteriori con responsabili reali |
-| Brand voice e copy | `setup-brand-voice` e `write-marketing-copy` incluse nella Suite 1.0.0 | Verificare l'utilità su materiali di brand reali |
-| Content Core | `content-director` e `write-marketing-copy` incluse nella Suite 1.0.0 | Collegare il Content Brief ai builder specializzati quando emergerà il bisogno |
-| Research & Evidence | Roadmap opzionale | Aggiungere capacità autonome solo quando emerge un uso ripetuto |
-| Monitoring | Roadmap opzionale | Validare il bisogno prima di introdurre setup e automazioni dedicate |
 
 ## Versioni incluse
 
