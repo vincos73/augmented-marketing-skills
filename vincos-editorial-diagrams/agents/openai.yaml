@@ -1,0 +1,14 @@
+interface:
+  display_name: Vincos Editorial Diagrams
+  short_description: Diagrammi Vincos coerenti con il brand
+  default_prompt: Usa $vincos-editorial-diagrams con $vincos-brand-guidelines per
+    scegliere la struttura dal bisogno del lettore e creare un'infografica editoriale coerente con il brand Vincos.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="cycle-title cycle-desc">
+  <title id="cycle-title">Template Vincos per un ciclo</title>
+  <desc id="cycle-desc">Cinque tappe in feedback attorno a una memoria centrale, con relazioni primarie leggibili.</desc>
+  <defs><marker id="cycle-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#072743"/></marker></defs>
+  <rect width="800" height="500" fill="#FEFDFB"/>
+  <rect data-vincos-content="true" x="32" y="28" width="736" height="372" fill="none"/>
+  <text x="56" y="68" font-family="Barlow, Inter, sans-serif" font-size="30" font-weight="700" fill="#072743">Ciclo</text>
+  <text x="56" y="94" font-family="Barlow, Inter, sans-serif" font-size="14" font-weight="500" fill="#323232">Le tappe alimentano una memoria comune</text>
+  <path d="M442 132 C530 138 578 170 580 182 M588 262 C574 300 550 320 536 326 M458 372 C400 396 344 384 326 374 M246 326 C214 302 204 270 204 262 M212 182 C238 150 280 136 358 132" fill="none" stroke="#072743" stroke-width="1.75" marker-end="url(#cycle-arrow)"/>
+  <circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="node" cx="400" cy="132" r="38" fill="#FEFDFB" stroke="#072743" stroke-width="1"/><circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="node" cx="598" cy="220" r="38" fill="#FEFDFB" stroke="#072743" stroke-width="1"/><circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="node" cx="520" cy="360" r="38" fill="#FEFDFB" stroke="#072743" stroke-width="1"/><circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="node" cx="280" cy="360" r="38" fill="#FEFDFB" stroke="#072743" stroke-width="1"/><circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="node" cx="202" cy="220" r="38" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="focal-node" cx="400" cy="250" r="68" fill="#E3F4FF" stroke="#072743" stroke-width="1.75"/>
+  <g font-family="Barlow, Inter, sans-serif" text-anchor="middle"><text x="400" y="138" font-size="16" font-weight="500" fill="#323232">Ascolta</text><text x="598" y="226" font-size="16" font-weight="500" fill="#323232">Decidi</text><text x="520" y="366" font-size="16" font-weight="500" fill="#323232">Agisci</text><text x="280" y="366" font-size="16" font-weight="500" fill="#323232">Misura</text><text x="202" y="226" font-size="16" font-weight="500" fill="#323232">Impara</text><text x="400" y="246" font-size="22" font-weight="700" fill="#072743">Memoria</text><text x="400" y="271" font-size="14" font-weight="500" fill="#323232">condivisa</text></g>
+  <rect data-vincos-footer="true" x="620" y="440" width="148" height="36" fill="none"/>
+</svg>

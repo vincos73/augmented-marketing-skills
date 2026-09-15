@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="evolution-title evolution-desc">
+  <title id="evolution-title">Template Vincos per un'evoluzione</title>
+  <desc id="evolution-desc">Quattro fasi ordinate su una baseline temporale e una traiettoria di maturità distinta.</desc>
+  <defs><marker id="evolution-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#072743"/></marker></defs>
+  <rect width="800" height="500" fill="#FEFDFB"/>
+  <rect data-vincos-content="true" x="32" y="28" width="736" height="372" fill="none"/>
+  <text x="56" y="68" font-family="Barlow, Inter, sans-serif" font-size="30" font-weight="700" fill="#072743">Evoluzione</text>
+  <text x="56" y="94" font-family="Barlow, Inter, sans-serif" font-size="14" font-weight="500" fill="#323232">Ordine nel tempo e intensità della trasformazione</text>
+  <line x1="100" y1="350" x2="700" y2="350" stroke="#072743" stroke-width="1" marker-end="url(#evolution-arrow)"/>
+  <g stroke="#072743" stroke-width="1" stroke-dasharray="5 6"><line x1="120" y1="300" x2="120" y2="350"/><line x1="300" y1="250" x2="300" y2="350"/><line x1="480" y1="190" x2="480" y2="350"/><line x1="660" y1="126" x2="660" y2="350"/></g>
+  <polyline data-vincos-content="true" data-vincos-role="trajectory" points="120,300 300,250 480,190 660,126" fill="none" stroke="#072743" stroke-width="1.75"/>
+  <circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="milestone" cx="120" cy="300" r="12" fill="#FEFDFB" stroke="#072743" stroke-width="1.5"/><circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="milestone" cx="300" cy="250" r="12" fill="#FEFDFB" stroke="#072743" stroke-width="1.5"/><circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="milestone" cx="480" cy="190" r="12" fill="#FEFDFB" stroke="#072743" stroke-width="1.5"/><circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="focal-node" cx="660" cy="126" r="20" fill="#E3F4FF" stroke="#072743" stroke-width="1.75"/>
+  <g font-family="Barlow, Inter, sans-serif" text-anchor="middle"><text x="120" y="382" font-size="16" font-weight="500" fill="#323232">Inizio</text><text x="300" y="382" font-size="16" font-weight="500" fill="#323232">Adozione</text><text x="480" y="382" font-size="16" font-weight="500" fill="#323232">Sviluppo</text><text x="660" y="382" font-size="16" font-weight="700" fill="#072743">Maturità</text></g>
+  <rect data-vincos-footer="true" x="620" y="440" width="148" height="36" fill="none"/>
+</svg>

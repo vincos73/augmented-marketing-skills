@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="comparison-title comparison-desc">
+  <title id="comparison-title">Template Vincos per un confronto</title>
+  <desc id="comparison-desc">Quattro scenari su due dimensioni, con una scelta focale evidenziata.</desc>
+  <defs><style>@font-face{font-family:'IBM Plex Mono';src:url('../fonts/ibm-plex-mono/IBMPlexMono-Regular.ttf')}@font-face{font-family:'IBM Plex Mono';src:url('../fonts/ibm-plex-mono/IBMPlexMono-Medium.ttf');font-weight:500}</style></defs>
+  <rect width="800" height="500" fill="#FEFDFB"/>
+  <rect data-vincos-content="true" x="32" y="28" width="736" height="372" fill="none"/>
+  <text x="56" y="68" font-family="Barlow, Inter, sans-serif" font-size="30" font-weight="700" fill="#072743">Confronto</text>
+  <text x="56" y="94" font-family="Barlow, Inter, sans-serif" font-size="14" font-weight="500" fill="#323232">Due dimensioni, una scelta focale</text>
+  <line x1="116" y1="126" x2="116" y2="382" stroke="#072743" stroke-width="1"/>
+  <line x1="116" y1="382" x2="688" y2="382" stroke="#072743" stroke-width="1"/>
+  <text x="100" y="146" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">ALTO</text><text x="100" y="378" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">BASSO</text><text x="132" y="402" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">BASSO</text><text x="676" y="402" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">ALTO</text>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="card" x="142" y="132" width="250" height="102" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <polygon data-vincos-content="true" data-vincos-node="true" data-vincos-role="focal-card" data-vincos-chamfer-cut="20" points="448,132 658,132 678,152 678,234 428,234 428,152" fill="#E3F4FF" stroke="#072743" stroke-width="1.75"/>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="card" x="142" y="258" width="250" height="102" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="card" x="428" y="258" width="250" height="102" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <g font-family="Barlow, Inter, sans-serif" text-anchor="middle"><text x="267" y="174" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">SCENARIO</text><text x="267" y="201" font-size="20" font-weight="700" fill="#072743">A</text><text x="553" y="174" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#072743">SCELTA FOCALE</text><text x="553" y="201" font-size="20" font-weight="700" fill="#072743">B</text><text x="267" y="300" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">SCENARIO</text><text x="267" y="327" font-size="20" font-weight="700" fill="#072743">C</text><text x="553" y="300" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">SCENARIO</text><text x="553" y="327" font-size="20" font-weight="700" fill="#072743">D</text></g>
+  <rect data-vincos-footer="true" x="620" y="440" width="148" height="36" fill="none"/>
+</svg>

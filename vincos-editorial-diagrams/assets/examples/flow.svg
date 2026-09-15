@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="flow-title flow-desc">
+  <title id="flow-title">Template Vincos per un flusso</title>
+  <desc id="flow-desc">Cinque ruoli ordinati, con una decisione focale e un feedback secondario.</desc>
+  <defs><style>@font-face{font-family:'IBM Plex Mono';src:url('../fonts/ibm-plex-mono/IBMPlexMono-Regular.ttf')}@font-face{font-family:'IBM Plex Mono';src:url('../fonts/ibm-plex-mono/IBMPlexMono-Medium.ttf');font-weight:500}</style><marker id="flow-primary" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#072743"/></marker><marker id="flow-secondary" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#072743"/></marker></defs>
+  <rect width="800" height="500" fill="#FEFDFB"/>
+  <rect data-vincos-content="true" x="32" y="28" width="736" height="372" fill="none"/>
+  <text x="56" y="68" font-family="Barlow, Inter, sans-serif" font-size="30" font-weight="700" fill="#072743">Flusso</text>
+  <text x="56" y="94" font-family="Barlow, Inter, sans-serif" font-size="14" font-weight="500" fill="#323232">Un passaggio dominante, un feedback di verifica</text>
+  <line data-vincos-connector="true" x1="156" y1="238" x2="190" y2="238" stroke="#072743" stroke-width="1.75" marker-end="url(#flow-primary)"/>
+  <line data-vincos-connector="true" x1="310" y1="238" x2="344" y2="238" stroke="#072743" stroke-width="1.75" marker-end="url(#flow-primary)"/>
+  <line data-vincos-connector="true" x1="484" y1="238" x2="518" y2="238" stroke="#072743" stroke-width="1.75" marker-end="url(#flow-primary)"/>
+  <line data-vincos-connector="true" x1="638" y1="238" x2="672" y2="238" stroke="#072743" stroke-width="1.75" marker-end="url(#flow-primary)"/>
+  <path d="M578 312 C578 354 250 354 250 312" fill="none" stroke="#072743" stroke-width="1" stroke-dasharray="7 6" marker-end="url(#flow-secondary)"/>
+  <text x="414" y="374" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#323232">VERIFICA / APPRENDIMENTO</text>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="input-card" x="56" y="188" width="100" height="100" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="card" x="190" y="188" width="120" height="100" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <polygon data-vincos-content="true" data-vincos-node="true" data-vincos-role="focal-card" data-vincos-chamfer-cut="20" points="364,188 464,188 484,208 484,288 344,288 344,208" fill="#E3F4FF" stroke="#072743" stroke-width="1.75"/>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="card" x="518" y="188" width="120" height="100" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="output-card" x="672" y="188" width="72" height="100" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <g font-family="Barlow, Inter, sans-serif" text-anchor="middle"><text x="106" y="224" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#323232">INPUT</text><text x="106" y="250" font-size="17" font-weight="700" fill="#072743">Ingresso</text><text x="250" y="224" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#323232">ELABORA</text><text x="250" y="250" font-size="17" font-weight="700" fill="#072743">Analisi</text><text x="414" y="224" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#072743">DECIDE</text><text x="414" y="250" font-size="18" font-weight="700" fill="#072743">Scelta</text><text x="578" y="224" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#323232">ATTUA</text><text x="578" y="250" font-size="17" font-weight="700" fill="#072743">Azione</text><text x="708" y="224" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#323232">ESITO</text><text x="708" y="250" font-size="15" font-weight="700" fill="#072743">Output</text></g>
+  <rect data-vincos-footer="true" x="620" y="440" width="148" height="36" fill="none"/>
+</svg>

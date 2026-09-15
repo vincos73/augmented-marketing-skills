@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="hierarchy-title hierarchy-desc">
+  <title id="hierarchy-title">Template Vincos per una gerarchia</title>
+  <desc id="hierarchy-desc">Tre livelli di responsabilità con confini quieti e un nucleo focale.</desc>
+  <defs><style>@font-face{font-family:'IBM Plex Mono';src:url('../fonts/ibm-plex-mono/IBMPlexMono-Regular.ttf')}@font-face{font-family:'IBM Plex Mono';src:url('../fonts/ibm-plex-mono/IBMPlexMono-Medium.ttf');font-weight:500}</style></defs>
+  <rect width="800" height="500" fill="#FEFDFB"/>
+  <rect data-vincos-content="true" x="32" y="28" width="736" height="372" fill="none"/>
+  <text x="56" y="68" font-family="Barlow, Inter, sans-serif" font-size="30" font-weight="700" fill="#072743">Gerarchia</text>
+  <text x="56" y="94" font-family="Barlow, Inter, sans-serif" font-size="14" font-weight="500" fill="#323232">Contesto, sistema e responsabilità principale</text>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="boundary" x="76" y="126" width="650" height="256" fill="none" stroke="#072743" stroke-width="1"/>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="boundary" x="140" y="176" width="520" height="156" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <polygon data-vincos-content="true" data-vincos-node="true" data-vincos-role="focal-card" data-vincos-chamfer-cut="24" points="290,214 510,214 534,238 534,302 510,326 290,326 266,302 266,238" fill="#E3F4FF" stroke="#072743" stroke-width="1.75"/>
+  <g font-family="Barlow, Inter, sans-serif"><text x="98" y="154" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">LIVELLO 1</text><text x="98" y="174" font-size="18" font-weight="700" fill="#072743">Contesto</text><text x="162" y="204" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">LIVELLO 2</text><text x="162" y="224" font-size="18" font-weight="700" fill="#072743">Sistema</text><text x="400" y="264" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#072743">RESPONSABILITÀ FOCALE</text><text x="400" y="290" text-anchor="middle" font-size="22" font-weight="700" fill="#072743">Nucleo</text></g>
+  <rect data-vincos-footer="true" x="620" y="440" width="148" height="36" fill="none"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="system-title system-desc">
+  <title id="system-title">Template Vincos per una mappa di sistema</title>
+  <desc id="system-desc">Un sistema con ingresso, nucleo, risultato, controllo e feedback secondario.</desc>
+  <defs><style>@font-face{font-family:'IBM Plex Mono';src:url('../fonts/ibm-plex-mono/IBMPlexMono-Regular.ttf')}@font-face{font-family:'IBM Plex Mono';src:url('../fonts/ibm-plex-mono/IBMPlexMono-Medium.ttf');font-weight:500}</style><pattern id="system-field" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#072743"/></pattern><marker id="system-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#072743"/></marker></defs>
+  <rect width="800" height="500" fill="#FEFDFB"/>
+  <rect data-vincos-content="true" x="32" y="28" width="736" height="372" fill="none"/>
+  <text x="56" y="68" font-family="Barlow, Inter, sans-serif" font-size="30" font-weight="700" fill="#072743">Mappa di sistema</text>
+  <text x="56" y="94" font-family="Barlow, Inter, sans-serif" font-size="14" font-weight="500" fill="#323232">Flusso principale, controllo e relazione di ritorno</text>
+  <rect x="46" y="122" width="708" height="260" fill="url(#system-field)" opacity="0.08"/>
+  <path d="M46 150 V122 H74 M726 122 H754 V150 M46 354 V382 H74 M726 382 H754 V354" fill="none" stroke="#072743" stroke-width="1"/>
+  <line data-vincos-connector="true" x1="230" y1="210" x2="300" y2="210" stroke="#072743" stroke-width="1.75" marker-end="url(#system-arrow)"/>
+  <line data-vincos-connector="true" x1="500" y1="210" x2="570" y2="210" stroke="#072743" stroke-width="1.75" marker-end="url(#system-arrow)"/>
+  <path d="M400 282 V298" fill="none" stroke="#072743" stroke-width="1" stroke-dasharray="7 6" marker-end="url(#system-arrow)"/>
+  <path d="M360 338 C266 338 244 290 244 260" fill="none" stroke="#072743" stroke-width="1" stroke-dasharray="7 6" marker-end="url(#system-arrow)"/>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="input-card" x="70" y="160" width="160" height="100" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <text x="150" y="200" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">INPUT</text><text x="150" y="228" text-anchor="middle" font-family="Barlow, Inter, sans-serif" font-size="20" font-weight="700" fill="#072743">Ingresso</text>
+  <polygon data-vincos-content="true" data-vincos-node="true" data-vincos-role="focal-card" data-vincos-chamfer-cut="24" points="324,150 476,150 500,174 500,258 476,282 324,282 300,258 300,174" fill="#E3F4FF" stroke="#072743" stroke-width="1.75"/>
+  <text x="400" y="202" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#072743">SISTEMA FOCALE</text><text x="400" y="231" text-anchor="middle" font-family="Barlow, Inter, sans-serif" font-size="22" font-weight="700" fill="#072743">Nucleo</text>
+  <rect data-vincos-content="true" data-vincos-node="true" data-vincos-role="output-card" x="570" y="160" width="160" height="100" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <text x="650" y="200" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#323232">OUTPUT</text><text x="650" y="228" text-anchor="middle" font-family="Barlow, Inter, sans-serif" font-size="20" font-weight="700" fill="#072743">Risultato</text>
+  <circle data-vincos-content="true" data-vincos-node="true" data-vincos-role="control-node" cx="400" cy="338" r="40" fill="#FEFDFB" stroke="#072743" stroke-width="1"/>
+  <text x="400" y="334" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#323232">FEEDBACK</text><text x="400" y="353" text-anchor="middle" font-family="Barlow, Inter, sans-serif" font-size="16" font-weight="700" fill="#072743">Controllo</text>
+  <rect data-vincos-footer="true" x="620" y="440" width="148" height="36" fill="none"/>
+</svg>
