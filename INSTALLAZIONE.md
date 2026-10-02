@@ -1,5 +1,7 @@
 # Installazione di Augmented Marketing Suite 1.0.0
 
+> English documentation: [README.en.md](README.en.md) · [INSTALLATION.md](INSTALLATION.md) · [Overview](docs/en/OVERVIEW.md) · [Examples](docs/en/EXAMPLES.md)
+
 > La versione stabile 1.0.0 contiene dodici skill in entrambi i plugin: undici specialistiche e Augmented Marketing Assistant v0.3.0. Gli asset sono disponibili nella [release GitHub v1.0.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v1.0.0); i controlli ancora aperti restano indicati in [`RELEASE-STATUS.md`](RELEASE-STATUS.md).
 
 La Suite offre tre formati separati:
@@ -108,3 +110,7 @@ Le singole versioni delle skill restano invariate. Gli archivi, i manifest e i c
 5. Dopo l'installazione, apri una nuova chat e chiedi un risultato che appartenga chiaramente alla skill scelta.
 
 Il rapporto [`evals/suite-1.0.0/README.md`](evals/suite-1.0.0/README.md) separa i controlli strutturali dalle prove comportamentali. Due test conversazionali Claude restano non verificati per autenticazione mancante. La verifica strutturale non dimostra la discovery in ogni account, il caricamento nella sessione o la comprensibilità per tester esterni.
+
+## Candidata di localizzazione
+
+Le sorgenti attuali preparano la candidata `1.0.1-l10n.1`, separata dalla release 1.0.0, non pubblicata né installata. Il [suo stato](LOCALIZATION-CORE-STATUS.md) distingue localizzazione, verifiche e limiti. I percorsi 1.0.0 di questa guida restano quelli della release stabile.

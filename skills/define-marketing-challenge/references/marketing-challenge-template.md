@@ -2,7 +2,7 @@
 
 Leggi questo riferimento quando crei un nuovo brief, aggiorni una sfida esistente o verifichi se la bozza sia pronta per la conferma. Il template è modulare: conserva ciò che cambia la decisione e non compilare righe vuote per dimostrare completezza.
 
-Scrivi il brief nella lingua di lavoro del responsabile. Mantieni invariati nomi propri, termini tecnici e riferimenti canonici. Durante la conversazione presenta il contenuto in linguaggio manageriale; mostra il frontmatter solo quando serve alla revisione dell'artefatto proposto.
+Scrivi il brief nella lingua esplicitamente richiesta per il documento, altrimenti nella lingua dell'utente. Mantieni invariati nomi propri, termini tecnici e riferimenti canonici. Durante la conversazione presenta il contenuto in linguaggio manageriale; mostra il frontmatter solo quando serve alla revisione dell'artefatto proposto.
 
 ```markdown
 ---

@@ -1,13 +1,17 @@
 ---
 name: define-marketing-mix
-description: "Traduce una direzione approvata in scelte coerenti su Product, Price, Place e Promotion."
+description: "Translates an approved direction into coherent choices across Product, Price, Place, and Promotion."
 metadata:
-  version: "0.1.9"
+  version: "0.1.10-l10n.1"
 ---
 
 # Definire il marketing mix
 
 Rendi una direzione approvata attuabile attraverso scelte coerenti sulle quattro P, distinguendo decisioni, proposte, ipotesi e autorità. Il risultato è un Marketing Mix approvabile; la sua approvazione non esegue modifiche a prodotto, listini, distribuzione o campagne.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Base e aggiornamenti
 

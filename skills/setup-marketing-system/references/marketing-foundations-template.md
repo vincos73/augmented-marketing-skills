@@ -2,7 +2,7 @@
 
 Leggi questo riferimento quando crei un nuovo artefatto, ristrutturi un artefatto incompleto, costruisci un'integrazione per un brand figlio o verifichi la preparazione per il primo passaggio di approvazione.
 
-Scrivi l'artefatto canonico nella lingua di lavoro del responsabile. Questo template usa l'italiano: mantieni in inglese solo termini di marketing o business già consolidati, come `branded content`, `claim`, `brief` o `case study`. Non usare l'inglese per intestazioni, spiegazioni, etichette o stati generici. Adatta tabelle e titoli quando serve, ma conserva i campi tecnici in testa, le cinque aree di regole, la governance e le regole di composizione.
+Scrivi l'artefatto canonico nella lingua esplicitamente richiesta per il documento, altrimenti nella lingua dell'utente. Mantieni invariati i termini di marketing o business già consolidati, come `branded content`, `claim`, `brief` o `case study`. Adatta tabelle e titoli quando serve, ma conserva i campi tecnici in testa, le cinque aree di regole, la governance e le regole di composizione.
 
 ```markdown
 ---

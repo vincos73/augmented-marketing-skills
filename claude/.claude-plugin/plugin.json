@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "augmented-marketing-suite",
   "displayName": "Augmented Marketing Suite",
-  "version": "1.0.0",
-  "description": "Dodici skill: Augmented Marketing Assistant e undici specialistiche per contesto, strategia, campagne, voce e contenuti.",
+  "version": "1.0.1-l10n.1",
+  "description": "Twelve skills: Augmented Marketing Assistant and eleven specialists for context, strategy, campaigns, voice, and content.",
   "author": {
     "name": "Augmented Marketing Suite"
   },

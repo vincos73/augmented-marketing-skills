@@ -1,13 +1,17 @@
 ---
 name: choose-marketing-direction
-description: "Confronta direzioni strategiche per una sfida confermata e raccomanda una scelta verificabile."
+description: "Compares strategic directions for a confirmed challenge and recommends a testable choice."
 metadata:
-  version: "0.2.8"
+  version: "0.2.9-l10n.1"
 ---
 
 # Scegliere la direzione di marketing
 
 Prepara una scelta strategica con diagnosi provvisoria, alternative reali, trade-off, assunzione più fragile e primo test utile. La raccomandazione non diventa una decisione dell'organizzazione senza approvazione del responsabile.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Base della scelta
 

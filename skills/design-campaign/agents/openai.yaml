@@ -1,4 +1,4 @@
 interface:
   display_name: "design-campaign"
-  short_description: "Progetta campagne coordinate e misurabili"
-  default_prompt: "Usa $design-campaign per progettare questa campagna partendo dalla richiesta e dai materiali disponibili."
+  short_description: "Designs coordinated, measurable campaigns"
+  default_prompt: "Use $design-campaign to design this campaign from the request and available materials."

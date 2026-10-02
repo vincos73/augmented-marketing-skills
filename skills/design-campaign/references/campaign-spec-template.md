@@ -4,7 +4,7 @@ Leggi questo riferimento quando presenti la revisione finale, crei, aggiorni o v
 
 Usa per default un nucleo compatto: fonti e decisioni di partenza, brief, funnel o percorso, messaggi e prove, attivazione, conversione, misurazione, rischi e autorizzazioni. Sezioni o tabelle separate per messaggi di supporto, canali, asset, responsabilità, budget e fonti entrano soltanto quando aggiungono decisioni, responsabili o limiti non già leggibili nel nucleo. Consolida sezioni affini nei casi semplici.
 
-Scrivi nella lingua di lavoro del responsabile. Mantieni invariati nomi propri, claim approvati e termini tecnici necessari. Durante la revisione manageriale presenta il contenuto in linguaggio naturale e usa il lessico del marketing: brief, funnel o percorso, messaggi, canali, asset, conversione, misurazione e cosa manca prima del lancio. Mostra il frontmatter soltanto nel file generato o nella versione portabile completa richiesta dall'utente, non nella revisione compatta.
+Scrivi nella lingua esplicitamente richiesta per il documento, altrimenti nella lingua dell'utente. Mantieni invariati nomi propri, claim approvati e termini tecnici necessari. Durante la revisione manageriale presenta il contenuto in linguaggio naturale e usa il lessico del marketing: brief, funnel o percorso, messaggi, canali, asset, conversione, misurazione e cosa manca prima del lancio. Mostra il frontmatter soltanto nel file generato o nella versione portabile completa richiesta dall'utente, non nella revisione compatta.
 
 ```markdown
 ---

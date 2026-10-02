@@ -1,13 +1,17 @@
 ---
 name: setup-brand-voice
-description: "Definisce o aggiorna una guida di voce riutilizzabile per brand o persona; non serve per correggere un singolo testo."
+description: "Defines or updates a reusable voice guide for a brand or person; it is not for correcting a single text."
 metadata:
-  version: "0.1.2"
+  version: "0.1.3-l10n.1"
 ---
 
 # Configurare la voce del brand
 
 Rendi la voce riconoscibile e applicabile da un altro autore. Il risultato può essere il recepimento fedele di una guida approvata, una nuova **Guida alla voce del brand** o un aggiornamento circoscritto. Completa il risultato richiesto; una guida già adeguata non richiede un nuovo percorso di creazione.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Contesto e fonti
 

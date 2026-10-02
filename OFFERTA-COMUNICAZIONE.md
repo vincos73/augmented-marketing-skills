@@ -8,6 +8,8 @@ scope: "Fonte di lavoro per posizionamento, README pubblico e materiali di comun
 
 # Offerta e comunicazione di Augmented Marketing Suite
 
+La presentazione inglese della stessa offerta è in [README.en.md](README.en.md) e [docs/en/OVERVIEW.md](docs/en/OVERVIEW.md). La localizzazione `1.0.1-l10n.1` è una [candidata locale](LOCALIZATION-CORE-STATUS.md) separata dalla release stabile 1.0.0; non modifica promessa, destinatari o maturità dimostrata.
+
 ## Scopo del documento
 
 Questo documento stabilisce come presentare Augmented Marketing Suite: quale problema affronta, quale valore offre, a chi serve, che cosa lo distingue e quali promesse sono sostenibili allo stato attuale.

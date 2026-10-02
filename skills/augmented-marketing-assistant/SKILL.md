@@ -1,13 +1,17 @@
 ---
 name: augmented-marketing-assistant
-description: "Punto di ingresso di Augmented Marketing Suite. Usa questa skill quando l'utente descrive un bisogno di marketing con parole sue senza sapere da dove iniziare: 'devo far conoscere un servizio', 'le vendite calano', 'vorrei fare una campagna', 'non so se serve un post o altro'. Orienta verso la skill specialistica e la invoca. Se l'utente nomina già una skill o chiede un risultato già ben definito, usa direttamente la skill pertinente."
+description: "Helps users who describe a marketing need without knowing where to start, then selects and invokes the relevant specialist skill. If the user names a skill or requests a clearly defined deliverable, use that specialist directly."
 metadata:
-  version: "0.3.0"
+  version: "0.3.1-l10n.1"
 ---
 
 # Augmented Marketing Assistant
 
 Aiuta il responsabile a individuare il passaggio utile e il risultato atteso senza chiedergli di conoscere il framework. Le skill specialistiche svolgono il lavoro.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Scegli il passaggio pertinente
 

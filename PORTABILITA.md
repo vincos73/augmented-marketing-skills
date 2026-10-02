@@ -86,7 +86,7 @@ Il caricamento di un archivio generico in una chat ChatGPT non registra automati
 
 Un test su ChatGPT Web ha mostrato che una skill già attiva può individuare una skill specialistica senza riuscire a caricarla nella stessa conversazione. L'adattatore non deve quindi presumere un handoff tra skill. Quando il passaggio non è disponibile, indica il nome tecnico esatto da invocare e si ferma senza simulare il workflow specialistico.
 
-L'adattatore OpenAI non introduce MCP, connector o nuove capacità di marketing. La sua installazione e il suo caricamento devono essere verificati in una nuova chat o sessione. I titoli visibili delle skill coincidono con i nomi tecnici inglesi, mentre le descrizioni restano in italiano.
+L'adattatore OpenAI non introduce MCP, connector o nuove capacità di marketing. La sua installazione e il suo caricamento devono essere verificati in una nuova chat o sessione. Nella release 1.0.0 i titoli visibili coincidono con i nomi tecnici inglesi e le descrizioni sono in italiano. La candidata locale 1.0.1-l10n.1 usa descrizioni inglesi; risposte e documenti seguono la lingua richiesta, mantenendo voce, citazioni, testi protetti e terminologia approvata. Gli identificatori e gli stati tecnici restano invariati.
 
 ### Assistant condiviso nella Suite 1.0.0
 

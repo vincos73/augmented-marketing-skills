@@ -1,5 +1,7 @@
 # Stato release Suite 1.0.0
 
+Questa pagina conserva le verifiche storiche del 13 settembre 2026. Le sorgenti di questo ramo preparano una [candidata di sola localizzazione `1.0.1-l10n.1`](LOCALIZATION-CORE-STATUS.md), non pubblicata né installata. La revisione comportamentale di `design-campaign` resta separata. Gli archivi 1.0.0 e il riferimento marketplace restano invariati.
+
 **Stato:** pubblicata su GitHub
 
 **Data di aggiornamento:** 2026-09-13

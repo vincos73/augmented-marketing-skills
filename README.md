@@ -1,6 +1,10 @@
 
 # Augmented Marketing Suite
 
+**Sorgenti locali:** candidata `1.0.1-l10n.1` limitata alla localizzazione inglese della presentazione, dei metadati e della regola linguistica. Non è una release, non è installata e non include la revisione successiva di `design-campaign`. [Perimetro e verifiche](LOCALIZATION-CORE-STATUS.md). La release pubblica 1.0.0 e i suoi archivi restano invariati.
+
+> English documentation: [README.en.md](README.en.md) · [Installation](INSTALLATION.md) · [Overview](docs/en/OVERVIEW.md) · [Examples](docs/en/EXAMPLES.md)
+
 > Un insieme di skill per aiutarti a prendere decisioni di marketing più chiare, verificabili e approvabili con un agente IA.
 
 Se usi Claude, ChatGPT, Codex o un altro ambiente compatibile, puoi chiedere all'agente di aiutarti a capire un problema di marketing, confrontare alcune strade e preparare il passo successivo.

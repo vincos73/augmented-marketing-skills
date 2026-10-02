@@ -1,13 +1,17 @@
 ---
 name: campaign-review
-description: "Valuta una campagna e i suoi asset prima del lancio: coerenza con le decisioni approvate, claim e prontezza operativa, con esito motivato e correzioni richieste."
+description: "Reviews a campaign and its assets before launch for consistency with approved decisions, claims, and operational readiness, with a reasoned outcome and required corrections."
 metadata:
-  version: "0.1.4"
+  version: "0.1.5-l10n.1"
 ---
 
 # Revisionare una campagna
 
 Restituisci un esito utilizzabile per un'azione e una configurazione precise: `pronta`, `pronta con condizioni`, `da correggere` o `bloccata`. Confronta campagna e asset con la base approvata e le prove disponibili. Completa le verifiche possibili e rendi esplicite quelle mancanti, senza confondere valutazione ed esecuzione.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Base probatoria
 

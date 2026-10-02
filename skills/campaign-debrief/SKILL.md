@@ -1,13 +1,17 @@
 ---
 name: campaign-debrief
-description: "Interpreta i risultati osservati di una campagna o test e raccomanda il prossimo passo, confrontando attese, esecuzione reale, qualità dei dati e limiti delle conclusioni."
+description: "Interprets observed results from a campaign or test and recommends the next step by comparing expectations, actual execution, data quality, and limits of the conclusions."
 metadata:
-  version: "0.1.7"
+  version: "0.1.8-l10n.1"
 ---
 
 # Leggere i risultati di una campagna
 
 Aiuta il responsabile a decidere che cosa continuare, correggere, estendere con cautela, fermare o attendere. Il risultato è una raccomandazione applicabile a un perimetro, sostenuta dalle osservazioni e accompagnata da condizioni e prossimo controllo. Non è un report periodico automatico né una riparazione del tracking.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Base della lettura
 

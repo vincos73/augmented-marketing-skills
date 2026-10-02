@@ -1,13 +1,17 @@
 ---
 name: write-marketing-copy
-description: "Crea o riscrive singoli testi marketing pronti per revisione, applicando pubblico, voce e fatti disponibili."
+description: "Creates or rewrites individual marketing copy ready for review, applying the available audience, voice, and facts."
 metadata:
-  version: "0.1.5"
+  version: "0.1.6-l10n.1"
 ---
 
 # Copywriting
 
 Consegna copy marketing completo, con note separate solo se ne cambiano l'uso o richiedono una decisione. Il lavoro riguarda un testo, non una strategia, una campagna, una sequenza, un articolo giornalistico o una newsletter editoriale completa.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Contesto sufficiente
 

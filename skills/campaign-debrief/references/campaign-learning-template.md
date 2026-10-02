@@ -2,7 +2,7 @@
 
 Leggi questo riferimento quando il responsabile vuole condividere, approvare o conservare la lettura dei risultati. Il template è una libreria di campi, non un indice da riprodurre integralmente. Mantieni un solo record per campagna e aggiorna lo storico senza creare file separati per canale, metrica o riunione.
 
-Scrivi nella lingua di lavoro del responsabile. La sintesi in chat non deve mostrare il frontmatter.
+Scrivi nella lingua esplicitamente richiesta per il documento, altrimenti nella lingua dell'utente. La sintesi in chat non deve mostrare il frontmatter.
 
 ```markdown
 ---

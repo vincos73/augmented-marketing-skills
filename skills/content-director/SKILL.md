@@ -1,13 +1,17 @@
 ---
 name: content-director
-description: "Sceglie funzione e forma di un singolo contenuto ancora indefinito e prepara il Content Brief; non progetta campagne o calendari."
+description: "Chooses the function and format of a single, not-yet-defined piece of content and prepares the Content Brief; it does not design campaigns or calendars."
 metadata:
-  version: "0.1.2"
+  version: "0.1.3-l10n.1"
 ---
 
 # Content Director
 
 Rendi operativa una decisione editoriale: quale singolo contenuto serve al pubblico e perché le fonti lo sostengono. Il risultato è una raccomandazione o un **Content Brief**, secondo la richiesta. Se il contenuto è già sufficientemente definito o si tratta di correggere un asset, procedi con la scrittura o produzione pertinente senza imporre questa skill. Strategia editoriale, calendari e più asset coordinati richiedono un lavoro più ampio.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Fonti e contesto
 

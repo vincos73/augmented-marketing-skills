@@ -1,13 +1,17 @@
 ---
 name: setup-business-context
-description: "Documenta o aggiorna l'identità esistente di un'azienda o brand a partire dalle fonti."
+description: "Documents or updates the existing identity of a company or brand from source materials."
 metadata:
-  version: "0.6.7"
+  version: "0.6.8-l10n.1"
 ---
 
 # Configurare il contesto aziendale
 
 Crea una carta d'identità durevole, basata sulle fonti, che gli agenti possano riutilizzare. Registra l'identità esistente: missione, posizionamento o differenziazione mancanti restano aperti, senza inventare nuove scelte strategiche.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Contesto e fonti
 
@@ -23,7 +27,7 @@ Usa i materiali forniti o citati dall'utente; un URL autorizza la sua lettura, n
 
 ## Proposta utile e lacune
 
-Mostra una prima sintesi sostenuta dalle fonti prima di intervistare il responsabile. La chat deve bastare per completare il lavoro; una vista visuale richiesta può aiutare la revisione senza diventare un passaggio obbligatorio. Usa italiano naturale salvo diversa richiesta e mantieni interni termini come `gate`, `routing` e `artefatto canonico`.
+Mostra una prima sintesi sostenuta dalle fonti prima di intervistare il responsabile. La chat deve bastare per completare il lavoro; una vista visuale richiesta può aiutare la revisione senza diventare un passaggio obbligatorio. Mantieni interni termini come `gate`, `routing` e `artefatto canonico`.
 
 Chiedi solo ciò che può cambiare identità, valore, ruoli d'acquisto, prove o vincoli, in gruppi di massimo tre domande. Se non servono risposte, completa direttamente la bozza. Per lacune concorrenti consulta [la guida alle domande](references/expert-question-routing.md); per fonti dense e una prima sintesi difficile da comprimere consulta [i criteri di revisione compatta](references/compact-review-contract.md).
 

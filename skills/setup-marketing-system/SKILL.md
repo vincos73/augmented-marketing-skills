@@ -1,13 +1,17 @@
 ---
 name: setup-marketing-system
-description: "Definisce o aggiorna regole di marketing durevoli su messaggi, canali, qualità e approvazioni."
+description: "Defines or updates durable marketing rules for messaging, channels, quality, and approvals."
 metadata:
-  version: "0.3.4"
+  version: "0.3.5-l10n.1"
 ---
 
 # Configurare i fondamenti di marketing
 
 Crea regole riutilizzabili tra attività diverse, basate sull'identità e sul lavoro reale dell'organizzazione. Puoi proporre una regola stabile mancante a un responsabile autorizzato; resta una proposta fino all'approvazione. Non scegliere strategia, pubblico prioritario, budget o piano di una singola campagna.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Base e destinazione
 
@@ -27,7 +31,7 @@ Usa materiali forniti o citati: playbook, esempi approvati, claim sheet, linee g
 
 Presenta una proposta concreta, con provenienza e conflitti, prima delle domande. Poni al massimo tre domande decisive per gruppo, solo quando le risposte non sono già disponibili. Per lacune concorrenti consulta [la guida alle domande](references/question-routing.md); per fonti dense consulta [i criteri di revisione compatta](references/compact-review-contract.md). Un playbook già sufficiente può passare direttamente alla revisione completa.
 
-Scrivi in italiano naturale salvo diversa richiesta. Parla di regole condivise, revisione, salvataggio e installazione; mantieni interni `gate`, `routing`, `runtime` e `artefatto canonico`.
+Parla di regole condivise, revisione, salvataggio e installazione; mantieni interni `gate`, `routing`, `runtime` e `artefatto canonico`.
 
 ## Cinque aree
 

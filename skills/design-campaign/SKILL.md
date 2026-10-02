@@ -1,13 +1,17 @@
 ---
 name: design-campaign
-description: "Progetta o aggiorna una campagna coordinata e il suo brief esecutivo: pubblico, messaggi, canali, risposta e misurazione. Non serve per un singolo asset già specificato."
+description: "Designs or updates a coordinated campaign and its execution brief covering audience, messages, channels, response, and measurement. It is not for a single, already-specified asset."
 metadata:
-  version: "0.1.7"
+  version: "0.1.8-l10n.1"
 ---
 
 # Progettare una campagna
 
 Trasforma un'esigenza, un brief o decisioni approvate in una **Campaign Spec** utilizzabile dal team: deve chiarire il cambiamento cercato, come la campagna lo sostiene e che cosa serve per eseguirla e valutarla. Completa il lavoro richiesto fino a una proposta decidibile o al documento richiesto; chiedi solo le decisioni che non puoi risolvere dai materiali.
+
+## Regola linguistica
+
+Rispondi nella lingua dell'utente; per un documento usa la lingua esplicitamente richiesta; fonti in altre lingue non cambiano la lingua dell'output; preserva voce, testi protetti, citazioni originali e terminologia approvata; non tradurre identificatori, percorsi, stati tecnici e contratti tecnici; le etichette discorsive possono essere adattate.
 
 ## Base e perimetro
 
