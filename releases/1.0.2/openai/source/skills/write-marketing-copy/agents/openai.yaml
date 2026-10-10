@@ -1,0 +1,4 @@
+interface:
+  display_name: "Copywriting"
+  short_description: "Writes and adapts marketing copy for review"
+  default_prompt: "Use $write-marketing-copy to create or improve this marketing copy while respecting the audience, voice, and available information."

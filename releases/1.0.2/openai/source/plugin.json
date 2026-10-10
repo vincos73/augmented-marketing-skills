@@ -1,0 +1,55 @@
+{
+  "name": "augmented-marketing-suite",
+  "version": "1.0.2",
+  "description": "Twelve guided marketing skills for clearer decisions, campaigns and content.",
+  "author": {
+    "name": "Vincenzo Cosenza",
+    "url": "https://vincos.it/"
+  },
+  "keywords": [
+    "marketing",
+    "strategy",
+    "decision-making",
+    "agent-skills"
+  ],
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Augmented Marketing Suite",
+        "shortDescription": "Make better marketing choices?",
+        "longDescription": "Augmented Marketing Suite helps marketers, consultants and teams work through marketing decisions with 12 guided skills. Start with the Assistant to find a useful next step, then document business context, define marketing rules and brand voice, clarify a challenge, compare strategic options, plan or review a campaign, interpret results, choose content, or draft copy. It uses the materials you provide and makes assumptions visible. Review outputs before acting on them. The Suite does not access your accounts or publish campaigns on your behalf.",
+        "developerName": "Vincenzo Cosenza",
+        "category": "Business & Operations",
+        "capabilities": [
+          "Plan campaigns",
+          "Review marketing decisions",
+          "Draft marketing copy"
+        ],
+        "websiteURL": "https://vincos.it/augmented-marketing-suite/",
+        "privacyPolicyURL": "https://vincos.it/augmented-marketing-suite/privacy/",
+        "defaultPrompt": [
+          "I need to make a marketing decision but I am not sure where to start.",
+          "Help me plan or review a campaign.",
+          "Help me choose a content format or write marketing copy."
+        ],
+        "logo": "./assets/ams-logo-512.png",
+        "composerIcon": "./assets/ams-icon-64.png"
+      },
+      "review": {
+        "commerce": false
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "Initial public release of Augmented Marketing Suite with 12 marketing skills and a new icon.",
+        "translations": {
+          "it-IT": {
+            "subtitle": "Metodo per il tuo marketing",
+            "description": "Augmented Marketing Suite aiuta marketer, consulenti e team a prendere decisioni di marketing con 12 skill guidate. L’Assistant indica da dove iniziare; le altre skill aiutano a documentare il contesto aziendale, definire regole e voce del brand, chiarire una sfida, confrontare direzioni strategiche, progettare o verificare campagne, interpretare risultati, scegliere contenuti e scrivere testi. Usa i materiali che fornisci e rende visibili le ipotesi. Rivedi i risultati prima di agire: la Suite non accede ai tuoi account e non pubblica campagne per tuo conto."
+          }
+        }
+      }
+    }
+  },
+  "homepage": "https://vincos.it/augmented-marketing-suite/"
+}

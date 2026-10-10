@@ -1,0 +1,5 @@
+interface:
+  display_name: "define-marketing-challenge"
+  short_description: "Defines the challenge before choosing a direction"
+  brand_color: "#072743"
+  default_prompt: "Use $define-marketing-challenge to turn this objective, problem, opportunity, or tactical idea into a clear, confirmable marketing challenge without choosing the direction yet."

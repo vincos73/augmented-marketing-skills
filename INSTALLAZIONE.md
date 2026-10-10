@@ -1,4 +1,12 @@
-# Installazione di Augmented Marketing Suite 1.0.0
+# Installazione di Augmented Marketing Suite
+
+## Plugin OpenAI 1.0.2
+
+Scarica [`augmented-marketing-suite-public-1.0.2.zip`](releases/1.0.2/openai/augmented-marketing-suite-public-1.0.2.zip) per installare le dodici skill in inglese in un ambiente che accetta Agent Plugin. Il pacchetto contiene il nuovo logo, il manifest `plugin.json`, `.codex-plugin/plugin.json` e le dodici skill. Verifica l'archivio con [`SHA256SUMS`](releases/1.0.2/openai/SHA256SUMS). Il pacchetto è stato inviato a OpenAI per la review del catalogo ChatGPT; la pubblicazione nel catalogo dipende dall'esito della review.
+
+Il plugin Claude e gli ZIP delle skill italiane sono ancora alla versione 1.0.0, descritta qui sotto. Non usare il numero 1.0.2 per questi pacchetti.
+
+## Plugin Claude e skill italiane 1.0.0
 
 > La versione stabile 1.0.0 contiene dodici skill in entrambi i plugin: undici specialistiche e Augmented Marketing Assistant v0.3.0. Gli asset sono disponibili nella [release GitHub v1.0.0](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v1.0.0); i controlli ancora aperti restano indicati in [`RELEASE-STATUS.md`](RELEASE-STATUS.md).
 

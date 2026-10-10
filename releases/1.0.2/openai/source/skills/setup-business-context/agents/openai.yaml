@@ -1,0 +1,5 @@
+interface:
+  display_name: "setup-business-context"
+  short_description: "Documents a company or brand for agents"
+  brand_color: "#072743"
+  default_prompt: "Use $setup-business-context to document or update this company or brand's identity for agents, using the sources I provide."

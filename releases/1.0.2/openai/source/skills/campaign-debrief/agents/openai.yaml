@@ -1,0 +1,4 @@
+interface:
+  display_name: "campaign-debrief"
+  short_description: "Interprets results and recommends the next step"
+  default_prompt: "Use $campaign-debrief to interpret these campaign results and recommend the next step."

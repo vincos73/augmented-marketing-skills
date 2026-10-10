@@ -19,6 +19,12 @@ La Suite non è un direttore marketing automatico e non decide al posto tuo. Ti 
 
 Chi contribuisce nuove skill trova i criteri comuni nello [standard di progettazione](STANDARD-PROGETTAZIONE-SKILL.md): risposte proporzionate, dialogo per differenza, fonti separate dai materiali metodologici, gate compatti e test senza scritture canoniche.
 
+## Novità: plugin OpenAI 1.0.2
+
+Il [pacchetto OpenAI 1.0.2](releases/1.0.2/openai/README.md) contiene le dodici skill in inglese, il logo approvato e il listing bilingue. Il suo [ZIP](releases/1.0.2/openai/augmented-marketing-suite-public-1.0.2.zip) è identico a quello inviato per la pubblicazione nel catalogo ChatGPT; il [sorgente esatto](releases/1.0.2/openai/source/) è consultabile nel repository. La candidatura OpenAI è ancora **in review**: la disponibilità su GitHub non implica la pubblicazione nel catalogo ChatGPT.
+
+Le skill italiane nella cartella [`skills/`](skills/) e il plugin Claude restano alla release 1.0.0. Per la situazione delle due distribuzioni, vedi [stato 1.0.2](RELEASE-STATUS-1.0.2.md) e [installazione](INSTALLAZIONE.md).
+
 ## Versione stabile 1.0.0 pubblicata
 
 Augmented Marketing Suite 1.0.0 distribuisce gli stessi dodici elementi nei plugin Claude e OpenAI/Codex: **Augmented Marketing Assistant v0.3.0** e undici skill specialistiche. L'Assistant è una normale skill di orientamento, condivisa tra i due plugin: aiuta chi descrive un bisogno senza sapere da quale passaggio iniziare e, quando il meccanismo dell'ambiente lo consente, richiama la skill pertinente nella stessa conversazione. Non introduce agenti o subagenti. Se nomini già una skill, questa viene usata direttamente.
