@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-campaign"
+  short_description: "Designs coordinated, measurable campaigns"
+  default_prompt: "Use $design-campaign to design this campaign from the request and available materials."

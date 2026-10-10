@@ -1,0 +1,4 @@
+interface:
+  display_name: "define-marketing-mix"
+  short_description: "Translates direction into the four Ps"
+  default_prompt: "Use $define-marketing-mix to translate this approved direction into coherent choices across Product, Price, Place, and Promotion."

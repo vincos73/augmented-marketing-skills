@@ -1,0 +1,5 @@
+interface:
+  display_name: "campaign-review"
+  short_description: "Reviews a campaign before launch"
+  brand_color: "#072743"
+  default_prompt: "Use $campaign-review to review this campaign and its assets before the requested action, stating the outcome, findings, responsibilities, and gaps."

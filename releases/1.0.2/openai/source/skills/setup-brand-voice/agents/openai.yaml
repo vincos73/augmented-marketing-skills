@@ -1,0 +1,4 @@
+interface:
+  display_name: "setup-brand-voice"
+  short_description: "Defines or updates the brand voice"
+  default_prompt: "Use $setup-brand-voice to define, formalize, or update our brand voice from these materials."

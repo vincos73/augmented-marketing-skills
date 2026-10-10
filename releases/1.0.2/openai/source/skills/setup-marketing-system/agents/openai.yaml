@@ -1,0 +1,5 @@
+interface:
+  display_name: "setup-marketing-system"
+  short_description: "Defines durable marketing rules for agents"
+  brand_color: "#072743"
+  default_prompt: "Use $setup-marketing-system to create or update the organization's marketing foundations from its identity context and available sources."
