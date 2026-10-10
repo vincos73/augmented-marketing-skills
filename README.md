@@ -23,7 +23,7 @@ Chi contribuisce nuove skill trova i criteri comuni nello [standard di progettaz
 
 Il [pacchetto OpenAI 1.0.2](releases/1.0.2/openai/README.md) contiene le dodici skill in inglese, il logo approvato e il listing bilingue. Il suo [ZIP](releases/1.0.2/openai/augmented-marketing-suite-public-1.0.2.zip) è identico a quello inviato per la pubblicazione nel catalogo ChatGPT; il [sorgente esatto](releases/1.0.2/openai/source/) è consultabile nel repository. La candidatura OpenAI è ancora **in review**: la disponibilità su GitHub non implica la pubblicazione nel catalogo ChatGPT.
 
-Le skill italiane nella cartella [`skills/`](skills/) e il plugin Claude restano alla release 1.0.0. Per la situazione delle due distribuzioni, vedi [stato 1.0.2](RELEASE-STATUS-1.0.2.md) e [installazione](INSTALLAZIONE.md).
+Le skill italiane nella cartella [`skills/`](skills/) e il plugin Claude restano alla release 1.0.0. La [pagina Vincos](https://vincos.it/augmented-marketing-suite/) mostra entrambe le versioni e i rispettivi download; il [plugin WordPress 0.12.3 e il suo sorgente](releases/1.0.2/site/) sono archiviati nel repository. Per la situazione delle distribuzioni, vedi [stato 1.0.2](RELEASE-STATUS-1.0.2.md) e [installazione](INSTALLAZIONE.md).
 
 ## Versione stabile 1.0.0 pubblicata
 
