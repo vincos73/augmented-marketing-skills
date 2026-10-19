@@ -1,0 +1,58 @@
+{
+  "verified_at": "2026-10-19T15:37:43.263254+00:00",
+  "repository": "https://github.com/vincos73/augmented-marketing-skills",
+  "release_url": "https://github.com/vincos73/augmented-marketing-skills/releases/tag/activate-monitoring-v0.1.0",
+  "release_id": 417465554,
+  "tag": "activate-monitoring-v0.1.0",
+  "tag_commit": "4684995849ac4258bcd75ddb35f07ea3abd9727c",
+  "draft": false,
+  "prerelease": false,
+  "published_at": "2026-10-19T15:36:25Z",
+  "source_files_verified_at_tag": 8,
+  "assets": [
+    {
+      "name": "activate-monitoring-0.1.0.zip",
+      "url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/activate-monitoring-v0.1.0/activate-monitoring-0.1.0.zip",
+      "bytes": 8811,
+      "sha256": "9ba60fd749d2afd88a46b0e2f417f9e13af3a8a969303664518eedf4245f2562",
+      "anonymous_public_download": true,
+      "matches_local_release": true,
+      "crc_pass": true,
+      "source_files_verified": 4
+    },
+    {
+      "name": "manifest.json",
+      "url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/activate-monitoring-v0.1.0/manifest.json",
+      "bytes": 2488,
+      "sha256": "d1d24fd96d9d63ed4fbf119a017ea618ace7c9acc3330a29681c9f59d84581e0",
+      "anonymous_public_download": true,
+      "matches_local_release": true
+    },
+    {
+      "name": "setup-monitoring-0.1.2.zip",
+      "url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/activate-monitoring-v0.1.0/setup-monitoring-0.1.2.zip",
+      "bytes": 12170,
+      "sha256": "b6f350512095ce0ba54aa6ba2bccb3cbf002fce0b4d7f52f0b37c749f724ffde",
+      "anonymous_public_download": true,
+      "matches_local_release": true,
+      "crc_pass": true,
+      "source_files_verified": 4
+    },
+    {
+      "name": "SHA256SUMS",
+      "url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/activate-monitoring-v0.1.0/SHA256SUMS",
+      "bytes": 269,
+      "sha256": "389cea86a3d4a564f1e68fd23ab40e9f0d3c3ae1839792590e48a67a50c59125",
+      "anonymous_public_download": true,
+      "matches_local_release": true
+    }
+  ],
+  "checksums_pass": true,
+  "download_note": "Initial Python urllib download failed due to the local Python certificate store. Anonymous system curl downloads then succeeded with TLS verification enabled.",
+  "new_behavioral_tests": false,
+  "new_web_research_comparisons": false,
+  "desktop_integration_verified": false,
+  "catalog_publication": false,
+  "local_installation_performed": false,
+  "pass": true
+}

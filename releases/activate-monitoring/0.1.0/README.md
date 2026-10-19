@@ -12,6 +12,8 @@ Questa distribuzione autonoma in italiano collega **setup-monitoring 0.1.2** e *
 
 Ogni ZIP contiene una sola cartella skill, con `SKILL.md`, riferimenti e metadata facoltativi in `agents/openai.yaml`. Usa il caricamento di skill supportato dal tuo ambiente; i due ZIP non sono plugin completi. Se hai già un piano approvato e autosufficiente, puoi usare activate-monitoring senza installare setup-monitoring. Questa pubblicazione su GitHub non è una pubblicazione nel catalogo ChatGPT.
 
+Il [riscontro della pubblicazione](publication.json) registra i quattro download pubblici verificati e la corrispondenza dei sorgenti al tag.
+
 ## Come si usa
 
 1. Con setup-monitoring: «Voglio seguire menzioni e notizie del mio brand per preparare un briefing settimanale». La skill prepara `monitoring-plan.md` e raccoglie solo le decisioni necessarie.
