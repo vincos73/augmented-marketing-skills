@@ -1,5 +1,11 @@
 # Installazione di Augmented Marketing Suite
 
+## Skill autonome di monitoraggio
+
+Per preparare ed eseguire un piano usa i [due ZIP autonomi di monitoraggio](releases/activate-monitoring/0.1.0/README.md): setup-monitoring 0.1.2 e activate-monitoring 0.1.0. Non sono inclusi nei vecchi bundle della Suite e non sono plugin completi. Carica ciascuna skill con il meccanismo supportato dal tuo ambiente; con un piano già approvato e autosufficiente è sufficiente activate-monitoring.
+
+Non serve installare SQLite o un programma aggiuntivo. Per salvare e riprendere automaticamente il monitoraggio servono strumenti autorizzati che possano accedere alla cartella scelta dall’utente. Se tali strumenti non sono disponibili, la skill dichiara il limite e può consegnare file da salvare: il caricamento della skill non concede accesso al disco né crea da solo una ricorrenza. I nomi dei file sono portabili su Windows e macOS; non viene dichiarato un collaudo integrato sulle app desktop.
+
 ## Plugin OpenAI 1.0.2
 
 Scarica [`augmented-marketing-suite-public-1.0.2.zip`](releases/1.0.2/openai/augmented-marketing-suite-public-1.0.2.zip) per installare le dodici skill in inglese in un ambiente che accetta Agent Plugin. Il pacchetto contiene il nuovo logo, il manifest `plugin.json`, `.codex-plugin/plugin.json` e le dodici skill. Verifica l'archivio con [`SHA256SUMS`](releases/1.0.2/openai/SHA256SUMS). Il pacchetto è stato inviato a OpenAI per la review del catalogo ChatGPT; la pubblicazione nel catalogo dipende dall'esito della review.

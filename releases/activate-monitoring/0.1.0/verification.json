@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-19",
+  "scope": "structural and packaging verification only",
+  "skills_validated": [
+    "setup-monitoring 0.1.2",
+    "activate-monitoring 0.1.0"
+  ],
+  "validator": "skill-creator/scripts/quick_validate.py (both exit 0)",
+  "internal_file_links_checked": 5,
+  "missing_links": [],
+  "embedded_private_paths": [],
+  "archives": [
+    {
+      "file": "activate-monitoring-0.1.0.zip",
+      "files": 4,
+      "sha256": "9ba60fd749d2afd88a46b0e2f417f9e13af3a8a969303664518eedf4245f2562",
+      "crc": "pass",
+      "source_parity": "pass (build script)"
+    },
+    {
+      "file": "setup-monitoring-0.1.2.zip",
+      "files": 4,
+      "sha256": "b6f350512095ce0ba54aa6ba2bccb3cbf002fce0b4d7f52f0b37c749f724ffde",
+      "crc": "pass",
+      "source_parity": "pass (build script)"
+    }
+  ],
+  "source_word_counts": {
+    "activate-monitoring/SKILL.md": 1260,
+    "activate-monitoring/references/registro-e-file.md": 856,
+    "activate-monitoring/references/ricerca-e-prove.md": 498,
+    "setup-monitoring/SKILL.md": 1920,
+    "setup-monitoring/references/execution-contract.md": 1023,
+    "setup-monitoring/references/monitoring-plan-template.md": 825
+  },
+  "requires_database": false,
+  "requires_binaries": false,
+  "suite_release_manifests_modified": false,
+  "new_behavioral_tests": false,
+  "new_research_comparisons": false,
+  "native_desktop_or_scheduler_tests": false,
+  "installation_performed": false,
+  "public_release_verified": "see GitHub release and final publication record",
+  "pass": true
+}
