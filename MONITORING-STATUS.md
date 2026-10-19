@@ -2,6 +2,8 @@
 
 19 ottobre 2026. Progetto approvato dall’utente: **setup-monitoring prepara il piano; activate-monitoring lo esegue con un esecutore unico e file Markdown nella cartella dell’utente**. SQLite e il vincolo di tre agenti sono rimossi da questa nuova distribuzione. Un aiuto specialistico è facoltativo; i limiti complessivi restano quelli del piano.
 
+**Pubblicazione GitHub completata il 19 ottobre 2026:** release `activate-monitoring-v0.1.0`, sorgente al commit `4684995849ac4258bcd75ddb35f07ea3abd9727c`, quattro asset pubblici. Verificati download anonimi, checksum, CRC e corrispondenza degli otto file sorgente al tag. Il [riscontro della pubblicazione](releases/activate-monitoring/0.1.0/publication.json) conserva URL e impronte. Nessuna installazione locale o pubblicazione nel catalogo ChatGPT.
+
 ## Sorgenti autorevoli
 
 - [setup-monitoring 0.1.2](releases/activate-monitoring/0.1.0/source/setup-monitoring/SKILL.md)
