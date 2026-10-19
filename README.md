@@ -25,6 +25,12 @@ Il [pacchetto OpenAI 1.0.2](releases/1.0.2/openai/README.md) contiene le dodici 
 
 Le skill italiane nella cartella [`skills/`](skills/) e il plugin Claude restano alla release 1.0.0. La [pagina Vincos](https://vincos.it/augmented-marketing-suite/) mostra entrambe le versioni e i rispettivi download; il [plugin WordPress 0.12.3 e il suo sorgente](releases/1.0.2/site/) sono archiviati nel repository. Per la situazione delle distribuzioni, vedi [stato 1.0.2](RELEASE-STATUS-1.0.2.md) e [installazione](INSTALLAZIONE.md).
 
+## Monitoraggio: nuove skill autonome
+
+Sono disponibili i sorgenti di **setup-monitoring 0.1.2** e **activate-monitoring 0.1.0**, con [distribuzione e ZIP dedicati](releases/activate-monitoring/0.1.0/README.md). Il percorso va dal piano approvato ai controlli e allo storico: un esecutore unico, file Markdown nella cartella dell’utente, nessun database o eseguibile aggiuntivo. Ricorrenza e accesso ai file dipendono dalle capacità dell’ambiente.
+
+Questi download sono separati dai plugin della Suite già pubblicati e dalla candidatura al catalogo ChatGPT. Per sorgenti autorevoli, confini e verifiche vedi [stato del monitoraggio](MONITORING-STATUS.md).
+
 ## Versione stabile 1.0.0 pubblicata
 
 Augmented Marketing Suite 1.0.0 distribuisce gli stessi dodici elementi nei plugin Claude e OpenAI/Codex: **Augmented Marketing Assistant v0.3.0** e undici skill specialistiche. L'Assistant è una normale skill di orientamento, condivisa tra i due plugin: aiuta chi descrive un bisogno senza sapere da quale passaggio iniziare e, quando il meccanismo dell'ambiente lo consente, richiama la skill pertinente nella stessa conversazione. Non introduce agenti o subagenti. Se nomini già una skill, questa viene usata direttamente.
