@@ -1,0 +1,4 @@
+interface:
+  display_name: "setup-monitoring"
+  short_description: "Prepara un piano di ascolto per un agente"
+  default_prompt: "Usa $setup-monitoring per preparare un piano operativo che un agente possa usare per monitorare il mio brand e le notizie pertinenti."
