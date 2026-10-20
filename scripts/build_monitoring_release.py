@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RELEASE_VERSIONS = {
     '0.1.0': {'activate-monitoring': '0.1.0', 'setup-monitoring': '0.1.2'},
     '0.1.1': {'activate-monitoring': '0.1.1', 'setup-monitoring': '0.1.3'},
+    '0.1.2': {'activate-monitoring': '0.1.2', 'setup-monitoring': '0.1.4'},
 }
 
 
@@ -95,8 +96,8 @@ def build(base_commit: str, release_version: str) -> dict[str, bytes]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Read-only source/package verification')
-    parser.add_argument('--release-version', choices=RELEASE_VERSIONS, default='0.1.1',
-                        help='Standalone release to build/check (default: 0.1.1)')
+    parser.add_argument('--release-version', choices=RELEASE_VERSIONS, default='0.1.2',
+                        help='Standalone release to build/check (default: 0.1.2)')
     args = parser.parse_args()
     release = ROOT / 'releases/activate-monitoring' / args.release_version
     manifest = release / 'manifest.json'

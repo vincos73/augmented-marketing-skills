@@ -1,0 +1,4 @@
+interface:
+  display_name: "Activate Monitoring"
+  short_description: "Esegue il piano e conserva risultati e storico"
+  default_prompt: "Usa $activate-monitoring per eseguire questo piano approvato e conservare i risultati nella mia cartella."
