@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-20",
+  "scope": "instruction review, skill structure, references and packaging only",
+  "skills_validated": [
+    "activate-monitoring 0.1.3",
+    "setup-monitoring 0.1.5"
+  ],
+  "validator": "skill-creator quick_validate.py; both exit 0 in isolated validation environment",
+  "internal_links_checked": 5,
+  "missing_links": [],
+  "embedded_private_paths": [],
+  "archives": [
+    {
+      "file": "activate-monitoring-0.1.3.zip",
+      "sha256": "65e9c888906324b7f4eb1b33601bdc4f42ed585ce8c67ac71764e810a96fe7ea",
+      "skill": "activate-monitoring",
+      "version": "0.1.3",
+      "file_count": 4,
+      "crc": "pass",
+      "source_parity": "pass"
+    },
+    {
+      "file": "setup-monitoring-0.1.5.zip",
+      "sha256": "444167090ff649a9de9ba2b7ebd6f7124bc78b98e24277afe7d57715efc87a88",
+      "skill": "setup-monitoring",
+      "version": "0.1.5",
+      "file_count": 4,
+      "crc": "pass",
+      "source_parity": "pass"
+    }
+  ],
+  "previous_releases_byte_parity": [
+    "0.1.0 pass",
+    "0.1.1 pass",
+    "0.1.2 pass"
+  ],
+  "execution_model": "one scheduled start; search, verify, save and deliver on completion in the same run",
+  "google_news": "complementary discovery when accessible and compatible with the approved plan; original publisher verification; shared limits; explicit access gaps",
+  "open_search_retained": true,
+  "plan_period_retained": true,
+  "new_behavioral_tests": false,
+  "new_web_research_comparisons": false,
+  "scheduled_run_observed": false,
+  "pass": true
+}
