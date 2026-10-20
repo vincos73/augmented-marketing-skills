@@ -38,7 +38,7 @@
   "new_behavioral_tests": false,
   "new_research_comparisons": false,
   "native_scheduled_runs_observed": false,
-  "public_download_verification": "pending publication",
+  "public_download_verification": "pass; see publication.json",
   "installation_verification": "separate local installation record",
   "pass": true
 }

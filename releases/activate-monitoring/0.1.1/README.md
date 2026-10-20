@@ -12,7 +12,7 @@ Questa distribuzione autonoma in italiano collega **setup-monitoring 0.1.3** e *
 
 Ogni ZIP contiene una sola cartella skill, con `SKILL.md`, riferimenti e metadata facoltativi in `agents/openai.yaml`. Usa il caricamento di skill supportato dal tuo ambiente; i due ZIP non sono plugin completi. Se hai già un piano approvato e autosufficiente, puoi usare activate-monitoring senza installare setup-monitoring. Questa pubblicazione su GitHub non è una pubblicazione nel catalogo ChatGPT.
 
-I quattro asset pubblici sono i due ZIP, il manifest e i checksum. La verifica del pacchetto è registrata in [verification.json](verification.json); il riscontro dei download pubblici viene aggiunto dopo la pubblicazione.
+Il [riscontro della pubblicazione](publication.json) registra i quattro download pubblici verificati e la corrispondenza degli otto file sorgente al tag. La verifica di struttura e pacchetti è in [verification.json](verification.json).
 
 ## Correzioni di questa versione
 
