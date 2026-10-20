@@ -9,7 +9,7 @@
 - [Distribuzione e download](releases/activate-monitoring/0.1.1/README.md)
 - [Verifica di struttura e pacchetti](releases/activate-monitoring/0.1.1/verification.json)
 
-Release da pubblicare: `activate-monitoring-v0.1.1`, con i due ZIP, manifest e checksum. I vecchi sorgenti e asset della [0.1.0](releases/activate-monitoring/0.1.0/README.md) restano invariati. Le due skill sono distribuite separatamente dai plugin Suite OpenAI 1.0.2 e Claude/italiano 1.0.0; nessuna nuova versione della Suite o pubblicazione nel catalogo ChatGPT è compresa in questo aggiornamento.
+**Pubblicazione GitHub verificata il 20 ottobre 2026:** [release `activate-monitoring-v0.1.1`](https://github.com/vincos73/augmented-marketing-skills/releases/tag/activate-monitoring-v0.1.1), sorgente al commit `7cbdba033318e2d57d032dacba41e8d91eab8435`, quattro asset pubblici: due ZIP, manifest e checksum. Download anonimi, CRC, checksum e corrispondenza degli otto file sorgente al tag verificati; [riscontro della pubblicazione](releases/activate-monitoring/0.1.1/publication.json). Installazione sul Mac dell’autore eseguita e confrontata con gli stessi pacchetti pubblici; non certifica una futura esecuzione programmata. I vecchi sorgenti e asset della [0.1.0](releases/activate-monitoring/0.1.0/README.md) restano invariati. Le due skill sono distribuite separatamente dai plugin Suite OpenAI 1.0.2 e Claude/italiano 1.0.0; nessuna nuova versione della Suite o pubblicazione nel catalogo ChatGPT è compresa in questo aggiornamento.
 
 ## Correzioni dal test reale
 
