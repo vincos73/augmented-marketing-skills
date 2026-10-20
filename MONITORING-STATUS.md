@@ -10,6 +10,8 @@
 - [Verifiche di struttura e pacchetti](releases/activate-monitoring/0.1.2/verification.json)
 - [Release GitHub activate-monitoring-v0.1.2](https://github.com/vincos73/augmented-marketing-skills/releases/tag/activate-monitoring-v0.1.2)
 
+Pubblicazione verificata il 20 ottobre 2026: tag al commit `ef67edd98ee589aad5e8b2317d15d86325eab35e`, quattro download pubblici anonimi, checksum, CRC e corrispondenza degli otto file sorgente verificati. [Riscontro della pubblicazione](releases/activate-monitoring/0.1.2/publication.json). Le installazioni sul Mac sono state confrontate separatamente con gli stessi pacchetti pubblici; la prima esecuzione programmata resta da osservare.
+
 Le distribuzioni precedenti 0.1.0 e 0.1.1 restano archiviate senza riscrivere sorgenti o asset. Queste skill autonome non modificano i plugin della Suite o il catalogo ChatGPT.
 
 ## Comportamento approvato

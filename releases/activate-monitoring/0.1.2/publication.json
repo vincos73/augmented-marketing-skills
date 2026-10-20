@@ -1,0 +1,55 @@
+{
+  "verified_at": "2026-10-20T05:43:21.917694+00:00",
+  "repository": "https://github.com/vincos73/augmented-marketing-skills",
+  "release_url": "https://github.com/vincos73/augmented-marketing-skills/releases/tag/activate-monitoring-v0.1.2",
+  "tag": "activate-monitoring-v0.1.2",
+  "tag_commit": "ef67edd98ee589aad5e8b2317d15d86325eab35e",
+  "draft": false,
+  "prerelease": false,
+  "published_at": "2026-10-20T05:43:00Z",
+  "source_files_verified_at_tag": 8,
+  "assets": [
+    {
+      "name": "activate-monitoring-0.1.2.zip",
+      "url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/activate-monitoring-v0.1.2/activate-monitoring-0.1.2.zip",
+      "bytes": 9424,
+      "sha256": "1909fedcce38c3396c8d1b590c85cc72e29eb43aceac7a51857abbaf0f53447a",
+      "anonymous_public_download": true,
+      "matches_local_release": true,
+      "crc_pass": true,
+      "source_files_verified": 4
+    },
+    {
+      "name": "manifest.json",
+      "url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/activate-monitoring-v0.1.2/manifest.json",
+      "bytes": 2488,
+      "sha256": "370e9111a6dd1dc2e7fa9524842097c90621ae134f18cdb12abfd97ebaa81b76",
+      "anonymous_public_download": true,
+      "matches_local_release": true
+    },
+    {
+      "name": "setup-monitoring-0.1.4.zip",
+      "url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/activate-monitoring-v0.1.2/setup-monitoring-0.1.4.zip",
+      "bytes": 12937,
+      "sha256": "18d4fe4e4ca0457171b6e6aed300dbc75cd9749d149a8124c2da7705e1974f70",
+      "anonymous_public_download": true,
+      "matches_local_release": true,
+      "crc_pass": true,
+      "source_files_verified": 4
+    },
+    {
+      "name": "SHA256SUMS",
+      "url": "https://github.com/vincos73/augmented-marketing-skills/releases/download/activate-monitoring-v0.1.2/SHA256SUMS",
+      "bytes": 269,
+      "sha256": "19b9fd2097652f19bd3250832101454338afd9abf30f65cbedc272d6b0af471b",
+      "anonymous_public_download": true,
+      "matches_local_release": true
+    }
+  ],
+  "checksums_pass": true,
+  "new_behavioral_tests": false,
+  "new_web_research_comparisons": false,
+  "scheduled_runs_observed": false,
+  "catalog_publication": false,
+  "pass": true
+}
