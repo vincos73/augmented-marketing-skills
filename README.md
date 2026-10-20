@@ -27,7 +27,7 @@ Le skill italiane nella cartella [`skills/`](skills/) e il plugin Claude restano
 
 ## Monitoraggio: nuove skill autonome
 
-Sono disponibili i sorgenti di **setup-monitoring 0.1.3** e **activate-monitoring 0.1.1**, con [distribuzione e ZIP dedicati](releases/activate-monitoring/0.1.1/README.md). Il percorso va dal piano approvato ai controlli e allo storico: un esecutore unico, file Markdown nella cartella dell’utente, nessun database o eseguibile aggiuntivo. Ricorrenza e accesso ai file dipendono dalle capacità dell’ambiente.
+Sono disponibili i sorgenti di **setup-monitoring 0.1.4** e **activate-monitoring 0.1.2**, con [distribuzione e ZIP dedicati](releases/activate-monitoring/0.1.2/README.md). Il percorso va dal piano approvato ai controlli e allo storico: un esecutore unico, file Markdown nella cartella dell’utente, nessun database o eseguibile aggiuntivo. Ricorrenza e accesso ai file dipendono dalle capacità dell’ambiente.
 
 Questi download sono separati dai plugin della Suite già pubblicati e dalla candidatura al catalogo ChatGPT. Per sorgenti autorevoli, confini e verifiche vedi [stato del monitoraggio](MONITORING-STATUS.md).
 
