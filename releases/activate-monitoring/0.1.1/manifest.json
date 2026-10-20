@@ -1,0 +1,43 @@
+{
+  "release_tag": "activate-monitoring-v0.1.1",
+  "distribution": "standalone Italian skills; existing Suite bundles unchanged",
+  "source_base_commit": "c0ae7dade189baf55400c04eca18c83fb9f668e8",
+  "source_state": "source_sha256 identifies exact packaged content",
+  "source_sha256": {
+    "releases/activate-monitoring/0.1.1/source/activate-monitoring/SKILL.md": "82c0ea1bf4f54e66153a033f87c3a2a17d4077d22c1df1f6d93eef77945c1460",
+    "releases/activate-monitoring/0.1.1/source/activate-monitoring/agents/openai.yaml": "af328167e9ebb61597f56d997af2d0fbecd2c576c0b834f7ae47914d717be3fa",
+    "releases/activate-monitoring/0.1.1/source/activate-monitoring/references/registro-e-file.md": "65eae0b8f56b178bcbdd1b5f3709392fa3799808d61a7ed06352cfc2d11ec296",
+    "releases/activate-monitoring/0.1.1/source/activate-monitoring/references/ricerca-e-prove.md": "3c1a4c86eacdd5f152236a4e93f8b406dfcd14ce2a6e4aaa840bbbe18ca19aee",
+    "releases/activate-monitoring/0.1.1/source/setup-monitoring/SKILL.md": "e8ed3fa456579b994e6407f01de0a3420471cc691efc7b9a068378634bdd8fa5",
+    "releases/activate-monitoring/0.1.1/source/setup-monitoring/agents/openai.yaml": "be171db5815d46db2ae3eadb7bc65a94cee05defedd6db56abe4299d861e3915",
+    "releases/activate-monitoring/0.1.1/source/setup-monitoring/references/execution-contract.md": "ee60c39dc7440924ee42805775a2fb4572dc87481a394a2b92c6efb02fb5f6a2",
+    "releases/activate-monitoring/0.1.1/source/setup-monitoring/references/monitoring-plan-template.md": "b89f2db76f51275c71b96d01d72d1c22d72f71209fc457299599d222461372b7"
+  },
+  "packages": [
+    {
+      "file": "activate-monitoring-0.1.1.zip",
+      "sha256": "2460674a91c905fa2c14cf3bb3dd0e82c95b2ae690dd7ac4fe81401433b19d57",
+      "skill": "activate-monitoring",
+      "version": "0.1.1",
+      "file_count": 4
+    },
+    {
+      "file": "setup-monitoring-0.1.3.zip",
+      "sha256": "8cf8b377d3968485fe22c369b1a133472009c7e41d7d4eb76c529c94f31cb21b",
+      "skill": "setup-monitoring",
+      "version": "0.1.3",
+      "file_count": 4
+    }
+  ],
+  "requires_database": false,
+  "requires_binaries": false,
+  "required_agent_count": 1,
+  "requirements": [
+    "skill loading",
+    "authorized search/read tools",
+    "authorized persistent file access for automatic history",
+    "host scheduling capability for recurring execution"
+  ],
+  "verification_scope": "structure, source parity and archive integrity only; no new behavioral or web comparisons",
+  "desktop_integration_verified": false
+}

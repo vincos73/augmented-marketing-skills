@@ -12,9 +12,10 @@ import subprocess
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-RELEASE = ROOT / 'releases/activate-monitoring/0.1.0'
-SOURCE = RELEASE / 'source'
-VERSIONS = {'activate-monitoring': '0.1.0', 'setup-monitoring': '0.1.2'}
+RELEASE_VERSIONS = {
+    '0.1.0': {'activate-monitoring': '0.1.0', 'setup-monitoring': '0.1.2'},
+    '0.1.1': {'activate-monitoring': '0.1.1', 'setup-monitoring': '0.1.3'},
+}
 
 
 def sha(data: bytes) -> str:
@@ -25,11 +26,12 @@ def encoded(data: object) -> bytes:
     return (json.dumps(data, ensure_ascii=False, indent=2) + '\n').encode()
 
 
-def archive(files: dict[str, bytes]) -> bytes:
+def archive(files: dict[str, bytes], release_version: str) -> bytes:
     stream = io.BytesIO()
     with zipfile.ZipFile(stream, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for name, data in sorted(files.items()):
-            info = zipfile.ZipInfo(name, (2026, 10, 19, 0, 0, 0))
+            day = 19 if release_version == '0.1.0' else 20
+            info = zipfile.ZipInfo(name, (2026, 10, day, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             z.writestr(info, data)
@@ -42,10 +44,11 @@ def archive(files: dict[str, bytes]) -> bytes:
     return data
 
 
-def build(base_commit: str) -> dict[str, bytes]:
+def build(base_commit: str, release_version: str) -> dict[str, bytes]:
     output, sources, packages = {}, {}, []
-    for name, version in VERSIONS.items():
-        folder = SOURCE / name
+    source = ROOT / 'releases/activate-monitoring' / release_version / 'source'
+    for name, version in RELEASE_VERSIONS[release_version].items():
+        folder = source / name
         files = {}
         for path in sorted(folder.rglob('*')):
             if path.is_symlink():
@@ -67,11 +70,11 @@ def build(base_commit: str) -> dict[str, bytes]:
         if f'version: "{version}"' not in entry:
             raise ValueError(f'Invalid skill version: {name}')
         filename = f'{name}-{version}.zip'
-        output[filename] = archive(files)
+        output[filename] = archive(files, release_version)
         packages.append({'file': filename, 'sha256': sha(output[filename]), 'skill': name,
                          'version': version, 'file_count': len(files)})
     output['manifest.json'] = encoded({
-        'release_tag': 'activate-monitoring-v0.1.0',
+        'release_tag': f'activate-monitoring-v{release_version}',
         'distribution': 'standalone Italian skills; existing Suite bundles unchanged',
         'source_base_commit': base_commit,
         'source_state': 'source_sha256 identifies exact packaged content',
@@ -92,15 +95,18 @@ def build(base_commit: str) -> dict[str, bytes]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Read-only source/package verification')
+    parser.add_argument('--release-version', choices=RELEASE_VERSIONS, default='0.1.1',
+                        help='Standalone release to build/check (default: 0.1.1)')
     args = parser.parse_args()
-    manifest = RELEASE / 'manifest.json'
+    release = ROOT / 'releases/activate-monitoring' / args.release_version
+    manifest = release / 'manifest.json'
     if args.check:
         base = json.loads(manifest.read_text())['source_base_commit']
     else:
         base = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
-    files = build(base)
+    files = build(base, args.release_version)
     for name, data in files.items():
-        path = RELEASE / name
+        path = release / name
         if args.check:
             if not path.is_file() or path.read_bytes() != data:
                 raise SystemExit(f'Stale or missing release file: {path}')
@@ -108,10 +114,12 @@ def main() -> None:
             if path.exists() and path.read_bytes() != data:
                 raise SystemExit(f'Refusing to replace existing release bytes: {path}')
             path.write_bytes(data)
-    extra = {p.name for p in RELEASE.glob('*.zip')} - files.keys()
+    extra = {p.name for p in release.glob('*.zip')} - files.keys()
     if extra:
         raise SystemExit(f'Unexpected archives: {sorted(extra)}')
-    print(json.dumps({'check_only': args.check, 'pass': True, 'packages': list(VERSIONS),
+    print(json.dumps({'check_only': args.check, 'pass': True,
+                      'release_version': args.release_version,
+                      'packages': list(RELEASE_VERSIONS[args.release_version]),
                       'source_files': len(json.loads(files['manifest.json'])['source_sha256']),
                       'behavioral_tests_run': False, 'web_comparisons_run': False}))
 
