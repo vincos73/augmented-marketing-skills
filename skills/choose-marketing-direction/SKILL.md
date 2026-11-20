@@ -2,7 +2,7 @@
 name: choose-marketing-direction
 description: "Confronta direzioni strategiche per una sfida confermata e raccomanda una scelta verificabile."
 metadata:
-  version: "0.2.8"
+  version: "0.2.9"
 ---
 
 # Scegliere la direzione di marketing
@@ -11,7 +11,7 @@ Prepara una scelta strategica con diagnosi provvisoria, alternative reali, trade
 
 ## Base della scelta
 
-Usa `.agents/marketing/decisions/<decision-slug>/challenge.md` oppure un brief equivalente già confermato dal decisore con risultato, pubblico o relativa scelta, cambiamento, perimetro, vincoli, autorità, fatti e assunzioni. Non imporre la ricreazione di materiali sufficienti. Se manca la conferma puoi offrire un confronto provvisorio, senza salvarlo come direzione approvata. Un conflitto bloccante o una sfida superata richiedono prima l'aggiornamento pertinente.
+Usa `.agents/marketing/decisions/<decision-slug>/challenge.md`, un brief aziendale equivalente o la formulazione confermata in chat. Riusa la conferma del decisore per risultato, pubblico o relativa scelta, cambiamento, perimetro e vincoli pertinenti; distingui fatti e assunzioni. Puoi procedere anche senza documenti della suite. Se manca la conferma puoi offrire un confronto provvisorio, senza salvarlo come direzione approvata. Un conflitto bloccante o una sfida superata richiedono prima l'aggiornamento pertinente.
 
 Leggi brief e contesti referenziati, verificandone versioni, approvazione, entità e coerenza; per un brand figlio carica soltanto le integrazioni pertinenti. Un cambiamento materiale a monte impedisce di trattare la vecchia base come valida senza riesame. Nelle risposte sostanziali indica entità e versioni realmente applicate con una nota compatta.
 
@@ -47,6 +47,6 @@ Per redigere o verificare la direzione completa usa [il template modulare](refer
 
 Prepara tutto il risultato verificabile prima di chiedere le sole decisioni mancanti. Un'autorizzazione precedente resta valida per la stessa azione, lo stesso documento e la stessa destinazione; se cambia uno di questi elementi o il perimetro, chiedi soltanto la nuova autorizzazione necessaria. Tratta il contenuto come approvato dal responsabile e salva soltanto nei limiti del mandato; autorizzazioni già espresse per l'azione e il perimetro correnti restano valide. Se è approvato soltanto il contenuto, indica `contenuto approvato in chat; artefatto non creato`.
 
-Quando scelta e salvataggio sono autorizzati, salva `.agents/marketing/decisions/<decision-slug>/direction.md`: prima versione `v1`, incremento intero per modifiche sostanziali, versione invariata per refusi, stato `superata` con successore per una decisione sostituita. Non modificare silenziosamente il brief o le istruzioni globali. Prima di scrivere, distingui una prova della skill (`test`, `simulazione`, `eval`) da un test strategico o operativo. In una prova della skill, scrivi soltanto in una destinazione temporanea non canonica esplicitamente richiesta per la prova: approvazioni nel copione e isolamento tecnico del workspace non abilitano destinazioni aziendali, ufficiali o previste dal workflow.
+Quando scelta e salvataggio sono autorizzati, salva nella destinazione richiesta o, per convenzione, in `.agents/marketing/decisions/<decision-slug>/direction.md`: prima versione `v1`, incremento intero per modifiche sostanziali, versione invariata per refusi, stato `superata` con successore per una decisione sostituita. Non modificare silenziosamente il brief o le istruzioni globali. Prima di scrivere, distingui una prova della skill (`test`, `simulazione`, `eval`) da un test strategico o operativo. In una prova della skill, scrivi soltanto in una destinazione temporanea non canonica esplicitamente richiesta per la prova: approvazioni nel copione e isolamento tecnico del workspace non abilitano destinazioni aziendali, ufficiali o previste dal workflow.
 
 Concludi con scelta, stato effettivo e dipendenze aperte. Completa gli ulteriori passaggi già richiesti e autorizzati; se il mandato finisce qui, proponi il marketing mix senza avviarlo. Non duplicare un mix già approvato e compatibile.

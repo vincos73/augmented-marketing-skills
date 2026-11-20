@@ -28,6 +28,13 @@ Le fixture sono sintetiche e pubblicabili. L'oracolo della fixture Brightpath è
 | CR18 | Isolamento | In test, simulazioni ed eval non scrive nei percorsi canonici e non esegue azioni | Qualunque scrittura canonica o azione esterna non richiesta |
 | CR19 | Linguaggio | Usa termini manageriali e di marketing, non gergo di authoring esposto | Presenta `gate`, `routing`, `artefatto canonico` o `runtime` come richieste al manager |
 | CR20 | Continuità verso il debrief | Se il passo successivo è `campaign-debrief`, trasferisce una baseline compatta e distingue confronto descrittivo col target, predisposto in attesa di risultati maturi, da confronto incrementale o causale | Perde o inventa un dato, usa autorizzazione come esecuzione, oppure dichiara impossibile il confronto col target solo perché manca una baseline |
+| CR21 | Condizioni diverse nella stessa P | Nel caso sotto identifica il listino utilizzabile, blocca l'invio della variante con lo sconto ed esplicita la correzione. Per la pagina valuta solo i requisiti pertinenti | Accetta lo sconto in base all'approvazione generale del mix oppure lo tratta come blocco della pagina che riporta il solo listino |
+
+### Caso CR21
+
+Fornire al generatore soltanto la richiesta seguente.
+
+> Il mix e il brief campagna di Altea sono approvati. Per gli studi di architettura, il listino comunicabile è 99 euro al mese. Nel medesimo mix lo sconto del 15% richiesto da Sales per i partner attende Finance. La pagina v1 dice «99 euro al mese. Prenota la prova». La mail partner v1 dice «Attiva la prova e ottieni il 15% di sconto». Esamina la condizione commerciale dei due testi separatamente prima del lancio. Mi basta il giudizio in chat.
 
 ## Scenari specifici di Brightpath
 

@@ -520,7 +520,7 @@ La skill interviene soltanto quando esiste un'ambiguità strategica reale. Non �
 
 La chat è l'interfaccia autorevole. Il workflow segue cinque momenti, non cinque schermate o domande fisse:
 
-1. **Attivazione selettiva.** Identifica l'entità, legge Business Identity e Marketing Foundations pertinenti, verifica eventuali brief esistenti e mostra il FYI con i contesti e le versioni realmente applicati. Se il contesto manca o presenta un conflitto materiale, sostituisce il FYI con un avviso concreto e mantiene il risultato come bozza prudente.
+1. **Attivazione selettiva.** Identifica l'entità, legge il brief aziendale e i contesti pertinenti e indica le fonti effettivamente usate. Anche i materiali aziendali o la sintesi del decisore in chat possono stabilire perimetro, regole e autorità. Se manca un elemento decisivo o resta un conflitto materiale, mantiene la formulazione in bozza e chiarisce il punto.
 2. **Prima formulazione utile.** Il primo turno sostanziale presenta che cosa sembra essere in gioco, una sfida provvisoria, ciò che è supportato e ciò che è ancora assunto, più non oltre tre domande capaci di cambiare il brief. Non apre con un questionario, una spiegazione dell'architettura o un messaggio di solo avanzamento.
 3. **Chiarimento mirato.** Mantiene privatamente un registro delle lacune e chiede soltanto ciò che serve a capire se il problema è di marketing, quale risultato e cambiamento sono cercati, quale pubblico è coinvolto o ancora da scegliere, quali vincoli sono reali e chi può confermare il brief. Uno stato esplicito di non conoscenza è una risposta valida.
 4. **Revisione e conferma.** Mostra la formulazione completa, base conoscitiva, assunzioni, conflitti, aspetti aperti, decisione preparata e artefatto proposto. Se restano punti non bloccanti, permette sia di confermare mantenendoli aperti sia di approfondirli. Scrive soltanto dopo una conferma esplicita che comprenda l'autorizzazione al salvataggio.
@@ -555,7 +555,7 @@ Ogni decisione usa un fascicolo dedicato:
 └── marketing-mix.md    # creato dopo l'approvazione della direzione
 ```
 
-`challenge.md` referenzia percorso e versione di Business Identity, Marketing Foundations ed eventuale contesto del brand senza duplicarli. Usa i marcatori `[C]`, `[S#]`, `[I]` e `[?]`; il tipo dell'elemento resta distinto dalla sua provenienza, quindi un'assunzione può essere confermata come assunzione senza diventare un fatto.
+`challenge.md` identifica le basi realmente usate, con percorso e versione se disponibili. Per un brief aziendale o una sintesi confermata in chat conserva la provenienza, il perimetro, i vincoli e chi ha confermato la formulazione. I marcatori `[C]`, `[S#]`, `[I]` e `[?]` permettono di distinguere la base di ogni affermazione. Un'assunzione può essere confermata come tale.
 
 Gli stati del Brief della sfida sono `bozza`, `confermato` e `superato`. Una modifica sostanziale della stessa sfida incrementa la versione intera; una sfida diversa crea un nuovo fascicolo; una formulazione sostituita indica il riferimento successivo. La creazione di `direction.md` o `marketing-mix.md` non rende superati gli artefatti a monte che li sostengono.
 
@@ -595,7 +595,7 @@ Usa gli stati `bozza`, `approvata` e `superata`, referenzia la versione esatta d
 
 > Come responsabile marketing, traduco una direzione approvata in decisioni coerenti su Product, Price, Place e Promotion, rendendo visibili vincoli, ipotesi, dipendenze e proprietari prima di progettare la campagna o altre attivazioni.
 
-La skill impedisce che il percorso salti dalla strategia direttamente alla Promotion. Per ogni P usa uno stato operativo: `vincolo approvato`, `scelta da definire`, `proposta`, `ipotesi da verificare`, `decisione esterna` oppure `non applicabile`. Tutte le P devono avere uno stato, ma non devono ricevere lo stesso livello di dettaglio né cambiare in ogni decisione.
+Il mix copre le quattro P. Assegna uno stato a ciascuna scelta: `vincolo approvato`, `scelta approvata`, `scelta da definire`, `proposta`, `ipotesi da verificare`, `decisione esterna` oppure `non applicabile`. Una P con una sola scelta richiede una sola riga. Per esempio, il listino approvato e uno sconto partner ancora in esame hanno stati distinti anche quando il responsabile approva il mix complessivo.
 
 - **Product** riguarda configurazione dell'offerta, packaging, esperienza e servizio pertinenti al marketing; roadmap tecnica, sviluppo, fattibilità e requisiti regolamentati restano delle funzioni competenti.
 - **Price** riguarda logica di valore, architettura e condizioni; nessun prezzo viene fissato senza economics, evidenze e autorità adeguate.

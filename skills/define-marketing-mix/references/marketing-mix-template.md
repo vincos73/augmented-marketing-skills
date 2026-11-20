@@ -1,6 +1,6 @@
 # Template del Marketing Mix
 
-Leggi questo riferimento quando crei, aggiorni o verifichi il marketing mix. Il template è modulare: ogni P deve avere uno stato esplicito, ma il dettaglio dipende dalla decisione.
+Leggi questo riferimento quando crei, aggiorni o verifichi il marketing mix. Copri le quattro P e indica lo stato di ciascuna scelta. Compila percorsi e versioni con i riferimenti effettivi; lascia `null` i valori assenti e descrivi nelle fonti l'eventuale conferma ricevuta in chat.
 
 ```markdown
 ---
@@ -12,10 +12,10 @@ scope: "[Decisione, offerta, mercato o periodo coperto]"
 owner: "[Responsabile autorizzato]"
 created: YYYY-MM-DD
 last_reviewed: YYYY-MM-DD
-challenge_path: ".agents/marketing/decisions/<decision-slug>/challenge.md"
-challenge_version: 1
-direction_path: ".agents/marketing/decisions/<decision-slug>/direction.md"
-direction_version: 1
+challenge_path: null
+challenge_version: null
+direction_path: null
+direction_version: null
 supersedes: null
 superseded_by: null
 ---
@@ -31,7 +31,7 @@ superseded_by: null
 
 ## Riferimenti
 
-| Artefatto | Percorso | Versione/data | Stato | Note |
+| Materiale utilizzato | Percorso o riferimento in chat | Versione/data disponibile | Stato | Note |
 |---|---|---|---|---|
 | Brief della sfida | | | | |
 | Direzione di marketing | | | | |
@@ -49,14 +49,14 @@ superseded_by: null
 
 ## Mappa delle quattro P
 
-| P | Stato | Scelta o vincolo | Base | Autorità | Implicazioni |
+| P | Scelta o vincolo | Stato | Base | Chi decide | Condizioni e uso previsto |
 |---|---|---|---|---|---|
 | Product | | | | | |
 | Price | | | | | |
 | Place | | | | | |
 | Promotion | | | | | |
 
-Usa come stato: `vincolo approvato`, `scelta da definire`, `proposta`, `ipotesi da verificare`, `decisione esterna` oppure `non applicabile`.
+Ripeti la P per ogni scelta distinta che contiene. Usa uno stato per scelta tra `vincolo approvato`, `scelta approvata`, `scelta da definire`, `proposta`, `ipotesi da verificare`, `decisione esterna` e `non applicabile`.
 
 ## Product
 
@@ -134,7 +134,7 @@ Per i punti ereditati, distingui informazione non disponibile, decisione rinviat
 Il mix può diventare `approvato` quando:
 
 - la direzione è approvata, leggibile e compatibile con la sfida vigente;
-- tutte le quattro P hanno uno stato esplicito;
+- la mappa copre le quattro P e ogni scelta materiale ha un proprio stato giustificato;
 - le scelte materiali sostengono la stessa direzione e le tensioni sono visibili;
 - Product non maschera una roadmap tecnica non autorizzata;
 - Price non presenta come approvato un prezzo privo di autorità o base;
@@ -142,10 +142,10 @@ Il mix può diventare `approvato` quando:
 - Promotion definisce il ruolo strategico senza anticipare il piano di campagna;
 - decisioni esterne, proprietari e dipendenze bloccanti sono riconoscibili;
 - fatti, assunzioni e fonti restano distinguibili;
-- il responsabile ha approvato contenuto e salvataggio.
+- il responsabile ha approvato il contenuto per il perimetro indicato. Le decisioni ancora aperte conservano il proprio stato e le relative condizioni d'uso.
 
-Se il contenuto è approvato soltanto in chat, riporta `contenuto approvato in chat; artefatto non creato`. Non assegnare uno stato canonico a un file inesistente.
+Se il contenuto è approvato soltanto in chat, riporta `contenuto approvato in chat; artefatto non creato`. Il titolo del riepilogo in chat descrive l'aggiornamento, senza un nuovo numero di versione. Puoi ricordare l'ultima versione del file letta o riferita.
 
 ## Percorso e versioning
 
-Usa `marketing-mix.md` nello stesso fascicolo di `challenge.md` e `direction.md`. Referenzia le versioni esatte di entrambi. Un aggiornamento sostanziale a una P richiede di verificare gli effetti sulle altre e incrementare la versione del mix.
+Quando il salvataggio è autorizzato, usa `marketing-mix.md` nel fascicolo della decisione. Riferisci sfida e direzione ai file reali oppure al brief equivalente e alle conferme in chat. Un aggiornamento sostanziale a una scelta richiede di verificare gli effetti sulle scelte collegate e incrementare la versione del mix.

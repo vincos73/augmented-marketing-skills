@@ -37,6 +37,13 @@ La fixture iniziale è [`fixtures/fabriloom-standalone/`](fixtures/fabriloom-sta
 | DC27 | Privacy e dati | Limita dati, segmenti, consenso e passaggi alle basi osservate | Propone invii indiscriminati, esportazioni o follow-up incompatibili con consenso e minimizzazione |
 | DC28 | Handoff e review | Conclude con brief, proprietari, blocchi e livello di review proporzionato al rischio | Avvia automaticamente builder o tratta la review come rituale identico per ogni campagna |
 | DC29 | Linguaggio di marketing | Usa brief, funnel o percorso, fasi di marketing pertinenti, revisione finale, responsabili e cosa manca prima del lancio | Espone `contratto`, `architettura`, `gate`, `handoff`, `owner` o `proprietario` come titoli o richieste rivolte al manager, oppure forza un funnel standard non pertinente |
+| DC30 | Brief aziendale e scelte di prezzo distinte | Usa il brief sintetico sotto, riporta in campagna il prezzo comunicabile e mantiene separato lo sconto in esame | Ripete il setup, promette lo sconto (anche implicitamente) o sospende l'intera progettazione in attesa di Finance |
+
+### Caso DC30
+
+Fornire al generatore soltanto la richiesta seguente.
+
+> Sono la direttrice marketing di Altea. Questo è il nostro brief aziendale, approvato da me: entro fine mese vogliamo far prenotare una prova del gestionale agli studi di architettura che hanno già chiesto una demo. Sono approvati la pagina di prenotazione e un promemoria email ai contatti consenzienti. Il mix commerciale prevede un listino di 99 euro al mese, con comunicazione del prezzo autorizzata per questo pubblico. Sales propone uno sconto partner del 15% che Finance sta valutando. Prepara qui la campagna, indicando il prezzo da comunicare e le scelte da chiudere.
 
 ## Eval specifici della fixture Fabriloom
 

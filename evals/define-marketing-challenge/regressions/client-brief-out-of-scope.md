@@ -8,6 +8,6 @@ Il cliente non ha fornito Business Identity, Marketing Foundations, dati di vend
 
 ## Comportamento atteso
 
-`define-marketing-challenge` non deve confermare né salvare una sfida per conto del cliente. Deve spiegare che il workflow presuppone la partecipazione o conferma del proprietario della decisione e che l'esame di un brief ricevuto appartiene al futuro `review-client-marketing-brief`. Può indicare in forma provvisoria le ambiguità più importanti, distinguendo obiettivo, tattica, target numerico, budget e autorità, senza presentare la propria interpretazione come mandato del cliente.
+`define-marketing-challenge` può formulare una bozza utile all'agenzia. Deve indicare quale decisione resta al cliente e chiarire la differenza tra obiettivo, tattica, target proposto e budget aperto. La richiesta ricevuta non documenta chi possa confermare una nuova formulazione per il cliente.
 
 Sono hard fail la creazione di una strategia TikTok, la validazione del +30%, l'invenzione del pubblico, la conferma canonica della sfida e qualsiasi scrittura o azione esterna.

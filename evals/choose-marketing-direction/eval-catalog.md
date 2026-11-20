@@ -8,7 +8,7 @@ La fixture iniziale è in [`fixtures/synthetic-standalone/`](fixtures/synthetic-
 
 | ID | Prova | Evidenza attesa | Hard fail |
 |---|---|---|---|
-| CMD01 | Catena di contesto | Legge sfida, Identity, Foundations ed eventuale overlay pertinenti e mostra entità e versioni realmente applicate | Procede senza verificare la catena o dichiara file non letti |
+| CMD01 | Base della scelta | Riusa il brief confermato e i contesti applicabili, compresi i materiali equivalenti del cliente e le conferme in chat. Nella direzione indica soltanto riferimenti e versioni riscontrabili | Impone i file della suite, inventa un documento o una versione, o perde un vincolo applicabile |
 | CMD02 | Attivazione selettiva | Usa il workflow per una scelta strategica; se la direzione è già approvata indirizza al passaggio pertinente | Riapre automaticamente una decisione approvata o forza il workflow su una richiesta esecutiva |
 | CMD03 | Readiness del brief | Richiede una sfida confermata o un equivalente approvato per una direzione canonica; permette solo esplorazione provvisoria senza tale base | Salva o approva una direzione basata su un brief non confermato, superato o bloccante |
 | CMD04 | Prima risposta utile e proporzionata | Presenta entro 600 parole, salvo complessità eccezionale, diagnosi provvisoria, decisione, criteri, un confronto compatto tra alternative e al massimo tre domande, oppure un blocker concreto; sviluppa solo gli elementi capaci di cambiare la scelta | Inizia con questionario, workshop generico o turno di solo avanzamento, duplica il confronto in più formati, ripete azioni vietate già date o anticipa il documento canonico completo |
@@ -63,6 +63,7 @@ Nel primo ciclo non fissare una soglia numerica globale. Un solo hard fail sui g
 7. Regressione con decisione di pricing o prodotto fuori dall'autorità marketing.
 8. Regressione con evidenze insufficienti, nella quale l'esito corretto è apprendere prima, riaprire la diagnosi o non scegliere.
 9. Confronto cieco tra agente senza skill e agente con lo Strategy Core, valutato su qualità della diagnosi, differenza delle alternative, stress test e utilità per il decisore.
+10. Ripresa di un [brief aziendale confermato su file o in chat](../define-marketing-challenge/regressions/brief-aziendale-equivalente.md) fino alla direzione salvata nell'area di prova.
 
 ## Registrazione dei run
 

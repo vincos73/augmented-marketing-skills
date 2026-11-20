@@ -1,0 +1,28 @@
+# Verifica del brief aziendale e delle singole scelte del mix
+
+20 novembre 2026 · Candidata locale italiana `1.1.0-rc.1`. Le prove usano imprese e decisioni sintetiche. Comprendono sia richieste dirette alle skill sia passaggi in cui una nuova sessione riceve il risultato effettivamente prodotto dalla precedente.
+
+| Prova | Esito osservato |
+| --- | --- |
+| Brief su file, conferma in chat, modifica proposta da una consulente | La skill riusa la conferma documentata della titolare di Faro. Un nuovo sconto contrario al mandato rimane da approvare. Quando la titolare chiede il salvataggio, il documento distingue il dato CRM da lei riferito dalle fonti lette direttamente. I campi per i documenti della suite assenti restano vuoti. [Tre prove e risultati](../define-marketing-challenge/runs/2026-11-20-brief-aziendale-equivalente.md) |
+| Dal brief alla scelta strategica | In una sessione nuova, la skill ha confrontato tre direzioni leggendo soltanto il brief salvato dalla prima skill e la richiesta della titolare. Ha conservato il pubblico, il calo di 12,5 punti percentuali e il ruolo del webinar come proposta. Nelle due prove successive di salvataggio, la direzione identifica la fonte disponibile su file o in chat. [Prove sui due formati](../choose-marketing-direction/runs/2026-11-20-direzione-da-brief-equivalente.md) |
+| È confermata solo la sfida | Nel caso Altea, formazione clienti e sconto tramite partner sono due ipotesi ancora al vaglio della direttrice. La skill presenta due scenari provvisori e lascia la scelta strategica alla direttrice. Dopo una correzione, il retest distingue lo stato `proposta` dalle condizioni perché la proposta sia utilizzabile. |
+| Aggiornamento di un mix precedente | Nel caso Quadro la vecchia riga Price contiene sia il listino diretto sia uno sconto pendente. Al primo turno l'agente distingue i 99 euro autorizzati per le vendite dirette dal 12% proposto per i rivenditori. Al secondo turno aggiorna solo ciò che dipende dall'approvazione di Finance. Il 7% vale per i rinnovi di almeno dieci licenze via rivenditore ed è comunicabile nella scheda riservata. [Richieste, risposte e retest](../define-marketing-mix/runs/2026-11-20-quadro-scelte-v0.1.10.md) |
+| Progettazione e revisione su un brief aziendale | In Altea la campagna usa il listino di 99 euro al mese e lascia aperto lo sconto del 15%. La revisione accetta la condizione commerciale sulla pagina e blocca la sola mail che promette lo sconto. Il giudizio sulla pagina è circoscritto al prezzo esaminato. [Richiesta per la campagna](../design-campaign/eval-catalog.md#caso-dc30) · [Richiesta per la revisione](../campaign-review/eval-catalog.md#caso-cr21) |
+| Dal mix aggiornato ai materiali di due canali | Una nuova sessione ha letto le due risposte del retest Quadro e usato `design-campaign` estratta dallo ZIP portabile. Ha indicato 99 euro nel portale e il 7% nella sola scheda riservata con quantità, canale e tipo di acquisto corretti. In una prima prova attribuiva il 7% al mix v2 dell'anno precedente. Dopo la correzione distingue esplicitamente il mix v2 dalla conferma successiva di Finance riferita in chat. |
+
+## Come ripetere la prova dal mix alla campagna
+
+1. Eseguire i due turni del [caso Quadro](../define-marketing-mix/fixtures/quadro-scelte/forward-test.md), fornendo il secondo dopo la prima risposta. Conservare le due risposte che vedrebbe la direttrice.
+2. In una cartella temporanea nuova, estrarre lo [ZIP di design-campaign](../../dist/rc.1/agent-skills/design-campaign-0.1.8.zip) in `.agents/skills/`. Fornire come materiale di campagna soltanto quelle risposte e la richiesta seguente.
+
+   > Sono la direttrice marketing di Quadro. Il collega che ha aggiornato il mix mi ha lasciato questa conversazione. Entro fine mese vogliamo che i piccoli studi già clienti decidano se rinnovare dopo aver provato l'aggiornamento. Preparami qui il breve piano per due materiali: la pagina del portale per chi rinnova direttamente e la scheda commerciale riservata ai rivenditori. Indica quale messaggio può usare ciascuno. Non ho fissato un obiettivo numerico.
+
+3. Verificare nei messaggi destinati ai due pubblici prezzi, soglia e canale. Controllare che la fonte del nuovo sconto sia la conferma successiva e che non sia stato calcolato un prezzo netto rivenditore applicando il 7% al listino di un altro canale.
+
+## Verifiche tecniche
+
+- Gli 11 test del builder passano con `python3 -m unittest discover -s tests`. Tutte le 12 skill superano la validazione del frontmatter di `skill-creator`.
+- `python3 scripts/build_suite.py --check` conferma integrità degli ZIP, parità con i sorgenti e riproducibilità dei 13 archivi. I digest del [manifest](../../dist/rc.1/manifest.json) e dei 13 archivi corrispondono a [SHA256SUMS](../../dist/rc.1/SHA256SUMS).
+- La regressione che passa la verifica pre-lancio al debrief supera i tre casi positivi e i sei negativi. I controlli strutturali della [catena Fabriloom](fabriloom-evidence-readiness/) e della [mappa su nove skill](../robustness/fabriloom-nine-step/) passano.
+- Il comando storico `python3 evals/robustness/run_robustness.py --static-only` verifica anche identità e versioni congelate della beta.10. Sul tag originale `augmented-marketing-suite-v0.1.0-beta.10` passano tutti e otto i gruppi di controlli statici. Sulla candidata e sul checkout pulito del commit iniziale `9910bc1` si ottengono gli stessi cinque passaggi e gli stessi tre rifiuti, con gli stessi codici, per adattamento delle trascrizioni, provenienza e corrispondenza della versione. Le prove funzionali riportate sopra riguardano la candidata italiana. [Scopo del runner](../robustness/README.md)

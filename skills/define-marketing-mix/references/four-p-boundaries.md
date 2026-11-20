@@ -26,6 +26,8 @@ Include:
 
 Non fissare un prezzo partendo soltanto dalla disponibilità a pagare presunta o dal prezzo dei concorrenti. Margini, costi, tasse, elasticità, vincoli contrattuali e autorità possono richiedere Finance, Sales, Product o direzione generale. Usa solo la granularità necessaria e non persistere dati sensibili superflui.
 
+Esempio: Finance ha approvato il nuovo listino di 99 euro per il canale diretto e il suo uso nella scheda commerciale. Lo sconto partner attende ancora una decisione di Finance. Registra il listino come `scelta approvata` e lo sconto come `decisione esterna`. La scheda per il canale diretto può riportare i 99 euro; quella per i partner tiene aperte le condizioni. Se il prezzo era già fissato da un contratto che il mix deve rispettare, la voce corrispondente è un `vincolo approvato`.
+
 ## Place
 
 Include come l'offerta diventa accessibile, acquistabile e fruibile:
