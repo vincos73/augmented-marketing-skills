@@ -12,8 +12,8 @@ scope: "[Decisione coperta]"
 owner: "[Responsabile autorizzato]"
 created: YYYY-MM-DD
 last_reviewed: YYYY-MM-DD
-challenge_path: ".agents/marketing/decisions/<decision-slug>/challenge.md"
-challenge_version: 1
+challenge_path: null
+challenge_version: null
 supersedes: null
 superseded_by: null
 ---
@@ -29,12 +29,9 @@ superseded_by: null
 
 ## Riferimenti
 
-| Artefatto | Percorso | Versione/data | Stato | Note |
+| Documento o conferma | Percorso o provenienza | Versione/data, se nota | Stato | Note |
 |---|---|---|---|---|
-| Brief della sfida | | | | |
-| Business Identity | | | | |
-| Marketing Foundations | | | | |
-| Contesto o integrazione del brand, se applicabile | | | | |
+| Brief della sfida o formulazione confermata | | | | |
 
 ## Diagnosi strategica provvisoria
 
@@ -132,7 +129,7 @@ Per i punti ereditati, distingui informazione non disponibile, decisione rinviat
 
 La direzione può diventare `approvata` quando:
 
-- il brief è confermato, leggibile e non superato;
+- la formulazione della sfida è disponibile, confermata e ancora valida per il perimetro;
 - la diagnosi distingue osservazioni, interpretazioni, ipotesi causali e incertezze;
 - la diagnosi considera in modo proporzionato pubblico, alternative e capacità dell'organizzazione;
 - la decisione e i criteri sono comprensibili;
@@ -150,4 +147,4 @@ Se il contenuto è approvato soltanto in chat, riporta `contenuto approvato in c
 
 ## Percorso e versioning
 
-Usa `direction.md` nello stesso fascicolo di `challenge.md`. La direzione referenzia la versione esatta del brief, ma non lo sostituisce. Se il brief viene modificato in modo sostanziale, verifica e aggiorna la direzione prima di riusarla.
+Usa la destinazione richiesta o `direction.md` nel fascicolo della decisione. Compila `challenge_path` con il percorso reale del brief della suite o del documento aziendale usato, e `challenge_version` con la versione quando nota. Lascia `null` nei campi privi di riscontro. Nei riferimenti riporta anche gli altri materiali pertinenti effettivamente usati. Per un brief confermato soltanto in chat, conserva formulazione, vincoli e ruolo di chi li ha confermati, così la direzione resta comprensibile dopo il salvataggio. Se cambia la sfida, riesamina la direzione prima di riusarla.

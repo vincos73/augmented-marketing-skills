@@ -2,7 +2,7 @@
 name: campaign-review
 description: "Valuta una campagna e i suoi asset prima del lancio: coerenza con le decisioni approvate, claim e prontezza operativa, con esito motivato e correzioni richieste."
 metadata:
-  version: "0.1.4"
+  version: "0.1.5"
 ---
 
 # Revisionare una campagna
@@ -19,7 +19,7 @@ Mantieni distinti `verificato` (prova pertinente osservata), `dichiarato` (affer
 
 ## Tre criteri indipendenti
 
-**Coerenza strategica.** Confronta obiettivo, pubblico, situazione, offerta, messaggio, sequenza, ruolo dei canali, CTA e criterio di successo con la base approvata. Registra divergenza, impatto e correzione necessaria. Un cambiamento materiale richiede l'approvazione della nuova base: non ridisegnare silenziosamente la campagna durante la review.
+**Coerenza strategica.** Confronta obiettivo, pubblico, situazione, offerta, messaggio, sequenza, ruolo dei canali, CTA e criterio di successo con la base approvata. Se un asset riprende prezzi, promesse o canali dal mix, verifica lo stato e l'uso consentito di ciascuna scelta per quel pubblico. Circoscrivi il rilievo agli asset e alle azioni che ne dipendono. Registra divergenza, impatto e correzione necessaria. Un cambiamento materiale richiede l'approvazione della nuova base: non ridisegnare silenziosamente la campagna durante la review.
 
 **Integrità delle affermazioni.** Controlla i claim materiali, incluse promesse implicite, rispetto a fonte, data/versione, contesto, qualificazioni e uso autorizzato. Classificali come sostenuti, sostenuti con condizioni, da verificare o non utilizzabili. Numeri e comparazioni richiedono definizione, periodo, denominatore e comparabilità; prove o certificazioni di partner non si trasferiscono all'organizzazione. Una fonte presente non prova l'autorizzazione all'uso pubblico. Indica la restrizione richiesta senza modificare automaticamente gli asset.
 

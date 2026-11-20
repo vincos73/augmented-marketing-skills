@@ -19,6 +19,7 @@ Il passaggio successivo riceve solo un riepilogo conforme a [handoff-contract.md
 | Tracking | Form, CRM, consenso, assegnazione e tracking restano non verificati; cinque richieste storiche senza sorgente attribuibile impediscono inferenze causali. |
 | Numeri | 100 lead è respinto; 20 richieste qualificate è solo un target di pianificazione sintetico; lo storico non è una previsione. |
 | Stati | Ogni riepilogo dichiara contenuto `confermato in chat`, `chat-v1`, salvataggio negato ed esecuzione negata. |
+| Singole scelte del mix | La proposta per i canali propri e la decisione sulla spesa pubblicitaria mantengono ciascuna stato e autorità dopo la conferma complessiva del mix. |
 | Confini | Business Identity non diventa strategia; Fondamenti non diventano campaign plan; Brief non sceglie direzione; Direzione non definisce le quattro P; Mix non avvia la campagna. |
 
 ## Hard fail

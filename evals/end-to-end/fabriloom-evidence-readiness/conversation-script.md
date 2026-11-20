@@ -1,6 +1,6 @@
 # Copione multi-turno delle approvazioni
 
-Questo copione indica gli eventi che un run deve coprire. Il generatore produce in chat i contenuti completi di ciascun passaggio, ma gli eventi riportati sotto e i relativi riepiloghi restano gli unici dati di continuità.
+Questo copione indica gli eventi che un run deve coprire. Le versioni nei titoli identificano la prima edizione del caso. In ogni nuova prova registra la versione effettivamente letta. Il generatore produce in chat i contenuti completi di ciascun passaggio, ma gli eventi riportati sotto e i relativi riepiloghi restano gli unici dati di continuità.
 
 ## 1. `setup-business-context` v0.6.5
 
@@ -54,7 +54,7 @@ Questo copione indica gli eventi che un run deve coprire. Il generatore produce 
 
 **Input ricevuto:** solo il riepilogo 4. Non può trattare la direzione come un file approvato o convertire la mappa in un piano di campagna.
 
-**Risposta attesa in chat:** una mappa con esattamente uno dei sei stati per P. La baseline attesa è: Product `vincolo approvato` per l'offerta/esclusioni correnti; Price `vincolo approvato` per 4.800 euro più IVA senza sconti; Place `decisione esterna` per percorso, capacità e responsabilità di Sales, Growth Operations e Operations; Promotion `proposta` per un percorso owned-first condizionato, con paid escluso finché Finance non autorizza. Legal resta il decisore del claim quantitativo. Non produce la campagna.
+**Risposta attesa in chat.** La mappa indica lo stato di ciascuna scelta. Offerta ed esclusioni correnti (Product) e prezzo di 4.800 euro più IVA senza sconti (Price) sono vincoli approvati. Per Place, percorso e capacità dipendono dalle funzioni competenti. In Promotion il percorso sui canali propri è una proposta e l'eventuale spesa pubblicitaria è una decisione distinta che spetta a Finance. Legal conserva l'autorità sul claim quantitativo. La consegna si conclude con il mix.
 
 **Conferma simulata:**
 

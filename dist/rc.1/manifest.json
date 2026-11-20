@@ -1,0 +1,194 @@
+{
+  "suite_version": "1.1.0-rc.1",
+  "state": "local-candidate-not-published",
+  "source_base_commit": "9910bc11e164264bfec3aa9612b87be785a275fa",
+  "source_state": "working-tree; source_sha256 identifies the actual files",
+  "source_sha256": {
+    "skills/augmented-marketing-assistant/SKILL.md": "abd1d130aa739ce1bcece5ff65ba1d3a92400d8f90e4c91ea5f6c506052b97ad",
+    "skills/augmented-marketing-assistant/agents/openai.yaml": "849fbc16e8aca2a74b87dbf321c68d0fcff3b4e393c0062bf4d5e2c751acffd0",
+    "skills/setup-business-context/INSTALL.md": "62492da4d092ba9d8e4cdaf4e4ca89f095b98e6c195bf62bd8afdf748e6794ac",
+    "skills/setup-business-context/SKILL.md": "b991caf4f6094c81d069a6c7f429a3253307f809b7753fcfa26144a507583cb2",
+    "skills/setup-business-context/agents/openai.yaml": "103f9b6a961ee6e0ca53f557b558c2d1941384578c25214aa28ff4bd5eb59569",
+    "skills/setup-business-context/references/business-identity-template.md": "418695ccb0f0e86df2bd632fbe5a08fdce64f550e1aecaea3659cbf7091ca00f",
+    "skills/setup-business-context/references/compact-review-contract.md": "e83404658c1e146f30767c552d26585121a84425573ebf24ab14a428133d4407",
+    "skills/setup-business-context/references/expert-question-routing.md": "649bb8f3c8822bbeb95b6ee6c0dd07b9e4cbd100b605d78beabfc3d734b615f3",
+    "skills/setup-business-context/references/gate1-review-contract.md": "cbe4923789e2efda9ea1f8a1b90b2f3a4ed097e5a5f3c99421d499c44ba8426b",
+    "skills/setup-business-context/references/installation.md": "f227b9307755eab0f1d158adff62d33d7a54a6028b7dc03016c74f099e3cbd17",
+    "skills/setup-marketing-system/INSTALL.md": "c524f2b3d060d6b2645e928d6965f310ba9f25495203f11f94bc55877e491abc",
+    "skills/setup-marketing-system/SKILL.md": "10e5afd1689340e599d8c46acce09c59ef6f8d8b9e57c99e05f679cbed9aab81",
+    "skills/setup-marketing-system/agents/openai.yaml": "5f800c67584730924bb1bc059d44d19c036a85e608bc25b8c71b4dfae6839b55",
+    "skills/setup-marketing-system/references/compact-review-contract.md": "46d1baa7b6a63628a1e28bf2bc7e39c8ef2cd2dcb60e5027216a54e39126b4b3",
+    "skills/setup-marketing-system/references/installation.md": "39503efb315ec7f61da5fea4b1bac30df69d7dcc97787c536c700eeff7a746f4",
+    "skills/setup-marketing-system/references/marketing-foundations-template.md": "53468b32a850bcdd728b8b513344b836773f6672e20822c8c5d1bc57299181c9",
+    "skills/setup-marketing-system/references/question-routing.md": "dc99951a1bea95a56270ef16ac9d3b90706116ee3d7058bef3b401316b683a0a",
+    "skills/setup-brand-voice/INSTALL.md": "5df5242a3af27ff74114be9b3dd957286d7ae6bffe7ec41a891be38b80f06eb2",
+    "skills/setup-brand-voice/SKILL.md": "0f249f71893b66e48cc2c49bed720380e6e24a2abbbc35b54dcd712ce49fb4e7",
+    "skills/setup-brand-voice/agents/openai.yaml": "991164334e08009425d5a5b690501b3ec4633b9a6c7869ab28ba706714e4d6f6",
+    "skills/setup-brand-voice/references/brand-voice-guide.md": "1bb8b6ab7fedcf53b46129193c49d24a03223d60a04262afef5a9fe13dd8ff20",
+    "skills/setup-brand-voice/references/discovery-and-decisions.md": "1083ea8bc8a702927a881d1eed8a4b8f93b656fa9e49520b8e4c434a646d146c",
+    "skills/setup-brand-voice/references/example-review.md": "dee8fcf75443229f96d60f093b777a3ce11db3aa6e4db9d8a78081b3a98c1fab",
+    "skills/setup-brand-voice/references/persistence-and-reuse.md": "f0a86e964a748d43e1a5e0c780dd3a068509f21c5a704bc6bb1c3d7d87a0d8a4",
+    "skills/setup-brand-voice/references/voice-calibration.md": "5b277afd9b865f2833566b016f2fb37be5a2b7ce26c2e0183f46ac8dbf5b671e",
+    "skills/define-marketing-challenge/INSTALL.md": "5ec47abe9de6d4165c0713c8dc39e2f3e8c9d2ace4e1eaa4da66ed3adaec27d6",
+    "skills/define-marketing-challenge/SKILL.md": "eafa17a9c639eda2eeaee3a48b324d1437c3ba85b67f9ad212660469d90b23f6",
+    "skills/define-marketing-challenge/agents/openai.yaml": "86b41e953e35d60b709296782e6930b0775180120ec0e3c7343cf446d8f4b5c9",
+    "skills/define-marketing-challenge/references/marketing-challenge-template.md": "ff997cdce7e4fb928f65c3e4ca6538fd653ebd1442cbfb6e282b746cde535246",
+    "skills/define-marketing-challenge/references/question-routing.md": "e0adeddcd2058fc8ae0df1e5252f0251e3e8da5760de05b7e64115acf5d77654",
+    "skills/choose-marketing-direction/INSTALL.md": "610ea6655f65fe1eb54ec893f021557e6b25bdc60e403ab56b6caa8de4258f7c",
+    "skills/choose-marketing-direction/SKILL.md": "64d8298c6ab8b14b8d465eed84b9b353beac83bd9b10bac8f550f8e2d136db6f",
+    "skills/choose-marketing-direction/agents/openai.yaml": "68bd8ccb06b6ef6de96d20cff8cb267a4f678509abefb6f0f69db3563ae76498",
+    "skills/choose-marketing-direction/references/marketing-direction-template.md": "876255b3023ea7b80ba8c94f827f050a550ea4df4f96e1c814850704b4d2bb42",
+    "skills/choose-marketing-direction/references/strategic-comparison.md": "c3591303f0ef8e18adad2d27ff2058043490fbb0a966cdbc414d13d747757684",
+    "skills/define-marketing-mix/INSTALL.md": "3c3f370014a2d55a20f6ffe42ea5d0915ebdb055493aa83dc17f0e5f8b1de6f2",
+    "skills/define-marketing-mix/SKILL.md": "c359bd129ee53e30144c8b9b858dc3ff26b9c7ee18ec1cd87695aa56c9b86412",
+    "skills/define-marketing-mix/agents/openai.yaml": "a914f7bda59a44c151dc910e7b6ba40b11d84bd8f9f9fca8e665197eb8815af3",
+    "skills/define-marketing-mix/references/four-p-boundaries.md": "6f8a8e16eedddffb063d20ae5a433ce27eaa8695dd16dbb6e4aa9b099bec3e03",
+    "skills/define-marketing-mix/references/marketing-mix-template.md": "08bea6a114eaf88efa8547fd9e64f0c3525b223a6b21bf4240a50db46bb1a86c",
+    "skills/design-campaign/INSTALL.md": "bb3ee0579958c7b0df2a781d2cc141abee7c795f972492410fd289b777b8417e",
+    "skills/design-campaign/SKILL.md": "f8808224ca11a23235d64441303e9fbad01f35a25339c82b869f82e48d8b3709",
+    "skills/design-campaign/agents/openai.yaml": "265eec9a107545865e6d34f87de82d4d4caee745bd23d18248a2d5ecfcb329d7",
+    "skills/design-campaign/references/campaign-spec-template.md": "b6c92a60043506a3fe4da6aa161e9d7f3aa98ab90da7f179b81b29d44dbb9b65",
+    "skills/design-campaign/references/question-routing.md": "9ba2ca730dd60af45798822b77afffa3f2c2cd26ff630795c24541576e3f6345",
+    "skills/campaign-review/INSTALL.md": "dfaf594ba72448dcc7aa190fbf4720658e64346cca37ec84b26dd437399795fe",
+    "skills/campaign-review/SKILL.md": "b7d9c59d42e0768543ccc0d9e368d6b5790db5de3b75af8bdb16570a93cb1478",
+    "skills/campaign-review/agents/openai.yaml": "998eea1efe6993073aaf101003ad3253be31aafc430ccc894574ab5e4db7e953",
+    "skills/campaign-review/references/campaign-review-contract.md": "14a1463adcaf5663e21919d4321787ec82bc2e97faab15a596cf56ac2d026735",
+    "skills/campaign-review/references/debrief-baseline.md": "3e995c54dcf1d41d7e00f0dc5b4304dd1dc43ca5f4042f837afb57683e9c218d",
+    "skills/campaign-debrief/INSTALL.md": "d2413e3d76c29363479a6f904c58c9b380b97249d66b089e2296f4520049e5c0",
+    "skills/campaign-debrief/SKILL.md": "e6122b7eeab5ff1b4fa1ca023dddc8191bec27f3d4907334c7d5abb7eb7dfbdc",
+    "skills/campaign-debrief/agents/openai.yaml": "34b07a2613d40d58a406861bcdf906a05dac5237b586b17143c739a45f5abd75",
+    "skills/campaign-debrief/references/campaign-learning-template.md": "22db35f6e00a0f014e025402f65391192de9deb864caf65c0a3540341f563d4f",
+    "skills/campaign-debrief/references/decision-routing.md": "9ab220e9a758b0759d52dee9f1d1d24458fac6cbe6fc635ceb891b2d735c4b69",
+    "skills/content-director/INSTALL.md": "d6c02b62fd8f37dea385f3e84e3fe230485adc1f51fde8520d1f12ea020b2a81",
+    "skills/content-director/SKILL.md": "e24e36daa3d911ad6b00a1257deedfe891ee11706aeff9d6623d4a528a929b57",
+    "skills/content-director/agents/openai.yaml": "8832566faa06b8460de2c2fa08b36c00822c5e50a3a6946bc155be869036eae0",
+    "skills/content-director/references/content-brief-template.md": "09cb35808549a6764cf5f7e4770f7a04a2a845fb62efa8dd2e2ab1533ad344b7",
+    "skills/content-director/references/editorial-routing.md": "8986b4e71c68ed88544fef3d0487e67309a8ba155a6c15acd64658f3d086fc5e",
+    "skills/write-marketing-copy/INSTALL.md": "d0df723c515478e7f96043f480ed627eea3406809a0dbac6a5331dcdb68ee84b",
+    "skills/write-marketing-copy/SKILL.md": "bbdc3940671e56b34bd4c1ccbdb5312b025226269a5c2768f90aab9ba7805cc9",
+    "skills/write-marketing-copy/agents/openai.yaml": "0ea766239f81538f57a73fc674e2f74924a0b39b17a128f77251fe7764997569",
+    "skills/write-marketing-copy/references/copy-modes.md": "e00fae6a58f9318ed4afbf136d91a34406986ea55736b6b67517d0fa6aa6139a",
+    ".codex-plugin/plugin.json": "2c1a1994e014d638217155e386b5ec869395f97cd01d3a4eebe09c5dd717eb13",
+    "claude/.claude-plugin/plugin.json": "7d8b692ec63c629b3aef2e275e308063eb1f4fde6ac6ec23db0d91606d6b6e70"
+  },
+  "packages": [
+    {
+      "archive": "openai/augmented-marketing-suite-1.1.0-rc.1.zip",
+      "sha256": "ec091749b74c4eb19153531cd68a01da7143d7a555e4dcce98586d4c50458770",
+      "skills": {
+        "augmented-marketing-assistant": "0.3.0",
+        "setup-business-context": "0.6.7",
+        "setup-marketing-system": "0.3.4",
+        "setup-brand-voice": "0.1.2",
+        "define-marketing-challenge": "0.1.9",
+        "choose-marketing-direction": "0.2.9",
+        "define-marketing-mix": "0.1.10",
+        "design-campaign": "0.1.8",
+        "campaign-review": "0.1.5",
+        "campaign-debrief": "0.1.7",
+        "content-director": "0.1.2",
+        "write-marketing-copy": "0.1.5"
+      }
+    },
+    {
+      "archive": "claude/augmented-marketing-suite-claude-v1.1.0-rc.1.zip",
+      "sha256": "2e57d706a05c69e92935501abe6ea9675f45477b3ce6f23ef2beeea1b3894453",
+      "skills": {
+        "augmented-marketing-assistant": "0.3.0",
+        "setup-business-context": "0.6.7",
+        "setup-marketing-system": "0.3.4",
+        "setup-brand-voice": "0.1.2",
+        "define-marketing-challenge": "0.1.9",
+        "choose-marketing-direction": "0.2.9",
+        "define-marketing-mix": "0.1.10",
+        "design-campaign": "0.1.8",
+        "campaign-review": "0.1.5",
+        "campaign-debrief": "0.1.7",
+        "content-director": "0.1.2",
+        "write-marketing-copy": "0.1.5"
+      }
+    },
+    {
+      "archive": "agent-skills/setup-business-context-0.6.7.zip",
+      "sha256": "56c5c34b7697eed35217a0aa3c485bb50868426fef8819f72cce95f286e8166e",
+      "skills": {
+        "setup-business-context": "0.6.7"
+      }
+    },
+    {
+      "archive": "agent-skills/setup-marketing-system-0.3.4.zip",
+      "sha256": "d8e26b0a4ef743b0c6b7edaa91cae8bbb41f89660caf7250b466a808de4d93fa",
+      "skills": {
+        "setup-marketing-system": "0.3.4"
+      }
+    },
+    {
+      "archive": "agent-skills/setup-brand-voice-0.1.2.zip",
+      "sha256": "f5aaba0ff2bef13ece7a7b0b9147ee1502976c53c33cb727495d15c5300f2a02",
+      "skills": {
+        "setup-brand-voice": "0.1.2"
+      }
+    },
+    {
+      "archive": "agent-skills/define-marketing-challenge-0.1.9.zip",
+      "sha256": "f6bf9a59e2eed52c9bb43e6d49a8ad53e41fa73e32c38a14b32d998f67082f36",
+      "skills": {
+        "define-marketing-challenge": "0.1.9"
+      }
+    },
+    {
+      "archive": "agent-skills/choose-marketing-direction-0.2.9.zip",
+      "sha256": "a0154641c443d14b9a998de10f06f36f40c11b5c26199bc5fc84074b31f9c5e4",
+      "skills": {
+        "choose-marketing-direction": "0.2.9"
+      }
+    },
+    {
+      "archive": "agent-skills/define-marketing-mix-0.1.10.zip",
+      "sha256": "8b3ea9da0f5746717f40a466eecec2563303d1608275319922b5cc69b100cbec",
+      "skills": {
+        "define-marketing-mix": "0.1.10"
+      }
+    },
+    {
+      "archive": "agent-skills/design-campaign-0.1.8.zip",
+      "sha256": "3321a531b4ceaaab4ef92569761b1461f1e000e34cb971229595dae63d683c96",
+      "skills": {
+        "design-campaign": "0.1.8"
+      }
+    },
+    {
+      "archive": "agent-skills/campaign-review-0.1.5.zip",
+      "sha256": "4eacad50dce90e44fce8f74fcf89f2988cdfa474edc2ca7fb934124d5337c281",
+      "skills": {
+        "campaign-review": "0.1.5"
+      }
+    },
+    {
+      "archive": "agent-skills/campaign-debrief-0.1.7.zip",
+      "sha256": "cf0cc96d354d5910cd2412261bad81d004cc6d8d034db4dce34c1753b172a18c",
+      "skills": {
+        "campaign-debrief": "0.1.7"
+      }
+    },
+    {
+      "archive": "agent-skills/content-director-0.1.2.zip",
+      "sha256": "99e5da06f95c9e559a31db67138ec329f1d7f8fb5252ebda8a0e480a1129046e",
+      "skills": {
+        "content-director": "0.1.2"
+      }
+    },
+    {
+      "archive": "agent-skills/write-marketing-copy-0.1.5.zip",
+      "sha256": "7c6e327b1d286aacda1107062b8675815819aa3d30e5d28e4c6b10db0cb4e118",
+      "skills": {
+        "write-marketing-copy": "0.1.5"
+      }
+    }
+  ],
+  "policy": {
+    "openai": "12 skills, including Assistant and agents metadata",
+    "claude": "12 skills, including Assistant; no agents metadata",
+    "portable": "one specialist folder; no agents metadata or INSTALL.md"
+  }
+}

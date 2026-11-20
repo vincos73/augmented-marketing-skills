@@ -15,10 +15,10 @@ scope: "[Decisione, mercato, offerta o periodo coperto]"
 owner: "[Responsabile autorizzato]"
 created: YYYY-MM-DD
 last_reviewed: YYYY-MM-DD
-business_context_path: "[Percorso dell'identità pertinente]"
-business_context_version: 1
-marketing_foundations_path: "[Percorso dei Fondamenti di marketing]"
-marketing_foundations_version: 1
+business_context_path: null
+business_context_version: null
+marketing_foundations_path: null
+marketing_foundations_version: null
 brand_context_path: null
 brand_context_version: null
 brand_foundations_path: null
@@ -48,12 +48,9 @@ Una regola letta nei contesti canonici usa il marker della fonte pertinente, per
 
 ## Riferimenti di contesto
 
-| Artefatto | Percorso | Versione/data | Perimetro | Note |
+| Documento o conferma | Percorso o provenienza | Versione/data, se nota | Perimetro | Note |
 |---|---|---|---|---|
-| Business Identity | | | | |
-| Marketing Foundations | | | | |
-| Contesto del brand, se applicabile | | | | |
-| Integrazione marketing del brand, se applicabile | | | | |
+| | | | | |
 
 ## Sintesi della sfida
 
@@ -126,7 +123,7 @@ Assegna normalmente un ID distinto a ogni file o testimonianza materiale. Ogni c
 
 Il brief può passare da `bozza` a `confermato` quando:
 
-- Business Identity e Marketing Foundations indicate sono approvate, leggibili e coerenti con il perimetro;
+- l'entità e le regole applicabili sono identificate nei contesti della suite, in materiali aziendali equivalenti o nella sintesi del responsabile;
 - risultato aziendale e cambiamento cercato sono comprensibili;
 - il pubblico è identificato oppure la sua scelta è dichiaratamente parte della decisione;
 - una tattica proposta non è stata scambiata per la sfida;
@@ -134,13 +131,13 @@ Il brief può passare da `bozza` a `confermato` quando:
 - fatti, segnali, inferenze e assunzioni restano distinguibili;
 - non resta alcun conflitto bloccante;
 - nessun dato aggregato è attribuito al pubblico target o a singoli prospect senza una fonte che sostenga il collegamento;
-- è chiaro quale decisione dovrà affrontare il workflow successivo.
+- è chiaro quale decisione dovrà affrontare il workflow successivo e il decisore ha confermato questa formulazione, nel brief o in chat.
 
 Non sono requisiti automatici una diagnosi causale definitiva, un evidence pack, un budget dettagliato, un target numerico, un piano canali o un test.
 
 ## Percorso e versioning
 
-Usa:
+In assenza di una destinazione richiesta, usa:
 
 ```text
 .agents/marketing/decisions/<decision-slug>/challenge.md
@@ -148,7 +145,7 @@ Usa:
 
 I successivi `direction.md` e `marketing-mix.md` vivono nello stesso fascicolo. `direction.md` referenzia questo brief; `marketing-mix.md` referenzia sia il brief sia la direzione approvata. Non aggiungere il fascicolo alle istruzioni globali dell'agente.
 
-Per un'azienda o un brand autonomo, `business_context_path` e `marketing_foundations_path` indicano i due contesti canonici pertinenti; i campi `brand_*` restano `null`. Per un brand all'interno di un'azienda, i due campi principali indicano identità e Foundations aziendali, mentre `brand_context_path` e `brand_foundations_path` indicano identità e integrazione del brand. Registra le versioni effettivamente lette e non caricare integrazioni di brand non pertinenti.
+Compila i campi di percorso e versione dei contesti della suite solo per i file pertinenti realmente usati e le versioni note. Per un brand figlio i campi principali si riferiscono al genitore e i campi `brand_*` alle integrazioni del brand. Mantieni `null` negli altri campi. Nei riferimenti identifica i materiali aziendali equivalenti con titolo, percorso o URL se disponibile, e versione o data se nota. Per una conferma in chat riporta il ruolo del decisore e ciò che ha confermato, conservando nel brief i vincoli necessari a riprendere il lavoro.
 
 - Prima conferma: `version: 1`, `status: confermato` e data corrente.
 - Modifica sostanziale della stessa sfida: incrementa la versione intera e anteponi una voce al registro modifiche.
@@ -157,4 +154,4 @@ Per un'azienda o un brand autonomo, `business_context_path` e `marketing_foundat
 - Formulazione sostituita: imposta `status: superato` e indica `superseded_by`.
 - La creazione di `direction.md` o `marketing-mix.md` non rende superato il brief.
 
-Se il workspace non è scrivibile o il responsabile non autorizza il salvataggio, restituisci la bozza completa e il percorso previsto senza dichiarare che il file esista. Se il contenuto viene confermato ma il salvataggio resta negato, riporta `contenuto confermato in chat; artefatto non creato`: `bozza`, `confermato` e `superato` restano stati dell'artefatto canonico, non sostituti dell'autorizzazione alla scrittura.
+Se il workspace non è scrivibile o il responsabile vuole soltanto la risposta in chat, restituisci la formulazione completa. Per una conferma ricevuta nel dialogo usa lo stato `contenuto confermato in chat; artefatto non creato`. Per una conferma documentata cita il decisore e il brief esterno, con versione solo se presente nella fonte. Una consegna in chat lascia il nuovo documento senza file e senza versione.

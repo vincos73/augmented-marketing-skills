@@ -23,7 +23,11 @@ Chi contribuisce nuove skill trova i criteri comuni nello [standard di progettaz
 
 Il [pacchetto OpenAI 1.0.2](releases/1.0.2/openai/README.md) contiene le dodici skill in inglese, il logo approvato e il listing bilingue. Il suo [ZIP](releases/1.0.2/openai/augmented-marketing-suite-public-1.0.2.zip) è identico a quello inviato per la pubblicazione nel catalogo ChatGPT; il [sorgente esatto](releases/1.0.2/openai/source/) è consultabile nel repository. La candidatura OpenAI è ancora **in review**: la disponibilità su GitHub non implica la pubblicazione nel catalogo ChatGPT.
 
-Le skill italiane nella cartella [`skills/`](skills/) e il plugin Claude restano alla release 1.0.0. La [pagina Vincos](https://vincos.it/augmented-marketing-suite/) mostra entrambe le versioni e i rispettivi download; il [plugin WordPress 0.12.3 e il suo sorgente](releases/1.0.2/site/) sono archiviati nel repository. Per la situazione delle distribuzioni, vedi [stato 1.0.2](RELEASE-STATUS-1.0.2.md) e [installazione](INSTALLAZIONE.md).
+Per le skill italiane e il plugin Claude, la distribuzione pubblicata è la 1.0.0. La [pagina Vincos](https://vincos.it/augmented-marketing-suite/) mostra entrambe le versioni e i rispettivi download; il [plugin WordPress 0.12.3 e il suo sorgente](releases/1.0.2/site/) sono archiviati nel repository. Per la situazione delle distribuzioni, vedi [stato 1.0.2](RELEASE-STATUS-1.0.2.md) e [installazione](INSTALLAZIONE.md).
+
+### Versione candidata italiana 1.1.0-rc.1
+
+Con i [sorgenti italiani](skills/) puoi partire da un brief aziendale confermato anche in chat. Nel marketing mix ogni scelta ha il suo stato. Per esempio, una campagna può usare il prezzo di listino approvato per la pagina mentre lo sconto partner attende la decisione di Finance. I pacchetti per Codex e Claude si scaricano dalla [pre-release GitHub](https://github.com/vincos73/augmented-marketing-skills/releases/tag/augmented-marketing-suite-v1.1.0-rc.1). Il [rapporto delle prove dal brief alla campagna](evals/end-to-end/2026-11-20-brief-e-mix.md) documenta i risultati.
 
 ## Monitoraggio: nuove skill autonome
 
@@ -41,7 +45,7 @@ Pagina release: [Augmented Marketing Suite v1.0.0](https://github.com/vincos73/a
 
 ## Da dove cominciare
 
-### Le dodici skill della Suite 1.0.0
+### Le dodici skill nei sorgenti italiani
 
 | Se ti trovi in questa situazione | Cosa usare | Versione | Che cosa ottieni |
 | --- | --- | --- | --- |
@@ -49,11 +53,11 @@ Pagina release: [Augmented Marketing Suite v1.0.0](https://github.com/vincos73/a
 | Vuoi spiegare all'agente chi è la tua organizzazione. | [`setup-business-context`](skills/setup-business-context/) | v0.6.7 | Un contesto riutilizzabile con identità, fatti approvati, vincoli e aspetti ancora da chiarire. |
 | Vuoi definire le regole con cui fare marketing. | [`setup-marketing-system`](skills/setup-marketing-system/) | v0.3.4 | Fondamenti di marketing condivisi, con fonti, regole, limiti e responsabilità da chiarire. |
 | Vuoi definire o rivedere una voce riutilizzabile. | [`setup-brand-voice`](skills/setup-brand-voice/) | v0.1.2 | Una guida alla voce del brand o una revisione circoscritta. |
-| Hai un'idea, una richiesta o un problema, ma non sai se è davvero una sfida di marketing. | [`define-marketing-challenge`](skills/define-marketing-challenge/) | v0.1.8 | Un documento di sintesi che chiarisce problema, pubblico, cambiamento desiderato, evidenze e criteri di successo. |
-| Devi scegliere tra più strade possibili. | [`choose-marketing-direction`](skills/choose-marketing-direction/) | v0.2.8 | Un confronto tra alternative, con vantaggi, svantaggi, rischi e assunzioni espliciti. |
-| Hai scelto una direzione e devi renderla concreta. | [`define-marketing-mix`](skills/define-marketing-mix/) | v0.1.9 | Scelte coerenti su offerta, prezzo, distribuzione e comunicazione. |
-| Vuoi progettare una campagna. | [`design-campaign`](skills/design-campaign/) | v0.1.7 | Una Campaign Spec con percorso, messaggi, canali, asset, responsabilità e misurazione. |
-| Vuoi verificare una campagna prima della pubblicazione o dell'invio. | [`campaign-review`](skills/campaign-review/) | v0.1.4 | Una review separata di coerenza strategica, affermazioni, prontezza operativa e baseline decisionale per il debrief. |
+| Hai un'idea, una richiesta o un problema, ma non sai se è davvero una sfida di marketing. | [`define-marketing-challenge`](skills/define-marketing-challenge/) | v0.1.9 | Una formulazione della sfida, anche a partire dal brief aziendale, con pubblico, cambiamento cercato ed evidenze. |
+| Devi scegliere tra più strade possibili. | [`choose-marketing-direction`](skills/choose-marketing-direction/) | v0.2.9 | Un confronto tra alternative, con vantaggi, svantaggi, rischi e assunzioni espliciti. |
+| Hai scelto una direzione e devi renderla concreta. | [`define-marketing-mix`](skills/define-marketing-mix/) | v0.1.10 | Scelte su offerta, prezzo, distribuzione e comunicazione, ciascuna con il proprio stato e le condizioni d'uso. |
+| Vuoi progettare una campagna. | [`design-campaign`](skills/design-campaign/) | v0.1.8 | Una Campaign Spec con percorso, messaggi, canali, asset, responsabilità e misurazione. |
+| Vuoi verificare una campagna prima della pubblicazione o dell'invio. | [`campaign-review`](skills/campaign-review/) | v0.1.5 | Una review separata di coerenza strategica, affermazioni, prontezza operativa e baseline decisionale per il debrief. |
 | Devi leggere i risultati e decidere che cosa fare dopo. | [`campaign-debrief`](skills/campaign-debrief/) | v0.1.7 | Una lettura dei risultati con limiti, decisione consigliata e prossima verifica. |
 | Hai fonti o un'idea, ma non sai quale singolo contenuto sarebbe più utile. | [`content-director`](skills/content-director/) | v0.1.2 | Una raccomandazione editoriale agnostica e, dopo approvazione, un Content Brief. |
 | Hai un testo marketing da scrivere, riscrivere o adattare. | [`write-marketing-copy`](skills/write-marketing-copy/) | v0.1.5 | Copy pronto per la revisione, basato su voce e fatti disponibili. |

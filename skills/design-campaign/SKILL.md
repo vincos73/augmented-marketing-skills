@@ -2,7 +2,7 @@
 name: design-campaign
 description: "Progetta o aggiorna una campagna coordinata e il suo brief esecutivo: pubblico, messaggi, canali, risposta e misurazione. Non serve per un singolo asset già specificato."
 metadata:
-  version: "0.1.7"
+  version: "0.1.8"
 ---
 
 # Progettare una campagna
@@ -11,11 +11,11 @@ Trasforma un'esigenza, un brief o decisioni approvate in una **Campaign Spec** u
 
 ## Base e perimetro
 
-Lavora sia da un brief autonomo sia da contesti Identity, Marketing Foundations o Strategy disponibili. Non imporre il percorso Strategy Core né creare i suoi documenti per completare una campagna standalone. Riusa le decisioni pertinenti e approvate senza riaprirle in assenza di un conflitto materiale. Un marketing mix deve avere una Promotion utilizzabile; un brief esterno autorizzato può fornire una base equivalente.
+Lavora da un brief autonomo o dai contesti aziendali e strategici disponibili. Un brief aziendale equivalente, anche confermato in chat, consente di riusare pubblico, offerta, ruolo della comunicazione e vincoli già stabiliti senza ricreare i documenti della Suite. Se parti dal mix, verifica lo stato e le condizioni delle singole scelte che servono alla campagna. Se il listino è comunicabile e lo sconto partner attende Finance, usa il listino nei messaggi e registra lo sconto fra le decisioni aperte. Una scelta aperta limita solo ciò che ne dipende.
 
 Riprendi gli aspetti aperti a monte quando cambiano la campagna e riconcilia prima date e fatti disponibili. Distingui informazione non disponibile, decisione rinviata e scelta esplicita di non fissare un numero: una lacuna non equivale a zero, assenza di target o consenso. Se una questione non serve ancora, conserva il momento in cui andrà risolta.
 
-Dichiara in modo compatto i materiali di business realmente usati, versione/stato quando rilevanti e limiti che cambiano il progetto. Distingui fonti, decisioni confermate, inferenze e sconosciuti. Un contesto non fornito o non accessibile non è necessariamente inesistente. Blueprint, eval e documentazione della Suite spiegano il metodo, non provano fatti sulla campagna.
+Dichiara in modo compatto i materiali di business realmente usati, la loro versione o stato quando rilevanti e i limiti che cambiano il progetto. Se una scelta è cambiata dopo la versione del brief o del mix citata, attribuisci l'aggiornamento alla fonte effettiva, anche una conferma riportata in chat. Distingui fonti, decisioni confermate, inferenze e sconosciuti. Un contesto non fornito o non accessibile non è necessariamente inesistente. Blueprint, eval e documentazione della Suite spiegano il metodo, non provano fatti sulla campagna.
 
 Questa skill progetta la campagna e i brief per il team. Per un singolo asset già definito usa il builder pertinente; per una review indipendente di campagna e asset esistenti usa `campaign-review`, se disponibile. Produzione, analisi e azioni operative eventualmente richieste mantengono i propri strumenti e requisiti.
 
